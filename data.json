@@ -1,0 +1,54 @@
+{
+  "entries": {
+    "2026-05-06": {
+      "casasbahia": {
+        "reputacao": "2,6",
+        "metrics": {
+          "reclamacao": 11.2,
+          "cancelados": 1.7
+        },
+        "tickets": 8,
+        "ts": "2026-05-06T19:30:16.895Z"
+      },
+      "amazon": {
+        "reputacao": "224 — Ideal",
+        "metrics": {
+          "pedidosProblema": 2.64,
+          "cancelamentoEnvio": 0,
+          "rastreamento": 100
+        },
+        "tickets": 0,
+        "ts": "2026-05-06T19:30:16.895Z"
+      },
+      "magalu": {
+        "reputacao": "2,4",
+        "metrics": {
+          "agilidade": 79.99,
+          "cancelamento": 5.01,
+          "avaliacao": 2.4
+        },
+        "tickets": 0,
+        "ts": "2026-05-06T19:30:16.895Z"
+      },
+      "mercadolivre": {
+        "reputacao": "MercadoLíder Platinum",
+        "metrics": {
+          "reclamacoes": 0.98,
+          "mediacoes": 0.15,
+          "canceladas": 0.22
+        },
+        "tickets": 7,
+        "ts": "2026-05-06T19:30:16.895Z"
+      },
+      "shopee": {
+        "reputacao": "4,86",
+        "metrics": {
+          "taxaResposta": 82.83,
+          "notaLoja": 4.86
+        },
+        "tickets": 0,
+        "ts": "2026-05-06T19:30:16.895Z"
+      }
+    }
+  }
+}
