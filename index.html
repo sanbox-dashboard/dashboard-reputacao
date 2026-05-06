@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard de Reputação - Marketplaces</title>
+<style>
+  :root{
+    --bg:#f4f6fb;
+    --card:#ffffff;
+    --border:#e3e7ee;
+    --text:#1a2233;
+    --muted:#6b7280;
+    --green:#10b981;
+    --green-bg:#ecfdf5;
+    --yellow:#f59e0b;
+    --yellow-bg:#fffbeb;
+    --red:#ef4444;
+    --red-bg:#fef2f2;
+    --primary:#3b82f6;
+    --shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
+    --shadow-lg:0 10px 30px rgba(0,0,0,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{font-size:18px}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.4;padding:24px;max-width:1920px;margin:0 auto}
+  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;flex-wrap:wrap;gap:12px}
+  header h1{font-size:36px;font-weight:800;color:var(--text);letter-spacing:-.5px}
+  header h1 span{color:var(--primary)}
+  header p{font-size:16px}
+  .date-pill{background:var(--card);padding:12px 22px;border-radius:32px;border:1px solid var(--border);font-weight:600;font-size:18px;display:flex;gap:10px;align-items:center}
+  .date-pill .dot{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px var(--green-bg)}
+
+  section{margin-bottom:36px}
+  .section-title{font-size:24px;font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:10px;color:var(--text)}
+  .section-title .badge{font-size:13px;background:var(--primary);color:#fff;padding:3px 10px;border-radius:12px;font-weight:500}
+  .section-subtitle{color:var(--muted);font-size:16px;margin-left:10px;font-weight:400}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:20px}
+
+  .card{background:var(--card);border-radius:16px;padding:24px;border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .15s, box-shadow .15s;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+  .card-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+  .card-name{font-size:20px;font-weight:800;color:var(--text);text-transform:uppercase;letter-spacing:.5px;display:flex;align-items:center;gap:8px}
+  .channel-tag{display:inline-block;width:14px;height:14px;border-radius:50%;flex-shrink:0}
+  .rep-badge{background:#f1f5f9;border:1px solid var(--border);border-radius:10px;padding:6px 12px;text-align:right;min-width:80px;flex-shrink:0}
+  .rep-badge .rep-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:600;display:block;line-height:1.1}
+  .rep-badge .reputation{font-size:18px;font-weight:700;line-height:1.2;color:var(--text);display:block;margin-top:2px;white-space:nowrap;max-width:160px;overflow:hidden;text-overflow:ellipsis}
+
+  .metric-list{list-style:none;flex:1;display:flex;flex-direction:column;gap:14px;margin-top:4px}
+  .metric-row{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;gap:12px;background:#f8fafc;border-radius:12px;border-left:5px solid #cbd5e1}
+  .metric-row.green{background:var(--green-bg);border-left-color:var(--green)}
+  .metric-row.yellow{background:var(--yellow-bg);border-left-color:var(--yellow)}
+  .metric-row.red{background:var(--red-bg);border-left-color:var(--red)}
+  .metric-row .label-block{flex:1;display:flex;flex-direction:column;gap:2px;min-width:0}
+  .metric-row .label{color:var(--text);font-size:16px;font-weight:600;line-height:1.2}
+  .metric-row .meta-info{font-size:12px;color:var(--muted);font-weight:500}
+  .metric-row .value-block{display:flex;align-items:center;gap:10px;flex-shrink:0}
+  .metric-row .value{font-weight:800;font-size:30px;line-height:1;font-variant-numeric:tabular-nums;color:var(--text)}
+  .metric-row.green .value{color:#047857}
+  .metric-row.yellow .value{color:#b45309}
+  .metric-row.red .value{color:#b91c1c}
+  .status-dot{width:14px;height:14px;border-radius:50%;flex-shrink:0}
+  .status-green{background:var(--green)}
+  .status-yellow{background:var(--yellow)}
+  .status-red{background:var(--red)}
+  .status-unknown{background:#cbd5e1}
+
+  .alert-banner{padding:12px 16px;border-radius:10px;font-size:14px;font-weight:600;margin-top:16px;display:flex;gap:10px;align-items:center}
+  .alert-banner.red{background:var(--red-bg);color:var(--red);border:1px solid var(--red)}
+  .alert-banner.yellow{background:var(--yellow-bg);color:var(--yellow);border:1px solid var(--yellow)}
+  .alert-banner.green{background:var(--green-bg);color:var(--green);border:1px solid var(--green)}
+  .alert-banner.hidden{display:none}
+
+  /* Ticket row - destaque diferente */
+  .tickets-row{margin-top:14px;padding:14px 16px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;gap:12px;border:2px solid;background:#fff}
+  .tickets-row.green{border-color:var(--green);background:var(--green-bg)}
+  .tickets-row.red{border-color:var(--red);background:var(--red-bg)}
+  .tickets-row .label-block{flex:1;min-width:0}
+  .tickets-row .label{font-size:14px;font-weight:700;color:var(--text);line-height:1.2;display:block}
+  .tickets-row .meta-info{font-size:11px;color:var(--muted);font-weight:500}
+  .tickets-row .value{font-size:34px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+  .tickets-row.green .value{color:#047857}
+  .tickets-row.red .value{color:#b91c1c}
+  body.tv-mode .tickets-row{padding:10px 12px}
+  body.tv-mode .tickets-row .label{font-size:13px}
+  body.tv-mode .tickets-row .value{font-size:36px}
+  body.tv-mode .tickets-row .meta-info{font-size:10px}
+
+  .upload-section{background:var(--card);border-radius:12px;padding:24px;border:1px solid var(--border);box-shadow:var(--shadow)}
+  .channel-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;border-bottom:1px solid var(--border);padding-bottom:0}
+  .tab-btn{padding:8px 16px;border:none;background:transparent;cursor:pointer;font-size:13px;font-weight:500;color:var(--muted);border-bottom:2px solid transparent;transition:all .15s}
+  .tab-btn:hover{color:var(--text)}
+  .tab-btn.active{color:var(--primary);border-bottom-color:var(--primary)}
+
+  .tab-panel{display:none}
+  .tab-panel.active{display:block}
+
+  .upload-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:768px){.upload-row{grid-template-columns:1fr}}
+
+  .drop-zone{border:2px dashed var(--border);border-radius:10px;padding:24px;text-align:center;cursor:pointer;transition:all .15s;min-height:200px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px}
+  .drop-zone:hover{border-color:var(--primary);background:#f8faff}
+  .drop-zone.dragging{border-color:var(--primary);background:#eff6ff}
+  .drop-zone.has-image{padding:8px;border-style:solid}
+  .drop-zone img{max-width:100%;max-height:240px;border-radius:6px}
+  .drop-zone .icon{font-size:32px;color:var(--muted)}
+  .drop-zone p{font-size:13px;color:var(--muted)}
+  .drop-zone .small{font-size:11px;color:var(--muted)}
+
+  .ocr-status{margin-top:8px;font-size:12px;color:var(--muted);min-height:18px}
+  .progress-bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-top:6px}
+  .progress-bar .fill{height:100%;background:var(--primary);width:0%;transition:width .3s}
+
+  .form-grid{display:grid;gap:12px}
+  .field{display:flex;flex-direction:column;gap:4px}
+  .field label{font-size:12px;font-weight:500;color:var(--muted)}
+  .field label .meta-hint{font-weight:400;color:var(--muted)}
+  .field input{padding:8px 10px;border:1px solid var(--border);border-radius:6px;font-size:14px;font-family:inherit;background:#fff}
+  .field input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(59,130,246,.1)}
+  .field input.warn{border-color:var(--yellow);background:var(--yellow-bg)}
+  .field input.danger{border-color:var(--red);background:var(--red-bg)}
+  .field input.ok{border-color:var(--green)}
+  .field-row{display:flex;gap:8px;align-items:end}
+
+  .btn{padding:10px 16px;border:none;border-radius:6px;font-weight:500;font-size:13px;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:6px;font-family:inherit}
+  .btn-primary{background:var(--primary);color:#fff}
+  .btn-primary:hover{background:#2563eb}
+  .btn-primary:disabled{opacity:.5;cursor:not-allowed}
+  .btn-secondary{background:#f1f5f9;color:var(--text);border:1px solid var(--border)}
+  .btn-secondary:hover{background:#e2e8f0}
+  .btn-danger{background:transparent;color:var(--red);border:1px solid var(--red)}
+  .btn-danger:hover{background:var(--red-bg)}
+  .form-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px;flex-wrap:wrap}
+
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);font-size:13px}
+  thead{background:#f8fafc}
+  th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--border)}
+  th{font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+  tbody tr:hover{background:#f8fafc}
+  td.value-cell{font-variant-numeric:tabular-nums}
+  td .row-actions{display:flex;gap:4px}
+
+  .empty-state{text-align:center;padding:32px;color:var(--muted);font-size:13px}
+
+  .footer{text-align:center;padding:20px;color:var(--muted);font-size:12px}
+
+  /* Toast */
+  .toast{position:fixed;bottom:20px;right:20px;background:var(--text);color:#fff;padding:12px 18px;border-radius:8px;font-size:13px;box-shadow:var(--shadow-lg);transform:translateY(100px);opacity:0;transition:all .25s;z-index:1000}
+  .toast.show{transform:translateY(0);opacity:1}
+  .toast.success{background:var(--green)}
+  .toast.error{background:var(--red)}
+
+  /* Status summary */
+  .summary-bar{display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+  .summary-item{flex:1;min-width:200px;background:var(--card);padding:18px 22px;border-radius:14px;border:1px solid var(--border);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow)}
+  .summary-icon{width:54px;height:54px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:24px;color:#fff;flex-shrink:0}
+  .summary-icon.green{background:var(--green)}
+  .summary-icon.yellow{background:var(--yellow)}
+  .summary-icon.red{background:var(--red)}
+  .summary-info .num{font-size:32px;font-weight:800;line-height:1}
+  .summary-info .lbl{font-size:13px;color:var(--muted);text-transform:uppercase;font-weight:600;letter-spacing:.5px}
+
+  .ocr-extracted{background:#f8fafc;padding:8px;border-radius:6px;font-size:11px;color:var(--muted);max-height:120px;overflow-y:auto;white-space:pre-wrap;font-family:'Courier New',monospace;margin-top:8px;display:none}
+  .ocr-extracted.show{display:block}
+
+  details summary{cursor:pointer;font-size:12px;color:var(--primary);margin-top:6px}
+
+  .tv-toggle{padding:10px 18px;background:#1e293b;color:#fff;border:none;border-radius:24px;cursor:pointer;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px}
+  .tv-toggle:hover{background:#0f172a}
+  body.tv-mode{padding:20px 24px;max-width:none}
+  body.tv-mode header{margin-bottom:14px}
+  body.tv-mode header h1{font-size:34px}
+  body.tv-mode header p{display:none}
+  body.tv-mode #upload-section,
+  body.tv-mode #history-section,
+  body.tv-mode #github-section,
+  body.tv-mode .footer{display:none}
+  body.tv-mode #month-section{margin-bottom:0}
+  body.tv-mode .summary-bar{margin-bottom:14px;gap:10px}
+  body.tv-mode .summary-item{padding:10px 14px;min-width:auto}
+  body.tv-mode .summary-icon{width:42px;height:42px;font-size:20px}
+  body.tv-mode .summary-info .num{font-size:26px}
+  body.tv-mode .section-title{font-size:20px;margin-bottom:10px}
+  body.tv-mode .section-title .section-subtitle{font-size:14px}
+  /* Força 5 colunas — uma por canal — em telas largas (TV) */
+  body.tv-mode .grid{grid-template-columns:repeat(5,1fr);gap:14px}
+  body.tv-mode .card{padding:16px;border-radius:14px}
+  body.tv-mode .card-header{margin-bottom:12px;flex-direction:column;align-items:stretch;gap:8px}
+  body.tv-mode .card-name{font-size:20px;justify-content:center;text-align:center}
+  body.tv-mode .rep-badge{text-align:center;padding:6px 8px}
+  body.tv-mode .rep-badge .reputation{font-size:16px;max-width:100%;white-space:normal;line-height:1.15}
+  body.tv-mode .rep-badge .rep-label{font-size:9px}
+  body.tv-mode .metric-list{gap:8px}
+  body.tv-mode .metric-row{padding:10px 12px;flex-direction:column;align-items:flex-start;gap:4px;border-left-width:6px}
+  body.tv-mode .metric-row .label{font-size:13px;font-weight:600}
+  body.tv-mode .metric-row .meta-info{font-size:10px}
+  body.tv-mode .metric-row .value-block{align-self:flex-end}
+  body.tv-mode .metric-row .value{font-size:32px}
+  body.tv-mode .alert-banner{font-size:12px;padding:8px 10px;text-align:center;justify-content:center}
+  /* Em telas menores que 1400px no modo TV, volta pra 2-3 colunas */
+  @media(max-width:1400px){body.tv-mode .grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:900px){body.tv-mode .grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Dashboard de <span>Reputação</span></h1>
+    <p style="color:var(--muted);font-size:13px;margin-top:4px">Acompanhe os indicadores dos seus marketplaces em tempo real</p>
+  </div>
+  <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+    <button class="tv-toggle" onclick="toggleTvMode()" id="tv-btn">📺 Modo TV</button>
+    <div class="date-pill">
+      <span class="dot"></span>
+      <span id="header-date">Hoje, 06/05/2026</span>
+    </div>
+  </div>
+</header>
+
+<div class="summary-bar" id="summary-bar"></div>
+
+<section id="today-section">
+  <h2 class="section-title">
+    Reputação de Hoje
+    <span class="section-subtitle" id="today-subtitle"></span>
+  </h2>
+  <div class="grid" id="today-grid"></div>
+</section>
+
+<section id="month-section">
+  <h2 class="section-title">
+    Média do Mês
+    <span class="section-subtitle" id="month-subtitle"></span>
+  </h2>
+  <div class="grid" id="month-grid"></div>
+</section>
+
+<section id="upload-section">
+  <h2 class="section-title">Atualizar Dados Diários</h2>
+  <div class="upload-section">
+    <div class="channel-tabs" id="channel-tabs"></div>
+    <div id="channel-panels"></div>
+  </div>
+</section>
+
+<section id="history-section">
+  <h2 class="section-title">
+    Histórico
+    <span class="section-subtitle">Todos os registros salvos no navegador</span>
+  </h2>
+  <div id="history-container"></div>
+</section>
+
+<section id="github-section">
+  <h2 class="section-title">Sincronização com GitHub <span class="section-subtitle" id="gh-status">Não configurado</span></h2>
+  <div class="upload-section">
+    <p style="font-size:14px;color:var(--muted);margin-bottom:12px">
+      O dashboard sincroniza com <strong>sanbox-dashboard/dashboard-reputacao/data.json</strong>. Sempre que você salva os dados de um canal, ele faz push automático para o GitHub. Cole abaixo seu Personal Access Token (PAT) com permissão <code>repo</code>.
+    </p>
+    <div class="form-grid" style="grid-template-columns:1fr 1fr;gap:12px">
+      <div class="field">
+        <label>Repositório <span class="meta-hint">(formato org/repo)</span></label>
+        <input type="text" id="gh-repo" placeholder="sanbox-dashboard/dashboard-reputacao">
+      </div>
+      <div class="field">
+        <label>Branch</label>
+        <input type="text" id="gh-branch" placeholder="main" value="main">
+      </div>
+    </div>
+    <div class="field" style="margin-top:12px">
+      <label>Personal Access Token (PAT) <span class="meta-hint">(salvo apenas no seu navegador)</span></label>
+      <input type="password" id="gh-pat" placeholder="ghp_xxxxxxxxxxxx">
+    </div>
+    <div class="form-actions" style="justify-content:flex-start;margin-top:14px">
+      <button class="btn btn-primary" onclick="ghSaveConfig()">💾 Salvar configuração</button>
+      <button class="btn btn-secondary" onclick="ghPull()">⬇ Carregar do GitHub</button>
+      <button class="btn btn-secondary" onclick="ghPush()">⬆ Enviar agora</button>
+    </div>
+    <div id="gh-log" style="margin-top:12px;font-size:12px;color:var(--muted);min-height:18px"></div>
+  </div>
+</section>
+
+<div class="footer">
+  Dados sincronizados automaticamente com GitHub. Use os botões abaixo para backup local.
+  <div style="margin-top:8px">
+    <button class="btn btn-secondary" onclick="exportData()">Exportar JSON (backup local)</button>
+    <button class="btn btn-secondary" onclick="importData()">Importar JSON</button>
+    <button class="btn btn-danger" onclick="clearAllData()">Limpar todos os dados</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<input type="file" id="import-input" accept=".json" style="display:none">
+
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.4/dist/tesseract.min.js"></script>
+<script>
+/* =========================================================================
+   CONFIGURAÇÃO DOS CANAIS E MÉTRICAS
+   metaType: 'max' = limite máximo (quanto menor, melhor)
+             'min' = limite mínimo (quanto maior, melhor)
+   ========================================================================= */
+const channels = {
+  mercadolivre: {
+    name: 'Mercado Livre',
+    color: '#FFE600',
+    repLabel: 'Classificação',
+    metrics: {
+      reclamacoes: {label:'Reclamações', metaType:'max', meta:1.0, alerta:0.70, unit:'%', ocrPattern:/reclama[çc][õo]es?\s*[^0-9]*?(\d+[,.]\d+)/i},
+      mediacoes:   {label:'Mediações',   metaType:'max', meta:0.5, alerta:0.30, unit:'%', ocrPattern:/media[çc][õo]es?\s*[^0-9]*?(\d+[,.]\d+)/i},
+      canceladas:  {label:'Vendas Canceladas', metaType:'max', meta:0.5, alerta:0.20, unit:'%', ocrPattern:/cancelad[ao]s?[^0-9]*?(\d+[,.]\d+)/i}
+    }
+  },
+  amazon: {
+    name: 'Amazon',
+    color: '#FF9900',
+    repLabel: 'Estado da Conta',
+    metrics: {
+      pedidosProblema:   {label:'Pedidos com problema', metaType:'max', meta:1.0, alerta:0.7, unit:'%', ocrPattern:/pedidos com problemas?[^0-9]*?(\d+[,.]\d+)/i},
+      cancelamentoEnvio: {label:'Cancelamentos envio', metaType:'max', meta:3.0, alerta:2.0, unit:'%', ocrPattern:/cancelamentos? anteriores ao envio[^0-9]*?(\d+[,.]\d+)/i},
+      rastreamento:      {label:'Envio com rastreamento', metaType:'min', meta:95, alerta:97, unit:'%', ocrPattern:/rastreamento v[áa]lido[^0-9]*?(\d+[,.]?\d*)/i}
+    }
+  },
+  magalu: {
+    name: 'Magazine Luiza',
+    color: '#0086FF',
+    repLabel: 'Reputação (1-5)',
+    metrics: {
+      agilidade:    {label:'Agilidade Atendimento', metaType:'min', meta:80, alerta:90, unit:'%', ocrPattern:/agilidade[^0-9]*?(\d+[,.]?\d*)/i},
+      cancelamento: {label:'Cancelamento', metaType:'max', meta:2.0, alerta:1.0, unit:'%', ocrPattern:/cancelamento[^0-9]*?(\d+[,.]\d+)/i},
+      avaliacao:    {label:'Avaliação da Loja', metaType:'min', meta:4.0, alerta:4.5, unit:'', ocrPattern:/(?:avalia[çc][ãa]o|n[íi]vel de servi[çc]o)[^0-9]*?(\d+[,.]\d+)/i}
+    }
+  },
+  casasbahia: {
+    name: 'Casas Bahia',
+    color: '#0033A0',
+    repLabel: 'Reputação (1-5)',
+    metrics: {
+      reclamacao: {label:'Pedidos com Reclamação', metaType:'max', meta:2.0, alerta:1.0, unit:'%', ocrPattern:/reclama[çc][ãa]o[^0-9]*?(\d+[,.]\d+)/i},
+      cancelados: {label:'Pedidos Cancelados', metaType:'max', meta:3.0, alerta:1.5, unit:'%', ocrPattern:/cancelamento[^0-9]*?(\d+[,.]\d+)/i}
+    }
+  },
+  shopee: {
+    name: 'Shopee',
+    color: '#EE4D2D',
+    repLabel: 'Nota da Loja',
+    metrics: {
+      taxaResposta:        {label:'Taxa de Resposta', metaType:'min', meta:90, alerta:95, unit:'%', ocrPattern:/taxa de resposta[^0-9]*?(\d+[,.]?\d*)/i},
+      boaAvaliacao:        {label:'Boa taxa de avaliação', metaType:'min', meta:95, alerta:97, unit:'%', ocrPattern:/boa taxa[^0-9]*?(\d+[,.]?\d*)/i},
+      notaLoja:            {label:'Nota da Loja', metaType:'min', meta:4.0, alerta:4.5, unit:'', ocrPattern:/nota da loja[^0-9]*?(\d+[,.]\d+)/i},
+      ruinsNaoRespondidas: {label:'Avaliações ruins não respondidas', metaType:'max', meta:0, alerta:0, unit:'', ocrPattern:/n[ãa]o respond?id[ao]s[^0-9]*?(\d+[,.]?\d*)/i}
+    }
+  }
+};
+
+/* =========================================================================
+   ESTADO E PERSISTÊNCIA
+   ========================================================================= */
+const STORAGE_KEY = 'dashboard-reputacao-v1';
+const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
+
+let state = {
+  entries: {} // entries[YYYY-MM-DD][channelKey] = { reputacao: '', metrics: {key:value}, ts:'' }
+};
+
+function load(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(raw){ state = JSON.parse(raw); }
+  }catch(e){console.error('load failed', e)}
+  if(!state.entries) state.entries = {};
+}
+function save(){
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+function todayKey(){
+  const d = new Date();
+  return d.toISOString().slice(0,10);
+}
+function ptDate(key){
+  const [y,m,d] = key.split('-');
+  return `${d}/${m}/${y}`;
+}
+function ptDateLong(key){
+  const dt = new Date(key+'T00:00');
+  const dias = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+  const meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+  return `${dias[dt.getDay()]}, ${dt.getDate()} de ${meses[dt.getMonth()]} de ${dt.getFullYear()}`;
+}
+function monthKey(key){ return key.slice(0,7); }
+function monthLabel(key){
+  const meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+  const [y,m] = key.split('-');
+  return `${meses[parseInt(m)-1]} / ${y}`;
+}
+
+/* =========================================================================
+   CÁLCULO DE STATUS
+   ========================================================================= */
+function getStatus(value, metric){
+  if(value===null||value===undefined||value===''||isNaN(value)) return 'unknown';
+  const v = parseFloat(value);
+  if(metric.metaType==='max'){
+    if(v > metric.meta) return 'red';
+    if(v > metric.alerta) return 'yellow';
+    return 'green';
+  } else {
+    if(v < metric.meta) return 'red';
+    if(v < metric.alerta) return 'yellow';
+    return 'green';
+  }
+}
+function statusLabel(s){
+  return {green:'Dentro da meta', yellow:'Atenção', red:'Crítico', unknown:'Sem dado'}[s];
+}
+
+function fmtNumber(v, unit){
+  if(v===null||v===undefined||v===''||isNaN(v)) return '—';
+  const n = parseFloat(v);
+  return n.toLocaleString('pt-BR', {minimumFractionDigits: unit==='%'?2:(Number.isInteger(n)?0:2), maximumFractionDigits:2}) + (unit||'');
+}
+
+/* =========================================================================
+   RENDERIZAÇÃO - CARDS DE REPUTAÇÃO
+   ========================================================================= */
+function renderTodayCards(){
+  const grid = document.getElementById('today-grid');
+  const today = todayKey();
+  const entry = state.entries[today] || {};
+  document.getElementById('today-subtitle').textContent = ptDateLong(today);
+  document.getElementById('header-date').textContent = 'Hoje, ' + ptDate(today);
+
+  let html = '';
+  let counts = {green:0, yellow:0, red:0, unknown:0};
+
+  Object.entries(channels).forEach(([key, ch])=>{
+    const data = entry[key] || {};
+    const metrics = data.metrics || {};
+    let worst = 'unknown';
+    let metricsHtml = '';
+    Object.entries(ch.metrics).forEach(([mKey, m])=>{
+      const v = metrics[mKey];
+      const st = getStatus(v, m);
+      if(st==='red') worst='red';
+      else if(st==='yellow' && worst!=='red') worst='yellow';
+      else if(st==='green' && worst==='unknown') worst='green';
+      counts[st]++;
+      const arrow = m.metaType==='max' ? '≤' : '≥';
+      metricsHtml += `<li class="metric-row ${st}">
+        <div class="label-block">
+          <span class="label">${m.label}</span>
+          <span class="meta-info">Meta ${arrow}${fmtNumber(m.meta,m.unit)} · Alerta ${arrow}${fmtNumber(m.alerta,m.unit)}</span>
+        </div>
+        <div class="value-block">
+          <span class="value">${fmtNumber(v,m.unit)}</span>
+        </div>
+      </li>`;
+    });
+    const reputacao = data.reputacao || '—';
+    const tickets = (data.tickets===undefined||data.tickets===null||data.tickets==='')?null:parseInt(data.tickets);
+    const tStatus = tickets===null ? '' : (tickets===0?'green':'red');
+    const ticketsHtml = `<div class="tickets-row ${tStatus}">
+      <div class="label-block">
+        <span class="label">🎫 Tickets financeiros em aberto</span>
+        <span class="meta-info">Em aberto há +3 dias</span>
+      </div>
+      <span class="value">${tickets===null?'—':tickets}</span>
+    </div>`;
+    const alertHtml = worst==='red' ? `<div class="alert-banner red">⚠️ Métricas críticas — ação imediata</div>`
+                  : worst==='yellow' ? `<div class="alert-banner yellow">⚡ Atenção — perto do limite</div>`
+                  : worst==='green' ? `<div class="alert-banner green">✓ Tudo dentro da meta</div>`
+                  : `<div class="alert-banner hidden"></div>`;
+    html += `<div class="card" style="border-top:6px solid ${ch.color}">
+      <div class="card-header">
+        <div class="card-name"><span class="channel-tag" style="background:${ch.color}"></span>${ch.name}</div>
+        <div class="rep-badge" title="${ch.repLabel}">
+          <span class="rep-label">${ch.repLabel}</span>
+          <span class="reputation">${reputacao}</span>
+        </div>
+      </div>
+      <ul class="metric-list">${metricsHtml}</ul>
+      ${ticketsHtml}
+      ${alertHtml}
+    </div>`;
+  });
+
+  grid.innerHTML = html || '<div class="empty-state">Nenhum dado de hoje ainda. Use a seção "Atualizar Dados Diários" abaixo.</div>';
+  renderSummary(counts);
+}
+
+function renderSummary(counts){
+  const sb = document.getElementById('summary-bar');
+  sb.innerHTML = `
+    <div class="summary-item"><div class="summary-icon green">✓</div><div class="summary-info"><div class="num">${counts.green}</div><div class="lbl">Dentro da meta</div></div></div>
+    <div class="summary-item"><div class="summary-icon yellow">⚡</div><div class="summary-info"><div class="num">${counts.yellow}</div><div class="lbl">Atenção</div></div></div>
+    <div class="summary-item"><div class="summary-icon red">⚠</div><div class="summary-info"><div class="num">${counts.red}</div><div class="lbl">Crítico</div></div></div>
+    <div class="summary-item"><div class="summary-icon" style="background:#94a3b8">—</div><div class="summary-info"><div class="num">${counts.unknown}</div><div class="lbl">Sem dado</div></div></div>
+  `;
+}
+
+/* =========================================================================
+   CARDS DE MÉDIA MENSAL
+   ========================================================================= */
+function renderMonthCards(){
+  const grid = document.getElementById('month-grid');
+  const monthK = monthKey(todayKey());
+  document.getElementById('month-subtitle').textContent = monthLabel(monthK);
+
+  // Coleta entradas do mês
+  const monthEntries = Object.entries(state.entries).filter(([k])=> k.startsWith(monthK)).map(([k,v])=>v);
+  let html = '';
+  Object.entries(channels).forEach(([key, ch])=>{
+    let worst = 'unknown';
+    let metricsHtml = '';
+    Object.entries(ch.metrics).forEach(([mKey, m])=>{
+      const vals = monthEntries.map(e=> e[key]?.metrics?.[mKey]).filter(v=> v!==undefined && v!==null && v!=='' && !isNaN(v)).map(parseFloat);
+      const avg = vals.length ? (vals.reduce((a,b)=>a+b,0)/vals.length) : null;
+      const st = getStatus(avg, m);
+      if(st==='red') worst='red';
+      else if(st==='yellow' && worst!=='red') worst='yellow';
+      else if(st==='green' && worst==='unknown') worst='green';
+      const arrow = m.metaType==='max' ? '≤' : '≥';
+      metricsHtml += `<li class="metric-row ${st}">
+        <div class="label-block">
+          <span class="label">${m.label}</span>
+          <span class="meta-info">Meta ${arrow}${fmtNumber(m.meta,m.unit)} · ${vals.length} dia${vals.length===1?'':'s'}</span>
+        </div>
+        <div class="value-block">
+          <span class="value">${fmtNumber(avg,m.unit)}</span>
+        </div>
+      </li>`;
+    });
+    const days = monthEntries.filter(e=> e[key]).length;
+    html += `<div class="card" style="border-top:6px solid ${ch.color}">
+      <div class="card-header">
+        <div class="card-name"><span class="channel-tag" style="background:${ch.color}"></span>${ch.name}</div>
+        <div class="rep-badge">
+          <span class="rep-label">Dias no mês</span>
+          <span class="reputation">${days}</span>
+        </div>
+      </div>
+      <ul class="metric-list">${metricsHtml}</ul>
+    </div>`;
+  });
+  grid.innerHTML = html;
+}
+
+/* =========================================================================
+   ABAS DE UPLOAD
+   ========================================================================= */
+function renderTabs(){
+  const tabs = document.getElementById('channel-tabs');
+  const panels = document.getElementById('channel-panels');
+  let tabsHtml = '';
+  let panelsHtml = '';
+  Object.entries(channels).forEach(([key, ch], i)=>{
+    tabsHtml += `<button class="tab-btn" data-channel="${key}" onclick="switchTab('${key}')">${ch.name}</button>`;
+    panelsHtml += renderChannelPanel(key, ch);
+  });
+  tabs.innerHTML = tabsHtml;
+  panels.innerHTML = panelsHtml;
+  Object.keys(channels).forEach(key=> wireChannelPanel(key));
+  const savedTab = localStorage.getItem(ACTIVE_TAB_KEY) || Object.keys(channels)[0];
+  switchTab(savedTab);
+}
+
+function renderChannelPanel(key, ch){
+  const today = todayKey();
+  const data = state.entries[today]?.[key] || {metrics:{}};
+  let fieldsHtml = '';
+  Object.entries(ch.metrics).forEach(([mKey, m])=>{
+    const v = data.metrics?.[mKey] ?? '';
+    const arrow = m.metaType==='max'?'máx':'mín';
+    fieldsHtml += `<div class="field">
+      <label>${m.label} <span class="meta-hint">(${arrow} ${fmtNumber(m.meta,m.unit)} · alerta ${fmtNumber(m.alerta,m.unit)})</span></label>
+      <input type="number" step="0.01" data-channel="${key}" data-metric="${mKey}" value="${v}" placeholder="0,00">
+    </div>`;
+  });
+  return `<div class="tab-panel" id="panel-${key}" data-channel="${key}">
+    <div class="upload-row">
+      <div>
+        <p style="margin-bottom:8px;font-size:13px;color:var(--muted)"><strong>1.</strong> Faça upload do print da página de reputação do ${ch.name}</p>
+        <div class="drop-zone" id="drop-${key}">
+          <div class="icon">📷</div>
+          <p>Clique ou arraste o print aqui</p>
+          <p class="small">PNG, JPG — o OCR tentará extrair os números automaticamente</p>
+          <input type="file" accept="image/*" style="display:none" id="file-${key}">
+        </div>
+        <div class="ocr-status" id="status-${key}"></div>
+        <div class="progress-bar" id="progress-${key}" style="display:none"><div class="fill"></div></div>
+        <details>
+          <summary>Ver texto extraído pelo OCR</summary>
+          <div class="ocr-extracted" id="extracted-${key}"></div>
+        </details>
+      </div>
+      <div>
+        <p style="margin-bottom:8px;font-size:13px;color:var(--muted)"><strong>2.</strong> Confirme/edite os valores e salve</p>
+        <div class="form-grid">
+          <div class="field">
+            <label>Reputação Geral <span class="meta-hint">(${ch.repLabel})</span></label>
+            <input type="text" data-channel="${key}" data-rep="1" value="${data.reputacao||''}" placeholder="ex: 2,4 ou Platinum">
+          </div>
+          ${fieldsHtml}
+          <div class="field">
+            <label>🎫 Tickets financeiros em aberto <span class="meta-hint">(em aberto há +3 dias)</span></label>
+            <input type="number" min="0" step="1" data-channel="${key}" data-tickets="1" value="${data.tickets??''}" placeholder="0">
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-secondary" onclick="clearChannelToday('${key}')">Limpar</button>
+            <button class="btn btn-primary" onclick="saveChannel('${key}')">💾 Salvar dia</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function switchTab(key){
+  document.querySelectorAll('.tab-btn').forEach(b=> b.classList.toggle('active', b.dataset.channel===key));
+  document.querySelectorAll('.tab-panel').forEach(p=> p.classList.toggle('active', p.dataset.channel===key));
+  localStorage.setItem(ACTIVE_TAB_KEY, key);
+}
+
+/* =========================================================================
+   UPLOAD + OCR
+   ========================================================================= */
+function wireChannelPanel(key){
+  const drop = document.getElementById('drop-'+key);
+  const fileInput = document.getElementById('file-'+key);
+  drop.addEventListener('click', ()=> fileInput.click());
+  drop.addEventListener('dragover', e=>{e.preventDefault(); drop.classList.add('dragging')});
+  drop.addEventListener('dragleave', ()=> drop.classList.remove('dragging'));
+  drop.addEventListener('drop', e=>{
+    e.preventDefault();
+    drop.classList.remove('dragging');
+    if(e.dataTransfer.files[0]) handleImage(key, e.dataTransfer.files[0]);
+  });
+  fileInput.addEventListener('change', e=>{
+    if(e.target.files[0]) handleImage(key, e.target.files[0]);
+  });
+  // Update visual status for inputs as user types
+  document.querySelectorAll(`#panel-${key} input[data-metric]`).forEach(inp=>{
+    inp.addEventListener('input', ()=> updateInputStatus(inp, key));
+    updateInputStatus(inp, key);
+  });
+}
+
+function updateInputStatus(inp, channelKey){
+  const mKey = inp.dataset.metric;
+  const m = channels[channelKey].metrics[mKey];
+  const st = getStatus(inp.value, m);
+  inp.classList.remove('ok','warn','danger');
+  if(st==='green') inp.classList.add('ok');
+  else if(st==='yellow') inp.classList.add('warn');
+  else if(st==='red') inp.classList.add('danger');
+}
+
+async function handleImage(key, file){
+  const drop = document.getElementById('drop-'+key);
+  const status = document.getElementById('status-'+key);
+  const progress = document.getElementById('progress-'+key);
+  const fill = progress.querySelector('.fill');
+  const extracted = document.getElementById('extracted-'+key);
+
+  const url = URL.createObjectURL(file);
+  drop.innerHTML = `<img src="${url}" alt="preview">`;
+  drop.classList.add('has-image');
+
+  status.textContent = 'Inicializando OCR...';
+  progress.style.display = 'block';
+  fill.style.width = '0%';
+
+  try{
+    const result = await Tesseract.recognize(url, 'por+eng', {
+      logger: m=>{
+        if(m.status==='recognizing text'){
+          status.textContent = `Reconhecendo texto... ${Math.round(m.progress*100)}%`;
+          fill.style.width = (m.progress*100)+'%';
+        } else {
+          status.textContent = m.status;
+        }
+      }
+    });
+    const text = result.data.text;
+    extracted.textContent = text;
+    extracted.classList.add('show');
+
+    const found = parseOcr(key, text);
+    let foundCount = 0;
+    Object.entries(found).forEach(([mKey, value])=>{
+      const inp = document.querySelector(`#panel-${key} input[data-metric="${mKey}"]`);
+      if(inp){ inp.value = value; updateInputStatus(inp, key); foundCount++; }
+    });
+    status.innerHTML = `✓ OCR concluído. <strong>${foundCount}</strong> de ${Object.keys(channels[key].metrics).length} métricas detectadas. Confira e edite se necessário.`;
+    progress.style.display = 'none';
+  }catch(e){
+    status.textContent = '⚠ Erro no OCR: ' + e.message + '. Preencha manualmente.';
+    progress.style.display = 'none';
+  }
+}
+
+function parseOcr(channelKey, text){
+  const ch = channels[channelKey];
+  const result = {};
+  const norm = text.replace(/\s+/g,' ');
+  Object.entries(ch.metrics).forEach(([mKey, m])=>{
+    if(m.ocrPattern){
+      const match = norm.match(m.ocrPattern);
+      if(match){
+        let v = match[1].replace(',', '.');
+        result[mKey] = parseFloat(v);
+      }
+    }
+  });
+  return result;
+}
+
+/* =========================================================================
+   SALVAR / LIMPAR
+   ========================================================================= */
+function saveChannel(key){
+  const today = todayKey();
+  if(!state.entries[today]) state.entries[today] = {};
+  const metricsObj = {};
+  document.querySelectorAll(`#panel-${key} input[data-metric]`).forEach(inp=>{
+    const v = inp.value.toString().replace(',', '.').trim();
+    metricsObj[inp.dataset.metric] = v==='' ? null : parseFloat(v);
+  });
+  const repInput = document.querySelector(`#panel-${key} input[data-rep]`);
+  const ticketsInput = document.querySelector(`#panel-${key} input[data-tickets]`);
+  const ticketsVal = ticketsInput?.value?.toString().trim();
+  state.entries[today][key] = {
+    reputacao: repInput?.value?.trim() || '',
+    metrics: metricsObj,
+    tickets: ticketsVal===''||ticketsVal===undefined ? null : parseInt(ticketsVal),
+    ts: new Date().toISOString()
+  };
+  save();
+  renderTodayCards();
+  renderMonthCards();
+  renderHistory();
+  showToast(`✓ Dados de ${channels[key].name} salvos para ${ptDate(today)}`, 'success');
+}
+
+function clearChannelToday(key){
+  if(!confirm(`Limpar dados de ${channels[key].name} de hoje?`)) return;
+  const today = todayKey();
+  if(state.entries[today]){ delete state.entries[today][key]; }
+  save();
+  // Reset form
+  document.querySelectorAll(`#panel-${key} input`).forEach(i=>{ i.value=''; i.classList.remove('ok','warn','danger') });
+  renderTodayCards();
+  renderMonthCards();
+  renderHistory();
+  showToast('Dados de hoje limpos', 'success');
+}
+
+/* =========================================================================
+   HISTÓRICO
+   ========================================================================= */
+function renderHistory(){
+  const container = document.getElementById('history-container');
+  const dates = Object.keys(state.entries).sort((a,b)=> b.localeCompare(a));
+  if(!dates.length){
+    container.innerHTML = '<div class="empty-state">Nenhum registro ainda.</div>';
+    return;
+  }
+  let html = '<table><thead><tr><th>Data</th>';
+  Object.values(channels).forEach(ch=> html += `<th>${ch.name}</th>`);
+  html += '<th></th></tr></thead><tbody>';
+  dates.forEach(d=>{
+    const e = state.entries[d];
+    html += `<tr><td><strong>${ptDate(d)}</strong></td>`;
+    Object.entries(channels).forEach(([key,ch])=>{
+      const data = e[key];
+      if(!data){ html += '<td class="value-cell" style="color:var(--muted)">—</td>'; return; }
+      const summary = Object.entries(ch.metrics).map(([mKey,m])=>{
+        const v = data.metrics?.[mKey];
+        const st = getStatus(v, m);
+        return `<span title="${m.label}: ${fmtNumber(v,m.unit)}" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--${st==='green'?'green':st==='yellow'?'yellow':st==='red'?'red':'border'});margin-right:2px"></span>`;
+      }).join('');
+      const rep = data.reputacao ? `<small style="color:var(--muted);margin-left:6px">${data.reputacao}</small>` : '';
+      html += `<td class="value-cell">${summary}${rep}</td>`;
+    });
+    html += `<td class="row-actions"><button class="btn btn-secondary" style="padding:4px 8px;font-size:11px" onclick="deleteEntry('${d}')">🗑</button></td></tr>`;
+  });
+  html += '</tbody></table>';
+  container.innerHTML = html;
+}
+
+function deleteEntry(d){
+  if(!confirm(`Excluir todos os registros de ${ptDate(d)}?`)) return;
+  delete state.entries[d];
+  save(); renderTodayCards(); renderMonthCards(); renderHistory();
+  showToast('Registro excluído','success');
+}
+
+/* =========================================================================
+   IMPORT / EXPORT / RESET
+   ========================================================================= */
+function exportData(){
+  const blob = new Blob([JSON.stringify(state,null,2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `dashboard-reputacao-backup-${todayKey()}.json`;
+  a.click();
+  showToast('Backup exportado','success');
+}
+function importData(){
+  document.getElementById('import-input').click();
+}
+document.getElementById('import-input').addEventListener('change', async e=>{
+  const file = e.target.files[0]; if(!file) return;
+  const text = await file.text();
+  try{
+    const obj = JSON.parse(text);
+    if(!obj.entries) throw new Error('JSON inválido');
+    if(!confirm('Substituir os dados atuais pelo backup importado?')) return;
+    state = obj; save();
+    renderTodayCards(); renderMonthCards(); renderHistory(); renderTabs();
+    showToast('Backup importado','success');
+  }catch(e){ showToast('Erro ao importar: '+e.message,'error') }
+});
+function clearAllData(){
+  if(!confirm('Apagar TODOS os dados salvos? Essa ação não pode ser desfeita.')) return;
+  if(!confirm('Tem certeza absoluta? Os dados serão perdidos.')) return;
+  state = {entries:{}}; save();
+  renderTodayCards(); renderMonthCards(); renderHistory(); renderTabs();
+  showToast('Todos os dados foram apagados','success');
+}
+
+const TV_KEY = 'dashboard-reputacao-tv';
+function toggleTvMode(){
+  document.body.classList.toggle('tv-mode');
+  const on = document.body.classList.contains('tv-mode');
+  document.getElementById('tv-btn').textContent = on ? '🔧 Sair Modo TV' : '📺 Modo TV';
+  localStorage.setItem(TV_KEY, on ? '1' : '0');
+}
+if(localStorage.getItem(TV_KEY)==='1'){
+  // Apply on load
+  setTimeout(()=>{
+    document.body.classList.add('tv-mode');
+    const btn = document.getElementById('tv-btn'); if(btn) btn.textContent='🔧 Sair Modo TV';
+  }, 50);
+}
+
+function showToast(msg, type){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show ' + (type||'');
+  setTimeout(()=> t.classList.remove('show'), 3000);
+}
+
+/* =========================================================================
+   PRÉ-PREENCHIMENTO INICIAL (com dados dos prints enviados em 06/05/2026)
+   ========================================================================= */
+function seedTodayIfEmpty(){
+  const today = todayKey();
+  // Apenas pré-preenche se for 06/05/2026 (data dos prints recebidos)
+  if(today !== '2026-05-06') return;
+  if(!state.entries[today]) state.entries[today] = {};
+  const seed = {
+    casasbahia: {
+      reputacao: '2,6',
+      metrics: { reclamacao: 11.2, cancelados: 1.7 },
+      tickets: 8
+    },
+    amazon: {
+      reputacao: '224 — Ideal',
+      metrics: { pedidosProblema: 2.64, cancelamentoEnvio: 0, rastreamento: 100 },
+      tickets: 0
+    },
+    magalu: {
+      reputacao: '2,4',
+      metrics: { agilidade: 79.99, cancelamento: 5.01, avaliacao: 2.4 },
+      tickets: 0
+    },
+    mercadolivre: {
+      reputacao: 'MercadoLíder Platinum',
+      metrics: { reclamacoes: 0.98, mediacoes: 0.15, canceladas: 0.22 },
+      tickets: 7
+    },
+    shopee: {
+      reputacao: '4,86',
+      // Apenas 2 métricas — Taxa de Resposta e Nota da Loja vieram do print das métricas detalhadas.
+      // Boa taxa de avaliação e Avaliações ruins não respondidas precisam do print do painel Shopee.
+      metrics: { taxaResposta: 82.83, notaLoja: 4.86 },
+      tickets: 0
+    }
+  };
+  let added = 0, updated = 0;
+  Object.entries(seed).forEach(([k,v])=>{
+    if(!state.entries[today][k]){
+      state.entries[today][k] = {...v, ts: new Date().toISOString()};
+      added++;
+    } else if(state.entries[today][k].tickets===undefined){
+      // já tinha o canal, mas não tinha tickets — preenche só esse campo
+      state.entries[today][k].tickets = v.tickets;
+      updated++;
+    }
+  });
+  if(added||updated) save();
+}
+
+/* =========================================================================
+   SINCRONIZAÇÃO COM GITHUB
+   ========================================================================= */
+const GH_CONFIG_KEY = 'dashboard-reputacao-gh';
+function ghGetConfig(){
+  try{ return JSON.parse(localStorage.getItem(GH_CONFIG_KEY)||'{}'); }catch(e){ return {}; }
+}
+function ghSetConfig(c){ localStorage.setItem(GH_CONFIG_KEY, JSON.stringify(c)); }
+function ghLog(msg, type){
+  const el = document.getElementById('gh-log');
+  if(!el) return;
+  const colors = {ok:'var(--green)', err:'var(--red)', info:'var(--muted)'};
+  el.innerHTML = `<span style="color:${colors[type]||'var(--muted)'}">${msg}</span>`;
+}
+function ghStatus(msg){
+  const el = document.getElementById('gh-status');
+  if(el) el.textContent = msg;
+}
+function ghLoadConfigUI(){
+  const c = ghGetConfig();
+  const repo = document.getElementById('gh-repo'); if(repo) repo.value = c.repo || 'sanbox-dashboard/dashboard-reputacao';
+  const br = document.getElementById('gh-branch'); if(br) br.value = c.branch || 'main';
+  const pat = document.getElementById('gh-pat'); if(pat) pat.value = c.pat || '';
+  if(c.repo && c.pat){
+    ghStatus('Configurado · ' + (c.lastSync ? 'última sync ' + new Date(c.lastSync).toLocaleString('pt-BR') : 'sem sync ainda'));
+  }
+}
+function ghSaveConfig(){
+  const c = {
+    repo: document.getElementById('gh-repo').value.trim(),
+    branch: document.getElementById('gh-branch').value.trim() || 'main',
+    pat: document.getElementById('gh-pat').value.trim(),
+    lastSync: ghGetConfig().lastSync
+  };
+  if(!c.repo || !c.pat){ ghLog('Preencha repositório e PAT.', 'err'); return; }
+  ghSetConfig(c);
+  ghLog('Configuração salva. Tente "Carregar do GitHub" para puxar a versão mais recente.', 'ok');
+  ghStatus('Configurado');
+}
+
+async function ghGetFile(){
+  const c = ghGetConfig();
+  if(!c.repo || !c.pat) throw new Error('GitHub não configurado');
+  const url = `https://api.github.com/repos/${c.repo}/contents/data.json?ref=${c.branch||'main'}`;
+  const res = await fetch(url, {
+    headers: {'Authorization': 'Bearer '+c.pat, 'Accept': 'application/vnd.github+json'}
+  });
+  if(res.status===404) return {content:null, sha:null};
+  if(!res.ok) throw new Error(`HTTP ${res.status}: ${await res.text()}`);
+  const data = await res.json();
+  const decoded = atob(data.content.replace(/\s/g,''));
+  return {content: JSON.parse(decoded), sha: data.sha};
+}
+
+async function ghPull(){
+  ghLog('Carregando do GitHub...', 'info');
+  try{
+    const {content} = await ghGetFile();
+    if(!content){ ghLog('Arquivo data.json não existe ainda no repo. Salve algo e clique em "Enviar agora" pra criar.', 'info'); return; }
+    if(!confirm('Substituir os dados locais pela versão do GitHub?')) return;
+    state = content; save();
+    renderTodayCards(); renderMonthCards(); renderHistory(); renderTabs();
+    ghLog('✓ Dados carregados do GitHub.', 'ok');
+  }catch(e){ ghLog('Erro: '+e.message, 'err'); }
+}
+
+async function ghPush(silent){
+  const c = ghGetConfig();
+  if(!c.repo || !c.pat){ if(!silent) ghLog('Configure o GitHub primeiro.', 'err'); return; }
+  if(!silent) ghLog('Enviando ao GitHub...', 'info');
+  try{
+    let sha = null;
+    try{ const cur = await ghGetFile(); sha = cur.sha; }catch(e){}
+    const url = `https://api.github.com/repos/${c.repo}/contents/data.json`;
+    const body = {
+      message: `chore(data): sync ${todayKey()} ${new Date().toLocaleTimeString('pt-BR')}`,
+      content: btoa(unescape(encodeURIComponent(JSON.stringify(state, null, 2)))),
+      branch: c.branch || 'main'
+    };
+    if(sha) body.sha = sha;
+    const res = await fetch(url, {
+      method: 'PUT',
+      headers: {'Authorization': 'Bearer '+c.pat, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json'},
+      body: JSON.stringify(body)
+    });
+    if(!res.ok) throw new Error(`HTTP ${res.status}: ${await res.text()}`);
+    c.lastSync = new Date().toISOString();
+    ghSetConfig(c);
+    ghStatus('Configurado · última sync ' + new Date(c.lastSync).toLocaleString('pt-BR'));
+    if(!silent) ghLog('✓ Enviado ao GitHub.', 'ok');
+  }catch(e){ if(!silent) ghLog('Erro: '+e.message, 'err'); else console.error('autoSync', e); }
+}
+
+// Auto-sync on save (debounced)
+let syncTimer = null;
+function scheduleAutoSync(){
+  clearTimeout(syncTimer);
+  syncTimer = setTimeout(()=> ghPush(true), 1500);
+}
+
+// Hook into save() — original save() updates localStorage; we wrap it to also sync
+const _origSave = save;
+save = function(){
+  _origSave();
+  if(ghGetConfig().pat) scheduleAutoSync();
+};
+
+/* =========================================================================
+   INICIALIZAÇÃO
+   ========================================================================= */
+load();
+seedTodayIfEmpty();
+renderTabs();
+renderTodayCards();
+renderMonthCards();
+renderHistory();
+ghLoadConfigUI();
+// Tenta puxar do GitHub silenciosamente ao abrir, se configurado
+(async ()=>{
+  const c = ghGetConfig();
+  if(c.repo && c.pat){
+    try{
+      const {content} = await ghGetFile();
+      if(content && JSON.stringify(content) !== JSON.stringify(state)){
+        // Só atualiza se for mais novo (compara timestamps)
+        const localTs = Math.max(0, ...Object.values(state.entries||{}).flatMap(d=> Object.values(d).map(c=> new Date(c.ts||0).getTime())));
+        const remoteTs = Math.max(0, ...Object.values(content.entries||{}).flatMap(d=> Object.values(d).map(c=> new Date(c.ts||0).getTime())));
+        if(remoteTs > localTs){
+          state = content; _origSave();
+          renderTodayCards(); renderMonthCards(); renderHistory(); renderTabs();
+          ghLog('Dados atualizados automaticamente do GitHub (versão mais recente).', 'info');
+        }
+      }
+    }catch(e){ console.error('initial pull', e); }
+  }
+})();
+</script>
+</body>
+</html>
