@@ -59,7 +59,7 @@
           "canceladas": 0.23,
           "enviosIncorretos": 0.2
         },
-        "tickets": null,
+        "tickets": 7,
         "ts": "2026-05-07T18:44:01.257Z"
       },
       "amazon": {
@@ -69,8 +69,20 @@
           "cancelamentoEnvio": null,
           "rastreamento": null
         },
-        "tickets": null,
+        "tickets": 0,
         "ts": "2026-05-07T18:31:56.821Z"
+      },
+      "magalu": {
+        "tickets": 0,
+        "metrics": {}
+      },
+      "casasbahia": {
+        "tickets": 8,
+        "metrics": {}
+      },
+      "shopee": {
+        "tickets": 0,
+        "metrics": {}
       }
     }
   }
