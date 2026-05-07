@@ -59,7 +59,17 @@
           "canceladas": null
         },
         "tickets": null,
-        "ts": "2026-05-07T15:58:01.666Z"
+        "ts": "2026-05-07T15:58:44.942Z"
+      },
+      "amazon": {
+        "reputacao": "",
+        "metrics": {
+          "pedidosProblema": 2.5,
+          "cancelamentoEnvio": null,
+          "rastreamento": null
+        },
+        "tickets": null,
+        "ts": "2026-05-07T18:31:56.821Z"
       }
     }
   }
