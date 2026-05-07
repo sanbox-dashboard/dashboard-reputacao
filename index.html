@@ -1031,4 +1031,16 @@ ghLoadConfigUI();
       if(content && JSON.stringify(content) !== JSON.stringify(state)){
         // Só atualiza se for mais novo (compara timestamps)
         const localTs = Math.max(0, ...Object.values(state.entries||{}).flatMap(d=> Object.values(d).map(c=> new Date(c.ts||0).getTime())));
-        const remoteTs = Math.max(0, ...Object.values(content.entries||{}).flatMap(d=> Object.values(d).map(c=> new Date(c.ts||0).g
+        const remoteTs = Math.max(0, ...Object.values(content.entries||{}).flatMap(d=> Object.values(d).map(c=> new Date(c.ts||0).getTime())));
+        if(remoteTs > localTs){
+          state = content; _origSave();
+          renderTodayCards(); renderMonthCards(); renderHistory(); renderTabs();
+          ghLog('Dados atualizados automaticamente do GitHub (versao mais recente).', 'info');
+        }
+      }
+    }catch(e){ console.error('initial pull', e); }
+  }
+})();
+</script>
+</body>
+</html>
