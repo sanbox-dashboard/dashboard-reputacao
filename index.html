@@ -689,27 +689,76 @@ function makeVariant(img, opts){
   return canvas;
 }
 
+// Otsu's method: encontra automaticamente o melhor threshold para a imagem
+function calcOtsuThreshold(imgData){
+  const hist = new Array(256).fill(0);
+  const d = imgData.data;
+  const total = d.length / 4;
+  for(let i=0; i<d.length; i+=4){
+    const lum = Math.round(0.299*d[i] + 0.587*d[i+1] + 0.114*d[i+2]);
+    hist[lum]++;
+  }
+  let sum = 0;
+  for(let t=0; t<256; t++) sum += t * hist[t];
+  let sumB = 0, wB = 0, wF = 0, maxVar = 0, threshold = 128;
+  for(let t=0; t<256; t++){
+    wB += hist[t];
+    if(wB === 0) continue;
+    wF = total - wB;
+    if(wF === 0) break;
+    sumB += t * hist[t];
+    const mB = sumB / wB;
+    const mF = (sum - sumB) / wF;
+    const between = wB * wF * (mB - mF) * (mB - mF);
+    if(between > maxVar){ maxVar = between; threshold = t; }
+  }
+  return threshold;
+}
+
+function makeOtsuVariant(img, scale){
+  const canvas = document.createElement('canvas');
+  canvas.width = img.width * scale;
+  canvas.height = img.height * scale;
+  const ctx = canvas.getContext('2d');
+  ctx.imageSmoothingEnabled = scale > 1;
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const t = calcOtsuThreshold(imgData);
+  const d = imgData.data;
+  for(let i=0; i<d.length; i+=4){
+    const lum = 0.299*d[i] + 0.587*d[i+1] + 0.114*d[i+2];
+    const v = lum > t ? 255 : 0;
+    d[i] = d[i+1] = d[i+2] = v;
+  }
+  ctx.putImageData(imgData, 0, 0);
+  return canvas;
+}
+
 async function multiPassOcr(file, onStatus){
-  // Múltiplos passes com pré-processamentos diferentes pra pegar texto colorido,
-  // estilizado e em diferentes contrastes. Combina o texto de todos no final.
+  // 10 passes com pré-processamentos e parâmetros Tesseract diferentes pra maximizar
+  // a chance de extrair texto difícil (colorido, estilizado, em layouts complexos).
   const baseImg = await loadImageBase(file);
   const baseScale = baseImg.width < 1200 ? 2 : 1;
   const variants = [
-    {name:'normal',     opts:{threshold:200, scale:baseScale}},
-    {name:'agressivo',  opts:{threshold:120, scale:baseScale}},
-    {name:'upscale-3x', opts:{threshold:200, scale:baseScale*1.5}},
-    {name:'invertido',  opts:{threshold:128, scale:baseScale, invert:true}},
-    {name:'canal-vermelho', opts:{threshold:128, scale:baseScale, channel:'red'}},
-    {name:'canal-verde', opts:{threshold:128, scale:baseScale, channel:'green'}},
+    {name:'normal',         opts:{threshold:200, scale:baseScale}, tess:{}},
+    {name:'agressivo',      opts:{threshold:120, scale:baseScale}, tess:{}},
+    {name:'upscale-2x',     opts:{threshold:200, scale:baseScale*2}, tess:{}},
+    {name:'invertido',      opts:{threshold:128, scale:baseScale, invert:true}, tess:{}},
+    {name:'canal-verde',    opts:{threshold:128, scale:baseScale, channel:'green'}, tess:{}},
+    {name:'canal-azul',     opts:{threshold:128, scale:baseScale, channel:'blue'}, tess:{}},
+    {name:'sparse-text',    opts:{threshold:200, scale:baseScale}, tess:{tessedit_pageseg_mode:'11'}},
+    {name:'so-numeros',     opts:{threshold:200, scale:baseScale}, tess:{tessedit_char_whitelist:'0123456789,.%/-'}},
+    {name:'otsu-1x',        opts:{otsu:true, scale:baseScale}, tess:{}},
+    {name:'otsu-3x-sparse', opts:{otsu:true, scale:baseScale*1.5}, tess:{tessedit_pageseg_mode:'11'}},
   ];
   const allTexts = [];
   for(let i=0; i<variants.length; i++){
     const v = variants[i];
     if(onStatus) onStatus(`Passe ${i+1}/${variants.length} (${v.name})...`);
     try{
-      const canvas = makeVariant(baseImg, v.opts);
-      const result = await Tesseract.recognize(canvas, 'por+eng');
-      allTexts.push(result.data.text);
+      const canvas = v.opts.otsu ? makeOtsuVariant(baseImg, v.opts.scale) : makeVariant(baseImg, v.opts);
+      const result = await Tesseract.recognize(canvas, 'por+eng', v.tess);
+      allTexts.push(`[${v.name}]\n${result.data.text}`);
     }catch(e){ console.warn('OCR pass failed:', v.name, e); }
   }
   return allTexts.join('\n=== PASSE ===\n');
@@ -797,38 +846,74 @@ function parseOcr(channelKey, text){
 
   // ===== Casas Bahia =====
   if(channelKey === 'casasbahia'){
-    // Reputação: primeira ocorrência de número decimal entre 1.0 e 5.0
-    const allDec = [...norm.matchAll(/(\d)[,.](\d)/g)];
-    for(const m of allDec){
+    // Reputação: X.X (1-5) com lookbehind/ahead pra não capturar parte de número maior
+    const repMatches = [...norm.matchAll(/(?<!\d)(\d)[,.](\d)(?!\d)/g)];
+    for(const m of repMatches){
       const v = parseFloat(m[1] + '.' + m[2]);
       if(v >= 1.0 && v <= 5.0){
         result.reputacao = m[1] + ',' + m[2];
         break;
       }
     }
-    // Métricas: pega o MAIOR % com decimal de 2+ dígitos antes (ex: 11.2% não 1,2%)
-    // Reclamação: prefere valor com 2+ dígitos antes da vírgula
-    const recMatch = norm.match(/reclama[çc][ãa]o[\s\S]{0,300}?(\d{2,}[,.]\d+)\s*%/i)
-                  || norm.match(/reclama[çc][ãa]o[\s\S]{0,300}?(\d+[,.]\d+)\s*%/i);
+    // Métricas: usa lookbehind pra capturar XX.X% (não 1.2 dentro de 11.2)
+    const recMatch = norm.match(/reclama[çc][ãa]o[\s\S]{0,300}?(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/i);
     if(recMatch){ result.metrics.reclamacao = parseFloat(recMatch[1].replace(',','.')); }
-    // Cancelamento: aceita 1 dígito antes do decimal
-    const cancMatch = norm.match(/cancelamento[\s\S]{0,300}?(\d+[,.]\d+)\s*%/i);
+    const cancMatch = norm.match(/cancelamento[\s\S]{0,300}?(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/i);
     if(cancMatch){ result.metrics.cancelados = parseFloat(cancMatch[1].replace(',','.')); }
     return result;
   }
 
   // ===== Magalu =====
-  // Limitação: Tesseract não consegue ler nem a reputação (gauge circular) nem as
-  // métricas (régua colorida). Tenta encontrar qualquer X,X entre 1 e 5 como reputação.
   if(channelKey === 'magalu'){
-    const allDec = [...norm.matchAll(/(\d)[,.](\d)/g)];
-    for(const m of allDec){
+    // Reputação: X,X com vírgula (formato do gauge), evita falsos positivos
+    const repMatches = [...norm.matchAll(/(?<!\d)(\d),(\d)(?!\d)/g)];
+    for(const m of repMatches){
       const v = parseFloat(m[1] + '.' + m[2]);
       if(v >= 1.0 && v <= 5.0){
         result.reputacao = m[1] + ',' + m[2];
         break;
       }
     }
+
+    // Métricas: tenta capturar valores próximos aos rótulos. Os valores da Magalu
+    // são SEMPRE exatamente um threshold da régua (ex: 89%, 79,99%, 5,01%).
+    // Coleta TODAS as porcentagens extraídas do texto multi-passe
+    const allPcts = [...norm.matchAll(/(?<!\d)(\d{1,3}(?:[,.]\d{1,2})?)\s*%/g)]
+      .map(m => parseFloat(m[1].replace(',','.')))
+      .filter(v => !isNaN(v) && v >= 0 && v <= 100);
+
+    // Cancelamento: valor baixo (0-15%). Procura próximo da palavra "cancelamento"
+    // mas filtra "100%" e valores fora de range típico.
+    const cancArea = norm.match(/cancelamento[\s\S]{0,400}/i);
+    if(cancArea){
+      const cancPcts = [...cancArea[0].matchAll(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/g)]
+        .map(m => parseFloat(m[1].replace(',','.')))
+        .filter(v => v >= 0.5 && v <= 15);
+      if(cancPcts.length) result.metrics.cancelamento = cancPcts[0];
+    }
+
+    // Agilidade: valor alto (50-100%). Busca % com decimal próximo de "agilidade".
+    const agArea = norm.match(/agi[lb]idade[\s\S]{0,400}/i);
+    if(agArea){
+      const agPcts = [...agArea[0].matchAll(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/g)]
+        .map(m => parseFloat(m[1].replace(',','.')))
+        .filter(v => v >= 50 && v <= 100);
+      if(agPcts.length) result.metrics.agilidade = agPcts[0];
+    }
+
+    // Nível de Serviço (mapeado pra "avaliacao" no nosso schema): valor alto (80-100)
+    // Pode aparecer sem decimal (ex: "89%")
+    const nsArea = norm.match(/n[íi]vel[\s\S]{0,400}/i);
+    if(nsArea){
+      const nsPcts = [...nsArea[0].matchAll(/(?<!\d)(\d{2,3}(?:[,.]\d{1,2})?)\s*%/g)]
+        .map(m => parseFloat(m[1].replace(',','.')))
+        .filter(v => v >= 70 && v <= 100);
+      // Filtra threshold conhecidos (100%, 95%, 92%) — pega o primeiro que NÃO é boundary padrão
+      const filtered = nsPcts.filter(v => v !== 100 && v !== 95 && v !== 92);
+      if(filtered.length) result.metrics.avaliacao = filtered[0];
+      else if(nsPcts.length) result.metrics.avaliacao = nsPcts[0];
+    }
+
     return result;
   }
 
