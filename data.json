@@ -63,14 +63,14 @@
         "ts": "2026-05-07T18:44:01.257Z"
       },
       "amazon": {
-        "reputacao": "",
+        "reputacao": "224",
         "metrics": {
-          "pedidosProblema": 2.5,
-          "cancelamentoEnvio": null,
-          "rastreamento": null
+          "pedidosProblema": 2.49,
+          "cancelamentoEnvio": 0,
+          "rastreamento": 100
         },
         "tickets": 0,
-        "ts": "2026-05-07T18:31:56.821Z"
+        "ts": "2026-05-07T19:03:34.025Z"
       },
       "magalu": {
         "tickets": 0,
@@ -81,8 +81,15 @@
         "metrics": {}
       },
       "shopee": {
+        "reputacao": "4,86",
+        "metrics": {
+          "taxaResposta": 83.12,
+          "boaAvaliacao": null,
+          "notaLoja": 4.86,
+          "ruinsNaoRespondidas": null
+        },
         "tickets": 0,
-        "metrics": {}
+        "ts": "2026-05-07T19:05:41.681Z"
       }
     }
   }
