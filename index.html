@@ -307,9 +307,10 @@ const channels = {
     color: '#FFE600',
     repLabel: 'Classificação',
     metrics: {
-      reclamacoes: {label:'Reclamações', metaType:'max', meta:1.0, alerta:0.70, unit:'%', ocrPattern:/reclama[çc][õo]es?\s*[^0-9]*?(\d+[,.]\d+)/i},
-      mediacoes:   {label:'Mediações',   metaType:'max', meta:0.5, alerta:0.30, unit:'%', ocrPattern:/media[çc][õo]es?\s*[^0-9]*?(\d+[,.]\d+)/i},
-      canceladas:  {label:'Vendas Canceladas', metaType:'max', meta:0.5, alerta:0.20, unit:'%', ocrPattern:/cancelad[ao]s?[^0-9]*?(\d+[,.]\d+)/i}
+      reclamacoes: {label:'Reclamações', metaType:'max', meta:1.0, alerta:0.70, unit:'%', ocrPattern:/reclama[çc][õo]es?[\s\S]{0,150}?(\d+(?:[,.]\d+)?)\s*%/i},
+      mediacoes:   {label:'Mediações',   metaType:'max', meta:0.5, alerta:0.30, unit:'%', ocrPattern:/media[çc][õo]es?[\s\S]{0,150}?(\d+(?:[,.]\d+)?)\s*%/i},
+      canceladas:  {label:'Vendas Canceladas', metaType:'max', meta:0.5, alerta:0.20, unit:'%', ocrPattern:/cancelad[ao]s?[\s\S]{0,150}?(\d+(?:[,.]\d+)?)\s*%/i},
+      enviosIncorretos: {label:'Envios incorretos', metaType:'max', meta:6.0, alerta:4.0, unit:'%', ocrPattern:/env[ií]os? incorretos?[\s\S]{0,150}?(\d+(?:[,.]\d+)?)\s*%/i}
     }
   },
   amazon: {
@@ -317,9 +318,9 @@ const channels = {
     color: '#FF9900',
     repLabel: 'Estado da Conta',
     metrics: {
-      pedidosProblema:   {label:'Pedidos com problema', metaType:'max', meta:1.0, alerta:0.7, unit:'%', ocrPattern:/pedidos com problemas?[^0-9]*?(\d+[,.]\d+)/i},
-      cancelamentoEnvio: {label:'Cancelamentos envio', metaType:'max', meta:3.0, alerta:2.0, unit:'%', ocrPattern:/cancelamentos? anteriores ao envio[^0-9]*?(\d+[,.]\d+)/i},
-      rastreamento:      {label:'Envio com rastreamento', metaType:'min', meta:95, alerta:97, unit:'%', ocrPattern:/rastreamento v[áa]lido[^0-9]*?(\d+[,.]?\d*)/i}
+      pedidosProblema:   {label:'Pedidos com problema', metaType:'max', meta:1.0, alerta:0.7, unit:'%', ocrPattern:/pedidos com problemas?[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
+      cancelamentoEnvio: {label:'Cancelamentos envio', metaType:'max', meta:3.0, alerta:2.0, unit:'%', ocrPattern:/cancelamentos? anteriores ao envio[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
+      rastreamento:      {label:'Envio com rastreamento', metaType:'min', meta:95, alerta:97, unit:'%', ocrPattern:/rastreamento v[áa]lido[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i}
     }
   },
   magalu: {
@@ -327,9 +328,9 @@ const channels = {
     color: '#0086FF',
     repLabel: 'Reputação (1-5)',
     metrics: {
-      agilidade:    {label:'Agilidade Atendimento', metaType:'min', meta:80, alerta:90, unit:'%', ocrPattern:/agilidade[^0-9]*?(\d+[,.]?\d*)/i},
-      cancelamento: {label:'Cancelamento', metaType:'max', meta:2.0, alerta:1.0, unit:'%', ocrPattern:/cancelamento[^0-9]*?(\d+[,.]\d+)/i},
-      avaliacao:    {label:'Avaliação da Loja', metaType:'min', meta:4.0, alerta:4.5, unit:'', ocrPattern:/(?:avalia[çc][ãa]o|n[íi]vel de servi[çc]o)[^0-9]*?(\d+[,.]\d+)/i}
+      agilidade:    {label:'Agilidade Atendimento', metaType:'min', meta:80, alerta:90, unit:'%', ocrPattern:/agilidade[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
+      cancelamento: {label:'Cancelamento', metaType:'max', meta:2.0, alerta:1.0, unit:'%', ocrPattern:/cancelamento[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
+      avaliacao:    {label:'Avaliação da Loja', metaType:'min', meta:4.0, alerta:4.5, unit:'', ocrPattern:/(?:avalia[çc][ãa]o|n[íi]vel de servi[çc]o)[\s\S]{0,200}?(\d+[,.]\d+)/i}
     }
   },
   casasbahia: {
@@ -337,8 +338,8 @@ const channels = {
     color: '#0033A0',
     repLabel: 'Reputação (1-5)',
     metrics: {
-      reclamacao: {label:'Pedidos com Reclamação', metaType:'max', meta:2.0, alerta:1.0, unit:'%', ocrPattern:/reclama[çc][ãa]o[^0-9]*?(\d+[,.]\d+)/i},
-      cancelados: {label:'Pedidos Cancelados', metaType:'max', meta:3.0, alerta:1.5, unit:'%', ocrPattern:/cancelamento[^0-9]*?(\d+[,.]\d+)/i}
+      reclamacao: {label:'Pedidos com Reclamação', metaType:'max', meta:2.0, alerta:1.0, unit:'%', ocrPattern:/reclama[çc][ãa]o[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
+      cancelados: {label:'Pedidos Cancelados', metaType:'max', meta:3.0, alerta:1.5, unit:'%', ocrPattern:/cancelamento[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i}
     }
   },
   shopee: {
@@ -346,10 +347,10 @@ const channels = {
     color: '#EE4D2D',
     repLabel: 'Nota da Loja',
     metrics: {
-      taxaResposta:        {label:'Taxa de Resposta', metaType:'min', meta:90, alerta:95, unit:'%', ocrPattern:/taxa de resposta[^0-9]*?(\d+[,.]?\d*)/i},
-      boaAvaliacao:        {label:'Boa taxa de avaliação', metaType:'min', meta:95, alerta:97, unit:'%', ocrPattern:/boa taxa[^0-9]*?(\d+[,.]?\d*)/i},
-      notaLoja:            {label:'Nota da Loja', metaType:'min', meta:4.0, alerta:4.5, unit:'', ocrPattern:/nota da loja[^0-9]*?(\d+[,.]\d+)/i},
-      ruinsNaoRespondidas: {label:'Avaliações ruins não respondidas', metaType:'max', meta:0, alerta:0, unit:'', ocrPattern:/n[ãa]o respond?id[ao]s[^0-9]*?(\d+[,.]?\d*)/i}
+      taxaResposta:        {label:'Taxa de Resposta', metaType:'min', meta:90, alerta:95, unit:'%', ocrPattern:/taxa de resposta[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
+      boaAvaliacao:        {label:'Boa taxa de avaliação', metaType:'min', meta:95, alerta:97, unit:'%', ocrPattern:/boa taxa[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
+      notaLoja:            {label:'Nota da Loja', metaType:'min', meta:4.0, alerta:4.5, unit:'', ocrPattern:/nota da loja[\s\S]{0,200}?(\d+[,.]\d+)/i},
+      ruinsNaoRespondidas: {label:'Avaliações ruins não respondidas', metaType:'max', meta:0, alerta:0, unit:'', ocrPattern:/n[ãa]o respond?id[ao]s[\s\S]{0,200}?(\d+(?:[,.]\d+)?)/i}
     }
   }
 };
@@ -1030,16 +1031,4 @@ ghLoadConfigUI();
       if(content && JSON.stringify(content) !== JSON.stringify(state)){
         // Só atualiza se for mais novo (compara timestamps)
         const localTs = Math.max(0, ...Object.values(state.entries||{}).flatMap(d=> Object.values(d).map(c=> new Date(c.ts||0).getTime())));
-        const remoteTs = Math.max(0, ...Object.values(content.entries||{}).flatMap(d=> Object.values(d).map(c=> new Date(c.ts||0).getTime())));
-        if(remoteTs > localTs){
-          state = content; _origSave();
-          renderTodayCards(); renderMonthCards(); renderHistory(); renderTabs();
-          ghLog('Dados atualizados automaticamente do GitHub (versão mais recente).', 'info');
-        }
-      }
-    }catch(e){ console.error('initial pull', e); }
-  }
-})();
-</script>
-</body>
-</html>
+        const remoteTs = Math.max(0, ...Object.values(content.entries||{}).flatMap(d=> Object.values(d).map(c=> new Date(c.ts||0).g
