@@ -52,14 +52,15 @@
     },
     "2026-05-07": {
       "mercadolivre": {
-        "reputacao": "",
+        "reputacao": "MercadoLíder Platinum",
         "metrics": {
-          "reclamacoes": null,
-          "mediacoes": null,
-          "canceladas": null
+          "reclamacoes": 0.91,
+          "mediacoes": 0.13,
+          "canceladas": 0.23,
+          "enviosIncorretos": 0.2
         },
         "tickets": null,
-        "ts": "2026-05-07T15:58:44.942Z"
+        "ts": "2026-05-07T18:44:01.257Z"
       },
       "amazon": {
         "reputacao": "",
