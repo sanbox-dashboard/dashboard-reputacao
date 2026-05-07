@@ -73,12 +73,23 @@
         "ts": "2026-05-07T19:03:34.025Z"
       },
       "magalu": {
+        "reputacao": "",
+        "metrics": {
+          "agilidade": 79.99,
+          "cancelamento": 5.01,
+          "avaliacao": 2.4
+        },
         "tickets": 0,
-        "metrics": {}
+        "ts": "2026-05-07T19:11:53.193Z"
       },
       "casasbahia": {
+        "reputacao": "2,6",
+        "metrics": {
+          "reclamacao": 1.2,
+          "cancelados": 1.2
+        },
         "tickets": 8,
-        "metrics": {}
+        "ts": "2026-05-07T19:06:10.623Z"
       },
       "shopee": {
         "reputacao": "4,86",
