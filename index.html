@@ -737,19 +737,14 @@ function parseOcr(channelKey, text){
   const result = {metrics:{}, reputacao:null};
   const norm = text.replace(/\s+/g,' ');
 
-  // ===== Mercado Livre: cálculo a partir dos contadores =====
-  // Tesseract não lê bem as porcentagens estilizadas coloridas, mas lê os contadores
-  // "São X das suas vendas" e o total de vendas. Calcula percentual = contagem/total*100.
+  // ===== Mercado Livre =====
   if(channelKey === 'mercadolivre'){
     const repMatch = norm.match(/Mercado\s*L[íi]der\s+(Platinum|Gold|Silver|Bronze|Standard)/i);
     if(repMatch){ result.reputacao = 'MercadoLíder ' + repMatch[1]; }
-
     const totalMatch = norm.match(/(\d{1,3}(?:\.\d{3})+|\d{4,})\s+\d{1,3}(?:\.\d{3})+\s+\d{1,3}(?:\.\d{3})+\s+R[S$]/i);
     const total = totalMatch ? parseInt(totalMatch[1].replace(/\./g,'')) : null;
-
     const counts = [...norm.matchAll(/S[ãa]o\s+(\d+)\s+das\s+suas\s+vendas/gi)].map(m=> parseInt(m[1]));
     const keys = ['reclamacoes', 'mediacoes', 'canceladas', 'enviosIncorretos'];
-
     if(total && counts.length){
       keys.forEach((k, i)=>{
         if(counts[i] !== undefined){
@@ -760,7 +755,59 @@ function parseOcr(channelKey, text){
     return result;
   }
 
-  // ===== Demais canais: regex tradicional =====
+  // ===== Amazon =====
+  if(channelKey === 'amazon'){
+    const classMatch = norm.match(/classifica[çc][ãa]o\s+do\s+estado\s+da\s+conta\s+(\d{1,4})/i);
+    const idealMatch = /Ideal/i.test(norm);
+    if(classMatch){ result.reputacao = classMatch[1] + (idealMatch ? ' — Ideal' : ''); }
+    const probMatch = norm.match(/[íi]ndice\s+de\s+pedidos\s+com(?:\s+problemas?)?[\s\S]{0,30}?(\d+(?:[,.]\d+)?)\s*%/i);
+    if(probMatch){ result.metrics.pedidosProblema = parseFloat(probMatch[1].replace(',','.')); }
+    const cancMatch = norm.match(/cancelamentos?\s+anteriores\s+ao(?:\s+envio)?[\s\S]{0,30}?(\d+(?:[,.]\d+)?)\s*%/i);
+    if(cancMatch){ result.metrics.cancelamentoEnvio = parseFloat(cancMatch[1].replace(',','.')); }
+    const rastMatch = norm.match(/rastreamento[\s\S]{0,30}?(\d+(?:[,.]\d+)?)\s*%/i);
+    if(rastMatch){ result.metrics.rastreamento = parseFloat(rastMatch[1].replace(',','.')); }
+    return result;
+  }
+
+  // ===== Casas Bahia =====
+  if(channelKey === 'casasbahia'){
+    const repMatch = norm.match(/(\d[,.]\d)\s+(?:[\-↓↑]?\d+[,.]?\d*\s+vs|saber\s+mais)/i);
+    if(repMatch){ result.reputacao = repMatch[1].replace('.', ','); }
+    const recMatch = norm.match(/reclama[çc][ãa]o[\s\S]{0,200}?(\d+[,.]\d+)\s*%/i);
+    if(recMatch){ result.metrics.reclamacao = parseFloat(recMatch[1].replace(',','.')); }
+    const cancMatch = norm.match(/cancelamento[\s\S]{0,200}?(\d+[,.]\d+)\s*%/i);
+    if(cancMatch){ result.metrics.cancelados = parseFloat(cancMatch[1].replace(',','.')); }
+    return result;
+  }
+
+  // ===== Magalu =====
+  if(channelKey === 'magalu'){
+    const repMatch = norm.match(/(\d[,.]\d)\s*(?:De\s+1\s+a\s+5)?/i);
+    if(repMatch && parseFloat(repMatch[1].replace(',','.')) <= 5){
+      result.reputacao = repMatch[1].replace('.', ',');
+    }
+    return result;
+  }
+
+  // ===== Shopee =====
+  if(channelKey === 'shopee'){
+    const topMatch = norm.match(/Top\s+Lojista/i);
+    if(topMatch){ result.reputacao = 'Top Lojista'; }
+    const tResp = norm.match(/taxa\s+de\s+resposta[\s\S]{0,80}?(\d+(?:[,.]\d+)?)\s*%/i);
+    if(tResp){ result.metrics.taxaResposta = parseFloat(tResp[1].replace(',','.')); }
+    const aval = norm.match(/avalia[çc][ãa]o\s+da\s+loja[\s\S]{0,40}?(\d+[,.]\d+)/i);
+    if(aval){
+      result.metrics.notaLoja = parseFloat(aval[1].replace(',','.'));
+      if(!result.reputacao) result.reputacao = aval[1].replace('.', ',');
+    }
+    const boa = norm.match(/boa\s+taxa[\s\S]{0,80}?(\d+(?:[,.]\d+)?)\s*%/i);
+    if(boa){ result.metrics.boaAvaliacao = parseFloat(boa[1].replace(',','.')); }
+    const ruins = norm.match(/n[ãa]o\s+respond?id[ao]s[\s\S]{0,40}?(\d+(?:[,.]\d+)?)/i);
+    if(ruins){ result.metrics.ruinsNaoRespondidas = parseFloat(ruins[1].replace(',','.')); }
+    return result;
+  }
+
+  // ===== Fallback =====
   Object.entries(ch.metrics).forEach(([mKey, m])=>{
     if(m.ocrPattern){
       const match = norm.match(m.ocrPattern);
@@ -952,12 +999,37 @@ function seedTodayIfEmpty(){
       state.entries[today][k] = {...v, ts: new Date().toISOString()};
       added++;
     } else if(state.entries[today][k].tickets===undefined){
-      // já tinha o canal, mas não tinha tickets — preenche só esse campo
       state.entries[today][k].tickets = v.tickets;
       updated++;
     }
   });
   if(added||updated) save();
+}
+
+// Carryover automático de tickets do dia anterior — sempre que um canal não tem tickets hoje
+// e teve em algum dia anterior, reaproveita o último valor conhecido.
+function carryOverTickets(){
+  const today = todayKey();
+  if(!state.entries[today]) state.entries[today] = {};
+  const dates = Object.keys(state.entries).filter(d=> d < today).sort().reverse();
+  let changed = 0;
+  Object.keys(channels).forEach(channelKey => {
+    const todayData = state.entries[today][channelKey];
+    if(todayData && todayData.tickets !== undefined && todayData.tickets !== null) return;
+    for(const d of dates){
+      const prev = state.entries[d]?.[channelKey];
+      if(prev && prev.tickets !== undefined && prev.tickets !== null){
+        if(!state.entries[today][channelKey]){
+          state.entries[today][channelKey] = {tickets: prev.tickets, metrics:{}};
+        } else {
+          state.entries[today][channelKey].tickets = prev.tickets;
+        }
+        changed++;
+        break;
+      }
+    }
+  });
+  if(changed) save();
 }
 
 /* =========================================================================
@@ -1018,7 +1090,7 @@ async function ghPull(){
   ghLog('Carregando do GitHub...', 'info');
   try{
     const {content} = await ghGetFile();
-    if(!content){ ghLog('Arquivo data.json não existe ainda no repo. Salve algo e clique em "Enviar agora" pra criar.', 'info'); return; }
+    if(!content){ ghLog('Arquivo data.json não existe ainda no repo.', 'info'); return; }
     if(!confirm('Substituir os dados locais pela versão do GitHub?')) return;
     state = content; save();
     renderTodayCards(); renderMonthCards(); renderHistory(); renderTabs();
@@ -1053,14 +1125,12 @@ async function ghPush(silent){
   }catch(e){ if(!silent) ghLog('Erro: '+e.message, 'err'); else console.error('autoSync', e); }
 }
 
-// Auto-sync on save (debounced)
 let syncTimer = null;
 function scheduleAutoSync(){
   clearTimeout(syncTimer);
   syncTimer = setTimeout(()=> ghPush(true), 1500);
 }
 
-// Hook into save() — original save() updates localStorage; we wrap it to also sync
 const _origSave = save;
 save = function(){
   _origSave();
@@ -1072,12 +1142,12 @@ save = function(){
    ========================================================================= */
 load();
 seedTodayIfEmpty();
+carryOverTickets();
 renderTabs();
 renderTodayCards();
 renderMonthCards();
 renderHistory();
 ghLoadConfigUI();
-// Tenta puxar do GitHub silenciosamente ao abrir, se configurado
 (async ()=>{
   const c = ghGetConfig();
   if(c.repo && c.pat){
