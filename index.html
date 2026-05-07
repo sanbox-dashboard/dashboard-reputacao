@@ -658,29 +658,61 @@ function updateInputStatus(inp, channelKey){
   else if(st==='red') inp.classList.add('danger');
 }
 
-async function preprocessImage(file){
-  // Carrega a imagem em um canvas, aumenta o contraste e converte texto colorido em preto puro.
-  // Isso ajuda o Tesseract a ler números em vermelho/verde/laranja (que ele normalmente ignora).
+async function loadImageBase(file){
   const img = new Image();
   img.src = URL.createObjectURL(file);
   await new Promise((res, rej)=>{ img.onload=res; img.onerror=rej; });
-  const scale = img.width < 1200 ? 2 : 1; // upscale se imagem for pequena (melhora OCR)
+  return img;
+}
+
+function makeVariant(img, opts){
+  const {threshold=200, scale=1, invert=false, channel=null} = opts;
   const canvas = document.createElement('canvas');
   canvas.width = img.width * scale;
   canvas.height = img.height * scale;
   const ctx = canvas.getContext('2d');
-  ctx.imageSmoothingEnabled = false;
+  ctx.imageSmoothingEnabled = scale > 1; // suave para upscale
   ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
   const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   const d = imgData.data;
   for(let i=0; i<d.length; i+=4){
-    // Luminância: pixels claros (fundo) viram brancos, qualquer texto colorido vira preto
-    const lum = 0.299*d[i] + 0.587*d[i+1] + 0.114*d[i+2];
-    const v = lum > 200 ? 255 : 0;
+    let value;
+    if(channel==='red') value = d[i];
+    else if(channel==='green') value = d[i+1];
+    else if(channel==='blue') value = d[i+2];
+    else value = 0.299*d[i] + 0.587*d[i+1] + 0.114*d[i+2];
+    let v = value > threshold ? 255 : 0;
+    if(invert) v = 255 - v;
     d[i] = d[i+1] = d[i+2] = v;
   }
   ctx.putImageData(imgData, 0, 0);
   return canvas;
+}
+
+async function multiPassOcr(file, onStatus){
+  // Múltiplos passes com pré-processamentos diferentes pra pegar texto colorido,
+  // estilizado e em diferentes contrastes. Combina o texto de todos no final.
+  const baseImg = await loadImageBase(file);
+  const baseScale = baseImg.width < 1200 ? 2 : 1;
+  const variants = [
+    {name:'normal',     opts:{threshold:200, scale:baseScale}},
+    {name:'agressivo',  opts:{threshold:120, scale:baseScale}},
+    {name:'upscale-3x', opts:{threshold:200, scale:baseScale*1.5}},
+    {name:'invertido',  opts:{threshold:128, scale:baseScale, invert:true}},
+    {name:'canal-vermelho', opts:{threshold:128, scale:baseScale, channel:'red'}},
+    {name:'canal-verde', opts:{threshold:128, scale:baseScale, channel:'green'}},
+  ];
+  const allTexts = [];
+  for(let i=0; i<variants.length; i++){
+    const v = variants[i];
+    if(onStatus) onStatus(`Passe ${i+1}/${variants.length} (${v.name})...`);
+    try{
+      const canvas = makeVariant(baseImg, v.opts);
+      const result = await Tesseract.recognize(canvas, 'por+eng');
+      allTexts.push(result.data.text);
+    }catch(e){ console.warn('OCR pass failed:', v.name, e); }
+  }
+  return allTexts.join('\n=== PASSE ===\n');
 }
 
 async function handleImage(key, file){
@@ -694,23 +726,17 @@ async function handleImage(key, file){
   drop.innerHTML = `<img src="${url}" alt="preview">`;
   drop.classList.add('has-image');
 
-  status.textContent = 'Pré-processando imagem (alto contraste)...';
+  status.textContent = 'Iniciando OCR multi-passe (pode levar 30-60s)...';
   progress.style.display = 'block';
   fill.style.width = '0%';
 
   try{
-    const preprocessed = await preprocessImage(file);
-    const result = await Tesseract.recognize(preprocessed, 'por+eng', {
-      logger: m=>{
-        if(m.status==='recognizing text'){
-          status.textContent = `Reconhecendo texto... ${Math.round(m.progress*100)}%`;
-          fill.style.width = (m.progress*100)+'%';
-        } else {
-          status.textContent = m.status;
-        }
-      }
+    let passNum = 0;
+    const text = await multiPassOcr(file, (msg)=>{
+      passNum++;
+      status.textContent = msg;
+      fill.style.width = (passNum/6*100)+'%';
     });
-    const text = result.data.text;
     extracted.textContent = text;
     extracted.classList.add('show');
 
@@ -771,20 +797,37 @@ function parseOcr(channelKey, text){
 
   // ===== Casas Bahia =====
   if(channelKey === 'casasbahia'){
-    const repMatch = norm.match(/(\d[,.]\d)\s+(?:[\-↓↑]?\d+[,.]?\d*\s+vs|saber\s+mais)/i);
-    if(repMatch){ result.reputacao = repMatch[1].replace('.', ','); }
-    const recMatch = norm.match(/reclama[çc][ãa]o[\s\S]{0,200}?(\d+[,.]\d+)\s*%/i);
+    // Reputação: primeira ocorrência de número decimal entre 1.0 e 5.0
+    const allDec = [...norm.matchAll(/(\d)[,.](\d)/g)];
+    for(const m of allDec){
+      const v = parseFloat(m[1] + '.' + m[2]);
+      if(v >= 1.0 && v <= 5.0){
+        result.reputacao = m[1] + ',' + m[2];
+        break;
+      }
+    }
+    // Métricas: pega o MAIOR % com decimal de 2+ dígitos antes (ex: 11.2% não 1,2%)
+    // Reclamação: prefere valor com 2+ dígitos antes da vírgula
+    const recMatch = norm.match(/reclama[çc][ãa]o[\s\S]{0,300}?(\d{2,}[,.]\d+)\s*%/i)
+                  || norm.match(/reclama[çc][ãa]o[\s\S]{0,300}?(\d+[,.]\d+)\s*%/i);
     if(recMatch){ result.metrics.reclamacao = parseFloat(recMatch[1].replace(',','.')); }
-    const cancMatch = norm.match(/cancelamento[\s\S]{0,200}?(\d+[,.]\d+)\s*%/i);
+    // Cancelamento: aceita 1 dígito antes do decimal
+    const cancMatch = norm.match(/cancelamento[\s\S]{0,300}?(\d+[,.]\d+)\s*%/i);
     if(cancMatch){ result.metrics.cancelados = parseFloat(cancMatch[1].replace(',','.')); }
     return result;
   }
 
   // ===== Magalu =====
+  // Limitação: Tesseract não consegue ler nem a reputação (gauge circular) nem as
+  // métricas (régua colorida). Tenta encontrar qualquer X,X entre 1 e 5 como reputação.
   if(channelKey === 'magalu'){
-    const repMatch = norm.match(/(\d[,.]\d)\s*(?:De\s+1\s+a\s+5)?/i);
-    if(repMatch && parseFloat(repMatch[1].replace(',','.')) <= 5){
-      result.reputacao = repMatch[1].replace('.', ',');
+    const allDec = [...norm.matchAll(/(\d)[,.](\d)/g)];
+    for(const m of allDec){
+      const v = parseFloat(m[1] + '.' + m[2]);
+      if(v >= 1.0 && v <= 5.0){
+        result.reputacao = m[1] + ',' + m[2];
+        break;
+      }
     }
     return result;
   }
