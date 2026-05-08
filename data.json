@@ -73,14 +73,14 @@
         "ts": "2026-05-07T19:03:34.025Z"
       },
       "magalu": {
-        "reputacao": "",
+        "reputacao": "2,4",
         "metrics": {
           "agilidade": 79.99,
           "cancelamento": 5.01,
           "avaliacao": 2.4
         },
         "tickets": 0,
-        "ts": "2026-05-07T19:11:53.193Z"
+        "ts": "2026-05-07T19:12:11.628Z"
       },
       "casasbahia": {
         "reputacao": "2,6",
@@ -101,6 +101,28 @@
         },
         "tickets": 0,
         "ts": "2026-05-07T19:05:41.681Z"
+      }
+    },
+    "2026-05-08": {
+      "mercadolivre": {
+        "tickets": 7,
+        "metrics": {}
+      },
+      "amazon": {
+        "tickets": 0,
+        "metrics": {}
+      },
+      "magalu": {
+        "tickets": 0,
+        "metrics": {}
+      },
+      "casasbahia": {
+        "tickets": 8,
+        "metrics": {}
+      },
+      "shopee": {
+        "tickets": 0,
+        "metrics": {}
       }
     }
   }
