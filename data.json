@@ -152,14 +152,19 @@
         "metrics": {
           "agilidade": 84.9,
           "cancelamento": 6.7,
-          "avaliacao": null
+          "avaliacao": 3.1
         },
         "tickets": 0,
-        "ts": "2026-05-12T16:57:27.282Z"
+        "ts": "2026-05-12T16:58:02.149Z"
       },
       "casasbahia": {
+        "reputacao": "2,6",
+        "metrics": {
+          "reclamacao": 11.2,
+          "cancelados": 1.7
+        },
         "tickets": 0,
-        "metrics": {}
+        "ts": "2026-05-12T16:59:08.412Z"
       },
       "shopee": {
         "tickets": 0,
