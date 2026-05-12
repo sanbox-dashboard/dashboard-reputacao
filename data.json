@@ -127,11 +127,11 @@
     },
     "2026-05-12": {
       "mercadolivre": {
-        "tickets": 7,
+        "tickets": 10,
         "metrics": {}
       },
       "amazon": {
-        "tickets": 0,
+        "tickets": 5,
         "metrics": {}
       },
       "magalu": {
@@ -139,7 +139,7 @@
         "metrics": {}
       },
       "casasbahia": {
-        "tickets": 8,
+        "tickets": 0,
         "metrics": {}
       },
       "shopee": {
