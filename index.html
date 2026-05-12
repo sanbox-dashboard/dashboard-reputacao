@@ -1251,19 +1251,27 @@ function clearAllData(){
 
 // Navegação entre abas principais (Reputação | Registro Diário)
 const MAIN_TAB_KEY = 'dashboard-reputacao-main-tab';
+function applyTabVisibility(tab){
+  // Em TV mode, força sempre mostrar reputacao independente da aba selecionada
+  const tvOn = document.body.classList.contains('tv-mode');
+  const effective = tvOn ? 'reputacao' : tab;
+  document.querySelectorAll('[data-tab-panel]').forEach(p => {
+    p.style.display = p.dataset.tabPanel === effective ? '' : 'none';
+  });
+}
 function switchMainTab(tab){
   document.querySelectorAll('.main-tab').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
-  document.querySelectorAll('[data-tab-panel]').forEach(p => {
-    p.style.display = p.dataset.tabPanel === tab ? '' : 'none';
-  });
+  applyTabVisibility(tab);
   localStorage.setItem(MAIN_TAB_KEY, tab);
-  // Re-renderiza pra garantir que filtros e dropdowns estejam populados quando abrir o registro
   if(tab === 'registro') renderRegistro();
+}
+function getActiveTab(){
+  return localStorage.getItem(MAIN_TAB_KEY) || 'reputacao';
 }
 // Aplica aba salva ao carregar
 setTimeout(()=>{
-  const saved = localStorage.getItem(MAIN_TAB_KEY);
-  if(saved && saved !== 'reputacao') switchMainTab(saved);
+  const saved = getActiveTab();
+  switchMainTab(saved);
 }, 100);
 
 const TV_KEY = 'dashboard-reputacao-tv';
@@ -1272,12 +1280,15 @@ function toggleTvMode(){
   const on = document.body.classList.contains('tv-mode');
   document.getElementById('tv-btn').textContent = on ? '🔧 Sair Modo TV' : '📺 Modo TV';
   localStorage.setItem(TV_KEY, on ? '1' : '0');
+  // Re-aplica visibilidade pra garantir que reputacao apareça em TV mode
+  applyTabVisibility(getActiveTab());
 }
-if(localStorage.getItem(TV_KEY)==='1'){
-  // Apply on load
+// TV mode é PADRÃO — só não fica ativo se o usuário desativou explicitamente
+if(localStorage.getItem(TV_KEY) !== '0'){
   setTimeout(()=>{
     document.body.classList.add('tv-mode');
     const btn = document.getElementById('tv-btn'); if(btn) btn.textContent='🔧 Sair Modo TV';
+    applyTabVisibility(getActiveTab());
   }, 50);
 }
 
