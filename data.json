@@ -11,7 +11,7 @@
         "ts": "2026-05-06T19:30:16.895Z"
       },
       "amazon": {
-        "reputacao": "224 — Ideal",
+        "reputacao": "224 â Ideal",
         "metrics": {
           "pedidosProblema": 2.64,
           "cancelamentoEnvio": 0,
@@ -31,7 +31,7 @@
         "ts": "2026-05-06T19:30:16.895Z"
       },
       "mercadolivre": {
-        "reputacao": "MercadoLíder Platinum",
+        "reputacao": "MercadoLÃ­der Platinum",
         "metrics": {
           "reclamacoes": 0.98,
           "mediacoes": 0.15,
@@ -52,7 +52,7 @@
     },
     "2026-05-07": {
       "mercadolivre": {
-        "reputacao": "MercadoLíder Platinum",
+        "reputacao": "MercadoLÃ­der Platinum",
         "metrics": {
           "reclamacoes": 0.91,
           "mediacoes": 0.13,
@@ -127,8 +127,15 @@
     },
     "2026-05-12": {
       "mercadolivre": {
+        "reputacao": "MercadoLíder Platinum",
+        "metrics": {
+          "reclamacoes": 0.8,
+          "mediacoes": 0.1,
+          "canceladas": 0.2,
+          "enviosIncorretos": 0.2
+        },
         "tickets": 10,
-        "metrics": {}
+        "ts": "2026-05-12T16:22:40.926Z"
       },
       "amazon": {
         "tickets": 5,
