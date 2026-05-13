@@ -182,6 +182,16 @@
         },
         "tickets": null,
         "ts": "2026-05-13T11:41:47.807Z"
+      },
+      "amazon": {
+        "reputacao": "",
+        "metrics": {
+          "pedidosProblema": 2.4,
+          "cancelamentoEnvio": 0,
+          "rastreamento": 100
+        },
+        "tickets": null,
+        "ts": "2026-05-13T11:48:22.653Z"
       }
     }
   }
