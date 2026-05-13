@@ -1494,26 +1494,25 @@ function scheduleAutoSync(){
   syncTimer = setTimeout(()=> ghPush(true), 1500);
 }
 
-// Auto-refresh do GitHub a cada 1 hora — busca a versão mais recente e re-renderiza
-async function autoRefreshFromGithub(silent){
-  const c = ghGetConfig();
-  if(!c.repo) return;
-  try{
-    const {content} = await ghGetFile();
-    if(content && JSON.stringify(content) !== JSON.stringify(state)){
-      const localTs = Math.max(0, ...Object.values(state.entries||{}).flatMap(d=> Object.values(d).map(c=> new Date(c.ts||0).getTime())));
-      const remoteTs = Math.max(0, ...Object.values(content.entries||{}).flatMap(d=> Object.values(d).map(c=> new Date(c.ts||0).getTime())));
-      if(remoteTs > localTs){
-        state = content; _origSave();
-        renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro();
-        const indicator = document.getElementById('last-refresh');
-        if(indicator) indicator.textContent = '↻ Atualizado ' + new Date().toLocaleTimeString('pt-BR');
-      }
-    }
-  }catch(e){ console.error('auto-refresh failed', e); }
+// Refresh COMPLETO da página a cada 1 hora — recarrega tudo do zero (busca data.json,
+// re-renderiza, reset do estado). Usa hard reload pra evitar cache.
+const RELOAD_INTERVAL_MS = 60 * 60 * 1000; // 1 hora
+const reloadAt = Date.now() + RELOAD_INTERVAL_MS;
+setTimeout(()=> location.reload(), RELOAD_INTERVAL_MS);
+
+// Atualiza o indicador no header com countdown até o próximo reload
+function updateReloadIndicator(){
+  const indicator = document.getElementById('last-refresh');
+  if(!indicator) return;
+  const remaining = reloadAt - Date.now();
+  if(remaining <= 0){ indicator.textContent = '↻ Recarregando...'; return; }
+  const min = Math.floor(remaining / 60000);
+  const hh = String(Math.floor(min / 60)).padStart(2,'0');
+  const mm = String(min % 60).padStart(2,'0');
+  indicator.textContent = `↻ Próximo refresh em ${hh}:${mm}`;
 }
-// Refresh automático a cada 1 hora
-setInterval(()=> autoRefreshFromGithub(true), 60 * 60 * 1000);
+updateReloadIndicator();
+setInterval(updateReloadIndicator, 30000); // atualiza a cada 30s
 
 const _origSave = save;
 save = function(){
