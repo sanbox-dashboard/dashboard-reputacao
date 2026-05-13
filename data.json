@@ -192,6 +192,16 @@
         },
         "tickets": null,
         "ts": "2026-05-13T11:48:22.653Z"
+      },
+      "magalu": {
+        "reputacao": "",
+        "metrics": {
+          "agilidade": 84.9,
+          "cancelamento": 6.7,
+          "avaliacao": 3.1
+        },
+        "tickets": null,
+        "ts": "2026-05-13T11:52:28.712Z"
       }
     }
   }
