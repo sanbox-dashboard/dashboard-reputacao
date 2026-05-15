@@ -276,6 +276,28 @@
         "tickets": 0,
         "ts": "2026-05-14T16:45:40.751Z"
       }
+    },
+    "2026-05-15": {
+      "mercadolivre": {
+        "tickets": 10,
+        "metrics": {}
+      },
+      "amazon": {
+        "tickets": 5,
+        "metrics": {}
+      },
+      "magalu": {
+        "tickets": 0,
+        "metrics": {}
+      },
+      "casasbahia": {
+        "tickets": 0,
+        "metrics": {}
+      },
+      "shopee": {
+        "tickets": 0,
+        "metrics": {}
+      }
     }
   }
 }
