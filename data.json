@@ -290,8 +290,14 @@
         "ts": "2026-05-15T11:29:25.384Z"
       },
       "amazon": {
+        "reputacao": "188",
+        "metrics": {
+          "pedidosProblema": 2.51,
+          "cancelamentoEnvio": 0.59,
+          "rastreamento": 100
+        },
         "tickets": 5,
-        "metrics": {}
+        "ts": "2026-05-15T11:31:06.951Z"
       },
       "magalu": {
         "tickets": 0,
