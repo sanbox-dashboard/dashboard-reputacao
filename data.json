@@ -442,8 +442,14 @@
         "metrics": {}
       },
       "amazon": {
+        "reputacao": "268 — Ideal",
+        "metrics": {
+          "pedidosProblema": 1.92,
+          "cancelamentoEnvio": 0.61,
+          "rastreamento": 100
+        },
         "tickets": 5,
-        "metrics": {}
+        "ts": "2026-05-20T11:25:00.885Z"
       },
       "magalu": {
         "tickets": 0,
