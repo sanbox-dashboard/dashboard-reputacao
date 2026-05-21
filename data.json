@@ -445,7 +445,7 @@
           "canceladas": 0.23,
           "enviosIncorretos": 0.36
         },
-        "tickets": 13,
+        "tickets": 10,
         "ts": "2026-05-20T11:33:01.522Z"
       },
       "amazon": {
@@ -455,7 +455,7 @@
           "cancelamentoEnvio": 0.61,
           "rastreamento": 100
         },
-        "tickets": 4,
+        "tickets": 5,
         "ts": "2026-05-20T11:25:00.885Z"
       },
       "magalu": {
@@ -465,7 +465,7 @@
           "cancelamento": 5.1,
           "avaliacao": 3.1
         },
-        "tickets": 2,
+        "tickets": 0,
         "ts": "2026-05-20T11:43:12.459Z"
       },
       "casasbahia": {
@@ -487,6 +487,28 @@
         },
         "tickets": 0,
         "ts": "2026-05-20T11:37:47.010Z"
+      }
+    },
+    "2026-05-21": {
+      "mercadolivre": {
+        "tickets": 10,
+        "metrics": {}
+      },
+      "amazon": {
+        "tickets": 5,
+        "metrics": {}
+      },
+      "magalu": {
+        "tickets": 0,
+        "metrics": {}
+      },
+      "casasbahia": {
+        "tickets": 0,
+        "metrics": {}
+      },
+      "shopee": {
+        "tickets": 0,
+        "metrics": {}
       }
     }
   }
