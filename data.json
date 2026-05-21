@@ -498,7 +498,7 @@
           "canceladas": 0.23,
           "enviosIncorretos": 0.35
         },
-        "tickets": 10,
+        "tickets": 12,
         "ts": "2026-05-21T12:37:02.082Z"
       },
       "amazon": {
@@ -508,7 +508,7 @@
           "cancelamentoEnvio": 0.31,
           "rastreamento": 100
         },
-        "tickets": 5,
+        "tickets": 4,
         "ts": "2026-05-21T12:39:11.718Z"
       },
       "magalu": {
@@ -518,7 +518,7 @@
           "cancelamento": 4.9,
           "avaliacao": 3.7
         },
-        "tickets": 0,
+        "tickets": 2,
         "ts": "2026-05-21T12:41:53.113Z"
       },
       "casasbahia": {
