@@ -498,7 +498,7 @@
           "canceladas": 0.23,
           "enviosIncorretos": 0.35
         },
-        "tickets": 12,
+        "tickets": 10,
         "ts": "2026-05-21T12:37:02.082Z"
       },
       "amazon": {
@@ -508,7 +508,7 @@
           "cancelamentoEnvio": 0.31,
           "rastreamento": 100
         },
-        "tickets": 4,
+        "tickets": 5,
         "ts": "2026-05-21T12:39:11.718Z"
       },
       "magalu": {
@@ -518,7 +518,7 @@
           "cancelamento": 4.9,
           "avaliacao": 3.7
         },
-        "tickets": 2,
+        "tickets": 0,
         "ts": "2026-05-21T12:41:53.113Z"
       },
       "casasbahia": {
@@ -526,8 +526,15 @@
         "metrics": {}
       },
       "shopee": {
+        "reputacao": "4,9",
+        "metrics": {
+          "taxaResposta": 85.84,
+          "boaAvaliacao": 98,
+          "notaLoja": 4.9,
+          "ruinsNaoRespondidas": null
+        },
         "tickets": 0,
-        "metrics": {}
+        "ts": "2026-05-21T12:48:38.902Z"
       }
     }
   }
