@@ -555,8 +555,14 @@
         "ts": "2026-05-22T13:13:43.197Z"
       },
       "amazon": {
+        "reputacao": "268 — Ideal",
+        "metrics": {
+          "pedidosProblema": 1.89,
+          "cancelamentoEnvio": 0,
+          "rastreamento": 100
+        },
         "tickets": 5,
-        "metrics": {}
+        "ts": "2026-05-22T13:17:02.019Z"
       },
       "magalu": {
         "tickets": 0,
