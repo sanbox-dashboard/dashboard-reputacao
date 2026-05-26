@@ -685,8 +685,15 @@
         "metrics": {}
       },
       "shopee": {
+        "reputacao": "4,86",
+        "metrics": {
+          "taxaResposta": 92.29,
+          "boaAvaliacao": 97,
+          "notaLoja": 4.86,
+          "ruinsNaoRespondidas": 0
+        },
         "tickets": 0,
-        "metrics": {}
+        "ts": "2026-05-26T11:21:47.781Z"
       }
     }
   }
