@@ -1,5 +1,58 @@
 {
   "entries": {
+    "2026-05-26": {
+      "mercadolivre": {
+        "reputacao": "MercadoLÃ­der Platinum",
+        "metrics": {
+          "reclamacoes": 0.68,
+          "mediacoes": 0.22,
+          "canceladas": 0.27,
+          "enviosIncorretos": 0.37
+        },
+        "tickets": 255,
+        "ts": "2026-05-26T11:15:12.712Z"
+      },
+      "amazon": {
+        "reputacao": "264 â Ideal",
+        "metrics": {
+          "pedidosProblema": 1.71,
+          "cancelamentoEnvio": 0,
+          "rastreamento": 100
+        },
+        "tickets": 32,
+        "ts": "2026-05-26T11:17:21.882Z"
+      },
+      "magalu": {
+        "reputacao": "4,3",
+        "metrics": {
+          "agilidade": 92.2,
+          "cancelamento": 2.8,
+          "avaliacao": 4.3
+        },
+        "tickets": 55,
+        "ts": "2026-05-26T11:18:48.433Z"
+      },
+      "casasbahia": {
+        "reputacao": "2,6",
+        "metrics": {
+          "reclamacao": 11.2,
+          "cancelados": 1.7
+        },
+        "tickets": 104,
+        "ts": "2026-05-26T11:27:04.970Z"
+      },
+      "shopee": {
+        "reputacao": "4,86",
+        "metrics": {
+          "taxaResposta": 92.29,
+          "boaAvaliacao": 97,
+          "notaLoja": 4.86,
+          "ruinsNaoRespondidas": 0
+        },
+        "tickets": 30,
+        "ts": "2026-05-26T11:21:47.781Z"
+      }
+    },
     "2026-05-06": {
       "casasbahia": {
         "reputacao": "2,6",
@@ -11,7 +64,7 @@
         "ts": "2026-05-06T19:30:16.895Z"
       },
       "amazon": {
-        "reputacao": "224 Ã¢ÂÂ Ideal",
+        "reputacao": "224 ÃÂ¢ÃÂÃÂ Ideal",
         "metrics": {
           "pedidosProblema": 2.64,
           "cancelamentoEnvio": 0,
@@ -31,7 +84,7 @@
         "ts": "2026-05-06T19:30:16.895Z"
       },
       "mercadolivre": {
-        "reputacao": "MercadoLÃÂ­der Platinum",
+        "reputacao": "MercadoLÃÂÃÂ­der Platinum",
         "metrics": {
           "reclamacoes": 0.98,
           "mediacoes": 0.15,
@@ -52,7 +105,7 @@
     },
     "2026-05-07": {
       "mercadolivre": {
-        "reputacao": "MercadoLÃÂ­der Platinum",
+        "reputacao": "MercadoLÃÂÃÂ­der Platinum",
         "metrics": {
           "reclamacoes": 0.91,
           "mediacoes": 0.13,
@@ -127,7 +180,7 @@
     },
     "2026-05-12": {
       "mercadolivre": {
-        "reputacao": "MercadoLÃ­der Platinum",
+        "reputacao": "MercadoLÃÂ­der Platinum",
         "metrics": {
           "reclamacoes": 0.8,
           "mediacoes": 0.1,
@@ -173,7 +226,7 @@
     },
     "2026-05-13": {
       "mercadolivre": {
-        "reputacao": "MercadoLíder Platinum",
+        "reputacao": "MercadoLÃ­der Platinum",
         "metrics": {
           "reclamacoes": 0.8,
           "mediacoes": 0.12,
@@ -226,7 +279,7 @@
     },
     "2026-05-14": {
       "mercadolivre": {
-        "reputacao": "MercadoLíder Platinum",
+        "reputacao": "MercadoLÃ­der Platinum",
         "metrics": {
           "reclamacoes": 0.75,
           "mediacoes": 0.12,
@@ -279,7 +332,7 @@
     },
     "2026-05-15": {
       "mercadolivre": {
-        "reputacao": "MercadoLíder Platinum",
+        "reputacao": "MercadoLÃ­der Platinum",
         "metrics": {
           "reclamacoes": 0.73,
           "mediacoes": 0.15,
@@ -332,7 +385,7 @@
     },
     "2026-05-18": {
       "mercadolivre": {
-        "reputacao": "MercadoLíder Platinum",
+        "reputacao": "MercadoLÃ­der Platinum",
         "metrics": {
           "reclamacoes": 0.73,
           "mediacoes": 0.2,
@@ -385,7 +438,7 @@
     },
     "2026-05-19": {
       "mercadolivre": {
-        "reputacao": "MercadoLíder Platinum",
+        "reputacao": "MercadoLÃ­der Platinum",
         "metrics": {
           "reclamacoes": 0.68,
           "mediacoes": 0.18,
@@ -438,7 +491,7 @@
     },
     "2026-05-20": {
       "mercadolivre": {
-        "reputacao": "MercadoLíder Platinum",
+        "reputacao": "MercadoLÃ­der Platinum",
         "metrics": {
           "reclamacoes": 0.62,
           "mediacoes": 0.18,
@@ -449,7 +502,7 @@
         "ts": "2026-05-20T11:33:01.522Z"
       },
       "amazon": {
-        "reputacao": "268 — Ideal",
+        "reputacao": "268 â Ideal",
         "metrics": {
           "pedidosProblema": 1.92,
           "cancelamentoEnvio": 0.61,
@@ -491,7 +544,7 @@
     },
     "2026-05-21": {
       "mercadolivre": {
-        "reputacao": "MercadoLíder Platinum",
+        "reputacao": "MercadoLÃ­der Platinum",
         "metrics": {
           "reclamacoes": 0.59,
           "mediacoes": 0.18,
@@ -502,7 +555,7 @@
         "ts": "2026-05-21T12:37:02.082Z"
       },
       "amazon": {
-        "reputacao": "268 — Ideal",
+        "reputacao": "268 â Ideal",
         "metrics": {
           "pedidosProblema": 1.9,
           "cancelamentoEnvio": 0.31,
@@ -544,7 +597,7 @@
     },
     "2026-05-22": {
       "mercadolivre": {
-        "reputacao": "MercadoLíder Platinum",
+        "reputacao": "MercadoLÃ­der Platinum",
         "metrics": {
           "reclamacoes": 0.64,
           "mediacoes": 0.2,
@@ -555,7 +608,7 @@
         "ts": "2026-05-22T13:13:43.197Z"
       },
       "amazon": {
-        "reputacao": "268 — Ideal",
+        "reputacao": "268 â Ideal",
         "metrics": {
           "pedidosProblema": 1.89,
           "cancelamentoEnvio": 0,
@@ -597,7 +650,7 @@
     },
     "2026-05-25": {
       "mercadolivre": {
-        "reputacao": "MercadoLíder Platinum",
+        "reputacao": "MercadoLÃ­der Platinum",
         "metrics": {
           "reclamacoes": 0.61,
           "mediacoes": 0.2,
@@ -608,7 +661,7 @@
         "ts": "2026-05-25T11:09:53.172Z"
       },
       "amazon": {
-        "reputacao": "268 — Ideal",
+        "reputacao": "268 â Ideal",
         "metrics": {
           "pedidosProblema": 1.65,
           "cancelamentoEnvio": 0,
@@ -646,59 +699,6 @@
         },
         "tickets": 0,
         "ts": "2026-05-25T11:18:16.810Z"
-      }
-    },
-    "2026-05-26": {
-      "mercadolivre": {
-        "reputacao": "MercadoLíder Platinum",
-        "metrics": {
-          "reclamacoes": 0.68,
-          "mediacoes": 0.22,
-          "canceladas": 0.27,
-          "enviosIncorretos": 0.37
-        },
-        "tickets": 255,
-        "ts": "2026-05-26T11:15:12.712Z"
-      },
-      "amazon": {
-        "reputacao": "264 — Ideal",
-        "metrics": {
-          "pedidosProblema": 1.71,
-          "cancelamentoEnvio": 0,
-          "rastreamento": 100
-        },
-        "tickets": 32,
-        "ts": "2026-05-26T11:17:21.882Z"
-      },
-      "magalu": {
-        "reputacao": "4,3",
-        "metrics": {
-          "agilidade": 92.2,
-          "cancelamento": 2.8,
-          "avaliacao": 4.3
-        },
-        "tickets": 55,
-        "ts": "2026-05-26T11:18:48.433Z"
-      },
-      "casasbahia": {
-        "reputacao": "2,6",
-        "metrics": {
-          "reclamacao": 11.2,
-          "cancelados": 1.7
-        },
-        "tickets": 104,
-        "ts": "2026-05-26T11:27:04.970Z"
-      },
-      "shopee": {
-        "reputacao": "4,86",
-        "metrics": {
-          "taxaResposta": 92.29,
-          "boaAvaliacao": 97,
-          "notaLoja": 4.86,
-          "ruinsNaoRespondidas": 0
-        },
-        "tickets": 30,
-        "ts": "2026-05-26T11:21:47.781Z"
       }
     }
   }
