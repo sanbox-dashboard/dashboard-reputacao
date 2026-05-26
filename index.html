@@ -1525,6 +1525,10 @@ save = function(){
    Para cada dia+canal, escolhe a versão com timestamp (ts) mais recente.
    ========================================================================= */
 function mergeStates(local, remote){
+  // GitHub (remote) é a fonte canônica. Em conflito (mesmo dia+canal existe nos dois),
+  // o REMOTO sempre vence — isso evita que dados locais antigos/stale sobrescrevam o
+  // que o time alimentou. Entradas que só existem local (ainda não sincronizadas) são
+  // mantidas como rede de segurança.
   const merged = {entries: {}};
   const localE = local.entries || {};
   const remoteE = remote.entries || {};
@@ -1536,12 +1540,8 @@ function mergeStates(local, remote){
     const allCh = new Set([...Object.keys(ld), ...Object.keys(rd)]);
     allCh.forEach(ch => {
       const l = ld[ch], r = rd[ch];
-      if(!l){ merged.entries[date][ch] = r; return; }
-      if(!r){ merged.entries[date][ch] = l; return; }
-      // Ambos existem — escolhe o de timestamp mais recente
-      const lt = new Date(l.ts || 0).getTime();
-      const rt = new Date(r.ts || 0).getTime();
-      merged.entries[date][ch] = rt >= lt ? r : l;
+      if(r){ merged.entries[date][ch] = r; }      // remoto existe → remoto vence
+      else { merged.entries[date][ch] = l; }      // só local → mantém (não sincronizado)
     });
   });
   return merged;
@@ -1568,19 +1568,34 @@ renderHistory();
   try{
     const {content} = await ghGetFile();
     if(content){
-      const merged = mergeStates(state, content);
-      state = merged;
-      carryOverTickets();   // preenche lacunas de tickets se algum dia ficou sem
-      _origSave();          // salva o merge localmente
+      // GitHub é canônico. Começa do que está na nuvem (tem o que todos alimentaram).
+      const remoteJson = JSON.stringify(content.entries || {});
+      const today = todayKey();
+      const remoteToday = content.entries?.[today] || {};
+      const localToday = state.entries?.[today] || {};
+      let preservedLocal = false;
+      // Rede de segurança: preserva entradas locais de HOJE que o remoto ainda não tem
+      // (print recém-subido cujo push pode ter falhado). Descarta todo dado local antigo.
+      Object.keys(localToday).forEach(ch => {
+        const l = localToday[ch];
+        const hasLocalData = l && (l.reputacao || (l.metrics && Object.values(l.metrics).some(v => v!==null && v!==undefined && v!=='')));
+        if(hasLocalData && !remoteToday[ch]){
+          if(!content.entries[today]) content.entries[today] = {};
+          content.entries[today][ch] = l;
+          preservedLocal = true;
+        }
+      });
+      state = content;          // GitHub vira a base canônica (descarta stale local)
+      carryOverTickets();        // preenche lacunas de tickets
+      _origSave();               // salva localmente
       renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro(); renderTabs();
-      // Só empurra de volta se o merge ficou diferente do que está na nuvem
-      // (evita commits desnecessários a cada page load)
-      if(JSON.stringify(merged.entries) !== JSON.stringify(content.entries)){
+      // Empurra de volta só se mudou algo (preservou dado local ou carryOver alterou)
+      if(preservedLocal || JSON.stringify(state.entries || {}) !== remoteJson){
         ghPush(true);
       }
-      ghLog('✓ Sincronizado com a nuvem (dados de todos os usuários).', 'ok');
+      ghLog('✓ Sincronizado com a nuvem (fonte: GitHub).', 'ok');
     }
-  }catch(e){ console.error('initial merge failed', e); }
+  }catch(e){ console.error('initial sync failed', e); }
 })();
 </script>
 </body>
