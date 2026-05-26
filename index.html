@@ -448,6 +448,20 @@ const channels = {
 const STORAGE_KEY = 'dashboard-reputacao-v1';
 const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
+// Versão do schema — ao mudar este número, todo navegador limpa o localStorage antigo
+// automaticamente no próximo carregamento e puxa tudo fresco do GitHub.
+const SCHEMA_VERSION = '3';
+const SCHEMA_KEY = 'dashboard-reputacao-schema';
+(function migrateSchema(){
+  try{
+    if(localStorage.getItem(SCHEMA_KEY) !== SCHEMA_VERSION){
+      // Limpa os dados antigos (stale) — o GitHub é a fonte da verdade e vai repovoar
+      localStorage.removeItem(STORAGE_KEY);
+      localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION);
+    }
+  }catch(e){ console.error('schema migration failed', e); }
+})();
+
 let state = {
   entries: {} // entries[YYYY-MM-DD][channelKey] = { reputacao: '', metrics: {key:value}, ts:'' }
 };
