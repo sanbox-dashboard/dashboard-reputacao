@@ -1521,32 +1521,66 @@ save = function(){
 };
 
 /* =========================================================================
+   MERGE — junta estado local com o do GitHub sem perder histórico.
+   Para cada dia+canal, escolhe a versão com timestamp (ts) mais recente.
+   ========================================================================= */
+function mergeStates(local, remote){
+  const merged = {entries: {}};
+  const localE = local.entries || {};
+  const remoteE = remote.entries || {};
+  const allDates = new Set([...Object.keys(localE), ...Object.keys(remoteE)]);
+  allDates.forEach(date => {
+    merged.entries[date] = {};
+    const ld = localE[date] || {};
+    const rd = remoteE[date] || {};
+    const allCh = new Set([...Object.keys(ld), ...Object.keys(rd)]);
+    allCh.forEach(ch => {
+      const l = ld[ch], r = rd[ch];
+      if(!l){ merged.entries[date][ch] = r; return; }
+      if(!r){ merged.entries[date][ch] = l; return; }
+      // Ambos existem — escolhe o de timestamp mais recente
+      const lt = new Date(l.ts || 0).getTime();
+      const rt = new Date(r.ts || 0).getTime();
+      merged.entries[date][ch] = rt >= lt ? r : l;
+    });
+  });
+  return merged;
+}
+
+/* =========================================================================
    INICIALIZAÇÃO
    ========================================================================= */
 load();
+ghLoadConfigUI();
+
+// Renderização inicial com o que tem local (pra não ficar tela vazia enquanto carrega)
 seedTodayIfEmpty();
 carryOverTickets();
 renderTabs();
 renderTodayCards();
 renderMonthCards();
 renderHistory();
-ghLoadConfigUI();
+
+// Pull do GitHub e MERGE — GitHub é a fonte canônica (tem o que todos alimentaram)
 (async ()=>{
   const c = ghGetConfig();
-  if(c.repo && c.pat){
-    try{
-      const {content} = await ghGetFile();
-      if(content && JSON.stringify(content) !== JSON.stringify(state)){
-        const localTs = Math.max(0, ...Object.values(state.entries||{}).flatMap(d=> Object.values(d).map(c=> new Date(c.ts||0).getTime())));
-        const remoteTs = Math.max(0, ...Object.values(content.entries||{}).flatMap(d=> Object.values(d).map(c=> new Date(c.ts||0).getTime())));
-        if(remoteTs > localTs){
-          state = content; _origSave();
-          renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro(); renderTabs();
-          ghLog('Dados atualizados automaticamente do GitHub (versao mais recente).', 'info');
-        }
+  if(!(c.repo && c.pat)) return;
+  try{
+    const {content} = await ghGetFile();
+    if(content){
+      const merged = mergeStates(state, content);
+      state = merged;
+      carryOverTickets();   // preenche lacunas de tickets se algum dia ficou sem
+      _origSave();          // salva o merge localmente
+      renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro(); renderTabs();
+      // Só empurra de volta se o merge ficou diferente do que está na nuvem
+      // (evita commits desnecessários a cada page load)
+      if(JSON.stringify(merged.entries) !== JSON.stringify(content.entries)){
+        ghPush(true);
       }
-    }catch(e){ console.error('initial pull', e); }
-  }
+      ghLog('✓ Sincronizado com a nuvem (dados de todos os usuários).', 'ok');
+    }
+  }catch(e){ console.error('initial merge failed', e); }
 })();
 </script>
 </body>
