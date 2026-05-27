@@ -703,8 +703,15 @@
     },
     "2026-05-27": {
       "mercadolivre": {
+        "reputacao": "MercadoLíder Platinum",
+        "metrics": {
+          "reclamacoes": 0.68,
+          "mediacoes": 0.25,
+          "canceladas": 0.32,
+          "enviosIncorretos": 0.57
+        },
         "tickets": 5,
-        "metrics": {}
+        "ts": "2026-05-27T11:11:49.652Z"
       },
       "amazon": {
         "tickets": 0,
