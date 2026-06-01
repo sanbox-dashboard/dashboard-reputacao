@@ -862,7 +862,7 @@
     },
     "2026-06-01": {
       "mercadolivre": {
-        "tickets": 4,
+        "tickets": 6,
         "metrics": {}
       },
       "amazon": {
@@ -874,7 +874,7 @@
         "metrics": {}
       },
       "casasbahia": {
-        "tickets": 0,
+        "tickets": 12,
         "metrics": {}
       },
       "shopee": {
