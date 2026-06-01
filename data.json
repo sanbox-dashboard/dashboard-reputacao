@@ -883,8 +883,14 @@
         "ts": "2026-06-01T11:37:08.230Z"
       },
       "magalu": {
+        "reputacao": "4,3",
+        "metrics": {
+          "agilidade": 94.9,
+          "cancelamento": 2.3,
+          "avaliacao": 4.3
+        },
         "tickets": 0,
-        "metrics": {}
+        "ts": "2026-06-01T11:39:31.657Z"
       },
       "casasbahia": {
         "tickets": 0,
