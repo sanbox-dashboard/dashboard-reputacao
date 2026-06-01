@@ -869,7 +869,7 @@
           "canceladas": 0.32,
           "enviosIncorretos": 0.57
         },
-        "tickets": 5,
+        "tickets": 6,
         "ts": "2026-06-01T11:35:27.828Z"
       },
       "amazon": {
@@ -898,7 +898,7 @@
           "reclamacao": 7.3,
           "cancelados": 3.5
         },
-        "tickets": 0,
+        "tickets": 12,
         "ts": "2026-06-01T11:52:40.022Z"
       },
       "shopee": {
