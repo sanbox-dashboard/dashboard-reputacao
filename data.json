@@ -1134,8 +1134,15 @@
         "ts": "2026-06-08T11:43:56.928Z"
       },
       "shopee": {
+        "reputacao": "4,86",
+        "metrics": {
+          "taxaResposta": 97.61,
+          "boaAvaliacao": 98,
+          "notaLoja": 4.86,
+          "ruinsNaoRespondidas": 0
+        },
         "tickets": 0,
-        "metrics": {}
+        "ts": "2026-06-08T11:44:58.237Z"
       }
     }
   }
