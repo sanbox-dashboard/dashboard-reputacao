@@ -1111,7 +1111,7 @@
           "cancelamentoEnvio": 0,
           "rastreamento": 100
         },
-        "tickets": 0,
+        "tickets": 1,
         "ts": "2026-06-08T11:29:15.865Z"
       },
       "magalu": {
@@ -1130,7 +1130,7 @@
           "reclamacao": 7.3,
           "cancelados": 3.5
         },
-        "tickets": 3,
+        "tickets": 4,
         "ts": "2026-06-08T11:43:56.928Z"
       },
       "shopee": {
