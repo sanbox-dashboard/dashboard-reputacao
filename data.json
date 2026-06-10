@@ -1211,8 +1211,14 @@
         "ts": "2026-06-10T15:00:18.064Z"
       },
       "amazon": {
-        "tickets": 1,
-        "metrics": {}
+        "reputacao": "264",
+        "metrics": {
+          "pedidosProblema": 1.67,
+          "cancelamentoEnvio": 0,
+          "rastreamento": 100
+        },
+        "tickets": 0,
+        "ts": "2026-06-10T15:01:28.263Z"
       },
       "magalu": {
         "tickets": 0,
