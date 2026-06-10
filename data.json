@@ -1231,8 +1231,13 @@
         "ts": "2026-06-10T15:02:57.384Z"
       },
       "casasbahia": {
+        "reputacao": "4",
+        "metrics": {
+          "reclamacao": 7.3,
+          "cancelados": 3.5
+        },
         "tickets": 4,
-        "metrics": {}
+        "ts": "2026-06-10T15:09:21.068Z"
       },
       "shopee": {
         "reputacao": "4,87",
