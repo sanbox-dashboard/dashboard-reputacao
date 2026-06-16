@@ -451,7 +451,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — ao mudar este número, todo navegador limpa o localStorage antigo
 // automaticamente no próximo carregamento e puxa tudo fresco do GitHub.
-const SCHEMA_VERSION = '4';
+const SCHEMA_VERSION = '5';
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 (function migrateSchema(){
   try{
@@ -1510,10 +1510,17 @@ async function ghPush(silent){
   }catch(e){ if(!silent) ghLog('Erro: '+e.message, 'err'); else console.error('autoSync', e); }
 }
 
-let syncTimer = null;
-function scheduleAutoSync(){
-  clearTimeout(syncTimer);
-  syncTimer = setTimeout(()=> ghPush(true), 1500);
+// Push IMEDIATO ao salvar — não usa debounce, garante que o GitHub está atualizado
+// antes do usuário ter chance de fechar a aba ou outra pessoa carregar
+let pushInProgress = false;
+async function immediatePush(){
+  if(pushInProgress) return;
+  pushInProgress = true;
+  try{
+    await ghPush(false); // não silencioso — mostra status no log
+  }finally{
+    pushInProgress = false;
+  }
 }
 
 // Força um refresh manual — busca dados frescos do GitHub e re-renderiza, sem reload da página
@@ -1561,7 +1568,7 @@ setInterval(updateReloadIndicator, 30000); // atualiza a cada 30s
 const _origSave = save;
 save = function(){
   _origSave();
-  if(ghGetConfig().pat) scheduleAutoSync();
+  if(ghGetConfig().pat) immediatePush();
 };
 
 /* =========================================================================
@@ -1605,65 +1612,30 @@ renderTodayCards();
 renderMonthCards();
 renderHistory();
 
-// Pull do GitHub e MERGE — GitHub é a fonte canônica (tem o que todos alimentaram)
+// Pull do GitHub — GitHub é a ÚNICA fonte da verdade. Substitui o estado local.
 (async ()=>{
   const c = ghGetConfig();
   if(!(c.repo && c.pat)) return;
   try{
     const {content} = await ghGetFile();
     if(content){
-      // GitHub é canônico, mas merge inteligente por CAMPO pra não perder dados:
-      // - Se remoto tem reputacao/metrics, usa remoto (outro usuário alimentou)
-      // - Se remoto tem só tickets mas local tem reputacao/metrics, junta os dois
-      // - Dados locais de DIAS anteriores ao remoto são descartados (eram stale)
-      const remoteJson = JSON.stringify(content.entries || {});
-      const today = todayKey();
-      let changed = false;
-
-      // Começa do remoto e injeta dados locais de hoje que enriquecem (não conflitam com) o remoto
-      const localToday = state.entries?.[today] || {};
-      if(!content.entries[today]) content.entries[today] = {};
-      Object.keys(localToday).forEach(ch => {
-        const l = localToday[ch];
-        const r = content.entries[today][ch];
-        const localHasMetrics = l && (l.reputacao || (l.metrics && Object.values(l.metrics).some(v => v!==null && v!==undefined && v!=='')));
-        if(!localHasMetrics) return; // local não tem nada útil pra esse canal
-        if(!r){
-          // remoto não tem esse canal hoje — adiciona o local inteiro
-          content.entries[today][ch] = l;
-          changed = true;
-        } else {
-          // remoto tem algo. Se o remoto não tem métricas mas o local tem, junta
-          const remoteHasMetrics = r.reputacao || (r.metrics && Object.values(r.metrics).some(v => v!==null && v!==undefined && v!==''));
-          if(!remoteHasMetrics){
-            // Remoto tem só tickets/ts, local tem dados reais — junta tudo
-            content.entries[today][ch] = {
-              reputacao: l.reputacao || r.reputacao,
-              metrics: l.metrics || r.metrics || {},
-              tickets: r.tickets ?? l.tickets,
-              ts: l.ts || r.ts
-            };
-            changed = true;
-          }
-          // Se ambos têm métricas, remoto vence (não sobrescreve com local antigo)
-        }
-      });
-
-      state = content;          // GitHub vira a base canônica (descarta stale local)
-      carryOverTickets();        // preenche lacunas de tickets
-      _origSave();               // salva localmente
+      // GitHub é a ÚNICA fonte da verdade. Substitui o estado local inteiro pelo do GitHub.
+      // Sem merge — se está no GitHub, mostra. Não está? Não mostra.
+      // (Saves locais que ainda não foram enviados ficam protegidos: o push é imediato e
+      // bloqueia até confirmação, então no momento do load todo save deveria já estar lá.)
+      state = content;
+      carryOverTickets();  // fallback: se algum dia não tem tickets, copia do dia anterior
+      _origSave();         // salva localmente como cache (não é a fonte da verdade)
       renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro(); renderTabs();
-      // Empurra de volta só se mudou algo (preservou local ou carryOver alterou)
-      if(changed || JSON.stringify(state.entries || {}) !== remoteJson){
-        ghPush(true);
-      }
       const ts = new Date().toLocaleTimeString('pt-BR');
-      ghLog(`✓ Sincronizado com a nuvem às ${ts}.`, 'ok');
-      console.log('[Dashboard] Sync OK at', ts, '- entries:', Object.keys(state.entries).length, 'days');
+      ghLog(`✓ Carregado do GitHub às ${ts} — ${Object.keys(state.entries||{}).length} dias`, 'ok');
+      console.log('[Dashboard] Loaded from GitHub at', ts);
+    } else {
+      ghLog('⚠ data.json não existe no GitHub ainda', 'err');
     }
   }catch(e){
-    console.error('[Dashboard] Sync FAILED:', e);
-    ghLog('⚠ Erro ao sincronizar: ' + e.message, 'err');
+    console.error('[Dashboard] Load FAILED:', e);
+    ghLog('⚠ Erro ao carregar do GitHub: ' + e.message + ' (mostrando cache local)', 'err');
   }
 })();
 </script>
