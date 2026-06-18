@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Anti-cache agressivo — garante que todos os PCs sempre rodem a versão mais recente do dashboard -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Dashboard de Reputação - Marketplaces</title>
 <style>
   :root{
@@ -75,7 +79,11 @@
   /* Ticket row - destaque diferente */
   .tickets-row{margin-top:14px;padding:14px 16px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;gap:12px;border:2px solid;background:#fff}
   .tickets-row.green{border-color:var(--green);background:var(--green-bg)}
+  .tickets-row.yellow{border-color:var(--yellow);background:var(--yellow-bg)}
   .tickets-row.red{border-color:var(--red);background:var(--red-bg)}
+  .tickets-row.yellow .value{color:#b45309}
+  .tickets-row .value-block{display:flex;align-items:center;gap:10px}
+  .sac-row{margin-top:10px;padding:12px 14px}
   .tickets-row .label-block{flex:1;min-width:0}
   .tickets-row .label{font-size:14px;font-weight:700;color:var(--text);line-height:1.2;display:block}
   .tickets-row .meta-info{font-size:11px;color:var(--muted);font-weight:500}
@@ -209,6 +217,7 @@
   .mini-metric.red .mini-value{color:#b91c1c}
   .mini-tickets{margin-top:4px;padding:4px 6px;border-radius:4px;font-size:10px;font-weight:700;text-align:center;border:1px solid var(--border);background:#fff}
   .mini-tickets.green{border-color:var(--green);background:var(--green-bg);color:#047857}
+  .mini-tickets.yellow{border-color:var(--yellow);background:var(--yellow-bg);color:#b45309}
   .mini-tickets.red{border-color:var(--red);background:var(--red-bg);color:#b91c1c}
   .mini-card-empty{font-size:11px;color:var(--muted);text-align:center;padding:8px 0}
 
@@ -288,14 +297,6 @@
     <div class="grid" id="today-grid"></div>
   </section>
 
-  <section id="month-section">
-    <h2 class="section-title">
-      Média do Mês
-      <span class="section-subtitle" id="month-subtitle"></span>
-    </h2>
-    <div class="grid" id="month-grid"></div>
-  </section>
-
   <section id="upload-section">
     <h2 class="section-title">Atualizar Dados Diários</h2>
     <div class="upload-section">
@@ -314,6 +315,14 @@
 </div>
 
 <div data-tab-panel="registro" style="display:none">
+  <section id="month-section">
+    <h2 class="section-title">
+      Média do Mês
+      <span class="section-subtitle" id="month-subtitle"></span>
+    </h2>
+    <div class="grid" id="month-grid"></div>
+  </section>
+
   <section id="registro-section">
     <h2 class="section-title">
       Registro Diário
@@ -371,7 +380,7 @@
 </section>
 
 <div class="footer">
-  Dados sincronizados automaticamente com GitHub. Use os botões abaixo para backup local.
+  Dados sincronizados automaticamente com GitHub · <span id="app-version-tag">v—</span> · Use os botões abaixo para backup local.
   <div style="margin-top:8px">
     <button class="btn btn-secondary" onclick="exportData()">Exportar JSON (backup local)</button>
     <button class="btn btn-secondary" onclick="importData()">Importar JSON</button>
@@ -449,19 +458,12 @@ const channels = {
 const STORAGE_KEY = 'dashboard-reputacao-v1';
 const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
-// Versão do schema — ao mudar este número, todo navegador limpa o localStorage antigo
-// automaticamente no próximo carregamento e puxa tudo fresco do GitHub.
-const SCHEMA_VERSION = '5';
+// Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
+// nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
+const SCHEMA_VERSION = '11';
+const APP_VERSION = '11.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
-(function migrateSchema(){
-  try{
-    if(localStorage.getItem(SCHEMA_KEY) !== SCHEMA_VERSION){
-      // Limpa os dados antigos (stale) — o GitHub é a fonte da verdade e vai repovoar
-      localStorage.removeItem(STORAGE_KEY);
-      localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION);
-    }
-  }catch(e){ console.error('schema migration failed', e); }
-})();
+try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 
 let state = {
   entries: {} // entries[YYYY-MM-DD][channelKey] = { reputacao: '', metrics: {key:value}, ts:'' }
@@ -558,6 +560,13 @@ function renderTodayCards(){
     const dataDate = latest.date;
     const isStale = dataDate && dataDate !== today;
     const metrics = data.metrics || {};
+    // Tickets e SAC fora do prazo SEMPRE vêm de hoje (atualizados diariamente pela
+    // tarefa agendada), independente de a reputação ser ou não de hoje.
+    const todayEntry = state.entries[today]?.[key] || {};
+    const todayTickets = todayEntry.tickets ?? data.tickets;
+    const todaySac = todayEntry.sacForaPrazo ?? data.sacForaPrazo;
+    const todayCriticos = todayEntry.casosCriticos ?? data.casosCriticos;
+    const todayDevolucao = todayEntry.solicitacaoDevolucao ?? data.solicitacaoDevolucao;
     let worst = 'unknown';
     let metricsHtml = '';
     Object.entries(ch.metrics).forEach(([mKey, m])=>{
@@ -579,7 +588,7 @@ function renderTodayCards(){
       </li>`;
     });
     const reputacao = data.reputacao || '—';
-    const tickets = (data.tickets===undefined||data.tickets===null||data.tickets==='')?null:parseInt(data.tickets);
+    const tickets = (todayTickets===undefined||todayTickets===null||todayTickets==='')?null:parseInt(todayTickets);
     const tStatus = tickets===null ? '' : (tickets===0?'green':'red');
     const ticketsHtml = `<div class="tickets-row ${tStatus}">
       <div class="label-block">
@@ -588,6 +597,42 @@ function renderTodayCards(){
       </div>
       <span class="value">${tickets===null?'—':tickets}</span>
     </div>`;
+    // Métrica SAC fora do prazo (30 dias)
+    const sac = (todaySac===undefined||todaySac===null||todaySac==='')?null:parseInt(todaySac);
+    const sacStatus = sac===null ? '' : (sac===0?'green': sac<=3?'yellow':'red');
+    const sacHtml = `<div class="tickets-row sac-row ${sacStatus}">
+      <div class="label-block">
+        <span class="label">⏱️ Tickets SAC fora do prazo</span>
+        <span class="meta-info">Atendimento SAC > 30 dias (Octadesk)</span>
+      </div>
+      <span class="value">${sac===null?'—':sac}</span>
+    </div>`;
+    // Métrica Casos Críticos fora do prazo (10 dias)
+    const criticos = (todayCriticos===undefined||todayCriticos===null||todayCriticos==='')?null:parseInt(todayCriticos);
+    const criticosStatus = criticos===null ? '' : (criticos===0?'green': criticos<=3?'yellow':'red');
+    const criticosHtml = `<div class="tickets-row sac-row ${criticosStatus}">
+      <div class="label-block">
+        <span class="label">🚨 Casos Críticos fora do prazo</span>
+        <span class="meta-info">Casos Críticos > 10 dias (Octadesk)</span>
+      </div>
+      <span class="value">${criticos===null?'—':criticos}</span>
+    </div>`;
+    // Métrica Solicitação de Devolução fora do prazo (20 dias)
+    const devolucao = (todayDevolucao===undefined||todayDevolucao===null||todayDevolucao==='')?null:parseInt(todayDevolucao);
+    const devolucaoStatus = devolucao===null ? '' : (devolucao===0?'green': devolucao<=3?'yellow':'red');
+    const devolucaoHtml = `<div class="tickets-row sac-row ${devolucaoStatus}">
+      <div class="label-block">
+        <span class="label">📦 Solicitação Devolução fora do prazo</span>
+        <span class="meta-info">Solicitação de Devolução > 20 dias (Octadesk)</span>
+      </div>
+      <span class="value">${devolucao===null?'—':devolucao}</span>
+    </div>`;
+    // Inclui as 4 contagens de tickets no cálculo de "worst" pra o alerta inferior
+    [tStatus, sacStatus, criticosStatus, devolucaoStatus].forEach(st => {
+      if(st === 'red') worst = 'red';
+      else if(st === 'yellow' && worst !== 'red') worst = 'yellow';
+      else if(st === 'green' && worst === 'unknown') worst = 'green';
+    });
     const alertHtml = worst==='red' ? `<div class="alert-banner red">⚠️ Métricas críticas — ação imediata</div>`
                   : worst==='yellow' ? `<div class="alert-banner yellow">⚡ Atenção — perto do limite</div>`
                   : worst==='green' ? `<div class="alert-banner green">✓ Tudo dentro da meta</div>`
@@ -604,6 +649,9 @@ function renderTodayCards(){
       ${staleBadge}
       <ul class="metric-list">${metricsHtml}</ul>
       ${ticketsHtml}
+      ${sacHtml}
+      ${criticosHtml}
+      ${devolucaoHtml}
       ${alertHtml}
     </div>`;
   });
@@ -1180,12 +1228,27 @@ function renderRegistro(){
       const tickets = data.tickets;
       const tStatus = (tickets===null||tickets===undefined) ? '' : (tickets===0?'green':'red');
       const ticketsHtml = (tickets!==null && tickets!==undefined) ?
-        `<div class="mini-tickets ${tStatus}">🎫 ${tickets} ticket${tickets===1?'':'s'}</div>` : '';
+        `<div class="mini-tickets ${tStatus}">🎫 ${tickets} ticket${tickets===1?'':'s'} fin.</div>` : '';
+      const sac = data.sacForaPrazo;
+      const sacStatus = (sac===null||sac===undefined) ? '' : (sac===0?'green': sac<=3?'yellow':'red');
+      const sacHtml = (sac!==null && sac!==undefined) ?
+        `<div class="mini-tickets ${sacStatus}" style="margin-top:2px">⏱️ ${sac} SAC +30d</div>` : '';
+      const cri = data.casosCriticos;
+      const criStatus = (cri===null||cri===undefined) ? '' : (cri===0?'green': cri<=3?'yellow':'red');
+      const criHtml = (cri!==null && cri!==undefined) ?
+        `<div class="mini-tickets ${criStatus}" style="margin-top:2px">🚨 ${cri} críticos +10d</div>` : '';
+      const dev = data.solicitacaoDevolucao;
+      const devStatus = (dev===null||dev===undefined) ? '' : (dev===0?'green': dev<=3?'yellow':'red');
+      const devHtml = (dev!==null && dev!==undefined) ?
+        `<div class="mini-tickets ${devStatus}" style="margin-top:2px">📦 ${dev} devol. +20d</div>` : '';
       html += `<div class="mini-card" style="border-top:3px solid ${ch.color}">
         <div class="mini-card-name" style="border-bottom-color:${ch.color}"><span class="channel-tag" style="background:${ch.color};width:8px;height:8px"></span>${ch.name}</div>
         <div class="mini-card-rep"><small>${ch.repLabel}</small>${data.reputacao || '—'}</div>
         ${metricsHtml}
         ${ticketsHtml}
+        ${sacHtml}
+        ${criHtml}
+        ${devHtml}
       </div>`;
     });
     html += `</div></div>`;
@@ -1364,28 +1427,31 @@ function seedTodayIfEmpty(){
   if(added||updated) save();
 }
 
-// Carryover automático de tickets do dia anterior — sempre que um canal não tem tickets hoje
-// e teve em algum dia anterior, reaproveita o último valor conhecido.
+// Carryover automático de tickets e sacForaPrazo do dia anterior — se um canal não tem
+// esses valores hoje mas tinha em algum dia anterior, reaproveita o último valor conhecido.
 function carryOverTickets(){
   const today = todayKey();
   if(!state.entries[today]) state.entries[today] = {};
   const dates = Object.keys(state.entries).filter(d=> d < today).sort().reverse();
   let changed = 0;
+  const fields = ['tickets', 'sacForaPrazo', 'casosCriticos', 'solicitacaoDevolucao'];
   Object.keys(channels).forEach(channelKey => {
-    const todayData = state.entries[today][channelKey];
-    if(todayData && todayData.tickets !== undefined && todayData.tickets !== null) return;
-    for(const d of dates){
-      const prev = state.entries[d]?.[channelKey];
-      if(prev && prev.tickets !== undefined && prev.tickets !== null){
-        if(!state.entries[today][channelKey]){
-          state.entries[today][channelKey] = {tickets: prev.tickets, metrics:{}};
-        } else {
-          state.entries[today][channelKey].tickets = prev.tickets;
+    fields.forEach(field => {
+      const todayData = state.entries[today][channelKey];
+      if(todayData && todayData[field] !== undefined && todayData[field] !== null) return;
+      for(const d of dates){
+        const prev = state.entries[d]?.[channelKey];
+        if(prev && prev[field] !== undefined && prev[field] !== null){
+          if(!state.entries[today][channelKey]){
+            state.entries[today][channelKey] = {[field]: prev[field], metrics:{}};
+          } else {
+            state.entries[today][channelKey][field] = prev[field];
+          }
+          changed++;
+          break;
         }
-        changed++;
-        break;
       }
-    }
+    });
   });
   if(changed) save();
 }
@@ -1450,25 +1516,51 @@ function ghSaveConfig(){
   ghStatus('Configurado');
 }
 
+// Busca o data.json do GitHub com retry exponencial e fallback pra raw URL.
+// Primeira tentativa: api.github.com (autenticada, com sha pra pushes).
+// Fallback: raw.githubusercontent.com (não autenticada, só leitura, sem rate limit).
 async function ghGetFile(){
   const c = ghGetConfig();
-  if(!c.repo || !c.pat) throw new Error('GitHub não configurado');
-  // Cache-busting: timestamp único na URL + cache:'no-store' + header pra evitar respostas em cache
-  const url = `https://api.github.com/repos/${c.repo}/contents/data.json?ref=${c.branch||'main'}&_=${Date.now()}`;
-  const res = await fetch(url, {
-    cache: 'no-store',
-    headers: {
-      'Authorization': 'Bearer '+c.pat,
-      'Accept': 'application/vnd.github+json',
-      'Cache-Control': 'no-cache, no-store, must-revalidate',
-      'Pragma': 'no-cache'
+  if(!c.repo) throw new Error('GitHub não configurado');
+  const branch = c.branch || 'main';
+  let lastErr = null;
+  // Tentativa 1-3: api.github.com com retry exponencial
+  for(let attempt = 1; attempt <= 3; attempt++){
+    try{
+      const url = `https://api.github.com/repos/${c.repo}/contents/data.json?ref=${branch}&_=${Date.now()}`;
+      const headers = {
+        'Accept': 'application/vnd.github+json',
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache'
+      };
+      if(c.pat) headers['Authorization'] = 'Bearer '+c.pat;
+      const res = await fetch(url, {cache: 'no-store', headers});
+      if(res.status===404) return {content:null, sha:null};
+      if(res.status === 403 || res.status === 429){
+        // Rate limit — vai pro fallback raw
+        throw new Error(`Rate limit (HTTP ${res.status})`);
+      }
+      if(!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      const decoded = atob(data.content.replace(/\s/g,''));
+      return {content: JSON.parse(decoded), sha: data.sha};
+    }catch(e){
+      lastErr = e;
+      console.warn(`[Dashboard] api.github.com tentativa ${attempt}/3 falhou:`, e.message);
+      if(attempt < 3) await new Promise(r => setTimeout(r, attempt * 500));
     }
-  });
-  if(res.status===404) return {content:null, sha:null};
-  if(!res.ok) throw new Error(`HTTP ${res.status}: ${await res.text()}`);
-  const data = await res.json();
-  const decoded = atob(data.content.replace(/\s/g,''));
-  return {content: JSON.parse(decoded), sha: data.sha};
+  }
+  // Fallback: raw.githubusercontent.com (mais resiliente, sem rate limit)
+  try{
+    const rawUrl = `https://raw.githubusercontent.com/${c.repo}/${branch}/data.json?_=${Date.now()}`;
+    const res = await fetch(rawUrl, {cache: 'no-store'});
+    if(res.ok){
+      const text = await res.text();
+      console.log('[Dashboard] Fallback raw.githubusercontent.com OK');
+      return {content: JSON.parse(text), sha: null}; // sha null = não consegue fazer push, só leitura
+    }
+  }catch(e){ console.warn('[Dashboard] Fallback raw falhou:', e.message); }
+  throw lastErr || new Error('Não foi possível buscar data.json');
 }
 
 async function ghPull(){
@@ -1545,25 +1637,52 @@ async function forceRefresh(){
   }
 }
 
-// Refresh COMPLETO da página a cada 1 hora — recarrega tudo do zero (busca data.json,
-// re-renderiza, reset do estado). Usa hard reload pra evitar cache.
-const RELOAD_INTERVAL_MS = 60 * 60 * 1000; // 1 hora
+// Refresh COMPLETO da página a cada 2 minutos
+const RELOAD_INTERVAL_MS = 2 * 60 * 1000;
 const reloadAt = Date.now() + RELOAD_INTERVAL_MS;
 setTimeout(()=> location.reload(), RELOAD_INTERVAL_MS);
 
-// Atualiza o indicador no header com countdown até o próximo reload
+// Auto-pull silencioso a cada 30s — busca dados frescos sem reload da página
+let lastSyncOk = null;
+let lastSyncError = null;
+async function silentPull(){
+  try{
+    const {content} = await ghGetFile();
+    if(content){
+      state = content;
+      carryOverTickets();
+      _origSave();
+      renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro();
+      lastSyncOk = new Date();
+      lastSyncError = null;
+    }
+  }catch(e){
+    console.error('[Dashboard] silentPull falhou:', e);
+    lastSyncError = e.message;
+  }
+  updateReloadIndicator();
+}
+setInterval(silentPull, 30 * 1000); // a cada 30s
+
+// Atualiza o indicador no header com status sync e countdown
 function updateReloadIndicator(){
   const indicator = document.getElementById('last-refresh');
   if(!indicator) return;
-  const remaining = reloadAt - Date.now();
-  if(remaining <= 0){ indicator.textContent = '↻ Recarregando...'; return; }
+  const remaining = Math.max(0, reloadAt - Date.now());
   const min = Math.floor(remaining / 60000);
-  const hh = String(Math.floor(min / 60)).padStart(2,'0');
-  const mm = String(min % 60).padStart(2,'0');
-  indicator.textContent = `↻ Próximo refresh em ${hh}:${mm}`;
+  const sec = Math.floor((remaining % 60000) / 1000);
+  const cd = `${String(min).padStart(2,'0')}:${String(sec).padStart(2,'0')}`;
+  if(lastSyncError){
+    indicator.innerHTML = `<span style="color:var(--red)">⚠ Erro sync: ${lastSyncError.slice(0,40)}</span> · reload em ${cd}`;
+  } else if(lastSyncOk){
+    const syncTime = lastSyncOk.toLocaleTimeString('pt-BR');
+    indicator.innerHTML = `<span style="color:var(--green)">✓ Sync ${syncTime}</span> · reload em ${cd}`;
+  } else {
+    indicator.textContent = `↻ Sincronizando... · reload em ${cd}`;
+  }
 }
 updateReloadIndicator();
-setInterval(updateReloadIndicator, 30000); // atualiza a cada 30s
+setInterval(updateReloadIndicator, 1000);
 
 const _origSave = save;
 save = function(){
@@ -1603,39 +1722,64 @@ function mergeStates(local, remote){
    ========================================================================= */
 load();
 ghLoadConfigUI();
-
-// Renderização inicial com o que tem local (pra não ficar tela vazia enquanto carrega)
 seedTodayIfEmpty();
 carryOverTickets();
 renderTabs();
-renderTodayCards();
+// Mostra versão do app no footer
+const _vt = document.getElementById('app-version-tag'); if(_vt) _vt.textContent = 'v' + APP_VERSION;
+
+// Mostra loading state enquanto busca do GitHub — evita mostrar dados desatualizados
+// do localStorage em máquinas que acabaram de receber a versão nova do HTML
+const _todayGrid = document.getElementById('today-grid');
+if(_todayGrid) _todayGrid.innerHTML = '<div class="empty-state" style="padding:48px;font-size:16px">🔄 Carregando dados do GitHub...</div>';
 renderMonthCards();
 renderHistory();
 
-// Pull do GitHub — GitHub é a ÚNICA fonte da verdade. Substitui o estado local.
+// Inicialização: pull do GitHub com retry/fallback. Se falhar, usa cache local.
 (async ()=>{
   const c = ghGetConfig();
-  if(!(c.repo && c.pat)) return;
+  if(!c.repo){ console.warn('[Dashboard] GitHub não configurado'); return; }
   try{
-    const {content} = await ghGetFile();
+    const {content} = await ghGetFile(); // já tem retry 3x + fallback raw
     if(content){
-      // GitHub é a ÚNICA fonte da verdade. Substitui o estado local inteiro pelo do GitHub.
-      // Sem merge — se está no GitHub, mostra. Não está? Não mostra.
-      // (Saves locais que ainda não foram enviados ficam protegidos: o push é imediato e
-      // bloqueia até confirmação, então no momento do load todo save deveria já estar lá.)
+      // Preserva entradas de HOJE que estão local mas não no remoto (não-sincronizadas)
+      const today = todayKey();
+      const localToday = state.entries?.[today] || {};
+      const remoteToday = content.entries?.[today] || {};
+      let hasLocalOnly = false;
+      Object.keys(localToday).forEach(ch => {
+        const l = localToday[ch];
+        const hasData = l && (l.reputacao || (l.metrics && Object.values(l.metrics).some(v => v!==null && v!==undefined && v!=='')));
+        if(hasData && !remoteToday[ch]){
+          if(!content.entries[today]) content.entries[today] = {};
+          content.entries[today][ch] = l;
+          hasLocalOnly = true;
+        }
+      });
       state = content;
-      carryOverTickets();  // fallback: se algum dia não tem tickets, copia do dia anterior
-      _origSave();         // salva localmente como cache (não é a fonte da verdade)
+      carryOverTickets();
+      _origSave();
       renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro(); renderTabs();
-      const ts = new Date().toLocaleTimeString('pt-BR');
-      ghLog(`✓ Carregado do GitHub às ${ts} — ${Object.keys(state.entries||{}).length} dias`, 'ok');
-      console.log('[Dashboard] Loaded from GitHub at', ts);
+      lastSyncOk = new Date();
+      lastSyncError = null;
+      updateReloadIndicator();
+      // Se preservou dado local, pusha pro GitHub (só se temos PAT)
+      if(hasLocalOnly && c.pat) ghPush(true).catch(e => console.error('push falhou', e));
+      const days = Object.keys(state.entries||{}).length;
+      console.log('[Dashboard] Sync inicial OK —', days, 'dias carregados');
+      ghLog(`✓ Sincronizado às ${lastSyncOk.toLocaleTimeString('pt-BR')} — ${days} dias`, 'ok');
     } else {
-      ghLog('⚠ data.json não existe no GitHub ainda', 'err');
+      lastSyncError = 'data.json vazio no GitHub';
+      ghLog('⚠ data.json vazio no GitHub', 'err');
+      updateReloadIndicator();
     }
   }catch(e){
-    console.error('[Dashboard] Load FAILED:', e);
-    ghLog('⚠ Erro ao carregar do GitHub: ' + e.message + ' (mostrando cache local)', 'err');
+    console.error('[Dashboard] Sync inicial FALHOU:', e);
+    lastSyncError = e.message;
+    updateReloadIndicator();
+    ghLog('⚠ Erro: ' + e.message + ' (mostrando cache local)', 'err');
+    // Não apaga estado — mantém o que tinha em localStorage como fallback
+    renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro(); renderTabs();
   }
 })();
 </script>
