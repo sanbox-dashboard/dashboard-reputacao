@@ -1385,31 +1385,31 @@
         "sacForaPrazo": 1,
         "metrics": {},
         "ts": "2026-06-18T17:25:15.495561",
-        "tickets": 252
+        "tickets": 0
       },
       "amazon": {
         "sacForaPrazo": 16,
         "metrics": {},
         "ts": "2026-06-18T17:25:15.495561",
-        "tickets": 23
+        "tickets": 0
       },
       "magalu": {
         "sacForaPrazo": 2,
         "metrics": {},
         "ts": "2026-06-18T17:25:15.495561",
-        "tickets": 41
+        "tickets": 0
       },
       "shopee": {
         "sacForaPrazo": 3,
         "metrics": {},
         "ts": "2026-06-18T17:25:15.495561",
-        "tickets": 34
+        "tickets": 0
       },
       "casasbahia": {
         "sacForaPrazo": 13,
         "metrics": {},
         "ts": "2026-06-18T17:25:15.495561",
-        "tickets": 105
+        "tickets": 0
       }
     }
   }
