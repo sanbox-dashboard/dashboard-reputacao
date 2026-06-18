@@ -223,9 +223,9 @@
 
   .tv-toggle{padding:10px 18px;background:#1e293b;color:#fff;border:none;border-radius:24px;cursor:pointer;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px}
   .tv-toggle:hover{background:#0f172a}
-  body.tv-mode{padding:12px 16px;max-width:none}
-  body.tv-mode header{margin-bottom:8px}
-  body.tv-mode header h1{font-size:24px}
+  body.tv-mode{padding:16px 20px;max-width:none}
+  body.tv-mode header{margin-bottom:10px}
+  body.tv-mode header h1{font-size:28px}
   body.tv-mode header p{display:none}
   body.tv-mode .main-tabs{display:none}
   body.tv-mode #upload-section,
@@ -237,41 +237,40 @@
   body.tv-mode [data-tab-panel="reputacao"]{display:block !important}
   body.tv-mode [data-tab-panel="registro"]{display:none !important}
   body.tv-mode #month-section{display:none}
-  body.tv-mode .summary-bar{margin-bottom:8px;gap:8px}
-  body.tv-mode .summary-item{padding:6px 12px;min-width:auto;gap:8px}
-  body.tv-mode .summary-icon{width:32px;height:32px;font-size:16px;border-radius:8px}
-  body.tv-mode .summary-info .num{font-size:20px}
-  body.tv-mode .summary-info .lbl{font-size:11px}
-  body.tv-mode .section-title{font-size:16px;margin-bottom:6px}
-  body.tv-mode .section-title .section-subtitle{font-size:12px}
+  body.tv-mode .summary-bar{margin-bottom:10px;gap:10px}
+  body.tv-mode .summary-item{padding:10px 14px;min-width:auto;gap:10px}
+  body.tv-mode .summary-icon{width:40px;height:40px;font-size:18px;border-radius:10px}
+  body.tv-mode .summary-info .num{font-size:24px}
+  body.tv-mode .summary-info .lbl{font-size:12px}
+  body.tv-mode .section-title{font-size:18px;margin-bottom:8px}
+  body.tv-mode .section-title .section-subtitle{font-size:13px}
   /* Força 5 colunas — uma por canal — em telas largas (TV) */
-  body.tv-mode .grid{grid-template-columns:repeat(5,1fr);gap:8px}
-  body.tv-mode .card{padding:10px;border-radius:10px;border-top-width:4px !important}
-  body.tv-mode .card-header{margin-bottom:6px;flex-direction:column;align-items:stretch;gap:4px}
-  body.tv-mode .card-name{font-size:15px;justify-content:center;text-align:center;letter-spacing:.2px}
-  body.tv-mode .rep-badge{text-align:center;padding:3px 6px;border-radius:6px;min-width:auto}
-  body.tv-mode .rep-badge .reputation{font-size:13px;max-width:100%;white-space:normal;line-height:1.1}
-  body.tv-mode .rep-badge .rep-label{font-size:8px}
-  body.tv-mode .metric-list{gap:4px;margin-top:2px}
-  body.tv-mode .metric-row{padding:5px 8px;flex-direction:row;align-items:center;justify-content:space-between;gap:6px;border-left-width:4px;border-radius:6px}
-  body.tv-mode .metric-row .label-block{gap:0;flex:1;min-width:0}
-  body.tv-mode .metric-row .label{font-size:11px;font-weight:600;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  body.tv-mode .metric-row .meta-info{font-size:9px;line-height:1.1}
+  body.tv-mode .grid{grid-template-columns:repeat(5,1fr);gap:10px}
+  body.tv-mode .card{padding:14px;border-radius:12px;border-top-width:5px !important}
+  body.tv-mode .card-header{margin-bottom:10px;flex-direction:column;align-items:stretch;gap:6px}
+  body.tv-mode .card-name{font-size:17px;justify-content:center;text-align:center;letter-spacing:.3px}
+  body.tv-mode .rep-badge{text-align:center;padding:5px 8px;border-radius:8px;min-width:auto}
+  body.tv-mode .rep-badge .reputation{font-size:15px;max-width:100%;white-space:normal;line-height:1.15}
+  body.tv-mode .rep-badge .rep-label{font-size:9px}
+  body.tv-mode .metric-list{gap:7px;margin-top:4px}
+  body.tv-mode .metric-row{padding:8px 11px;flex-direction:row;align-items:center;justify-content:space-between;gap:8px;border-left-width:5px;border-radius:8px}
+  body.tv-mode .metric-row .label-block{gap:1px;flex:1;min-width:0}
+  body.tv-mode .metric-row .label{font-size:12px;font-weight:600;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  body.tv-mode .metric-row .meta-info{font-size:10px;line-height:1.1}
   body.tv-mode .metric-row .value-block{align-self:auto;flex-shrink:0}
-  body.tv-mode .metric-row .value{font-size:20px;line-height:1}
-  /* Linhas de tickets/SAC/críticos/devolução — compactas */
-  body.tv-mode .tickets-row{margin-top:4px;padding:4px 8px;border-radius:6px;border-width:1.5px}
-  body.tv-mode .tickets-row .label{font-size:10px;font-weight:600;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  body.tv-mode .tickets-row .meta-info{font-size:8px;line-height:1.05}
-  body.tv-mode .tickets-row .value{font-size:18px;line-height:1}
-  body.tv-mode .tickets-row.sac-row{margin-top:2px}
-  body.tv-mode .stale-badge{font-size:9px;padding:2px 6px;margin-bottom:4px}
-  body.tv-mode .alert-banner{font-size:10px;padding:4px 8px;text-align:center;justify-content:center;margin-top:6px;border-radius:4px}
-  /* Esconde botão de atualizar e header right group fica compacto */
+  body.tv-mode .metric-row .value{font-size:26px;line-height:1}
+  /* Linhas de tickets/SAC/críticos/devolução */
+  body.tv-mode .tickets-row{margin-top:7px;padding:8px 11px;border-radius:8px;border-width:2px}
+  body.tv-mode .tickets-row .label{font-size:11px;font-weight:600;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  body.tv-mode .tickets-row .meta-info{font-size:9px;line-height:1.1}
+  body.tv-mode .tickets-row .value{font-size:24px;line-height:1}
+  body.tv-mode .tickets-row.sac-row{margin-top:5px}
+  body.tv-mode .stale-badge{font-size:10px;padding:3px 8px;margin-bottom:6px}
+  body.tv-mode .alert-banner{font-size:11px;padding:6px 10px;text-align:center;justify-content:center;margin-top:8px;border-radius:6px;font-weight:600}
   body.tv-mode #refresh-btn{display:none}
-  body.tv-mode #tv-btn{padding:4px 10px;font-size:11px}
-  body.tv-mode .date-pill{padding:4px 10px;font-size:12px}
-  body.tv-mode #last-refresh{font-size:10px}
+  body.tv-mode #tv-btn{padding:6px 12px;font-size:12px}
+  body.tv-mode .date-pill{padding:6px 12px;font-size:13px}
+  body.tv-mode #last-refresh{font-size:11px}
   /* Em telas menores que 1400px no modo TV, volta pra 2-3 colunas */
   @media(max-width:1400px){body.tv-mode .grid{grid-template-columns:repeat(3,1fr)}}
   @media(max-width:900px){body.tv-mode .grid{grid-template-columns:repeat(2,1fr)}}
@@ -475,8 +474,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '12';
-const APP_VERSION = '12.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '13';
+const APP_VERSION = '13.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 
