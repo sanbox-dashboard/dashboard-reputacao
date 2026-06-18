@@ -1382,20 +1382,20 @@
     },
     "2026-06-18": {
       "mercadolivre": {
-        "sacForaPrazo": 1,
+        "sacForaPrazo": 4,
         "metrics": {},
         "ts": "2026-06-18T17:25:15.495561",
         "tickets": 0,
         "casosCriticos": 9,
-        "solicitacaoDevolucao": 9
+        "solicitacaoDevolucao": 3
       },
       "amazon": {
-        "sacForaPrazo": 16,
+        "sacForaPrazo": 15,
         "metrics": {},
         "ts": "2026-06-18T17:25:15.495561",
         "tickets": 2,
         "casosCriticos": 4,
-        "solicitacaoDevolucao": 5
+        "solicitacaoDevolucao": 4
       },
       "magalu": {
         "sacForaPrazo": 2,
