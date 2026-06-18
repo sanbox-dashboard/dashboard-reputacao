@@ -474,8 +474,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '13';
-const APP_VERSION = '13.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '14';
+const APP_VERSION = '14.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 
@@ -1648,8 +1648,8 @@ async function forceRefresh(){
   }
 }
 
-// Refresh COMPLETO da página a cada 2 minutos
-const RELOAD_INTERVAL_MS = 2 * 60 * 1000;
+// Refresh COMPLETO da página a cada 20 minutos
+const RELOAD_INTERVAL_MS = 20 * 60 * 1000;
 const reloadAt = Date.now() + RELOAD_INTERVAL_MS;
 setTimeout(()=> location.reload(), RELOAD_INTERVAL_MS);
 
