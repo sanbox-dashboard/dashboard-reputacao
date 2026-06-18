@@ -1379,6 +1379,33 @@
         "metrics": {},
         "ts": "2026-06-16T11:29:13.692981-03:00"
       }
+    },
+    "2026-06-18": {
+      "mercadolivre": {
+        "sacForaPrazo": 1,
+        "metrics": {},
+        "ts": "2026-06-18T17:25:15.495561"
+      },
+      "amazon": {
+        "sacForaPrazo": 16,
+        "metrics": {},
+        "ts": "2026-06-18T17:25:15.495561"
+      },
+      "magalu": {
+        "sacForaPrazo": 2,
+        "metrics": {},
+        "ts": "2026-06-18T17:25:15.495561"
+      },
+      "shopee": {
+        "sacForaPrazo": 3,
+        "metrics": {},
+        "ts": "2026-06-18T17:25:15.495561"
+      },
+      "casasbahia": {
+        "sacForaPrazo": 13,
+        "metrics": {},
+        "ts": "2026-06-18T17:25:15.495561"
+      }
     }
   }
 }
