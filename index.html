@@ -474,8 +474,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '14';
-const APP_VERSION = '14.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '15';
+const APP_VERSION = '15.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 
@@ -1553,7 +1553,11 @@ async function ghGetFile(){
       }
       if(!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
-      const decoded = atob(data.content.replace(/\s/g,''));
+      // Decode corretamente UTF-8 — atob() retorna binary string, precisa converter pra UTF-8
+      // pra não virar mojibake (Ã, Â, etc.) em caracteres especiais (í, —, ç, ã)
+      const binary = atob(data.content.replace(/\s/g,''));
+      const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
+      const decoded = new TextDecoder('utf-8').decode(bytes);
       return {content: JSON.parse(decoded), sha: data.sha};
     }catch(e){
       lastErr = e;
