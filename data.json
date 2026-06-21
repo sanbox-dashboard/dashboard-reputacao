@@ -1464,5 +1464,507 @@
         "solicitacaoDevolucao": 9
       }
     }
-  }
+  },
+  "ticketsRaw": [
+    {
+      "n": "99916466",
+      "d": "18/06/2026 18:11",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Danificado Transporte Marketplace",
+      "sk": "TI1560",
+      "tr": "Mercado Envios",
+      "pr": "Fogão a Gas Mueller MFI4BC 4 Bocas Preto Fosco Mesa Esmaltada - Bivolt"
+    },
+    {
+      "n": "99916465",
+      "d": "18/06/2026 17:54",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Cancelamento por Arrependimento Após o Envio",
+      "sk": "TI1332",
+      "tr": "Mercado Envios",
+      "pr": "Caixa de Som Pulse Storm 2 SP514 10\"pol Bleutooth Led Rádio FM TWs -1500w"
+    },
+    {
+      "n": "99916464",
+      "d": "18/06/2026 17:52",
+      "ym": "2026-06",
+      "lj": "Shopee",
+      "pb": "Arrependimento",
+      "sk": "TI1385",
+      "tr": "Total Express",
+      "pr": "Caixa de Som Philco PCX6702 Portátil Bluetooth Flash Light ExBass-800W"
+    },
+    {
+      "n": "99916463",
+      "d": "18/06/2026 17:50",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1571",
+      "tr": "Mercado Envios",
+      "pr": "Fogão a Gás Mueller MFI5BC 5 Bocas Preto Fosco Mesa Esmaltado - Bivolt"
+    },
+    {
+      "n": "99916462",
+      "d": "18/06/2026 17:26",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Danificado Transporte Marketplace",
+      "sk": "TI1571",
+      "tr": "Mercado Envios",
+      "pr": "Fogão a Gás Mueller MFI5BC 5 Bocas Preto Fosco Mesa Esmaltado - Bivolt"
+    },
+    {
+      "n": "99916461",
+      "d": "18/06/2026 17:09",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1525",
+      "tr": "Mercado Envios",
+      "pr": "Tanquinho de Lavar Roupa Mueller Plus 4,5kg 40 Litros Branco - 220v"
+    },
+    {
+      "n": "99916460",
+      "d": "18/06/2026 17:03",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Arrependimento",
+      "sk": "TI1571",
+      "tr": "Mercado Envios",
+      "pr": "Fogão a Gás Mueller MFI5BC 5 Bocas Preto Fosco Mesa Esmaltado - Bivolt"
+    },
+    {
+      "n": "99916459",
+      "d": "18/06/2026 15:55",
+      "ym": "2026-06",
+      "lj": "Amazon",
+      "pb": "RECEBEU ERRADO .",
+      "sk": "TI1690",
+      "tr": "Alfa Transportes",
+      "pr": "Máquina de Lavar Midea Wave Agitator Branca 13Kg Função Turbo-127v"
+    },
+    {
+      "n": "99916458",
+      "d": "18/06/2026 13:23",
+      "ym": "2026-06",
+      "lj": "Casas Bahia/Via Varejo",
+      "pb": "Atraso de Entrega",
+      "sk": "TI516",
+      "tr": "Total Express",
+      "pr": "Caixa de Som Amplificada Pulse 2200W SP500 Potente Bluetooth"
+    },
+    {
+      "n": "99916456",
+      "d": "18/06/2026 11:31",
+      "ym": "2026-06",
+      "lj": "Amazon",
+      "pb": "RMA",
+      "sk": "TI1562",
+      "tr": "Brasil Web",
+      "pr": "Fogão á Gás Mueller 5 bocas Decorato Vetro Inox Sem Timer - Bivolt"
+    },
+    {
+      "n": "99916455",
+      "d": "17/06/2026 20:21",
+      "ym": "2026-06",
+      "lj": "Shopee",
+      "pb": "Cancelamento por Arrependimento Após o Envio",
+      "sk": "TI1524",
+      "tr": "Alfa Transportes",
+      "pr": "Tanquinho de Lavar Roupa Mueller Plus 4,5kg 40 Litros Branco - 127v"
+    },
+    {
+      "n": "99916454",
+      "d": "17/06/2026 18:51",
+      "ym": "2026-06",
+      "lj": "Casas Bahia/Via Varejo",
+      "pb": "RMA",
+      "sk": "TI1276",
+      "tr": "MMA",
+      "pr": "Caixa de Som Pulse Sp512 Flamebox DJ Torre Bluetooth LED TWS-5000w"
+    },
+    {
+      "n": "99916452",
+      "d": "17/06/2026 18:10",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1514",
+      "tr": "Mercado Envios",
+      "pr": "Fogão á Gás Mueller 5 bocas Decorato Vetro Inox com Timer-Bivolt"
+    },
+    {
+      "n": "99916450",
+      "d": "17/06/2026 17:55",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "SS001",
+      "tr": "Mercado Envios",
+      "pr": "Mini System SS-001 SSOUND 200W CD/MP3 Bluetooth Rádio - Bivolt"
+    },
+    {
+      "n": "99916449",
+      "d": "17/06/2026 17:45",
+      "ym": "2026-06",
+      "lj": "Amazon",
+      "pb": "RMA",
+      "sk": "TI1633",
+      "tr": "Brasil Web",
+      "pr": "Fogão a Gás Mueller Decorato 5 Bocas Inox com Mesa de Inox-Bivolt"
+    },
+    {
+      "n": "99916448",
+      "d": "17/06/2026 17:24",
+      "ym": "2026-06",
+      "lj": "Casas Bahia/Via Varejo",
+      "pb": "Arrependimento",
+      "sk": "TI1560",
+      "tr": "Brasil Web",
+      "pr": "Fogão a Gas Mueller MFI4BC 4 Bocas Preto Fosco Mesa Esmaltada - Bivolt"
+    },
+    {
+      "n": "99916447",
+      "d": "17/06/2026 17:20",
+      "ym": "2026-06",
+      "lj": "Shopee",
+      "pb": "Erro Integração",
+      "sk": "TI1526",
+      "tr": "Alfa Transportes",
+      "pr": "Tanquinho de Lavar Roupa Mueller Plus 4,5kg 40 Litros Preto - 127v"
+    },
+    {
+      "n": "99916446",
+      "d": "17/06/2026 16:53",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Recusa do cliente por Cancelamento",
+      "sk": "TI1514",
+      "tr": "Mercado Envios",
+      "pr": "Fogão á Gás Mueller 5 bocas Decorato Vetro Inox com Timer-Bivolt"
+    },
+    {
+      "n": "99916445",
+      "d": "17/06/2026 16:46",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1526",
+      "tr": "Mercado Envios",
+      "pr": "Tanquinho de Lavar Roupa Mueller Plus 4,5kg 40 Litros Preto - 127v"
+    },
+    {
+      "n": "99916444",
+      "d": "17/06/2026 16:40",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Recusa do cliente por Cancelamento",
+      "sk": "TI1078",
+      "tr": "Mercado Envios",
+      "pr": "Caixa de som ACA 1000 NewX Amvox LED PowerX TWS 1000W Bivolt-Sem FM"
+    },
+    {
+      "n": "99916443",
+      "d": "17/06/2026 16:33",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1529",
+      "tr": "Mercado Envios",
+      "pr": "Máquina de Lavar Mueller Energy Automática 8kg Ciclo Rápido BCO-127v"
+    },
+    {
+      "n": "99916442",
+      "d": "17/06/2026 15:51",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "RMA",
+      "sk": "TI1631",
+      "tr": "Mercado Envios",
+      "pr": "Fogão a Gás Mueller Decorato Vetro 4b Preto Fosco Mesa de Vidro-Bivolt"
+    },
+    {
+      "n": "99916441",
+      "d": "17/06/2026 15:44",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "RMA",
+      "sk": "TI1717",
+      "tr": "Mercado Envios",
+      "pr": "Fogão 4 Bocas Fischer Gran Cheff Mesa Vidro Forno 74 Litros - Bivolt"
+    },
+    {
+      "n": "99916440",
+      "d": "17/06/2026 15:41",
+      "ym": "2026-06",
+      "lj": "Shopee",
+      "pb": "Arrependimento",
+      "sk": "TI1565",
+      "tr": "Total Express",
+      "pr": "Cooktop à Gás Mueller 5 bocas Ultra Chama Mesa Vidro Preto - Bivolt"
+    },
+    {
+      "n": "99916439",
+      "d": "17/06/2026 15:37",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "RMA",
+      "sk": "TI1571",
+      "tr": "Mercado Envios",
+      "pr": "Fogão a Gás Mueller MFI5BC 5 Bocas Preto Fosco Mesa Esmaltado - Bivolt"
+    },
+    {
+      "n": "99916438",
+      "d": "17/06/2026 14:53",
+      "ym": "2026-06",
+      "lj": "Shopee",
+      "pb": "RMA",
+      "sk": "SS002",
+      "tr": "Total Express",
+      "pr": "Mini System SS-002 SSOUND 330W CD/MP3 Bluetooth Rádio - Bivolt"
+    },
+    {
+      "n": "99916437",
+      "d": "17/06/2026 14:16",
+      "ym": "2026-06",
+      "lj": "Shopee",
+      "pb": "Arrependimento",
+      "sk": "TI1078",
+      "tr": "Alfa Transportes",
+      "pr": "Caixa de som ACA 1000 NewX Amvox LED PowerX TWS 1000W Bivolt-Sem FM"
+    },
+    {
+      "n": "99916436",
+      "d": "17/06/2026 13:05",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1603",
+      "tr": "Mercado Envios",
+      "pr": "Fogão a Gás Dako Magister Inox Style 5 Bocas Mesa Inox - Bivolt"
+    },
+    {
+      "n": "99916434",
+      "d": "16/06/2026 21:02",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1656",
+      "tr": "Mercado Envios",
+      "pr": "Ar Condicionado Philco PAC12FC Inter. Split Inverter 12000BTU Frio-220V"
+    },
+    {
+      "n": "99916433",
+      "d": "16/06/2026 20:56",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1768",
+      "tr": "Mercado Envios",
+      "pr": "Lava e Seca Electrolux LSC12 12Kg Cinza Ônix Inverter com Água Quente e Lavagem Inteligente-127v"
+    },
+    {
+      "n": "99916432",
+      "d": "16/06/2026 20:48",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1656",
+      "tr": "Mercado Envios",
+      "pr": "Ar Condicionado Philco PAC12FC Inter. Split Inverter 12000BTU Frio-220V"
+    },
+    {
+      "n": "99916431",
+      "d": "16/06/2026 20:24",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1514",
+      "tr": "Mercado Envios",
+      "pr": "Fogão á Gás Mueller 5 bocas Decorato Vetro Inox com Timer-Bivolt"
+    },
+    {
+      "n": "99916430",
+      "d": "16/06/2026 20:19",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1455",
+      "tr": "Mercado Envios",
+      "pr": "Cervejeira Vertical Imbera CCV315S Porta de Vidro Full Black 449L-Bivolt"
+    },
+    {
+      "n": "99916429",
+      "d": "16/06/2026 20:13",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1602",
+      "tr": "Mercado Envios",
+      "pr": "Fogão a Gás Dako Magister Inox Style 4 Bocas Mesa Inox - Bivolt"
+    },
+    {
+      "n": "99916428",
+      "d": "16/06/2026 20:06",
+      "ym": "2026-06",
+      "lj": "Casas Bahia/Via Varejo",
+      "pb": "RMA",
+      "sk": "TI1550",
+      "tr": "Alfa Transportes",
+      "pr": "Tanquinho de Lavar Roupa Mueller Big 20,1kg Sistema de Drenagem -127v"
+    },
+    {
+      "n": "99916423",
+      "d": "16/06/2026 14:48",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "item faltante",
+      "sk": "SS002",
+      "tr": "Mercado Envios",
+      "pr": "Mini System SS-002 SSOUND 330W CD/MP3 Bluetooth Rádio - Bivolt"
+    },
+    {
+      "n": "99916420",
+      "d": "16/06/2026 12:37",
+      "ym": "2026-06",
+      "lj": "Casas Bahia/Via Varejo",
+      "pb": "Atraso de Entrega",
+      "sk": "TI1556",
+      "tr": "Total Express",
+      "pr": "Secadora de Roupa Mueller Sun 8kg com Timer Ar Quente 6 Cabides-127v"
+    },
+    {
+      "n": "99916419",
+      "d": "16/06/2026 11:51",
+      "ym": "2026-06",
+      "lj": "Casas Bahia/Via Varejo",
+      "pb": "RMA",
+      "sk": "TI1332",
+      "tr": "Total Express",
+      "pr": "Caixa de Som Pulse Storm 2 SP514 10\"pol Bleutooth Led Rádio FM TWs -1500w"
+    },
+    {
+      "n": "99916418",
+      "d": "15/06/2026 20:51",
+      "ym": "2026-06",
+      "lj": "Casas Bahia/Via Varejo",
+      "pb": "RMA",
+      "sk": "TI1607",
+      "tr": "Alfa Transportes",
+      "pr": "Fogão a Gás Dako Supreme Glass 5 Bocas Titanium Timer Digital-Bivolt"
+    },
+    {
+      "n": "99916417",
+      "d": "15/06/2026 20:31",
+      "ym": "2026-06",
+      "lj": "Amazon",
+      "pb": "RMA",
+      "sk": "TI1527",
+      "tr": "Brasil Web",
+      "pr": "Tanquinho de Lavar Roupa Mueller Plus 4,5kg 40 Litros Preto - 220v"
+    },
+    {
+      "n": "99916416",
+      "d": "15/06/2026 18:28",
+      "ym": "2026-06",
+      "lj": "Magalu",
+      "pb": "Cliente Desconhece a Compra",
+      "sk": "TI1551",
+      "tr": "Alfa Transportes",
+      "pr": "Tanquinho de Lavar Roupa Mueller Big 20,1kg Sistema de Drenagem-220v"
+    },
+    {
+      "n": "99916415",
+      "d": "15/06/2026 18:21",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Produto Incorreto",
+      "sk": "TI668",
+      "tr": "Mercado Envios",
+      "pr": "Dupla De Microfones Sem Fio UHF Com Receptor Pulse Professional- SP801"
+    },
+    {
+      "n": "99916414",
+      "d": "15/06/2026 18:10",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Arrependimento",
+      "sk": "TI668",
+      "tr": "Mercado Envios",
+      "pr": "Dupla De Microfones Sem Fio UHF Com Receptor Pulse Professional- SP801"
+    },
+    {
+      "n": "99916413",
+      "d": "15/06/2026 17:58",
+      "ym": "2026-06",
+      "lj": "Amazon",
+      "pb": "Arrependimento",
+      "sk": "TI1529",
+      "tr": "Alfa Transportes",
+      "pr": "Máquina de Lavar Mueller Energy Automática 8kg Ciclo Rápido BCO-127v"
+    },
+    {
+      "n": "99916412",
+      "d": "15/06/2026 17:48",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Arrependimento",
+      "sk": "TI1078",
+      "tr": "Mercado Envios",
+      "pr": "Caixa de som ACA 1000 NewX Amvox LED PowerX TWS 1000W Bivolt-Sem FM"
+    },
+    {
+      "n": "99916411",
+      "d": "15/06/2026 17:25",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Arrependimento",
+      "sk": "TI1486",
+      "tr": "Alfa Transportes",
+      "pr": "Expositor Vertical Imbera VRS16 485 L Porta Vidro Full Black-Bivolt"
+    },
+    {
+      "n": "99916410",
+      "d": "15/06/2026 17:20",
+      "ym": "2026-06",
+      "lj": "Magalu",
+      "pb": "RMA",
+      "sk": "SS002",
+      "tr": "Total Express",
+      "pr": "Mini System SS-002 SSOUND 330W CD/MP3 Bluetooth Rádio - Bivolt"
+    },
+    {
+      "n": "99916408",
+      "d": "15/06/2026 15:38",
+      "ym": "2026-06",
+      "lj": "Magalu",
+      "pb": "RMA",
+      "sk": "TI1529",
+      "tr": "Alfa Transportes",
+      "pr": "Máquina de Lavar Mueller Energy Automática 8kg Ciclo Rápido BCO-127v"
+    },
+    {
+      "n": "99916407",
+      "d": "15/06/2026 15:19",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Danificado Transporte Marketplace",
+      "sk": "TI1454",
+      "tr": "Alfa Transportes",
+      "pr": "Cervejeira Vertical Imbera CCV355 Porta de Vidro Full Black 569L-220v"
+    },
+    {
+      "n": "99916406",
+      "d": "15/06/2026 14:47",
+      "ym": "2026-06",
+      "lj": "Magalu",
+      "pb": "RMA",
+      "sk": "TI1559",
+      "tr": "Brasil Web",
+      "pr": "Fogão a Gas Mueller MFV4BB 4 Bocas Mesa de Vidro Titanium Fosco-Bivolt"
+    }
+  ]
 }
