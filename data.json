@@ -1463,6 +1463,48 @@
         "casosCriticos": 13,
         "solicitacaoDevolucao": 9
       }
+    },
+    "2026-06-22": {
+      "mercadolivre": {
+        "metrics": {},
+        "ts": "2026-06-22T13:57:34.117415-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 5,
+        "casosCriticos": 10,
+        "solicitacaoDevolucao": 3
+      },
+      "amazon": {
+        "metrics": {},
+        "ts": "2026-06-22T13:57:34.117415-03:00",
+        "tickets": 2,
+        "sacForaPrazo": 15,
+        "casosCriticos": 4,
+        "solicitacaoDevolucao": 6
+      },
+      "magalu": {
+        "metrics": {},
+        "ts": "2026-06-22T13:57:34.117415-03:00",
+        "tickets": 2,
+        "sacForaPrazo": 2,
+        "casosCriticos": 2,
+        "solicitacaoDevolucao": 7
+      },
+      "casasbahia": {
+        "metrics": {},
+        "ts": "2026-06-22T13:57:34.117415-03:00",
+        "tickets": 6,
+        "sacForaPrazo": 13,
+        "casosCriticos": 17,
+        "solicitacaoDevolucao": 16
+      },
+      "shopee": {
+        "metrics": {},
+        "ts": "2026-06-22T13:57:34.117415-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 4,
+        "casosCriticos": 13,
+        "solicitacaoDevolucao": 9
+      }
     }
   },
   "ticketsRaw": [
