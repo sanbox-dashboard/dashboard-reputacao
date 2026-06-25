@@ -548,8 +548,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '18';
-const APP_VERSION = '18.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '20';
+const APP_VERSION = '20.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 
@@ -861,10 +861,6 @@ function renderChannelPanel(key, ch){
             <input type="text" data-channel="${key}" data-rep="1" value="${data.reputacao||''}" placeholder="ex: 2,4 ou Platinum">
           </div>
           ${fieldsHtml}
-          <div class="field">
-            <label>🎫 Tickets financeiros em aberto <span class="meta-hint">(em aberto há +3 dias)</span></label>
-            <input type="number" min="0" step="1" data-channel="${key}" data-tickets="1" value="${data.tickets??''}" placeholder="0">
-          </div>
           <div class="form-actions">
             <button class="btn btn-secondary" onclick="clearChannelToday('${key}')">Limpar</button>
             <button class="btn btn-primary" onclick="saveChannel('${key}')">💾 Salvar dia</button>
@@ -1103,20 +1099,40 @@ function parseOcr(channelKey, text){
 
   // ===== Casas Bahia =====
   if(channelKey === 'casasbahia'){
-    // Reputação: X.X (1-5) com lookbehind/ahead pra não capturar parte de número maior
-    const repMatches = [...norm.matchAll(/(?<!\d)(\d)[,.](\d)(?!\d)/g)];
-    for(const m of repMatches){
-      const v = parseFloat(m[1] + '.' + m[2]);
-      if(v >= 1.0 && v <= 5.0){
-        result.reputacao = m[1] + ',' + m[2];
-        break;
+    // Reputação: prefere número (1-5) que vem antes de "+X.XX vs. mês anterior"
+    // — esse é o padrão visual que sempre acompanha a nota grande da loja.
+    // Aceita inteiro (ex: "4") OU decimal (ex: "2,6").
+    const repVs = norm.match(/(?<!\d)(\d(?:[,.]\d)?)\s+[+\-↑↓\^v]?\s*\d+[,.]?\d*\s+vs/i);
+    if(repVs){
+      const v = parseFloat(repVs[1].replace(',','.'));
+      if(v >= 1 && v <= 5){
+        result.reputacao = repVs[1].replace('.', ',');
       }
     }
-    // Métricas: usa lookbehind pra capturar XX.X% (não 1.2 dentro de 11.2)
-    const recMatch = norm.match(/reclama[çc][ãa]o[\s\S]{0,300}?(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/i);
-    if(recMatch){ result.metrics.reclamacao = parseFloat(recMatch[1].replace(',','.')); }
-    const cancMatch = norm.match(/cancelamento[\s\S]{0,300}?(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/i);
-    if(cancMatch){ result.metrics.cancelados = parseFloat(cancMatch[1].replace(',','.')); }
+    // Fallback se não achou via "vs": primeiro decimal entre 1.0 e 5.0
+    if(!result.reputacao){
+      const allDec = [...norm.matchAll(/(?<!\d)(\d)[,.](\d)(?!\d)/g)];
+      for(const m of allDec){
+        const v = parseFloat(m[1] + '.' + m[2]);
+        if(v >= 1.0 && v <= 5.0){
+          result.reputacao = m[1] + ',' + m[2];
+          break;
+        }
+      }
+    }
+    // Reclamação: busca SÓ na seção entre "Reclamação" e "Cancelamento"
+    // (evita pegar 3.5% do Cancelamento por engano)
+    const recArea = norm.match(/reclama[çc][ãa]o[\s\S]{0,400}?(?=cancelamento|$)/i);
+    if(recArea){
+      const m = recArea[0].match(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/);
+      if(m) result.metrics.reclamacao = parseFloat(m[1].replace(',','.'));
+    }
+    // Cancelamento: busca a partir da palavra "Cancelamento"
+    const cancArea = norm.match(/cancelamento[\s\S]{0,400}/i);
+    if(cancArea){
+      const m = cancArea[0].match(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/);
+      if(m) result.metrics.cancelados = parseFloat(m[1].replace(',','.'));
+    }
     return result;
   }
 
@@ -1217,12 +1233,16 @@ function saveChannel(key){
     metricsObj[inp.dataset.metric] = v==='' ? null : parseFloat(v);
   });
   const repInput = document.querySelector(`#panel-${key} input[data-rep]`);
-  const ticketsInput = document.querySelector(`#panel-${key} input[data-tickets]`);
-  const ticketsVal = ticketsInput?.value?.toString().trim();
+  // Preserva tickets/sacForaPrazo/casosCriticos/solicitacaoDevolucao existentes
+  // (esses campos vêm das tarefas agendadas, não devem ser sobrescritos pelo save manual)
+  const existing = state.entries[today][key] || {};
   state.entries[today][key] = {
     reputacao: repInput?.value?.trim() || '',
     metrics: metricsObj,
-    tickets: ticketsVal===''||ticketsVal===undefined ? null : parseInt(ticketsVal),
+    tickets: existing.tickets ?? null,
+    sacForaPrazo: existing.sacForaPrazo ?? null,
+    casosCriticos: existing.casosCriticos ?? null,
+    solicitacaoDevolucao: existing.solicitacaoDevolucao ?? null,
     ts: new Date().toISOString()
   };
   save();
