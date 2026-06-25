@@ -8,6 +8,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>Dashboard de Reputação - Marketplaces</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   :root{
     --bg:#f4f6fb;
@@ -194,6 +195,39 @@
   .registro-filters select:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(59,130,246,.1)}
   .registro-filters .filter-summary{margin-left:auto;font-size:13px;color:var(--muted);font-weight:500}
 
+  /* ===== Aba Tickets SAC — KPIs, charts, filtros ===== */
+  .tickets-filters{display:flex;gap:14px;flex-wrap:wrap;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow);align-items:end}
+  .tickets-filters .filter-group{display:flex;flex-direction:column;gap:5px;min-width:180px;flex:1}
+  .tickets-filters label{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:600}
+  .tickets-filters select{background:#fff;color:var(--text);border:1px solid var(--border);border-radius:9px;padding:9px 11px;font-size:14px;cursor:pointer;outline:none;font-family:inherit}
+  .tickets-filters select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(59,130,246,.1)}
+  .tickets-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}
+  @media(max-width:900px){.tickets-kpis{grid-template-columns:repeat(2,1fr)}}
+  .tickets-kpi{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+  .tickets-kpi .bar{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--primary)}
+  .tickets-kpi.k2 .bar{background:var(--red)}
+  .tickets-kpi.k3 .bar{background:var(--green)}
+  .tickets-kpi.k4 .bar{background:#a78bfa}
+  .tickets-kpi .lab{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:600}
+  .tickets-kpi .val{font-size:32px;font-weight:800;margin-top:6px;line-height:1.05;color:var(--text)}
+  .tickets-kpi .val.sm{font-size:18px;font-weight:700}
+  .tickets-kpi .meta{font-size:12px;color:var(--muted);margin-top:5px}
+  .tickets-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:900px){.tickets-grid{grid-template-columns:1fr}}
+  .tickets-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+  .tickets-card.full{grid-column:1/-1}
+  .tickets-card h3{font-size:15px;font-weight:700;margin-bottom:2px;color:var(--text)}
+  .tickets-card .ch{font-size:12px;color:var(--muted);margin-bottom:12px}
+  .tickets-card .cv{position:relative;height:300px}
+  .tickets-card .cv.tall{height:360px}
+  .tickets-card table{width:100%;border-collapse:collapse;font-size:13px}
+  .tickets-card th,.tickets-card td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--border)}
+  .tickets-card th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+  .tickets-card td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+  .tickets-card .tag{display:inline-block;background:#f1f5f9;border:1px solid var(--border);border-radius:6px;padding:2px 8px;font-size:11px;color:var(--text);font-weight:600}
+  .tickets-empty{padding:48px;text-align:center;color:var(--muted);font-size:14px}
+  body.tv-mode [data-tab-panel="tickets"]{display:none !important}
+
   /* Registro Diário - cards pequenos lado a lado por dia */
   .registro-day{margin-bottom:24px;background:var(--card);border-radius:12px;padding:16px;border:1px solid var(--border);box-shadow:var(--shadow)}
   .registro-date{font-size:14px;font-weight:700;margin-bottom:12px;color:var(--text);display:flex;align-items:center;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--border)}
@@ -298,6 +332,7 @@
 <nav class="main-tabs" id="main-tabs">
   <button class="main-tab active" data-tab="reputacao" onclick="switchMainTab('reputacao')">📊 Reputação</button>
   <button class="main-tab" data-tab="registro" onclick="switchMainTab('registro')">📅 Registro Diário</button>
+  <button class="main-tab" data-tab="tickets" onclick="switchMainTab('tickets')">📋 Análise de Tickets SAC</button>
 </nav>
 
 <div data-tab-panel="reputacao">
@@ -357,7 +392,46 @@
   </section>
 </div>
 
-<section id="github-section">
+<div data-tab-panel="tickets" style="display:none">
+  <section id="tickets-section">
+    <h2 class="section-title">
+      Análise de Tickets SAC
+      <span class="section-subtitle" id="tickets-subtitle">Carregando…</span>
+    </h2>
+    <div class="tickets-filters">
+      <div class="filter-group">
+        <label>Mês (Data Criação)</label>
+        <select id="fMes"></select>
+      </div>
+      <div class="filter-group">
+        <label>Loja / Marketplace</label>
+        <select id="fLoja"></select>
+      </div>
+      <div class="filter-group">
+        <label>Transportadora</label>
+        <select id="fTransp"></select>
+      </div>
+      <button class="btn btn-secondary" id="ticketsReset" style="height:38px">Limpar filtros</button>
+    </div>
+    <div class="tickets-kpis">
+      <div class="tickets-kpi k1"><div class="bar"></div><div class="lab">Tickets no filtro</div><div class="val" id="kTotal">0</div><div class="meta" id="kTotalMeta">—</div></div>
+      <div class="tickets-kpi k2"><div class="bar"></div><div class="lab">Problema nº 1</div><div class="val sm" id="kProb">—</div><div class="meta" id="kProbMeta"></div></div>
+      <div class="tickets-kpi k3"><div class="bar"></div><div class="lab">SKU nº 1</div><div class="val" id="kSku">—</div><div class="meta" id="kSkuMeta"></div></div>
+      <div class="tickets-kpi k4"><div class="bar"></div><div class="lab">Com problema preenchido</div><div class="val" id="kFill">0</div><div class="meta" id="kFillMeta"></div></div>
+    </div>
+    <div class="tickets-grid">
+      <div class="tickets-card"><h3>Tipos de problema mais frequentes</h3><div class="ch">Coluna AJ · problema_do_produto</div><div class="cv tall"><canvas id="chProb"></canvas></div></div>
+      <div class="tickets-card"><h3>SKUs com mais problemas</h3><div class="ch">Coluna AP · sem o conteúdo entre parênteses</div><div class="cv tall"><canvas id="chSku"></canvas></div></div>
+      <div class="tickets-card"><h3>Tickets por Loja / Marketplace</h3><div class="ch">Coluna X</div><div class="cv"><canvas id="chLoja"></canvas></div></div>
+      <div class="tickets-card"><h3>Tickets por Transportadora</h3><div class="ch">Coluna AQ</div><div class="cv"><canvas id="chTransp"></canvas></div></div>
+      <div class="tickets-card full"><h3>Top SKUs no filtro atual</h3><div class="ch">Quantidade, principal problema e produto associado</div>
+        <table><thead><tr><th>SKU</th><th class="num">Qtd</th><th>Principal problema</th><th>Produto</th></tr></thead><tbody id="ticketsTbody"></tbody></table>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="github-section"
   <h2 class="section-title">Sincronização com GitHub <span class="section-subtitle" id="gh-status">✓ Sincronização ativa</span></h2>
   <div class="upload-section">
     <p style="font-size:14px;color:var(--muted);margin-bottom:12px">
@@ -474,8 +548,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '15';
-const APP_VERSION = '15.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '18';
+const APP_VERSION = '18.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 
@@ -1356,6 +1430,7 @@ function switchMainTab(tab){
   applyTabVisibility(tab);
   localStorage.setItem(MAIN_TAB_KEY, tab);
   if(tab === 'registro') renderRegistro();
+  if(tab === 'tickets') ticketsRender();
 }
 function getActiveTab(){
   return localStorage.getItem(MAIN_TAB_KEY) || 'reputacao';
@@ -1527,10 +1602,11 @@ function ghSaveConfig(){
   ghStatus('Configurado');
 }
 
-// Busca o data.json do GitHub com retry exponencial e fallback pra raw URL.
-// Primeira tentativa: api.github.com (autenticada, com sha pra pushes).
-// Fallback: raw.githubusercontent.com (não autenticada, só leitura, sem rate limit).
-async function ghGetFile(){
+// Busca o data.json do GitHub.
+// requireSha=true (default false): força usar API autenticada (necessário pra pushes).
+//   Se a API falhar, NÃO usa fallback — propaga erro pra o caller saber.
+// requireSha=false: tenta API, mas se falhar usa raw URL (sem rate limit, sem sha).
+async function ghGetFile(requireSha=false){
   const c = ghGetConfig();
   if(!c.repo) throw new Error('GitHub não configurado');
   const branch = c.branch || 'main';
@@ -1548,13 +1624,11 @@ async function ghGetFile(){
       const res = await fetch(url, {cache: 'no-store', headers});
       if(res.status===404) return {content:null, sha:null};
       if(res.status === 403 || res.status === 429){
-        // Rate limit — vai pro fallback raw
         throw new Error(`Rate limit (HTTP ${res.status})`);
       }
       if(!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
-      // Decode corretamente UTF-8 — atob() retorna binary string, precisa converter pra UTF-8
-      // pra não virar mojibake (Ã, Â, etc.) em caracteres especiais (í, —, ç, ã)
+      // Decode UTF-8 correto
       const binary = atob(data.content.replace(/\s/g,''));
       const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
       const decoded = new TextDecoder('utf-8').decode(bytes);
@@ -1565,14 +1639,16 @@ async function ghGetFile(){
       if(attempt < 3) await new Promise(r => setTimeout(r, attempt * 500));
     }
   }
-  // Fallback: raw.githubusercontent.com (mais resiliente, sem rate limit)
+  // Se precisa de sha (pra push), NÃO usa fallback — propaga erro
+  if(requireSha) throw lastErr || new Error('API GitHub indisponível (não pode salvar agora)');
+  // Fallback só pra leitura: raw.githubusercontent.com (sem rate limit, mas sem sha)
   try{
     const rawUrl = `https://raw.githubusercontent.com/${c.repo}/${branch}/data.json?_=${Date.now()}`;
     const res = await fetch(rawUrl, {cache: 'no-store'});
     if(res.ok){
       const text = await res.text();
       console.log('[Dashboard] Fallback raw.githubusercontent.com OK');
-      return {content: JSON.parse(text), sha: null}; // sha null = não consegue fazer push, só leitura
+      return {content: JSON.parse(text), sha: null};
     }
   }catch(e){ console.warn('[Dashboard] Fallback raw falhou:', e.message); }
   throw lastErr || new Error('Não foi possível buscar data.json');
@@ -1594,27 +1670,53 @@ async function ghPush(silent){
   const c = ghGetConfig();
   if(!c.repo || !c.pat){ if(!silent) ghLog('Configure o GitHub primeiro.', 'err'); return; }
   if(!silent) ghLog('Enviando ao GitHub...', 'info');
-  try{
-    let sha = null;
-    try{ const cur = await ghGetFile(); sha = cur.sha; }catch(e){}
-    const url = `https://api.github.com/repos/${c.repo}/contents/data.json`;
-    const body = {
-      message: `chore(data): sync ${todayKey()} ${new Date().toLocaleTimeString('pt-BR')}`,
-      content: btoa(unescape(encodeURIComponent(JSON.stringify(state, null, 2)))),
-      branch: c.branch || 'main'
-    };
-    if(sha) body.sha = sha;
-    const res = await fetch(url, {
-      method: 'PUT',
-      headers: {'Authorization': 'Bearer '+c.pat, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json'},
-      body: JSON.stringify(body)
-    });
-    if(!res.ok) throw new Error(`HTTP ${res.status}: ${await res.text()}`);
-    c.lastSync = new Date().toISOString();
-    ghSetConfig(c);
-    ghStatus('Configurado · última sync ' + new Date(c.lastSync).toLocaleString('pt-BR'));
-    if(!silent) ghLog('✓ Enviado ao GitHub.', 'ok');
-  }catch(e){ if(!silent) ghLog('Erro: '+e.message, 'err'); else console.error('autoSync', e); }
+  // Tenta até 3 vezes — útil se houve conflito de sha entre múltiplos PCs salvando juntos
+  for(let attempt = 1; attempt <= 3; attempt++){
+    try{
+      // Pega sha mais recente — REQUER autenticação (sem fallback raw)
+      const cur = await ghGetFile(true);
+      const sha = cur.sha;
+      // Encoda em base64 com UTF-8 correto (TextEncoder garante bytes corretos)
+      const jsonStr = JSON.stringify(state, null, 2);
+      const utf8Bytes = new TextEncoder().encode(jsonStr);
+      let binary = '';
+      utf8Bytes.forEach(b => binary += String.fromCharCode(b));
+      const contentB64 = btoa(binary);
+      const url = `https://api.github.com/repos/${c.repo}/contents/data.json`;
+      const body = {
+        message: `chore(data): sync ${todayKey()} ${new Date().toLocaleTimeString('pt-BR')}`,
+        content: contentB64,
+        branch: c.branch || 'main'
+      };
+      if(sha) body.sha = sha;
+      const res = await fetch(url, {
+        method: 'PUT',
+        headers: {'Authorization': 'Bearer '+c.pat, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json'},
+        body: JSON.stringify(body)
+      });
+      if(res.status === 409 || res.status === 422){
+        // Conflito de sha — outro PC salvou ao mesmo tempo. Re-tenta puxando sha nova.
+        console.warn(`[Dashboard] Conflito sha (HTTP ${res.status}) — tentativa ${attempt}/3, re-puxando sha`);
+        if(attempt < 3){ await new Promise(r => setTimeout(r, 300)); continue; }
+      }
+      if(!res.ok) throw new Error(`HTTP ${res.status}: ${(await res.text()).slice(0,200)}`);
+      c.lastSync = new Date().toISOString();
+      ghSetConfig(c);
+      ghStatus('Configurado · última sync ' + new Date(c.lastSync).toLocaleString('pt-BR'));
+      if(!silent) ghLog('✓ Enviado ao GitHub.', 'ok');
+      return; // sucesso
+    }catch(e){
+      if(attempt < 3){
+        console.warn(`[Dashboard] Push tentativa ${attempt}/3 falhou:`, e.message);
+        await new Promise(r => setTimeout(r, attempt * 500));
+        continue;
+      }
+      // Última tentativa falhou
+      if(!silent) ghLog('⚠ Erro ao salvar no GitHub: ' + e.message, 'err');
+      else console.error('autoSync falhou após 3 tentativas:', e);
+      throw e;
+    }
+  }
 }
 
 // Push IMEDIATO ao salvar — não usa debounce, garante que o GitHub está atualizado
@@ -1637,7 +1739,7 @@ async function forceRefresh(){
   try{
     const {content} = await ghGetFile();
     if(content){
-      state = content;
+      state = mergeWithRemote(content); // merge em vez de replace
       carryOverTickets();
       _origSave();
       renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro(); renderTabs();
@@ -1657,17 +1759,51 @@ const RELOAD_INTERVAL_MS = 20 * 60 * 1000;
 const reloadAt = Date.now() + RELOAD_INTERVAL_MS;
 setTimeout(()=> location.reload(), RELOAD_INTERVAL_MS);
 
-// Auto-pull silencioso a cada 30s — busca dados frescos sem reload da página
+// Merge inteligente: preserva entradas locais que têm timestamp MAIS NOVO que o remoto.
+// Crítico pra evitar que silentPull/init sobrescrevam um save recente do usuário.
+function mergeWithRemote(remote){
+  if(!remote || !remote.entries) return state;
+  const merged = JSON.parse(JSON.stringify(remote));
+  Object.entries(state.entries || {}).forEach(([date, channels]) => {
+    Object.entries(channels).forEach(([ch, localData]) => {
+      const remoteData = merged.entries?.[date]?.[ch];
+      const localTs = new Date(localData?.ts || 0).getTime();
+      const remoteTs = new Date(remoteData?.ts || 0).getTime();
+      // Local é mais novo (ou só local tem) → preserva local
+      if(localTs > remoteTs){
+        if(!merged.entries[date]) merged.entries[date] = {};
+        merged.entries[date][ch] = localData;
+      }
+    });
+  });
+  // Preserva outros campos top-level do remote (ticketsRaw, etc.) que local pode não ter
+  Object.keys(remote).forEach(k => {
+    if(k !== 'entries' && !(k in merged)) merged[k] = remote[k];
+  });
+  return merged;
+}
+
+// Auto-pull silencioso a cada 60s — busca dados frescos sem reload da página
+// Usa merge (não replace) pra não perder saves recentes.
+// Skipa enquanto tem push em andamento pra evitar race condition.
 let lastSyncOk = null;
 let lastSyncError = null;
+let lastSaveAt = 0;
 async function silentPull(){
+  // Skip se push em andamento OU se salvou nos últimos 5s (push tá pendente)
+  if(pushInProgress || Date.now() - lastSaveAt < 5000){
+    console.log('[Dashboard] silentPull SKIPPED (push em andamento ou save recente)');
+    return;
+  }
   try{
-    const {content} = await ghGetFile();
+    const {content} = await ghGetFile(false);
     if(content){
-      state = content;
+      // MERGE em vez de REPLACE — preserva alterações locais mais recentes
+      state = mergeWithRemote(content);
       carryOverTickets();
       _origSave();
       renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro();
+      if(typeof ticketsRender === 'function') ticketsRender();
       lastSyncOk = new Date();
       lastSyncError = null;
     }
@@ -1677,7 +1813,7 @@ async function silentPull(){
   }
   updateReloadIndicator();
 }
-setInterval(silentPull, 30 * 1000); // a cada 30s
+setInterval(silentPull, 60 * 1000); // a cada 60s
 
 // Atualiza o indicador no header com status sync e countdown
 function updateReloadIndicator(){
@@ -1702,6 +1838,7 @@ setInterval(updateReloadIndicator, 1000);
 const _origSave = save;
 save = function(){
   _origSave();
+  lastSaveAt = Date.now(); // marca pra silentPull não atropelar
   if(ghGetConfig().pat) immediatePush();
 };
 
@@ -1733,6 +1870,162 @@ function mergeStates(local, remote){
 }
 
 /* =========================================================================
+   ABA TICKETS SAC — análise da planilha Octadesk com filtros e gráficos
+   ========================================================================= */
+const ticketsCharts = {};
+const ticketsColors = {
+  primary: '#3b82f6',
+  red: '#ef4444',
+  green: '#10b981',
+  purple: '#a78bfa',
+  yellow: '#f59e0b',
+  palette: ['#3b82f6','#ef4444','#10b981','#a78bfa','#f59e0b','#06b6d4','#ec4899','#84cc16','#f97316','#6366f1','#14b8a6','#eab308']
+};
+
+function ticketsRows(){
+  // Retorna o array de tickets vindo de state.ticketsRaw (populado pelo scheduled task)
+  return Array.isArray(state.ticketsRaw) ? state.ticketsRaw : [];
+}
+function tCount(rows, key){
+  const m = {};
+  rows.forEach(r => { const v = r[key]; if(v) m[v] = (m[v]||0) + 1; });
+  return Object.entries(m).sort((a,b) => b[1]-a[1]);
+}
+function tUniq(arr){ return [...new Set(arr.filter(Boolean))].sort(); }
+function tMLabel(ym){
+  const meses = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+  const [y, m] = ym.split('-');
+  return meses[parseInt(m)-1] + '/' + y;
+}
+function tTopProb(rows, sku){
+  const m = {};
+  rows.forEach(r => { if(r.sk===sku && r.pb) m[r.pb] = (m[r.pb]||0) + 1; });
+  const e = Object.entries(m).sort((a,b)=>b[1]-a[1]);
+  return e.length ? e[0][0] : '—';
+}
+function tProdFor(rows, sku){
+  const r = rows.find(r => r.sk===sku && r.pr);
+  return r ? r.pr : '—';
+}
+function tMkBar(id, labels, data, horizontal, color){
+  if(ticketsCharts[id]) ticketsCharts[id].destroy();
+  const ctx = document.getElementById(id);
+  if(!ctx) return;
+  ticketsCharts[id] = new Chart(ctx, {
+    type: 'bar',
+    data: {labels, datasets:[{data, backgroundColor: color || ticketsColors.primary, borderRadius:5, maxBarThickness:34}]},
+    options: {
+      indexAxis: horizontal ? 'y' : 'x',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {legend:{display:false}, tooltip:{backgroundColor:'#1a2233'}},
+      scales: {
+        x: {ticks:{color:'#6b7280', font:{size:11}}, grid:{color:'#e3e7ee'}},
+        y: {ticks:{color:'#6b7280', font:{size:11}, autoSkip:false}, grid:{color:'#e3e7ee'}}
+      }
+    }
+  });
+}
+function tMkDonut(id, labels, data){
+  if(ticketsCharts[id]) ticketsCharts[id].destroy();
+  const ctx = document.getElementById(id);
+  if(!ctx) return;
+  ticketsCharts[id] = new Chart(ctx, {
+    type: 'doughnut',
+    data: {labels, datasets:[{data, backgroundColor: ticketsColors.palette, borderColor:'#fff', borderWidth:2}]},
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {legend:{position:'right', labels:{color:'#1a2233', font:{size:11}, boxWidth:12}}, tooltip:{backgroundColor:'#1a2233'}}
+    }
+  });
+}
+function ticketsRender(){
+  const data = ticketsRows();
+  const subtitle = document.getElementById('tickets-subtitle');
+  if(subtitle) subtitle.textContent = data.length ? `${data.length.toLocaleString('pt-BR')} tickets carregados — SKU agregado desconsiderando o conteúdo entre parênteses` : 'Sem dados — aguardando a tarefa agendada popular state.ticketsRaw';
+  if(!data.length){
+    const grid = document.querySelector('.tickets-grid');
+    if(grid) grid.style.display = 'none';
+    return;
+  }
+  const grid = document.querySelector('.tickets-grid');
+  if(grid) grid.style.display = '';
+  // Popula filtros (preservando seleção atual)
+  const fMes = document.getElementById('fMes');
+  const fLoja = document.getElementById('fLoja');
+  const fTransp = document.getElementById('fTransp');
+  if(!fMes || !fLoja || !fTransp) return;
+  const curMes = fMes.value, curLoja = fLoja.value, curTransp = fTransp.value;
+  const fillSel = (sel, opts, allLabel, currentValue) => {
+    sel.innerHTML = `<option value="__all">${allLabel}</option>` + opts.map(o => {
+      const label = sel.id === 'fMes' ? tMLabel(o) : o;
+      return `<option value="${o}">${label}</option>`;
+    }).join('');
+    sel.value = opts.includes(currentValue) || currentValue === '__all' ? (currentValue || '__all') : '__all';
+  };
+  const meses = tUniq(data.map(r => r.ym)).sort().reverse();
+  fillSel(fMes, meses, 'Todos os meses', curMes);
+  fillSel(fLoja, tUniq(data.map(r => r.lj)), 'Todas as lojas', curLoja);
+  fillSel(fTransp, tUniq(data.map(r => r.tr)), 'Todas as transportadoras', curTransp);
+  // Aplica filtros
+  const mes = fMes.value, lj = fLoja.value, tr = fTransp.value;
+  const rows = data.filter(r =>
+    (mes==='__all' || r.ym===mes) &&
+    (lj==='__all' || r.lj===lj) &&
+    (tr==='__all' || r.tr===tr)
+  );
+  // KPIs
+  document.getElementById('kTotal').textContent = rows.length.toLocaleString('pt-BR');
+  document.getElementById('kTotalMeta').textContent =
+    (mes==='__all'?'todos os meses':tMLabel(mes)) +
+    (lj==='__all'?'':' · '+lj) +
+    (tr==='__all'?'':' · '+tr);
+  const prob = tCount(rows, 'pb');
+  const fillN = rows.filter(r => r.pb).length;
+  document.getElementById('kProb').textContent = prob.length ? prob[0][0] : '—';
+  document.getElementById('kProbMeta').textContent = prob.length ? `${prob[0][1]} tickets · ${Math.round(prob[0][1]/Math.max(fillN,1)*100)}% dos preenchidos` : '';
+  const sku = tCount(rows, 'sk');
+  document.getElementById('kSku').textContent = sku.length ? sku[0][0] : '—';
+  document.getElementById('kSkuMeta').textContent = sku.length ? `${sku[0][1]} tickets · ${tProdFor(rows, sku[0][0]).slice(0, 42)}` : '';
+  document.getElementById('kFill').textContent = fillN.toLocaleString('pt-BR');
+  document.getElementById('kFillMeta').textContent = rows.length ? `${Math.round(fillN/rows.length*100)}% dos tickets do filtro` : '';
+  // Charts
+  const p = prob.slice(0, 10);
+  tMkBar('chProb', p.map(x=>x[0]), p.map(x=>x[1]), true, ticketsColors.red);
+  const s = sku.slice(0, 10);
+  tMkBar('chSku', s.map(x=>x[0]), s.map(x=>x[1]), true, ticketsColors.green);
+  const l = tCount(rows, 'lj').slice(0, 10);
+  tMkDonut('chLoja', l.map(x=>x[0]), l.map(x=>x[1]));
+  const t = tCount(rows, 'tr').slice(0, 12);
+  tMkBar('chTransp', t.map(x=>x[0]), t.map(x=>x[1]), false, ticketsColors.purple);
+  // Tabela top SKUs
+  const tb = document.getElementById('ticketsTbody');
+  if(tb){
+    tb.innerHTML = '';
+    sku.slice(0, 12).forEach(([k, v]) => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td><span class="tag">${k}</span></td><td class="num">${v}</td><td>${tTopProb(rows, k)}</td><td>${tProdFor(rows, k).slice(0, 60)}</td>`;
+      tb.appendChild(tr);
+    });
+  }
+}
+// Listeners dos filtros
+setTimeout(() => {
+  ['fMes','fLoja','fTransp'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.addEventListener('change', ticketsRender);
+  });
+  const reset = document.getElementById('ticketsReset');
+  if(reset) reset.addEventListener('click', () => {
+    document.getElementById('fMes').value = '__all';
+    document.getElementById('fLoja').value = '__all';
+    document.getElementById('fTransp').value = '__all';
+    ticketsRender();
+  });
+}, 200);
+
+/* =========================================================================
    INICIALIZAÇÃO
    ========================================================================= */
 load();
@@ -1757,21 +2050,12 @@ renderHistory();
   try{
     const {content} = await ghGetFile(); // já tem retry 3x + fallback raw
     if(content){
-      // Preserva entradas de HOJE que estão local mas não no remoto (não-sincronizadas)
-      const today = todayKey();
-      const localToday = state.entries?.[today] || {};
-      const remoteToday = content.entries?.[today] || {};
-      let hasLocalOnly = false;
-      Object.keys(localToday).forEach(ch => {
-        const l = localToday[ch];
-        const hasData = l && (l.reputacao || (l.metrics && Object.values(l.metrics).some(v => v!==null && v!==undefined && v!=='')));
-        if(hasData && !remoteToday[ch]){
-          if(!content.entries[today]) content.entries[today] = {};
-          content.entries[today][ch] = l;
-          hasLocalOnly = true;
-        }
-      });
-      state = content;
+      // MERGE: preserva entradas locais com timestamp mais novo que remoto (saves não sincronizados)
+      const merged = mergeWithRemote(content);
+      const remoteEntriesStr = JSON.stringify(content.entries || {});
+      const mergedEntriesStr = JSON.stringify(merged.entries || {});
+      const hasLocalOnly = remoteEntriesStr !== mergedEntriesStr;
+      state = merged;
       carryOverTickets();
       _origSave();
       renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro(); renderTabs();
