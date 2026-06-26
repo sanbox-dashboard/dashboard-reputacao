@@ -1505,6 +1505,44 @@
         "casosCriticos": 13,
         "solicitacaoDevolucao": 9
       }
+    },
+    "2026-06-25": {
+      "amazon": {
+        "reputacao": "264 — Ideal",
+        "metrics": {
+          "pedidosProblema": 1.46,
+          "cancelamentoEnvio": 0,
+          "rastreamento": null
+        },
+        "ts": "2026-06-26T03:07:09.030376"
+      },
+      "magalu": {
+        "reputacao": "3,7",
+        "metrics": {
+          "agilidade": 95.2,
+          "cancelamento": 4.2,
+          "avaliacao": 93.3
+        },
+        "ts": "2026-06-26T03:07:09.030376"
+      },
+      "casasbahia": {
+        "reputacao": "4",
+        "metrics": {
+          "reclamacao": 7.3,
+          "cancelados": 3.5
+        },
+        "ts": "2026-06-26T03:07:09.030376"
+      },
+      "shopee": {
+        "reputacao": "Top Lojista",
+        "metrics": {
+          "taxaResposta": 98.04,
+          "notaLoja": 4.86,
+          "boaAvaliacao": null,
+          "ruinsNaoRespondidas": null
+        },
+        "ts": "2026-06-26T03:07:09.030376"
+      }
     }
   },
   "ticketsRaw": [
