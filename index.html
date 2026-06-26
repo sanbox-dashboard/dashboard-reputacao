@@ -625,8 +625,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '24';
-const APP_VERSION = '24.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '25';
+const APP_VERSION = '25.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 
@@ -2144,11 +2144,29 @@ function tPrevMonth(ym){
   return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0');
 }
 
+// Aliases manuais de transportadora — quando o nome no ticket/pedido representa
+// uma transportadora conhecida sob outro rótulo. Mapeie da forma "como aparece" → "nome canônico".
+// Match é por substring case-insensitive aplicado ANTES da normalização.
+const CARRIER_ALIASES = [
+  {match: 'coleta normal', canonical: 'mercado envios'},
+  // Adicione mais conforme necessário:
+  // {match: 'coleta flex',   canonical: 'mercado envios'},
+  // {match: 'shopee xpress', canonical: 'shopee xpress'},
+];
+
 // Normaliza nome de transportadora pra casar entre tickets ("Mercado Envios") e pedidos
-// ("Mercado Envios Places", "ALFA TRANSPORTES LTDA"). Remove sufixos comuns e conectivos.
+// ("Mercado Envios Places", "ALFA TRANSPORTES LTDA"). Aplica aliases e remove sufixos comuns.
 function normalizeCarrier(name){
   if(!name) return '';
-  let n = name.toLowerCase()
+  let raw = name.toLowerCase().trim();
+  // Aplica aliases conhecidos antes da normalização
+  for(const a of CARRIER_ALIASES){
+    if(raw === a.match || raw.includes(a.match)){
+      raw = a.canonical;
+      break;
+    }
+  }
+  let n = raw
     .normalize('NFD').replace(/[̀-ͯ]/g, '') // remove acentos
     .replace(/[.,\/\\\(\)]/g, ' ');
   const skip = new Set([
