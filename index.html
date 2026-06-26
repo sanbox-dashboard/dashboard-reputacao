@@ -227,6 +227,21 @@
   .tickets-card .tag{display:inline-block;background:#f1f5f9;border:1px solid var(--border);border-radius:6px;padding:2px 8px;font-size:11px;color:var(--text);font-weight:600}
   .tickets-empty{padding:48px;text-align:center;color:var(--muted);font-size:14px}
   body.tv-mode [data-tab-panel="tickets"]{display:none !important}
+  body.tv-mode [data-tab-panel="comissao"]{display:none !important}
+  /* Comissão */
+  .comissao-color-tag{padding:8px 14px;border-radius:10px;font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px;border:2px solid}
+  .comissao-color-tag.green{background:var(--green-bg);border-color:var(--green);color:#047857}
+  .comissao-color-tag.yellow{background:var(--yellow-bg);border-color:var(--yellow);color:#b45309}
+  .comissao-color-tag.red{background:var(--red-bg);border-color:var(--red);color:#b91c1c}
+  .comissao-color-tag .dot{width:10px;height:10px;border-radius:50%}
+  .comissao-color-tag.green .dot{background:var(--green)}
+  .comissao-color-tag.yellow .dot{background:var(--yellow)}
+  .comissao-color-tag.red .dot{background:var(--red)}
+  .desconto{color:var(--red);font-weight:600}
+  .desconto.zero{color:var(--muted);font-weight:400}
+  .final-val{font-weight:800;font-size:15px}
+  .final-val.green{color:#047857}
+  .final-val.zero{color:var(--red)}
 
   /* Registro Diário - cards pequenos lado a lado por dia */
   .registro-day{margin-bottom:24px;background:var(--card);border-radius:12px;padding:16px;border:1px solid var(--border);box-shadow:var(--shadow)}
@@ -333,6 +348,7 @@
   <button class="main-tab active" data-tab="reputacao" onclick="switchMainTab('reputacao')">📊 Reputação</button>
   <button class="main-tab" data-tab="registro" onclick="switchMainTab('registro')">📅 Registro Diário</button>
   <button class="main-tab" data-tab="tickets" onclick="switchMainTab('tickets')">📋 Análise de Tickets SAC</button>
+  <button class="main-tab" data-tab="comissao" onclick="switchMainTab('comissao')">💰 Comissão</button>
 </nav>
 
 <div data-tab-panel="reputacao">
@@ -426,6 +442,67 @@
       <div class="tickets-card"><h3>Tickets por Transportadora</h3><div class="ch">Quantidade · % no topo = tickets do mês ÷ pedidos da transportadora no mês anterior</div><div class="cv tall"><canvas id="chTransp"></canvas></div></div>
       <div class="tickets-card full"><h3>Top SKUs no filtro atual</h3><div class="ch">Quantidade, principal problema e produto associado</div>
         <table><thead><tr><th>SKU</th><th class="num">Qtd</th><th>Principal problema</th><th>Produto</th></tr></thead><tbody id="ticketsTbody"></tbody></table>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div data-tab-panel="comissao" style="display:none">
+  <section id="comissao-section">
+    <h2 class="section-title">
+      Comissão do Time
+      <span class="section-subtitle" id="comissao-subtitle">Cálculo baseado em reputação média do mês + indicadores operacionais</span>
+    </h2>
+    <div class="tickets-filters">
+      <div class="filter-group">
+        <label>Mês de referência</label>
+        <select id="cMes"></select>
+      </div>
+      <div class="filter-group">
+        <label>Corte tickets financeiros (amarelo)</label>
+        <select id="cCutFinAmrl"><option value="1">1+</option></select>
+      </div>
+      <div class="filter-group">
+        <label>Corte tickets financeiros (vermelho)</label>
+        <select id="cCutFinRed"><option value="4">4+</option></select>
+      </div>
+      <div class="filter-group">
+        <label>Corte SAC (amarelo)</label>
+        <select id="cCutSacAmrl"><option value="1">1+</option></select>
+      </div>
+      <div class="filter-group">
+        <label>Corte SAC (vermelho)</label>
+        <select id="cCutSacRed"><option value="6">6+</option></select>
+      </div>
+    </div>
+    <div class="tickets-grid" style="grid-template-columns:1fr">
+      <div class="tickets-card full">
+        <h3>Cores consolidadas por canal (mês selecionado)</h3>
+        <div class="ch">Pior cor entre todas as métricas de reputação (média do mês). Verde = dentro do alerta · Amarelo = entre alerta e meta · Vermelho = pior que meta.</div>
+        <div id="comissao-colors" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px"></div>
+      </div>
+      <div class="tickets-card full">
+        <h3>Comissão por pessoa</h3>
+        <div class="ch">Cada bloco mostra base, descontos e valor final. Piso = R$ 0.</div>
+        <table id="comissao-table">
+          <thead>
+            <tr>
+              <th>Pessoa</th>
+              <th>Canais / função</th>
+              <th class="num">Base</th>
+              <th class="num">Reputação</th>
+              <th class="num">Tickets</th>
+              <th class="num">Logística</th>
+              <th class="num">Críticos</th>
+              <th class="num">Coletivo</th>
+              <th class="num">Final</th>
+            </tr>
+          </thead>
+          <tbody id="comissao-tbody"></tbody>
+          <tfoot>
+            <tr><th colspan="8" style="text-align:right">Total pago no mês</th><th class="num" id="comissao-total">R$ 0</th></tr>
+          </tfoot>
+        </table>
       </div>
     </div>
   </section>
@@ -548,8 +625,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '23';
-const APP_VERSION = '23.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '24';
+const APP_VERSION = '24.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 
@@ -1451,6 +1528,7 @@ function switchMainTab(tab){
   localStorage.setItem(MAIN_TAB_KEY, tab);
   if(tab === 'registro') renderRegistro();
   if(tab === 'tickets') ticketsRender();
+  if(tab === 'comissao') renderComissao();
 }
 function getActiveTab(){
   return localStorage.getItem(MAIN_TAB_KEY) || 'reputacao';
@@ -1991,8 +2069,8 @@ function tMkBarWithPct(id, labels, data, pctLabels, color, mesRef, mesPrev, orde
             label: function(ctx){
               const label = ctx.label;
               const tickets = ctx.parsed.y;
-              const orders = ordersPrev[label] || 0;
-              if(!orders) return ` ${tickets} tickets (sem dados de pedidos em ${tMLabel(mesPrev)})`;
+              const orders = ordersPrev[normalizeCarrier(label)] || 0;
+              if(!orders) return ` ${tickets} tickets (sem pedidos correspondentes em ${tMLabel(mesPrev)})`;
               const pct = ((tickets / orders) * 100).toFixed(2);
               return ` ${pct}% — ${tickets} tickets ${tMLabel(mesRef)} ÷ ${orders} pedidos ${tMLabel(mesPrev)}`;
             }
@@ -2066,6 +2144,35 @@ function tPrevMonth(ym){
   return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0');
 }
 
+// Normaliza nome de transportadora pra casar entre tickets ("Mercado Envios") e pedidos
+// ("Mercado Envios Places", "ALFA TRANSPORTES LTDA"). Remove sufixos comuns e conectivos.
+function normalizeCarrier(name){
+  if(!name) return '';
+  let n = name.toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '') // remove acentos
+    .replace(/[.,\/\\\(\)]/g, ' ');
+  const skip = new Set([
+    'ltda','s','a','sa','e','de','do','da','com','&',
+    'transportes','transportadora','transp','logistica','log',
+    'express','courier','envias','envios','placas','places',
+    'full','eletronica','comercio','servicos','distribuicao'
+  ]);
+  const meaningful = n.split(/\s+/).filter(w => w && !skip.has(w));
+  // Pega no máximo as 2 primeiras palavras distintivas pra ter uma chave compacta
+  return meaningful.slice(0, 2).join(' ');
+}
+
+// Agrega pedidos por chave normalizada (várias transportadoras podem virar a mesma chave)
+function aggregateOrdersNormalized(ordersMap){
+  const out = {};
+  Object.entries(ordersMap || {}).forEach(([carrier, count]) => {
+    const norm = normalizeCarrier(carrier);
+    if(!norm) return;
+    out[norm] = (out[norm] || 0) + count;
+  });
+  return out;
+}
+
 function ticketsRender(){
   const data = ticketsRows();
   const subtitle = document.getElementById('tickets-subtitle');
@@ -2132,17 +2239,18 @@ function ticketsRender(){
   const l = tCount(rows, 'lj').slice(0, 10);
   tMkDonut('chLoja', l.map(x=>x[0]), l.map(x=>x[1]));
   const t = tCount(rows, 'tr').slice(0, 12);
-  // Calcula % por transportadora: tickets do mês de filtro ÷ pedidos da transportadora no mês anterior
+  // Calcula % por transportadora: tickets do mês ÷ pedidos da transportadora no mês anterior
+  // Usa normalização de nomes pra casar "Mercado Envios" (tickets) com "Mercado Envios Places" (pedidos)
   const mesRefPct = mes && mes !== '__all' ? mes : todayKey().slice(0, 7);
   const mesPrevPct = tPrevMonth(mesRefPct);
-  const ordersPrev = (state.ordersByCarrier || {})[mesPrevPct] || {};
-  const pctLabels = t.map(([transp]) => {
-    const orders = ordersPrev[transp];
-    if(!orders || orders <= 0) return '';
-    const ticketsCount = t.find(x => x[0] === transp)[1];
-    return ((ticketsCount / orders) * 100).toFixed(2) + '%';
+  const ordersRaw = (state.ordersByCarrier || {})[mesPrevPct] || {};
+  const ordersNorm = aggregateOrdersNormalized(ordersRaw);
+  const pctLabels = t.map(([transp, ticketsCount]) => {
+    const ordersN = ordersNorm[normalizeCarrier(transp)];
+    if(!ordersN || ordersN <= 0) return '';
+    return ((ticketsCount / ordersN) * 100).toFixed(2) + '%';
   });
-  tMkBarWithPct('chTransp', t.map(x=>x[0]), t.map(x=>x[1]), pctLabels, ticketsColors.purple, mesRefPct, mesPrevPct, ordersPrev);
+  tMkBarWithPct('chTransp', t.map(x=>x[0]), t.map(x=>x[1]), pctLabels, ticketsColors.purple, mesRefPct, mesPrevPct, ordersNorm);
   // Tabela top SKUs
   const tb = document.getElementById('ticketsTbody');
   if(tb){
@@ -2168,6 +2276,203 @@ setTimeout(() => {
     ticketsRender();
   });
 }, 200);
+
+/* =========================================================================
+   ABA COMISSÃO — cálculo mensal de comissão baseado em reputação + tickets
+   ========================================================================= */
+
+// Para cada canal, calcula a média mensal de cada métrica e retorna a PIOR cor.
+// Usa as faixas Meta/Alerta já definidas em `channels[canal].metrics[mKey]`.
+function corDoMesCanal(canalKey, ym){
+  const ch = channels[canalKey];
+  if(!ch) return 'unknown';
+  // Coleta entradas do mês com dados de reputação/métricas
+  const dias = Object.entries(state.entries || {})
+    .filter(([d]) => d.startsWith(ym))
+    .map(([_, channels]) => channels[canalKey])
+    .filter(e => e && (e.reputacao || (e.metrics && Object.values(e.metrics).some(v => v!==null && v!==undefined && v!==''))));
+  if(!dias.length) return 'unknown';
+  let pior = 'green';
+  Object.entries(ch.metrics).forEach(([mKey, m]) => {
+    const vals = dias.map(d => d.metrics?.[mKey]).filter(v => v!==null && v!==undefined && v!=='' && !isNaN(v)).map(parseFloat);
+    if(!vals.length) return;
+    const avg = vals.reduce((a,b)=>a+b, 0) / vals.length;
+    const st = getStatus(avg, m);
+    if(st === 'red') pior = 'red';
+    else if(st === 'yellow' && pior !== 'red') pior = 'yellow';
+  });
+  return pior;
+}
+
+// Pega o último valor do mês para um campo operacional (tickets, sacForaPrazo, etc.)
+function ultimoDoMes(canalKey, ym, field){
+  const dias = Object.entries(state.entries || {})
+    .filter(([d]) => d.startsWith(ym))
+    .filter(([_, channels]) => {
+      const e = channels[canalKey];
+      return e && e[field] !== null && e[field] !== undefined;
+    })
+    .sort((a, b) => b[0].localeCompare(a[0]));
+  if(!dias.length) return 0;
+  return parseInt(dias[0][1][canalKey][field]) || 0;
+}
+
+// Mapeia número de tickets pra cor usando cortes definidos pelo usuário
+function corPorCorte(n, cutAmrl, cutRed){
+  if(n === 0) return 'green';
+  if(n >= cutRed) return 'red';
+  if(n >= cutAmrl) return 'yellow';
+  return 'green';
+}
+
+function piorCor(a, b){
+  const ranks = {green:0, yellow:1, red:2, unknown:0};
+  return ranks[a] >= ranks[b] ? a : b;
+}
+
+const COMISSAO_CANAIS = ['amazon','casasbahia','magalu','shopee','mercadolivre'];
+const COMISSAO_PESSOAS = [
+  {nome: 'Atendente 1', canais: ['amazon','casasbahia'], base: 500, tipo: 'atendente'},
+  {nome: 'Atendente 2', canais: ['magalu','shopee'],    base: 500, tipo: 'atendente'},
+  {nome: 'Atendente 3', canais: ['mercadolivre'],       base: 500, tipo: 'atendente'},
+  {nome: 'Logística',   canais: COMISSAO_CANAIS,         base: 500, tipo: 'logistica'},
+  {nome: 'Coordenador', canais: COMISSAO_CANAIS,         base: 1000, tipo: 'coordenador'},
+];
+
+function calcularComissao(ym, cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed){
+  // Cor por canal
+  const cores = {};
+  COMISSAO_CANAIS.forEach(c => { cores[c] = corDoMesCanal(c, ym); });
+  // Tem ao menos um canal vermelho?
+  const algumVermelho = Object.values(cores).some(c => c === 'red');
+  const linhas = COMISSAO_PESSOAS.map(p => {
+    const linha = {
+      pessoa: p.nome,
+      canais: p.canais.map(c => channels[c].name).join(' + '),
+      base: p.base,
+      reputacao: 0,
+      tickets: 0,
+      logistica: 0,
+      criticos: 0,
+      coletivo: 0,
+    };
+    if(p.tipo === 'atendente'){
+      // R$300 reputação + R$200 tickets
+      const piorRep = p.canais.map(c => cores[c]).reduce((a,b) => piorCor(a,b), 'green');
+      if(piorRep === 'yellow') linha.reputacao = -100;
+      else if(piorRep === 'red') linha.reputacao = -300;
+      // Tickets: soma tickets + sacForaPrazo dos canais da pessoa
+      const totalFin = p.canais.reduce((s, c) => s + ultimoDoMes(c, ym, 'tickets'), 0);
+      const totalSac = p.canais.reduce((s, c) => s + ultimoDoMes(c, ym, 'sacForaPrazo'), 0);
+      const corFin = corPorCorte(totalFin, cutFinAmrl, cutFinRed);
+      const corSac = corPorCorte(totalSac, cutSacAmrl, cutSacRed);
+      const piorTk = piorCor(corFin, corSac);
+      if(piorTk === 'yellow') linha.tickets = -100;
+      else if(piorTk === 'red') linha.tickets = -200;
+      if(algumVermelho) linha.coletivo = -50;
+    }
+    else if(p.tipo === 'logistica'){
+      // -R$50 por canal com 1-3 devoluções, -R$100 por canal com 4+
+      COMISSAO_CANAIS.forEach(c => {
+        const dev = ultimoDoMes(c, ym, 'solicitacaoDevolucao');
+        if(dev >= 4) linha.logistica -= 100;
+        else if(dev >= 1) linha.logistica -= 50;
+      });
+      if(algumVermelho) linha.coletivo = -50;
+    }
+    else if(p.tipo === 'coordenador'){
+      // -R$80 por canal com casosCriticos >= 1
+      COMISSAO_CANAIS.forEach(c => {
+        const crit = ultimoDoMes(c, ym, 'casosCriticos');
+        if(crit >= 1) linha.criticos -= 80;
+      });
+      // -R$200 por canal vermelho, -R$100 por canal amarelo
+      COMISSAO_CANAIS.forEach(c => {
+        if(cores[c] === 'red') linha.reputacao -= 200;
+        else if(cores[c] === 'yellow') linha.reputacao -= 100;
+      });
+      // Coordenador NÃO tem tickets nem coletivo
+    }
+    // Soma e aplica piso 0
+    const descontos = linha.reputacao + linha.tickets + linha.logistica + linha.criticos + linha.coletivo;
+    linha.final = Math.max(0, linha.base + descontos);
+    return linha;
+  });
+  return {linhas, cores};
+}
+
+function fmtBRL(n){ return n.toLocaleString('pt-BR', {style:'currency', currency:'BRL', minimumFractionDigits:0, maximumFractionDigits:0}); }
+function fmtBRLDesc(n){ return n === 0 ? 'R$ 0' : fmtBRL(n); }
+
+function renderComissao(){
+  const cMes = document.getElementById('cMes');
+  if(!cMes) return;
+  // Lista de meses disponíveis
+  const todosMeses = [...new Set(Object.keys(state.entries || {}).map(d => d.slice(0,7)))].sort().reverse();
+  const mesVigente = todayKey().slice(0, 7);
+  const mesDefault = todosMeses.includes(mesVigente) ? mesVigente : (todosMeses[0] || mesVigente);
+  const curMes = cMes.dataset.initialized ? (cMes.value || mesDefault) : mesDefault;
+  cMes.dataset.initialized = '1';
+  cMes.innerHTML = todosMeses.map(m => `<option value="${m}">${tMLabel(m)}</option>`).join('');
+  cMes.value = todosMeses.includes(curMes) ? curMes : mesDefault;
+  // Popula selects de corte (se ainda não tiver)
+  ['cCutFinAmrl','cCutFinRed','cCutSacAmrl','cCutSacRed'].forEach((id, idx) => {
+    const sel = document.getElementById(id);
+    if(!sel) return;
+    if(sel.dataset.initialized) return;
+    sel.dataset.initialized = '1';
+    const opts = [];
+    for(let i = 1; i <= 30; i++) opts.push(i);
+    const defaults = {cCutFinAmrl:1, cCutFinRed:4, cCutSacAmrl:1, cCutSacRed:6};
+    sel.innerHTML = opts.map(v => `<option value="${v}">${v}+</option>`).join('');
+    sel.value = defaults[id];
+    sel.addEventListener('change', renderComissao);
+  });
+  cMes.addEventListener('change', renderComissao);
+  // Cortes atuais
+  const cutFinAmrl = parseInt(document.getElementById('cCutFinAmrl').value);
+  const cutFinRed = parseInt(document.getElementById('cCutFinRed').value);
+  const cutSacAmrl = parseInt(document.getElementById('cCutSacAmrl').value);
+  const cutSacRed = parseInt(document.getElementById('cCutSacRed').value);
+  const ym = cMes.value;
+  // Calcula
+  const {linhas, cores} = calcularComissao(ym, cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed);
+  // Renderiza cores por canal
+  const corDiv = document.getElementById('comissao-colors');
+  if(corDiv){
+    corDiv.innerHTML = COMISSAO_CANAIS.map(c => {
+      const cor = cores[c];
+      const label = channels[c].name;
+      return `<div class="comissao-color-tag ${cor}"><span class="dot"></span>${label}</div>`;
+    }).join('');
+  }
+  // Renderiza tabela
+  const tb = document.getElementById('comissao-tbody');
+  if(tb){
+    tb.innerHTML = '';
+    let total = 0;
+    linhas.forEach(l => {
+      total += l.final;
+      const tr = document.createElement('tr');
+      const cls = v => v < 0 ? 'desconto' : 'desconto zero';
+      const cellFinal = l.final === 0 ? 'final-val zero' : 'final-val green';
+      tr.innerHTML = `
+        <td><strong>${l.pessoa}</strong></td>
+        <td>${l.canais}</td>
+        <td class="num">${fmtBRL(l.base)}</td>
+        <td class="num ${cls(l.reputacao)}">${fmtBRLDesc(l.reputacao)}</td>
+        <td class="num ${cls(l.tickets)}">${fmtBRLDesc(l.tickets)}</td>
+        <td class="num ${cls(l.logistica)}">${fmtBRLDesc(l.logistica)}</td>
+        <td class="num ${cls(l.criticos)}">${fmtBRLDesc(l.criticos)}</td>
+        <td class="num ${cls(l.coletivo)}">${fmtBRLDesc(l.coletivo)}</td>
+        <td class="num ${cellFinal}">${fmtBRL(l.final)}</td>
+      `;
+      tb.appendChild(tr);
+    });
+    document.getElementById('comissao-total').textContent = fmtBRL(total);
+  }
+  document.getElementById('comissao-subtitle').textContent = `${tMLabel(ym)} — recalculado em tempo real conforme dados do dashboard`;
+}
 
 /* =========================================================================
    INICIALIZAÇÃO
