@@ -536,11 +536,14 @@
     </div>
       </div>
     </details>
-    <div class="form-actions" style="justify-content:flex-start">
+    <div class="form-actions" style="justify-content:flex-start;flex-wrap:wrap">
       <button class="btn btn-secondary" onclick="ghPull()">⬇ Carregar versão mais recente do GitHub</button>
       <button class="btn btn-secondary" onclick="ghPush()">⬆ Enviar agora ao GitHub</button>
+      <button id="force-push-btn" class="btn btn-secondary" onclick="forcePushAll()" title="Garante que TODOS os dados deste aparelho subiram pro GitHub. Útil se desconfia que algum save não foi.">⬆ Forçar push deste aparelho</button>
+      <button id="force-resync-btn" class="btn btn-danger" onclick="forceFullResync()" title="Limpa os dados locais deste aparelho e re-baixa tudo do GitHub. Útil quando este aparelho mostra dados diferentes dos outros.">🔁 Forçar sincronização total</button>
     </div>
     <div id="gh-log" style="margin-top:12px;font-size:12px;color:var(--muted);min-height:18px"></div>
+    <div id="gh-sync-status" style="margin-top:8px;font-size:11px;color:var(--muted);font-family:monospace"></div>
   </div>
 </section>
 
@@ -625,10 +628,11 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '26';
-const APP_VERSION = '26.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '27';
+const APP_VERSION = '27.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
+console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
 
 let state = {
   entries: {} // entries[YYYY-MM-DD][channelKey] = { reputacao: '', metrics: {key:value}, ts:'' }
@@ -1807,6 +1811,7 @@ async function ghPush(silent){
       if(!res.ok) throw new Error(`HTTP ${res.status}: ${(await res.text()).slice(0,200)}`);
       c.lastSync = new Date().toISOString();
       ghSetConfig(c);
+      lastPushOk = new Date();
       ghStatus('Configurado · última sync ' + new Date(c.lastSync).toLocaleString('pt-BR'));
       if(!silent) ghLog('✓ Enviado ao GitHub.', 'ok');
       return; // sucesso
@@ -1925,12 +1930,13 @@ function mergeWithRemote(remote){
   return merged;
 }
 
-// Auto-pull silencioso a cada 60s — busca dados frescos sem reload da página
+// Auto-pull silencioso a cada 30s — busca dados frescos sem reload da página
 // Usa merge (não replace) pra não perder saves recentes.
 // Skipa enquanto tem push em andamento pra evitar race condition.
 let lastSyncOk = null;
 let lastSyncError = null;
 let lastSaveAt = 0;
+let lastPushOk = null;
 async function silentPull(){
   // Skip se push em andamento OU se salvou nos últimos 5s (push tá pendente)
   if(pushInProgress || Date.now() - lastSaveAt < 5000){
@@ -1940,6 +1946,8 @@ async function silentPull(){
   try{
     const {content} = await ghGetFile(false);
     if(content){
+      // Detecta se local tem entradas que remote não tem ANTES do merge
+      const localOnlyBefore = detectLocalOnlyEntries(content);
       // MERGE em vez de REPLACE — preserva alterações locais mais recentes
       state = mergeWithRemote(content);
       carryOverTickets();
@@ -1948,6 +1956,16 @@ async function silentPull(){
       if(typeof ticketsRender === 'function') ticketsRender();
       lastSyncOk = new Date();
       lastSyncError = null;
+      // SAFETY NET: se temos dados que não estão no remoto, força push pra garantir sync.
+      // Isso resolve o caso clássico: salvei em uma máquina, push falhou silenciosamente,
+      // outras máquinas nunca veem os dados. Agora a cada 30s isso é detectado e corrigido.
+      if(localOnlyBefore.length > 0){
+        console.warn('[Dashboard] AUTO-RECOVERY: detectados', localOnlyBefore.length, 'entradas locais não-sincronizadas:', localOnlyBefore);
+        ghPush(true).then(()=>{
+          lastPushOk = new Date();
+          console.log('[Dashboard] AUTO-RECOVERY OK — push de', localOnlyBefore.length, 'entradas');
+        }).catch(e => console.error('[Dashboard] AUTO-RECOVERY falhou:', e));
+      }
     }
   }catch(e){
     console.error('[Dashboard] silentPull falhou:', e);
@@ -1955,7 +1973,72 @@ async function silentPull(){
   }
   updateReloadIndicator();
 }
-setInterval(silentPull, 60 * 1000); // a cada 60s
+setInterval(silentPull, 30 * 1000); // a cada 30s — mais agressivo pra sync multi-PC
+
+// Detecta entradas (canais por dia) que existem no estado local mas NÃO no remoto.
+// Retorna lista tipo ["2026-06-25/mercadolivre", ...] pra log/recovery.
+function detectLocalOnlyEntries(remote){
+  if(!remote || !remote.entries) return [];
+  const result = [];
+  Object.entries(state.entries || {}).forEach(([date, channels]) => {
+    Object.entries(channels).forEach(([ch, data]) => {
+      if(!data) return;
+      // Só considera "local-only relevante" se tem reputação ou métricas (não só campos auto)
+      const hasManual = !!data.reputacao || (data.metrics && Object.values(data.metrics).some(v => v !== null && v !== undefined && v !== ''));
+      if(!hasManual) return;
+      const remoteEntry = remote.entries[date] && remote.entries[date][ch];
+      const remoteHasIt = remoteEntry && (!!remoteEntry.reputacao || (remoteEntry.metrics && Object.values(remoteEntry.metrics).some(v => v !== null && v !== undefined && v !== '')));
+      if(!remoteHasIt){
+        result.push(`${date}/${ch}`);
+      }
+    });
+  });
+  return result;
+}
+
+// Botão "Forçar sincronização total" — wipe localStorage do estado E re-carrega do GitHub.
+// USE QUANDO: o aparelho mostra dados diferentes dos outros (e você sabe que GitHub tem o certo).
+async function forceFullResync(){
+  if(!confirm('Vai apagar os dados locais deste aparelho e re-baixar do GitHub. Use só se este aparelho está mostrando dados diferentes dos outros. Continuar?')) return;
+  const btn = document.getElementById('force-resync-btn');
+  if(btn){ btn.textContent = '⏳ Re-sincronizando...'; btn.disabled = true; }
+  try{
+    // 1. Limpa o estado em memória e no localStorage (mas mantém GH config)
+    const ghCfg = localStorage.getItem(GH_CONFIG_KEY);
+    state = {entries:{}, channels: state.channels || {}};
+    _origSave();
+    // 2. Fetch direto do GitHub (sem merge)
+    const {content} = await ghGetFile(false);
+    if(!content) throw new Error('GitHub retornou vazio');
+    state = content;
+    carryOverTickets();
+    _origSave();
+    // 3. Re-render tudo
+    renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro(); renderTabs();
+    const days = Object.keys(state.entries||{}).length;
+    ghLog(`✓ Re-sincronizado: ${days} dias carregados do GitHub`, 'ok');
+    if(btn){ btn.textContent = '✓ OK'; setTimeout(()=>{ btn.textContent='🔁 Forçar sincronização total'; btn.disabled=false; }, 2500); }
+  }catch(e){
+    console.error('Force resync failed:', e);
+    ghLog('⚠ Erro na re-sincronização: '+e.message, 'err');
+    if(btn){ btn.textContent = '⚠ Erro'; setTimeout(()=>{ btn.textContent='🔁 Forçar sincronização total'; btn.disabled=false; }, 2500); }
+  }
+}
+
+// Botão "Forçar push" — empurra TUDO que está no localStorage pro GitHub.
+// USE QUANDO: você sabe que tem dados nesse aparelho que talvez não tenham subido.
+async function forcePushAll(){
+  if(!confirm('Vai enviar TODOS os dados deste aparelho pro GitHub (com merge — não sobrescreve). Continuar?')) return;
+  const btn = document.getElementById('force-push-btn');
+  if(btn){ btn.textContent = '⏳ Enviando...'; btn.disabled = true; }
+  try{
+    await ghPush(false);
+    lastPushOk = new Date();
+    if(btn){ btn.textContent = '✓ OK'; setTimeout(()=>{ btn.textContent='⬆ Forçar push deste aparelho'; btn.disabled=false; }, 2500); }
+  }catch(e){
+    if(btn){ btn.textContent = '⚠ Erro'; setTimeout(()=>{ btn.textContent='⬆ Forçar push deste aparelho'; btn.disabled=false; }, 2500); }
+  }
+}
 
 // Atualiza o indicador no header com status sync e countdown
 function updateReloadIndicator(){
@@ -1972,6 +2055,15 @@ function updateReloadIndicator(){
     indicator.innerHTML = `<span style="color:var(--green)">✓ Sync ${syncTime}</span> · reload em ${cd}`;
   } else {
     indicator.textContent = `↻ Sincronizando... · reload em ${cd}`;
+  }
+  // Painel detalhado de sync no GitHub section
+  const sync = document.getElementById('gh-sync-status');
+  if(sync){
+    const days = Object.keys(state.entries || {}).length;
+    const pullTxt = lastSyncOk ? lastSyncOk.toLocaleTimeString('pt-BR') : '—';
+    const pushTxt = lastPushOk ? lastPushOk.toLocaleTimeString('pt-BR') : '—';
+    const errTxt = lastSyncError ? ` · ⚠ ${lastSyncError.slice(0,60)}` : '';
+    sync.innerHTML = `📊 ${days} dias no local · ⬇ último pull ${pullTxt} · ⬆ último push ${pushTxt}${errTxt}`;
   }
 }
 updateReloadIndicator();
@@ -2518,11 +2610,10 @@ renderHistory();
   try{
     const {content} = await ghGetFile(); // já tem retry 3x + fallback raw
     if(content){
+      // Detecta entradas LOCAIS-ONLY ANTES do merge — se tem alguma, vamos forçar push
+      const localOnly = detectLocalOnlyEntries(content);
       // MERGE: preserva entradas locais com timestamp mais novo que remoto (saves não sincronizados)
       const merged = mergeWithRemote(content);
-      const remoteEntriesStr = JSON.stringify(content.entries || {});
-      const mergedEntriesStr = JSON.stringify(merged.entries || {});
-      const hasLocalOnly = remoteEntriesStr !== mergedEntriesStr;
       state = merged;
       carryOverTickets();
       _origSave();
@@ -2530,10 +2621,23 @@ renderHistory();
       lastSyncOk = new Date();
       lastSyncError = null;
       updateReloadIndicator();
-      // Se preservou dado local, pusha pro GitHub (só se temos PAT)
-      if(hasLocalOnly && c.pat) ghPush(true).catch(e => console.error('push falhou', e));
+      // AUTO-RECOVERY no boot: se tem dados locais não-sincronizados, força push imediato.
+      // Isso garante que dados nunca ficam presos em um aparelho — basta abrir o dashboard
+      // que ele detecta e empurra pro GitHub automaticamente.
+      if(localOnly.length > 0 && c.pat){
+        console.warn('[Dashboard] BOOT AUTO-RECOVERY: detectados', localOnly.length, 'entradas locais não-sincronizadas:', localOnly);
+        ghLog(`🔁 Recuperando ${localOnly.length} entradas não-sincronizadas...`, 'info');
+        ghPush(true).then(()=>{
+          lastPushOk = new Date();
+          ghLog(`✓ Recuperadas ${localOnly.length} entradas pro GitHub`, 'ok');
+          updateReloadIndicator();
+        }).catch(e => {
+          console.error('Boot auto-recovery falhou:', e);
+          ghLog(`⚠ Não consegui empurrar ${localOnly.length} entradas: ${e.message}`, 'err');
+        });
+      }
       const days = Object.keys(state.entries||{}).length;
-      console.log('[Dashboard] Sync inicial OK —', days, 'dias carregados');
+      console.log('[Dashboard] Sync inicial OK —', days, 'dias carregados, ', localOnly.length, 'local-only');
       ghLog(`✓ Sincronizado às ${lastSyncOk.toLocaleTimeString('pt-BR')} — ${days} dias`, 'ok');
     } else {
       lastSyncError = 'data.json vazio no GitHub';
