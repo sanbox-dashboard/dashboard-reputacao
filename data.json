@@ -1542,6 +1542,20 @@
           "ruinsNaoRespondidas": null
         },
         "ts": "2026-06-26T03:07:09.030376"
+      },
+      "mercadolivre": {
+        "reputacao": "MercadoLíder Platinum",
+        "metrics": {
+          "reclamacoes": 0.64,
+          "mediacoes": 0.22,
+          "canceladas": 0.17,
+          "enviosIncorretos": 0.27
+        },
+        "ts": "2026-06-26T16:22:31.596158",
+        "tickets": 0,
+        "sacForaPrazo": 5,
+        "casosCriticos": 10,
+        "solicitacaoDevolucao": 3
       }
     }
   },
