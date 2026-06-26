@@ -625,8 +625,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '25';
-const APP_VERSION = '25.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '26';
+const APP_VERSION = '26.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 
@@ -2149,9 +2149,10 @@ function tPrevMonth(ym){
 // Match é por substring case-insensitive aplicado ANTES da normalização.
 const CARRIER_ALIASES = [
   {match: 'coleta normal', canonical: 'mercado envios'},
+  {match: 'tex courier',   canonical: 'total express'},
+  {match: 'redivix',       canonical: 'mma'},
   // Adicione mais conforme necessário:
   // {match: 'coleta flex',   canonical: 'mercado envios'},
-  // {match: 'shopee xpress', canonical: 'shopee xpress'},
 ];
 
 // Normaliza nome de transportadora pra casar entre tickets ("Mercado Envios") e pedidos
