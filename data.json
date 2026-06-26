@@ -10639,5 +10639,35 @@
       "pr": ""
     }
   ],
-  "ticketsRawUpdatedAt": "2026-06-18T18:00:00-03:00"
+  "ticketsRawUpdatedAt": "2026-06-18T18:00:00-03:00",
+  "ordersByCarrier": {
+    "2026-06": {
+      "TRILOG EXPRESS LTDA": 3,
+      "Mercado Envios Places": 12,
+      "TEX COURIER S.A": 2,
+      "BRASIL WEB TRANSPORTES E LOGISTICA S A": 1,
+      "ALFA TRANSPORTES LTDA": 1,
+      "Redivix Transportes Ltda. (REV)": 1
+    }
+  },
+  "ordersByCarrierUpdatedAt": "2026-06-26T02:25:50.594850",
+  "ordersByCarrierMeta": {
+    "source": "Kondado spreadsheet (tinyerp_pedidos_detalhes)",
+    "note": "Dataset truncado pelo MCP do Drive (~2.4% das linhas visiveis). Apenas 35 linhas brutas processadas; 20 pedidos unicos apos dedup por ecommerce_numeropedidoecommerce. Apenas mes 2026-06 representado.",
+    "rawRowsParsed": 35,
+    "uniqueOrdersAfterDedup": 20,
+    "statusesAccepted": [
+      "Aprovado",
+      "Enviado",
+      "Entregue",
+      "Pronta para Envio",
+      "Enviado e Entregue"
+    ],
+    "statusesActuallyKept": [
+      "Aprovado"
+    ],
+    "monthsAvailable": [
+      "2026-06"
+    ]
+  }
 }
