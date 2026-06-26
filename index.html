@@ -423,7 +423,7 @@
       <div class="tickets-card"><h3>Tipos de problema mais frequentes</h3><div class="ch">Coluna AJ · problema_do_produto</div><div class="cv tall"><canvas id="chProb"></canvas></div></div>
       <div class="tickets-card"><h3>SKUs com mais problemas</h3><div class="ch">Coluna AP · sem o conteúdo entre parênteses</div><div class="cv tall"><canvas id="chSku"></canvas></div></div>
       <div class="tickets-card"><h3>Tickets por Loja / Marketplace</h3><div class="ch">Coluna X</div><div class="cv"><canvas id="chLoja"></canvas></div></div>
-      <div class="tickets-card"><h3>Tickets por Transportadora</h3><div class="ch">Coluna AQ</div><div class="cv"><canvas id="chTransp"></canvas></div></div>
+      <div class="tickets-card"><h3>Tickets por Transportadora</h3><div class="ch">Quantidade · % no topo = tickets do mês ÷ pedidos da transportadora no mês anterior</div><div class="cv tall"><canvas id="chTransp"></canvas></div></div>
       <div class="tickets-card full"><h3>Top SKUs no filtro atual</h3><div class="ch">Quantidade, principal problema e produto associado</div>
         <table><thead><tr><th>SKU</th><th class="num">Qtd</th><th>Principal problema</th><th>Produto</th></tr></thead><tbody id="ticketsTbody"></tbody></table>
       </div>
@@ -548,8 +548,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '20';
-const APP_VERSION = '20.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '23';
+const APP_VERSION = '23.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 
@@ -1693,11 +1693,18 @@ async function ghPush(silent){
   // Tenta até 3 vezes — útil se houve conflito de sha entre múltiplos PCs salvando juntos
   for(let attempt = 1; attempt <= 3; attempt++){
     try{
-      // Pega sha mais recente — REQUER autenticação (sem fallback raw)
+      // Pega sha mais recente E o conteúdo atual — REQUER autenticação
       const cur = await ghGetFile(true);
       const sha = cur.sha;
-      // Encoda em base64 com UTF-8 correto (TextEncoder garante bytes corretos)
-      const jsonStr = JSON.stringify(state, null, 2);
+      // CRÍTICO: faz MERGE entre o estado local e o remoto antes de pushar.
+      // Sem isso, o push sobrescreve campos que outros writers (scheduled task,
+      // outros usuários) gravaram entre nosso último pull e este push.
+      const toPush = cur.content ? mergeWithRemote(cur.content) : state;
+      // Atualiza estado local com merged pra render consistente
+      state = toPush;
+      _origSave();
+      // Encoda em base64 com UTF-8 correto
+      const jsonStr = JSON.stringify(toPush, null, 2);
       const utf8Bytes = new TextEncoder().encode(jsonStr);
       let binary = '';
       utf8Bytes.forEach(b => binary += String.fromCharCode(b));
@@ -1779,26 +1786,63 @@ const RELOAD_INTERVAL_MS = 20 * 60 * 1000;
 const reloadAt = Date.now() + RELOAD_INTERVAL_MS;
 setTimeout(()=> location.reload(), RELOAD_INTERVAL_MS);
 
-// Merge inteligente: preserva entradas locais que têm timestamp MAIS NOVO que o remoto.
-// Crítico pra evitar que silentPull/init sobrescrevam um save recente do usuário.
+// Merge inteligente FIELD-A-FIELD entre uma entrada local e remota do mesmo canal/dia.
+// Crítico pra que nem o save manual sobrescreva tickets do scheduled task, nem vice-versa.
+function mergeChannelEntry(local, remote){
+  if(!local) return remote || {};
+  if(!remote) return local;
+  const lTs = new Date(local.ts || 0).getTime();
+  const rTs = new Date(remote.ts || 0).getTime();
+  const result = {};
+  // Reputação: prefere lado com valor preenchido. Empate de preenchimento → newer ts.
+  const lHasRep = !!local.reputacao;
+  const rHasRep = !!remote.reputacao;
+  if(lHasRep && rHasRep) result.reputacao = lTs >= rTs ? local.reputacao : remote.reputacao;
+  else if(lHasRep) result.reputacao = local.reputacao;
+  else if(rHasRep) result.reputacao = remote.reputacao;
+  else result.reputacao = '';
+  // Metrics: merge por chave, prefere não-nulo (ts-newer se ambos preenchidos)
+  const lMet = local.metrics || {};
+  const rMet = remote.metrics || {};
+  const allKeys = new Set([...Object.keys(lMet), ...Object.keys(rMet)]);
+  result.metrics = {};
+  allKeys.forEach(k => {
+    const lv = lMet[k], rv = rMet[k];
+    const lHas = lv !== null && lv !== undefined && lv !== '';
+    const rHas = rv !== null && rv !== undefined && rv !== '';
+    if(lHas && rHas) result.metrics[k] = lTs >= rTs ? lv : rv;
+    else if(lHas) result.metrics[k] = lv;
+    else if(rHas) result.metrics[k] = rv;
+    else result.metrics[k] = null;
+  });
+  // Campos automáticos (scheduled task): prefere remoto não-nulo, fallback pra local
+  const autoFields = ['tickets', 'sacForaPrazo', 'casosCriticos', 'solicitacaoDevolucao'];
+  autoFields.forEach(f => {
+    if(remote[f] !== undefined && remote[f] !== null) result[f] = remote[f];
+    else if(local[f] !== undefined && local[f] !== null) result[f] = local[f];
+  });
+  // ts: o mais recente
+  result.ts = new Date(Math.max(lTs, rTs)).toISOString();
+  return result;
+}
+
+// Merge completo entre estado local e remoto: união de tudo, com campos preservados.
 function mergeWithRemote(remote){
   if(!remote || !remote.entries) return state;
   const merged = JSON.parse(JSON.stringify(remote));
+  // Para cada entrada local, merge field-a-field com a remota (cria se não existir)
   Object.entries(state.entries || {}).forEach(([date, channels]) => {
     Object.entries(channels).forEach(([ch, localData]) => {
-      const remoteData = merged.entries?.[date]?.[ch];
-      const localTs = new Date(localData?.ts || 0).getTime();
-      const remoteTs = new Date(remoteData?.ts || 0).getTime();
-      // Local é mais novo (ou só local tem) → preserva local
-      if(localTs > remoteTs){
-        if(!merged.entries[date]) merged.entries[date] = {};
-        merged.entries[date][ch] = localData;
-      }
+      if(!merged.entries[date]) merged.entries[date] = {};
+      const remoteData = merged.entries[date][ch];
+      merged.entries[date][ch] = mergeChannelEntry(localData, remoteData);
     });
   });
-  // Preserva outros campos top-level do remote (ticketsRaw, etc.) que local pode não ter
-  Object.keys(remote).forEach(k => {
-    if(k !== 'entries' && !(k in merged)) merged[k] = remote[k];
+  // Preserva outros campos top-level (ticketsRaw, ordersByCarrier, etc.) — pega de quem tem
+  const allTopLevel = new Set([...Object.keys(remote), ...Object.keys(state)]);
+  allTopLevel.forEach(k => {
+    if(k === 'entries') return;
+    if(!(k in merged)) merged[k] = remote[k] ?? state[k];
   });
   return merged;
 }
@@ -1927,6 +1971,61 @@ function tProdFor(rows, sku){
   const r = rows.find(r => r.sk===sku && r.pr);
   return r ? r.pr : '—';
 }
+// Bar chart com labels de % desenhados no topo de cada barra (plugin custom)
+function tMkBarWithPct(id, labels, data, pctLabels, color, mesRef, mesPrev, ordersPrev){
+  if(ticketsCharts[id]) ticketsCharts[id].destroy();
+  const ctx = document.getElementById(id);
+  if(!ctx) return;
+  ticketsCharts[id] = new Chart(ctx, {
+    type: 'bar',
+    data: {labels, datasets:[{data, backgroundColor: color || ticketsColors.primary, borderRadius:5, maxBarThickness:42}]},
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      layout: {padding: {top: 22}},
+      plugins: {
+        legend: {display: false},
+        tooltip: {
+          backgroundColor: '#1a2233',
+          callbacks: {
+            label: function(ctx){
+              const label = ctx.label;
+              const tickets = ctx.parsed.y;
+              const orders = ordersPrev[label] || 0;
+              if(!orders) return ` ${tickets} tickets (sem dados de pedidos em ${tMLabel(mesPrev)})`;
+              const pct = ((tickets / orders) * 100).toFixed(2);
+              return ` ${pct}% — ${tickets} tickets ${tMLabel(mesRef)} ÷ ${orders} pedidos ${tMLabel(mesPrev)}`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {ticks:{color:'#6b7280', font:{size:10}, maxRotation:45, minRotation:30}, grid:{display:false}},
+        y: {ticks:{color:'#6b7280', font:{size:11}}, grid:{color:'#e3e7ee'}, beginAtZero: true}
+      }
+    },
+    plugins: [{
+      id: 'pctTopLabels',
+      afterDatasetsDraw(chart){
+        const {ctx} = chart;
+        const meta = chart.getDatasetMeta(0);
+        ctx.save();
+        ctx.font = 'bold 11px sans-serif';
+        ctx.textAlign = 'center';
+        meta.data.forEach((bar, i) => {
+          const pct = pctLabels[i];
+          if(!pct) return;
+          // Cor: vermelho se > 5%, laranja entre 2-5%, verde abaixo
+          const val = parseFloat(pct);
+          ctx.fillStyle = val > 5 ? '#b91c1c' : val > 2 ? '#b45309' : '#047857';
+          ctx.fillText(pct, bar.x, bar.y - 6);
+        });
+        ctx.restore();
+      }
+    }]
+  });
+}
+
 function tMkBar(id, labels, data, horizontal, color){
   if(ticketsCharts[id]) ticketsCharts[id].destroy();
   const ctx = document.getElementById(id);
@@ -1960,6 +2059,13 @@ function tMkDonut(id, labels, data){
     }
   });
 }
+// Calcula o mês anterior em formato YYYY-MM
+function tPrevMonth(ym){
+  const [y, m] = ym.split('-').map(Number);
+  const d = new Date(y, m - 2, 1);
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0');
+}
+
 function ticketsRender(){
   const data = ticketsRows();
   const subtitle = document.getElementById('tickets-subtitle');
@@ -1976,7 +2082,16 @@ function ticketsRender(){
   const fLoja = document.getElementById('fLoja');
   const fTransp = document.getElementById('fTransp');
   if(!fMes || !fLoja || !fTransp) return;
-  const curMes = fMes.value, curLoja = fLoja.value, curTransp = fTransp.value;
+  // Lista de meses disponíveis (descendente)
+  const meses = tUniq(data.map(r => r.ym)).sort().reverse();
+  // Mês vigente (YYYY-MM)
+  const mesVigente = todayKey().slice(0, 7);
+  // Default ao abrir: mês vigente. Se não tiver dados, mês mais recente disponível.
+  const mesDefault = meses.includes(mesVigente) ? mesVigente : (meses[0] || '__all');
+  // Se filtro nunca foi tocado, usa default. Senão respeita escolha do usuário.
+  const curMes = fMes.dataset.initialized ? (fMes.value || '__all') : mesDefault;
+  fMes.dataset.initialized = '1';
+  const curLoja = fLoja.value, curTransp = fTransp.value;
   const fillSel = (sel, opts, allLabel, currentValue) => {
     sel.innerHTML = `<option value="__all">${allLabel}</option>` + opts.map(o => {
       const label = sel.id === 'fMes' ? tMLabel(o) : o;
@@ -1984,7 +2099,6 @@ function ticketsRender(){
     }).join('');
     sel.value = opts.includes(currentValue) || currentValue === '__all' ? (currentValue || '__all') : '__all';
   };
-  const meses = tUniq(data.map(r => r.ym)).sort().reverse();
   fillSel(fMes, meses, 'Todos os meses', curMes);
   fillSel(fLoja, tUniq(data.map(r => r.lj)), 'Todas as lojas', curLoja);
   fillSel(fTransp, tUniq(data.map(r => r.tr)), 'Todas as transportadoras', curTransp);
@@ -2018,7 +2132,17 @@ function ticketsRender(){
   const l = tCount(rows, 'lj').slice(0, 10);
   tMkDonut('chLoja', l.map(x=>x[0]), l.map(x=>x[1]));
   const t = tCount(rows, 'tr').slice(0, 12);
-  tMkBar('chTransp', t.map(x=>x[0]), t.map(x=>x[1]), false, ticketsColors.purple);
+  // Calcula % por transportadora: tickets do mês de filtro ÷ pedidos da transportadora no mês anterior
+  const mesRefPct = mes && mes !== '__all' ? mes : todayKey().slice(0, 7);
+  const mesPrevPct = tPrevMonth(mesRefPct);
+  const ordersPrev = (state.ordersByCarrier || {})[mesPrevPct] || {};
+  const pctLabels = t.map(([transp]) => {
+    const orders = ordersPrev[transp];
+    if(!orders || orders <= 0) return '';
+    const ticketsCount = t.find(x => x[0] === transp)[1];
+    return ((ticketsCount / orders) * 100).toFixed(2) + '%';
+  });
+  tMkBarWithPct('chTransp', t.map(x=>x[0]), t.map(x=>x[1]), pctLabels, ticketsColors.purple, mesRefPct, mesPrevPct, ordersPrev);
   // Tabela top SKUs
   const tb = document.getElementById('ticketsTbody');
   if(tb){
