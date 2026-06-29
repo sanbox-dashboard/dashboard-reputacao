@@ -525,6 +525,11 @@
           </table>
         </div>
       </div>
+      <div class="tickets-card full" id="comissao-historico-resumido-card">
+        <h3>Histórico Resumido</h3>
+        <div class="ch">Visão compacta com bolinhas de status — dia a dia, por canal. Verde = dentro da meta · Amarelo = entre alerta e meta · Vermelho = fora da meta.</div>
+        <div id="comissao-historico-resumido-container" style="margin-top:10px"></div>
+      </div>
     </div>
   </section>
 </div>
@@ -758,8 +763,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '30';
-const APP_VERSION = '30.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '32';
+const APP_VERSION = '32.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -1291,122 +1296,190 @@ function parseOcr(channelKey, text){
   if(channelKey === 'mercadolivre'){
     const repMatch = norm.match(/Mercado\s*L[íi]der\s+(Platinum|Gold|Silver|Bronze|Standard)/i);
     if(repMatch){ result.reputacao = 'MercadoLíder ' + repMatch[1]; }
-    const totalMatch = norm.match(/(\d{1,3}(?:\.\d{3})+|\d{4,})\s+\d{1,3}(?:\.\d{3})+\s+\d{1,3}(?:\.\d{3})+\s+R[S$]/i);
-    const total = totalMatch ? parseInt(totalMatch[1].replace(/\./g,'')) : null;
-    const counts = [...norm.matchAll(/S[ãa]o\s+(\d+)\s+das\s+suas\s+vendas/gi)].map(m=> parseInt(m[1]));
-    const keys = ['reclamacoes', 'mediacoes', 'canceladas', 'enviosIncorretos'];
-    if(total && counts.length){
-      keys.forEach((k, i)=>{
-        if(counts[i] !== undefined){
-          result.metrics[k] = +(counts[i] / total * 100).toFixed(2);
-        }
-      });
+
+    // ESTRATÉGIA 1: % direto da label (mais confiável)
+    // Cada métrica tem o padrão "Label ... X,XX% ... São Y das suas vendas"
+    const tryLabel = (regex) => {
+      const m = norm.match(regex);
+      if(!m) return null;
+      const v = parseFloat(m[1].replace(',','.'));
+      return (v >= 0 && v <= 100) ? v : null;
+    };
+    const rec = tryLabel(/reclama[çc][õo]es?[\s\S]{0,80}?(\d+[,.]\d{1,2})\s*%/i);
+    const med = tryLabel(/media[çc][õo]es?[\s\S]{0,80}?(\d+[,.]\d{1,2})\s*%/i);
+    const can = tryLabel(/cancelad[ao]s?\s+por[\s\S]{0,80}?(\d+[,.]\d{1,2})\s*%/i)
+            || tryLabel(/canceladas[\s\S]{0,80}?(\d+[,.]\d{1,2})\s*%/i);
+    const env = tryLabel(/env[ií]os?\s+incorretos?[\s\S]{0,80}?(\d+[,.]\d{1,2})\s*%/i);
+    if(rec !== null) result.metrics.reclamacoes = rec;
+    if(med !== null) result.metrics.mediacoes = med;
+    if(can !== null) result.metrics.canceladas = can;
+    if(env !== null) result.metrics.enviosIncorretos = env;
+
+    // ESTRATÉGIA 2 (fallback se 1 falhar): total + counts (cálculo por divisão)
+    const faltam = ['reclamacoes','mediacoes','canceladas','enviosIncorretos']
+      .filter(k => result.metrics[k] === undefined);
+    if(faltam.length > 0){
+      // Total vendas: número 4+ dígitos OU formato 1.234 — relax do regex antigo (R$ não é obrigatório)
+      const totMatch = norm.match(/(\d{1,3}\.\d{3}|\d{4,})\s+Vendas?/i)
+                    || norm.match(/(\d{1,3}\.\d{3}|\d{4,})\s+\d{1,3}\.\d{3}\s+\d{1,3}\.\d{3}/);
+      const totEnvMatch = norm.match(/(\d{1,3}\.\d{3}|\d{4,})\s+Com\s+Envios/i);
+      const total = totMatch ? parseInt(totMatch[1].replace(/\./g,'')) : null;
+      const totEnvios = totEnvMatch ? parseInt(totEnvMatch[1].replace(/\./g,'')) : null;
+      const counts = [...norm.matchAll(/S[ãa]o\s+(\d+)\s+das?\s+suas?\s+vendas/gi)].map(m=> parseInt(m[1]));
+      const keys = ['reclamacoes', 'mediacoes', 'canceladas', 'enviosIncorretos'];
+      if(total && counts.length){
+        keys.forEach((k, i)=>{
+          if(result.metrics[k] !== undefined) return; // já tem
+          if(counts[i] === undefined) return;
+          // Envios incorretos usa "Com Envios" como base (não Vendas)
+          const base = (k === 'enviosIncorretos' && totEnvios) ? totEnvios : total;
+          result.metrics[k] = +(counts[i] / base * 100).toFixed(2);
+        });
+      }
     }
     return result;
   }
 
   // ===== Amazon =====
   if(channelKey === 'amazon'){
-    const classMatch = norm.match(/classifica[çc][ãa]o\s+do\s+estado\s+da\s+conta\s+(\d{1,4})/i);
+    const classMatch = norm.match(/classifica[çc][ãa]o\s+do\s+estado\s+da\s+conta\s+(\d{1,4})/i)
+                    || norm.match(/estado\s+da\s+conta[\s\S]{0,100}?(\d{2,4})/i);
     const idealMatch = /Ideal/i.test(norm);
     if(classMatch){ result.reputacao = classMatch[1] + (idealMatch ? ' — Ideal' : ''); }
-    const probMatch = norm.match(/[íi]ndice\s+de\s+pedidos\s+com(?:\s+problemas?)?[\s\S]{0,30}?(\d+(?:[,.]\d+)?)\s*%/i);
+    // Pedidos com problema — relaxa busca
+    const probMatch = norm.match(/[íi]ndice\s+de\s+pedidos\s+com\s+problemas?[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i)
+                   || norm.match(/pedidos?\s+com\s+problemas?[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i);
     if(probMatch){ result.metrics.pedidosProblema = parseFloat(probMatch[1].replace(',','.')); }
-    const cancMatch = norm.match(/cancelamentos?\s+anteriores\s+ao(?:\s+envio)?[\s\S]{0,30}?(\d+(?:[,.]\d+)?)\s*%/i);
+    // Cancelamentos anteriores ao envio
+    const cancMatch = norm.match(/taxa\s+de\s+cancelamentos?[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i)
+                   || norm.match(/cancelamentos?\s+anteriores?[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i);
     if(cancMatch){ result.metrics.cancelamentoEnvio = parseFloat(cancMatch[1].replace(',','.')); }
-    const rastMatch = norm.match(/rastreamento[\s\S]{0,30}?(\d+(?:[,.]\d+)?)\s*%/i);
+    // Envio com rastreamento válido — pega %
+    const rastMatch = norm.match(/[íi]ndice\s+de\s+envios?\s+com\s+rastreamento[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i)
+                   || norm.match(/rastreamento\s+v[áa]lido[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i);
     if(rastMatch){ result.metrics.rastreamento = parseFloat(rastMatch[1].replace(',','.')); }
     return result;
   }
 
   // ===== Casas Bahia =====
   if(channelKey === 'casasbahia'){
-    // Reputação: prefere número (1-5) que vem antes de "+X.XX vs. mês anterior"
-    // — esse é o padrão visual que sempre acompanha a nota grande da loja.
-    // Aceita inteiro (ex: "4") OU decimal (ex: "2,6").
-    const repVs = norm.match(/(?<!\d)(\d(?:[,.]\d)?)\s+[+\-↑↓\^v]?\s*\d+[,.]?\d*\s+vs/i);
-    if(repVs){
-      const v = parseFloat(repVs[1].replace(',','.'));
-      if(v >= 1 && v <= 5){
-        result.reputacao = repVs[1].replace('.', ',');
+    // === REPUTAÇÃO === (número grande 1-5 do gauge "Sanbox Eletro / Top Lojista / X")
+    // Estratégia A: número antes de "vs. mês anterior" (mais comum)
+    let candidatos = [];
+    const repVs = [...norm.matchAll(/(?<!\d)(\d(?:[,.]\d)?)\s+[+\-↑↓\^v]?\s*\d+[,.]?\d*\s+vs/gi)];
+    for(const m of repVs){
+      const v = parseFloat(m[1].replace(',','.'));
+      if(v >= 1 && v <= 5) candidatos.push(v);
+    }
+    // Estratégia B: primeiro INTEIRO 1-5 logo após "Top Lojista" ou após uma seta ↑↓
+    const topMatch = norm.match(/top\s+lojista[\s\S]{0,100}?(?<!\d)(\d)(?!\d)/i);
+    if(topMatch){
+      const v = parseInt(topMatch[1]);
+      if(v >= 1 && v <= 5) candidatos.unshift(v); // prioridade
+    }
+    const setaMatch = norm.match(/[↑↓\^v]\s*(\d)(?!\d)/i);
+    if(setaMatch){
+      const v = parseInt(setaMatch[1]);
+      if(v >= 1 && v <= 5) candidatos.unshift(v);
+    }
+    if(candidatos.length){
+      // Pega o MAIS FREQUENTE (mais provável de ser o correto)
+      const freq = {};
+      candidatos.forEach(v => freq[v] = (freq[v]||0) + 1);
+      const best = Object.entries(freq).sort((a,b) => b[1]-a[1])[0][0];
+      result.reputacao = best.includes('.') ? best.replace('.', ',') : best;
+    }
+
+    // === RECLAMAÇÃO === — busca DENTRO da seção dela
+    // A seção Reclamação aparece como "Reclamação Abaixo de 2% [bar] 7.3% X 2 -X.XX vs"
+    // Pegar o PRIMEIRO % dentro dessa janela (até "Cancelamento" ou "Expedição")
+    const recAreaMatch = norm.match(/reclama[çc][ãa]o[\s\S]{0,500}?(?=cancelamento|expedi[çc][ãa]o|$)/i);
+    if(recAreaMatch){
+      // Procura % no formato X.X ou X,X — ignora "vs" e "alerta" %
+      const recArea = recAreaMatch[0];
+      // Tira " vs. mês anterior" porque tem números que confundem
+      const limpo = recArea.replace(/[+\-]?\d+[,.]\d+\s*vs[\s\S]{0,30}/gi, ' ');
+      const m = limpo.match(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/);
+      if(m){
+        const v = parseFloat(m[1].replace(',','.'));
+        if(v >= 0 && v <= 100) result.metrics.reclamacao = v;
       }
     }
-    // Fallback se não achou via "vs": primeiro decimal entre 1.0 e 5.0
-    if(!result.reputacao){
-      const allDec = [...norm.matchAll(/(?<!\d)(\d)[,.](\d)(?!\d)/g)];
-      for(const m of allDec){
-        const v = parseFloat(m[1] + '.' + m[2]);
-        if(v >= 1.0 && v <= 5.0){
-          result.reputacao = m[1] + ',' + m[2];
-          break;
-        }
+
+    // === CANCELAMENTO === — busca DENTRO da seção dela (não invade Reclamação nem Expedição)
+    const cancAreaMatch = norm.match(/cancelamento[\s\S]{0,500}?(?=reclama|expedi|n[íi]vel|$)/i);
+    if(cancAreaMatch){
+      const limpo = cancAreaMatch[0].replace(/[+\-]?\d+[,.]\d+\s*vs[\s\S]{0,30}/gi, ' ');
+      const m = limpo.match(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/);
+      if(m){
+        const v = parseFloat(m[1].replace(',','.'));
+        if(v >= 0 && v <= 100) result.metrics.cancelados = v;
       }
     }
-    // Reclamação: busca SÓ na seção entre "Reclamação" e "Cancelamento"
-    // (evita pegar 3.5% do Cancelamento por engano)
-    const recArea = norm.match(/reclama[çc][ãa]o[\s\S]{0,400}?(?=cancelamento|$)/i);
-    if(recArea){
-      const m = recArea[0].match(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/);
-      if(m) result.metrics.reclamacao = parseFloat(m[1].replace(',','.'));
-    }
-    // Cancelamento: busca a partir da palavra "Cancelamento"
-    const cancArea = norm.match(/cancelamento[\s\S]{0,400}/i);
-    if(cancArea){
-      const m = cancArea[0].match(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/);
-      if(m) result.metrics.cancelados = parseFloat(m[1].replace(',','.'));
-    }
+
     return result;
   }
 
   // ===== Magalu =====
   if(channelKey === 'magalu'){
-    // Reputação: X,X com vírgula (formato do gauge), evita falsos positivos
+    // === REPUTAÇÃO === — número grande "X,X" do gauge ("3,4 / De 1 a 5")
+    // Pegar X,X mais frequente entre os valores 1-5 (típico do print é só 1 valor)
+    const candidatesRep = [];
     const repMatches = [...norm.matchAll(/(?<!\d)(\d),(\d)(?!\d)/g)];
     for(const m of repMatches){
       const v = parseFloat(m[1] + '.' + m[2]);
-      if(v >= 1.0 && v <= 5.0){
-        result.reputacao = m[1] + ',' + m[2];
-        break;
-      }
+      if(v >= 1.0 && v <= 5.0) candidatesRep.push(m[1] + ',' + m[2]);
+    }
+    // Preferir o que vier após "De 1 a 5" ou após o título da loja
+    const repAfterRange = norm.match(/(?:de\s+1\s+a\s+5|sanbox|loja)[\s\S]{0,100}?(?<!\d)(\d,\d)(?!\d)/i);
+    const repAfterRange2 = norm.match(/(?<!\d)(\d,\d)(?!\d)[\s\S]{0,30}?de\s+1\s+a\s+5/i);
+    if(repAfterRange){
+      const v = parseFloat(repAfterRange[1].replace(',','.'));
+      if(v >= 1 && v <= 5) result.reputacao = repAfterRange[1];
+    } else if(repAfterRange2){
+      const v = parseFloat(repAfterRange2[1].replace(',','.'));
+      if(v >= 1 && v <= 5) result.reputacao = repAfterRange2[1];
+    } else if(candidatesRep.length){
+      // Pega o mais frequente
+      const freq = {};
+      candidatesRep.forEach(v => freq[v] = (freq[v]||0) + 1);
+      result.reputacao = Object.entries(freq).sort((a,b) => b[1]-a[1])[0][0];
     }
 
-    // Métricas: tenta capturar valores próximos aos rótulos. Os valores da Magalu
-    // são SEMPRE exatamente um threshold da régua (ex: 89%, 79,99%, 5,01%).
-    // Coleta TODAS as porcentagens extraídas do texto multi-passe
-    const allPcts = [...norm.matchAll(/(?<!\d)(\d{1,3}(?:[,.]\d{1,2})?)\s*%/g)]
-      .map(m => parseFloat(m[1].replace(',','.')))
-      .filter(v => !isNaN(v) && v >= 0 && v <= 100);
-
-    // Cancelamento: valor baixo (0-15%). Procura próximo da palavra "cancelamento"
-    // mas filtra "100%" e valores fora de range típico.
-    const cancArea = norm.match(/cancelamento[\s\S]{0,400}/i);
-    if(cancArea){
-      const cancPcts = [...cancArea[0].matchAll(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/g)]
+    // === CANCELAMENTO === — valor baixo (0-15%)
+    // O label é "Cancelamento" e o valor é 5,01% (slider) ou 5,1% (indicadores)
+    // Buscar % no formato X,XX dentro da janela do label, ignorando "Meta abaixo de X%"
+    const cancAreaMatch = norm.match(/cancelamento[\s\S]{0,400}?(?=avalia|agil|n[íi]vel|reclama|expedi|$)/i)
+                       || norm.match(/cancelamento[\s\S]{0,400}/i);
+    if(cancAreaMatch){
+      // Remove "Meta abaixo de 2,0%" e similares (esses são thresholds, não valores)
+      const limpo = cancAreaMatch[0].replace(/meta\s+(abaixo|acima)\s+de\s+\d+[,.]\d+\s*%/gi, ' ');
+      const cancPcts = [...limpo.matchAll(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/g)]
         .map(m => parseFloat(m[1].replace(',','.')))
         .filter(v => v >= 0.5 && v <= 15);
       if(cancPcts.length) result.metrics.cancelamento = cancPcts[0];
     }
 
-    // Agilidade: valor alto (50-100%). Busca % com decimal próximo de "agilidade".
-    const agArea = norm.match(/agi[lb]idade[\s\S]{0,400}/i);
-    if(agArea){
-      const agPcts = [...agArea[0].matchAll(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/g)]
+    // === AGILIDADE === — valor alto (60-100%)
+    // O label é "Agilidade no Atendimento" ou "Agilidade do Atendimento"
+    // O valor que queremos é o REAL (ex: 94,9%), não o threshold "Acima de 90%"
+    const agAreaMatch = norm.match(/agi[lb]idade[\s\S]{0,400}?(?=cancelamento|n[íi]vel|reclama|expedi|avalia|$)/i)
+                     || norm.match(/agi[lb]idade[\s\S]{0,400}/i);
+    if(agAreaMatch){
+      const limpo = agAreaMatch[0].replace(/meta\s+(abaixo|acima)\s+de\s+\d+[,.]?\d*\s*%/gi, ' ');
+      const agPcts = [...limpo.matchAll(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/g)]
         .map(m => parseFloat(m[1].replace(',','.')))
-        .filter(v => v >= 50 && v <= 100);
-      if(agPcts.length) result.metrics.agilidade = agPcts[0];
+        .filter(v => v >= 60 && v <= 100);
+      // Prefere valor que NÃO é threshold padrão (95, 90, 80)
+      const naoThreshold = agPcts.filter(v => Math.round(v) !== 95 && Math.round(v) !== 90 && Math.round(v) !== 80);
+      if(naoThreshold.length) result.metrics.agilidade = naoThreshold[0];
+      else if(agPcts.length) result.metrics.agilidade = agPcts[0];
     }
 
-    // Nível de Serviço (mapeado pra "avaliacao" no nosso schema): valor alto (80-100)
-    // Pode aparecer sem decimal (ex: "89%")
-    const nsArea = norm.match(/n[íi]vel[\s\S]{0,400}/i);
-    if(nsArea){
-      const nsPcts = [...nsArea[0].matchAll(/(?<!\d)(\d{2,3}(?:[,.]\d{1,2})?)\s*%/g)]
-        .map(m => parseFloat(m[1].replace(',','.')))
-        .filter(v => v >= 70 && v <= 100);
-      // Filtra threshold conhecidos (100%, 95%, 92%) — pega o primeiro que NÃO é boundary padrão
-      const filtered = nsPcts.filter(v => v !== 100 && v !== 95 && v !== 92);
-      if(filtered.length) result.metrics.avaliacao = filtered[0];
-      else if(nsPcts.length) result.metrics.avaliacao = nsPcts[0];
+    // === AVALIAÇÃO DA LOJA === — é IGUAL à reputação (3,4 / 5)
+    // Não pega o Nível de Serviço (% alto) — pega a nota 1-5
+    if(result.reputacao){
+      result.metrics.avaliacao = parseFloat(result.reputacao.replace(',','.'));
     }
 
     return result;
@@ -1416,17 +1489,47 @@ function parseOcr(channelKey, text){
   if(channelKey === 'shopee'){
     const topMatch = norm.match(/Top\s+Lojista/i);
     if(topMatch){ result.reputacao = 'Top Lojista'; }
-    const tResp = norm.match(/taxa\s+de\s+resposta[\s\S]{0,80}?(\d+(?:[,.]\d+)?)\s*%/i);
-    if(tResp){ result.metrics.taxaResposta = parseFloat(tResp[1].replace(',','.')); }
-    const aval = norm.match(/avalia[çc][ãa]o\s+da\s+loja[\s\S]{0,40}?(\d+[,.]\d+)/i);
-    if(aval){
-      result.metrics.notaLoja = parseFloat(aval[1].replace(',','.'));
-      if(!result.reputacao) result.reputacao = aval[1].replace('.', ',');
+
+    // === TAXA DE RESPOSTA === — valor alto (50-100%)
+    // Filtra meta ≥60% que pode aparecer junto. Pega o valor REAL (ex: 97,51%)
+    const tRespArea = norm.match(/taxa\s+de\s+resposta[\s\S]{0,300}/i);
+    if(tRespArea){
+      const limpo = tRespArea[0].replace(/[≥<>]?\s*\d{1,2}\s*%/g, (mm) => {
+        // Remove thresholds simples (60%, ≥60% etc.) mas mantém X.XX%
+        return mm.includes('.') || mm.includes(',') ? mm : ' ';
+      });
+      const pcts = [...limpo.matchAll(/(?<!\d)(\d{1,3}[,.]\d{1,2})\s*%/g)]
+        .map(m => parseFloat(m[1].replace(',','.')))
+        .filter(v => v >= 50 && v <= 100);
+      if(pcts.length) result.metrics.taxaResposta = pcts[0];
     }
-    const boa = norm.match(/boa\s+taxa[\s\S]{0,80}?(\d+(?:[,.]\d+)?)\s*%/i);
-    if(boa){ result.metrics.boaAvaliacao = parseFloat(boa[1].replace(',','.')); }
-    const ruins = norm.match(/n[ãa]o\s+respond?id[ao]s[\s\S]{0,40}?(\d+(?:[,.]\d+)?)/i);
-    if(ruins){ result.metrics.ruinsNaoRespondidas = parseFloat(ruins[1].replace(',','.')); }
+
+    // === AVALIAÇÃO DA LOJA / NOTA === — 1-5 com decimal (ex: 4,86)
+    const aval = norm.match(/avalia[çc][ãa]o\s+da\s+loja[\s\S]{0,80}?(\d[,.]\d{1,2})/i);
+    if(aval){
+      const v = parseFloat(aval[1].replace(',','.'));
+      if(v >= 1 && v <= 5){
+        result.metrics.notaLoja = v;
+        if(!result.reputacao || result.reputacao === 'Top Lojista'){
+          // Mantém Top Lojista se foi detectado, mas adiciona a nota também
+          if(!result.reputacao) result.reputacao = aval[1].replace('.', ',');
+        }
+      }
+    }
+    // === BOA TAXA DE AVALIAÇÃO === — % alto
+    const boaArea = norm.match(/boa\s+taxa[\s\S]{0,150}/i);
+    if(boaArea){
+      const pcts = [...boaArea[0].matchAll(/(?<!\d)(\d{1,3}[,.]\d{1,2})\s*%/g)]
+        .map(m => parseFloat(m[1].replace(',','.')))
+        .filter(v => v >= 50 && v <= 100);
+      if(pcts.length) result.metrics.boaAvaliacao = pcts[0];
+    }
+    // === AVALIAÇÕES RUINS NÃO RESPONDIDAS === — inteiro pequeno
+    const ruins = norm.match(/n[ãa]o\s+respond?id[ao]s[\s\S]{0,60}?(\d+)/i);
+    if(ruins){
+      const v = parseInt(ruins[1]);
+      if(v >= 0 && v <= 100) result.metrics.ruinsNaoRespondidas = v;
+    }
     return result;
   }
 
@@ -1954,8 +2057,10 @@ async function ghPush(silent){
       c.lastSync = new Date().toISOString();
       ghSetConfig(c);
       lastPushOk = new Date();
+      lastPushError = null;
       ghStatus('Configurado · última sync ' + new Date(c.lastSync).toLocaleString('pt-BR'));
       if(!silent) ghLog('✓ Enviado ao GitHub.', 'ok');
+      updatePushAlertBanner();
       return; // sucesso
     }catch(e){
       if(attempt < 3){
@@ -1963,13 +2068,37 @@ async function ghPush(silent){
         await new Promise(r => setTimeout(r, attempt * 500));
         continue;
       }
-      // Última tentativa falhou
-      if(!silent) ghLog('⚠ Erro ao salvar no GitHub: ' + e.message, 'err');
-      else console.error('autoSync falhou após 3 tentativas:', e);
+      // Última tentativa falhou — TOAST + BANNER VISÍVEL
+      lastPushError = {when: new Date(), msg: e.message};
+      const errMsg = '⚠ FALHOU ao salvar no GitHub: ' + e.message.slice(0,80);
+      if(!silent) ghLog(errMsg, 'err');
+      showToast(errMsg, 'err');
+      console.error('autoSync falhou após 3 tentativas:', e);
+      updatePushAlertBanner();
       throw e;
     }
   }
 }
+let lastPushError = null;
+function updatePushAlertBanner(){
+  let banner = document.getElementById('push-alert-banner');
+  if(!banner){
+    banner = document.createElement('div');
+    banner.id = 'push-alert-banner';
+    banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:9999;padding:12px 20px;background:#fee2e2;border-bottom:3px solid #ef4444;color:#991b1b;font-weight:600;text-align:center;font-size:14px;display:none;box-shadow:0 4px 12px rgba(0,0,0,0.15)';
+    document.body.appendChild(banner);
+  }
+  if(lastPushError){
+    const min = Math.floor((Date.now() - lastPushError.when.getTime()) / 60000);
+    banner.innerHTML = `🚨 <strong>SYNC COM GITHUB FALHANDO</strong> · ${lastPushError.msg.slice(0,120)} · ${min}min atrás · <button onclick="window.forceFullResync && window.forceFullResync()" style="background:#ef4444;color:#fff;border:none;padding:4px 10px;border-radius:6px;cursor:pointer;font-weight:700;margin-left:8px">Tentar de novo</button> <button onclick="document.getElementById('push-alert-banner').style.display='none'" style="background:none;border:1px solid #991b1b;color:#991b1b;padding:4px 10px;border-radius:6px;cursor:pointer;margin-left:6px">Fechar</button>`;
+    banner.style.display = 'block';
+    document.body.style.paddingTop = '50px';
+  } else {
+    banner.style.display = 'none';
+    document.body.style.paddingTop = '';
+  }
+}
+setInterval(updatePushAlertBanner, 30000);
 
 // Push IMEDIATO ao salvar — não usa debounce, garante que o GitHub está atualizado
 // antes do usuário ter chance de fechar a aba ou outra pessoa carregar
@@ -2752,6 +2881,45 @@ function renderComissao(){
   document.getElementById('comissao-subtitle').textContent = `${tMLabel(ym)} — recalculado em tempo real conforme dados do dashboard`;
   // Histórico mensal
   renderComissaoHistorico(cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed, ym);
+  // Histórico resumido com bolinhas (mesmo HTML do tab principal)
+  renderHistoricoResumido();
+}
+
+function renderHistoricoResumido(){
+  const container = document.getElementById('comissao-historico-resumido-container');
+  if(!container) return;
+  const dates = Object.keys(state.entries || {}).sort((a,b)=> b.localeCompare(a)).slice(0, 30);
+  if(!dates.length){
+    container.innerHTML = '<div class="empty-state" style="padding:20px;text-align:center;color:var(--muted)">Nenhum registro ainda.</div>';
+    return;
+  }
+  let html = '<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:13px"><thead><tr style="background:#f4f6fb;border-bottom:2px solid var(--border)"><th style="text-align:left;padding:8px">DATA</th>';
+  Object.values(channels).forEach(ch=> html += `<th style="text-align:left;padding:8px;text-transform:uppercase;font-size:11px">${ch.name}</th>`);
+  html += '</tr></thead><tbody>';
+  dates.forEach(d=>{
+    const e = state.entries[d] || {};
+    html += `<tr style="border-bottom:1px solid var(--border)"><td style="padding:8px;font-weight:600">${ptDate(d)}</td>`;
+    Object.entries(channels).forEach(([key,ch])=>{
+      const data = e[key];
+      if(!data){
+        // mostra bolinhas cinzas (sem dado)
+        const greyDots = Object.keys(ch.metrics).map(() => '<span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#d1d5db;margin-right:3px"></span>').join('');
+        html += `<td style="padding:8px">${greyDots}</td>`;
+        return;
+      }
+      const summary = Object.entries(ch.metrics).map(([mKey,m])=>{
+        const v = data.metrics?.[mKey];
+        const st = getStatus(v, m);
+        const color = st==='green' ? 'var(--green)' : st==='yellow' ? 'var(--yellow)' : st==='red' ? 'var(--red)' : '#d1d5db';
+        return `<span title="${m.label}: ${fmtNumber(v,m.unit)}" style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${color};margin-right:3px"></span>`;
+      }).join('');
+      const rep = data.reputacao ? `<small style="color:var(--muted);margin-left:8px">${data.reputacao}</small>` : '';
+      html += `<td style="padding:8px;vertical-align:middle">${summary}${rep}</td>`;
+    });
+    html += '</tr>';
+  });
+  html += '</tbody></table></div>';
+  container.innerHTML = html;
 }
 
 function renderComissaoHistorico(cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed, mesAtual){
