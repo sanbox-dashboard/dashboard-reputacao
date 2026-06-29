@@ -525,10 +525,77 @@
           </table>
         </div>
       </div>
-      <div class="tickets-card full" id="comissao-historico-resumido-card">
-        <h3>Histórico Resumido</h3>
-        <div class="ch">Visão compacta com bolinhas de status — dia a dia, por canal. Verde = dentro da meta · Amarelo = entre alerta e meta · Vermelho = fora da meta.</div>
-        <div id="comissao-historico-resumido-container" style="margin-top:10px"></div>
+      <div class="tickets-card full" id="comissao-regras-card">
+        <h3>Regras de Comissão — Resumo</h3>
+        <div class="ch">Tabela explicativa dos parâmetros aplicados a cada função. Apuração no fechamento do mês. Piso: R$ 0,00.</div>
+        <div style="overflow-x:auto;margin-top:12px">
+          <table style="width:100%;border-collapse:collapse;font-size:13px">
+            <thead>
+              <tr style="background:#1F4E8C;color:#fff">
+                <th style="text-align:left;padding:10px 12px;border:1px solid #1F4E8C">Indicador</th>
+                <th style="text-align:left;padding:10px 12px;border:1px solid #1F4E8C">Atendente</th>
+                <th style="text-align:left;padding:10px 12px;border:1px solid #1F4E8C">Logística</th>
+                <th style="text-align:left;padding:10px 12px;border:1px solid #1F4E8C">Coordenador</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:10px 12px;font-weight:700">Base</td>
+                <td style="padding:10px 12px;font-weight:600;color:#1F4E8C">R$ 500</td>
+                <td style="padding:10px 12px;font-weight:600;color:#1F4E8C">R$ 500</td>
+                <td style="padding:10px 12px;font-weight:600;color:#1F4E8C;font-style:italic">% da meta</td>
+              </tr>
+              <tr style="background:#f5f7fb;border-bottom:1px solid var(--border)">
+                <td style="padding:10px 12px;font-weight:600">Reputação amarela</td>
+                <td style="padding:10px 12px;color:#92400e">− R$ 100 (pior canal)</td>
+                <td style="padding:10px 12px;color:#9ca3af">—</td>
+                <td style="padding:10px 12px;color:#92400e">− R$ 100 por canal</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:10px 12px;font-weight:600">Reputação vermelha</td>
+                <td style="padding:10px 12px;color:#991b1b;font-weight:600">− R$ 300 (pior canal)</td>
+                <td style="padding:10px 12px;color:#9ca3af">—</td>
+                <td style="padding:10px 12px;color:#991b1b;font-weight:600">− R$ 200 por canal</td>
+              </tr>
+              <tr style="background:#f5f7fb;border-bottom:1px solid var(--border)">
+                <td style="padding:10px 12px;font-weight:600">Ticket financeiro em atraso</td>
+                <td style="padding:10px 12px;color:#991b1b;font-weight:600">− R$ 200</td>
+                <td style="padding:10px 12px;color:#9ca3af">—</td>
+                <td style="padding:10px 12px;color:#9ca3af">—</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:10px 12px;font-weight:600">SAC em atraso (+30d)</td>
+                <td style="padding:10px 12px;color:#991b1b;font-weight:600">− R$ 200</td>
+                <td style="padding:10px 12px;color:#9ca3af">—</td>
+                <td style="padding:10px 12px;color:#9ca3af">—</td>
+              </tr>
+              <tr style="background:#f5f7fb;border-bottom:1px solid var(--border)">
+                <td style="padding:10px 12px;font-weight:600">Devoluções 1-3</td>
+                <td style="padding:10px 12px;color:#9ca3af">—</td>
+                <td style="padding:10px 12px;color:#92400e">− R$ 50 por canal</td>
+                <td style="padding:10px 12px;color:#9ca3af">—</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
+                <td style="padding:10px 12px;font-weight:600">Devoluções 4+</td>
+                <td style="padding:10px 12px;color:#9ca3af">—</td>
+                <td style="padding:10px 12px;color:#991b1b;font-weight:600">− R$ 100 por canal</td>
+                <td style="padding:10px 12px;color:#9ca3af">—</td>
+              </tr>
+              <tr style="background:#f5f7fb">
+                <td style="padding:10px 12px;font-weight:600">Coletivo (qq canal vermelho)</td>
+                <td style="padding:10px 12px;color:#991b1b">− R$ 50</td>
+                <td style="padding:10px 12px;color:#991b1b">− R$ 50</td>
+                <td style="padding:10px 12px;color:#9ca3af">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:#f5f7fb;border-left:4px solid var(--primary);border-radius:4px;font-size:12px;color:var(--muted);line-height:1.6">
+          <strong style="color:var(--text)">Cortes default dos tickets</strong> (configurável no topo da aba):<br>
+          • Tickets financeiros: 1+ em atraso = perde R$ 200<br>
+          • SAC fora do prazo (+30d): 1+ em atraso = perde R$ 200<br><br>
+          <strong style="color:var(--text)">Apuração:</strong> na virada do mês com base na média mensal das métricas. Durante o mês o dashboard mostra a previsão em tempo real.
+        </div>
       </div>
     </div>
   </section>
@@ -763,8 +830,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '36';
-const APP_VERSION = '36.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '37';
+const APP_VERSION = '37.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -2900,8 +2967,6 @@ function renderComissao(){
   document.getElementById('comissao-subtitle').textContent = `${tMLabel(ym)} — recalculado em tempo real conforme dados do dashboard`;
   // Histórico mensal
   renderComissaoHistorico(cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed, ym);
-  // Histórico resumido com bolinhas (mesmo HTML do tab principal)
-  renderHistoricoResumido();
 }
 
 function renderHistoricoResumido(){
