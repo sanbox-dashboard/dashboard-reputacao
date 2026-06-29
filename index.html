@@ -763,8 +763,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '33';
-const APP_VERSION = '33.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '34';
+const APP_VERSION = '34.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -1293,35 +1293,27 @@ function parseOcr(channelKey, text){
   const norm = text.replace(/\s+/g,' ');
 
   // ===== Mercado Livre =====
+  // Layout: labels todos juntos no topo, depois TODOS valores juntos: "0,63% 0,21% 0,16% 0,28%"
+  // Estratégia: extrair 4 valores em sequência dentro de "Variáveis sobre suas vendas"
   if(channelKey === 'mercadolivre'){
     const repMatch = norm.match(/Mercado\s*L[íi]der\s+(Platinum|Gold|Silver|Bronze|Standard)/i);
     if(repMatch){ result.reputacao = 'MercadoLíder ' + repMatch[1]; }
 
-    // ESTRATÉGIA 1: % direto da label (mais confiável)
-    // Cada métrica tem o padrão "Label ... X,XX% ... São Y das suas vendas"
-    const tryLabel = (regex) => {
-      const m = norm.match(regex);
-      if(!m) return null;
-      const v = parseFloat(m[1].replace(',','.'));
-      return (v >= 0 && v <= 100) ? v : null;
-    };
-    const rec = tryLabel(/reclama[çc][õo]es?[\s\S]{0,80}?(\d+[,.]\d{1,2})\s*%/i);
-    const med = tryLabel(/media[çc][õo]es?[\s\S]{0,80}?(\d+[,.]\d{1,2})\s*%/i);
-    const can = tryLabel(/cancelad[ao]s?\s+por[\s\S]{0,80}?(\d+[,.]\d{1,2})\s*%/i)
-            || tryLabel(/canceladas[\s\S]{0,80}?(\d+[,.]\d{1,2})\s*%/i);
-    const env = tryLabel(/env[ií]os?\s+incorretos?[\s\S]{0,80}?(\d+[,.]\d{1,2})\s*%/i);
-    if(rec !== null) result.metrics.reclamacoes = rec;
-    if(med !== null) result.metrics.mediacoes = med;
-    if(can !== null) result.metrics.canceladas = can;
-    if(env !== null) result.metrics.enviosIncorretos = env;
-
-    // ESTRATÉGIA 2 (fallback se 1 falhar): total + counts (cálculo por divisão)
-    const faltam = ['reclamacoes','mediacoes','canceladas','enviosIncorretos']
-      .filter(k => result.metrics[k] === undefined);
-    if(faltam.length > 0){
-      // Total vendas: número 4+ dígitos OU formato 1.234 — relax do regex antigo (R$ não é obrigatório)
-      const totMatch = norm.match(/(\d{1,3}\.\d{3}|\d{4,})\s+Vendas?/i)
-                    || norm.match(/(\d{1,3}\.\d{3}|\d{4,})\s+\d{1,3}\.\d{3}\s+\d{1,3}\.\d{3}/);
+    // Procura na região após "Variáveis sobre suas vendas"
+    const regionMatch = norm.match(/Vari[áa]veis\s+sobre\s+suas\s+vendas[\s\S]{0,2000}?(?:Seu\s+desempenho|===\s*PASSE|$)/i);
+    const region = regionMatch ? regionMatch[0] : norm;
+    // Captura 4 percentages COM DECIMAL em sequência (X,XX% formato)
+    const pcts = [...region.matchAll(/(?<!\d)(\d{1,2}[,.]\d{2})\s*%/g)]
+      .map(m => parseFloat(m[1].replace(',','.')))
+      .filter(v => v >= 0 && v <= 15); // ML métricas tipicamente < 15%
+    if(pcts.length >= 4){
+      result.metrics.reclamacoes = pcts[0];
+      result.metrics.mediacoes = pcts[1];
+      result.metrics.canceladas = pcts[2];
+      result.metrics.enviosIncorretos = pcts[3];
+    } else {
+      // Fallback: cálculo por counts (São X das suas vendas)
+      const totMatch = norm.match(/(\d{1,3}\.\d{3}|\d{4,})\s+\d{1,3}\.\d{3}\s+\d{1,3}\.\d{3}/);
       const totEnvMatch = norm.match(/(\d{1,3}\.\d{3}|\d{4,})\s+Com\s+Envios/i);
       const total = totMatch ? parseInt(totMatch[1].replace(/\./g,'')) : null;
       const totEnvios = totEnvMatch ? parseInt(totEnvMatch[1].replace(/\./g,'')) : null;
@@ -1329,9 +1321,7 @@ function parseOcr(channelKey, text){
       const keys = ['reclamacoes', 'mediacoes', 'canceladas', 'enviosIncorretos'];
       if(total && counts.length){
         keys.forEach((k, i)=>{
-          if(result.metrics[k] !== undefined) return; // já tem
           if(counts[i] === undefined) return;
-          // Envios incorretos usa "Com Envios" como base (não Vendas)
           const base = (k === 'enviosIncorretos' && totEnvios) ? totEnvios : total;
           result.metrics[k] = +(counts[i] / base * 100).toFixed(2);
         });
@@ -1341,35 +1331,85 @@ function parseOcr(channelKey, text){
   }
 
   // ===== Amazon =====
+  // OCR real mostra: "Classificação do estado da 264 conta" (número entre "da" e "conta")
+  // "0 de 532 pedidos com problemas 1,5%" (valor após "com problemas")
+  // "Taxa de cancelamentos 0%" (valor logo após)
+  // "Índice de envios com N/A rastreamento" (N/A no meio — não tem %)
   if(channelKey === 'amazon'){
-    const classMatch = norm.match(/classifica[çc][ãa]o\s+do\s+estado\s+da\s+conta\s+(\d{1,4})/i)
+    // Reputação: número entre "estado da" e "conta", OU número logo após "estado da conta"
+    const classMatch = norm.match(/classifica[çc][ãa]o\s+do\s+estado\s+da[\s\S]{0,30}?(\d{2,4})[\s\S]{0,20}conta/i)
+                    || norm.match(/classifica[çc][ãa]o\s+do\s+estado\s+da\s+conta[\s\S]{0,50}?(\d{2,4})/i)
                     || norm.match(/estado\s+da\s+conta[\s\S]{0,100}?(\d{2,4})/i);
     const idealMatch = /Ideal/i.test(norm);
-    if(classMatch){ result.reputacao = classMatch[1] + (idealMatch ? ' — Ideal' : ''); }
-    // Pedidos com problema — relaxa busca
-    const probMatch = norm.match(/[íi]ndice\s+de\s+pedidos\s+com\s+problemas?[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i)
-                   || norm.match(/pedidos?\s+com\s+problemas?[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i);
-    if(probMatch){ result.metrics.pedidosProblema = parseFloat(probMatch[1].replace(',','.')); }
-    // Cancelamentos anteriores ao envio
-    const cancMatch = norm.match(/taxa\s+de\s+cancelamentos?[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i)
-                   || norm.match(/cancelamentos?\s+anteriores?[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i);
-    if(cancMatch){ result.metrics.cancelamentoEnvio = parseFloat(cancMatch[1].replace(',','.')); }
-    // Envio com rastreamento válido — pega %
-    const rastMatch = norm.match(/[íi]ndice\s+de\s+envios?\s+com\s+rastreamento[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i)
-                   || norm.match(/rastreamento\s+v[áa]lido[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i);
-    if(rastMatch){ result.metrics.rastreamento = parseFloat(rastMatch[1].replace(',','.')); }
+    if(classMatch){
+      const num = parseInt(classMatch[1]);
+      if(num >= 100 && num <= 1000){
+        result.reputacao = String(num) + (idealMatch ? ' — Ideal' : '');
+      }
+    }
+
+    // Pedidos com problema: padrão observado "pedidos com problemas 1,5%"
+    const probMatch = norm.match(/pedidos?\s+com\s+problemas?\s+(\d+(?:[,.]\d+)?)\s*%/i);
+    if(probMatch){
+      const v = parseFloat(probMatch[1].replace(',','.'));
+      if(v >= 0 && v <= 100) result.metrics.pedidosProblema = v;
+    }
+
+    // Taxa de cancelamentos: padrão "Taxa de cancelamentos 0%" ou "cancelamentos anteriores ao envio X%"
+    const cancMatch = norm.match(/taxa\s+de\s+cancelamentos?\s+(\d+(?:[,.]\d+)?)\s*%/i)
+                   || norm.match(/cancelamentos?\s+anteriores?\s+ao\s+envio[\s\S]{0,50}?(\d+(?:[,.]\d+)?)\s*%/i);
+    if(cancMatch){
+      const v = parseFloat(cancMatch[1].replace(',','.'));
+      if(v >= 0 && v <= 100) result.metrics.cancelamentoEnvio = v;
+    }
+
+    // Rastreamento: detecta N/A primeiro — se for N/A, deixa vazio (não captura Meta 95%)
+    const isNA = /envios?\s+com\s+N\/A\s+rastreamento/i.test(norm)
+              || /rastreamento\s+v[áa]lido\s+N\/A/i.test(norm)
+              || /rastreamento[\s\S]{0,30}N\/A/i.test(norm);
+    if(!isNA){
+      // Tenta capturar % real, ignorando Meta thresholds (95%)
+      const rastMatches = [...norm.matchAll(/rastreamento[\s\S]{0,80}?(\d+(?:[,.]\d+)?)\s*%/gi)]
+        .map(m => parseFloat(m[1].replace(',','.')))
+        .filter(v => v >= 0 && v <= 100 && v !== 95); // 95 é Meta padrão
+      if(rastMatches.length) result.metrics.rastreamento = rastMatches[0];
+    }
     return result;
   }
 
   // ===== Casas Bahia =====
   if(channelKey === 'casasbahia'){
-    // === REPUTAÇÃO === — único padrão CONFIÁVEL: dígito seguido de delta-com-decimal + "vs"
-    // Ex: "4 +1.40 vs" / "↑ 4 +1.40 vs" / "4 -3.89 vs"
-    // Esse é o ÚNICO lugar onde o "vs" aparece com delta decimal — a primeira ocorrência é a reputação,
-    // depois vem reclamação, cancelamento, expedição (cada uma com seu "vs")
-    const repVsMatches = [...norm.matchAll(/(?<!\d)(\d)\s+[+\-↑↓\^v]{0,2}\s*\d+[,.]\d+\s+vs/gi)];
-    const validReps = repVsMatches.map(m => parseInt(m[1])).filter(v => v >= 1 && v <= 5);
-    if(validReps.length) result.reputacao = String(validReps[0]); // primeiro = reputação (topo da página)
+    // === REPUTAÇÃO === — multi-estratégia com voting PONDERADO
+    // O OCR do CB é instável: "↑ 4" pode virar "Y 4", "v 4", "1" (eixo Y do gráfico), etc.
+    // Estratégia A (peso 3): dígito imediatamente após Y/v/↑ — MUITO PROVÁVEL rating
+    //                       EXCETO se for "Y 1" + "vs" (provavelmente eixo Y bottom)
+    // Estratégia B (peso 1): dígito + delta-vs — pode ser rating OU count de seções
+    const freqCB = {};
+    const add = (v, w) => { if(v>=1&&v<=5) freqCB[v] = (freqCB[v]||0) + w; };
+
+    // Estratégia A — Y/v/↑ + dígito
+    const setaMatches = [...norm.matchAll(/(?<![a-zA-Z\d])([YvV↑↓\^])\s+(\d)(?!\d)(.{0,15})/g)];
+    setaMatches.forEach(m => {
+      const v = parseInt(m[2]);
+      // Filtro: se o que vem depois é "+X.XX vs" e o dígito é 1, provavelmente é eixo Y bottom
+      const seguinte = m[3] || '';
+      if(v === 1 && /^\s*[+\-]\d+[,.]\d+\s+vs/.test(seguinte)) return; // pula y-axis bottom
+      add(v, 3);
+    });
+
+    // Estratégia B — X + sinal-decimal + vs (qualquer dígito antes do delta)
+    const vsMatches = [...norm.matchAll(/(.{0,3})(?<!\d)(\d)\s+[+\-]\d+[,.]\d+\s+vs/gi)];
+    vsMatches.forEach(m => {
+      const v = parseInt(m[2]);
+      // Filtro: se o prefixo termina em "Y "/"v " — é eixo Y, ignora
+      if(/[Yyv]\s+$/.test(m[1])) return;
+      add(v, 1);
+    });
+
+    if(Object.keys(freqCB).length){
+      const best = Object.entries(freqCB).sort((a,b) => b[1]-a[1])[0][0];
+      result.reputacao = best;
+    }
 
     // === RECLAMAÇÃO === — busca DENTRO da seção dela
     // A seção Reclamação aparece como "Reclamação Abaixo de 2% [bar] 7.3% X 2 -X.XX vs"
@@ -1402,63 +1442,57 @@ function parseOcr(channelKey, text){
   }
 
   // ===== Magalu =====
+  // OCR real: labels todos no topo, depois Meta thresholds, depois valores
+  // "Nivel de Serviço (O Agilidade no Atendimento (D) Cancelamento (O Meta: Acima as 95.0% Meta: Acima ce 90.0% Meta: Abaixo de 2.0% 93,5% +0,3% 94,9% +0,1% 5,1% +1,2%"
+  // Estratégia: depois de remover Metas e deltas, capturar os 3 valores em sequência
   if(channelKey === 'magalu'){
-    // === REPUTAÇÃO === — número grande "X,X" do gauge ("3,4 / De 1 a 5")
-    // Pegar X,X mais frequente entre os valores 1-5 (típico do print é só 1 valor)
-    const candidatesRep = [];
-    const repMatches = [...norm.matchAll(/(?<!\d)(\d),(\d)(?!\d)/g)];
-    for(const m of repMatches){
-      const v = parseFloat(m[1] + '.' + m[2]);
-      if(v >= 1.0 && v <= 5.0) candidatesRep.push(m[1] + ',' + m[2]);
-    }
-    // Preferir o que vier após "De 1 a 5" ou após o título da loja
-    const repAfterRange = norm.match(/(?:de\s+1\s+a\s+5|sanbox|loja)[\s\S]{0,100}?(?<!\d)(\d,\d)(?!\d)/i);
-    const repAfterRange2 = norm.match(/(?<!\d)(\d,\d)(?!\d)[\s\S]{0,30}?de\s+1\s+a\s+5/i);
-    if(repAfterRange){
-      const v = parseFloat(repAfterRange[1].replace(',','.'));
-      if(v >= 1 && v <= 5) result.reputacao = repAfterRange[1];
-    } else if(repAfterRange2){
-      const v = parseFloat(repAfterRange2[1].replace(',','.'));
-      if(v >= 1 && v <= 5) result.reputacao = repAfterRange2[1];
-    } else if(candidatesRep.length){
-      // Pega o mais frequente
+    // === REPUTAÇÃO === — X,X em range 1-5 (do gauge "3,4")
+    // OCR pode trazer várias falsas (datas, etc.) — pega a mais frequente
+    const repCandidates = [...norm.matchAll(/(?<!\d)(\d)[,.](\d)(?!\d)/g)]
+      .map(m => ({str: m[1] + ',' + m[2], val: parseFloat(m[1] + '.' + m[2])}))
+      .filter(x => x.val >= 1 && x.val <= 5);
+    if(repCandidates.length){
       const freq = {};
-      candidatesRep.forEach(v => freq[v] = (freq[v]||0) + 1);
-      result.reputacao = Object.entries(freq).sort((a,b) => b[1]-a[1])[0][0];
+      repCandidates.forEach(x => freq[x.str] = (freq[x.str]||0) + 1);
+      const best = Object.entries(freq).sort((a,b) => b[1]-a[1])[0][0];
+      result.reputacao = best;
     }
 
-    // === CANCELAMENTO === — valor baixo (0-15%)
-    // O label é "Cancelamento" e o valor é 5,01% (slider) ou 5,1% (indicadores)
-    // Buscar % no formato X,XX dentro da janela do label, ignorando "Meta abaixo de X%"
-    const cancAreaMatch = norm.match(/cancelamento[\s\S]{0,400}?(?=avalia|agil|n[íi]vel|reclama|expedi|$)/i)
-                       || norm.match(/cancelamento[\s\S]{0,400}/i);
-    if(cancAreaMatch){
-      // Remove "Meta abaixo de 2,0%" e similares (esses são thresholds, não valores)
-      const limpo = cancAreaMatch[0].replace(/meta\s+(abaixo|acima)\s+de\s+\d+[,.]\d+\s*%/gi, ' ');
-      const cancPcts = [...limpo.matchAll(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/g)]
-        .map(m => parseFloat(m[1].replace(',','.')))
-        .filter(v => v >= 0.5 && v <= 15);
-      if(cancPcts.length) result.metrics.cancelamento = cancPcts[0];
+    // === MÉTRICAS DO SLIDER === — valores reais (não Meta, não delta)
+    // Procura na região "Indicadores da sua loja" se existir, senão usa norm
+    let region = norm;
+    const indMatch = norm.match(/Indicadores\s+da\s+sua\s+loja[\s\S]{0,3000}/i);
+    if(indMatch) region = indMatch[0];
+
+    // Remove Meta thresholds: "Meta: Acima/Abaixo de X% ou X,X%"
+    let limpo = region.replace(/meta[:\s]+(acima|abaixo|asino|asixo|asnoma|ima|ascima)\s+(de|ce|ae|as|ds)\s+\d+[,.]?\d*\s*%/gi, ' MTHR ');
+    // Também remove versões com "Meta:" + número direto (sem palavra acima/abaixo)
+    limpo = limpo.replace(/meta[:\s]+\d+[,.]?\d*\s*%/gi, ' MTHR ');
+    // Remove delta values: "+X,X%" "-X,X%" "+o1%" (OCR pode pôr "o" no lugar de "0")
+    limpo = limpo.replace(/[+\-][\do]\d*[,.]\d+\s*%/g, ' DELTA ');
+    limpo = limpo.replace(/[+\-]\d+[,.]\d+\s*%/g, ' DELTA ');
+
+    // Captura valores % na ordem que aparecem
+    const vals = [...limpo.matchAll(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/g)]
+      .map(m => parseFloat(m[1].replace(',','.')))
+      .filter(v => v >= 0 && v <= 100);
+
+    // Ordem na página: Nivel de Serviço (90-99%), Agilidade (90-99%), Cancelamento (0-15%)
+    // Pega os 3 primeiros valores válidos
+    if(vals.length >= 3){
+      // result.metrics.nivelServico = vals[0]; // não armazenamos
+      result.metrics.agilidade = vals[1];
+      result.metrics.cancelamento = vals[2];
+    } else if(vals.length === 2){
+      // Pode ser que Nivel não foi capturado
+      // Assume primeiro é agilidade (alto), segundo é cancelamento (baixo)
+      if(vals[0] >= 50 && vals[1] < 20){
+        result.metrics.agilidade = vals[0];
+        result.metrics.cancelamento = vals[1];
+      }
     }
 
-    // === AGILIDADE === — valor alto (60-100%)
-    // O label é "Agilidade no Atendimento" ou "Agilidade do Atendimento"
-    // O valor que queremos é o REAL (ex: 94,9%), não o threshold "Acima de 90%"
-    const agAreaMatch = norm.match(/agi[lb]idade[\s\S]{0,400}?(?=cancelamento|n[íi]vel|reclama|expedi|avalia|$)/i)
-                     || norm.match(/agi[lb]idade[\s\S]{0,400}/i);
-    if(agAreaMatch){
-      const limpo = agAreaMatch[0].replace(/meta\s+(abaixo|acima)\s+de\s+\d+[,.]?\d*\s*%/gi, ' ');
-      const agPcts = [...limpo.matchAll(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/g)]
-        .map(m => parseFloat(m[1].replace(',','.')))
-        .filter(v => v >= 60 && v <= 100);
-      // Prefere valor que NÃO é threshold padrão (95, 90, 80)
-      const naoThreshold = agPcts.filter(v => Math.round(v) !== 95 && Math.round(v) !== 90 && Math.round(v) !== 80);
-      if(naoThreshold.length) result.metrics.agilidade = naoThreshold[0];
-      else if(agPcts.length) result.metrics.agilidade = agPcts[0];
-    }
-
-    // === AVALIAÇÃO DA LOJA === — é IGUAL à reputação (3,4 / 5)
-    // Não pega o Nível de Serviço (% alto) — pega a nota 1-5
+    // === AVALIAÇÃO DA LOJA === é igual à reputação 1-5
     if(result.reputacao){
       result.metrics.avaliacao = parseFloat(result.reputacao.replace(',','.'));
     }
@@ -1467,37 +1501,33 @@ function parseOcr(channelKey, text){
   }
 
   // ===== Shopee =====
+  // OCR real: "Taxa de Resposta" às vezes vira "Texade Resposta" (sem espaços) ou "Taxade"
+  // Valor real "97.51%" pode aparecer como "$7515" no agressivo
   if(channelKey === 'shopee'){
     const topMatch = norm.match(/Top\s+Lojista/i);
     if(topMatch){ result.reputacao = 'Top Lojista'; }
 
-    // === TAXA DE RESPOSTA === — valor alto (50-100%)
-    // Filtra meta ≥60% que pode aparecer junto. Pega o valor REAL (ex: 97,51%)
-    const tRespArea = norm.match(/taxa\s+de\s+resposta[\s\S]{0,300}/i);
+    // === TAXA DE RESPOSTA === — busca FLEXÍVEL ("Taxa de", "Taxade", "Texade")
+    const tRespArea = norm.match(/Tax?[ae]\s*d?e?\s*Resposta[\s\S]{0,300}/i)
+                   || norm.match(/Texade\s+Resposta[\s\S]{0,300}/i);
     if(tRespArea){
-      const limpo = tRespArea[0].replace(/[≥<>]?\s*\d{1,2}\s*%/g, (mm) => {
-        // Remove thresholds simples (60%, ≥60% etc.) mas mantém X.XX%
-        return mm.includes('.') || mm.includes(',') ? mm : ' ';
-      });
-      const pcts = [...limpo.matchAll(/(?<!\d)(\d{1,3}[,.]\d{1,2})\s*%/g)]
+      // Pega TODOS os valores X.XX% no range 50-100%
+      const pcts = [...tRespArea[0].matchAll(/(?<!\d)(\d{1,3}[,.]\d{1,2})\s*%/g)]
         .map(m => parseFloat(m[1].replace(',','.')))
         .filter(v => v >= 50 && v <= 100);
       if(pcts.length) result.metrics.taxaResposta = pcts[0];
     }
 
-    // === AVALIAÇÃO DA LOJA / NOTA === — 1-5 com decimal (ex: 4,86)
+    // === AVALIAÇÃO DA LOJA / NOTA === — 1-5 com decimal (ex: 4,86 ou 4.86/5)
     const aval = norm.match(/avalia[çc][ãa]o\s+da\s+loja[\s\S]{0,80}?(\d[,.]\d{1,2})/i);
     if(aval){
       const v = parseFloat(aval[1].replace(',','.'));
       if(v >= 1 && v <= 5){
         result.metrics.notaLoja = v;
-        if(!result.reputacao || result.reputacao === 'Top Lojista'){
-          // Mantém Top Lojista se foi detectado, mas adiciona a nota também
-          if(!result.reputacao) result.reputacao = aval[1].replace('.', ',');
-        }
+        if(!result.reputacao) result.reputacao = aval[1].replace('.', ',');
       }
     }
-    // === BOA TAXA DE AVALIAÇÃO === — % alto
+    // === BOA TAXA DE AVALIAÇÃO === — não aparece sempre no print Shopee novo
     const boaArea = norm.match(/boa\s+taxa[\s\S]{0,150}/i);
     if(boaArea){
       const pcts = [...boaArea[0].matchAll(/(?<!\d)(\d{1,3}[,.]\d{1,2})\s*%/g)]
