@@ -349,6 +349,7 @@
   <button class="main-tab" data-tab="registro" onclick="switchMainTab('registro')">📅 Registro Diário</button>
   <button class="main-tab" data-tab="tickets" onclick="switchMainTab('tickets')">📋 Análise de Tickets SAC</button>
   <button class="main-tab" data-tab="comissao" onclick="switchMainTab('comissao')">💰 Comissão</button>
+  <button class="main-tab" data-tab="descontos" onclick="switchMainTab('descontos')">💸 Descontos Devolução</button>
 </nav>
 
 <div data-tab-panel="reputacao">
@@ -500,9 +501,138 @@
           </thead>
           <tbody id="comissao-tbody"></tbody>
           <tfoot>
-            <tr><th colspan="8" style="text-align:right">Total pago no mês</th><th class="num" id="comissao-total">R$ 0</th></tr>
+            <tr><th colspan="8" style="text-align:right">Total pago no mês <span style="font-weight:400;color:var(--muted);font-size:11px">(equipe — não inclui Coordenador)</span></th><th class="num" id="comissao-total">R$ 0</th></tr>
           </tfoot>
         </table>
+      </div>
+      <div class="tickets-card full" id="comissao-history-card">
+        <h3>Histórico de comissões (últimos meses fechados)</h3>
+        <div class="ch">Cada mês mostra o valor final por pessoa. Use pra acompanhar a evolução e o fechamento de cada mês.</div>
+        <div style="overflow-x:auto;margin-top:10px">
+          <table id="comissao-history-table" style="width:100%;border-collapse:collapse;font-size:13px">
+            <thead>
+              <tr style="background:#f4f6fb;border-bottom:2px solid var(--border)">
+                <th style="text-align:left;padding:8px">Mês</th>
+                <th class="num" style="text-align:right;padding:8px">Atendente 1</th>
+                <th class="num" style="text-align:right;padding:8px">Atendente 2</th>
+                <th class="num" style="text-align:right;padding:8px">Atendente 3</th>
+                <th class="num" style="text-align:right;padding:8px">Logística</th>
+                <th class="num" style="text-align:right;padding:8px">Coord. (%)</th>
+                <th class="num" style="text-align:right;padding:8px">Total equipe</th>
+              </tr>
+            </thead>
+            <tbody id="comissao-history-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div data-tab-panel="descontos" style="display:none">
+  <section id="descontos-section">
+    <h2 class="section-title">
+      Descontos de Devolução
+      <span class="section-subtitle" id="descontos-subtitle">Quanto de desconto foi aplicado por canal e por mês — comparado com o custo do produto e o valor da venda</span>
+    </h2>
+    <div class="tickets-filters">
+      <div class="filter-group">
+        <label>Mês</label>
+        <select id="dMes"></select>
+      </div>
+      <div class="filter-group">
+        <label>Canal</label>
+        <select id="dCanal">
+          <option value="">Todos</option>
+          <option value="mercadolivre">Mercado Livre</option>
+          <option value="amazon">Amazon</option>
+          <option value="magalu">Magalu</option>
+          <option value="casasbahia">Casas Bahia</option>
+          <option value="shopee">Shopee</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Status aceitação</label>
+        <select id="dAceito">
+          <option value="">Todos</option>
+          <option value="sim">Apenas aceitos</option>
+          <option value="nao">Apenas não aceitos</option>
+        </select>
+      </div>
+    </div>
+    <div class="kpi-grid" id="descontos-kpis" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:12px 0"></div>
+    <div class="tickets-grid">
+      <div class="tickets-card full">
+        <h3>Desconto aplicado por canal × mês</h3>
+        <div class="ch">Tabela mostra desconto total (R$), % sobre o custo do produto e % sobre a venda total do canal no mês (kondado). Cor da linha indica volume relativo dentro do mês.</div>
+        <div style="overflow-x:auto;margin-top:10px">
+          <table id="descontos-table" style="width:100%;border-collapse:collapse;font-size:13px">
+            <thead>
+              <tr style="background:#f4f6fb;border-bottom:2px solid var(--border)">
+                <th style="text-align:left;padding:8px">Mês</th>
+                <th style="text-align:left;padding:8px">Canal</th>
+                <th class="num" style="text-align:right;padding:8px">Pedidos</th>
+                <th class="num" style="text-align:right;padding:8px">Aceitos</th>
+                <th class="num" style="text-align:right;padding:8px">Desconto (R$)</th>
+                <th class="num" style="text-align:right;padding:8px">Custo (R$)</th>
+                <th class="num" style="text-align:right;padding:8px" title="Venda total do canal no mês (kondado)">Venda canal (R$)</th>
+                <th class="num" style="text-align:right;padding:8px">% s/ Custo</th>
+                <th class="num" style="text-align:right;padding:8px" title="% do desconto sobre venda total do canal no mês">% s/ Venda</th>
+              </tr>
+            </thead>
+            <tbody id="descontos-tbody"></tbody>
+            <tfoot>
+              <tr style="background:#f4f6fb;border-top:2px solid var(--border);font-weight:700">
+                <th colspan="2" style="text-align:right;padding:8px">TOTAL</th>
+                <th class="num" id="dTotPed" style="text-align:right;padding:8px">0</th>
+                <th class="num" id="dTotAce" style="text-align:right;padding:8px">0</th>
+                <th class="num" id="dTotDesc" style="text-align:right;padding:8px">R$ 0</th>
+                <th class="num" id="dTotCusto" style="text-align:right;padding:8px">R$ 0</th>
+                <th class="num" id="dTotVenda" style="text-align:right;padding:8px">R$ 0</th>
+                <th class="num" id="dTotPctCusto" style="text-align:right;padding:8px">—</th>
+                <th class="num" id="dTotPctVenda" style="text-align:right;padding:8px">—</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <div class="tickets-card">
+        <h3>Desconto total por canal (mês selecionado)</h3>
+        <div class="ch">Comparativo de quanto cada canal consumiu em desconto no mês.</div>
+        <div style="height:280px;position:relative"><canvas id="chartDescCanal"></canvas></div>
+      </div>
+      <div class="tickets-card">
+        <h3>% Desconto sobre custo (mês selecionado)</h3>
+        <div class="ch">Quanto o desconto representa do custo do produto, por canal.</div>
+        <div style="height:280px;position:relative"><canvas id="chartDescPctCusto"></canvas></div>
+      </div>
+      <div class="tickets-card full">
+        <h3>Evolução mensal — desconto total (R$)</h3>
+        <div class="ch">Linha por canal mostrando como o desconto vem variando mês a mês.</div>
+        <div style="height:320px;position:relative"><canvas id="chartDescEvolucao"></canvas></div>
+      </div>
+      <div class="tickets-card full">
+        <h3>Lista de descontos aplicados (filtrada)</h3>
+        <div class="ch">Detalhe pedido a pedido — clique no cabeçalho pra ordenar.</div>
+        <div style="overflow-x:auto;max-height:520px;overflow-y:auto;margin-top:10px">
+          <table id="descontos-raw-table" style="width:100%;border-collapse:collapse;font-size:12px">
+            <thead style="position:sticky;top:0;background:#f4f6fb">
+              <tr>
+                <th style="text-align:left;padding:6px">Data</th>
+                <th style="text-align:left;padding:6px">Canal</th>
+                <th style="text-align:left;padding:6px">Pedido</th>
+                <th style="text-align:left;padding:6px">SKU</th>
+                <th style="text-align:left;padding:6px">Problema</th>
+                <th class="num" style="text-align:right;padding:6px">Venda</th>
+                <th class="num" style="text-align:right;padding:6px">Custo</th>
+                <th class="num" style="text-align:right;padding:6px">Desconto</th>
+                <th class="num" style="text-align:right;padding:6px">% s/ Custo</th>
+                <th style="text-align:center;padding:6px">Aceito?</th>
+              </tr>
+            </thead>
+            <tbody id="descontos-raw-tbody"></tbody>
+          </table>
+        </div>
       </div>
     </div>
   </section>
@@ -603,7 +733,7 @@ const channels = {
     color: '#0033A0',
     repLabel: 'Reputação (1-5)',
     metrics: {
-      reclamacao: {label:'Pedidos com Reclamação', metaType:'max', meta:2.0, alerta:1.0, unit:'%', ocrPattern:/reclama[çc][ãa]o[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
+      reclamacao: {label:'Pedidos com Reclamação', metaType:'max', meta:5.0, alerta:3.0, unit:'%', ocrPattern:/reclama[çc][ãa]o[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
       cancelados: {label:'Pedidos Cancelados', metaType:'max', meta:3.0, alerta:1.5, unit:'%', ocrPattern:/cancelamento[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i}
     }
   },
@@ -628,8 +758,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '27';
-const APP_VERSION = '27.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '30';
+const APP_VERSION = '30.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -872,12 +1002,23 @@ function renderMonthCards(){
       </li>`;
     });
     const days = monthEntries.filter(e=> e[key]).length;
+    // Semáforo da média do mês — verde/amarelo/vermelho
+    const semColors = {green:'var(--green)', yellow:'var(--yellow)', red:'var(--red)', unknown:'#9ca3af'};
+    const semLabels = {green:'Verde', yellow:'Amarelo', red:'Vermelho', unknown:'Sem dados'};
+    const semColor = semColors[worst];
+    const semBg = worst === 'green' ? 'var(--green-bg)' : worst === 'yellow' ? 'var(--yellow-bg)' : worst === 'red' ? 'var(--red-bg)' : '#f3f4f6';
+    const semLabel = semLabels[worst];
     html += `<div class="card" style="border-top:6px solid ${ch.color}">
       <div class="card-header">
         <div class="card-name"><span class="channel-tag" style="background:${ch.color}"></span>${ch.name}</div>
-        <div class="rep-badge">
-          <span class="rep-label">Dias no mês</span>
-          <span class="reputation">${days}</span>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end">
+          <div style="display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:14px;background:${semBg};border:1.5px solid ${semColor};font-size:11px;font-weight:700;color:${semColor};text-transform:uppercase;letter-spacing:0.4px" title="Pior cor entre as métricas do mês">
+            <span style="width:9px;height:9px;border-radius:50%;background:${semColor}"></span>${semLabel}
+          </div>
+          <div class="rep-badge">
+            <span class="rep-label">Dias no mês</span>
+            <span class="reputation">${days}</span>
+          </div>
         </div>
       </div>
       <ul class="metric-list">${metricsHtml}</ul>
@@ -1533,6 +1674,7 @@ function switchMainTab(tab){
   if(tab === 'registro') renderRegistro();
   if(tab === 'tickets') ticketsRender();
   if(tab === 'comissao') renderComissao();
+  if(tab === 'descontos') renderDescontos();
 }
 function getActiveTab(){
   return localStorage.getItem(MAIN_TAB_KEY) || 'reputacao';
@@ -2468,18 +2610,17 @@ function calcularComissao(ym, cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed){
       coletivo: 0,
     };
     if(p.tipo === 'atendente'){
-      // R$300 reputação + R$200 tickets
+      // R$300 reputação + tickets (regra nova: -R$200 por categoria em atraso, soma)
       const piorRep = p.canais.map(c => cores[c]).reduce((a,b) => piorCor(a,b), 'green');
       if(piorRep === 'yellow') linha.reputacao = -100;
       else if(piorRep === 'red') linha.reputacao = -300;
-      // Tickets: soma tickets + sacForaPrazo dos canais da pessoa
+      // REGRA NOVA: ticket fin em atraso -> -200, SAC em atraso -> -200 (somam até -400)
       const totalFin = p.canais.reduce((s, c) => s + ultimoDoMes(c, ym, 'tickets'), 0);
       const totalSac = p.canais.reduce((s, c) => s + ultimoDoMes(c, ym, 'sacForaPrazo'), 0);
-      const corFin = corPorCorte(totalFin, cutFinAmrl, cutFinRed);
-      const corSac = corPorCorte(totalSac, cutSacAmrl, cutSacRed);
-      const piorTk = piorCor(corFin, corSac);
-      if(piorTk === 'yellow') linha.tickets = -100;
-      else if(piorTk === 'red') linha.tickets = -200;
+      linha.ticketsFin = totalFin;   // pra exibir contagem na tabela
+      linha.ticketsSac = totalSac;
+      if(totalFin > 0) linha.tickets -= 200;
+      if(totalSac > 0) linha.tickets -= 200;
       if(algumVermelho) linha.coletivo = -50;
     }
     else if(p.tipo === 'logistica'){
@@ -2567,22 +2708,307 @@ function renderComissao(){
       const tr = document.createElement('tr');
       const cls = v => v < 0 ? 'desconto' : 'desconto zero';
       const cellFinal = l.final === 0 ? 'final-val zero' : 'final-val green';
-      tr.innerHTML = `
-        <td><strong>${l.pessoa}</strong></td>
-        <td>${l.canais}</td>
-        <td class="num">${fmtBRL(l.base)}</td>
-        <td class="num ${cls(l.reputacao)}">${fmtBRLDesc(l.reputacao)}</td>
-        <td class="num ${cls(l.tickets)}">${fmtBRLDesc(l.tickets)}</td>
-        <td class="num ${cls(l.logistica)}">${fmtBRLDesc(l.logistica)}</td>
-        <td class="num ${cls(l.criticos)}">${fmtBRLDesc(l.criticos)}</td>
-        <td class="num ${cls(l.coletivo)}">${fmtBRLDesc(l.coletivo)}</td>
-        <td class="num ${cellFinal}">${fmtBRL(l.final)}</td>
-      `;
+      // Coordenador: mostra só % da meta, não o R$ real
+      const isCoord = l.pessoa === 'Coordenador';
+      const pctMeta = l.base > 0 ? (l.final / l.base * 100) : 0;
+      const pctTxt = pctMeta.toLocaleString('pt-BR', {minimumFractionDigits:0, maximumFractionDigits:0}) + '%';
+      const pctCor = pctMeta >= 80 ? 'green' : pctMeta >= 50 ? 'yellow' : pctMeta > 0 ? 'red' : 'red';
+      const pctBg = pctCor === 'green' ? 'var(--green-bg)' : pctCor === 'yellow' ? 'var(--yellow-bg)' : 'var(--red-bg)';
+      const pctColor = pctCor === 'green' ? 'var(--green)' : pctCor === 'yellow' ? 'var(--yellow)' : 'var(--red)';
+      if(isCoord){
+        // Mostra "—" em colunas de R$ (oculta a base e cada desconto em valor)
+        // Mostra apenas: nome, canais, "—" base, descontos em "✓"/"✗" e o %
+        const flag = v => v < 0 ? `<span title="Aplicou desconto">⚠</span>` : `<span title="Sem desconto" style="color:var(--green)">✓</span>`;
+        tr.innerHTML = `
+          <td><strong>${l.pessoa}</strong><div style="font-size:10px;color:var(--muted)">valor oculto</div></td>
+          <td>${l.canais}</td>
+          <td class="num" style="color:var(--muted)">—</td>
+          <td class="num">${flag(l.reputacao)}</td>
+          <td class="num" style="color:var(--muted)">—</td>
+          <td class="num" style="color:var(--muted)">—</td>
+          <td class="num">${flag(l.criticos)}</td>
+          <td class="num" style="color:var(--muted)">—</td>
+          <td class="num"><div style="display:inline-block;padding:4px 10px;border-radius:8px;background:${pctBg};color:${pctColor};font-weight:700;border:1.5px solid ${pctColor}">${pctTxt}</div></td>
+        `;
+      } else {
+        tr.innerHTML = `
+          <td><strong>${l.pessoa}</strong></td>
+          <td>${l.canais}</td>
+          <td class="num">${fmtBRL(l.base)}</td>
+          <td class="num ${cls(l.reputacao)}">${fmtBRLDesc(l.reputacao)}</td>
+          <td class="num ${cls(l.tickets)}" title="Fin: ${l.ticketsFin||0} · SAC: ${l.ticketsSac||0}">${fmtBRLDesc(l.tickets)}</td>
+          <td class="num ${cls(l.logistica)}">${fmtBRLDesc(l.logistica)}</td>
+          <td class="num ${cls(l.criticos)}">${fmtBRLDesc(l.criticos)}</td>
+          <td class="num ${cls(l.coletivo)}">${fmtBRLDesc(l.coletivo)}</td>
+          <td class="num ${cellFinal}">${fmtBRL(l.final)}</td>
+        `;
+      }
       tb.appendChild(tr);
     });
-    document.getElementById('comissao-total').textContent = fmtBRL(total);
+    // Total exclui coordenador (já que R$ dela tá oculto)
+    const totalSemCoord = linhas.filter(l => l.pessoa !== 'Coordenador').reduce((s,l)=>s+l.final, 0);
+    document.getElementById('comissao-total').textContent = fmtBRL(totalSemCoord);
   }
   document.getElementById('comissao-subtitle').textContent = `${tMLabel(ym)} — recalculado em tempo real conforme dados do dashboard`;
+  // Histórico mensal
+  renderComissaoHistorico(cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed, ym);
+}
+
+function renderComissaoHistorico(cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed, mesAtual){
+  const tb = document.getElementById('comissao-history-tbody');
+  if(!tb) return;
+  // Lista de TODOS os meses presentes (inclui o atual). O atual aparece marcado.
+  const meses = [...new Set(Object.keys(state.entries || {}).map(d => d.slice(0,7)))]
+    .sort().reverse().slice(0, 12); // mostra até 12 meses
+  if(meses.length === 0){
+    tb.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:16px;color:var(--muted)">Sem histórico ainda</td></tr>';
+    return;
+  }
+  tb.innerHTML = meses.map(ym => {
+    const {linhas} = calcularComissao(ym, cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed);
+    const byNome = Object.fromEntries(linhas.map(l => [l.pessoa, l]));
+    const a1 = byNome['Atendente 1'] || {final:0};
+    const a2 = byNome['Atendente 2'] || {final:0};
+    const a3 = byNome['Atendente 3'] || {final:0};
+    const lo = byNome['Logística'] || {final:0};
+    const co = byNome['Coordenador'] || {final:0, base:1000};
+    const coPct = co.base ? (co.final / co.base * 100) : 0;
+    const total = a1.final + a2.final + a3.final + lo.final;
+    const isAtual = ym === mesAtual;
+    const bg = isAtual ? 'background:#fef3c7' : '';
+    return `<tr style="border-bottom:1px solid var(--border);${bg}">
+      <td style="padding:8px"><strong>${tMLabel(ym)}</strong>${isAtual ? ' <span style="font-size:10px;color:var(--yellow);font-weight:700">EM ABERTO</span>' : ''}</td>
+      <td class="num" style="text-align:right;padding:8px">${fmtBRL(a1.final)}</td>
+      <td class="num" style="text-align:right;padding:8px">${fmtBRL(a2.final)}</td>
+      <td class="num" style="text-align:right;padding:8px">${fmtBRL(a3.final)}</td>
+      <td class="num" style="text-align:right;padding:8px">${fmtBRL(lo.final)}</td>
+      <td class="num" style="text-align:right;padding:8px;font-weight:700">${coPct.toFixed(0)}%</td>
+      <td class="num" style="text-align:right;padding:8px;font-weight:700">${fmtBRL(total)}</td>
+    </tr>`;
+  }).join('');
+}
+
+/* =========================================================================
+   DESCONTOS DE DEVOLUÇÃO
+   ========================================================================= */
+const CANAL_LABELS = {mercadolivre:'Mercado Livre', amazon:'Amazon', magalu:'Magalu', casasbahia:'Casas Bahia', shopee:'Shopee', outros:'Outros'};
+const CANAL_COLORS = {mercadolivre:'#fbbf24', amazon:'#ff9900', magalu:'#0086ff', casasbahia:'#1e40af', shopee:'#ee4d2d', outros:'#94a3b8'};
+
+let _chartDescCanal = null, _chartDescPctCusto = null, _chartDescEvolucao = null;
+
+function fmtBRL2(v){
+  if(v===null || v===undefined || isNaN(v)) return 'R$ 0,00';
+  return 'R$ ' + Number(v).toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+function fmtPct(v){
+  if(v===null || v===undefined || isNaN(v)) return '—';
+  return Number(v).toLocaleString('pt-BR', {minimumFractionDigits:1, maximumFractionDigits:1}) + '%';
+}
+
+function descontosMesesDisponiveis(){
+  const raws = (state.descontosRaw || []);
+  const set = new Set();
+  raws.forEach(d => { if(d.ym) set.add(d.ym); });
+  return Array.from(set).sort().reverse();
+}
+
+function tMLabelDesc(ym){
+  const [y, m] = ym.split('-');
+  const meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+  return `${meses[parseInt(m)-1]} ${y}`;
+}
+
+function renderDescontos(){
+  const sel = document.getElementById('dMes');
+  if(!sel) return;
+  // Popula select de mês uma vez
+  if(sel.options.length === 0){
+    const meses = descontosMesesDisponiveis();
+    sel.innerHTML = meses.map(m => `<option value="${m}">${tMLabelDesc(m)}</option>`).join('') || '<option value="">— sem dados —</option>';
+    sel.onchange = renderDescontos;
+    document.getElementById('dCanal').onchange = renderDescontos;
+    document.getElementById('dAceito').onchange = renderDescontos;
+  }
+  const ym = sel.value || (sel.options[0] && sel.options[0].value);
+  const canalFiltro = document.getElementById('dCanal').value;
+  const aceitoFiltro = document.getElementById('dAceito').value;
+
+  const raws = (state.descontosRaw || []);
+  if(raws.length === 0){
+    document.getElementById('descontos-tbody').innerHTML = '<tr><td colspan="9" style="text-align:center;padding:20px;color:var(--muted)">Sem dados de descontos. Aguarde a próxima execução da atualização automática.</td></tr>';
+    document.getElementById('descontos-kpis').innerHTML = '';
+    document.getElementById('descontos-raw-tbody').innerHTML = '';
+    return;
+  }
+
+  // Filtra para a lista detalhada (raw table)
+  const filtrados = raws.filter(d => {
+    if(ym && d.ym !== ym) return false;
+    if(canalFiltro && d.canal !== canalFiltro) return false;
+    if(aceitoFiltro === 'sim' && !d.aceito) return false;
+    if(aceitoFiltro === 'nao' && d.aceito) return false;
+    return true;
+  });
+
+  // KPIs do mês filtrado (sem filtro de aceito pra ter visão geral)
+  const noMes = raws.filter(d => d.ym === ym && (!canalFiltro || d.canal === canalFiltro));
+  const totDesc = noMes.reduce((s,d)=>s+d.valor_real_fechado,0);
+  const totCusto = noMes.reduce((s,d)=>s+d.custo,0);
+  const totAceitos = noMes.filter(d => d.aceito).length;
+  // VENDA REAL: do kondado (vendasByCanalMes). Soma todos os canais OU só o filtrado.
+  const vendasMes = (state.vendasByCanalMes && state.vendasByCanalMes[ym]) || {};
+  let totVenda = 0;
+  if(canalFiltro){
+    totVenda = vendasMes[canalFiltro] || 0;
+  } else {
+    Object.values(vendasMes).forEach(v => totVenda += v);
+  }
+  const pctSobreCusto = totCusto ? (totDesc/totCusto*100) : 0;
+  const pctSobreVenda = totVenda ? (totDesc/totVenda*100) : 0;
+  const pctAceitos = noMes.length ? (totAceitos/noMes.length*100) : 0;
+
+  document.getElementById('descontos-kpis').innerHTML = `
+    <div class="kpi-card" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center">
+      <div style="font-size:11px;color:var(--muted);text-transform:uppercase;font-weight:600;letter-spacing:0.5px">Pedidos com desconto</div>
+      <div style="font-size:24px;font-weight:700;margin-top:4px">${noMes.length}</div>
+      <div style="font-size:11px;color:var(--muted);margin-top:2px">${totAceitos} aceitos · ${fmtPct(pctAceitos)}</div>
+    </div>
+    <div class="kpi-card" style="background:#fff;border:1px solid var(--red);border-radius:10px;padding:12px;text-align:center">
+      <div style="font-size:11px;color:var(--muted);text-transform:uppercase;font-weight:600;letter-spacing:0.5px">Desconto total aplicado</div>
+      <div style="font-size:22px;font-weight:700;margin-top:4px;color:var(--red)">${fmtBRL2(totDesc)}</div>
+      <div style="font-size:11px;color:var(--muted);margin-top:2px">no mês selecionado</div>
+    </div>
+    <div class="kpi-card" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center">
+      <div style="font-size:11px;color:var(--muted);text-transform:uppercase;font-weight:600;letter-spacing:0.5px">% Desconto / Custo</div>
+      <div style="font-size:22px;font-weight:700;margin-top:4px;color:var(--yellow)">${fmtPct(pctSobreCusto)}</div>
+      <div style="font-size:11px;color:var(--muted);margin-top:2px">${fmtBRL2(totCusto)} em custo</div>
+    </div>
+    <div class="kpi-card" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center">
+      <div style="font-size:11px;color:var(--muted);text-transform:uppercase;font-weight:600;letter-spacing:0.5px">% Desconto / Venda</div>
+      <div style="font-size:22px;font-weight:700;margin-top:4px;color:var(--primary)">${fmtPct(pctSobreVenda)}</div>
+      <div style="font-size:11px;color:var(--muted);margin-top:2px">${fmtBRL2(totVenda)} em venda</div>
+    </div>
+  `;
+
+  // Tabela principal: agregado por canal no mês selecionado
+  const agg = (state.descontosAggByMonth && state.descontosAggByMonth[ym]) || {};
+  const tbody = document.getElementById('descontos-tbody');
+  const canaisOrdenados = Object.keys(agg).sort((a,b) => (agg[b].descontoTotal||0) - (agg[a].descontoTotal||0));
+  let tPed=0, tAce=0, tDesc=0, tCusto=0, tVendaCanais=0;
+  tbody.innerHTML = canaisOrdenados.map(canal => {
+    if(canalFiltro && canal !== canalFiltro) return '';
+    const a = agg[canal];
+    // Venda real do canal no mês — do kondado
+    const vendaCanal = (vendasMes[canal]) || 0;
+    const pctSVenda = vendaCanal ? (a.descontoTotal/vendaCanal*100) : 0;
+    tPed += a.count; tAce += a.countAceito; tDesc += a.descontoTotal;
+    tCusto += a.custoTotal; tVendaCanais += vendaCanal;
+    return `<tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:8px">${tMLabelDesc(ym)}</td>
+      <td style="padding:8px"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${CANAL_COLORS[canal]};vertical-align:middle;margin-right:6px"></span>${CANAL_LABELS[canal]||canal}</td>
+      <td class="num" style="text-align:right;padding:8px">${a.count}</td>
+      <td class="num" style="text-align:right;padding:8px">${a.countAceito}</td>
+      <td class="num" style="text-align:right;padding:8px;color:var(--red);font-weight:600">${fmtBRL2(a.descontoTotal)}</td>
+      <td class="num" style="text-align:right;padding:8px">${fmtBRL2(a.custoTotal)}</td>
+      <td class="num" style="text-align:right;padding:8px">${vendaCanal ? fmtBRL2(vendaCanal) : '<span style="color:var(--muted)">—</span>'}</td>
+      <td class="num" style="text-align:right;padding:8px;font-weight:600">${fmtPct(a.pctDescontoSobreCusto)}</td>
+      <td class="num" style="text-align:right;padding:8px;font-weight:600">${vendaCanal ? fmtPct(pctSVenda) : '—'}</td>
+    </tr>`;
+  }).join('') || '<tr><td colspan="9" style="text-align:center;padding:20px;color:var(--muted)">Sem dados pra esse mês/canal</td></tr>';
+  const tVenda = tVendaCanais;
+
+  document.getElementById('dTotPed').textContent = tPed;
+  document.getElementById('dTotAce').textContent = tAce;
+  document.getElementById('dTotDesc').textContent = fmtBRL2(tDesc);
+  document.getElementById('dTotCusto').textContent = fmtBRL2(tCusto);
+  document.getElementById('dTotVenda').textContent = fmtBRL2(tVenda);
+  document.getElementById('dTotPctCusto').textContent = tCusto ? fmtPct(tDesc/tCusto*100) : '—';
+  document.getElementById('dTotPctVenda').textContent = tVenda ? fmtPct(tDesc/tVenda*100) : '—';
+
+  // CHART 1: Desconto total por canal (barras)
+  if(_chartDescCanal){ _chartDescCanal.destroy(); _chartDescCanal = null; }
+  const ctx1 = document.getElementById('chartDescCanal');
+  if(ctx1 && canaisOrdenados.length){
+    _chartDescCanal = new Chart(ctx1, {
+      type:'bar',
+      data:{
+        labels: canaisOrdenados.map(c => CANAL_LABELS[c]||c),
+        datasets:[{
+          label:'Desconto R$',
+          data: canaisOrdenados.map(c => agg[c].descontoTotal),
+          backgroundColor: canaisOrdenados.map(c => CANAL_COLORS[c]),
+        }]
+      },
+      options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{callback:v=>'R$'+v.toLocaleString('pt-BR')}}}}
+    });
+  }
+
+  // CHART 2: % Desconto sobre custo (barras)
+  if(_chartDescPctCusto){ _chartDescPctCusto.destroy(); _chartDescPctCusto = null; }
+  const ctx2 = document.getElementById('chartDescPctCusto');
+  if(ctx2 && canaisOrdenados.length){
+    _chartDescPctCusto = new Chart(ctx2, {
+      type:'bar',
+      data:{
+        labels: canaisOrdenados.map(c => CANAL_LABELS[c]||c),
+        datasets:[{
+          label:'% sobre custo',
+          data: canaisOrdenados.map(c => agg[c].pctDescontoSobreCusto),
+          backgroundColor: canaisOrdenados.map(c => CANAL_COLORS[c]),
+        }]
+      },
+      options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true, ticks:{callback:v=>v+'%'}}}}
+    });
+  }
+
+  // CHART 3: Evolução mensal — linha por canal
+  if(_chartDescEvolucao){ _chartDescEvolucao.destroy(); _chartDescEvolucao = null; }
+  const ctx3 = document.getElementById('chartDescEvolucao');
+  if(ctx3){
+    const meses = Object.keys(state.descontosAggByMonth || {}).sort();
+    const canaisGlobais = ['mercadolivre','amazon','magalu','casasbahia','shopee'];
+    const datasets = canaisGlobais.map(c => ({
+      label: CANAL_LABELS[c],
+      data: meses.map(m => (state.descontosAggByMonth[m] && state.descontosAggByMonth[m][c] && state.descontosAggByMonth[m][c].descontoTotal) || 0),
+      borderColor: CANAL_COLORS[c],
+      backgroundColor: CANAL_COLORS[c] + '20',
+      tension: 0.25,
+      fill: false,
+    }));
+    _chartDescEvolucao = new Chart(ctx3, {
+      type:'line',
+      data:{ labels: meses.map(tMLabelDesc), datasets },
+      options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom'}}, scales:{y:{beginAtZero:true, ticks:{callback:v=>'R$'+v.toLocaleString('pt-BR')}}}}
+    });
+  }
+
+  // Lista detalhada (raw) — mais recente primeiro
+  const sorted = [...filtrados].sort((a,b) => {
+    const da = a.data.split('/').reverse().join('');
+    const db = b.data.split('/').reverse().join('');
+    return db.localeCompare(da);
+  });
+  const rawBody = document.getElementById('descontos-raw-tbody');
+  rawBody.innerHTML = sorted.slice(0, 500).map(d => {
+    const pctCusto = d.custo ? (d.valor_real_fechado/d.custo*100) : 0;
+    const corPct = pctCusto > 50 ? 'var(--red)' : pctCusto > 30 ? 'var(--yellow)' : 'var(--green)';
+    return `<tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:6px">${d.data}</td>
+      <td style="padding:6px"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${CANAL_COLORS[d.canal]||'#ccc'};vertical-align:middle;margin-right:4px"></span>${CANAL_LABELS[d.canal]||d.canal}</td>
+      <td style="padding:6px;font-family:monospace;font-size:11px">${d.pedido}</td>
+      <td style="padding:6px;font-family:monospace;font-size:11px">${d.sku}</td>
+      <td style="padding:6px">${d.problema||'—'}</td>
+      <td class="num" style="text-align:right;padding:6px">${fmtBRL2(d.valor_pedido)}</td>
+      <td class="num" style="text-align:right;padding:6px">${fmtBRL2(d.custo)}</td>
+      <td class="num" style="text-align:right;padding:6px;color:var(--red);font-weight:600">${fmtBRL2(d.valor_real_fechado)}</td>
+      <td class="num" style="text-align:right;padding:6px;color:${corPct};font-weight:600">${fmtPct(pctCusto)}</td>
+      <td style="text-align:center;padding:6px">${d.aceito ? '<span style="color:var(--green);font-weight:700">✓ Sim</span>' : '<span style="color:var(--red);font-weight:700">✗ Não</span>'}</td>
+    </tr>`;
+  }).join('') || '<tr><td colspan="10" style="text-align:center;padding:20px;color:var(--muted)">Nenhum desconto encontrado com esses filtros</td></tr>';
+
+  // Atualiza subtitle
+  const upd = state.descontosUpdatedAt ? new Date(state.descontosUpdatedAt).toLocaleString('pt-BR') : '—';
+  document.getElementById('descontos-subtitle').textContent = `Atualizado em ${upd} · ${raws.length} descontos no histórico`;
 }
 
 /* =========================================================================
