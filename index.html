@@ -763,8 +763,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '35';
-const APP_VERSION = '35.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '36';
+const APP_VERSION = '36.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -2989,13 +2989,17 @@ function fmtBRL2(v){
 }
 function fmtPct(v){
   if(v===null || v===undefined || isNaN(v)) return '—';
-  return Number(v).toLocaleString('pt-BR', {minimumFractionDigits:1, maximumFractionDigits:1}) + '%';
+  // Pra valores muito pequenos (< 0.1%) usa 2 casas decimais pra não virar "0,0%"
+  const abs = Math.abs(v);
+  const decimals = (abs > 0 && abs < 0.1) ? 3 : (abs < 1 ? 2 : 1);
+  return Number(v).toLocaleString('pt-BR', {minimumFractionDigits:decimals, maximumFractionDigits:decimals}) + '%';
 }
 
 function descontosMesesDisponiveis(){
-  const raws = (state.descontosRaw || []);
+  // Inclui meses que TÊM descontos OU meses que têm vendas (mesmo sem desconto ainda)
   const set = new Set();
-  raws.forEach(d => { if(d.ym) set.add(d.ym); });
+  (state.descontosRaw || []).forEach(d => { if(d.ym) set.add(d.ym); });
+  Object.keys(state.vendasByCanalMes || {}).forEach(ym => set.add(ym));
   return Array.from(set).sort().reverse();
 }
 
@@ -3080,28 +3084,34 @@ function renderDescontos(){
   // Tabela principal: agregado por canal no mês selecionado
   const agg = (state.descontosAggByMonth && state.descontosAggByMonth[ym]) || {};
   const tbody = document.getElementById('descontos-tbody');
-  const canaisOrdenados = Object.keys(agg).sort((a,b) => (agg[b].descontoTotal||0) - (agg[a].descontoTotal||0));
+  // Mostra TODOS os 5 canais sempre (mesmo com 0 descontos) pra dar visão completa
+  const TODOS_CANAIS = ['mercadolivre','amazon','magalu','casasbahia','shopee'];
+  const canaisOrdenados = TODOS_CANAIS.slice().sort((a,b) => {
+    const da = (agg[a] && agg[a].descontoTotal) || 0;
+    const db = (agg[b] && agg[b].descontoTotal) || 0;
+    return db - da;
+  });
   let tPed=0, tAce=0, tDesc=0, tCusto=0, tVendaCanais=0;
   tbody.innerHTML = canaisOrdenados.map(canal => {
     if(canalFiltro && canal !== canalFiltro) return '';
-    const a = agg[canal];
-    // Venda real do canal no mês — do kondado
+    const a = agg[canal] || {count:0, countAceito:0, descontoTotal:0, custoTotal:0, pctDescontoSobreCusto:0};
     const vendaCanal = (vendasMes[canal]) || 0;
     const pctSVenda = vendaCanal ? (a.descontoTotal/vendaCanal*100) : 0;
     tPed += a.count; tAce += a.countAceito; tDesc += a.descontoTotal;
     tCusto += a.custoTotal; tVendaCanais += vendaCanal;
-    return `<tr style="border-bottom:1px solid var(--border)">
+    const sem = a.count === 0;
+    return `<tr style="border-bottom:1px solid var(--border);${sem ? 'opacity:0.55' : ''}">
       <td style="padding:8px">${tMLabelDesc(ym)}</td>
       <td style="padding:8px"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${CANAL_COLORS[canal]};vertical-align:middle;margin-right:6px"></span>${CANAL_LABELS[canal]||canal}</td>
       <td class="num" style="text-align:right;padding:8px">${a.count}</td>
       <td class="num" style="text-align:right;padding:8px">${a.countAceito}</td>
-      <td class="num" style="text-align:right;padding:8px;color:var(--red);font-weight:600">${fmtBRL2(a.descontoTotal)}</td>
+      <td class="num" style="text-align:right;padding:8px;color:${a.descontoTotal>0?'var(--red)':'var(--muted)'};font-weight:600">${fmtBRL2(a.descontoTotal)}</td>
       <td class="num" style="text-align:right;padding:8px">${fmtBRL2(a.custoTotal)}</td>
       <td class="num" style="text-align:right;padding:8px">${vendaCanal ? fmtBRL2(vendaCanal) : '<span style="color:var(--muted)">—</span>'}</td>
       <td class="num" style="text-align:right;padding:8px;font-weight:600">${fmtPct(a.pctDescontoSobreCusto)}</td>
       <td class="num" style="text-align:right;padding:8px;font-weight:600">${vendaCanal ? fmtPct(pctSVenda) : '—'}</td>
     </tr>`;
-  }).join('') || '<tr><td colspan="9" style="text-align:center;padding:20px;color:var(--muted)">Sem dados pra esse mês/canal</td></tr>';
+  }).join('') || '<tr><td colspan="9" style="text-align:center;padding:20px;color:var(--muted)">Sem dados</td></tr>';
   const tVenda = tVendaCanais;
 
   document.getElementById('dTotPed').textContent = tPed;
