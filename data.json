@@ -13203,8 +13203,8 @@
         "valorPedidoTotal": 3916.42,
         "pctDescontoSobreCusto": 41.3,
         "pctDescontoSobreVenda": 27.16,
-        "pctDescontoSobreVendaCanal": 0.3056,
-        "vendaTotalCanal": 348015.25
+        "pctDescontoSobreVendaCanal": 0.3159,
+        "vendaTotalCanal": 336691.45
       },
       "casasbahia": {
         "count": 1,
@@ -13214,8 +13214,8 @@
         "valorPedidoTotal": 1915.77,
         "pctDescontoSobreCusto": 28.7,
         "pctDescontoSobreVenda": 18.37,
-        "pctDescontoSobreVendaCanal": 0.0419,
-        "vendaTotalCanal": 839427.47
+        "pctDescontoSobreVendaCanal": 0.0435,
+        "vendaTotalCanal": 809583.85
       },
       "mercadolivre": {
         "count": 3,
@@ -13226,7 +13226,7 @@
         "pctDescontoSobreCusto": 25.52,
         "pctDescontoSobreVenda": 16.8,
         "pctDescontoSobreVendaCanal": 0.0231,
-        "vendaTotalCanal": 2286421.4
+        "vendaTotalCanal": 2287276.06
       },
       "amazon": {
         "count": 1,
@@ -13236,8 +13236,8 @@
         "valorPedidoTotal": 1710.94,
         "pctDescontoSobreCusto": 47.65,
         "pctDescontoSobreVenda": 30.39,
-        "pctDescontoSobreVendaCanal": 0.0906,
-        "vendaTotalCanal": 574153.4
+        "pctDescontoSobreVendaCanal": 0.0955,
+        "vendaTotalCanal": 544657.62
       },
       "shopee": {
         "count": 1,
@@ -13247,8 +13247,8 @@
         "valorPedidoTotal": 588.53,
         "pctDescontoSobreCusto": 14.5,
         "pctDescontoSobreVenda": 9.86,
-        "pctDescontoSobreVendaCanal": 0.0126,
-        "vendaTotalCanal": 460362.44
+        "pctDescontoSobreVendaCanal": 0.0127,
+        "vendaTotalCanal": 457232.4
       }
     },
     "2026-03": {
@@ -13260,8 +13260,8 @@
         "valorPedidoTotal": 87835.31,
         "pctDescontoSobreCusto": 26.75,
         "pctDescontoSobreVenda": 16.86,
-        "pctDescontoSobreVendaCanal": 0.5866,
-        "vendaTotalCanal": 2525193.7
+        "pctDescontoSobreVendaCanal": 0.5999,
+        "vendaTotalCanal": 2469081.37
       },
       "shopee": {
         "count": 5,
@@ -13271,8 +13271,8 @@
         "valorPedidoTotal": 6660.76,
         "pctDescontoSobreCusto": 25.7,
         "pctDescontoSobreVenda": 16.36,
-        "pctDescontoSobreVendaCanal": 0.2785,
-        "vendaTotalCanal": 391412.68
+        "pctDescontoSobreVendaCanal": 0.2796,
+        "vendaTotalCanal": 389884.32
       },
       "casasbahia": {
         "count": 5,
@@ -13282,8 +13282,8 @@
         "valorPedidoTotal": 9010.44,
         "pctDescontoSobreCusto": 24.87,
         "pctDescontoSobreVenda": 16.09,
-        "pctDescontoSobreVendaCanal": 0.1141,
-        "vendaTotalCanal": 1271368.65
+        "pctDescontoSobreVendaCanal": 0.1195,
+        "vendaTotalCanal": 1213621.41
       }
     },
     "2026-01": {
@@ -13295,8 +13295,8 @@
         "valorPedidoTotal": 1064.07,
         "pctDescontoSobreCusto": 55.13,
         "pctDescontoSobreVenda": 33.83,
-        "pctDescontoSobreVendaCanal": 0.0276,
-        "vendaTotalCanal": 1305371.27
+        "pctDescontoSobreVendaCanal": 0.0295,
+        "vendaTotalCanal": 1222085.83
       }
     },
     "2026-04": {
@@ -13308,8 +13308,8 @@
         "valorPedidoTotal": 98277.73,
         "pctDescontoSobreCusto": 31.03,
         "pctDescontoSobreVenda": 20.31,
-        "pctDescontoSobreVendaCanal": 5.3752,
-        "vendaTotalCanal": 371375.95
+        "pctDescontoSobreVendaCanal": 0.8686,
+        "vendaTotalCanal": 2298102.15
       },
       "amazon": {
         "count": 6,
@@ -13319,8 +13319,8 @@
         "valorPedidoTotal": 8296.75,
         "pctDescontoSobreCusto": 24.95,
         "pctDescontoSobreVenda": 15.91,
-        "pctDescontoSobreVendaCanal": 2.3209,
-        "vendaTotalCanal": 56875.27
+        "pctDescontoSobreVendaCanal": 0.2162,
+        "vendaTotalCanal": 610451.38
       },
       "magalu": {
         "count": 2,
@@ -13330,8 +13330,8 @@
         "valorPedidoTotal": 8009.7,
         "pctDescontoSobreCusto": 31.53,
         "pctDescontoSobreVenda": 18.13,
-        "pctDescontoSobreVendaCanal": 3.2526,
-        "vendaTotalCanal": 44641.74
+        "pctDescontoSobreVendaCanal": 0.4492,
+        "vendaTotalCanal": 323217.38
       },
       "casasbahia": {
         "count": 12,
@@ -13341,8 +13341,8 @@
         "valorPedidoTotal": 14218.9,
         "pctDescontoSobreCusto": 31.44,
         "pctDescontoSobreVenda": 21.35,
-        "pctDescontoSobreVendaCanal": 3.0675,
-        "vendaTotalCanal": 98974.66
+        "pctDescontoSobreVendaCanal": 0.4284,
+        "vendaTotalCanal": 708714.4
       },
       "shopee": {
         "count": 1,
@@ -13352,8 +13352,8 @@
         "valorPedidoTotal": 1141.09,
         "pctDescontoSobreCusto": 47.97,
         "pctDescontoSobreVenda": 26.29,
-        "pctDescontoSobreVendaCanal": 0.2991,
-        "vendaTotalCanal": 100290.01
+        "pctDescontoSobreVendaCanal": 0.074,
+        "vendaTotalCanal": 405244.57
       }
     },
     "2025-11": {
@@ -13365,8 +13365,8 @@
         "valorPedidoTotal": 4609.79,
         "pctDescontoSobreCusto": 27.14,
         "pctDescontoSobreVenda": 19.96,
-        "pctDescontoSobreVendaCanal": 0.0609,
-        "vendaTotalCanal": 1511743.91
+        "pctDescontoSobreVendaCanal": 0.0635,
+        "vendaTotalCanal": 1449079.14
       }
     },
     "2026-05": {
@@ -13378,68 +13378,92 @@
         "valorPedidoTotal": 3027.96,
         "pctDescontoSobreCusto": 16.92,
         "pctDescontoSobreVenda": 9.91,
-        "pctDescontoSobreVendaCanal": 0,
-        "vendaTotalCanal": 0
+        "pctDescontoSobreVendaCanal": 0.0247,
+        "vendaTotalCanal": 1214519.32
       }
     }
   },
   "vendasByCanalMes": {
+    "2025-09": {
+      "mercadolivre": 1760205.45,
+      "casasbahia": 783447.88,
+      "magalu": 477914.29,
+      "amazon": 447872.13,
+      "outros": 14325.09,
+      "shopee": 170154.77
+    },
     "2025-10": {
-      "amazon": 694337.96,
-      "mercadolivre": 2139965.19,
-      "casasbahia": 1282014.83,
-      "shopee": 142949.07,
-      "magalu": 443532.1,
-      "outros": 23647.91
+      "amazon": 686163.61,
+      "mercadolivre": 2207712.15,
+      "casasbahia": 1302887.4,
+      "shopee": 144212.37,
+      "magalu": 452920.38,
+      "outros": 25836.98
     },
     "2025-11": {
-      "amazon": 1265732.81,
-      "mercadolivre": 2249383.54,
-      "outros": 204575.73,
-      "magalu": 455437.3,
-      "casasbahia": 1511743.91,
+      "amazon": 1228791.75,
+      "mercadolivre": 2243990.63,
+      "outros": 202869.72,
+      "magalu": 431768.97,
+      "casasbahia": 1449079.14,
       "shopee": 158113.48
     },
     "2025-12": {
-      "mercadolivre": 2073375.59,
-      "casasbahia": 1759962.78,
-      "amazon": 437145.41,
-      "magalu": 869257.82,
-      "outros": 710922.32
+      "mercadolivre": 2046262.11,
+      "casasbahia": 1643424.68,
+      "amazon": 415203.61,
+      "magalu": 810113.99,
+      "outros": 652630.72
     },
     "2026-01": {
-      "mercadolivre": 1723978.35,
-      "casasbahia": 1305371.27,
-      "amazon": 298222.75,
-      "shopee": 78532.8,
-      "magalu": 431655.52,
-      "outros": 555914.45
+      "mercadolivre": 1700283.41,
+      "casasbahia": 1222085.83,
+      "amazon": 291421.16,
+      "shopee": 48908.56,
+      "magalu": 406908.9,
+      "outros": 523643.91
     },
     "2026-02": {
-      "amazon": 574153.4,
-      "mercadolivre": 2286421.4,
-      "casasbahia": 839427.47,
-      "shopee": 460362.44,
-      "magalu": 348015.25,
+      "amazon": 544657.62,
+      "mercadolivre": 2287276.06,
+      "casasbahia": 809583.85,
+      "shopee": 457232.4,
+      "magalu": 336691.45,
       "outros": 55319.55
     },
     "2026-03": {
-      "mercadolivre": 2525193.7,
-      "amazon": 429431.74,
-      "casasbahia": 1271368.65,
-      "shopee": 391412.68,
-      "magalu": 485187.54,
+      "mercadolivre": 2469081.37,
+      "amazon": 416789.87,
+      "casasbahia": 1213621.41,
+      "shopee": 389884.32,
+      "magalu": 465316.51,
       "outros": 53600.77
     },
     "2026-04": {
-      "mercadolivre": 371375.95,
-      "magalu": 44641.74,
-      "shopee": 100290.01,
-      "casasbahia": 98974.66,
-      "amazon": 56875.27,
-      "outros": 6932.38
+      "mercadolivre": 2298102.15,
+      "shopee": 405244.57,
+      "casasbahia": 708714.4,
+      "amazon": 610451.38,
+      "magalu": 323217.38,
+      "outros": 64616.52
+    },
+    "2026-05": {
+      "mercadolivre": 2791964.49,
+      "casasbahia": 1214519.32,
+      "amazon": 880367.12,
+      "magalu": 740647.46,
+      "shopee": 425786.12,
+      "outros": 89412.43
+    },
+    "2026-06": {
+      "mercadolivre": 2545905.05,
+      "magalu": 516270.1,
+      "shopee": 537525.22,
+      "casasbahia": 1245491.0,
+      "amazon": 667606.6,
+      "outros": 77968.6
     }
   },
-  "vendasByCanalMesUpdatedAt": "2026-06-29T08:55:23.532336-03:00",
-  "vendasByCanalMesSource": "KONDADO tinyerp_pedidos_detalhes CSV — pedidos não-cancelados (auto-refresh)"
+  "vendasByCanalMesUpdatedAt": "2026-06-29T19:06:51.408922",
+  "vendasByCanalMesSource": "KONDADO kondado_pedidos_detalhes.csv 26/06/2026 — pedidos não-cancelados (38106 válidos)"
 }
