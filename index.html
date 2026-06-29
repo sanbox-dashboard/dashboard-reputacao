@@ -763,8 +763,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '34';
-const APP_VERSION = '34.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '35';
+const APP_VERSION = '35.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -1411,30 +1411,30 @@ function parseOcr(channelKey, text){
       result.reputacao = best;
     }
 
-    // === RECLAMAÇÃO === — busca DENTRO da seção dela
-    // A seção Reclamação aparece como "Reclamação Abaixo de 2% [bar] 7.3% X 2 -X.XX vs"
-    // Pegar o PRIMEIRO % dentro dessa janela (até "Cancelamento" ou "Expedição")
-    const recAreaMatch = norm.match(/reclama[çc][ãa]o[\s\S]{0,500}?(?=cancelamento|expedi[çc][ãa]o|$)/i);
-    if(recAreaMatch){
-      // Procura % no formato X.X ou X,X — ignora "vs" e "alerta" %
-      const recArea = recAreaMatch[0];
-      // Tira " vs. mês anterior" porque tem números que confundem
-      const limpo = recArea.replace(/[+\-]?\d+[,.]\d+\s*vs[\s\S]{0,30}/gi, ' ');
-      const m = limpo.match(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/);
-      if(m){
-        const v = parseFloat(m[1].replace(',','.'));
-        if(v >= 0 && v <= 100) result.metrics.reclamacao = v;
-      }
-    }
-
-    // === CANCELAMENTO === — busca DENTRO da seção dela (não invade Reclamação nem Expedição)
-    const cancAreaMatch = norm.match(/cancelamento[\s\S]{0,500}?(?=reclama|expedi|n[íi]vel|$)/i);
-    if(cancAreaMatch){
-      const limpo = cancAreaMatch[0].replace(/[+\-]?\d+[,.]\d+\s*vs[\s\S]{0,30}/gi, ' ');
-      const m = limpo.match(/(?<!\d)(\d{1,2}[,.]\d{1,2})\s*%/);
-      if(m){
-        const v = parseFloat(m[1].replace(',','.'));
-        if(v >= 0 && v <= 100) result.metrics.cancelados = v;
+    // === RECLAMAÇÃO E CANCELADOS === — EXTRAÇÃO POSICIONAL
+    // OCR real: "Expedição Reclamação Cancelamento [labels] 0.2% 5 7.3% 2 3.5% 4"
+    // Labels todos juntos, depois 3 valores em ORDEM (Expedição, Reclamação, Cancelamento)
+    // Estratégia: encontra a sequência "X.X% N X.X% N X.X% N" e pega os 3 valores
+    const seqMatch = norm.match(/(\d{1,2}[.,]\d{1,2})\s*%\s+\d+\s+(\d{1,2}[.,]\d{1,2})\s*%\s+\d+\s+(\d{1,2}[.,]\d{1,2})\s*%\s+\d+/);
+    if(seqMatch){
+      // [1]=Expedição (descarta), [2]=Reclamação, [3]=Cancelamento
+      const recVal = parseFloat(seqMatch[2].replace(',','.'));
+      const cancVal = parseFloat(seqMatch[3].replace(',','.'));
+      if(recVal >= 0 && recVal <= 100) result.metrics.reclamacao = recVal;
+      if(cancVal >= 0 && cancVal <= 100) result.metrics.cancelados = cancVal;
+    } else {
+      // Fallback: encontra 3 valores % em sequência (sem count obrigatório)
+      const region = norm.match(/Expedi[çc][ãa]o[\s\S]{0,1500}?(?:Vig[êe]ncia|===|$)/i) || norm.match(/Reclama[çc][ãa]o[\s\S]{0,1500}/i);
+      if(region){
+        const pcts = [...region[0].matchAll(/(?<!\d)(\d{1,2}[.,]\d{1,2})\s*%/g)]
+          .map(m => parseFloat(m[1].replace(',','.')))
+          .filter(v => v >= 0 && v <= 100);
+        // Filtra: descarta valores que são thresholds "Abaixo de X%" (5%, 2%, 3%)
+        // O regex já requer decimal X.Y, então "5%" "2%" "3%" sem decimal não entram
+        if(pcts.length >= 3){
+          result.metrics.reclamacao = pcts[1]; // 2ª posição
+          result.metrics.cancelados = pcts[2]; // 3ª posição
+        }
       }
     }
 
@@ -1447,13 +1447,20 @@ function parseOcr(channelKey, text){
   // Estratégia: depois de remover Metas e deltas, capturar os 3 valores em sequência
   if(channelKey === 'magalu'){
     // === REPUTAÇÃO === — X,X em range 1-5 (do gauge "3,4")
-    // OCR pode trazer várias falsas (datas, etc.) — pega a mais frequente
-    const repCandidates = [...norm.matchAll(/(?<!\d)(\d)[,.](\d)(?!\d)/g)]
-      .map(m => ({str: m[1] + ',' + m[2], val: parseFloat(m[1] + '.' + m[2])}))
-      .filter(x => x.val >= 1 && x.val <= 5);
+    // FILTRO IMPORTANTE: ignora valores SEGUIDOS POR letras minúsculas (placeholder garbage tipo "1.8 me's orcisar")
+    const repCandidates = [];
+    const allMatches = [...norm.matchAll(/(?<!\d)(\d)[,.](\d)(?!\d)([\s\S]{0,20})/g)];
+    for(const m of allMatches){
+      const v = parseFloat(m[1] + '.' + m[2]);
+      if(v < 1 || v > 5) continue;
+      const seguinte = m[3] || '';
+      // Skip se seguido por 2+ letras minúsculas (placeholder "me's", "orcisar", etc.)
+      if(/^\s*[a-zà-ÿ]{2,}/i.test(seguinte) && /^\s*[a-z]{2,}/.test(seguinte)) continue;
+      repCandidates.push(m[1] + ',' + m[2]);
+    }
     if(repCandidates.length){
       const freq = {};
-      repCandidates.forEach(x => freq[x.str] = (freq[x.str]||0) + 1);
+      repCandidates.forEach(v => freq[v] = (freq[v]||0) + 1);
       const best = Object.entries(freq).sort((a,b) => b[1]-a[1])[0][0];
       result.reputacao = best;
     }
@@ -1507,9 +1514,10 @@ function parseOcr(channelKey, text){
     const topMatch = norm.match(/Top\s+Lojista/i);
     if(topMatch){ result.reputacao = 'Top Lojista'; }
 
-    // === TAXA DE RESPOSTA === — busca FLEXÍVEL ("Taxa de", "Taxade", "Texade")
-    const tRespArea = norm.match(/Tax?[ae]\s*d?e?\s*Resposta[\s\S]{0,300}/i)
-                   || norm.match(/Texade\s+Resposta[\s\S]{0,300}/i);
+    // === TAXA DE RESPOSTA === — regex FLEXÍVEL pra todas as variantes do OCR
+    // Pode aparecer como: "Taxa de Resposta", "Taxade Resposta", "Texade Resposta", "TaxadeResposta"
+    const tRespArea = norm.match(/T[ae]x[ae]?\s*d?e?\s*Resposta[\s\S]{0,300}/i)
+                   || norm.match(/Resposta[\s\S]{0,200}/i); // último fallback
     if(tRespArea){
       // Pega TODOS os valores X.XX% no range 50-100%
       const pcts = [...tRespArea[0].matchAll(/(?<!\d)(\d{1,3}[,.]\d{1,2})\s*%/g)]
