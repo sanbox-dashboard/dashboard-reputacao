@@ -763,8 +763,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '32';
-const APP_VERSION = '32.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '33';
+const APP_VERSION = '33.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -1363,32 +1363,13 @@ function parseOcr(channelKey, text){
 
   // ===== Casas Bahia =====
   if(channelKey === 'casasbahia'){
-    // === REPUTAÇÃO === (número grande 1-5 do gauge "Sanbox Eletro / Top Lojista / X")
-    // Estratégia A: número antes de "vs. mês anterior" (mais comum)
-    let candidatos = [];
-    const repVs = [...norm.matchAll(/(?<!\d)(\d(?:[,.]\d)?)\s+[+\-↑↓\^v]?\s*\d+[,.]?\d*\s+vs/gi)];
-    for(const m of repVs){
-      const v = parseFloat(m[1].replace(',','.'));
-      if(v >= 1 && v <= 5) candidatos.push(v);
-    }
-    // Estratégia B: primeiro INTEIRO 1-5 logo após "Top Lojista" ou após uma seta ↑↓
-    const topMatch = norm.match(/top\s+lojista[\s\S]{0,100}?(?<!\d)(\d)(?!\d)/i);
-    if(topMatch){
-      const v = parseInt(topMatch[1]);
-      if(v >= 1 && v <= 5) candidatos.unshift(v); // prioridade
-    }
-    const setaMatch = norm.match(/[↑↓\^v]\s*(\d)(?!\d)/i);
-    if(setaMatch){
-      const v = parseInt(setaMatch[1]);
-      if(v >= 1 && v <= 5) candidatos.unshift(v);
-    }
-    if(candidatos.length){
-      // Pega o MAIS FREQUENTE (mais provável de ser o correto)
-      const freq = {};
-      candidatos.forEach(v => freq[v] = (freq[v]||0) + 1);
-      const best = Object.entries(freq).sort((a,b) => b[1]-a[1])[0][0];
-      result.reputacao = best.includes('.') ? best.replace('.', ',') : best;
-    }
+    // === REPUTAÇÃO === — único padrão CONFIÁVEL: dígito seguido de delta-com-decimal + "vs"
+    // Ex: "4 +1.40 vs" / "↑ 4 +1.40 vs" / "4 -3.89 vs"
+    // Esse é o ÚNICO lugar onde o "vs" aparece com delta decimal — a primeira ocorrência é a reputação,
+    // depois vem reclamação, cancelamento, expedição (cada uma com seu "vs")
+    const repVsMatches = [...norm.matchAll(/(?<!\d)(\d)\s+[+\-↑↓\^v]{0,2}\s*\d+[,.]\d+\s+vs/gi)];
+    const validReps = repVsMatches.map(m => parseInt(m[1])).filter(v => v >= 1 && v <= 5);
+    if(validReps.length) result.reputacao = String(validReps[0]); // primeiro = reputação (topo da página)
 
     // === RECLAMAÇÃO === — busca DENTRO da seção dela
     // A seção Reclamação aparece como "Reclamação Abaixo de 2% [bar] 7.3% X 2 -X.XX vs"
