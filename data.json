@@ -15277,6 +15277,6 @@
       "outros": 77968.6
     }
   },
-  "vendasByCanalMesUpdatedAt": "2026-06-29T19:06:51.408922",
-  "vendasByCanalMesSource": "KONDADO kondado_pedidos_detalhes.csv 26/06/2026 — pedidos não-cancelados (38106 válidos)"
+  "vendasByCanalMesUpdatedAt": "2026-06-30T08:28:34.164257-03:00",
+  "vendasByCanalMesSource": "KONDADO tinyerp_pedidos_detalhes CSV — auto-refresh diário"
 }
