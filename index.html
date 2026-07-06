@@ -836,8 +836,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '39';
-const APP_VERSION = '39.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '40';
+const APP_VERSION = '40.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -944,6 +944,9 @@ function renderTodayCards(){
     const todaySac = todayEntry.sacForaPrazo ?? data.sacForaPrazo;
     const todayCriticos = todayEntry.casosCriticos ?? data.casosCriticos;
     const todayDevolucao = todayEntry.solicitacaoDevolucao ?? data.solicitacaoDevolucao;
+    // NOVO: split 20-30d (amarelo) e 30+d (vermelho) — usa novos campos, com fallback pro legacy
+    const todayDevAmarelo = todayEntry.solicitacaoDevolucaoAmarelo;
+    const todayDevVermelho = todayEntry.solicitacaoDevolucaoVermelho;
     let worst = 'unknown';
     let metricsHtml = '';
     Object.entries(ch.metrics).forEach(([mKey, m])=>{
@@ -984,26 +987,45 @@ function renderTodayCards(){
       </div>
       <span class="value">${sac===null?'—':sac}</span>
     </div>`;
-    // Métrica Casos Críticos fora do prazo (10 dias)
+    // Métrica Casos Críticos fora do prazo (30 dias — atualizado da regra 10d)
     const criticos = (todayCriticos===undefined||todayCriticos===null||todayCriticos==='')?null:parseInt(todayCriticos);
-    const criticosStatus = criticos===null ? '' : (criticos===0?'green': criticos<=3?'yellow':'red');
+    // Novo: qualquer caso >30d = vermelho (era gradual amarelo/vermelho)
+    const criticosStatus = criticos===null ? '' : (criticos===0?'green':'red');
     const criticosHtml = `<div class="tickets-row sac-row ${criticosStatus}">
       <div class="label-block">
         <span class="label">🚨 Casos Críticos fora do prazo</span>
-        <span class="meta-info">Casos Críticos > 10 dias (Octadesk)</span>
+        <span class="meta-info">Casos Críticos > 30 dias (Octadesk)</span>
       </div>
       <span class="value">${criticos===null?'—':criticos}</span>
     </div>`;
-    // Métrica Solicitação de Devolução fora do prazo (20 dias)
-    const devolucao = (todayDevolucao===undefined||todayDevolucao===null||todayDevolucao==='')?null:parseInt(todayDevolucao);
-    const devolucaoStatus = devolucao===null ? '' : (devolucao===0?'green': devolucao<=3?'yellow':'red');
+    // Métrica Solicitação de Devolução — SPLIT 20-30d (amarelo) + 30+d (vermelho)
+    const devAmarelo = (todayDevAmarelo===undefined||todayDevAmarelo===null||todayDevAmarelo==='')?null:parseInt(todayDevAmarelo);
+    const devVermelho = (todayDevVermelho===undefined||todayDevVermelho===null||todayDevVermelho==='')?null:parseInt(todayDevVermelho);
+    // Total pra display (soma dos dois, ou o campo legacy se não tem split)
+    const devTotal = (devAmarelo !== null || devVermelho !== null)
+      ? ((devAmarelo||0) + (devVermelho||0))
+      : ((todayDevolucao===undefined||todayDevolucao===null||todayDevolucao==='')?null:parseInt(todayDevolucao));
+    // Status: vermelho se algum 30+d, amarelo se algum 20-30d sem 30+d, verde se zero
+    let devolucaoStatus = '';
+    if(devTotal === null) devolucaoStatus = '';
+    else if((devVermelho||0) > 0) devolucaoStatus = 'red';
+    else if((devAmarelo||0) > 0) devolucaoStatus = 'yellow';
+    else if(devTotal === 0) devolucaoStatus = 'green';
+    else devolucaoStatus = 'red'; // fallback legacy: qualquer count > 0
+    // Display: se tem split, mostra "3 (🟡2 🔴1)". Se não, só o total
+    const devDisplayValue = devTotal === null ? '—'
+      : (devAmarelo !== null || devVermelho !== null)
+        ? `${devTotal}<span style="font-size:11px;font-weight:400;color:var(--muted);margin-left:6px">🟡${devAmarelo||0} 🔴${devVermelho||0}</span>`
+        : String(devTotal);
     const devolucaoHtml = `<div class="tickets-row sac-row ${devolucaoStatus}">
       <div class="label-block">
         <span class="label">📦 Solicitação Devolução fora do prazo</span>
-        <span class="meta-info">Solicitação de Devolução > 20 dias (Octadesk)</span>
+        <span class="meta-info">🟡 20-30 dias · 🔴 +30 dias (Octadesk)</span>
       </div>
-      <span class="value">${devolucao===null?'—':devolucao}</span>
+      <span class="value">${devDisplayValue}</span>
     </div>`;
+    // Aliases pra compat com o bloco de baixo
+    const devolucao = devTotal;
     // Inclui as 4 contagens de tickets no cálculo de "worst" pra o alerta inferior
     [tStatus, sacStatus, criticosStatus, devolucaoStatus].forEach(st => {
       if(st === 'red') worst = 'red';
