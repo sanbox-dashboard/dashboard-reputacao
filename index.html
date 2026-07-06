@@ -570,16 +570,22 @@
                 <td style="padding:10px 12px;color:#9ca3af">—</td>
               </tr>
               <tr style="background:#f5f7fb;border-bottom:1px solid var(--border)">
-                <td style="padding:10px 12px;font-weight:600">Devoluções 1-3</td>
+                <td style="padding:10px 12px;font-weight:600">Devolução 20-30 dias (amarelo)</td>
                 <td style="padding:10px 12px;color:#9ca3af">—</td>
                 <td style="padding:10px 12px;color:#92400e">− R$ 50 por canal</td>
                 <td style="padding:10px 12px;color:#9ca3af">—</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border)">
-                <td style="padding:10px 12px;font-weight:600">Devoluções 4+</td>
+                <td style="padding:10px 12px;font-weight:600">Devolução +30 dias (vermelho)</td>
                 <td style="padding:10px 12px;color:#9ca3af">—</td>
                 <td style="padding:10px 12px;color:#991b1b;font-weight:600">− R$ 100 por canal</td>
                 <td style="padding:10px 12px;color:#9ca3af">—</td>
+              </tr>
+              <tr style="background:#f5f7fb;border-bottom:1px solid var(--border)">
+                <td style="padding:10px 12px;font-weight:600">Casos críticos +30d</td>
+                <td style="padding:10px 12px;color:#9ca3af">—</td>
+                <td style="padding:10px 12px;color:#9ca3af">—</td>
+                <td style="padding:10px 12px;color:#991b1b;font-weight:600">− R$ 80 por canal</td>
               </tr>
               <tr style="background:#f5f7fb">
                 <td style="padding:10px 12px;font-weight:600">Coletivo (qq canal vermelho)</td>
@@ -830,8 +836,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '38';
-const APP_VERSION = '38.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '39';
+const APP_VERSION = '39.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -2359,25 +2365,37 @@ async function forceFullResync(){
   if(!confirm('Vai apagar os dados locais deste aparelho e re-baixar do GitHub. Use só se este aparelho está mostrando dados diferentes dos outros. Continuar?')) return;
   const btn = document.getElementById('force-resync-btn');
   if(btn){ btn.textContent = '⏳ Re-sincronizando...'; btn.disabled = true; }
+  const c = ghGetConfig();
+  const logSteps = [];
+  const log = (msg) => { console.log('[forceFullResync]', msg); logSteps.push(msg); };
   try{
+    log(`Config: repo=${c.repo}, branch=${c.branch}, pat=${c.pat ? 'presente' : 'AUSENTE'}`);
     // 1. Limpa o estado em memória e no localStorage (mas mantém GH config)
-    const ghCfg = localStorage.getItem(GH_CONFIG_KEY);
     state = {entries:{}, channels: state.channels || {}};
     _origSave();
+    log('Estado local zerado');
     // 2. Fetch direto do GitHub (sem merge)
-    const {content} = await ghGetFile(false);
-    if(!content) throw new Error('GitHub retornou vazio');
+    log('Buscando data.json...');
+    const {content, sha} = await ghGetFile(false);
+    log(`Fetch retornou: content=${content ? 'OK ('+Object.keys(content).length+' keys)' : 'NULL'}, sha=${sha||'—'}`);
+    if(!content) throw new Error('GitHub retornou vazio (verifique se o repo tem data.json)');
+    const days = Object.keys(content.entries||{}).length;
+    log(`GitHub tem ${days} dias em entries`);
     state = content;
     carryOverTickets();
     _origSave();
     // 3. Re-render tudo
     renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro(); renderTabs();
-    const days = Object.keys(state.entries||{}).length;
     ghLog(`✓ Re-sincronizado: ${days} dias carregados do GitHub`, 'ok');
     if(btn){ btn.textContent = '✓ OK'; setTimeout(()=>{ btn.textContent='🔁 Forçar sincronização total'; btn.disabled=false; }, 2500); }
   }catch(e){
     console.error('Force resync failed:', e);
-    ghLog('⚠ Erro na re-sincronização: '+e.message, 'err');
+    // Erro DETALHADO na tela — não deixa passar despercebido
+    const detalhado = `ERRO na re-sincronização:\n\n${e.message}\n\nLog:\n${logSteps.join('\n')}\n\nAção: copie essa mensagem e mande pro Davi.`;
+    alert(detalhado);
+    ghLog('⚠ Erro: '+e.message.slice(0,80), 'err');
+    lastPushError = {when: new Date(), msg: 'ForceResync: '+e.message};
+    updatePushAlertBanner();
     if(btn){ btn.textContent = '⚠ Erro'; setTimeout(()=>{ btn.textContent='🔁 Forçar sincronização total'; btn.disabled=false; }, 2500); }
   }
 }
@@ -2388,11 +2406,24 @@ async function forcePushAll(){
   if(!confirm('Vai enviar TODOS os dados deste aparelho pro GitHub (com merge — não sobrescreve). Continuar?')) return;
   const btn = document.getElementById('force-push-btn');
   if(btn){ btn.textContent = '⏳ Enviando...'; btn.disabled = true; }
+  const c = ghGetConfig();
   try{
+    // Diagnóstico local
+    const stateStr = JSON.stringify(state);
+    const days = Object.keys(state.entries||{}).length;
+    console.log(`[forcePushAll] Estado local: ${(stateStr.length/1024).toFixed(1)}KB, ${days} dias`);
+    console.log(`[forcePushAll] Config: repo=${c.repo}, PAT=${c.pat ? 'presente' : 'AUSENTE'}`);
+    if(!c.pat) throw new Error('PAT não configurado — abra "Configuração avançada"');
     await ghPush(false);
     lastPushOk = new Date();
+    alert(`✓ Push OK!\n\nEnviado ${days} dias ao GitHub.\n\nSe outros aparelhos ainda não mostram os dados, peça pra eles clicarem em "🔁 Forçar sincronização total".`);
     if(btn){ btn.textContent = '✓ OK'; setTimeout(()=>{ btn.textContent='⬆ Forçar push deste aparelho'; btn.disabled=false; }, 2500); }
   }catch(e){
+    console.error('[forcePushAll] Falhou:', e);
+    const detalhado = `ERRO no push:\n\n${e.message}\n\nDiagnóstico:\n- Repo: ${c.repo}\n- PAT: ${c.pat ? 'configurado' : 'AUSENTE'}\n- Dias no estado local: ${Object.keys(state.entries||{}).length}\n\nAção: copie essa mensagem e mande pro Davi.`;
+    alert(detalhado);
+    lastPushError = {when: new Date(), msg: 'ForcePush: '+e.message};
+    updatePushAlertBanner();
     if(btn){ btn.textContent = '⚠ Erro'; setTimeout(()=>{ btn.textContent='⬆ Forçar push deste aparelho'; btn.disabled=false; }, 2500); }
   }
 }
@@ -2802,8 +2833,8 @@ function piorCor(a, b){
 
 const COMISSAO_CANAIS = ['amazon','casasbahia','magalu','shopee','mercadolivre'];
 const COMISSAO_PESSOAS = [
-  {nome: 'Atendente 1', canais: ['amazon','casasbahia'], base: 500, tipo: 'atendente'},
-  {nome: 'Atendente 2', canais: ['magalu','shopee'],    base: 500, tipo: 'atendente'},
+  {nome: 'Atendente 1', canais: ['amazon','magalu'],    base: 500, tipo: 'atendente'},
+  {nome: 'Atendente 2', canais: ['casasbahia','shopee'], base: 500, tipo: 'atendente'},
   {nome: 'Atendente 3', canais: ['mercadolivre'],       base: 500, tipo: 'atendente'},
   {nome: 'Logística',   canais: COMISSAO_CANAIS,         base: 500, tipo: 'logistica'},
   {nome: 'Coordenador', canais: COMISSAO_CANAIS,         base: 1000, tipo: 'coordenador'},
@@ -2841,11 +2872,13 @@ function calcularComissao(ym, cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed){
       if(algumVermelho) linha.coletivo = -50;
     }
     else if(p.tipo === 'logistica'){
-      // -R$50 por canal com 1-3 devoluções, -R$100 por canal com 4+
+      // NOVA REGRA: devoluções 20-30d = amarelo (-R$50/canal), 30+d = vermelho (-R$100/canal)
+      // Vermelho tem precedência sobre amarelo no mesmo canal
       COMISSAO_CANAIS.forEach(c => {
-        const dev = ultimoDoMes(c, ym, 'solicitacaoDevolucao');
-        if(dev >= 4) linha.logistica -= 100;
-        else if(dev >= 1) linha.logistica -= 50;
+        const vermelho = ultimoDoMes(c, ym, 'solicitacaoDevolucaoVermelho');
+        const amarelo = ultimoDoMes(c, ym, 'solicitacaoDevolucaoAmarelo');
+        if(vermelho > 0) linha.logistica -= 100;
+        else if(amarelo > 0) linha.logistica -= 50;
       });
       if(algumVermelho) linha.coletivo = -50;
     }
