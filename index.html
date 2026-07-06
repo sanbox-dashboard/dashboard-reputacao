@@ -830,8 +830,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '37';
-const APP_VERSION = '37.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '38';
+const APP_VERSION = '38.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -2330,7 +2330,7 @@ async function silentPull(){
   }
   updateReloadIndicator();
 }
-setInterval(silentPull, 30 * 1000); // a cada 30s — mais agressivo pra sync multi-PC
+setInterval(silentPull, 15 * 1000); // a cada 15s — sync agressivo pra ver updates da tarefa agendada quase em tempo real
 
 // Detecta entradas (canais por dia) que existem no estado local mas NÃO no remoto.
 // Retorna lista tipo ["2026-06-25/mercadolivre", ...] pra log/recovery.
@@ -2657,12 +2657,14 @@ function ticketsRender(){
   const fLoja = document.getElementById('fLoja');
   const fTransp = document.getElementById('fTransp');
   if(!fMes || !fLoja || !fTransp) return;
-  // Lista de meses disponíveis (descendente)
-  const meses = tUniq(data.map(r => r.ym)).sort().reverse();
-  // Mês vigente (YYYY-MM)
+  // Lista de meses disponíveis (descendente) — SEMPRE inclui o mês vigente
+  // pra novos meses (Julho, Agosto…) já aparecerem no filtro mesmo sem tickets ainda
   const mesVigente = todayKey().slice(0, 7);
-  // Default ao abrir: mês vigente. Se não tiver dados, mês mais recente disponível.
-  const mesDefault = meses.includes(mesVigente) ? mesVigente : (meses[0] || '__all');
+  const mesesSet = new Set(data.map(r => r.ym));
+  mesesSet.add(mesVigente);
+  const meses = Array.from(mesesSet).sort().reverse();
+  // Default ao abrir: mês vigente.
+  const mesDefault = mesVigente;
   // Se filtro nunca foi tocado, usa default. Senão respeita escolha do usuário.
   const curMes = fMes.dataset.initialized ? (fMes.value || '__all') : mesDefault;
   fMes.dataset.initialized = '1';
@@ -3061,10 +3063,12 @@ function fmtPct(v){
 }
 
 function descontosMesesDisponiveis(){
-  // Inclui meses que TÊM descontos OU meses que têm vendas (mesmo sem desconto ainda)
+  // Inclui: meses com descontos + meses com vendas + SEMPRE o mês vigente
+  // Isso garante que um novo mês (Julho, Agosto…) aparece no filtro imediatamente
   const set = new Set();
   (state.descontosRaw || []).forEach(d => { if(d.ym) set.add(d.ym); });
   Object.keys(state.vendasByCanalMes || {}).forEach(ym => set.add(ym));
+  set.add(todayKey().slice(0, 7)); // mês vigente
   return Array.from(set).sort().reverse();
 }
 
