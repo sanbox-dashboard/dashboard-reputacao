@@ -837,7 +837,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '40';
-const APP_VERSION = '40.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '40.1';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -2076,10 +2076,11 @@ async function ghGetFile(requireSha=false){
   for(let attempt = 1; attempt <= 3; attempt++){
     try{
       const url = `https://api.github.com/repos/${c.repo}/contents/data.json?ref=${branch}&_=${Date.now()}`;
+      // NÃO enviar 'Cache-Control'/'Pragma': o CORS da api.github.com não permite
+      // esses headers no preflight → o navegador aborta com "Failed to fetch"
+      // (era a causa do push nunca funcionar). ?_=Date.now() + cache:'no-store' já evitam cache.
       const headers = {
-        'Accept': 'application/vnd.github+json',
-        'Cache-Control': 'no-cache, no-store, must-revalidate',
-        'Pragma': 'no-cache'
+        'Accept': 'application/vnd.github+json'
       };
       if(c.pat) headers['Authorization'] = 'Bearer '+c.pat;
       const res = await fetch(url, {cache: 'no-store', headers});
