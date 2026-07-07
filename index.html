@@ -837,7 +837,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '40';
-const APP_VERSION = '40.1';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '40.2';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -2090,8 +2090,17 @@ async function ghGetFile(requireSha=false){
       }
       if(!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
+      let b64 = (data.content || '').replace(/\s/g,'');
+      // Arquivos >1MB: a contents API devolve content vazio (encoding:"none").
+      // Nesse caso busca o blob direto (funciona até 100MB).
+      if(!b64 && data.git_url){
+        const blobRes = await fetch(data.git_url + '?_=' + Date.now(), {cache:'no-store', headers});
+        if(!blobRes.ok) throw new Error(`Blob HTTP ${blobRes.status}`);
+        b64 = ((await blobRes.json()).content || '').replace(/\s/g,'');
+      }
+      if(!b64) throw new Error('API devolveu conteúdo vazio');
       // Decode UTF-8 correto
-      const binary = atob(data.content.replace(/\s/g,''));
+      const binary = atob(b64);
       const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
       const decoded = new TextDecoder('utf-8').decode(bytes);
       return {content: JSON.parse(decoded), sha: data.sha};
@@ -2128,6 +2137,28 @@ async function ghPull(){
   }catch(e){ ghLog('Erro: '+e.message, 'err'); }
 }
 
+// Conserta mojibake acumulado (UTF-8 re-encodado como latin1 em versões antigas)
+// e impede que campos de texto curtos virem blobs gigantes de novo.
+function sanitizeReputacao(v){
+  if(typeof v !== 'string') return v;
+  let prev = null;
+  while(v !== prev && v.length > 40){
+    prev = v;
+    try{ const c = decodeURIComponent(escape(v)); if(c.length < v.length) v = c; else break; }catch(e){ break; }
+  }
+  return v.length > 300 ? v.slice(0, 200) : v;
+}
+function sanitizeState(st){
+  try{
+    if(st && st.entries) Object.values(st.entries).forEach(canais => {
+      if(canais && typeof canais === 'object') Object.values(canais).forEach(e => {
+        if(e && typeof e.reputacao === 'string') e.reputacao = sanitizeReputacao(e.reputacao);
+      });
+    });
+  }catch(e){ console.warn('sanitizeState:', e); }
+  return st;
+}
+
 async function ghPush(silent){
   const c = ghGetConfig();
   if(!c.repo || !c.pat){ if(!silent) ghLog('Configure o GitHub primeiro.', 'err'); return; }
@@ -2141,7 +2172,7 @@ async function ghPush(silent){
       // CRÍTICO: faz MERGE entre o estado local e o remoto antes de pushar.
       // Sem isso, o push sobrescreve campos que outros writers (scheduled task,
       // outros usuários) gravaram entre nosso último pull e este push.
-      const toPush = cur.content ? mergeWithRemote(cur.content) : state;
+      const toPush = sanitizeState(cur.content ? mergeWithRemote(cur.content) : state);
       // Atualiza estado local com merged pra render consistente
       state = toPush;
       _origSave();
