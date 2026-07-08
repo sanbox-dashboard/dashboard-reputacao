@@ -1777,13 +1777,17 @@
         "ts": "2026-07-08T12:40:55.705Z"
       },
       "magalu": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "3,4",
+        "metrics": {
+          "agilidade": 94.6,
+          "cancelamento": 7.1,
+          "avaliacao": 3.4
+        },
         "tickets": 0,
         "sacForaPrazo": 0,
         "casosCriticos": 4,
         "solicitacaoDevolucao": 4,
-        "ts": "1970-01-01T00:00:00.000Z"
+        "ts": "2026-07-08T12:42:38.936Z"
       },
       "casasbahia": {
         "reputacao": "",
