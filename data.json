@@ -1869,7 +1869,7 @@
         },
         "tickets": 0,
         "sacForaPrazo": 3,
-        "casosCriticos": 8,
+        "casosCriticos": 10,
         "solicitacaoDevolucao": 8,
         "ts": "2026-07-09T17:30:18.897Z"
       },
@@ -1883,7 +1883,7 @@
         "tickets": 1,
         "sacForaPrazo": 12,
         "casosCriticos": 5,
-        "solicitacaoDevolucao": 4,
+        "solicitacaoDevolucao": 5,
         "ts": "2026-07-09T17:31:50.195Z"
       },
       "magalu": {
@@ -1906,9 +1906,9 @@
           "cancelados": 3.7
         },
         "tickets": 8,
-        "sacForaPrazo": 2,
+        "sacForaPrazo": 1,
         "casosCriticos": 26,
-        "solicitacaoDevolucao": 7,
+        "solicitacaoDevolucao": 9,
         "ts": "2026-07-09T17:35:42.584Z"
       },
       "shopee": {
@@ -1922,7 +1922,7 @@
         "tickets": 0,
         "sacForaPrazo": 2,
         "casosCriticos": 17,
-        "solicitacaoDevolucao": 7,
+        "solicitacaoDevolucao": 10,
         "ts": "2026-07-09T17:36:40.453Z"
       }
     },
