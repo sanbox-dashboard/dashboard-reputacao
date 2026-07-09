@@ -1917,7 +1917,6 @@
         "tickets": 0,
         "sacForaPrazo": 5,
         "casosCriticos": 10,
-        "solicitacaoDevolucao": null,
         "ts": "2026-07-09T16:55:39.492Z"
       },
       "amazon": {
@@ -1969,7 +1968,6 @@
         "tickets": 0,
         "sacForaPrazo": 4,
         "casosCriticos": 13,
-        "solicitacaoDevolucao": null,
         "ts": "2026-07-09T16:55:39.492Z"
       }
     },
@@ -2053,7 +2051,6 @@
         "tickets": 0,
         "sacForaPrazo": 5,
         "casosCriticos": 10,
-        "solicitacaoDevolucao": null,
         "ts": "2026-07-09T16:55:39.492Z"
       },
       "amazon": {
@@ -2105,7 +2102,6 @@
         "tickets": 0,
         "sacForaPrazo": 4,
         "casosCriticos": 13,
-        "solicitacaoDevolucao": null,
         "ts": "2026-07-09T16:55:39.492Z"
       }
     }
