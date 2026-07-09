@@ -1815,6 +1815,43 @@
         "solicitacaoDevolucao": 7,
         "ts": "2026-07-08T12:47:08.249Z"
       }
+    },
+    "2026-07-09": {
+      "mercadolivre": {
+        "tickets": 0,
+        "metrics": {},
+        "sacForaPrazo": 3,
+        "casosCriticos": 8,
+        "solicitacaoDevolucao": 8
+      },
+      "amazon": {
+        "tickets": 1,
+        "metrics": {},
+        "sacForaPrazo": 12,
+        "casosCriticos": 5,
+        "solicitacaoDevolucao": 4
+      },
+      "magalu": {
+        "tickets": 0,
+        "metrics": {},
+        "sacForaPrazo": 0,
+        "casosCriticos": 4,
+        "solicitacaoDevolucao": 4
+      },
+      "casasbahia": {
+        "tickets": 8,
+        "metrics": {},
+        "sacForaPrazo": 2,
+        "casosCriticos": 26,
+        "solicitacaoDevolucao": 7
+      },
+      "shopee": {
+        "tickets": 0,
+        "metrics": {},
+        "sacForaPrazo": 2,
+        "casosCriticos": 17,
+        "solicitacaoDevolucao": 7
+      }
     }
   },
   "ticketsRaw": [
@@ -15299,7 +15336,7 @@
         "valorPedidoTotal": 1542.92,
         "pctDescontoSobreCusto": 28.05,
         "pctDescontoSobreVenda": 19.44,
-        "vendaTotalCanal": 1245491.0,
+        "vendaTotalCanal": 1245491,
         "pctDescontoSobreVendaCanal": 0.0241
       }
     }
@@ -15380,7 +15417,7 @@
       "mercadolivre": 2545905.05,
       "magalu": 516270.1,
       "shopee": 537525.22,
-      "casasbahia": 1245491.0,
+      "casasbahia": 1245491,
       "amazon": 667606.6,
       "outros": 77968.6
     }
