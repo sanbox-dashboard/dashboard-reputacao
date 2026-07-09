@@ -1609,96 +1609,138 @@
     },
     "2026-07-06": {
       "mercadolivre": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "MercadoLíder Platinum",
+        "metrics": {
+          "reclamacoes": 0.71,
+          "mediacoes": 0.21,
+          "canceladas": 0.16,
+          "enviosIncorretos": 0.21
+        },
         "tickets": 0,
         "sacForaPrazo": 3,
         "casosCriticos": 8,
         "solicitacaoDevolucao": 8,
-        "ts": "2026-07-06T21:23:54.698Z"
+        "ts": "2026-07-09T16:55:39.492Z"
       },
       "amazon": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "270",
+        "metrics": {
+          "pedidosProblema": 1.36,
+          "cancelamentoEnvio": 0.25,
+          "rastreamento": null
+        },
         "tickets": 1,
         "sacForaPrazo": 12,
         "casosCriticos": 5,
         "solicitacaoDevolucao": 4,
-        "ts": "2026-07-06T21:23:54.698Z"
+        "ts": "2026-07-09T16:55:39.492Z"
       },
       "magalu": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "3,4",
+        "metrics": {
+          "agilidade": 94.5,
+          "cancelamento": 6.2,
+          "avaliacao": 3.4
+        },
         "tickets": 0,
         "sacForaPrazo": 0,
         "casosCriticos": 4,
         "solicitacaoDevolucao": 4,
-        "ts": "2026-07-06T21:23:54.698Z"
+        "ts": "2026-07-09T16:55:39.492Z"
       },
       "casasbahia": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "3,7",
+        "metrics": {
+          "reclamacao": 5.1,
+          "cancelados": 4.6
+        },
         "tickets": 8,
         "sacForaPrazo": 2,
         "casosCriticos": 26,
         "solicitacaoDevolucao": 7,
-        "ts": "2026-07-06T21:23:54.698Z"
+        "ts": "2026-07-09T16:55:39.492Z"
       },
       "shopee": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "4,86",
+        "metrics": {
+          "taxaResposta": 97.32,
+          "boaAvaliacao": 96,
+          "notaLoja": 4.86,
+          "ruinsNaoRespondidas": 0
+        },
         "tickets": 0,
         "sacForaPrazo": 2,
         "casosCriticos": 17,
         "solicitacaoDevolucao": 7,
-        "ts": "2026-07-06T21:23:54.698Z"
+        "ts": "2026-07-09T16:55:39.492Z"
       }
     },
     "2026-07-07": {
       "mercadolivre": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "MercadoLíder Platinum",
+        "metrics": {
+          "reclamacoes": 0.71,
+          "mediacoes": 0.21,
+          "canceladas": 0.16,
+          "enviosIncorretos": 0.19
+        },
         "tickets": 0,
         "sacForaPrazo": 3,
         "casosCriticos": 8,
         "solicitacaoDevolucao": 8,
-        "ts": "1970-01-01T00:00:00.000Z"
+        "ts": "2026-07-09T16:55:39.492Z"
       },
       "amazon": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "274",
+        "metrics": {
+          "pedidosProblema": 1.37,
+          "cancelamentoEnvio": 0.46,
+          "rastreamento": null
+        },
         "tickets": 1,
         "sacForaPrazo": 12,
         "casosCriticos": 5,
         "solicitacaoDevolucao": 4,
-        "ts": "1970-01-01T00:00:00.000Z"
+        "ts": "2026-07-09T16:55:39.492Z"
       },
       "magalu": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "3,4",
+        "metrics": {
+          "agilidade": 94.3,
+          "cancelamento": 6.5,
+          "avaliacao": 1.2
+        },
         "tickets": 0,
         "sacForaPrazo": 0,
         "casosCriticos": 4,
         "solicitacaoDevolucao": 4,
-        "ts": "1970-01-01T00:00:00.000Z"
+        "ts": "2026-07-09T16:55:39.492Z"
       },
       "casasbahia": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "3,7",
+        "metrics": {
+          "reclamacao": 5.1,
+          "cancelados": 4.6
+        },
         "tickets": 8,
         "sacForaPrazo": 2,
         "casosCriticos": 26,
         "solicitacaoDevolucao": 7,
-        "ts": "1970-01-01T00:00:00.000Z"
+        "ts": "2026-07-09T16:55:39.492Z"
       },
       "shopee": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "4,86",
+        "metrics": {
+          "taxaResposta": 97.21,
+          "boaAvaliacao": 96,
+          "notaLoja": 4.86,
+          "ruinsNaoRespondidas": null
+        },
         "tickets": 0,
         "sacForaPrazo": 2,
         "casosCriticos": 17,
         "solicitacaoDevolucao": 7,
-        "ts": "1970-01-01T00:00:00.000Z"
+        "ts": "2026-07-09T16:55:39.492Z"
       }
     },
     "2026-06-27": {
@@ -1861,6 +1903,210 @@
         "casosCriticos": 17,
         "solicitacaoDevolucao": 7,
         "ts": "1970-01-01T00:00:00.000Z"
+      }
+    },
+    "2026-07-01": {
+      "mercadolivre": {
+        "reputacao": "MercadoLíder Platinum",
+        "metrics": {
+          "reclamacoes": 0.65,
+          "mediacoes": 0.23,
+          "canceladas": 0.16,
+          "enviosIncorretos": 0.25
+        },
+        "tickets": 0,
+        "sacForaPrazo": 5,
+        "casosCriticos": 10,
+        "solicitacaoDevolucao": null,
+        "ts": "2026-07-09T16:55:39.492Z"
+      },
+      "amazon": {
+        "reputacao": "264",
+        "metrics": {
+          "pedidosProblema": 1.44,
+          "cancelamentoEnvio": 0,
+          "rastreamento": null
+        },
+        "tickets": 1,
+        "sacForaPrazo": 15,
+        "casosCriticos": 4,
+        "solicitacaoDevolucao": 6,
+        "ts": "2026-07-09T16:55:39.492Z"
+      },
+      "magalu": {
+        "reputacao": "3,4",
+        "metrics": {
+          "agilidade": 94.6,
+          "cancelamento": 5.6,
+          "avaliacao": 3.4
+        },
+        "tickets": 2,
+        "sacForaPrazo": 2,
+        "casosCriticos": 2,
+        "solicitacaoDevolucao": 7,
+        "ts": "2026-07-09T16:55:39.492Z"
+      },
+      "casasbahia": {
+        "reputacao": "3,7",
+        "metrics": {
+          "reclamacao": 5.1,
+          "cancelados": 4.6
+        },
+        "tickets": 6,
+        "sacForaPrazo": 13,
+        "casosCriticos": 17,
+        "solicitacaoDevolucao": 16,
+        "ts": "2026-07-09T16:55:39.492Z"
+      },
+      "shopee": {
+        "reputacao": "4,86",
+        "metrics": {
+          "taxaResposta": 97.43,
+          "boaAvaliacao": 96,
+          "notaLoja": 4.86,
+          "ruinsNaoRespondidas": 0
+        },
+        "tickets": 0,
+        "sacForaPrazo": 4,
+        "casosCriticos": 13,
+        "solicitacaoDevolucao": null,
+        "ts": "2026-07-09T16:55:39.492Z"
+      }
+    },
+    "2026-07-02": {
+      "mercadolivre": {
+        "reputacao": "MercadoLíder Platinum",
+        "metrics": {
+          "reclamacoes": 0.65,
+          "mediacoes": 0.23,
+          "canceladas": 0.16,
+          "enviosIncorretos": 0.23
+        },
+        "tickets": 0,
+        "sacForaPrazo": 5,
+        "casosCriticos": 10,
+        "solicitacaoDevolucao": 3,
+        "ts": "2026-07-09T16:55:39.492Z"
+      },
+      "amazon": {
+        "reputacao": "266",
+        "metrics": {
+          "pedidosProblema": 1.45,
+          "cancelamentoEnvio": 0.56,
+          "rastreamento": null
+        },
+        "tickets": 1,
+        "sacForaPrazo": 15,
+        "casosCriticos": 4,
+        "solicitacaoDevolucao": 6,
+        "ts": "2026-07-09T16:55:39.492Z"
+      },
+      "magalu": {
+        "reputacao": "3,4",
+        "metrics": {
+          "agilidade": 94.6,
+          "cancelamento": 5.8,
+          "avaliacao": 3.4
+        },
+        "tickets": 2,
+        "sacForaPrazo": 2,
+        "casosCriticos": 2,
+        "solicitacaoDevolucao": 7,
+        "ts": "2026-07-09T16:55:39.492Z"
+      },
+      "casasbahia": {
+        "reputacao": "3,7",
+        "metrics": {
+          "reclamacao": 5.1,
+          "cancelados": 4.6
+        },
+        "tickets": 6,
+        "sacForaPrazo": 13,
+        "casosCriticos": 17,
+        "solicitacaoDevolucao": 16,
+        "ts": "2026-07-09T16:55:39.492Z"
+      },
+      "shopee": {
+        "reputacao": "4,86",
+        "metrics": {
+          "taxaResposta": 97.13,
+          "boaAvaliacao": 96,
+          "notaLoja": 4.86,
+          "ruinsNaoRespondidas": 0
+        },
+        "tickets": 0,
+        "sacForaPrazo": 4,
+        "casosCriticos": 13,
+        "solicitacaoDevolucao": 9,
+        "ts": "2026-07-09T16:55:39.492Z"
+      }
+    },
+    "2026-07-03": {
+      "mercadolivre": {
+        "reputacao": "MercadoLíder Platinum",
+        "metrics": {
+          "reclamacoes": 0.7,
+          "mediacoes": 0.23,
+          "canceladas": 0.16,
+          "enviosIncorretos": 0.19
+        },
+        "tickets": 0,
+        "sacForaPrazo": 5,
+        "casosCriticos": 10,
+        "solicitacaoDevolucao": null,
+        "ts": "2026-07-09T16:55:39.492Z"
+      },
+      "amazon": {
+        "reputacao": "270",
+        "metrics": {
+          "pedidosProblema": 1.46,
+          "cancelamentoEnvio": 0.39,
+          "rastreamento": null
+        },
+        "tickets": 1,
+        "sacForaPrazo": 15,
+        "casosCriticos": 4,
+        "solicitacaoDevolucao": 6,
+        "ts": "2026-07-09T16:55:39.492Z"
+      },
+      "magalu": {
+        "reputacao": "3,4",
+        "metrics": {
+          "agilidade": 94.6,
+          "cancelamento": 5.8,
+          "avaliacao": 3.4
+        },
+        "tickets": 2,
+        "sacForaPrazo": 2,
+        "casosCriticos": 2,
+        "solicitacaoDevolucao": 7,
+        "ts": "2026-07-09T16:55:39.492Z"
+      },
+      "casasbahia": {
+        "reputacao": "3,7",
+        "metrics": {
+          "reclamacao": 5.1,
+          "cancelados": 4.6
+        },
+        "tickets": 6,
+        "sacForaPrazo": 13,
+        "casosCriticos": 17,
+        "solicitacaoDevolucao": 16,
+        "ts": "2026-07-09T16:55:39.492Z"
+      },
+      "shopee": {
+        "reputacao": "4,55",
+        "metrics": {
+          "taxaResposta": 97.19,
+          "boaAvaliacao": 96,
+          "notaLoja": 4.55,
+          "ruinsNaoRespondidas": null
+        },
+        "tickets": 0,
+        "sacForaPrazo": 4,
+        "casosCriticos": 13,
+        "solicitacaoDevolucao": null,
+        "ts": "2026-07-09T16:55:39.492Z"
       }
     }
   },
