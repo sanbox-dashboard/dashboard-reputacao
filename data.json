@@ -1912,13 +1912,18 @@
         "ts": "2026-07-09T17:35:42.584Z"
       },
       "shopee": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "4,86",
+        "metrics": {
+          "taxaResposta": 97.51,
+          "boaAvaliacao": 96,
+          "notaLoja": 4.86,
+          "ruinsNaoRespondidas": null
+        },
         "tickets": 0,
         "sacForaPrazo": 2,
         "casosCriticos": 17,
         "solicitacaoDevolucao": 7,
-        "ts": "1970-01-01T00:00:00.000Z"
+        "ts": "2026-07-09T17:36:40.453Z"
       }
     },
     "2026-07-01": {
