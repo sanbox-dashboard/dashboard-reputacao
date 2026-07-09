@@ -1880,7 +1880,7 @@
           "cancelamentoEnvio": 0.4,
           "rastreamento": null
         },
-        "tickets": 1,
+        "tickets": 0,
         "sacForaPrazo": 12,
         "casosCriticos": 5,
         "solicitacaoDevolucao": 5,
