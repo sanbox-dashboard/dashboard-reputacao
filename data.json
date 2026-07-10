@@ -2128,39 +2128,49 @@
     },
     "2026-07-10": {
       "mercadolivre": {
-        "tickets": 0,
+        "reputacao": "",
         "metrics": {},
+        "tickets": 0,
         "sacForaPrazo": 3,
         "casosCriticos": 10,
-        "solicitacaoDevolucao": 8
+        "solicitacaoDevolucao": 8,
+        "ts": "1970-01-01T00:00:00.000Z"
       },
       "amazon": {
-        "tickets": 1,
+        "reputacao": "",
         "metrics": {},
+        "tickets": 1,
         "sacForaPrazo": 12,
         "casosCriticos": 5,
-        "solicitacaoDevolucao": 5
+        "solicitacaoDevolucao": 5,
+        "ts": "1970-01-01T00:00:00.000Z"
       },
       "magalu": {
-        "tickets": 0,
+        "reputacao": "",
         "metrics": {},
+        "tickets": 0,
         "sacForaPrazo": 0,
         "casosCriticos": 4,
-        "solicitacaoDevolucao": 4
+        "solicitacaoDevolucao": 4,
+        "ts": "1970-01-01T00:00:00.000Z"
       },
       "casasbahia": {
-        "tickets": 8,
+        "reputacao": "",
         "metrics": {},
+        "tickets": 8,
         "sacForaPrazo": 1,
         "casosCriticos": 26,
-        "solicitacaoDevolucao": 9
+        "solicitacaoDevolucao": 9,
+        "ts": "1970-01-01T00:00:00.000Z"
       },
       "shopee": {
-        "tickets": 0,
+        "reputacao": "",
         "metrics": {},
+        "tickets": 0,
         "sacForaPrazo": 2,
         "casosCriticos": 17,
-        "solicitacaoDevolucao": 10
+        "solicitacaoDevolucao": 10,
+        "ts": "1970-01-01T00:00:00.000Z"
       }
     }
   },
