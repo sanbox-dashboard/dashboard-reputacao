@@ -547,13 +547,13 @@
               </tr>
               <tr style="background:#f5f7fb;border-bottom:1px solid var(--border)">
                 <td style="padding:10px 12px;font-weight:600">Reputação amarela</td>
-                <td style="padding:10px 12px;color:#92400e">− R$ 100 (pior canal)</td>
+                <td style="padding:10px 12px;color:#92400e">− R$ 50 por canal · Mercado Livre − R$ 100</td>
                 <td style="padding:10px 12px;color:#9ca3af">—</td>
                 <td style="padding:10px 12px;color:#92400e">− R$ 100 por canal</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border)">
                 <td style="padding:10px 12px;font-weight:600">Reputação vermelha</td>
-                <td style="padding:10px 12px;color:#991b1b;font-weight:600">− R$ 300 (pior canal)</td>
+                <td style="padding:10px 12px;color:#991b1b;font-weight:600">− R$ 150 por canal · Mercado Livre − R$ 300</td>
                 <td style="padding:10px 12px;color:#9ca3af">—</td>
                 <td style="padding:10px 12px;color:#991b1b;font-weight:600">− R$ 200 por canal</td>
               </tr>
@@ -570,12 +570,6 @@
                 <td style="padding:10px 12px;color:#9ca3af">—</td>
               </tr>
               <tr style="background:#f5f7fb;border-bottom:1px solid var(--border)">
-                <td style="padding:10px 12px;font-weight:600">Devolução 20-30 dias (amarelo)</td>
-                <td style="padding:10px 12px;color:#9ca3af">—</td>
-                <td style="padding:10px 12px;color:#92400e">− R$ 50 por canal</td>
-                <td style="padding:10px 12px;color:#9ca3af">—</td>
-              </tr>
-              <tr style="border-bottom:1px solid var(--border)">
                 <td style="padding:10px 12px;font-weight:600">Devolução +30 dias (vermelho)</td>
                 <td style="padding:10px 12px;color:#9ca3af">—</td>
                 <td style="padding:10px 12px;color:#991b1b;font-weight:600">− R$ 100 por canal</td>
@@ -791,7 +785,7 @@ const channels = {
     color: '#FF9900',
     repLabel: 'Estado da Conta',
     metrics: {
-      pedidosProblema:   {label:'Pedidos com problema', metaType:'max', meta:1.0, alerta:0.7, unit:'%', ocrPattern:/pedidos com problemas?[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
+      pedidosProblema:   {label:'Pedidos com problema', metaType:'max', meta:1.0, alerta:0.9, unit:'%', ocrPattern:/pedidos com problemas?[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
       cancelamentoEnvio: {label:'Cancelamentos envio', metaType:'max', meta:3.0, alerta:2.0, unit:'%', ocrPattern:/cancelamentos? anteriores ao envio[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
       rastreamento:      {label:'Envio com rastreamento', metaType:'min', meta:95, alerta:97, unit:'%', ocrPattern:/rastreamento v[áa]lido[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i}
     }
@@ -837,7 +831,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '40';
-const APP_VERSION = '40.2';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '40.3';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -944,8 +938,7 @@ function renderTodayCards(){
     const todaySac = todayEntry.sacForaPrazo ?? data.sacForaPrazo;
     const todayCriticos = todayEntry.casosCriticos ?? data.casosCriticos;
     const todayDevolucao = todayEntry.solicitacaoDevolucao ?? data.solicitacaoDevolucao;
-    // NOVO: split 20-30d (amarelo) e 30+d (vermelho) — usa novos campos, com fallback pro legacy
-    const todayDevAmarelo = todayEntry.solicitacaoDevolucaoAmarelo;
+    // Devolução: só conta acima de 30 dias (campo split se existir, senão o único)
     const todayDevVermelho = todayEntry.solicitacaoDevolucaoVermelho;
     let worst = 'unknown';
     let metricsHtml = '';
@@ -998,29 +991,16 @@ function renderTodayCards(){
       </div>
       <span class="value">${criticos===null?'—':criticos}</span>
     </div>`;
-    // Métrica Solicitação de Devolução — SPLIT 20-30d (amarelo) + 30+d (vermelho)
-    const devAmarelo = (todayDevAmarelo===undefined||todayDevAmarelo===null||todayDevAmarelo==='')?null:parseInt(todayDevAmarelo);
+    // Métrica Solicitação de Devolução — REGRA NOVA: só conta acima de 30 dias
     const devVermelho = (todayDevVermelho===undefined||todayDevVermelho===null||todayDevVermelho==='')?null:parseInt(todayDevVermelho);
-    // Total pra display (soma dos dois, ou o campo legacy se não tem split)
-    const devTotal = (devAmarelo !== null || devVermelho !== null)
-      ? ((devAmarelo||0) + (devVermelho||0))
-      : ((todayDevolucao===undefined||todayDevolucao===null||todayDevolucao==='')?null:parseInt(todayDevolucao));
-    // Status: vermelho se algum 30+d, amarelo se algum 20-30d sem 30+d, verde se zero
-    let devolucaoStatus = '';
-    if(devTotal === null) devolucaoStatus = '';
-    else if((devVermelho||0) > 0) devolucaoStatus = 'red';
-    else if((devAmarelo||0) > 0) devolucaoStatus = 'yellow';
-    else if(devTotal === 0) devolucaoStatus = 'green';
-    else devolucaoStatus = 'red'; // fallback legacy: qualquer count > 0
-    // Display: se tem split, mostra "3 (🟡2 🔴1)". Se não, só o total
-    const devDisplayValue = devTotal === null ? '—'
-      : (devAmarelo !== null || devVermelho !== null)
-        ? `${devTotal}<span style="font-size:11px;font-weight:400;color:var(--muted);margin-left:6px">🟡${devAmarelo||0} 🔴${devVermelho||0}</span>`
-        : String(devTotal);
+    const devLegacy = (todayDevolucao===undefined||todayDevolucao===null||todayDevolucao==='')?null:parseInt(todayDevolucao);
+    const devTotal = devVermelho !== null ? devVermelho : devLegacy;
+    const devolucaoStatus = devTotal === null ? '' : (devTotal === 0 ? 'green' : 'red');
+    const devDisplayValue = devTotal === null ? '—' : String(devTotal);
     const devolucaoHtml = `<div class="tickets-row sac-row ${devolucaoStatus}">
       <div class="label-block">
         <span class="label">📦 Solicitação Devolução fora do prazo</span>
-        <span class="meta-info">🟡 20-30 dias · 🔴 +30 dias (Octadesk)</span>
+        <span class="meta-info">Devoluções > 30 dias (Octadesk)</span>
       </div>
       <span class="value">${devDisplayValue}</span>
     </div>`;
@@ -1094,7 +1074,7 @@ function renderMonthCards(){
       metricsHtml += `<li class="metric-row ${st}">
         <div class="label-block">
           <span class="label">${m.label}</span>
-          <span class="meta-info">Meta ${arrow}${fmtNumber(m.meta,m.unit)} · ${vals.length} dia${vals.length===1?'':'s'}</span>
+          <span class="meta-info">Meta ${arrow}${fmtNumber(m.meta,m.unit)} · Alerta ${arrow}${fmtNumber(m.alerta,m.unit)} · ${vals.length} dia${vals.length===1?'':'s'}</span>
         </div>
         <div class="value-block">
           <span class="value">${fmtNumber(avg,m.unit)}</span>
@@ -1768,7 +1748,7 @@ function renderRegistro(){
         const v = data.metrics?.[mKey];
         const st = getStatus(v, m);
         metricsHtml += `<div class="mini-metric ${st}">
-          <span class="mini-label" title="${m.label}">${m.label}</span>
+          <span class="mini-label" title="${m.label} — Meta ${m.metaType==='max'?'≤':'≥'}${fmtNumber(m.meta,m.unit)} · Alerta ${m.metaType==='max'?'≤':'≥'}${fmtNumber(m.alerta,m.unit)}">${m.label}</span>
           <span class="mini-value">${fmtNumber(v, m.unit)}</span>
         </div>`;
       });
@@ -1784,10 +1764,10 @@ function renderRegistro(){
       const criStatus = (cri===null||cri===undefined) ? '' : (cri===0?'green': cri<=3?'yellow':'red');
       const criHtml = (cri!==null && cri!==undefined) ?
         `<div class="mini-tickets ${criStatus}" style="margin-top:2px">🚨 ${cri} críticos +10d</div>` : '';
-      const dev = data.solicitacaoDevolucao;
-      const devStatus = (dev===null||dev===undefined) ? '' : (dev===0?'green': dev<=3?'yellow':'red');
+      const dev = data.solicitacaoDevolucaoVermelho ?? data.solicitacaoDevolucao;
+      const devStatus = (dev===null||dev===undefined) ? '' : (dev===0?'green':'red');
       const devHtml = (dev!==null && dev!==undefined) ?
-        `<div class="mini-tickets ${devStatus}" style="margin-top:2px">📦 ${dev} devol. +20d</div>` : '';
+        `<div class="mini-tickets ${devStatus}" style="margin-top:2px">📦 ${dev} devol. +30d</div>` : '';
       html += `<div class="mini-card" style="border-top:3px solid ${ch.color}">
         <div class="mini-card-name" style="border-bottom-color:${ch.color}"><span class="channel-tag" style="background:${ch.color};width:8px;height:8px"></span>${ch.name}</div>
         <div class="mini-card-rep"><small>${ch.repLabel}</small>${data.reputacao || '—'}</div>
@@ -2912,10 +2892,13 @@ function calcularComissao(ym, cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed){
       coletivo: 0,
     };
     if(p.tipo === 'atendente'){
-      // R$300 reputação + tickets (regra nova: -R$200 por categoria em atraso, soma)
-      const piorRep = p.canais.map(c => cores[c]).reduce((a,b) => piorCor(a,b), 'green');
-      if(piorRep === 'yellow') linha.reputacao = -100;
-      else if(piorRep === 'red') linha.reputacao = -300;
+      // REGRA NOVA: corte POR CANAL — vermelho -R$150 (Mercado Livre -R$300),
+      // amarelo -R$50 (Mercado Livre -R$100). Cortes somam entre os canais da pessoa.
+      p.canais.forEach(c => {
+        const meli = c === 'mercadolivre';
+        if(cores[c] === 'red') linha.reputacao -= meli ? 300 : 150;
+        else if(cores[c] === 'yellow') linha.reputacao -= meli ? 100 : 50;
+      });
       // REGRA NOVA: ticket fin em atraso -> -200, SAC em atraso -> -200 (somam até -400)
       const totalFin = p.canais.reduce((s, c) => s + ultimoDoMes(c, ym, 'tickets'), 0);
       const totalSac = p.canais.reduce((s, c) => s + ultimoDoMes(c, ym, 'sacForaPrazo'), 0);
@@ -2926,13 +2909,12 @@ function calcularComissao(ym, cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed){
       if(algumVermelho) linha.coletivo = -50;
     }
     else if(p.tipo === 'logistica'){
-      // NOVA REGRA: devoluções 20-30d = amarelo (-R$50/canal), 30+d = vermelho (-R$100/canal)
-      // Vermelho tem precedência sobre amarelo no mesmo canal
+      // REGRA NOVA: só devoluções acima de 30 dias contam = -R$100/canal.
+      // Usa o campo split (+30d) se existir; senão o campo único de devoluções fora do prazo
+      // (correção: antes o campo único era ignorado e a logística nunca tinha desconto).
       COMISSAO_CANAIS.forEach(c => {
-        const vermelho = ultimoDoMes(c, ym, 'solicitacaoDevolucaoVermelho');
-        const amarelo = ultimoDoMes(c, ym, 'solicitacaoDevolucaoAmarelo');
+        const vermelho = ultimoDoMes(c, ym, 'solicitacaoDevolucaoVermelho') || ultimoDoMes(c, ym, 'solicitacaoDevolucao');
         if(vermelho > 0) linha.logistica -= 100;
-        else if(amarelo > 0) linha.logistica -= 50;
       });
       if(algumVermelho) linha.coletivo = -50;
     }
