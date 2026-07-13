@@ -12073,22 +12073,6 @@
   },
   "descontosRaw": [
     {
-      "pedido": "LU-1513770100219248",
-      "data": "20/02/2026",
-      "ym": "2026-02",
-      "canal": "magalu",
-      "sku": "TI1514",
-      "valor_pedido": 2127.12,
-      "custo": 1286.69,
-      "problema": "Avaria",
-      "pct_desc": "30,00%",
-      "desconto_sug": 386.01,
-      "frete": 367.22,
-      "total": 753.23,
-      "valor_real_fechado": 700.0,
-      "aceito": false
-    },
-    {
       "pedido": "2000015379047632",
       "data": "03/03/2026",
       "ym": "2026-03",
@@ -16953,65 +16937,8 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-07-13T12:44:36.839518-03:00",
+  "descontosUpdatedAt": "2026-07-13T14:12:49.679557-03:00",
   "descontosAggByMonth": {
-    "2026-02": {
-      "magalu": {
-        "count": 2,
-        "countAceito": 0,
-        "descontoTotal": 1063.7,
-        "custoTotal": 2575.48,
-        "valorPedidoTotal": 3916.42,
-        "pctDescontoSobreCusto": 41.3,
-        "pctDescontoSobreVenda": 27.16,
-        "vendaTotalCanal": 336691.45,
-        "pctDescontoSobreVendaCanal": 0.3159
-      },
-      "casasbahia": {
-        "count": 1,
-        "countAceito": 1,
-        "descontoTotal": 352.0,
-        "custoTotal": 1226.54,
-        "valorPedidoTotal": 1915.77,
-        "pctDescontoSobreCusto": 28.7,
-        "pctDescontoSobreVenda": 18.37,
-        "vendaTotalCanal": 809583.85,
-        "pctDescontoSobreVendaCanal": 0.0435
-      },
-      "mercadolivre": {
-        "count": 3,
-        "countAceito": 2,
-        "descontoTotal": 528.02,
-        "custoTotal": 2069.0,
-        "valorPedidoTotal": 3143.25,
-        "pctDescontoSobreCusto": 25.52,
-        "pctDescontoSobreVenda": 16.8,
-        "vendaTotalCanal": 2287276.06,
-        "pctDescontoSobreVendaCanal": 0.0231
-      },
-      "amazon": {
-        "count": 1,
-        "countAceito": 1,
-        "descontoTotal": 520.0,
-        "custoTotal": 1091.38,
-        "valorPedidoTotal": 1710.94,
-        "pctDescontoSobreCusto": 47.65,
-        "pctDescontoSobreVenda": 30.39,
-        "vendaTotalCanal": 544657.62,
-        "pctDescontoSobreVendaCanal": 0.0955
-      },
-      "shopee": {
-        "count": 1,
-        "countAceito": 1,
-        "descontoTotal": 58.0,
-        "custoTotal": 399.97,
-        "valorPedidoTotal": 588.53,
-        "pctDescontoSobreCusto": 14.5,
-        "pctDescontoSobreVenda": 9.86,
-        "vendaTotalCanal": 457232.4,
-        "pctDescontoSobreVendaCanal": 0.0127
-      }
-    },
     "2026-03": {
       "mercadolivre": {
         "count": 45,
@@ -17045,6 +16972,63 @@
         "pctDescontoSobreVenda": 16.09,
         "vendaTotalCanal": 1213621.41,
         "pctDescontoSobreVendaCanal": 0.1195
+      }
+    },
+    "2026-02": {
+      "casasbahia": {
+        "count": 1,
+        "countAceito": 1,
+        "descontoTotal": 352.0,
+        "custoTotal": 1226.54,
+        "valorPedidoTotal": 1915.77,
+        "pctDescontoSobreCusto": 28.7,
+        "pctDescontoSobreVenda": 18.37,
+        "vendaTotalCanal": 809583.85,
+        "pctDescontoSobreVendaCanal": 0.0435
+      },
+      "mercadolivre": {
+        "count": 3,
+        "countAceito": 2,
+        "descontoTotal": 528.02,
+        "custoTotal": 2069.0,
+        "valorPedidoTotal": 3143.25,
+        "pctDescontoSobreCusto": 25.52,
+        "pctDescontoSobreVenda": 16.8,
+        "vendaTotalCanal": 2287276.06,
+        "pctDescontoSobreVendaCanal": 0.0231
+      },
+      "magalu": {
+        "count": 1,
+        "countAceito": 0,
+        "descontoTotal": 363.7,
+        "custoTotal": 1288.79,
+        "valorPedidoTotal": 1789.3,
+        "pctDescontoSobreCusto": 28.22,
+        "pctDescontoSobreVenda": 20.33,
+        "vendaTotalCanal": 336691.45,
+        "pctDescontoSobreVendaCanal": 0.108
+      },
+      "amazon": {
+        "count": 1,
+        "countAceito": 1,
+        "descontoTotal": 520.0,
+        "custoTotal": 1091.38,
+        "valorPedidoTotal": 1710.94,
+        "pctDescontoSobreCusto": 47.65,
+        "pctDescontoSobreVenda": 30.39,
+        "vendaTotalCanal": 544657.62,
+        "pctDescontoSobreVendaCanal": 0.0955
+      },
+      "shopee": {
+        "count": 1,
+        "countAceito": 1,
+        "descontoTotal": 58.0,
+        "custoTotal": 399.97,
+        "valorPedidoTotal": 588.53,
+        "pctDescontoSobreCusto": 14.5,
+        "pctDescontoSobreVenda": 9.86,
+        "vendaTotalCanal": 457232.4,
+        "pctDescontoSobreVendaCanal": 0.0127
       }
     },
     "2026-01": {
