@@ -2243,6 +2243,53 @@
     },
     "2026-07-12": {
       "mercadolivre": {
+        "reputacao": "",
+        "metrics": {},
+        "tickets": 0,
+        "sacForaPrazo": 3,
+        "casosCriticos": 10,
+        "solicitacaoDevolucao": 5,
+        "ts": "1970-01-01T00:00:00.000Z"
+      },
+      "amazon": {
+        "reputacao": "",
+        "metrics": {},
+        "tickets": 0,
+        "sacForaPrazo": 11,
+        "casosCriticos": 6,
+        "solicitacaoDevolucao": 4,
+        "ts": "1970-01-01T00:00:00.000Z"
+      },
+      "magalu": {
+        "reputacao": "",
+        "metrics": {},
+        "tickets": 1,
+        "sacForaPrazo": 0,
+        "casosCriticos": 4,
+        "solicitacaoDevolucao": 4,
+        "ts": "1970-01-01T00:00:00.000Z"
+      },
+      "casasbahia": {
+        "reputacao": "",
+        "metrics": {},
+        "tickets": 0,
+        "sacForaPrazo": 1,
+        "casosCriticos": 27,
+        "solicitacaoDevolucao": 5,
+        "ts": "1970-01-01T00:00:00.000Z"
+      },
+      "shopee": {
+        "reputacao": "",
+        "metrics": {},
+        "tickets": 0,
+        "sacForaPrazo": 2,
+        "casosCriticos": 17,
+        "solicitacaoDevolucao": 8,
+        "ts": "1970-01-01T00:00:00.000Z"
+      }
+    },
+    "2026-07-13": {
+      "mercadolivre": {
         "tickets": 0,
         "metrics": {},
         "sacForaPrazo": 3,
