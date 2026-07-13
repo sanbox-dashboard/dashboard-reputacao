@@ -2294,18 +2294,22 @@
         "metrics": {},
         "tickets": 9,
         "sacForaPrazo": 3,
-        "casosCriticos": 13,
+        "casosCriticos": 11,
         "solicitacaoDevolucao": 6,
-        "ts": "2026-07-13T13:50:50.691Z"
+        "ts": "2026-07-13T11:45:51.011197-03:00",
+        "solicitacaoDevolucaoAmarelo": 2,
+        "solicitacaoDevolucaoVermelho": 4
       },
       "amazon": {
         "reputacao": "",
         "metrics": {},
         "tickets": 0,
         "sacForaPrazo": 11,
-        "casosCriticos": 7,
+        "casosCriticos": 6,
         "solicitacaoDevolucao": 4,
-        "ts": "2026-07-13T13:50:50.691Z"
+        "ts": "2026-07-13T11:45:51.011197-03:00",
+        "solicitacaoDevolucaoAmarelo": 1,
+        "solicitacaoDevolucaoVermelho": 3
       },
       "magalu": {
         "reputacao": "",
@@ -2314,7 +2318,8 @@
         "sacForaPrazo": 0,
         "casosCriticos": 4,
         "solicitacaoDevolucao": 4,
-        "ts": "2026-07-13T13:50:50.691Z"
+        "ts": "2026-07-13T11:45:51.011197-03:00",
+        "solicitacaoDevolucaoVermelho": 4
       },
       "casasbahia": {
         "reputacao": "",
@@ -2323,7 +2328,9 @@
         "sacForaPrazo": 1,
         "casosCriticos": 27,
         "solicitacaoDevolucao": 5,
-        "ts": "2026-07-13T13:50:50.691Z"
+        "ts": "2026-07-13T11:45:51.011197-03:00",
+        "solicitacaoDevolucaoAmarelo": 1,
+        "solicitacaoDevolucaoVermelho": 4
       },
       "shopee": {
         "reputacao": "",
@@ -2332,7 +2339,9 @@
         "sacForaPrazo": 2,
         "casosCriticos": 17,
         "solicitacaoDevolucao": 9,
-        "ts": "2026-07-13T13:50:50.691Z"
+        "ts": "2026-07-13T11:45:51.011197-03:00",
+        "solicitacaoDevolucaoAmarelo": 2,
+        "solicitacaoDevolucaoVermelho": 7
       }
     }
   },
@@ -2691,9 +2700,9 @@
       "n": "99916748.0",
       "d": "09/07/2026",
       "ym": "2026-07",
-      "lj": "",
+      "lj": null,
       "pb": "Extravio Transportadora própria",
-      "sk": "",
+      "sk": null,
       "tr": "Brasil Web",
       "pr": "—"
     },
@@ -2862,7 +2871,7 @@
       "d": "08/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "",
+      "pb": null,
       "sk": "TI1514",
       "tr": "Trilog",
       "pr": "—"
@@ -3222,7 +3231,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Amazon",
-      "pb": "",
+      "pb": null,
       "sk": "TI1562",
       "tr": "MMA",
       "pr": "—"
@@ -3291,9 +3300,9 @@
       "n": "99916682.0",
       "d": "06/07/2026",
       "ym": "2026-07",
-      "lj": "",
+      "lj": null,
       "pb": "RMA",
-      "sk": "",
+      "sk": null,
       "tr": "Alfa Transportes",
       "pr": "—"
     },
@@ -3311,9 +3320,9 @@
       "n": "99916680.0",
       "d": "06/07/2026",
       "ym": "2026-07",
-      "lj": "",
+      "lj": null,
       "pb": "RMA",
-      "sk": "",
+      "sk": null,
       "tr": "Alfa Transportes",
       "pr": "—"
     },
@@ -3322,7 +3331,7 @@
       "d": "06/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "",
+      "pb": null,
       "sk": "TI1562",
       "tr": "Trilog",
       "pr": "—"
@@ -3361,9 +3370,9 @@
       "n": "99916675.0",
       "d": "06/07/2026",
       "ym": "2026-07",
-      "lj": "",
+      "lj": null,
       "pb": "Extravio Transportadora própria",
-      "sk": "",
+      "sk": null,
       "tr": "Total Express",
       "pr": "—"
     },
@@ -3772,7 +3781,7 @@
       "d": "30/06/2026",
       "ym": "2026-06",
       "lj": "Mercado Livre",
-      "pb": "",
+      "pb": null,
       "sk": "TI1456",
       "tr": "Correios",
       "pr": "—"
@@ -4082,7 +4091,7 @@
       "d": "29/06/2026",
       "ym": "2026-06",
       "lj": "Shopee",
-      "pb": "",
+      "pb": null,
       "sk": "TI287-1",
       "tr": "Total Express",
       "pr": "—"
@@ -4271,9 +4280,9 @@
       "n": "99916563.0",
       "d": "26/06/2026",
       "ym": "2026-06",
-      "lj": "",
+      "lj": null,
       "pb": "RMA",
-      "sk": "",
+      "sk": null,
       "tr": "Alfa Transportes",
       "pr": "—"
     },
@@ -4281,9 +4290,9 @@
       "n": "99916562.0",
       "d": "26/06/2026",
       "ym": "2026-06",
-      "lj": "",
+      "lj": null,
       "pb": "Desconhece a Entrega",
-      "sk": "",
+      "sk": null,
       "tr": "Alfa Transportes",
       "pr": "—"
     },
@@ -4331,9 +4340,9 @@
       "n": "99916557.0",
       "d": "25/06/2026",
       "ym": "2026-06",
-      "lj": "",
+      "lj": null,
       "pb": "RMA",
-      "sk": "",
+      "sk": null,
       "tr": "Alfa Transportes",
       "pr": "—"
     },
@@ -4742,7 +4751,7 @@
       "d": "22/06/2026",
       "ym": "2026-06",
       "lj": "Casas Bahia",
-      "pb": "",
+      "pb": null,
       "sk": "TI1454",
       "tr": "Alfa Transportes",
       "pr": "—"
@@ -4761,9 +4770,9 @@
       "n": "99916483.0",
       "d": "20/06/2026",
       "ym": "2026-06",
-      "lj": "",
+      "lj": null,
       "pb": "Danificado Transporte Próprio",
-      "sk": "",
+      "sk": null,
       "tr": "Tecmar",
       "pr": "—"
     },
@@ -5141,9 +5150,9 @@
       "n": "99916393.0",
       "d": "12/06/2026",
       "ym": "2026-06",
-      "lj": "",
+      "lj": null,
       "pb": "Danificado Transporte Próprio",
-      "sk": "",
+      "sk": null,
       "tr": "Alfa Transportes",
       "pr": "—"
     },
@@ -5351,9 +5360,9 @@
       "n": "99916336.0",
       "d": "10/06/2026",
       "ym": "2026-06",
-      "lj": "",
+      "lj": null,
       "pb": "Suspensão de Entrega",
-      "sk": "",
+      "sk": null,
       "tr": "Tecmar",
       "pr": "—"
     },
@@ -6211,9 +6220,9 @@
       "n": "99915996.0",
       "d": "11/05/2026",
       "ym": "2026-05",
-      "lj": "",
+      "lj": null,
       "pb": "Danificado Transporte Próprio",
-      "sk": "",
+      "sk": null,
       "tr": "Alfa Transportes",
       "pr": "—"
     },
@@ -6231,9 +6240,9 @@
       "n": "99915992.0",
       "d": "11/05/2026",
       "ym": "2026-05",
-      "lj": "",
+      "lj": null,
       "pb": "Danificado Transporte Próprio",
-      "sk": "",
+      "sk": null,
       "tr": "Alfa Transportes",
       "pr": "—"
     },
@@ -6731,50 +6740,50 @@
       "n": "99915315.0",
       "d": "20/03/2026",
       "ym": "2026-03",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99915307.0",
       "d": "19/03/2026",
       "ym": "2026-03",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99915299.0",
       "d": "19/03/2026",
       "ym": "2026-03",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99915290.0",
       "d": "18/03/2026",
       "ym": "2026-03",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99915268.0",
       "d": "17/03/2026",
       "ym": "2026-03",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -6791,10 +6800,10 @@
       "n": "99915246.0",
       "d": "16/03/2026",
       "ym": "2026-03",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -7072,8 +7081,8 @@
       "d": "18/02/2026",
       "ym": "2026-02",
       "lj": "Shopee",
-      "pb": "",
-      "sk": "",
+      "pb": null,
+      "sk": null,
       "tr": "Alfa Transportes",
       "pr": "—"
     },
@@ -7322,8 +7331,8 @@
       "d": "30/01/2026",
       "ym": "2026-01",
       "lj": "Amazon",
-      "pb": "",
-      "sk": "",
+      "pb": null,
+      "sk": null,
       "tr": "Amazon Full",
       "pr": "—"
     },
@@ -7332,8 +7341,8 @@
       "d": "30/01/2026",
       "ym": "2026-01",
       "lj": "Amazon",
-      "pb": "",
-      "sk": "",
+      "pb": null,
+      "sk": null,
       "tr": "Amazon Full",
       "pr": "—"
     },
@@ -7411,10 +7420,10 @@
       "n": "99914483.0",
       "d": "29/01/2026",
       "ym": "2026-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -7481,10 +7490,10 @@
       "n": "99914430.0",
       "d": "27/01/2026",
       "ym": "2026-01",
-      "lj": "",
-      "pb": "",
+      "lj": null,
+      "pb": null,
       "sk": "TI1566",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
@@ -7571,20 +7580,20 @@
       "n": "99914294.0",
       "d": "20/01/2026",
       "ym": "2026-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99914293.0",
       "d": "20/01/2026",
       "ym": "2026-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -7611,60 +7620,60 @@
       "n": "99914275.0",
       "d": "19/01/2026",
       "ym": "2026-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99914266.0",
       "d": "19/01/2026",
       "ym": "2026-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99914265.0",
       "d": "19/01/2026",
       "ym": "2026-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99914264.0",
       "d": "19/01/2026",
       "ym": "2026-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99914229.0",
       "d": "16/01/2026",
       "ym": "2026-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99914228.0",
       "d": "16/01/2026",
       "ym": "2026-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -7833,18 +7842,18 @@
       "ym": "2025-12",
       "lj": "Shopee",
       "pb": "Danificado Transporte Marketplace",
-      "sk": "",
-      "tr": "",
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99913845.0",
       "d": "22/12/2025",
       "ym": "2025-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -8051,10 +8060,10 @@
       "n": "99913287.0",
       "d": "18/11/2025",
       "ym": "2025-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -8191,10 +8200,10 @@
       "n": "99913041.0",
       "d": "31/10/2025",
       "ym": "2025-10",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -8371,7 +8380,7 @@
       "n": "99912654.0",
       "d": "06/10/2025",
       "ym": "2025-10",
-      "lj": "",
+      "lj": null,
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1364",
       "tr": "Alfa Transportes",
@@ -8381,10 +8390,10 @@
       "n": "99912650.0",
       "d": "03/10/2025",
       "ym": "2025-10",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -8493,7 +8502,7 @@
       "ym": "2025-08",
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
-      "sk": "TI1146  / TI287-2",
+      "sk": "TI1146 / TI287-2",
       "tr": "Jamef",
       "pr": "—"
     },
@@ -8501,30 +8510,30 @@
       "n": "99912013.0",
       "d": "06/08/2025",
       "ym": "2025-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99911998.0",
       "d": "05/08/2025",
       "ym": "2025-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99911997.0",
       "d": "05/08/2025",
       "ym": "2025-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -8541,20 +8550,20 @@
       "n": "99911967.0",
       "d": "04/08/2025",
       "ym": "2025-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99911966.0",
       "d": "04/08/2025",
       "ym": "2025-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -8571,20 +8580,20 @@
       "n": "99911947.0",
       "d": "01/08/2025",
       "ym": "2025-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99911946.0",
       "d": "01/08/2025",
       "ym": "2025-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -8671,10 +8680,10 @@
       "n": "99911636.0",
       "d": "10/07/2025",
       "ym": "2025-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -8712,8 +8721,8 @@
       "d": "03/07/2025",
       "ym": "2025-07",
       "lj": "WebContinental",
-      "pb": "",
-      "sk": "",
+      "pb": null,
+      "sk": null,
       "tr": "Total Express",
       "pr": "—"
     },
@@ -8864,7 +8873,7 @@
       "lj": "Mercado Livre",
       "pb": "Atraso de Entrega",
       "sk": "TI1310-2",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
@@ -9034,7 +9043,7 @@
       "lj": "Casas Bahia",
       "pb": "Arrependimento",
       "sk": "TI1405",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
@@ -9201,40 +9210,40 @@
       "n": "99909874.0",
       "d": "03/02/2025",
       "ym": "2025-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909868.0",
       "d": "03/02/2025",
       "ym": "2025-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909863.0",
       "d": "03/02/2025",
       "ym": "2025-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909862.0",
       "d": "03/02/2025",
       "ym": "2025-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -9244,7 +9253,7 @@
       "lj": "Mercado Livre",
       "pb": "Insatisfação Compra",
       "sk": "TI673 / TI287-2",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
@@ -9253,7 +9262,7 @@
       "ym": "2025-01",
       "lj": "Shopee",
       "pb": "Dúvida",
-      "sk": "",
+      "sk": null,
       "tr": "Correios",
       "pr": "—"
     },
@@ -9291,80 +9300,80 @@
       "n": "99909571.0",
       "d": "03/01/2025",
       "ym": "2025-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909552.0",
       "d": "01/01/2025",
       "ym": "2025-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909551.0",
       "d": "31/12/2024",
       "ym": "2024-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909550.0",
       "d": "31/12/2024",
       "ym": "2024-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909540.0",
       "d": "30/12/2024",
       "ym": "2024-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909539.0",
       "d": "30/12/2024",
       "ym": "2024-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909523.0",
       "d": "27/12/2024",
       "ym": "2024-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909522.0",
       "d": "27/12/2024",
       "ym": "2024-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -9381,40 +9390,40 @@
       "n": "99909508.0",
       "d": "26/12/2024",
       "ym": "2024-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909507.0",
       "d": "25/12/2024",
       "ym": "2024-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909360.0",
       "d": "10/12/2024",
       "ym": "2024-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909341.0",
       "d": "09/12/2024",
       "ym": "2024-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -9431,30 +9440,30 @@
       "n": "99909247.0",
       "d": "29/11/2024",
       "ym": "2024-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909231.0",
       "d": "28/11/2024",
       "ym": "2024-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909230.0",
       "d": "28/11/2024",
       "ym": "2024-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -9481,20 +9490,20 @@
       "n": "99909140.0",
       "d": "19/11/2024",
       "ym": "2024-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909124.0",
       "d": "19/11/2024",
       "ym": "2024-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -9514,27 +9523,27 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI673 / TI287 TI733",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99909023.0",
       "d": "12/11/2024",
       "ym": "2024-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908978.0",
       "d": "11/11/2024",
       "ym": "2024-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -9551,10 +9560,10 @@
       "n": "99908932.0",
       "d": "07/11/2024",
       "ym": "2024-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -9591,20 +9600,20 @@
       "n": "99908798.0",
       "d": "29/10/2024",
       "ym": "2024-10",
-      "lj": "",
+      "lj": null,
       "pb": "Insatisfação Compra",
       "sk": "TI1227",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908797.0",
       "d": "29/10/2024",
       "ym": "2024-10",
-      "lj": "",
+      "lj": null,
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI682",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
@@ -9631,110 +9640,110 @@
       "n": "99908776.0",
       "d": "28/10/2024",
       "ym": "2024-10",
-      "lj": "",
+      "lj": null,
       "pb": "Danificado Transporte Marketplace",
       "sk": "SS002",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908775.0",
       "d": "28/10/2024",
       "ym": "2024-10",
-      "lj": "",
+      "lj": null,
       "pb": "Danificado Transporte Marketplace",
       "sk": "SS001",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908774.0",
       "d": "28/10/2024",
       "ym": "2024-10",
-      "lj": "",
+      "lj": null,
       "pb": "Danificado Transporte Marketplace",
       "sk": "SS001",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908773.0",
       "d": "28/10/2024",
       "ym": "2024-10",
-      "lj": "",
+      "lj": null,
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1078 / TI287",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908772.0",
       "d": "28/10/2024",
       "ym": "2024-10",
-      "lj": "",
+      "lj": null,
       "pb": "Insatisfação Compra",
       "sk": "TI675/ TI733/TI287-2",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908771.0",
       "d": "28/10/2024",
       "ym": "2024-10",
-      "lj": "",
+      "lj": null,
       "pb": "Danificado Transporte Marketplace",
       "sk": "SS002",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908770.0",
       "d": "28/10/2024",
       "ym": "2024-10",
-      "lj": "",
+      "lj": null,
       "pb": "Danificado Transporte Marketplace",
       "sk": "SS001",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908767.0",
       "d": "28/10/2024",
       "ym": "2024-10",
-      "lj": "",
+      "lj": null,
       "pb": "Item Faltante",
       "sk": "TI1146",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908766.0",
       "d": "28/10/2024",
       "ym": "2024-10",
-      "lj": "",
+      "lj": null,
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1146 / TI287",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908765.0",
       "d": "28/10/2024",
       "ym": "2024-10",
-      "lj": "",
+      "lj": null,
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI682",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908764.0",
       "d": "28/10/2024",
       "ym": "2024-10",
-      "lj": "",
+      "lj": null,
       "pb": "Danificado Transporte Marketplace",
       "sk": "SS002",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
@@ -9761,20 +9770,20 @@
       "n": "99908610.0",
       "d": "11/10/2024",
       "ym": "2024-10",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908603.0",
       "d": "11/10/2024",
       "ym": "2024-10",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -9811,120 +9820,120 @@
       "n": "99908489.0",
       "d": "01/10/2024",
       "ym": "2024-10",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908469.0",
       "d": "30/09/2024",
       "ym": "2024-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908468.0",
       "d": "30/09/2024",
       "ym": "2024-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908452.0",
       "d": "27/09/2024",
       "ym": "2024-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908451.0",
       "d": "27/09/2024",
       "ym": "2024-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908450.0",
       "d": "27/09/2024",
       "ym": "2024-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908449.0",
       "d": "27/09/2024",
       "ym": "2024-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908448.0",
       "d": "27/09/2024",
       "ym": "2024-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908440.0",
       "d": "26/09/2024",
       "ym": "2024-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908421.0",
       "d": "26/09/2024",
       "ym": "2024-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908420.0",
       "d": "26/09/2024",
       "ym": "2024-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99908325.0",
       "d": "19/09/2024",
       "ym": "2024-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -9971,10 +9980,10 @@
       "n": "99907984.0",
       "d": "26/08/2024",
       "ym": "2024-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -10041,10 +10050,10 @@
       "n": "99907740.0",
       "d": "01/08/2024",
       "ym": "2024-08",
-      "lj": "",
+      "lj": null,
       "pb": "Atraso de Entrega",
-      "sk": "",
-      "tr": "",
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -10081,10 +10090,10 @@
       "n": "99907146.0",
       "d": "07/06/2024",
       "ym": "2024-06",
-      "lj": "",
+      "lj": null,
       "pb": "Atraso de Entrega",
-      "sk": "",
-      "tr": "",
+      "sk": null,
+      "tr": null,
       "pr": "Baixa"
     },
     {
@@ -10111,10 +10120,10 @@
       "n": "99906672.0",
       "d": "22/04/2024",
       "ym": "2024-04",
-      "lj": "",
+      "lj": null,
       "pb": "RMA",
-      "sk": "",
-      "tr": "",
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -10153,7 +10162,7 @@
       "ym": "2024-03",
       "lj": "Magalu",
       "pb": "Endereço Incorreto",
-      "sk": "TI1193  TI287-3",
+      "sk": "TI1193 TI287-3",
       "tr": "Correios",
       "pr": "—"
     },
@@ -10171,20 +10180,20 @@
       "n": "99906296.0",
       "d": "06/03/2024",
       "ym": "2024-03",
-      "lj": "",
+      "lj": null,
       "pb": "RMA",
-      "sk": "",
-      "tr": "",
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99906294.0",
       "d": "05/03/2024",
       "ym": "2024-03",
-      "lj": "",
+      "lj": null,
       "pb": "Item Faltante",
-      "sk": "",
-      "tr": "",
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -10201,7 +10210,7 @@
       "n": "99906204.0",
       "d": "26/02/2024",
       "ym": "2024-02",
-      "lj": "",
+      "lj": null,
       "pb": "Comprou Errado",
       "sk": "TI494",
       "tr": "Correios",
@@ -10221,7 +10230,7 @@
       "n": "99905439.0",
       "d": "28/11/2023",
       "ym": "2023-11",
-      "lj": "",
+      "lj": null,
       "pb": "Atraso de Entrega",
       "sk": "TI693",
       "tr": "Correios",
@@ -10232,9 +10241,9 @@
       "d": "16/11/2023",
       "ym": "2023-11",
       "lj": "Casas Bahia",
-      "pb": "",
+      "pb": null,
       "sk": "TI1006",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
@@ -10261,20 +10270,20 @@
       "n": "99904548.0",
       "d": "28/08/2023",
       "ym": "2023-08",
-      "lj": "",
-      "pb": "",
+      "lj": null,
+      "pb": null,
       "sk": "TI824",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99903899.0",
       "d": "20/06/2023",
       "ym": "2023-06",
-      "lj": "",
+      "lj": null,
       "pb": "Duvida",
       "sk": "TI695",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
@@ -10291,47 +10300,47 @@
       "n": "99903667.0",
       "d": "22/05/2023",
       "ym": "2023-05",
-      "lj": "",
+      "lj": null,
       "pb": "Atraso de Entrega",
       "sk": "TI824",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99903575.0",
       "d": "09/05/2023",
       "ym": "2023-05",
-      "lj": "",
+      "lj": null,
       "pb": "Atraso de Entrega",
       "sk": "TI866",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99903566.0",
       "d": "09/05/2023",
       "ym": "2023-05",
-      "lj": "",
+      "lj": null,
       "pb": "Atraso de Entrega",
       "sk": "TI430",
-      "tr": "",
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99902907.0",
       "d": "28/02/2023",
       "ym": "2023-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99902536.0",
       "d": "19/01/2023",
       "ym": "2023-01",
-      "lj": "",
+      "lj": null,
       "pb": "RMA",
       "sk": "TI516",
       "tr": "Magalog",
@@ -10351,7 +10360,7 @@
       "n": "99901910.0",
       "d": "18/11/2022",
       "ym": "2022-11",
-      "lj": "",
+      "lj": null,
       "pb": "RMA",
       "sk": "TI825",
       "tr": "Total Express",
@@ -10362,7 +10371,7 @@
       "d": "17/11/2022",
       "ym": "2022-11",
       "lj": "Amazon",
-      "pb": "",
+      "pb": null,
       "sk": "TI877",
       "tr": "TNT",
       "pr": "—"
@@ -10371,17 +10380,17 @@
       "n": "99901774.0",
       "d": "28/10/2022",
       "ym": "2022-10",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99901578.0",
       "d": "29/09/2022",
       "ym": "2022-09",
-      "lj": "",
+      "lj": null,
       "pb": "Atraso de Entrega",
       "sk": "T682",
       "tr": "Total Express",
@@ -10391,10 +10400,10 @@
       "n": "99901425.0",
       "d": "12/09/2022",
       "ym": "2022-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -10411,39 +10420,39 @@
       "n": "99901137.0",
       "d": "16/08/2022",
       "ym": "2022-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99901012.0",
       "d": "27/07/2022",
       "ym": "2022-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99900984.0",
       "d": "25/07/2022",
       "ym": "2022-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99900767.0",
       "d": "21/06/2022",
       "ym": "2022-06",
-      "lj": "",
+      "lj": null,
       "pb": "RMA",
-      "sk": "",
+      "sk": null,
       "tr": "Correios",
       "pr": "—"
     },
@@ -10451,1230 +10460,1230 @@
       "n": "99900653.0",
       "d": "02/06/2022",
       "ym": "2022-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "Média"
     },
     {
       "n": "99900643.0",
       "d": "01/06/2022",
       "ym": "2022-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "99900512.0",
       "d": "09/05/2022",
       "ym": "2022-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3280.0",
       "d": "10/02/2022",
       "ym": "2022-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3270.0",
       "d": "08/02/2022",
       "ym": "2022-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3267.0",
       "d": "07/02/2022",
       "ym": "2022-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3266.0",
       "d": "07/02/2022",
       "ym": "2022-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3265.0",
       "d": "07/02/2022",
       "ym": "2022-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3258.0",
       "d": "05/02/2022",
       "ym": "2022-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3256.0",
       "d": "03/02/2022",
       "ym": "2022-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3255.0",
       "d": "03/02/2022",
       "ym": "2022-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3242.0",
       "d": "01/02/2022",
       "ym": "2022-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3236.0",
       "d": "30/01/2022",
       "ym": "2022-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3222.0",
       "d": "24/01/2022",
       "ym": "2022-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3219.0",
       "d": "22/01/2022",
       "ym": "2022-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3193.0",
       "d": "17/01/2022",
       "ym": "2022-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3150.0",
       "d": "03/01/2022",
       "ym": "2022-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3146.0",
       "d": "03/01/2022",
       "ym": "2022-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3123.0",
       "d": "23/12/2021",
       "ym": "2021-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3112.0",
       "d": "22/12/2021",
       "ym": "2021-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3102.0",
       "d": "20/12/2021",
       "ym": "2021-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3099.0",
       "d": "20/12/2021",
       "ym": "2021-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3073.0",
       "d": "13/12/2021",
       "ym": "2021-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3036.0",
       "d": "09/12/2021",
       "ym": "2021-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2941.0",
       "d": "23/11/2021",
       "ym": "2021-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2929.0",
       "d": "21/11/2021",
       "ym": "2021-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2925.0",
       "d": "18/11/2021",
       "ym": "2021-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2922.0",
       "d": "17/11/2021",
       "ym": "2021-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2916.0",
       "d": "13/11/2021",
       "ym": "2021-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2900.0",
       "d": "09/11/2021",
       "ym": "2021-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2891.0",
       "d": "05/11/2021",
       "ym": "2021-11",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2858.0",
       "d": "26/10/2021",
       "ym": "2021-10",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2849.0",
       "d": "25/10/2021",
       "ym": "2021-10",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2834.0",
       "d": "18/10/2021",
       "ym": "2021-10",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2817.0",
       "d": "13/10/2021",
       "ym": "2021-10",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2802.0",
       "d": "07/10/2021",
       "ym": "2021-10",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2785.0",
       "d": "01/10/2021",
       "ym": "2021-10",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2784.0",
       "d": "01/10/2021",
       "ym": "2021-10",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2783.0",
       "d": "01/10/2021",
       "ym": "2021-10",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2774.0",
       "d": "27/09/2021",
       "ym": "2021-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2768.0",
       "d": "26/09/2021",
       "ym": "2021-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2760.0",
       "d": "23/09/2021",
       "ym": "2021-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2755.0",
       "d": "21/09/2021",
       "ym": "2021-09",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2666.0",
       "d": "18/08/2021",
       "ym": "2021-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2658.0",
       "d": "17/08/2021",
       "ym": "2021-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2647.0",
       "d": "15/08/2021",
       "ym": "2021-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2646.0",
       "d": "13/08/2021",
       "ym": "2021-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2633.0",
       "d": "11/08/2021",
       "ym": "2021-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2632.0",
       "d": "10/08/2021",
       "ym": "2021-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2621.0",
       "d": "09/08/2021",
       "ym": "2021-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2605.0",
       "d": "04/08/2021",
       "ym": "2021-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2594.0",
       "d": "02/08/2021",
       "ym": "2021-08",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2579.0",
       "d": "27/07/2021",
       "ym": "2021-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2577.0",
       "d": "27/07/2021",
       "ym": "2021-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2567.0",
       "d": "25/07/2021",
       "ym": "2021-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2564.0",
       "d": "22/07/2021",
       "ym": "2021-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2556.0",
       "d": "22/07/2021",
       "ym": "2021-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2540.0",
       "d": "20/07/2021",
       "ym": "2021-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2538.0",
       "d": "19/07/2021",
       "ym": "2021-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2534.0",
       "d": "16/07/2021",
       "ym": "2021-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2520.0",
       "d": "14/07/2021",
       "ym": "2021-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2519.0",
       "d": "13/07/2021",
       "ym": "2021-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2511.0",
       "d": "10/07/2021",
       "ym": "2021-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2509.0",
       "d": "08/07/2021",
       "ym": "2021-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2508.0",
       "d": "08/07/2021",
       "ym": "2021-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2499.0",
       "d": "05/07/2021",
       "ym": "2021-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2497.0",
       "d": "03/07/2021",
       "ym": "2021-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2488.0",
       "d": "30/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2487.0",
       "d": "30/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2481.0",
       "d": "29/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2476.0",
       "d": "27/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2474.0",
       "d": "25/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2461.0",
       "d": "23/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2459.0",
       "d": "23/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2453.0",
       "d": "22/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2447.0",
       "d": "21/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2443.0",
       "d": "18/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2434.0",
       "d": "16/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2430.0",
       "d": "14/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2427.0",
       "d": "12/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2417.0",
       "d": "10/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2412.0",
       "d": "09/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2400.0",
       "d": "06/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2396.0",
       "d": "04/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2391.0",
       "d": "02/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2390.0",
       "d": "01/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2387.0",
       "d": "01/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2386.0",
       "d": "01/06/2021",
       "ym": "2021-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2376.0",
       "d": "30/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2371.0",
       "d": "27/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2368.0",
       "d": "26/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2358.0",
       "d": "24/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2356.0",
       "d": "24/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2341.0",
       "d": "20/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2338.0",
       "d": "18/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2334.0",
       "d": "15/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2327.0",
       "d": "13/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2325.0",
       "d": "12/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2317.0",
       "d": "11/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2304.0",
       "d": "09/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2298.0",
       "d": "07/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2270.0",
       "d": "03/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2269.0",
       "d": "02/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2268.0",
       "d": "01/05/2021",
       "ym": "2021-05",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2259.0",
       "d": "27/04/2021",
       "ym": "2021-04",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2244.0",
       "d": "21/04/2021",
       "ym": "2021-04",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2230.0",
       "d": "19/04/2021",
       "ym": "2021-04",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2223.0",
       "d": "15/04/2021",
       "ym": "2021-04",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2218.0",
       "d": "14/04/2021",
       "ym": "2021-04",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2205.0",
       "d": "12/04/2021",
       "ym": "2021-04",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2177.0",
       "d": "01/04/2021",
       "ym": "2021-04",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2170.0",
       "d": "31/03/2021",
       "ym": "2021-03",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2166.0",
       "d": "30/03/2021",
       "ym": "2021-03",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2100.0",
       "d": "05/03/2021",
       "ym": "2021-03",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2075.0",
       "d": "24/02/2021",
       "ym": "2021-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2070.0",
       "d": "23/02/2021",
       "ym": "2021-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2060.0",
       "d": "19/02/2021",
       "ym": "2021-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2051.0",
       "d": "18/02/2021",
       "ym": "2021-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2020.0",
       "d": "05/02/2021",
       "ym": "2021-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2018.0",
       "d": "04/02/2021",
       "ym": "2021-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2012.0",
       "d": "02/02/2021",
       "ym": "2021-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2008.0",
       "d": "02/02/2021",
       "ym": "2021-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "1998.0",
       "d": "31/01/2021",
       "ym": "2021-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -11682,29 +11691,29 @@
       "d": "25/01/2021",
       "ym": "2021-01",
       "lj": "Loja Sanbox",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "1973.0",
       "d": "25/01/2021",
       "ym": "2021-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "1947.0",
       "d": "18/01/2021",
       "ym": "2021-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -11712,99 +11721,99 @@
       "d": "15/01/2021",
       "ym": "2021-01",
       "lj": "B2W",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "1933.0",
       "d": "14/01/2021",
       "ym": "2021-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "1928.0",
       "d": "13/01/2021",
       "ym": "2021-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "1863.0",
       "d": "31/12/2020",
       "ym": "2020-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "1858.0",
       "d": "30/12/2020",
       "ym": "2020-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "1838.0",
       "d": "28/12/2020",
       "ym": "2020-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "1814.0",
       "d": "22/12/2020",
       "ym": "2020-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "1810.0",
       "d": "21/12/2020",
       "ym": "2020-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "1796.0",
       "d": "20/12/2020",
       "ym": "2020-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "1790.0",
       "d": "18/12/2020",
       "ym": "2020-12",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -11812,9 +11821,9 @@
       "d": "02/12/2020",
       "ym": "2020-12",
       "lj": "Mercado Livre",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -11822,9 +11831,9 @@
       "d": "01/12/2020",
       "ym": "2020-12",
       "lj": "B2W",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
@@ -11832,73 +11841,73 @@
       "d": "30/11/2020",
       "ym": "2020-11",
       "lj": "Loja Sanbox",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "81.0",
       "d": "10/02/2022",
       "ym": "2022-02",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "5.0",
       "d": "11/01/2022",
       "ym": "2022-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "4.0",
       "d": "11/01/2022",
       "ym": "2022-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "3.0",
       "d": "11/01/2022",
       "ym": "2022-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "2.0",
       "d": "11/01/2022",
       "ym": "2022-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     },
     {
       "n": "1.0",
       "d": "11/01/2022",
       "ym": "2022-01",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": null,
+      "pb": null,
+      "sk": null,
+      "tr": null,
       "pr": "—"
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-13T10:50:50.691492-03:00",
+  "ticketsRawUpdatedAt": "2026-07-13T11:45:51.011197-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
@@ -12063,6 +12072,22 @@
   },
   "descontosRaw": [
     {
+      "pedido": "LU-1513770100219248",
+      "data": "20/02/2026",
+      "ym": "2026-02",
+      "canal": "magalu",
+      "sku": "TI1514",
+      "valor_pedido": 2127.12,
+      "custo": 1286.69,
+      "problema": "Avaria",
+      "pct_desc": "30,00%",
+      "desc_sug": 386.01,
+      "frete": 367.22,
+      "total": 753.23,
+      "valor_real_fechado": 700.0,
+      "aceito": false
+    },
+    {
       "pedido": "2000015379047632",
       "data": "03/03/2026",
       "ym": "2026-03",
@@ -12101,7 +12126,7 @@
       "canal": "mercadolivre",
       "sku": "SS002OUT",
       "valor_pedido": 706.71,
-      "custo": 587,
+      "custo": 587.0,
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 176.1,
@@ -12139,7 +12164,7 @@
       "desc_sug": 367.96,
       "frete": 216.87,
       "total": 584.83,
-      "valor_real_fechado": 352,
+      "valor_real_fechado": 352.0,
       "aceito": true
     },
     {
@@ -12155,7 +12180,7 @@
       "desc_sug": 378.12,
       "frete": 145.01,
       "total": 523.13,
-      "valor_real_fechado": 340,
+      "valor_real_fechado": 340.0,
       "aceito": true
     },
     {
@@ -12171,7 +12196,7 @@
       "desc_sug": 90.86,
       "frete": 46.96,
       "total": 137.82,
-      "valor_real_fechado": 120,
+      "valor_real_fechado": 120.0,
       "aceito": false
     },
     {
@@ -12216,10 +12241,10 @@
       "custo": 625.44,
       "problema": "Avaria",
       "pct_desc": "30,00%",
-      "desc_sug": 0,
+      "desc_sug": 0.0,
       "frete": 159.11,
       "total": 346.74,
-      "valor_real_fechado": 330,
+      "valor_real_fechado": 330.0,
       "aceito": true
     },
     {
@@ -12251,7 +12276,7 @@
       "desc_sug": 184.13,
       "frete": 124.93,
       "total": 309.06,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -12265,7 +12290,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 259.81,
-      "frete": 0,
+      "frete": 0.0,
       "total": 259.81,
       "valor_real_fechado": 368.67,
       "aceito": true
@@ -12283,7 +12308,7 @@
       "desc_sug": 345.17,
       "frete": 240.2,
       "total": 585.37,
-      "valor_real_fechado": 320,
+      "valor_real_fechado": 320.0,
       "aceito": true
     },
     {
@@ -12393,7 +12418,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 414.66,
-      "frete": 132,
+      "frete": 132.0,
       "total": 546.66,
       "valor_real_fechado": 400.12,
       "aceito": true
@@ -12425,9 +12450,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 145.37,
-      "frete": 0,
+      "frete": 0.0,
       "total": 145.37,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -12443,7 +12468,7 @@
       "desc_sug": 327.41,
       "frete": 291.04,
       "total": 618.45,
-      "valor_real_fechado": 520,
+      "valor_real_fechado": 520.0,
       "aceito": true
     },
     {
@@ -12475,7 +12500,7 @@
       "desc_sug": 195.9,
       "frete": 168.66,
       "total": 364.56,
-      "valor_real_fechado": 360,
+      "valor_real_fechado": 360.0,
       "aceito": true
     },
     {
@@ -12507,7 +12532,7 @@
       "desc_sug": 1204.56,
       "frete": 261.95,
       "total": 1466.51,
-      "valor_real_fechado": 1200,
+      "valor_real_fechado": 1200.0,
       "aceito": true
     },
     {
@@ -12523,7 +12548,7 @@
       "desc_sug": 345.17,
       "frete": 216.62,
       "total": 561.79,
-      "valor_real_fechado": 480,
+      "valor_real_fechado": 480.0,
       "aceito": false
     },
     {
@@ -12539,7 +12564,7 @@
       "desc_sug": 187.63,
       "frete": 107.05,
       "total": 294.68,
-      "valor_real_fechado": 284,
+      "valor_real_fechado": 284.0,
       "aceito": false
     },
     {
@@ -12555,7 +12580,7 @@
       "desc_sug": 171.52,
       "frete": 155.04,
       "total": 326.56,
-      "valor_real_fechado": 320,
+      "valor_real_fechado": 320.0,
       "aceito": true
     },
     {
@@ -12571,7 +12596,7 @@
       "desc_sug": 1329.89,
       "frete": 261.95,
       "total": 1591.84,
-      "valor_real_fechado": 1383,
+      "valor_real_fechado": 1383.0,
       "aceito": true
     },
     {
@@ -12587,7 +12612,7 @@
       "desc_sug": 386.01,
       "frete": 146.95,
       "total": 532.96,
-      "valor_real_fechado": 515,
+      "valor_real_fechado": 515.0,
       "aceito": true
     },
     {
@@ -12603,7 +12628,7 @@
       "desc_sug": 255.37,
       "frete": 236.3,
       "total": 491.67,
-      "valor_real_fechado": 430,
+      "valor_real_fechado": 430.0,
       "aceito": false
     },
     {
@@ -12619,7 +12644,7 @@
       "desc_sug": 327.41,
       "frete": 264.5,
       "total": 591.91,
-      "valor_real_fechado": 350,
+      "valor_real_fechado": 350.0,
       "aceito": false
     },
     {
@@ -12635,7 +12660,7 @@
       "desc_sug": 187.63,
       "frete": 236.3,
       "total": 423.93,
-      "valor_real_fechado": 390,
+      "valor_real_fechado": 390.0,
       "aceito": false
     },
     {
@@ -12651,7 +12676,7 @@
       "desc_sug": 371.36,
       "frete": 107.05,
       "total": 478.41,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -12667,7 +12692,7 @@
       "desc_sug": 133.03,
       "frete": 120.45,
       "total": 253.48,
-      "valor_real_fechado": 185,
+      "valor_real_fechado": 185.0,
       "aceito": true
     },
     {
@@ -12683,7 +12708,7 @@
       "desc_sug": 371.36,
       "frete": 107.05,
       "total": 478.41,
-      "valor_real_fechado": 507,
+      "valor_real_fechado": 507.0,
       "aceito": false
     },
     {
@@ -12699,7 +12724,7 @@
       "desc_sug": 493.53,
       "frete": 106.95,
       "total": 600.48,
-      "valor_real_fechado": 540,
+      "valor_real_fechado": 540.0,
       "aceito": true
     },
     {
@@ -12713,7 +12738,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 6.43,
-      "frete": 0,
+      "frete": 0.0,
       "total": 6.43,
       "valor_real_fechado": 471.98,
       "aceito": true
@@ -12747,7 +12772,7 @@
       "desc_sug": 117.96,
       "frete": 205.74,
       "total": 323.7,
-      "valor_real_fechado": 315,
+      "valor_real_fechado": 315.0,
       "aceito": false
     },
     {
@@ -12761,9 +12786,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 119.02,
-      "frete": 0,
+      "frete": 0.0,
       "total": 119.02,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -12779,7 +12804,7 @@
       "desc_sug": 327.41,
       "frete": 304.61,
       "total": 632.02,
-      "valor_real_fechado": 450,
+      "valor_real_fechado": 450.0,
       "aceito": false
     },
     {
@@ -12793,7 +12818,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 327.41,
-      "frete": 0,
+      "frete": 0.0,
       "total": 327.41,
       "valor_real_fechado": 173.05,
       "aceito": true
@@ -12809,7 +12834,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 187.63,
-      "frete": 0,
+      "frete": 0.0,
       "total": 187.63,
       "valor_real_fechado": 148.79,
       "aceito": true
@@ -12827,7 +12852,7 @@
       "desc_sug": 1017.02,
       "frete": 415.88,
       "total": 1432.9,
-      "valor_real_fechado": 920,
+      "valor_real_fechado": 920.0,
       "aceito": true
     },
     {
@@ -12840,10 +12865,10 @@
       "custo": 688.96,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
-      "valor_real_fechado": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -12856,10 +12881,10 @@
       "custo": 1850.01,
       "problema": "Avaria",
       "pct_desc": "30,00%",
-      "desc_sug": 555,
-      "frete": 0,
-      "total": 555,
-      "valor_real_fechado": 0,
+      "desc_sug": 555.0,
+      "frete": 0.0,
+      "total": 555.0,
+      "valor_real_fechado": 0.0,
       "aceito": true
     },
     {
@@ -12875,7 +12900,7 @@
       "desc_sug": 345.17,
       "frete": 161.98,
       "total": 507.15,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": true
     },
     {
@@ -12889,7 +12914,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 386.64,
-      "frete": 0,
+      "frete": 0.0,
       "total": 386.64,
       "valor_real_fechado": 345.78,
       "aceito": true
@@ -12905,7 +12930,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 187.63,
-      "frete": 0,
+      "frete": 0.0,
       "total": 187.63,
       "valor_real_fechado": 148.78,
       "aceito": true
@@ -12921,7 +12946,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 187.63,
-      "frete": 0,
+      "frete": 0.0,
       "total": 187.63,
       "valor_real_fechado": 294.94,
       "aceito": true
@@ -12939,7 +12964,7 @@
       "desc_sug": 386.64,
       "frete": 219.2,
       "total": 605.84,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -12953,7 +12978,7 @@
       "problema": "Insatisfação",
       "pct_desc": "20,00%",
       "desc_sug": 114.35,
-      "frete": 0,
+      "frete": 0.0,
       "total": 114.35,
       "valor_real_fechado": 115.23,
       "aceito": false
@@ -12965,7 +12990,7 @@
       "canal": "mercadolivre",
       "sku": "SS002OUT",
       "valor_pedido": 743.91,
-      "custo": 587,
+      "custo": 587.0,
       "problema": "Sucata",
       "pct_desc": "50,00%",
       "desc_sug": 293.5,
@@ -13003,7 +13028,7 @@
       "desc_sug": 187.63,
       "frete": 174.14,
       "total": 361.77,
-      "valor_real_fechado": 320,
+      "valor_real_fechado": 320.0,
       "aceito": false
     },
     {
@@ -13035,7 +13060,7 @@
       "desc_sug": 187.63,
       "frete": 170.14,
       "total": 357.77,
-      "valor_real_fechado": 290,
+      "valor_real_fechado": 290.0,
       "aceito": true
     },
     {
@@ -13083,7 +13108,7 @@
       "desc_sug": 187.63,
       "frete": 236.3,
       "total": 423.93,
-      "valor_real_fechado": 252,
+      "valor_real_fechado": 252.0,
       "aceito": false
     },
     {
@@ -13099,7 +13124,7 @@
       "desc_sug": 187.63,
       "frete": 236.3,
       "total": 423.93,
-      "valor_real_fechado": 252,
+      "valor_real_fechado": 252.0,
       "aceito": true
     },
     {
@@ -13115,7 +13140,7 @@
       "desc_sug": 1151.77,
       "frete": 199.45,
       "total": 1351.22,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -13131,7 +13156,7 @@
       "desc_sug": 386.01,
       "frete": 236.3,
       "total": 622.31,
-      "valor_real_fechado": 200,
+      "valor_real_fechado": 200.0,
       "aceito": true
     },
     {
@@ -13147,7 +13172,7 @@
       "desc_sug": 320.83,
       "frete": 129.59,
       "total": 450.42,
-      "valor_real_fechado": 420,
+      "valor_real_fechado": 420.0,
       "aceito": true
     },
     {
@@ -13163,7 +13188,7 @@
       "desc_sug": 119.99,
       "frete": 27.62,
       "total": 147.61,
-      "valor_real_fechado": 58,
+      "valor_real_fechado": 58.0,
       "aceito": true
     },
     {
@@ -13179,7 +13204,7 @@
       "desc_sug": 176.79,
       "frete": 188.44,
       "total": 365.23,
-      "valor_real_fechado": 252,
+      "valor_real_fechado": 252.0,
       "aceito": false
     },
     {
@@ -13195,7 +13220,7 @@
       "desc_sug": 230.09,
       "frete": 40.19,
       "total": 270.28,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": true
     },
     {
@@ -13211,7 +13236,7 @@
       "desc_sug": 227.67,
       "frete": 236.3,
       "total": 463.97,
-      "valor_real_fechado": 420,
+      "valor_real_fechado": 420.0,
       "aceito": true
     },
     {
@@ -13225,9 +13250,9 @@
       "problema": "Sucata",
       "pct_desc": "50,00%",
       "desc_sug": 155.34,
-      "frete": 0,
+      "frete": 0.0,
       "total": 155.34,
-      "valor_real_fechado": 120,
+      "valor_real_fechado": 120.0,
       "aceito": false
     },
     {
@@ -13243,7 +13268,7 @@
       "desc_sug": 386.01,
       "frete": 152.86,
       "total": 538.87,
-      "valor_real_fechado": 420,
+      "valor_real_fechado": 420.0,
       "aceito": true
     },
     {
@@ -13257,9 +13282,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 187.63,
-      "frete": 79,
+      "frete": 79.0,
       "total": 266.63,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -13275,7 +13300,7 @@
       "desc_sug": 125.09,
       "frete": 236.3,
       "total": 361.39,
-      "valor_real_fechado": 320,
+      "valor_real_fechado": 320.0,
       "aceito": true
     },
     {
@@ -13323,7 +13348,7 @@
       "desc_sug": 261.01,
       "frete": 253.1,
       "total": 514.11,
-      "valor_real_fechado": 250,
+      "valor_real_fechado": 250.0,
       "aceito": true
     },
     {
@@ -13339,7 +13364,7 @@
       "desc_sug": 272.14,
       "frete": 253.1,
       "total": 525.24,
-      "valor_real_fechado": 320,
+      "valor_real_fechado": 320.0,
       "aceito": false
     },
     {
@@ -13355,7 +13380,7 @@
       "desc_sug": 233.67,
       "frete": 253.1,
       "total": 486.77,
-      "valor_real_fechado": 480,
+      "valor_real_fechado": 480.0,
       "aceito": true
     },
     {
@@ -13371,7 +13396,7 @@
       "desc_sug": 187.63,
       "frete": 236.3,
       "total": 423.93,
-      "valor_real_fechado": 380,
+      "valor_real_fechado": 380.0,
       "aceito": false
     },
     {
@@ -13387,7 +13412,7 @@
       "desc_sug": 187.63,
       "frete": 236.3,
       "total": 423.93,
-      "valor_real_fechado": 320,
+      "valor_real_fechado": 320.0,
       "aceito": false
     },
     {
@@ -13433,7 +13458,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 172.88,
-      "frete": 0,
+      "frete": 0.0,
       "total": 172.88,
       "valor_real_fechado": 196.39,
       "aceito": true
@@ -13483,7 +13508,7 @@
       "desc_sug": 276.86,
       "frete": 236.3,
       "total": 513.16,
-      "valor_real_fechado": 480,
+      "valor_real_fechado": 480.0,
       "aceito": false
     },
     {
@@ -13499,7 +13524,7 @@
       "desc_sug": 386.01,
       "frete": 126.55,
       "total": 512.56,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -13515,7 +13540,7 @@
       "desc_sug": 1204.56,
       "frete": 482.46,
       "total": 1687.02,
-      "valor_real_fechado": 1200,
+      "valor_real_fechado": 1200.0,
       "aceito": false
     },
     {
@@ -13531,7 +13556,7 @@
       "desc_sug": 386.01,
       "frete": 293.9,
       "total": 679.91,
-      "valor_real_fechado": 480,
+      "valor_real_fechado": 480.0,
       "aceito": true
     },
     {
@@ -13546,7 +13571,7 @@
       "pct_desc": "30,00%",
       "desc_sug": 176.95,
       "frete": 107.05,
-      "total": 284,
+      "total": 284.0,
       "valor_real_fechado": 267.59,
       "aceito": false
     },
@@ -13595,7 +13620,7 @@
       "desc_sug": 138.75,
       "frete": 53.18,
       "total": 191.93,
-      "valor_real_fechado": 150,
+      "valor_real_fechado": 150.0,
       "aceito": false
     },
     {
@@ -13611,7 +13636,7 @@
       "desc_sug": 184.13,
       "frete": 195.77,
       "total": 379.9,
-      "valor_real_fechado": 350,
+      "valor_real_fechado": 350.0,
       "aceito": true
     },
     {
@@ -13627,7 +13652,7 @@
       "desc_sug": 261.36,
       "frete": 126.55,
       "total": 387.91,
-      "valor_real_fechado": 380,
+      "valor_real_fechado": 380.0,
       "aceito": true
     },
     {
@@ -13659,7 +13684,7 @@
       "desc_sug": 206.77,
       "frete": 53.7,
       "total": 260.47,
-      "valor_real_fechado": 230,
+      "valor_real_fechado": 230.0,
       "aceito": true
     },
     {
@@ -13673,9 +13698,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 386.01,
-      "frete": 0,
+      "frete": 0.0,
       "total": 386.01,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": false
     },
     {
@@ -13691,7 +13716,7 @@
       "desc_sug": 187.63,
       "frete": 213.03,
       "total": 400.66,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": true
     },
     {
@@ -13707,7 +13732,7 @@
       "desc_sug": 320.83,
       "frete": 191.44,
       "total": 512.27,
-      "valor_real_fechado": 350,
+      "valor_real_fechado": 350.0,
       "aceito": false
     },
     {
@@ -13723,7 +13748,7 @@
       "desc_sug": 345.17,
       "frete": 132.25,
       "total": 477.42,
-      "valor_real_fechado": 380,
+      "valor_real_fechado": 380.0,
       "aceito": true
     },
     {
@@ -13739,7 +13764,7 @@
       "desc_sug": 3.84,
       "frete": 30.75,
       "total": 34.59,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -13769,9 +13794,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 386.64,
-      "frete": 0,
+      "frete": 0.0,
       "total": 386.64,
-      "valor_real_fechado": 380,
+      "valor_real_fechado": 380.0,
       "aceito": false
     },
     {
@@ -13787,7 +13812,7 @@
       "desc_sug": 187.63,
       "frete": 164.7,
       "total": 352.33,
-      "valor_real_fechado": 346,
+      "valor_real_fechado": 346.0,
       "aceito": false
     },
     {
@@ -13803,7 +13828,7 @@
       "desc_sug": 206.77,
       "frete": 55.6,
       "total": 262.37,
-      "valor_real_fechado": 250,
+      "valor_real_fechado": 250.0,
       "aceito": true
     },
     {
@@ -13819,7 +13844,7 @@
       "desc_sug": 184.13,
       "frete": 144.68,
       "total": 328.81,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -13835,7 +13860,7 @@
       "desc_sug": 1329.89,
       "frete": 261.95,
       "total": 1591.84,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": true
     },
     {
@@ -13851,7 +13876,7 @@
       "desc_sug": 153.35,
       "frete": 91.15,
       "total": 244.5,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": true
     },
     {
@@ -13865,7 +13890,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 320.83,
-      "frete": 0,
+      "frete": 0.0,
       "total": 320.83,
       "valor_real_fechado": 335.18,
       "aceito": true
@@ -13883,7 +13908,7 @@
       "desc_sug": 184.13,
       "frete": 253.1,
       "total": 437.23,
-      "valor_real_fechado": 415,
+      "valor_real_fechado": 415.0,
       "aceito": true
     },
     {
@@ -13897,9 +13922,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 984.94,
-      "frete": 0,
+      "frete": 0.0,
       "total": 984.94,
-      "valor_real_fechado": 1200,
+      "valor_real_fechado": 1200.0,
       "aceito": true
     },
     {
@@ -13913,7 +13938,7 @@
       "problema": "Sucata",
       "pct_desc": "50,00%",
       "desc_sug": 288.13,
-      "frete": 0,
+      "frete": 0.0,
       "total": 288.13,
       "valor_real_fechado": 296.74,
       "aceito": false
@@ -13931,7 +13956,7 @@
       "desc_sug": 184.13,
       "frete": 198.78,
       "total": 382.91,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": true
     },
     {
@@ -13947,7 +13972,7 @@
       "desc_sug": 187.63,
       "frete": 236.3,
       "total": 423.93,
-      "valor_real_fechado": 250,
+      "valor_real_fechado": 250.0,
       "aceito": false
     },
     {
@@ -13961,7 +13986,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 984.94,
-      "frete": 0,
+      "frete": 0.0,
       "total": 984.94,
       "valor_real_fechado": 447.79,
       "aceito": true
@@ -13977,7 +14002,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 984.94,
-      "frete": 0,
+      "frete": 0.0,
       "total": 984.94,
       "valor_real_fechado": 806.02,
       "aceito": true
@@ -13993,7 +14018,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 843.85,
-      "frete": 0,
+      "frete": 0.0,
       "total": 843.85,
       "valor_real_fechado": 839.98,
       "aceito": true
@@ -14009,7 +14034,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 150.37,
-      "frete": 0,
+      "frete": 0.0,
       "total": 150.37,
       "valor_real_fechado": 87.42,
       "aceito": false
@@ -14027,7 +14052,7 @@
       "desc_sug": 472.74,
       "frete": 163.53,
       "total": 636.27,
-      "valor_real_fechado": 400,
+      "valor_real_fechado": 400.0,
       "aceito": true
     },
     {
@@ -14043,7 +14068,7 @@
       "desc_sug": 150.48,
       "frete": 214.1,
       "total": 364.58,
-      "valor_real_fechado": 350,
+      "valor_real_fechado": 350.0,
       "aceito": true
     },
     {
@@ -14059,7 +14084,7 @@
       "desc_sug": 187.63,
       "frete": 165.59,
       "total": 353.22,
-      "valor_real_fechado": 340,
+      "valor_real_fechado": 340.0,
       "aceito": false
     },
     {
@@ -14073,9 +14098,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 187.63,
-      "frete": 0,
+      "frete": 0.0,
       "total": 187.63,
-      "valor_real_fechado": 280,
+      "valor_real_fechado": 280.0,
       "aceito": false
     },
     {
@@ -14089,7 +14114,7 @@
       "problema": "Sucata",
       "pct_desc": "50,00%",
       "desc_sug": 312.72,
-      "frete": 0,
+      "frete": 0.0,
       "total": 312.72,
       "valor_real_fechado": 186.75,
       "aceito": true
@@ -14107,7 +14132,7 @@
       "desc_sug": 184.13,
       "frete": 134.24,
       "total": 318.37,
-      "valor_real_fechado": 250,
+      "valor_real_fechado": 250.0,
       "aceito": true
     },
     {
@@ -14123,7 +14148,7 @@
       "desc_sug": 184.13,
       "frete": 253.1,
       "total": 437.23,
-      "valor_real_fechado": 282,
+      "valor_real_fechado": 282.0,
       "aceito": false
     },
     {
@@ -14137,7 +14162,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 386.01,
-      "frete": 0,
+      "frete": 0.0,
       "total": 386.01,
       "valor_real_fechado": 423.7,
       "aceito": true
@@ -14153,7 +14178,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 1151.77,
-      "frete": 0,
+      "frete": 0.0,
       "total": 1151.77,
       "valor_real_fechado": 1236.76,
       "aceito": true
@@ -14169,9 +14194,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 160.66,
-      "frete": 0,
+      "frete": 0.0,
       "total": 160.66,
-      "valor_real_fechado": 165,
+      "valor_real_fechado": 165.0,
       "aceito": true
     },
     {
@@ -14185,7 +14210,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 184.13,
-      "frete": 0,
+      "frete": 0.0,
       "total": 184.13,
       "valor_real_fechado": 191.38,
       "aceito": false
@@ -14201,9 +14226,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 386.01,
-      "frete": 0,
+      "frete": 0.0,
       "total": 386.01,
-      "valor_real_fechado": 380,
+      "valor_real_fechado": 380.0,
       "aceito": true
     },
     {
@@ -14219,7 +14244,7 @@
       "desc_sug": 182.88,
       "frete": 214.1,
       "total": 396.98,
-      "valor_real_fechado": 280,
+      "valor_real_fechado": 280.0,
       "aceito": false
     },
     {
@@ -14233,9 +14258,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 1151.77,
-      "frete": 0,
+      "frete": 0.0,
       "total": 1151.77,
-      "valor_real_fechado": 1300,
+      "valor_real_fechado": 1300.0,
       "aceito": false
     },
     {
@@ -14249,9 +14274,9 @@
       "problema": "Sucata",
       "pct_desc": "50,00%",
       "desc_sug": 306.88,
-      "frete": 0,
+      "frete": 0.0,
       "total": 306.88,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -14267,7 +14292,7 @@
       "desc_sug": 187.63,
       "frete": 171.19,
       "total": 358.82,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": false
     },
     {
@@ -14281,9 +14306,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 269.7,
-      "frete": 0,
+      "frete": 0.0,
       "total": 269.7,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": true
     },
     {
@@ -14313,7 +14338,7 @@
       "problema": "Insatisfação",
       "pct_desc": "20,00%",
       "desc_sug": 767.84,
-      "frete": 0,
+      "frete": 0.0,
       "total": 767.84,
       "valor_real_fechado": 536.79,
       "aceito": false
@@ -14331,7 +14356,7 @@
       "desc_sug": 345.17,
       "frete": 266.12,
       "total": 611.29,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": true
     },
     {
@@ -14347,7 +14372,7 @@
       "desc_sug": 327.41,
       "frete": 279.83,
       "total": 607.24,
-      "valor_real_fechado": 250,
+      "valor_real_fechado": 250.0,
       "aceito": true
     },
     {
@@ -14360,10 +14385,10 @@
       "custo": 622.16,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
+      "desc_sug": 0.0,
       "frete": 262.04,
       "total": 262.04,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -14379,7 +14404,7 @@
       "desc_sug": 206.77,
       "frete": 182.3,
       "total": 389.07,
-      "valor_real_fechado": 380,
+      "valor_real_fechado": 380.0,
       "aceito": true
     },
     {
@@ -14393,9 +14418,9 @@
       "problema": "Insatisfação",
       "pct_desc": "20,00%",
       "desc_sug": 230.12,
-      "frete": 0,
+      "frete": 0.0,
       "total": 230.12,
-      "valor_real_fechado": 220,
+      "valor_real_fechado": 220.0,
       "aceito": true
     },
     {
@@ -14409,9 +14434,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 59.97,
-      "frete": 0,
+      "frete": 0.0,
       "total": 59.97,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -14427,7 +14452,7 @@
       "desc_sug": 118.37,
       "frete": 89.49,
       "total": 207.86,
-      "valor_real_fechado": 150,
+      "valor_real_fechado": 150.0,
       "aceito": true
     },
     {
@@ -14443,7 +14468,7 @@
       "desc_sug": 175.36,
       "frete": 140.56,
       "total": 315.92,
-      "valor_real_fechado": 200,
+      "valor_real_fechado": 200.0,
       "aceito": false
     },
     {
@@ -14459,7 +14484,7 @@
       "desc_sug": 187.63,
       "frete": 154.03,
       "total": 341.66,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -14473,9 +14498,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 386.64,
-      "frete": 0,
+      "frete": 0.0,
       "total": 386.64,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": true
     },
     {
@@ -14489,9 +14514,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 386.01,
-      "frete": 0,
+      "frete": 0.0,
       "total": 386.01,
-      "valor_real_fechado": 350,
+      "valor_real_fechado": 350.0,
       "aceito": true
     },
     {
@@ -14507,7 +14532,7 @@
       "desc_sug": 153.35,
       "frete": 58.41,
       "total": 211.76,
-      "valor_real_fechado": 200,
+      "valor_real_fechado": 200.0,
       "aceito": false
     },
     {
@@ -14523,7 +14548,7 @@
       "desc_sug": 345.17,
       "frete": 288.18,
       "total": 633.35,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": false
     },
     {
@@ -14537,9 +14562,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 1017.02,
-      "frete": 0,
+      "frete": 0.0,
       "total": 1017.02,
-      "valor_real_fechado": 1005,
+      "valor_real_fechado": 1005.0,
       "aceito": true
     },
     {
@@ -14548,14 +14573,14 @@
       "ym": "2026-05",
       "canal": "mercadolivre",
       "sku": "TI1563",
-      "valor_pedido": 539,
+      "valor_pedido": 539.0,
       "custo": 462.5,
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 138.75,
-      "frete": 0,
+      "frete": 0.0,
       "total": 138.75,
-      "valor_real_fechado": 132,
+      "valor_real_fechado": 132.0,
       "aceito": true
     },
     {
@@ -14571,7 +14596,7 @@
       "desc_sug": 137.85,
       "frete": 54.68,
       "total": 192.53,
-      "valor_real_fechado": 100,
+      "valor_real_fechado": 100.0,
       "aceito": true
     },
     {
@@ -14585,9 +14610,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 1151.77,
-      "frete": 0,
+      "frete": 0.0,
       "total": 1151.77,
-      "valor_real_fechado": 750,
+      "valor_real_fechado": 750.0,
       "aceito": true
     },
     {
@@ -14601,9 +14626,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 843.85,
-      "frete": 0,
+      "frete": 0.0,
       "total": 843.85,
-      "valor_real_fechado": 550,
+      "valor_real_fechado": 550.0,
       "aceito": true
     },
     {
@@ -14617,9 +14642,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 1017.02,
-      "frete": 0,
+      "frete": 0.0,
       "total": 1017.02,
-      "valor_real_fechado": 550,
+      "valor_real_fechado": 550.0,
       "aceito": true
     },
     {
@@ -14633,9 +14658,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 1204.56,
-      "frete": 0,
+      "frete": 0.0,
       "total": 1204.56,
-      "valor_real_fechado": 550,
+      "valor_real_fechado": 550.0,
       "aceito": true
     },
     {
@@ -14649,9 +14674,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 345.17,
-      "frete": 0,
+      "frete": 0.0,
       "total": 345.17,
-      "valor_real_fechado": 330,
+      "valor_real_fechado": 330.0,
       "aceito": true
     },
     {
@@ -14665,9 +14690,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 1017.02,
-      "frete": 0,
+      "frete": 0.0,
       "total": 1017.02,
-      "valor_real_fechado": 550,
+      "valor_real_fechado": 550.0,
       "aceito": true
     },
     {
@@ -14681,7 +14706,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 320.83,
-      "frete": 0,
+      "frete": 0.0,
       "total": 320.83,
       "valor_real_fechado": 339.18,
       "aceito": false
@@ -14697,9 +14722,9 @@
       "problema": "Insatisfação",
       "pct_desc": "20,00%",
       "desc_sug": 257.34,
-      "frete": 0,
+      "frete": 0.0,
       "total": 257.34,
-      "valor_real_fechado": 254,
+      "valor_real_fechado": 254.0,
       "aceito": false
     },
     {
@@ -14713,9 +14738,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 255.37,
-      "frete": 40,
+      "frete": 40.0,
       "total": 295.37,
-      "valor_real_fechado": 290,
+      "valor_real_fechado": 290.0,
       "aceito": false
     },
     {
@@ -14731,7 +14756,7 @@
       "desc_sug": 111.23,
       "frete": 43.14,
       "total": 154.37,
-      "valor_real_fechado": 150,
+      "valor_real_fechado": 150.0,
       "aceito": false
     },
     {
@@ -14747,7 +14772,7 @@
       "desc_sug": 255.37,
       "frete": 257.32,
       "total": 512.69,
-      "valor_real_fechado": 500,
+      "valor_real_fechado": 500.0,
       "aceito": false
     },
     {
@@ -14760,10 +14785,10 @@
       "custo": 199.9,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
-      "valor_real_fechado": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -14777,7 +14802,7 @@
       "problema": "Insatisfação",
       "pct_desc": "20,00%",
       "desc_sug": 230.12,
-      "frete": 0,
+      "frete": 0.0,
       "total": 230.12,
       "valor_real_fechado": 364.78,
       "aceito": true
@@ -14792,10 +14817,10 @@
       "custo": 1850.01,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
-      "valor_real_fechado": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -14811,7 +14836,7 @@
       "desc_sug": 187.63,
       "frete": 247.49,
       "total": 435.12,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": false
     },
     {
@@ -14827,7 +14852,7 @@
       "desc_sug": 414.66,
       "frete": 267.78,
       "total": 682.44,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -14836,14 +14861,14 @@
       "ym": "2026-05",
       "canal": "mercadolivre",
       "sku": "TI1515",
-      "valor_pedido": 899,
+      "valor_pedido": 899.0,
       "custo": 766.97,
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 230.09,
-      "frete": 0,
+      "frete": 0.0,
       "total": 230.09,
-      "valor_real_fechado": 170,
+      "valor_real_fechado": 170.0,
       "aceito": true
     },
     {
@@ -14857,7 +14882,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 320.83,
-      "frete": 0,
+      "frete": 0.0,
       "total": 320.83,
       "valor_real_fechado": 169.59,
       "aceito": false
@@ -14868,14 +14893,14 @@
       "ym": "2026-05",
       "canal": "mercadolivre",
       "sku": "TI1563",
-      "valor_pedido": 539,
+      "valor_pedido": 539.0,
       "custo": 462.5,
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 138.75,
-      "frete": 0,
+      "frete": 0.0,
       "total": 138.75,
-      "valor_real_fechado": 130,
+      "valor_real_fechado": 130.0,
       "aceito": false
     },
     {
@@ -14889,9 +14914,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 1017.02,
-      "frete": 0,
+      "frete": 0.0,
       "total": 1017.02,
-      "valor_real_fechado": 245,
+      "valor_real_fechado": 245.0,
       "aceito": true
     },
     {
@@ -14905,7 +14930,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 320.83,
-      "frete": 0,
+      "frete": 0.0,
       "total": 320.83,
       "valor_real_fechado": 339.18,
       "aceito": false
@@ -14923,7 +14948,7 @@
       "desc_sug": 187.63,
       "frete": 193.14,
       "total": 380.77,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": true
     },
     {
@@ -14939,7 +14964,7 @@
       "desc_sug": 187.63,
       "frete": 207.88,
       "total": 395.51,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": true
     },
     {
@@ -14953,9 +14978,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 150.48,
-      "frete": 0,
+      "frete": 0.0,
       "total": 150.48,
-      "valor_real_fechado": 150,
+      "valor_real_fechado": 150.0,
       "aceito": false
     },
     {
@@ -14969,7 +14994,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 386.64,
-      "frete": 0,
+      "frete": 0.0,
       "total": 386.64,
       "valor_real_fechado": 193.69,
       "aceito": true
@@ -14985,9 +15010,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 345.17,
-      "frete": 0,
+      "frete": 0.0,
       "total": 345.17,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": true
     },
     {
@@ -15001,9 +15026,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 175.36,
-      "frete": 0,
+      "frete": 0.0,
       "total": 175.36,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -15017,9 +15042,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 150.48,
-      "frete": 0,
+      "frete": 0.0,
       "total": 150.48,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -15035,7 +15060,7 @@
       "desc_sug": 414.66,
       "frete": 267.78,
       "total": 682.44,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -15049,9 +15074,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 182.88,
-      "frete": 0,
+      "frete": 0.0,
       "total": 182.88,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": true
     },
     {
@@ -15064,10 +15089,10 @@
       "custo": 484.56,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
-      "valor_real_fechado": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -15081,9 +15106,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 850.38,
-      "frete": 0,
+      "frete": 0.0,
       "total": 850.38,
-      "valor_real_fechado": 400,
+      "valor_real_fechado": 400.0,
       "aceito": true
     },
     {
@@ -15099,7 +15124,7 @@
       "desc_sug": 414.66,
       "frete": 336.22,
       "total": 750.88,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": false
     },
     {
@@ -15115,7 +15140,7 @@
       "desc_sug": 195.9,
       "frete": 129.86,
       "total": 325.76,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": true
     },
     {
@@ -15129,9 +15154,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 1204.56,
-      "frete": 0,
+      "frete": 0.0,
       "total": 1204.56,
-      "valor_real_fechado": 780,
+      "valor_real_fechado": 780.0,
       "aceito": false
     },
     {
@@ -15145,9 +15170,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 1204.56,
-      "frete": 0,
+      "frete": 0.0,
       "total": 1204.56,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -15161,9 +15186,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 184.13,
-      "frete": 0,
+      "frete": 0.0,
       "total": 184.13,
-      "valor_real_fechado": 184,
+      "valor_real_fechado": 184.0,
       "aceito": true
     },
     {
@@ -15179,7 +15204,7 @@
       "desc_sug": 345.17,
       "frete": 234.94,
       "total": 580.11,
-      "valor_real_fechado": 350,
+      "valor_real_fechado": 350.0,
       "aceito": false
     },
     {
@@ -15193,9 +15218,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 316.29,
-      "frete": 0,
+      "frete": 0.0,
       "total": 316.29,
-      "valor_real_fechado": 270,
+      "valor_real_fechado": 270.0,
       "aceito": false
     },
     {
@@ -15209,7 +15234,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 187.63,
-      "frete": 0,
+      "frete": 0.0,
       "total": 187.63,
       "valor_real_fechado": 199.98,
       "aceito": false
@@ -15225,7 +15250,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 386.64,
-      "frete": 0,
+      "frete": 0.0,
       "total": 386.64,
       "valor_real_fechado": 373.98,
       "aceito": false
@@ -15241,7 +15266,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 320.83,
-      "frete": 0,
+      "frete": 0.0,
       "total": 320.83,
       "valor_real_fechado": 311.38,
       "aceito": true
@@ -15256,9 +15281,9 @@
       "custo": 1288.79,
       "problema": "Avaria",
       "pct_desc": "30,00%",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
       "valor_real_fechado": 193.69,
       "aceito": true
     },
@@ -15273,7 +15298,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 426.35,
-      "frete": 0,
+      "frete": 0.0,
       "total": 426.35,
       "valor_real_fechado": 216.59,
       "aceito": true
@@ -15288,10 +15313,10 @@
       "custo": 1650.01,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
-      "valor_real_fechado": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -15305,9 +15330,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 1204.56,
-      "frete": 0,
+      "frete": 0.0,
       "total": 1204.56,
-      "valor_real_fechado": 560,
+      "valor_real_fechado": 560.0,
       "aceito": true
     },
     {
@@ -15321,9 +15346,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 344.85,
-      "frete": 0,
+      "frete": 0.0,
       "total": 344.85,
-      "valor_real_fechado": 320,
+      "valor_real_fechado": 320.0,
       "aceito": true
     },
     {
@@ -15337,7 +15362,7 @@
       "problema": "Insatisfação",
       "pct_desc": "20,00%",
       "desc_sug": 200.11,
-      "frete": 0,
+      "frete": 0.0,
       "total": 200.11,
       "valor_real_fechado": 294.48,
       "aceito": false
@@ -15353,9 +15378,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 1017.02,
-      "frete": 0,
+      "frete": 0.0,
       "total": 1017.02,
-      "valor_real_fechado": 780,
+      "valor_real_fechado": 780.0,
       "aceito": true
     },
     {
@@ -15369,9 +15394,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 329.59,
-      "frete": 0,
+      "frete": 0.0,
       "total": 329.59,
-      "valor_real_fechado": 170,
+      "valor_real_fechado": 170.0,
       "aceito": true
     },
     {
@@ -15385,7 +15410,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 386.64,
-      "frete": 0,
+      "frete": 0.0,
       "total": 386.64,
       "valor_real_fechado": 387.38,
       "aceito": false
@@ -15403,7 +15428,7 @@
       "desc_sug": 414.66,
       "frete": 355.78,
       "total": 770.44,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": true
     },
     {
@@ -15419,7 +15444,7 @@
       "desc_sug": 172.97,
       "frete": 70.67,
       "total": 243.64,
-      "valor_real_fechado": 240,
+      "valor_real_fechado": 240.0,
       "aceito": false
     },
     {
@@ -15433,9 +15458,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 175.36,
-      "frete": 0,
+      "frete": 0.0,
       "total": 175.36,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -15449,9 +15474,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 138.75,
-      "frete": 0,
+      "frete": 0.0,
       "total": 138.75,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -15465,7 +15490,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 320.83,
-      "frete": 0,
+      "frete": 0.0,
       "total": 320.83,
       "valor_real_fechado": 306.38,
       "aceito": true
@@ -15481,9 +15506,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 175.36,
-      "frete": 0,
+      "frete": 0.0,
       "total": 175.36,
-      "valor_real_fechado": 170,
+      "valor_real_fechado": 170.0,
       "aceito": true
     },
     {
@@ -15497,7 +15522,7 @@
       "problema": "Insatisfação",
       "pct_desc": "20,00%",
       "desc_sug": 124.43,
-      "frete": 0,
+      "frete": 0.0,
       "total": 124.43,
       "valor_real_fechado": 207.18,
       "aceito": true
@@ -15513,9 +15538,9 @@
       "problema": "Sucata",
       "pct_desc": "50,00%",
       "desc_sug": 435.6,
-      "frete": 0,
+      "frete": 0.0,
       "total": 435.6,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -15529,9 +15554,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 377.58,
-      "frete": 0,
+      "frete": 0.0,
       "total": 377.58,
-      "valor_real_fechado": 320,
+      "valor_real_fechado": 320.0,
       "aceito": false
     },
     {
@@ -15545,9 +15570,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 1204.56,
-      "frete": 0,
+      "frete": 0.0,
       "total": 1204.56,
-      "valor_real_fechado": 520,
+      "valor_real_fechado": 520.0,
       "aceito": true
     },
     {
@@ -15563,7 +15588,7 @@
       "desc_sug": 327.41,
       "frete": 316.45,
       "total": 643.86,
-      "valor_real_fechado": 150,
+      "valor_real_fechado": 150.0,
       "aceito": true
     },
     {
@@ -15577,7 +15602,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 320.83,
-      "frete": 0,
+      "frete": 0.0,
       "total": 320.83,
       "valor_real_fechado": 155.69,
       "aceito": true
@@ -15595,7 +15620,7 @@
       "desc_sug": 133.03,
       "frete": 154.79,
       "total": 287.82,
-      "valor_real_fechado": 200,
+      "valor_real_fechado": 200.0,
       "aceito": false
     },
     {
@@ -15609,9 +15634,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 1204.56,
-      "frete": 0,
+      "frete": 0.0,
       "total": 1204.56,
-      "valor_real_fechado": 820,
+      "valor_real_fechado": 820.0,
       "aceito": false
     },
     {
@@ -15625,9 +15650,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 281.98,
-      "frete": 0,
+      "frete": 0.0,
       "total": 281.98,
-      "valor_real_fechado": 320,
+      "valor_real_fechado": 320.0,
       "aceito": false
     },
     {
@@ -15641,9 +15666,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 377.58,
-      "frete": 0,
+      "frete": 0.0,
       "total": 377.58,
-      "valor_real_fechado": 380,
+      "valor_real_fechado": 380.0,
       "aceito": false
     },
     {
@@ -15657,7 +15682,7 @@
       "problema": "Insatisfação",
       "pct_desc": "20,00%",
       "desc_sug": 294.42,
-      "frete": 0,
+      "frete": 0.0,
       "total": 294.42,
       "valor_real_fechado": 221.79,
       "aceito": false
@@ -15675,7 +15700,7 @@
       "desc_sug": 206.77,
       "frete": 55.84,
       "total": 262.61,
-      "valor_real_fechado": 150,
+      "valor_real_fechado": 150.0,
       "aceito": true
     },
     {
@@ -15689,7 +15714,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 187.63,
-      "frete": 0,
+      "frete": 0.0,
       "total": 187.63,
       "valor_real_fechado": 202.58,
       "aceito": false
@@ -15705,9 +15730,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 175.36,
-      "frete": 0,
+      "frete": 0.0,
       "total": 175.36,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -15720,10 +15745,10 @@
       "custo": 3390.06,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
-      "valor_real_fechado": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
+      "valor_real_fechado": 0.0,
       "aceito": true
     },
     {
@@ -15738,8 +15763,8 @@
       "pct_desc": "30,00%",
       "desc_sug": 348.16,
       "frete": 208.09,
-      "total": 300,
-      "valor_real_fechado": 300,
+      "total": 300.0,
+      "valor_real_fechado": 300.0,
       "aceito": true
     },
     {
@@ -15753,9 +15778,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 1151.77,
-      "frete": 0,
+      "frete": 0.0,
       "total": 1151.77,
-      "valor_real_fechado": 560,
+      "valor_real_fechado": 560.0,
       "aceito": false
     },
     {
@@ -15771,7 +15796,7 @@
       "desc_sug": 534.72,
       "frete": 155.75,
       "total": 690.47,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": false
     },
     {
@@ -15785,9 +15810,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 261.01,
-      "frete": 0,
+      "frete": 0.0,
       "total": 261.01,
-      "valor_real_fechado": 320,
+      "valor_real_fechado": 320.0,
       "aceito": true
     },
     {
@@ -15803,7 +15828,7 @@
       "desc_sug": 1204.56,
       "frete": 552.07,
       "total": 1756.63,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -15819,7 +15844,7 @@
       "desc_sug": 345.17,
       "frete": 251.08,
       "total": 596.25,
-      "valor_real_fechado": 250,
+      "valor_real_fechado": 250.0,
       "aceito": false
     },
     {
@@ -15835,7 +15860,7 @@
       "desc_sug": 187.63,
       "frete": 243.28,
       "total": 430.91,
-      "valor_real_fechado": 240,
+      "valor_real_fechado": 240.0,
       "aceito": false
     },
     {
@@ -15851,7 +15876,7 @@
       "desc_sug": 187.63,
       "frete": 186.06,
       "total": 373.69,
-      "valor_real_fechado": 180,
+      "valor_real_fechado": 180.0,
       "aceito": false
     },
     {
@@ -15867,7 +15892,7 @@
       "desc_sug": 345.17,
       "frete": 293.06,
       "total": 638.23,
-      "valor_real_fechado": 293,
+      "valor_real_fechado": 293.0,
       "aceito": false
     },
     {
@@ -15880,10 +15905,10 @@
       "custo": 625.44,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
-      "valor_real_fechado": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -15897,9 +15922,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 327.41,
-      "frete": 0,
+      "frete": 0.0,
       "total": 327.41,
-      "valor_real_fechado": 338,
+      "valor_real_fechado": 338.0,
       "aceito": false
     },
     {
@@ -15913,7 +15938,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 121.46,
-      "frete": 0,
+      "frete": 0.0,
       "total": 121.46,
       "valor_real_fechado": 139.98,
       "aceito": false
@@ -15925,12 +15950,12 @@
       "canal": "mercadolivre",
       "sku": "SS001",
       "valor_pedido": 839.9,
-      "custo": 462,
+      "custo": 462.0,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
       "valor_real_fechado": 83.99,
       "aceito": false
     },
@@ -15944,10 +15969,10 @@
       "custo": 19.2,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
-      "valor_real_fechado": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -15960,10 +15985,10 @@
       "custo": 1260.04,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
-      "valor_real_fechado": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -15976,9 +16001,9 @@
       "custo": 625.44,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
       "valor_real_fechado": 162.58,
       "aceito": true
     },
@@ -15992,9 +16017,9 @@
       "custo": 1260.04,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
       "valor_real_fechado": 189.99,
       "aceito": false
     },
@@ -16008,9 +16033,9 @@
       "custo": 4015.19,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
       "valor_real_fechado": 523.9,
       "aceito": false
     },
@@ -16027,7 +16052,7 @@
       "desc_sug": 187.63,
       "frete": 268.12,
       "total": 455.75,
-      "valor_real_fechado": 220,
+      "valor_real_fechado": 220.0,
       "aceito": false
     },
     {
@@ -16041,9 +16066,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 172.88,
-      "frete": 0,
+      "frete": 0.0,
       "total": 172.88,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -16059,7 +16084,7 @@
       "desc_sug": 320.83,
       "frete": 165.52,
       "total": 486.35,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": false
     },
     {
@@ -16075,7 +16100,7 @@
       "desc_sug": 187.63,
       "frete": 297.09,
       "total": 484.72,
-      "valor_real_fechado": 400,
+      "valor_real_fechado": 400.0,
       "aceito": true
     },
     {
@@ -16089,7 +16114,7 @@
       "problema": "Insatisfação",
       "pct_desc": "20,00%",
       "desc_sug": 222.36,
-      "frete": 0,
+      "frete": 0.0,
       "total": 222.36,
       "valor_real_fechado": 256.59,
       "aceito": false
@@ -16105,9 +16130,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 6.43,
-      "frete": 0,
+      "frete": 0.0,
       "total": 6.43,
-      "valor_real_fechado": 280,
+      "valor_real_fechado": 280.0,
       "aceito": true
     },
     {
@@ -16121,9 +16146,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 187.63,
-      "frete": 0,
+      "frete": 0.0,
       "total": 187.63,
-      "valor_real_fechado": 220,
+      "valor_real_fechado": 220.0,
       "aceito": false
     },
     {
@@ -16137,9 +16162,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 261.36,
-      "frete": 0,
+      "frete": 0.0,
       "total": 261.36,
-      "valor_real_fechado": 280,
+      "valor_real_fechado": 280.0,
       "aceito": false
     },
     {
@@ -16152,10 +16177,10 @@
       "custo": 19.2,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
-      "valor_real_fechado": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -16171,7 +16196,7 @@
       "desc_sug": 1038.26,
       "frete": 274.8,
       "total": 1313.06,
-      "valor_real_fechado": 500,
+      "valor_real_fechado": 500.0,
       "aceito": false
     },
     {
@@ -16187,7 +16212,7 @@
       "desc_sug": 187.63,
       "frete": 244.99,
       "total": 432.62,
-      "valor_real_fechado": 430,
+      "valor_real_fechado": 430.0,
       "aceito": true
     },
     {
@@ -16203,7 +16228,7 @@
       "desc_sug": 187.63,
       "frete": 283.28,
       "total": 470.91,
-      "valor_real_fechado": 470,
+      "valor_real_fechado": 470.0,
       "aceito": true
     },
     {
@@ -16216,10 +16241,10 @@
       "custo": 1286.69,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
-      "valor_real_fechado": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -16233,9 +16258,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 150.35,
-      "frete": 0,
+      "frete": 0.0,
       "total": 150.35,
-      "valor_real_fechado": 150,
+      "valor_real_fechado": 150.0,
       "aceito": false
     },
     {
@@ -16249,9 +16274,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 255.19,
-      "frete": 0,
+      "frete": 0.0,
       "total": 255.19,
-      "valor_real_fechado": 240,
+      "valor_real_fechado": 240.0,
       "aceito": false
     },
     {
@@ -16265,9 +16290,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 187.63,
-      "frete": 0,
+      "frete": 0.0,
       "total": 187.63,
-      "valor_real_fechado": 220,
+      "valor_real_fechado": 220.0,
       "aceito": false
     },
     {
@@ -16281,9 +16306,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 145.37,
-      "frete": 0,
+      "frete": 0.0,
       "total": 145.37,
-      "valor_real_fechado": 145,
+      "valor_real_fechado": 145.0,
       "aceito": false
     },
     {
@@ -16297,9 +16322,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 960.19,
-      "frete": 0,
+      "frete": 0.0,
       "total": 960.19,
-      "valor_real_fechado": 120,
+      "valor_real_fechado": 120.0,
       "aceito": false
     },
     {
@@ -16313,9 +16338,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 327.41,
-      "frete": 0,
+      "frete": 0.0,
       "total": 327.41,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -16329,9 +16354,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 187.63,
-      "frete": 0,
+      "frete": 0.0,
       "total": 187.63,
-      "valor_real_fechado": 254,
+      "valor_real_fechado": 254.0,
       "aceito": true
     },
     {
@@ -16345,7 +16370,7 @@
       "problema": "Insatisfação",
       "pct_desc": "20,00%",
       "desc_sug": 222.36,
-      "frete": 0,
+      "frete": 0.0,
       "total": 222.36,
       "valor_real_fechado": 256.59,
       "aceito": false
@@ -16361,7 +16386,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 187.63,
-      "frete": 0,
+      "frete": 0.0,
       "total": 187.63,
       "valor_real_fechado": 101.29,
       "aceito": false
@@ -16377,7 +16402,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 429.57,
-      "frete": 0,
+      "frete": 0.0,
       "total": 429.57,
       "valor_real_fechado": 219.89,
       "aceito": false
@@ -16393,9 +16418,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 429.57,
-      "frete": 0,
+      "frete": 0.0,
       "total": 429.57,
-      "valor_real_fechado": 220,
+      "valor_real_fechado": 220.0,
       "aceito": false
     },
     {
@@ -16409,9 +16434,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 5.76,
-      "frete": 0,
+      "frete": 0.0,
       "total": 5.76,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -16425,7 +16450,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 345.17,
-      "frete": 0,
+      "frete": 0.0,
       "total": 345.17,
       "valor_real_fechado": 357.38,
       "aceito": false
@@ -16441,7 +16466,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 345.17,
-      "frete": 0,
+      "frete": 0.0,
       "total": 345.17,
       "valor_real_fechado": 357.38,
       "aceito": false
@@ -16459,7 +16484,7 @@
       "desc_sug": 386.01,
       "frete": 195.48,
       "total": 581.49,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": false
     },
     {
@@ -16475,7 +16500,7 @@
       "desc_sug": 187.63,
       "frete": 283.28,
       "total": 470.91,
-      "valor_real_fechado": 470,
+      "valor_real_fechado": 470.0,
       "aceito": false
     },
     {
@@ -16491,7 +16516,7 @@
       "desc_sug": 345.17,
       "frete": 147.79,
       "total": 492.96,
-      "valor_real_fechado": 250,
+      "valor_real_fechado": 250.0,
       "aceito": true
     },
     {
@@ -16505,7 +16530,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 429.57,
-      "frete": 0,
+      "frete": 0.0,
       "total": 429.57,
       "valor_real_fechado": 282.92,
       "aceito": true
@@ -16521,9 +16546,9 @@
       "problema": "Insatisfação",
       "pct_desc": "20,00%",
       "desc_sug": 678.01,
-      "frete": 0,
+      "frete": 0.0,
       "total": 678.01,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -16533,13 +16558,13 @@
       "canal": "shopee",
       "sku": "SS001",
       "valor_pedido": 877.27,
-      "custo": 462,
+      "custo": 462.0,
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 138.6,
       "frete": 50.23,
       "total": 188.83,
-      "valor_real_fechado": 185,
+      "valor_real_fechado": 185.0,
       "aceito": false
     },
     {
@@ -16553,9 +16578,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 297.47,
-      "frete": 0,
+      "frete": 0.0,
       "total": 297.47,
-      "valor_real_fechado": 150,
+      "valor_real_fechado": 150.0,
       "aceito": false
     },
     {
@@ -16569,9 +16594,9 @@
       "problema": "Insatisfação",
       "pct_desc": "20,00%",
       "desc_sug": 218.28,
-      "frete": 0,
+      "frete": 0.0,
       "total": 218.28,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -16584,10 +16609,10 @@
       "custo": 909.88,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
-      "valor_real_fechado": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -16600,10 +16625,10 @@
       "custo": 2834.61,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
-      "valor_real_fechado": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -16613,13 +16638,13 @@
       "canal": "mercadolivre",
       "sku": "SS001",
       "valor_pedido": 859.9,
-      "custo": 462,
+      "custo": 462.0,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
-      "valor_real_fechado": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -16633,7 +16658,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 187.63,
-      "frete": 0,
+      "frete": 0.0,
       "total": 187.63,
       "valor_real_fechado": 202.28,
       "aceito": false
@@ -16651,7 +16676,7 @@
       "desc_sug": 328.28,
       "frete": 213.86,
       "total": 542.14,
-      "valor_real_fechado": 350,
+      "valor_real_fechado": 350.0,
       "aceito": true
     },
     {
@@ -16665,9 +16690,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 345.17,
-      "frete": 0,
+      "frete": 0.0,
       "total": 345.17,
-      "valor_real_fechado": 300,
+      "valor_real_fechado": 300.0,
       "aceito": false
     },
     {
@@ -16681,9 +16706,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 261.36,
-      "frete": 0,
+      "frete": 0.0,
       "total": 261.36,
-      "valor_real_fechado": 250,
+      "valor_real_fechado": 250.0,
       "aceito": false
     },
     {
@@ -16699,7 +16724,7 @@
       "desc_sug": 187.63,
       "frete": 244.99,
       "total": 432.62,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -16713,7 +16738,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 850.38,
-      "frete": 0,
+      "frete": 0.0,
       "total": 850.38,
       "valor_real_fechado": 365.84,
       "aceito": false
@@ -16729,9 +16754,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 850.38,
-      "frete": 0,
+      "frete": 0.0,
       "total": 850.38,
-      "valor_real_fechado": 420,
+      "valor_real_fechado": 420.0,
       "aceito": false
     },
     {
@@ -16744,9 +16769,9 @@
       "custo": 1069.43,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
       "valor_real_fechado": 155.69,
       "aceito": false
     },
@@ -16760,9 +16785,9 @@
       "custo": 991.58,
       "problema": "Vazio",
       "pct_desc": "",
-      "desc_sug": 0,
-      "frete": 0,
-      "total": 0,
+      "desc_sug": 0.0,
+      "frete": 0.0,
+      "total": 0.0,
       "valor_real_fechado": 135.59,
       "aceito": false
     },
@@ -16777,9 +16802,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 379.72,
-      "frete": 0,
+      "frete": 0.0,
       "total": 379.72,
-      "valor_real_fechado": 120,
+      "valor_real_fechado": 120.0,
       "aceito": false
     },
     {
@@ -16793,7 +16818,7 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 386.64,
-      "frete": 0,
+      "frete": 0.0,
       "total": 386.64,
       "valor_real_fechado": 179.99,
       "aceito": false
@@ -16811,7 +16836,7 @@
       "desc_sug": 345.17,
       "frete": 230.42,
       "total": 575.59,
-      "valor_real_fechado": 220,
+      "valor_real_fechado": 220.0,
       "aceito": false
     },
     {
@@ -16827,7 +16852,7 @@
       "desc_sug": 182.88,
       "frete": 184.92,
       "total": 367.8,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -16841,9 +16866,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 187.63,
-      "frete": 0,
+      "frete": 0.0,
       "total": 187.63,
-      "valor_real_fechado": 220,
+      "valor_real_fechado": 220.0,
       "aceito": false
     },
     {
@@ -16859,7 +16884,7 @@
       "desc_sug": 119.02,
       "frete": 137.17,
       "total": 256.19,
-      "valor_real_fechado": 250,
+      "valor_real_fechado": 250.0,
       "aceito": false
     },
     {
@@ -16873,9 +16898,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 150.35,
-      "frete": 0,
+      "frete": 0.0,
       "total": 150.35,
-      "valor_real_fechado": 220,
+      "valor_real_fechado": 220.0,
       "aceito": false
     },
     {
@@ -16889,9 +16914,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 345.17,
-      "frete": 0,
+      "frete": 0.0,
       "total": 345.17,
-      "valor_real_fechado": 290,
+      "valor_real_fechado": 290.0,
       "aceito": false
     },
     {
@@ -16905,9 +16930,9 @@
       "problema": "Avaria",
       "pct_desc": "30,00%",
       "desc_sug": 386.64,
-      "frete": 0,
+      "frete": 0.0,
       "total": 386.64,
-      "valor_real_fechado": 0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -16923,12 +16948,69 @@
       "desc_sug": 184.13,
       "frete": 288.8,
       "total": 472.93,
-      "valor_real_fechado": 400,
+      "valor_real_fechado": 400.0,
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-07-13T10:50:50.691492-03:00",
+  "descontosUpdatedAt": "2026-07-13T11:45:51.011197-03:00",
   "descontosAggByMonth": {
+    "2026-02": {
+      "magalu": {
+        "count": 2,
+        "countAceito": 0,
+        "descontoTotal": 1063.7,
+        "custoTotal": 2575.48,
+        "valorPedidoTotal": 3916.42,
+        "pctDescontoSobreCusto": 41.3,
+        "pctDescontoSobreVenda": 27.16,
+        "vendaTotalCanal": 336691.45,
+        "pctDescontoSobreVendaCanal": 0.3159
+      },
+      "casasbahia": {
+        "count": 1,
+        "countAceito": 1,
+        "descontoTotal": 352.0,
+        "custoTotal": 1226.54,
+        "valorPedidoTotal": 1915.77,
+        "pctDescontoSobreCusto": 28.7,
+        "pctDescontoSobreVenda": 18.37,
+        "vendaTotalCanal": 809583.85,
+        "pctDescontoSobreVendaCanal": 0.0435
+      },
+      "mercadolivre": {
+        "count": 3,
+        "countAceito": 2,
+        "descontoTotal": 528.02,
+        "custoTotal": 2069.0,
+        "valorPedidoTotal": 3143.25,
+        "pctDescontoSobreCusto": 25.52,
+        "pctDescontoSobreVenda": 16.8,
+        "vendaTotalCanal": 2287276.06,
+        "pctDescontoSobreVendaCanal": 0.0231
+      },
+      "amazon": {
+        "count": 1,
+        "countAceito": 1,
+        "descontoTotal": 520.0,
+        "custoTotal": 1091.38,
+        "valorPedidoTotal": 1710.94,
+        "pctDescontoSobreCusto": 47.65,
+        "pctDescontoSobreVenda": 30.39,
+        "vendaTotalCanal": 544657.62,
+        "pctDescontoSobreVendaCanal": 0.0955
+      },
+      "shopee": {
+        "count": 1,
+        "countAceito": 1,
+        "descontoTotal": 58.0,
+        "custoTotal": 399.97,
+        "valorPedidoTotal": 588.53,
+        "pctDescontoSobreCusto": 14.5,
+        "pctDescontoSobreVenda": 9.86,
+        "vendaTotalCanal": 457232.4,
+        "pctDescontoSobreVendaCanal": 0.0127
+      }
+    },
     "2026-03": {
       "mercadolivre": {
         "count": 45,
@@ -16944,7 +17026,7 @@
       "shopee": {
         "count": 5,
         "countAceito": 2,
-        "descontoTotal": 1090,
+        "descontoTotal": 1090.0,
         "custoTotal": 4240.59,
         "valorPedidoTotal": 6660.76,
         "pctDescontoSobreCusto": 25.7,
@@ -16955,7 +17037,7 @@
       "casasbahia": {
         "count": 5,
         "countAceito": 3,
-        "descontoTotal": 1450,
+        "descontoTotal": 1450.0,
         "custoTotal": 5829.81,
         "valorPedidoTotal": 9010.44,
         "pctDescontoSobreCusto": 24.87,
@@ -16964,68 +17046,11 @@
         "pctDescontoSobreVendaCanal": 0.1195
       }
     },
-    "2026-02": {
-      "casasbahia": {
-        "count": 1,
-        "countAceito": 1,
-        "descontoTotal": 352,
-        "custoTotal": 1226.54,
-        "valorPedidoTotal": 1915.77,
-        "pctDescontoSobreCusto": 28.7,
-        "pctDescontoSobreVenda": 18.37,
-        "vendaTotalCanal": 809583.85,
-        "pctDescontoSobreVendaCanal": 0.0435
-      },
-      "mercadolivre": {
-        "count": 3,
-        "countAceito": 2,
-        "descontoTotal": 528.02,
-        "custoTotal": 2069,
-        "valorPedidoTotal": 3143.25,
-        "pctDescontoSobreCusto": 25.52,
-        "pctDescontoSobreVenda": 16.8,
-        "vendaTotalCanal": 2287276.06,
-        "pctDescontoSobreVendaCanal": 0.0231
-      },
-      "magalu": {
-        "count": 1,
-        "countAceito": 0,
-        "descontoTotal": 363.7,
-        "custoTotal": 1288.79,
-        "valorPedidoTotal": 1789.3,
-        "pctDescontoSobreCusto": 28.22,
-        "pctDescontoSobreVenda": 20.33,
-        "vendaTotalCanal": 336691.45,
-        "pctDescontoSobreVendaCanal": 0.108
-      },
-      "amazon": {
-        "count": 1,
-        "countAceito": 1,
-        "descontoTotal": 520,
-        "custoTotal": 1091.38,
-        "valorPedidoTotal": 1710.94,
-        "pctDescontoSobreCusto": 47.65,
-        "pctDescontoSobreVenda": 30.39,
-        "vendaTotalCanal": 544657.62,
-        "pctDescontoSobreVendaCanal": 0.0955
-      },
-      "shopee": {
-        "count": 1,
-        "countAceito": 1,
-        "descontoTotal": 58,
-        "custoTotal": 399.97,
-        "valorPedidoTotal": 588.53,
-        "pctDescontoSobreCusto": 14.5,
-        "pctDescontoSobreVenda": 9.86,
-        "vendaTotalCanal": 457232.4,
-        "pctDescontoSobreVendaCanal": 0.0127
-      }
-    },
     "2026-01": {
       "casasbahia": {
         "count": 1,
         "countAceito": 1,
-        "descontoTotal": 360,
+        "descontoTotal": 360.0,
         "custoTotal": 652.99,
         "valorPedidoTotal": 1064.07,
         "pctDescontoSobreCusto": 55.13,
@@ -17049,7 +17074,7 @@
       "amazon": {
         "count": 7,
         "countAceito": 4,
-        "descontoTotal": 1520,
+        "descontoTotal": 1520.0,
         "custoTotal": 5875.4,
         "valorPedidoTotal": 9227.21,
         "pctDescontoSobreCusto": 25.87,
@@ -17060,7 +17085,7 @@
       "magalu": {
         "count": 2,
         "countAceito": 0,
-        "descontoTotal": 1452,
+        "descontoTotal": 1452.0,
         "custoTotal": 4604.48,
         "valorPedidoTotal": 8009.7,
         "pctDescontoSobreCusto": 31.53,
@@ -17071,7 +17096,7 @@
       "casasbahia": {
         "count": 12,
         "countAceito": 7,
-        "descontoTotal": 3036,
+        "descontoTotal": 3036.0,
         "custoTotal": 9655.39,
         "valorPedidoTotal": 14218.9,
         "pctDescontoSobreCusto": 31.44,
@@ -17082,8 +17107,8 @@
       "shopee": {
         "count": 2,
         "countAceito": 1,
-        "descontoTotal": 450,
-        "custoTotal": 1020,
+        "descontoTotal": 450.0,
+        "custoTotal": 1020.0,
         "valorPedidoTotal": 1749.93,
         "pctDescontoSobreCusto": 44.12,
         "pctDescontoSobreVenda": 25.72,
@@ -17095,7 +17120,7 @@
       "casasbahia": {
         "count": 1,
         "countAceito": 1,
-        "descontoTotal": 920,
+        "descontoTotal": 920.0,
         "custoTotal": 3390.06,
         "valorPedidoTotal": 4609.79,
         "pctDescontoSobreCusto": 27.14,
@@ -17108,7 +17133,7 @@
       "casasbahia": {
         "count": 16,
         "countAceito": 5,
-        "descontoTotal": 2770,
+        "descontoTotal": 2770.0,
         "custoTotal": 17623.04,
         "valorPedidoTotal": 27450.01,
         "pctDescontoSobreCusto": 15.72,
@@ -17130,7 +17155,7 @@
       "amazon": {
         "count": 6,
         "countAceito": 3,
-        "descontoTotal": 1380,
+        "descontoTotal": 1380.0,
         "custoTotal": 5670.73,
         "valorPedidoTotal": 8234.21,
         "pctDescontoSobreCusto": 24.34,
@@ -17141,7 +17166,7 @@
       "shopee": {
         "count": 1,
         "countAceito": 0,
-        "descontoTotal": 200,
+        "descontoTotal": 200.0,
         "custoTotal": 511.18,
         "valorPedidoTotal": 828.31,
         "pctDescontoSobreCusto": 39.13,
@@ -17152,9 +17177,9 @@
       "magalu": {
         "count": 2,
         "countAceito": 0,
-        "descontoTotal": 850,
+        "descontoTotal": 850.0,
         "custoTotal": 2001.82,
-        "valorPedidoTotal": 3014,
+        "valorPedidoTotal": 3014.0,
         "pctDescontoSobreCusto": 42.46,
         "pctDescontoSobreVenda": 28.2,
         "vendaTotalCanal": 740647.46,
@@ -17176,7 +17201,7 @@
       "amazon": {
         "count": 7,
         "countAceito": 3,
-        "descontoTotal": 1700,
+        "descontoTotal": 1700.0,
         "custoTotal": 9910.82,
         "valorPedidoTotal": 14648.94,
         "pctDescontoSobreCusto": 17.15,
@@ -17187,7 +17212,7 @@
       "shopee": {
         "count": 8,
         "countAceito": 3,
-        "descontoTotal": 2630,
+        "descontoTotal": 2630.0,
         "custoTotal": 4991.84,
         "valorPedidoTotal": 7621.59,
         "pctDescontoSobreCusto": 52.69,
@@ -17198,7 +17223,7 @@
       "magalu": {
         "count": 3,
         "countAceito": 0,
-        "descontoTotal": 773,
+        "descontoTotal": 773.0,
         "custoTotal": 3062.71,
         "valorPedidoTotal": 4569.58,
         "pctDescontoSobreCusto": 25.24,
@@ -17209,7 +17234,7 @@
       "casasbahia": {
         "count": 2,
         "countAceito": 1,
-        "descontoTotal": 550,
+        "descontoTotal": 550.0,
         "custoTotal": 2220.01,
         "valorPedidoTotal": 3240.61,
         "pctDescontoSobreCusto": 24.77,
@@ -17222,8 +17247,8 @@
       "shopee": {
         "count": 1,
         "countAceito": 0,
-        "descontoTotal": 185,
-        "custoTotal": 462,
+        "descontoTotal": 185.0,
+        "custoTotal": 462.0,
         "valorPedidoTotal": 877.27,
         "pctDescontoSobreCusto": 40.04,
         "pctDescontoSobreVenda": 21.09,
@@ -17233,7 +17258,7 @@
       "amazon": {
         "count": 3,
         "countAceito": 1,
-        "descontoTotal": 600,
+        "descontoTotal": 600.0,
         "custoTotal": 2100.59,
         "valorPedidoTotal": 3119.18,
         "pctDescontoSobreCusto": 28.56,
@@ -17244,7 +17269,7 @@
       "mercadolivre": {
         "count": 1,
         "countAceito": 0,
-        "descontoTotal": 220,
+        "descontoTotal": 220.0,
         "custoTotal": 501.15,
         "valorPedidoTotal": 917.9,
         "pctDescontoSobreCusto": 43.9,
