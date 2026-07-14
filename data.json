@@ -14553,7 +14553,7 @@
       "desconto_sug": 187.63,
       "frete": 154.03,
       "total": 341.66,
-      "valor_real_fechado": 4300.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -17099,9 +17099,25 @@
       "total": 150.48,
       "valor_real_fechado": 164.98,
       "aceito": false
+    },
+    {
+      "pedido": "702-0452020-5592264",
+      "data": "04/07/2026",
+      "ym": "2026-07",
+      "canal": "amazon",
+      "sku": "TI1667",
+      "valor_pedido": 853.5,
+      "custo": 613.76,
+      "problema": "Avaria",
+      "pct_desc": "30,00%",
+      "desconto_sug": 184.13,
+      "frete": 0.0,
+      "total": 184.13,
+      "valor_real_fechado": 180.0,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-07-14T14:19:08.666817-03:00",
+  "descontosUpdatedAt": "2026-07-14T15:13:57.762089-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -17282,13 +17298,13 @@
       "casasbahia": {
         "count": 16,
         "countAceito": 5,
-        "descontoTotal": 7070.0,
+        "descontoTotal": 2770.0,
         "custoTotal": 17623.04,
         "valorPedidoTotal": 27450.01,
-        "pctDescontoSobreCusto": 40.12,
-        "pctDescontoSobreVenda": 25.76,
+        "pctDescontoSobreCusto": 15.72,
+        "pctDescontoSobreVenda": 10.09,
         "vendaTotalCanal": 1214519.32,
-        "pctDescontoSobreVendaCanal": 0.5821
+        "pctDescontoSobreVendaCanal": 0.2281
       },
       "mercadolivre": {
         "count": 57,
@@ -17405,13 +17421,13 @@
         "pctDescontoSobreVendaCanal": 0
       },
       "amazon": {
-        "count": 4,
+        "count": 5,
         "countAceito": 1,
-        "descontoTotal": 600.0,
-        "custoTotal": 2497.33,
-        "valorPedidoTotal": 3745.57,
-        "pctDescontoSobreCusto": 24.03,
-        "pctDescontoSobreVenda": 16.02,
+        "descontoTotal": 780.0,
+        "custoTotal": 3111.09,
+        "valorPedidoTotal": 4599.07,
+        "pctDescontoSobreCusto": 25.07,
+        "pctDescontoSobreVenda": 16.96,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       },
