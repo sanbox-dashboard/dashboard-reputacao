@@ -2337,13 +2337,18 @@
     },
     "2026-07-14": {
       "mercadolivre": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "MercadoLíder Platinum",
+        "metrics": {
+          "reclamacoes": 0.72,
+          "mediacoes": 0.18,
+          "canceladas": 0.14,
+          "enviosIncorretos": 0.09
+        },
         "tickets": 9,
         "sacForaPrazo": 3,
         "casosCriticos": 11,
         "solicitacaoDevolucao": 5,
-        "ts": "1970-01-01T00:00:00.000Z"
+        "ts": "2026-07-14T12:32:45.369Z"
       },
       "amazon": {
         "reputacao": "",
