@@ -2348,7 +2348,9 @@
         "sacForaPrazo": 3,
         "casosCriticos": 11,
         "solicitacaoDevolucao": 8,
-        "ts": "2026-07-14T14:13:31.926Z"
+        "ts": "2026-07-14T16:14:01.689824-03:00",
+        "solicitacaoDevolucaoAmarelo": 4,
+        "solicitacaoDevolucaoVermelho": 4
       },
       "amazon": {
         "reputacao": "278",
@@ -2361,7 +2363,9 @@
         "sacForaPrazo": 11,
         "casosCriticos": 6,
         "solicitacaoDevolucao": 4,
-        "ts": "2026-07-14T14:13:31.926Z"
+        "ts": "2026-07-14T16:14:01.689824-03:00",
+        "solicitacaoDevolucaoAmarelo": 1,
+        "solicitacaoDevolucaoVermelho": 3
       },
       "magalu": {
         "reputacao": "3,0",
@@ -2374,7 +2378,9 @@
         "sacForaPrazo": 0,
         "casosCriticos": 4,
         "solicitacaoDevolucao": 5,
-        "ts": "2026-07-14T14:13:31.926Z"
+        "ts": "2026-07-14T16:14:01.689824-03:00",
+        "solicitacaoDevolucaoAmarelo": 1,
+        "solicitacaoDevolucaoVermelho": 4
       },
       "casasbahia": {
         "reputacao": "3,5",
@@ -2386,7 +2392,9 @@
         "sacForaPrazo": 1,
         "casosCriticos": 27,
         "solicitacaoDevolucao": 5,
-        "ts": "2026-07-14T13:55:12.256Z"
+        "ts": "2026-07-14T16:14:01.689824-03:00",
+        "solicitacaoDevolucaoAmarelo": 1,
+        "solicitacaoDevolucaoVermelho": 4
       },
       "shopee": {
         "reputacao": "4,86",
@@ -2400,7 +2408,9 @@
         "sacForaPrazo": 2,
         "casosCriticos": 17,
         "solicitacaoDevolucao": 11,
-        "ts": "2026-07-14T14:13:31.926Z"
+        "ts": "2026-07-14T16:14:01.689824-03:00",
+        "solicitacaoDevolucaoAmarelo": 4,
+        "solicitacaoDevolucaoVermelho": 7
       }
     }
   },
@@ -11964,199 +11974,9 @@
       "sk": "",
       "tr": "",
       "pr": "—"
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-14T15:44:32.753256-03:00",
+  "ticketsRawUpdatedAt": "2026-07-14T16:14:01.689824-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
