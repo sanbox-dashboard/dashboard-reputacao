@@ -2389,13 +2389,18 @@
         "ts": "2026-07-14T12:37:12.869Z"
       },
       "shopee": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "4,86",
+        "metrics": {
+          "taxaResposta": 98.03,
+          "boaAvaliacao": 97,
+          "notaLoja": 4.86,
+          "ruinsNaoRespondidas": 0
+        },
         "tickets": 0,
         "sacForaPrazo": 2,
         "casosCriticos": 17,
         "solicitacaoDevolucao": 9,
-        "ts": "1970-01-01T00:00:00.000Z"
+        "ts": "2026-07-14T12:38:31.807Z"
       }
     }
   },
