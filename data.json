@@ -2351,13 +2351,17 @@
         "ts": "2026-07-14T12:32:45.369Z"
       },
       "amazon": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "278",
+        "metrics": {
+          "pedidosProblema": 1.71,
+          "cancelamentoEnvio": 0,
+          "rastreamento": 0
+        },
         "tickets": 0,
         "sacForaPrazo": 11,
         "casosCriticos": 6,
         "solicitacaoDevolucao": 4,
-        "ts": "1970-01-01T00:00:00.000Z"
+        "ts": "2026-07-14T12:34:56.344Z"
       },
       "magalu": {
         "reputacao": "",
