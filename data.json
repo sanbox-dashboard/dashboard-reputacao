@@ -2484,6 +2484,36 @@
   },
   "ticketsRaw": [
     {
+      "n": "99916831",
+      "d": "15/07/2026",
+      "ym": "2026-07",
+      "lj": "Mercado Livre",
+      "pb": "",
+      "sk": "TI1090",
+      "tr": "Total Express",
+      "pr": "—"
+    },
+    {
+      "n": "99916830",
+      "d": "15/07/2026",
+      "ym": "2026-07",
+      "lj": "Amazon",
+      "pb": "Endereço Incorreto / Não localizado",
+      "sk": "TI1559",
+      "tr": "MMA",
+      "pr": "—"
+    },
+    {
+      "n": "99916829",
+      "d": "15/07/2026",
+      "ym": "2026-07",
+      "lj": "Amazon",
+      "pb": "Arrependimento",
+      "sk": "TI1562",
+      "tr": "Trilog",
+      "pr": "—"
+    },
+    {
       "n": "99916828",
       "d": "15/07/2026",
       "ym": "2026-07",
@@ -3134,16 +3164,6 @@
       "pr": "—"
     },
     {
-      "n": "99916755",
-      "d": "09/07/2026",
-      "ym": "2026-07",
-      "lj": "Casas Bahia",
-      "pb": "Arrependimento",
-      "sk": "TI673",
-      "tr": "Total Express",
-      "pr": "—"
-    },
-    {
       "n": "99916751",
       "d": "09/07/2026",
       "ym": "2026-07",
@@ -3191,26 +3211,6 @@
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1709",
       "tr": "Mercado Envios",
-      "pr": "—"
-    },
-    {
-      "n": "99916746",
-      "d": "08/07/2026",
-      "ym": "2026-07",
-      "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
-      "sk": "TI1682",
-      "tr": "Total Express",
-      "pr": "—"
-    },
-    {
-      "n": "99916745",
-      "d": "08/07/2026",
-      "ym": "2026-07",
-      "lj": "Magalu",
-      "pb": "Não Entregue Marketplace",
-      "sk": "TI1526",
-      "tr": "Magalu Entregas",
       "pr": "—"
     },
     {
@@ -3358,7 +3358,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1571",
       "tr": "Trilog",
       "pr": "—"
@@ -3368,7 +3368,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1571",
       "tr": "Trilog",
       "pr": "—"
@@ -3378,7 +3378,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1527",
       "tr": "Trilog",
       "pr": "—"
@@ -3398,7 +3398,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1667",
       "tr": "Trilog",
       "pr": "—"
@@ -3408,7 +3408,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1571",
       "tr": "Trilog",
       "pr": "—"
@@ -3418,7 +3418,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1562",
       "tr": "Trilog",
       "pr": "—"
@@ -3428,7 +3428,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Amazon",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1524",
       "tr": "Trilog",
       "pr": "—"
@@ -3438,7 +3438,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1524",
       "tr": "Trilog",
       "pr": "—"
@@ -3448,7 +3448,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1524",
       "tr": "Trilog",
       "pr": "—"
@@ -3458,7 +3458,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1525",
       "tr": "Trilog",
       "pr": "—"
@@ -3468,7 +3468,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1550",
       "tr": "Trilog",
       "pr": "—"
@@ -3478,7 +3478,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1514",
       "tr": "Trilog",
       "pr": "—"
@@ -3488,7 +3488,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1690",
       "tr": "Trilog",
       "pr": "—"
@@ -3498,7 +3498,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1562",
       "tr": "Trilog",
       "pr": "—"
@@ -3508,7 +3508,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1524",
       "tr": "Trilog",
       "pr": "—"
@@ -3518,7 +3518,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1690",
       "tr": "Trilog",
       "pr": "—"
@@ -3528,7 +3528,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1667",
       "tr": "Trilog",
       "pr": "—"
@@ -3548,7 +3548,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1571",
       "tr": "Trilog",
       "pr": "—"
@@ -3558,7 +3558,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1529",
       "tr": "Trilog",
       "pr": "—"
@@ -3611,16 +3611,6 @@
       "pb": "Endereço Incorreto / Não localizado",
       "sk": "TI1643",
       "tr": "Alfa Transportes",
-      "pr": "—"
-    },
-    {
-      "n": "99916698",
-      "d": "07/07/2026",
-      "ym": "2026-07",
-      "lj": "Shopee",
-      "pb": "Atraso de Entrega",
-      "sk": "TI1667",
-      "tr": "Trilog",
       "pr": "—"
     },
     {
@@ -4058,7 +4048,7 @@
       "d": "01/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1562",
       "tr": "Alfa Transportes",
       "pr": "—"
@@ -4081,26 +4071,6 @@
       "pb": "RMA",
       "sk": "TI1568",
       "tr": "Alfa Transportes",
-      "pr": "—"
-    },
-    {
-      "n": "99916633",
-      "d": "01/07/2026",
-      "ym": "2026-07",
-      "lj": "Shopee",
-      "pb": "Insatisfação Compra",
-      "sk": "TI287-2/TI733-2/TI673",
-      "tr": "Total Express",
-      "pr": "—"
-    },
-    {
-      "n": "99916632",
-      "d": "01/07/2026",
-      "ym": "2026-07",
-      "lj": "Amazon",
-      "pb": "Arrependimento",
-      "sk": "TI1556",
-      "tr": "Total Express",
       "pr": "—"
     },
     {
@@ -4151,16 +4121,6 @@
       "pb": "RMA",
       "sk": "TI1688",
       "tr": "Alfa Transportes",
-      "pr": "—"
-    },
-    {
-      "n": "99916626",
-      "d": "30/06/2026",
-      "ym": "2026-06",
-      "lj": "Magalu",
-      "pb": "RMA",
-      "sk": "SS001",
-      "tr": "Total Express",
       "pr": "—"
     },
     {
@@ -4454,16 +4414,6 @@
       "pr": "—"
     },
     {
-      "n": "99916579",
-      "d": "26/06/2026",
-      "ym": "2026-06",
-      "lj": "Shopee",
-      "pb": "Arrependimento",
-      "sk": "TI1707",
-      "tr": "Total Express",
-      "pr": "—"
-    },
-    {
       "n": "99916578",
       "d": "26/06/2026",
       "ym": "2026-06",
@@ -4518,7 +4468,7 @@
       "d": "26/06/2026",
       "ym": "2026-06",
       "lj": "Amazon",
-      "pb": "Cliente Desconhece a Compra ",
+      "pb": "Cliente Desconhece a Compra",
       "sk": "TI1527",
       "tr": "Tecmar",
       "pr": "—"
@@ -4581,16 +4531,6 @@
       "pb": "RMA",
       "sk": "TI1603",
       "tr": "Recolí",
-      "pr": "—"
-    },
-    {
-      "n": "99916564",
-      "d": "26/06/2026",
-      "ym": "2026-06",
-      "lj": "Shopee",
-      "pb": "Insatisfação Compra",
-      "sk": "TI1667",
-      "tr": "Alfa Transportes",
       "pr": "—"
     },
     {
@@ -4854,16 +4794,6 @@
       "pr": "—"
     },
     {
-      "n": "99916512",
-      "d": "23/06/2026",
-      "ym": "2026-06",
-      "lj": "Casas Bahia",
-      "pb": "Arrependimento",
-      "sk": "TI1524",
-      "tr": "Alfa Transportes",
-      "pr": "—"
-    },
-    {
       "n": "99916509",
       "d": "23/06/2026",
       "ym": "2026-06",
@@ -4888,7 +4818,7 @@
       "d": "23/06/2026",
       "ym": "2026-06",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1571",
       "tr": "Alfa Transportes",
       "pr": "—"
@@ -4921,16 +4851,6 @@
       "pb": "RMA",
       "sk": "TI1562",
       "tr": "Alfa Transportes",
-      "pr": "—"
-    },
-    {
-      "n": "99916495",
-      "d": "22/06/2026",
-      "ym": "2026-06",
-      "lj": "Magalu",
-      "pb": "Danificado Transporte Próprio",
-      "sk": "TI1643",
-      "tr": "Total Express",
       "pr": "—"
     },
     {
@@ -5714,16 +5634,6 @@
       "pr": "—"
     },
     {
-      "n": "99916232",
-      "d": "28/05/2026",
-      "ym": "2026-05",
-      "lj": "Casas Bahia",
-      "pb": "RMA",
-      "sk": "TI1607",
-      "tr": "Alfa Transportes",
-      "pr": "—"
-    },
-    {
       "n": "99916226",
       "d": "28/05/2026",
       "ym": "2026-05",
@@ -6028,7 +5938,7 @@
       "d": "20/05/2026",
       "ym": "2026-05",
       "lj": "Shopee",
-      "pb": "Cliente Desconhece a Compra ",
+      "pb": "Cliente Desconhece a Compra",
       "sk": "SS002",
       "tr": "Total Express",
       "pr": "—"
@@ -6858,7 +6768,7 @@
       "d": "26/02/2026",
       "ym": "2026-02",
       "lj": "Amazon",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1514",
       "tr": "Brasil Web",
       "pr": "—"
@@ -7454,16 +7364,6 @@
       "pr": "—"
     },
     {
-      "n": "99914311",
-      "d": "20/01/2026",
-      "ym": "2026-01",
-      "lj": "Magalu",
-      "pb": "RMA",
-      "sk": "SS002",
-      "tr": "Correios",
-      "pr": "—"
-    },
-    {
       "n": "99914307",
       "d": "20/01/2026",
       "ym": "2026-01",
@@ -7521,16 +7421,6 @@
       "pb": "RMA",
       "sk": "TI1562",
       "tr": "Alfa Transportes",
-      "pr": "—"
-    },
-    {
-      "n": "99914278",
-      "d": "19/01/2026",
-      "ym": "2026-01",
-      "lj": "Magalu",
-      "pb": "Arrependimento",
-      "sk": "TI1562",
-      "tr": "Recolí",
       "pr": "—"
     },
     {
@@ -7614,16 +7504,6 @@
       "pr": "—"
     },
     {
-      "n": "99914172",
-      "d": "15/01/2026",
-      "ym": "2026-01",
-      "lj": "Casas Bahia",
-      "pb": "RMA",
-      "sk": "TI1607",
-      "tr": "Recolí",
-      "pr": "—"
-    },
-    {
       "n": "99914168",
       "d": "15/01/2026",
       "ym": "2026-01",
@@ -7631,16 +7511,6 @@
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1456",
       "tr": "Tecmar",
-      "pr": "—"
-    },
-    {
-      "n": "99914160",
-      "d": "15/01/2026",
-      "ym": "2026-01",
-      "lj": "Shopee",
-      "pb": "Atraso de Entrega",
-      "sk": "TI1426 TI287-1",
-      "tr": "Recolí",
       "pr": "—"
     },
     {
@@ -11812,409 +11682,9 @@
       "sk": "",
       "tr": "",
       "pr": "—"
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-15T17:16:56.297884-03:00",
+  "ticketsRawUpdatedAt": "2026-07-15T17:48:20.406074-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
@@ -14338,7 +13808,7 @@
       "valor_pedido": 1023.93,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 4300.0,
       "aceito": false
     },
     {
@@ -16263,7 +15733,7 @@
       "custo": 609.6,
       "problema": "Avaria",
       "valor_real_fechado": 0.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "2000017001177210",
@@ -16419,7 +15889,7 @@
       "custo": 613.76,
       "problema": "Avaria",
       "valor_real_fechado": 180.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "2000016909010926",
@@ -16433,9 +15903,35 @@
       "problema": "Avaria",
       "valor_real_fechado": 201.49,
       "aceito": false
+    },
+    {
+      "pedido": "2000013873909529",
+      "data": "06/07/2026",
+      "ym": "2026-07",
+      "marketplace": "Mercado Livre",
+      "canal": "mercadolivre",
+      "sku": "TI1773-1",
+      "valor_pedido": 2079.0,
+      "custo": 1431.9,
+      "problema": "Avaria",
+      "valor_real_fechado": 310.0,
+      "aceito": false
+    },
+    {
+      "pedido": "2000013811072145",
+      "data": "02/07/2026",
+      "ym": "2026-07",
+      "marketplace": "Mercado Livre",
+      "canal": "mercadolivre",
+      "sku": "TI1690",
+      "valor_pedido": 1899.9,
+      "custo": 1288.79,
+      "problema": "Avaria",
+      "valor_real_fechado": 379.98,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-07-15T17:16:56.297884-03:00",
+  "descontosUpdatedAt": "2026-07-15T17:48:20.406074-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -16616,13 +16112,13 @@
       "casasbahia": {
         "count": 16,
         "countAceito": 5,
-        "descontoTotal": 2770.0,
+        "descontoTotal": 7070.0,
         "custoTotal": 17623.04,
         "valorPedidoTotal": 27450.01,
-        "pctDescontoSobreCusto": 15.72,
-        "pctDescontoSobreVenda": 10.09,
+        "pctDescontoSobreCusto": 40.12,
+        "pctDescontoSobreVenda": 25.76,
         "vendaTotalCanal": 1214519.32,
-        "pctDescontoSobreVendaCanal": 0.2281
+        "pctDescontoSobreVendaCanal": 0.5821
       },
       "mercadolivre": {
         "count": 57,
@@ -16740,7 +16236,7 @@
       },
       "amazon": {
         "count": 5,
-        "countAceito": 1,
+        "countAceito": 3,
         "descontoTotal": 780.0,
         "custoTotal": 3111.09,
         "valorPedidoTotal": 4599.07,
@@ -16750,13 +16246,13 @@
         "pctDescontoSobreVendaCanal": 0
       },
       "mercadolivre": {
-        "count": 1,
+        "count": 3,
         "countAceito": 0,
-        "descontoTotal": 220.0,
-        "custoTotal": 501.15,
-        "valorPedidoTotal": 917.9,
-        "pctDescontoSobreCusto": 43.9,
-        "pctDescontoSobreVenda": 23.97,
+        "descontoTotal": 909.98,
+        "custoTotal": 3221.84,
+        "valorPedidoTotal": 4896.8,
+        "pctDescontoSobreCusto": 28.24,
+        "pctDescontoSobreVenda": 18.58,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       }
