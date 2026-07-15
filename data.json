@@ -2419,13 +2419,17 @@
         "ts": "2026-07-15T13:19:56.769Z"
       },
       "amazon": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "278",
+        "metrics": {
+          "pedidosProblema": 1.72,
+          "cancelamentoEnvio": 0,
+          "rastreamento": null
+        },
         "tickets": 0,
         "sacForaPrazo": 11,
         "casosCriticos": 6,
         "solicitacaoDevolucao": 4,
-        "ts": "1970-01-01T00:00:00.000Z"
+        "ts": "2026-07-15T13:21:32.725Z"
       },
       "magalu": {
         "reputacao": "",
