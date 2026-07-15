@@ -8279,7 +8279,7 @@
       "ym": "2025-08",
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
-      "sk": "TI1146 / TI287-2",
+      "sk": "TI1146  / TI287-2",
       "tr": "Jamef",
       "pr": "—"
     },
@@ -9939,7 +9939,7 @@
       "ym": "2024-03",
       "lj": "Magalu",
       "pb": "Endereço Incorreto",
-      "sk": "TI1193 TI287-3",
+      "sk": "TI1193  TI287-3",
       "tr": "Correios",
       "pr": "—"
     },
@@ -11684,7 +11684,7 @@
       "pr": "—"
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-15T17:48:20.406074-03:00",
+  "ticketsRawUpdatedAt": "2026-07-15T19:53:06.978767-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
