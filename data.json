@@ -2413,9 +2413,9 @@
           "enviosIncorretos": 0.07
         },
         "tickets": 9,
-        "sacForaPrazo": 3,
-        "casosCriticos": 11,
-        "solicitacaoDevolucao": 8,
+        "sacForaPrazo": 4,
+        "casosCriticos": 13,
+        "solicitacaoDevolucao": 9,
         "ts": "2026-07-15T13:19:56.769Z"
       },
       "amazon": {
@@ -2427,7 +2427,7 @@
         },
         "tickets": 0,
         "sacForaPrazo": 11,
-        "casosCriticos": 6,
+        "casosCriticos": 7,
         "solicitacaoDevolucao": 4,
         "ts": "2026-07-15T13:21:32.725Z"
       },
