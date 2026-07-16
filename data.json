@@ -17028,9 +17028,26 @@
       "total_com_frete": 386.64,
       "valor_real_fechado": 379.98,
       "aceito": false
+    },
+    {
+      "pedido": "702-0060536-9173031",
+      "data": "07/07/2026",
+      "ym": "2026-07",
+      "marketplace": "Amazon",
+      "canal": "amazon",
+      "sku": "TI1667",
+      "valor_pedido": 746.8,
+      "custo": 613.76,
+      "problema": "Avaria",
+      "pct_desconto": "30,00%",
+      "desconto_sugerido": 184.13,
+      "frete": 0.0,
+      "total_com_frete": 184.13,
+      "valor_real_fechado": 0.0,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-07-16T11:16:06.248066-03:00",
+  "descontosUpdatedAt": "2026-07-16T11:51:29.082267-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -17334,13 +17351,13 @@
         "pctDescontoSobreVendaCanal": 0
       },
       "amazon": {
-        "count": 5,
+        "count": 6,
         "countAceito": 3,
         "descontoTotal": 780.0,
-        "custoTotal": 3111.09,
-        "valorPedidoTotal": 4599.07,
-        "pctDescontoSobreCusto": 25.07,
-        "pctDescontoSobreVenda": 16.96,
+        "custoTotal": 3724.85,
+        "valorPedidoTotal": 5345.87,
+        "pctDescontoSobreCusto": 20.94,
+        "pctDescontoSobreVenda": 14.59,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       },
