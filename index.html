@@ -321,6 +321,37 @@
   body.tv-mode .date-pill{padding:6px 12px;font-size:13px}
   body.tv-mode #last-refresh{font-size:11px}
   /* Em telas menores que 1400px no modo TV, volta pra 2-3 colunas */
+  /* ===== MOBILE / SMARTPHONE (v40.4) ===== */
+  @media(max-width:768px){
+    body{padding:10px}
+    header{flex-direction:column;align-items:flex-start;gap:10px}
+    header h1{font-size:24px}
+    header > div:last-child{width:100%;justify-content:flex-start}
+    .tv-toggle{padding:8px 14px;font-size:13px}
+    #tv-btn{display:none}
+    .section-title{font-size:18px;flex-wrap:wrap}
+    /* Abas: uma linha só, com rolagem horizontal suave (corrige desalinhamento no celular) */
+    .main-tabs{overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:0;margin-bottom:16px}
+    .main-tabs::-webkit-scrollbar{display:none}
+    .main-tab{padding:10px 12px;font-size:13px;flex:0 0 auto;white-space:nowrap}
+    .grid{grid-template-columns:1fr;gap:12px}
+    .summary-bar{gap:8px}
+    .registro-cards{grid-template-columns:repeat(2,1fr);gap:6px}
+    .registro-filters{padding:12px;gap:8px}
+    .registro-filters select{min-width:0;width:100%}
+    .registro-filters .filter-group{flex:1 1 45%}
+    .registro-filters .filter-summary{margin-left:0;flex-basis:100%}
+    .tickets-kpis{grid-template-columns:repeat(2,1fr);gap:8px}
+    .upload-row{grid-template-columns:1fr}
+    /* Tabelas largas roláveis sem estourar a página */
+    .tickets-card,#history-container,#registro-container{overflow-x:auto}
+    #comissao-table{min-width:640px}
+    #comissao-history-table{min-width:520px}
+  }
+  @media(max-width:480px){
+    .registro-cards{grid-template-columns:1fr}
+    header h1{font-size:21px}
+  }
   @media(max-width:1400px){body.tv-mode .grid{grid-template-columns:repeat(3,1fr)}}
   @media(max-width:900px){body.tv-mode .grid{grid-template-columns:repeat(2,1fr)}}
 </style>
@@ -831,7 +862,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '40';
-const APP_VERSION = '40.3';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '40.4';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
