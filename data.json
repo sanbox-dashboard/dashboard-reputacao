@@ -2510,16 +2510,19 @@
         "sacForaPrazo": 0,
         "casosCriticos": 5,
         "solicitacaoDevolucao": 2,
-        "ts": "2026-07-16T12:32:02.395Z"
+        "ts": "2026-07-16T12:32:03.170Z"
       },
       "casasbahia": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "4,4",
+        "metrics": {
+          "reclamacao": 5.8,
+          "cancelados": 3
+        },
         "tickets": 0,
         "sacForaPrazo": 0,
         "casosCriticos": 27,
         "solicitacaoDevolucao": 4,
-        "ts": "1970-01-01T00:00:00.000Z"
+        "ts": "2026-07-16T12:35:10.916Z"
       },
       "shopee": {
         "reputacao": "",
