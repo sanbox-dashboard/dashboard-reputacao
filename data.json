@@ -2547,6 +2547,86 @@
   },
   "ticketsRaw": [
     {
+      "n": "99916848",
+      "d": "16/07/2026",
+      "ym": "2026-07",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1667",
+      "tr": "Mercado Envios",
+      "pr": "—"
+    },
+    {
+      "n": "99916847",
+      "d": "16/07/2026",
+      "ym": "2026-07",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1601",
+      "tr": "Mercado Envios",
+      "pr": "—"
+    },
+    {
+      "n": "99916846",
+      "d": "16/07/2026",
+      "ym": "2026-07",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1455",
+      "tr": "Mercado Envios",
+      "pr": "—"
+    },
+    {
+      "n": "99916845",
+      "d": "16/07/2026",
+      "ym": "2026-07",
+      "lj": "Shopee",
+      "pb": "Comprou Errado",
+      "sk": "TI1529",
+      "tr": "Alfa Transportes",
+      "pr": "—"
+    },
+    {
+      "n": "99916844",
+      "d": "16/07/2026",
+      "ym": "2026-07",
+      "lj": "Mercado Livre",
+      "pb": "Arrependimento",
+      "sk": "SS001",
+      "tr": "Mercado Envios",
+      "pr": "—"
+    },
+    {
+      "n": "99916843",
+      "d": "16/07/2026",
+      "ym": "2026-07",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1768",
+      "tr": "Mercado Envios",
+      "pr": "—"
+    },
+    {
+      "n": "99916842",
+      "d": "16/07/2026",
+      "ym": "2026-07",
+      "lj": "Mercado Livre",
+      "pb": "Produto Incorreto",
+      "sk": "TI1562",
+      "tr": "Mercado Envios",
+      "pr": "—"
+    },
+    {
+      "n": "99916841",
+      "d": "16/07/2026",
+      "ym": "2026-07",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1773-1",
+      "tr": "Mercado Envios",
+      "pr": "—"
+    },
+    {
       "n": "99916840",
       "d": "16/07/2026",
       "ym": "2026-07",
@@ -11557,7 +11637,7 @@
       "pr": "—"
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-16T16:13:36.005389-03:00",
+  "ticketsRawUpdatedAt": "2026-07-16T17:42:09.120858-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
