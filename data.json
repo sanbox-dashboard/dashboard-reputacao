@@ -2480,11 +2480,11 @@
           "canceladas": 0.13,
           "enviosIncorretos": 0.07
         },
-        "tickets": 8,
+        "tickets": 0,
         "sacForaPrazo": 8,
         "casosCriticos": 11,
         "solicitacaoDevolucao": 1,
-        "ts": "2026-07-16T11:16:06.248066-03:00",
+        "ts": "2026-07-16T12:19:29.727785-03:00",
         "solicitacaoDevolucaoAmarelo": 1,
         "solicitacaoDevolucaoVermelho": 0
       },
@@ -4254,16 +4254,6 @@
       "pb": "Atraso de Entrega",
       "sk": "TI1743",
       "tr": "Trilog",
-      "pr": "—"
-    },
-    {
-      "n": "99916591",
-      "d": "29/06/2026",
-      "ym": "2026-06",
-      "lj": "Mercado Livre",
-      "pb": "RMA",
-      "sk": "SS002",
-      "tr": "Correios",
       "pr": "—"
     },
     {
@@ -11527,7 +11517,7 @@
       "pr": "—"
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-16T11:16:06.248066-03:00",
+  "ticketsRawUpdatedAt": "2026-07-16T12:19:29.727785-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
@@ -17043,11 +17033,11 @@
       "desconto_sugerido": 184.13,
       "frete": 0.0,
       "total_com_frete": 184.13,
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 180.0,
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-07-16T11:51:29.082267-03:00",
+  "descontosUpdatedAt": "2026-07-16T12:19:29.727785-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -17353,11 +17343,11 @@
       "amazon": {
         "count": 6,
         "countAceito": 3,
-        "descontoTotal": 780.0,
+        "descontoTotal": 960.0,
         "custoTotal": 3724.85,
         "valorPedidoTotal": 5345.87,
-        "pctDescontoSobreCusto": 20.94,
-        "pctDescontoSobreVenda": 14.59,
+        "pctDescontoSobreCusto": 25.77,
+        "pctDescontoSobreVenda": 17.96,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       },
