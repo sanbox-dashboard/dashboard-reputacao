@@ -2416,9 +2416,7 @@
         "sacForaPrazo": 8,
         "casosCriticos": 11,
         "solicitacaoDevolucao": 1,
-        "ts": "2026-07-15T14:14:12.519560-03:00",
-        "solicitacaoDevolucaoAmarelo": 1,
-        "solicitacaoDevolucaoVermelho": 0
+        "ts": "2026-07-15T17:14:12.519Z"
       },
       "amazon": {
         "reputacao": "278",
@@ -2431,9 +2429,7 @@
         "sacForaPrazo": 9,
         "casosCriticos": 7,
         "solicitacaoDevolucao": 3,
-        "ts": "2026-07-15T13:44:21.711599-03:00",
-        "solicitacaoDevolucaoAmarelo": 1,
-        "solicitacaoDevolucaoVermelho": 2
+        "ts": "2026-07-15T16:44:21.711Z"
       },
       "magalu": {
         "reputacao": "3,0",
@@ -2446,9 +2442,7 @@
         "sacForaPrazo": 0,
         "casosCriticos": 5,
         "solicitacaoDevolucao": 2,
-        "ts": "2026-07-15T16:48:48.183067-03:00",
-        "solicitacaoDevolucaoAmarelo": 1,
-        "solicitacaoDevolucaoVermelho": 1
+        "ts": "2026-07-15T19:48:48.183Z"
       },
       "casasbahia": {
         "reputacao": "3,5",
@@ -2460,9 +2454,7 @@
         "sacForaPrazo": 0,
         "casosCriticos": 27,
         "solicitacaoDevolucao": 4,
-        "ts": "2026-07-15T13:44:21.711599-03:00",
-        "solicitacaoDevolucaoAmarelo": 1,
-        "solicitacaoDevolucaoVermelho": 3
+        "ts": "2026-07-15T16:44:21.711Z"
       },
       "shopee": {
         "reputacao": "4,86",
@@ -2476,9 +2468,44 @@
         "sacForaPrazo": 2,
         "casosCriticos": 19,
         "solicitacaoDevolucao": 7,
-        "ts": "2026-07-15T13:44:21.711599-03:00",
-        "solicitacaoDevolucaoAmarelo": 2,
-        "solicitacaoDevolucaoVermelho": 5
+        "ts": "2026-07-15T16:44:21.711Z"
+      }
+    },
+    "2026-07-16": {
+      "mercadolivre": {
+        "tickets": 0,
+        "metrics": {},
+        "sacForaPrazo": 8,
+        "casosCriticos": 11,
+        "solicitacaoDevolucao": 1
+      },
+      "amazon": {
+        "tickets": 0,
+        "metrics": {},
+        "sacForaPrazo": 9,
+        "casosCriticos": 7,
+        "solicitacaoDevolucao": 3
+      },
+      "magalu": {
+        "tickets": 0,
+        "metrics": {},
+        "sacForaPrazo": 0,
+        "casosCriticos": 5,
+        "solicitacaoDevolucao": 2
+      },
+      "casasbahia": {
+        "tickets": 0,
+        "metrics": {},
+        "sacForaPrazo": 0,
+        "casosCriticos": 27,
+        "solicitacaoDevolucao": 4
+      },
+      "shopee": {
+        "tickets": 0,
+        "metrics": {},
+        "sacForaPrazo": 2,
+        "casosCriticos": 19,
+        "solicitacaoDevolucao": 7
       }
     }
   },
@@ -11858,7 +11885,7 @@
       "valor_pedido": 2127.12,
       "custo": 1286.69,
       "problema": "Avaria",
-      "valor_real_fechado": 700.0,
+      "valor_real_fechado": 700,
       "aceito": false
     },
     {
@@ -11895,7 +11922,7 @@
       "canal": "mercadolivre",
       "sku": "SS002OUT",
       "valor_pedido": 706.71,
-      "custo": 587.0,
+      "custo": 587,
       "problema": "Avaria",
       "valor_real_fechado": 141.34,
       "aceito": false
@@ -11923,7 +11950,7 @@
       "valor_pedido": 1915.77,
       "custo": 1226.54,
       "problema": "Avaria",
-      "valor_real_fechado": 352.0,
+      "valor_real_fechado": 352,
       "aceito": true
     },
     {
@@ -11936,7 +11963,7 @@
       "valor_pedido": 1897.15,
       "custo": 1260.39,
       "problema": "Avaria",
-      "valor_real_fechado": 340.0,
+      "valor_real_fechado": 340,
       "aceito": true
     },
     {
@@ -11949,7 +11976,7 @@
       "valor_pedido": 701.37,
       "custo": 454.31,
       "problema": "Insatisfação",
-      "valor_real_fechado": 120.0,
+      "valor_real_fechado": 120,
       "aceito": false
     },
     {
@@ -11988,7 +12015,7 @@
       "valor_pedido": 1073.51,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 330.0,
+      "valor_real_fechado": 330,
       "aceito": true
     },
     {
@@ -12014,7 +12041,7 @@
       "valor_pedido": 1068.83,
       "custo": 613.76,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -12040,7 +12067,7 @@
       "valor_pedido": 1900.1,
       "custo": 1150.58,
       "problema": "Avaria",
-      "valor_real_fechado": 320.0,
+      "valor_real_fechado": 320,
       "aceito": true
     },
     {
@@ -12157,7 +12184,7 @@
       "valor_pedido": 1015.9,
       "custo": 484.56,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -12170,7 +12197,7 @@
       "valor_pedido": 1710.94,
       "custo": 1091.38,
       "problema": "Avaria",
-      "valor_real_fechado": 520.0,
+      "valor_real_fechado": 520,
       "aceito": true
     },
     {
@@ -12196,7 +12223,7 @@
       "valor_pedido": 1064.07,
       "custo": 652.99,
       "problema": "Avaria",
-      "valor_real_fechado": 360.0,
+      "valor_real_fechado": 360,
       "aceito": true
     },
     {
@@ -12222,7 +12249,7 @@
       "valor_pedido": 6299.9,
       "custo": 4015.19,
       "problema": "Avaria",
-      "valor_real_fechado": 1200.0,
+      "valor_real_fechado": 1200,
       "aceito": true
     },
     {
@@ -12235,7 +12262,7 @@
       "valor_pedido": 1876.52,
       "custo": 1150.58,
       "problema": "Avaria",
-      "valor_real_fechado": 480.0,
+      "valor_real_fechado": 480,
       "aceito": false
     },
     {
@@ -12248,7 +12275,7 @@
       "valor_pedido": 1099.9,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 284.0,
+      "valor_real_fechado": 284,
       "aceito": false
     },
     {
@@ -12261,7 +12288,7 @@
       "valor_pedido": 912.9,
       "custo": 571.73,
       "problema": "Avaria",
-      "valor_real_fechado": 320.0,
+      "valor_real_fechado": 320,
       "aceito": true
     },
     {
@@ -12274,7 +12301,7 @@
       "valor_pedido": 6915.03,
       "custo": 4432.97,
       "problema": "Avaria",
-      "valor_real_fechado": 1383.0,
+      "valor_real_fechado": 1383,
       "aceito": true
     },
     {
@@ -12287,7 +12314,7 @@
       "valor_pedido": 1999.9,
       "custo": 1286.69,
       "problema": "Avaria",
-      "valor_real_fechado": 515.0,
+      "valor_real_fechado": 515,
       "aceito": true
     },
     {
@@ -12300,7 +12327,7 @@
       "valor_pedido": 1372.9,
       "custo": 851.24,
       "problema": "Avaria",
-      "valor_real_fechado": 430.0,
+      "valor_real_fechado": 430,
       "aceito": false
     },
     {
@@ -12313,7 +12340,7 @@
       "valor_pedido": 1599.9,
       "custo": 1091.38,
       "problema": "Avaria",
-      "valor_real_fechado": 350.0,
+      "valor_real_fechado": 350,
       "aceito": false
     },
     {
@@ -12326,7 +12353,7 @@
       "valor_pedido": 899.9,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 390.0,
+      "valor_real_fechado": 390,
       "aceito": false
     },
     {
@@ -12339,7 +12366,7 @@
       "valor_pedido": 3434.58,
       "custo": 1856.81,
       "problema": "Insatisfação",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -12352,7 +12379,7 @@
       "valor_pedido": 732.9,
       "custo": 443.42,
       "problema": "Avaria",
-      "valor_real_fechado": 185.0,
+      "valor_real_fechado": 185,
       "aceito": true
     },
     {
@@ -12365,7 +12392,7 @@
       "valor_pedido": 2973.9,
       "custo": 1856.81,
       "problema": "Insatisfação",
-      "valor_real_fechado": 507.0,
+      "valor_real_fechado": 507,
       "aceito": false
     },
     {
@@ -12378,7 +12405,7 @@
       "valor_pedido": 2609.9,
       "custo": 1645.11,
       "problema": "Avaria",
-      "valor_real_fechado": 540.0,
+      "valor_real_fechado": 540,
       "aceito": true
     },
     {
@@ -12417,7 +12444,7 @@
       "valor_pedido": 872.9,
       "custo": 589.82,
       "problema": "Insatisfação",
-      "valor_real_fechado": 315.0,
+      "valor_real_fechado": 315,
       "aceito": false
     },
     {
@@ -12430,7 +12457,7 @@
       "valor_pedido": 657.9,
       "custo": 396.74,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -12443,7 +12470,7 @@
       "valor_pedido": 1665.32,
       "custo": 1091.38,
       "problema": "Avaria",
-      "valor_real_fechado": 450.0,
+      "valor_real_fechado": 450,
       "aceito": false
     },
     {
@@ -12482,7 +12509,7 @@
       "valor_pedido": 4609.79,
       "custo": 3390.06,
       "problema": "Avaria",
-      "valor_real_fechado": 920.0,
+      "valor_real_fechado": 920,
       "aceito": true
     },
     {
@@ -12495,7 +12522,7 @@
       "valor_pedido": 1049.9,
       "custo": 688.96,
       "problema": "Vazio",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -12508,7 +12535,7 @@
       "valor_pedido": 2359.9,
       "custo": 1850.01,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": true
     },
     {
@@ -12521,7 +12548,7 @@
       "valor_pedido": 1761.88,
       "custo": 1150.58,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": true
     },
     {
@@ -12573,7 +12600,7 @@
       "valor_pedido": 1979.1,
       "custo": 1288.79,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -12597,7 +12624,7 @@
       "canal": "mercadolivre",
       "sku": "SS002OUT",
       "valor_pedido": 743.91,
-      "custo": 587.0,
+      "custo": 587,
       "problema": "Sucata",
       "valor_real_fechado": 363.75,
       "aceito": false
@@ -12625,7 +12652,7 @@
       "valor_pedido": 979.9,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 320.0,
+      "valor_real_fechado": 320,
       "aceito": false
     },
     {
@@ -12651,7 +12678,7 @@
       "valor_pedido": 979.9,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 290.0,
+      "valor_real_fechado": 290,
       "aceito": true
     },
     {
@@ -12690,7 +12717,7 @@
       "valor_pedido": 945.9,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 252.0,
+      "valor_real_fechado": 252,
       "aceito": false
     },
     {
@@ -12703,7 +12730,7 @@
       "valor_pedido": 979.9,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 252.0,
+      "valor_real_fechado": 252,
       "aceito": true
     },
     {
@@ -12716,7 +12743,7 @@
       "valor_pedido": 5616.9,
       "custo": 3839.22,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -12729,7 +12756,7 @@
       "valor_pedido": 1806.62,
       "custo": 1286.69,
       "problema": "Avaria",
-      "valor_real_fechado": 200.0,
+      "valor_real_fechado": 200,
       "aceito": true
     },
     {
@@ -12742,7 +12769,7 @@
       "valor_pedido": 1432.49,
       "custo": 1069.43,
       "problema": "Avaria",
-      "valor_real_fechado": 420.0,
+      "valor_real_fechado": 420,
       "aceito": true
     },
     {
@@ -12755,7 +12782,7 @@
       "valor_pedido": 588.53,
       "custo": 399.97,
       "problema": "Avaria",
-      "valor_real_fechado": 58.0,
+      "valor_real_fechado": 58,
       "aceito": true
     },
     {
@@ -12768,7 +12795,7 @@
       "valor_pedido": 1177.34,
       "custo": 589.29,
       "problema": "Avaria",
-      "valor_real_fechado": 252.0,
+      "valor_real_fechado": 252,
       "aceito": false
     },
     {
@@ -12781,7 +12808,7 @@
       "valor_pedido": 689.9,
       "custo": 766.97,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": true
     },
     {
@@ -12794,7 +12821,7 @@
       "valor_pedido": 1171.9,
       "custo": 758.89,
       "problema": "Avaria",
-      "valor_real_fechado": 420.0,
+      "valor_real_fechado": 420,
       "aceito": true
     },
     {
@@ -12807,7 +12834,7 @@
       "valor_pedido": 485.9,
       "custo": 310.67,
       "problema": "Sucata",
-      "valor_real_fechado": 120.0,
+      "valor_real_fechado": 120,
       "aceito": false
     },
     {
@@ -12820,7 +12847,7 @@
       "valor_pedido": 1751.17,
       "custo": 1286.69,
       "problema": "Avaria",
-      "valor_real_fechado": 420.0,
+      "valor_real_fechado": 420,
       "aceito": true
     },
     {
@@ -12833,7 +12860,7 @@
       "valor_pedido": 978.9,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -12846,7 +12873,7 @@
       "valor_pedido": 982.9,
       "custo": 625.44,
       "problema": "Insatisfação",
-      "valor_real_fechado": 320.0,
+      "valor_real_fechado": 320,
       "aceito": true
     },
     {
@@ -12885,7 +12912,7 @@
       "valor_pedido": 1299.9,
       "custo": 870.04,
       "problema": "Avaria",
-      "valor_real_fechado": 250.0,
+      "valor_real_fechado": 250,
       "aceito": true
     },
     {
@@ -12898,7 +12925,7 @@
       "valor_pedido": 1453.9,
       "custo": 907.14,
       "problema": "Avaria",
-      "valor_real_fechado": 320.0,
+      "valor_real_fechado": 320,
       "aceito": false
     },
     {
@@ -12911,7 +12938,7 @@
       "valor_pedido": 1211.9,
       "custo": 778.9,
       "problema": "Avaria",
-      "valor_real_fechado": 480.0,
+      "valor_real_fechado": 480,
       "aceito": true
     },
     {
@@ -12924,7 +12951,7 @@
       "valor_pedido": 899.9,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 380.0,
+      "valor_real_fechado": 380,
       "aceito": false
     },
     {
@@ -12937,7 +12964,7 @@
       "valor_pedido": 979.9,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 320.0,
+      "valor_real_fechado": 320,
       "aceito": false
     },
     {
@@ -13015,7 +13042,7 @@
       "valor_pedido": 1427.9,
       "custo": 922.87,
       "problema": "Avaria",
-      "valor_real_fechado": 480.0,
+      "valor_real_fechado": 480,
       "aceito": false
     },
     {
@@ -13028,7 +13055,7 @@
       "valor_pedido": 1925.9,
       "custo": 1286.69,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -13041,7 +13068,7 @@
       "valor_pedido": 6832.36,
       "custo": 4015.19,
       "problema": "Avaria",
-      "valor_real_fechado": 1200.0,
+      "valor_real_fechado": 1200,
       "aceito": false
     },
     {
@@ -13054,7 +13081,7 @@
       "valor_pedido": 1925.9,
       "custo": 1286.69,
       "problema": "Avaria",
-      "valor_real_fechado": 480.0,
+      "valor_real_fechado": 480,
       "aceito": true
     },
     {
@@ -13106,7 +13133,7 @@
       "valor_pedido": 693.08,
       "custo": 462.5,
       "problema": "Avaria",
-      "valor_real_fechado": 150.0,
+      "valor_real_fechado": 150,
       "aceito": false
     },
     {
@@ -13119,7 +13146,7 @@
       "valor_pedido": 1065.67,
       "custo": 613.76,
       "problema": "Avaria",
-      "valor_real_fechado": 350.0,
+      "valor_real_fechado": 350,
       "aceito": true
     },
     {
@@ -13132,7 +13159,7 @@
       "valor_pedido": 1236.9,
       "custo": 871.2,
       "problema": "Avaria",
-      "valor_real_fechado": 380.0,
+      "valor_real_fechado": 380,
       "aceito": true
     },
     {
@@ -13158,7 +13185,7 @@
       "valor_pedido": 1053.6,
       "custo": 689.24,
       "problema": "Avaria",
-      "valor_real_fechado": 230.0,
+      "valor_real_fechado": 230,
       "aceito": true
     },
     {
@@ -13171,7 +13198,7 @@
       "valor_pedido": 1919.9,
       "custo": 1286.69,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": false
     },
     {
@@ -13184,7 +13211,7 @@
       "valor_pedido": 1042.93,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": true
     },
     {
@@ -13197,7 +13224,7 @@
       "valor_pedido": 1591.34,
       "custo": 1069.43,
       "problema": "Avaria",
-      "valor_real_fechado": 350.0,
+      "valor_real_fechado": 350,
       "aceito": false
     },
     {
@@ -13210,7 +13237,7 @@
       "valor_pedido": 1769.9,
       "custo": 1150.58,
       "problema": "Avaria",
-      "valor_real_fechado": 380.0,
+      "valor_real_fechado": 380,
       "aceito": true
     },
     {
@@ -13223,7 +13250,7 @@
       "valor_pedido": 338.47,
       "custo": 19.2,
       "problema": "Insatisfação",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -13249,7 +13276,7 @@
       "valor_pedido": 1929.9,
       "custo": 1288.79,
       "problema": "Avaria",
-      "valor_real_fechado": 380.0,
+      "valor_real_fechado": 380,
       "aceito": false
     },
     {
@@ -13262,7 +13289,7 @@
       "valor_pedido": 1134.6,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 346.0,
+      "valor_real_fechado": 346,
       "aceito": false
     },
     {
@@ -13275,7 +13302,7 @@
       "valor_pedido": 955.51,
       "custo": 689.24,
       "problema": "Avaria",
-      "valor_real_fechado": 250.0,
+      "valor_real_fechado": 250,
       "aceito": true
     },
     {
@@ -13288,7 +13315,7 @@
       "valor_pedido": 971.08,
       "custo": 613.76,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -13301,7 +13328,7 @@
       "valor_pedido": 6915.03,
       "custo": 4432.97,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": true
     },
     {
@@ -13314,7 +13341,7 @@
       "valor_pedido": 866.41,
       "custo": 511.18,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": true
     },
     {
@@ -13340,7 +13367,7 @@
       "valor_pedido": 956.9,
       "custo": 613.76,
       "problema": "Avaria",
-      "valor_real_fechado": 415.0,
+      "valor_real_fechado": 415,
       "aceito": true
     },
     {
@@ -13353,7 +13380,7 @@
       "valor_pedido": 4477.9,
       "custo": 3283.12,
       "problema": "Avaria",
-      "valor_real_fechado": 1200.0,
+      "valor_real_fechado": 1200,
       "aceito": true
     },
     {
@@ -13379,7 +13406,7 @@
       "valor_pedido": 1068.68,
       "custo": 613.76,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": true
     },
     {
@@ -13392,7 +13419,7 @@
       "valor_pedido": 979.9,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 250.0,
+      "valor_real_fechado": 250,
       "aceito": false
     },
     {
@@ -13457,7 +13484,7 @@
       "valor_pedido": 2413.43,
       "custo": 1575.8,
       "problema": "Avaria",
-      "valor_real_fechado": 400.0,
+      "valor_real_fechado": 400,
       "aceito": true
     },
     {
@@ -13470,7 +13497,7 @@
       "valor_pedido": 778.9,
       "custo": 501.61,
       "problema": "Avaria",
-      "valor_real_fechado": 350.0,
+      "valor_real_fechado": 350,
       "aceito": true
     },
     {
@@ -13483,7 +13510,7 @@
       "valor_pedido": 995.49,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 340.0,
+      "valor_real_fechado": 340,
       "aceito": false
     },
     {
@@ -13496,7 +13523,7 @@
       "valor_pedido": 979.9,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 280.0,
+      "valor_real_fechado": 280,
       "aceito": false
     },
     {
@@ -13522,7 +13549,7 @@
       "valor_pedido": 918.95,
       "custo": 613.76,
       "problema": "Avaria",
-      "valor_real_fechado": 250.0,
+      "valor_real_fechado": 250,
       "aceito": true
     },
     {
@@ -13535,7 +13562,7 @@
       "valor_pedido": 956.9,
       "custo": 613.76,
       "problema": "Avaria",
-      "valor_real_fechado": 282.0,
+      "valor_real_fechado": 282,
       "aceito": false
     },
     {
@@ -13574,7 +13601,7 @@
       "valor_pedido": 999.9,
       "custo": 535.54,
       "problema": "Avaria",
-      "valor_real_fechado": 165.0,
+      "valor_real_fechado": 165,
       "aceito": true
     },
     {
@@ -13600,7 +13627,7 @@
       "valor_pedido": 1925.9,
       "custo": 1286.69,
       "problema": "Avaria",
-      "valor_real_fechado": 380.0,
+      "valor_real_fechado": 380,
       "aceito": true
     },
     {
@@ -13613,7 +13640,7 @@
       "valor_pedido": 899.9,
       "custo": 609.6,
       "problema": "Avaria",
-      "valor_real_fechado": 280.0,
+      "valor_real_fechado": 280,
       "aceito": false
     },
     {
@@ -13626,7 +13653,7 @@
       "valor_pedido": 5816.9,
       "custo": 3839.22,
       "problema": "Avaria",
-      "valor_real_fechado": 1300.0,
+      "valor_real_fechado": 1300,
       "aceito": false
     },
     {
@@ -13639,7 +13666,7 @@
       "valor_pedido": 956.9,
       "custo": 613.76,
       "problema": "Sucata",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -13652,7 +13679,7 @@
       "valor_pedido": 1141.09,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": false
     },
     {
@@ -13665,7 +13692,7 @@
       "valor_pedido": 1278.9,
       "custo": 899.01,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": true
     },
     {
@@ -13704,7 +13731,7 @@
       "valor_pedido": 1866.02,
       "custo": 1150.58,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": true
     },
     {
@@ -13717,7 +13744,7 @@
       "valor_pedido": 1779.73,
       "custo": 1091.38,
       "problema": "Avaria",
-      "valor_real_fechado": 250.0,
+      "valor_real_fechado": 250,
       "aceito": true
     },
     {
@@ -13730,7 +13757,7 @@
       "valor_pedido": 1161.94,
       "custo": 622.16,
       "problema": "Vazio",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -13743,7 +13770,7 @@
       "valor_pedido": 1609.9,
       "custo": 1033.85,
       "problema": "Insatisfação",
-      "valor_real_fechado": 380.0,
+      "valor_real_fechado": 380,
       "aceito": true
     },
     {
@@ -13756,7 +13783,7 @@
       "valor_pedido": 1823.9,
       "custo": 1150.58,
       "problema": "Insatisfação",
-      "valor_real_fechado": 220.0,
+      "valor_real_fechado": 220,
       "aceito": true
     },
     {
@@ -13769,7 +13796,7 @@
       "valor_pedido": 262.2,
       "custo": 199.9,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -13782,7 +13809,7 @@
       "valor_pedido": 608.84,
       "custo": 394.56,
       "problema": "Avaria",
-      "valor_real_fechado": 150.0,
+      "valor_real_fechado": 150,
       "aceito": true
     },
     {
@@ -13795,7 +13822,7 @@
       "valor_pedido": 930.46,
       "custo": 584.52,
       "problema": "Avaria",
-      "valor_real_fechado": 200.0,
+      "valor_real_fechado": 200,
       "aceito": false
     },
     {
@@ -13808,7 +13835,7 @@
       "valor_pedido": 1023.93,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 4300.0,
+      "valor_real_fechado": 4300,
       "aceito": false
     },
     {
@@ -13821,7 +13848,7 @@
       "valor_pedido": 1700.4,
       "custo": 1288.79,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": true
     },
     {
@@ -13834,7 +13861,7 @@
       "valor_pedido": 2099.9,
       "custo": 1286.69,
       "problema": "Avaria",
-      "valor_real_fechado": 350.0,
+      "valor_real_fechado": 350,
       "aceito": true
     },
     {
@@ -13847,7 +13874,7 @@
       "valor_pedido": 828.31,
       "custo": 511.18,
       "problema": "Avaria",
-      "valor_real_fechado": 200.0,
+      "valor_real_fechado": 200,
       "aceito": false
     },
     {
@@ -13860,7 +13887,7 @@
       "valor_pedido": 1728.09,
       "custo": 1150.58,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": false
     },
     {
@@ -13873,7 +13900,7 @@
       "valor_pedido": 5763.9,
       "custo": 3390.06,
       "problema": "Avaria",
-      "valor_real_fechado": 1005.0,
+      "valor_real_fechado": 1005,
       "aceito": true
     },
     {
@@ -13883,10 +13910,10 @@
       "marketplace": "Mercado Livre",
       "canal": "mercadolivre",
       "sku": "TI1563",
-      "valor_pedido": 539.0,
+      "valor_pedido": 539,
       "custo": 462.5,
       "problema": "Avaria",
-      "valor_real_fechado": 132.0,
+      "valor_real_fechado": 132,
       "aceito": true
     },
     {
@@ -13899,7 +13926,7 @@
       "valor_pedido": 942.58,
       "custo": 689.24,
       "problema": "Insatisfação",
-      "valor_real_fechado": 100.0,
+      "valor_real_fechado": 100,
       "aceito": true
     },
     {
@@ -13912,7 +13939,7 @@
       "valor_pedido": 6266.9,
       "custo": 3839.22,
       "problema": "Avaria",
-      "valor_real_fechado": 750.0,
+      "valor_real_fechado": 750,
       "aceito": true
     },
     {
@@ -13925,7 +13952,7 @@
       "valor_pedido": 4789.41,
       "custo": 2812.84,
       "problema": "Avaria",
-      "valor_real_fechado": 550.0,
+      "valor_real_fechado": 550,
       "aceito": true
     },
     {
@@ -13938,7 +13965,7 @@
       "valor_pedido": 5763.9,
       "custo": 3390.06,
       "problema": "Avaria",
-      "valor_real_fechado": 550.0,
+      "valor_real_fechado": 550,
       "aceito": true
     },
     {
@@ -13951,7 +13978,7 @@
       "valor_pedido": 6575.9,
       "custo": 4015.19,
       "problema": "Avaria",
-      "valor_real_fechado": 550.0,
+      "valor_real_fechado": 550,
       "aceito": true
     },
     {
@@ -13964,7 +13991,7 @@
       "valor_pedido": 1823.9,
       "custo": 1150.58,
       "problema": "Avaria",
-      "valor_real_fechado": 330.0,
+      "valor_real_fechado": 330,
       "aceito": true
     },
     {
@@ -13977,7 +14004,7 @@
       "valor_pedido": 5763.9,
       "custo": 3390.06,
       "problema": "Avaria",
-      "valor_real_fechado": 550.0,
+      "valor_real_fechado": 550,
       "aceito": true
     },
     {
@@ -14003,7 +14030,7 @@
       "valor_pedido": 1868.9,
       "custo": 1286.69,
       "problema": "Insatisfação",
-      "valor_real_fechado": 254.0,
+      "valor_real_fechado": 254,
       "aceito": false
     },
     {
@@ -14016,7 +14043,7 @@
       "valor_pedido": 1208.4,
       "custo": 851.24,
       "problema": "Avaria",
-      "valor_real_fechado": 290.0,
+      "valor_real_fechado": 290,
       "aceito": false
     },
     {
@@ -14029,7 +14056,7 @@
       "valor_pedido": 543.04,
       "custo": 370.77,
       "problema": "Avaria",
-      "valor_real_fechado": 150.0,
+      "valor_real_fechado": 150,
       "aceito": false
     },
     {
@@ -14042,7 +14069,7 @@
       "valor_pedido": 1323.14,
       "custo": 851.24,
       "problema": "Avaria",
-      "valor_real_fechado": 500.0,
+      "valor_real_fechado": 500,
       "aceito": false
     },
     {
@@ -14055,7 +14082,7 @@
       "valor_pedido": 267.9,
       "custo": 199.9,
       "problema": "Vazio",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -14081,7 +14108,7 @@
       "valor_pedido": 2298.9,
       "custo": 1850.01,
       "problema": "Vazio",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -14094,7 +14121,7 @@
       "valor_pedido": 1127.39,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": false
     },
     {
@@ -14107,7 +14134,7 @@
       "valor_pedido": 2277.68,
       "custo": 1382.19,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -14117,10 +14144,10 @@
       "marketplace": "Mercado Livre",
       "canal": "mercadolivre",
       "sku": "TI1515",
-      "valor_pedido": 899.0,
+      "valor_pedido": 899,
       "custo": 766.97,
       "problema": "Avaria",
-      "valor_real_fechado": 170.0,
+      "valor_real_fechado": 170,
       "aceito": true
     },
     {
@@ -14143,10 +14170,10 @@
       "marketplace": "Mercado Livre",
       "canal": "mercadolivre",
       "sku": "TI1563",
-      "valor_pedido": 539.0,
+      "valor_pedido": 539,
       "custo": 462.5,
       "problema": "Avaria",
-      "valor_real_fechado": 130.0,
+      "valor_real_fechado": 130,
       "aceito": false
     },
     {
@@ -14159,7 +14186,7 @@
       "valor_pedido": 5763.9,
       "custo": 3390.06,
       "problema": "Avaria",
-      "valor_real_fechado": 245.0,
+      "valor_real_fechado": 245,
       "aceito": true
     },
     {
@@ -14185,7 +14212,7 @@
       "valor_pedido": 976.05,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": true
     },
     {
@@ -14198,7 +14225,7 @@
       "valor_pedido": 990.79,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": true
     },
     {
@@ -14211,7 +14238,7 @@
       "valor_pedido": 778.9,
       "custo": 501.61,
       "problema": "Avaria",
-      "valor_real_fechado": 150.0,
+      "valor_real_fechado": 150,
       "aceito": false
     },
     {
@@ -14237,7 +14264,7 @@
       "valor_pedido": 1639.9,
       "custo": 1150.58,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": true
     },
     {
@@ -14250,7 +14277,7 @@
       "valor_pedido": 934.9,
       "custo": 584.52,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -14263,7 +14290,7 @@
       "valor_pedido": 778.9,
       "custo": 501.61,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -14276,7 +14303,7 @@
       "valor_pedido": 2277.68,
       "custo": 1382.19,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -14289,7 +14316,7 @@
       "valor_pedido": 899.9,
       "custo": 609.6,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": true
     },
     {
@@ -14302,7 +14329,7 @@
       "valor_pedido": 1153.9,
       "custo": 484.56,
       "problema": "Vazio",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -14315,7 +14342,7 @@
       "valor_pedido": 4179.9,
       "custo": 2834.61,
       "problema": "Avaria",
-      "valor_real_fechado": 400.0,
+      "valor_real_fechado": 400,
       "aceito": true
     },
     {
@@ -14328,7 +14355,7 @@
       "valor_pedido": 2118.13,
       "custo": 1382.19,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": false
     },
     {
@@ -14341,7 +14368,7 @@
       "valor_pedido": 923.96,
       "custo": 652.99,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": true
     },
     {
@@ -14354,7 +14381,7 @@
       "valor_pedido": 5719.9,
       "custo": 4015.19,
       "problema": "Avaria",
-      "valor_real_fechado": 780.0,
+      "valor_real_fechado": 780,
       "aceito": false
     },
     {
@@ -14367,7 +14394,7 @@
       "valor_pedido": 6299.9,
       "custo": 4015.19,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -14380,7 +14407,7 @@
       "valor_pedido": 1099.9,
       "custo": 613.76,
       "problema": "Avaria",
-      "valor_real_fechado": 184.0,
+      "valor_real_fechado": 184,
       "aceito": true
     },
     {
@@ -14393,7 +14420,7 @@
       "valor_pedido": 1690.86,
       "custo": 1150.58,
       "problema": "Avaria",
-      "valor_real_fechado": 350.0,
+      "valor_real_fechado": 350,
       "aceito": false
     },
     {
@@ -14406,7 +14433,7 @@
       "valor_pedido": 1591.9,
       "custo": 1054.29,
       "problema": "Avaria",
-      "valor_real_fechado": 270.0,
+      "valor_real_fechado": 270,
       "aceito": false
     },
     {
@@ -14484,7 +14511,7 @@
       "valor_pedido": 2667.9,
       "custo": 1650.01,
       "problema": "Vazio",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -14497,7 +14524,7 @@
       "valor_pedido": 5719.9,
       "custo": 4015.19,
       "problema": "Avaria",
-      "valor_real_fechado": 560.0,
+      "valor_real_fechado": 560,
       "aceito": true
     },
     {
@@ -14510,7 +14537,7 @@
       "valor_pedido": 1771.9,
       "custo": 1149.5,
       "problema": "Avaria",
-      "valor_real_fechado": 320.0,
+      "valor_real_fechado": 320,
       "aceito": true
     },
     {
@@ -14536,7 +14563,7 @@
       "valor_pedido": 5763.9,
       "custo": 3390.06,
       "problema": "Avaria",
-      "valor_real_fechado": 780.0,
+      "valor_real_fechado": 780,
       "aceito": true
     },
     {
@@ -14549,7 +14576,7 @@
       "valor_pedido": 2099.9,
       "custo": 1098.63,
       "problema": "Avaria",
-      "valor_real_fechado": 170.0,
+      "valor_real_fechado": 170,
       "aceito": true
     },
     {
@@ -14575,7 +14602,7 @@
       "valor_pedido": 2137.69,
       "custo": 1382.19,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": true
     },
     {
@@ -14588,7 +14615,7 @@
       "valor_pedido": 870.57,
       "custo": 576.55,
       "problema": "Avaria",
-      "valor_real_fechado": 240.0,
+      "valor_real_fechado": 240,
       "aceito": false
     },
     {
@@ -14601,7 +14628,7 @@
       "valor_pedido": 883.16,
       "custo": 584.52,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -14614,7 +14641,7 @@
       "valor_pedido": 512.05,
       "custo": 462.5,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -14640,7 +14667,7 @@
       "valor_pedido": 934.9,
       "custo": 584.52,
       "problema": "Avaria",
-      "valor_real_fechado": 170.0,
+      "valor_real_fechado": 170,
       "aceito": true
     },
     {
@@ -14666,7 +14693,7 @@
       "valor_pedido": 1299.9,
       "custo": 871.2,
       "problema": "Sucata",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -14679,7 +14706,7 @@
       "valor_pedido": 1772.9,
       "custo": 1258.61,
       "problema": "Avaria",
-      "valor_real_fechado": 320.0,
+      "valor_real_fechado": 320,
       "aceito": false
     },
     {
@@ -14692,7 +14719,7 @@
       "valor_pedido": 7186.9,
       "custo": 4015.19,
       "problema": "Avaria",
-      "valor_real_fechado": 520.0,
+      "valor_real_fechado": 520,
       "aceito": true
     },
     {
@@ -14705,7 +14732,7 @@
       "valor_pedido": 1836.35,
       "custo": 1091.38,
       "problema": "Avaria",
-      "valor_real_fechado": 150.0,
+      "valor_real_fechado": 150,
       "aceito": true
     },
     {
@@ -14731,7 +14758,7 @@
       "valor_pedido": 748.7,
       "custo": 443.42,
       "problema": "Avaria",
-      "valor_real_fechado": 200.0,
+      "valor_real_fechado": 200,
       "aceito": false
     },
     {
@@ -14744,7 +14771,7 @@
       "valor_pedido": 5719.9,
       "custo": 4015.19,
       "problema": "Avaria",
-      "valor_real_fechado": 820.0,
+      "valor_real_fechado": 820,
       "aceito": false
     },
     {
@@ -14757,7 +14784,7 @@
       "valor_pedido": 1729.9,
       "custo": 939.94,
       "problema": "Avaria",
-      "valor_real_fechado": 320.0,
+      "valor_real_fechado": 320,
       "aceito": false
     },
     {
@@ -14770,7 +14797,7 @@
       "valor_pedido": 1772.9,
       "custo": 1258.61,
       "problema": "Avaria",
-      "valor_real_fechado": 380.0,
+      "valor_real_fechado": 380,
       "aceito": false
     },
     {
@@ -14796,7 +14823,7 @@
       "valor_pedido": 955.74,
       "custo": 689.24,
       "problema": "Avaria",
-      "valor_real_fechado": 150.0,
+      "valor_real_fechado": 150,
       "aceito": true
     },
     {
@@ -14822,7 +14849,7 @@
       "valor_pedido": 883.16,
       "custo": 584.52,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -14835,7 +14862,7 @@
       "valor_pedido": 5763.9,
       "custo": 3390.06,
       "problema": "Vazio",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": true
     },
     {
@@ -14848,7 +14875,7 @@
       "valor_pedido": 1727.99,
       "custo": 1160.54,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": true
     },
     {
@@ -14861,7 +14888,7 @@
       "valor_pedido": 6599.9,
       "custo": 3839.22,
       "problema": "Avaria",
-      "valor_real_fechado": 560.0,
+      "valor_real_fechado": 560,
       "aceito": false
     },
     {
@@ -14874,7 +14901,7 @@
       "valor_pedido": 1705.87,
       "custo": 1069.43,
       "problema": "Sucata",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": false
     },
     {
@@ -14887,7 +14914,7 @@
       "valor_pedido": 1495.9,
       "custo": 870.04,
       "problema": "Avaria",
-      "valor_real_fechado": 320.0,
+      "valor_real_fechado": 320,
       "aceito": true
     },
     {
@@ -14900,7 +14927,7 @@
       "valor_pedido": 5699.98,
       "custo": 4015.19,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -14913,7 +14940,7 @@
       "valor_pedido": 1890.98,
       "custo": 1150.58,
       "problema": "Avaria",
-      "valor_real_fechado": 250.0,
+      "valor_real_fechado": 250,
       "aceito": true
     },
     {
@@ -14926,7 +14953,7 @@
       "valor_pedido": 937.59,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 240.0,
+      "valor_real_fechado": 240,
       "aceito": false
     },
     {
@@ -14939,7 +14966,7 @@
       "valor_pedido": 1069.98,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 180.0,
+      "valor_real_fechado": 180,
       "aceito": false
     },
     {
@@ -14952,7 +14979,7 @@
       "valor_pedido": 1790.68,
       "custo": 1150.58,
       "problema": "Avaria",
-      "valor_real_fechado": 293.0,
+      "valor_real_fechado": 293,
       "aceito": false
     },
     {
@@ -14965,7 +14992,7 @@
       "valor_pedido": 1012.9,
       "custo": 625.44,
       "problema": "Vazio",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -14978,7 +15005,7 @@
       "valor_pedido": 1692.9,
       "custo": 1091.38,
       "problema": "Avaria",
-      "valor_real_fechado": 338.0,
+      "valor_real_fechado": 338,
       "aceito": false
     },
     {
@@ -15002,7 +15029,7 @@
       "canal": "mercadolivre",
       "sku": "SS001",
       "valor_pedido": 839.9,
-      "custo": 462.0,
+      "custo": 462,
       "problema": "Vazio",
       "valor_real_fechado": 83.99,
       "aceito": false
@@ -15017,7 +15044,7 @@
       "valor_pedido": 389.9,
       "custo": 19.2,
       "problema": "Vazio",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -15030,7 +15057,7 @@
       "valor_pedido": 1899.9,
       "custo": 1260.04,
       "problema": "Vazio",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -15082,7 +15109,7 @@
       "valor_pedido": 876.63,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 220.0,
+      "valor_real_fechado": 220,
       "aceito": false
     },
     {
@@ -15095,7 +15122,7 @@
       "valor_pedido": 999.9,
       "custo": 576.26,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -15108,7 +15135,7 @@
       "valor_pedido": 1542.92,
       "custo": 1069.43,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": false
     },
     {
@@ -15121,7 +15148,7 @@
       "valor_pedido": 985.69,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 400.0,
+      "valor_real_fechado": 400,
       "aceito": true
     },
     {
@@ -15147,7 +15174,7 @@
       "valor_pedido": 1696.9,
       "custo": 21.42,
       "problema": "Avaria",
-      "valor_real_fechado": 280.0,
+      "valor_real_fechado": 280,
       "aceito": true
     },
     {
@@ -15160,7 +15187,7 @@
       "valor_pedido": 1012.9,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 220.0,
+      "valor_real_fechado": 220,
       "aceito": true
     },
     {
@@ -15173,7 +15200,7 @@
       "valor_pedido": 1319.9,
       "custo": 871.2,
       "problema": "Avaria",
-      "valor_real_fechado": 280.0,
+      "valor_real_fechado": 280,
       "aceito": false
     },
     {
@@ -15186,7 +15213,7 @@
       "valor_pedido": 375.9,
       "custo": 19.2,
       "problema": "Vazio",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -15199,7 +15226,7 @@
       "valor_pedido": 4948.7,
       "custo": 3460.86,
       "problema": "Avaria",
-      "valor_real_fechado": 500.0,
+      "valor_real_fechado": 500,
       "aceito": true
     },
     {
@@ -15212,7 +15239,7 @@
       "valor_pedido": 823.59,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 430.0,
+      "valor_real_fechado": 430,
       "aceito": true
     },
     {
@@ -15225,7 +15252,7 @@
       "valor_pedido": 977.59,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 470.0,
+      "valor_real_fechado": 470,
       "aceito": true
     },
     {
@@ -15238,7 +15265,7 @@
       "valor_pedido": 2245.9,
       "custo": 1286.69,
       "problema": "Vazio",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -15251,7 +15278,7 @@
       "valor_pedido": 780.9,
       "custo": 501.15,
       "problema": "Avaria",
-      "valor_real_fechado": 150.0,
+      "valor_real_fechado": 150,
       "aceito": false
     },
     {
@@ -15264,7 +15291,7 @@
       "valor_pedido": 1324.9,
       "custo": 850.63,
       "problema": "Avaria",
-      "valor_real_fechado": 240.0,
+      "valor_real_fechado": 240,
       "aceito": true
     },
     {
@@ -15277,7 +15304,7 @@
       "valor_pedido": 1012.9,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 220.0,
+      "valor_real_fechado": 220,
       "aceito": false
     },
     {
@@ -15290,7 +15317,7 @@
       "valor_pedido": 1153.9,
       "custo": 484.56,
       "problema": "Avaria",
-      "valor_real_fechado": 145.0,
+      "valor_real_fechado": 145,
       "aceito": false
     },
     {
@@ -15303,7 +15330,7 @@
       "valor_pedido": 4169.9,
       "custo": 3200.63,
       "problema": "Avaria",
-      "valor_real_fechado": 120.0,
+      "valor_real_fechado": 120,
       "aceito": true
     },
     {
@@ -15316,7 +15343,7 @@
       "valor_pedido": 1795.9,
       "custo": 1091.38,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -15329,7 +15356,7 @@
       "valor_pedido": 1012.9,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 254.0,
+      "valor_real_fechado": 254,
       "aceito": true
     },
     {
@@ -15381,7 +15408,7 @@
       "valor_pedido": 1899.9,
       "custo": 1431.9,
       "problema": "Avaria",
-      "valor_real_fechado": 220.0,
+      "valor_real_fechado": 220,
       "aceito": true
     },
     {
@@ -15394,7 +15421,7 @@
       "valor_pedido": 295.85,
       "custo": 19.2,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -15433,7 +15460,7 @@
       "valor_pedido": 1708.92,
       "custo": 1286.69,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": false
     },
     {
@@ -15446,7 +15473,7 @@
       "valor_pedido": 1043.18,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 470.0,
+      "valor_real_fechado": 470,
       "aceito": false
     },
     {
@@ -15459,7 +15486,7 @@
       "valor_pedido": 1697.69,
       "custo": 1150.58,
       "problema": "Avaria",
-      "valor_real_fechado": 250.0,
+      "valor_real_fechado": 250,
       "aceito": true
     },
     {
@@ -15485,7 +15512,7 @@
       "valor_pedido": 5642.9,
       "custo": 3390.06,
       "problema": "Insatisfação",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -15496,9 +15523,9 @@
       "canal": "shopee",
       "sku": "SS001",
       "valor_pedido": 877.27,
-      "custo": 462.0,
+      "custo": 462,
       "problema": "Avaria",
-      "valor_real_fechado": 185.0,
+      "valor_real_fechado": 185,
       "aceito": false
     },
     {
@@ -15511,7 +15538,7 @@
       "valor_pedido": 1365.9,
       "custo": 991.58,
       "problema": "Avaria",
-      "valor_real_fechado": 150.0,
+      "valor_real_fechado": 150,
       "aceito": false
     },
     {
@@ -15524,7 +15551,7 @@
       "valor_pedido": 1795.9,
       "custo": 1091.38,
       "problema": "Insatisfação",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -15537,7 +15564,7 @@
       "valor_pedido": 1499.9,
       "custo": 909.88,
       "problema": "Vazio",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -15550,7 +15577,7 @@
       "valor_pedido": 4064.9,
       "custo": 2834.61,
       "problema": "Vazio",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -15561,9 +15588,9 @@
       "canal": "mercadolivre",
       "sku": "SS001",
       "valor_pedido": 859.9,
-      "custo": 462.0,
+      "custo": 462,
       "problema": "Vazio",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -15589,7 +15616,7 @@
       "valor_pedido": 1561.19,
       "custo": 1094.25,
       "problema": "Avaria",
-      "valor_real_fechado": 350.0,
+      "valor_real_fechado": 350,
       "aceito": true
     },
     {
@@ -15602,7 +15629,7 @@
       "valor_pedido": 1679.89,
       "custo": 1150.58,
       "problema": "Avaria",
-      "valor_real_fechado": 300.0,
+      "valor_real_fechado": 300,
       "aceito": true
     },
     {
@@ -15615,7 +15642,7 @@
       "valor_pedido": 1319.9,
       "custo": 871.2,
       "problema": "Avaria",
-      "valor_real_fechado": 250.0,
+      "valor_real_fechado": 250,
       "aceito": true
     },
     {
@@ -15628,7 +15655,7 @@
       "valor_pedido": 878.62,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -15654,7 +15681,7 @@
       "valor_pedido": 4064.9,
       "custo": 2834.61,
       "problema": "Avaria",
-      "valor_real_fechado": 420.0,
+      "valor_real_fechado": 420,
       "aceito": false
     },
     {
@@ -15693,7 +15720,7 @@
       "valor_pedido": 1899.9,
       "custo": 1265.72,
       "problema": "Avaria",
-      "valor_real_fechado": 120.0,
+      "valor_real_fechado": 120,
       "aceito": true
     },
     {
@@ -15719,7 +15746,7 @@
       "valor_pedido": 1830.32,
       "custo": 1150.58,
       "problema": "Avaria",
-      "valor_real_fechado": 220.0,
+      "valor_real_fechado": 220,
       "aceito": false
     },
     {
@@ -15732,7 +15759,7 @@
       "valor_pedido": 931.6,
       "custo": 609.6,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": true
     },
     {
@@ -15745,7 +15772,7 @@
       "valor_pedido": 1140.9,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 220.0,
+      "valor_real_fechado": 220,
       "aceito": false
     },
     {
@@ -15758,7 +15785,7 @@
       "valor_pedido": 626.39,
       "custo": 396.74,
       "problema": "Avaria",
-      "valor_real_fechado": 250.0,
+      "valor_real_fechado": 250,
       "aceito": false
     },
     {
@@ -15771,7 +15798,7 @@
       "valor_pedido": 917.9,
       "custo": 501.15,
       "problema": "Avaria",
-      "valor_real_fechado": 220.0,
+      "valor_real_fechado": 220,
       "aceito": false
     },
     {
@@ -15784,7 +15811,7 @@
       "valor_pedido": 1786.9,
       "custo": 1150.58,
       "problema": "Avaria",
-      "valor_real_fechado": 290.0,
+      "valor_real_fechado": 290,
       "aceito": false
     },
     {
@@ -15797,7 +15824,7 @@
       "valor_pedido": 1794.4,
       "custo": 1288.79,
       "problema": "Avaria",
-      "valor_real_fechado": 150.0,
+      "valor_real_fechado": 150,
       "aceito": false
     },
     {
@@ -15810,7 +15837,7 @@
       "valor_pedido": 1098.7,
       "custo": 613.76,
       "problema": "Avaria",
-      "valor_real_fechado": 400.0,
+      "valor_real_fechado": 400,
       "aceito": false
     },
     {
@@ -15823,7 +15850,7 @@
       "valor_pedido": 626.39,
       "custo": 396.74,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -15836,7 +15863,7 @@
       "valor_pedido": 908.63,
       "custo": 652.99,
       "problema": "Avaria",
-      "valor_real_fechado": 170.0,
+      "valor_real_fechado": 170,
       "aceito": false
     },
     {
@@ -15849,7 +15876,7 @@
       "valor_pedido": 5632.9,
       "custo": 3839.22,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 0,
       "aceito": false
     },
     {
@@ -15862,7 +15889,7 @@
       "valor_pedido": 1488.9,
       "custo": 936.11,
       "problema": "Avaria",
-      "valor_real_fechado": 220.0,
+      "valor_real_fechado": 220,
       "aceito": false
     },
     {
@@ -15888,7 +15915,7 @@
       "valor_pedido": 853.5,
       "custo": 613.76,
       "problema": "Avaria",
-      "valor_real_fechado": 180.0,
+      "valor_real_fechado": 180,
       "aceito": true
     },
     {
@@ -15911,10 +15938,10 @@
       "marketplace": "Mercado Livre",
       "canal": "mercadolivre",
       "sku": "TI1773-1",
-      "valor_pedido": 2079.0,
+      "valor_pedido": 2079,
       "custo": 1431.9,
       "problema": "Avaria",
-      "valor_real_fechado": 310.0,
+      "valor_real_fechado": 310,
       "aceito": false
     },
     {
@@ -15948,7 +15975,7 @@
       "casasbahia": {
         "count": 1,
         "countAceito": 1,
-        "descontoTotal": 352.0,
+        "descontoTotal": 352,
         "custoTotal": 1226.54,
         "valorPedidoTotal": 1915.77,
         "pctDescontoSobreCusto": 28.7,
@@ -15960,7 +15987,7 @@
         "count": 3,
         "countAceito": 2,
         "descontoTotal": 528.02,
-        "custoTotal": 2069.0,
+        "custoTotal": 2069,
         "valorPedidoTotal": 3143.25,
         "pctDescontoSobreCusto": 25.52,
         "pctDescontoSobreVenda": 16.8,
@@ -15970,7 +15997,7 @@
       "amazon": {
         "count": 1,
         "countAceito": 1,
-        "descontoTotal": 520.0,
+        "descontoTotal": 520,
         "custoTotal": 1091.38,
         "valorPedidoTotal": 1710.94,
         "pctDescontoSobreCusto": 47.65,
@@ -15981,7 +16008,7 @@
       "shopee": {
         "count": 1,
         "countAceito": 1,
-        "descontoTotal": 58.0,
+        "descontoTotal": 58,
         "custoTotal": 399.97,
         "valorPedidoTotal": 588.53,
         "pctDescontoSobreCusto": 14.5,
@@ -16005,7 +16032,7 @@
       "shopee": {
         "count": 5,
         "countAceito": 2,
-        "descontoTotal": 1090.0,
+        "descontoTotal": 1090,
         "custoTotal": 4240.59,
         "valorPedidoTotal": 6660.76,
         "pctDescontoSobreCusto": 25.7,
@@ -16016,7 +16043,7 @@
       "casasbahia": {
         "count": 5,
         "countAceito": 3,
-        "descontoTotal": 1450.0,
+        "descontoTotal": 1450,
         "custoTotal": 5829.81,
         "valorPedidoTotal": 9010.44,
         "pctDescontoSobreCusto": 24.87,
@@ -16029,7 +16056,7 @@
       "casasbahia": {
         "count": 1,
         "countAceito": 1,
-        "descontoTotal": 360.0,
+        "descontoTotal": 360,
         "custoTotal": 652.99,
         "valorPedidoTotal": 1064.07,
         "pctDescontoSobreCusto": 55.13,
@@ -16053,7 +16080,7 @@
       "amazon": {
         "count": 7,
         "countAceito": 4,
-        "descontoTotal": 1520.0,
+        "descontoTotal": 1520,
         "custoTotal": 5875.4,
         "valorPedidoTotal": 9227.21,
         "pctDescontoSobreCusto": 25.87,
@@ -16064,7 +16091,7 @@
       "magalu": {
         "count": 2,
         "countAceito": 0,
-        "descontoTotal": 1452.0,
+        "descontoTotal": 1452,
         "custoTotal": 4604.48,
         "valorPedidoTotal": 8009.7,
         "pctDescontoSobreCusto": 31.53,
@@ -16075,7 +16102,7 @@
       "casasbahia": {
         "count": 12,
         "countAceito": 7,
-        "descontoTotal": 3036.0,
+        "descontoTotal": 3036,
         "custoTotal": 9655.39,
         "valorPedidoTotal": 14218.9,
         "pctDescontoSobreCusto": 31.44,
@@ -16086,8 +16113,8 @@
       "shopee": {
         "count": 2,
         "countAceito": 1,
-        "descontoTotal": 450.0,
-        "custoTotal": 1020.0,
+        "descontoTotal": 450,
+        "custoTotal": 1020,
         "valorPedidoTotal": 1749.93,
         "pctDescontoSobreCusto": 44.12,
         "pctDescontoSobreVenda": 25.72,
@@ -16099,7 +16126,7 @@
       "casasbahia": {
         "count": 1,
         "countAceito": 1,
-        "descontoTotal": 920.0,
+        "descontoTotal": 920,
         "custoTotal": 3390.06,
         "valorPedidoTotal": 4609.79,
         "pctDescontoSobreCusto": 27.14,
@@ -16112,7 +16139,7 @@
       "casasbahia": {
         "count": 16,
         "countAceito": 5,
-        "descontoTotal": 7070.0,
+        "descontoTotal": 7070,
         "custoTotal": 17623.04,
         "valorPedidoTotal": 27450.01,
         "pctDescontoSobreCusto": 40.12,
@@ -16134,7 +16161,7 @@
       "amazon": {
         "count": 6,
         "countAceito": 4,
-        "descontoTotal": 1380.0,
+        "descontoTotal": 1380,
         "custoTotal": 5670.73,
         "valorPedidoTotal": 8234.21,
         "pctDescontoSobreCusto": 24.34,
@@ -16145,7 +16172,7 @@
       "shopee": {
         "count": 2,
         "countAceito": 0,
-        "descontoTotal": 370.0,
+        "descontoTotal": 370,
         "custoTotal": 1164.17,
         "valorPedidoTotal": 1736.94,
         "pctDescontoSobreCusto": 31.78,
@@ -16156,9 +16183,9 @@
       "magalu": {
         "count": 2,
         "countAceito": 0,
-        "descontoTotal": 850.0,
+        "descontoTotal": 850,
         "custoTotal": 2001.82,
-        "valorPedidoTotal": 3014.0,
+        "valorPedidoTotal": 3014,
         "pctDescontoSobreCusto": 42.46,
         "pctDescontoSobreVenda": 28.2,
         "vendaTotalCanal": 740647.46,
@@ -16180,7 +16207,7 @@
       "amazon": {
         "count": 7,
         "countAceito": 5,
-        "descontoTotal": 1850.0,
+        "descontoTotal": 1850,
         "custoTotal": 9910.82,
         "valorPedidoTotal": 14648.94,
         "pctDescontoSobreCusto": 18.67,
@@ -16191,7 +16218,7 @@
       "shopee": {
         "count": 8,
         "countAceito": 3,
-        "descontoTotal": 2630.0,
+        "descontoTotal": 2630,
         "custoTotal": 4991.84,
         "valorPedidoTotal": 7621.59,
         "pctDescontoSobreCusto": 52.69,
@@ -16202,7 +16229,7 @@
       "magalu": {
         "count": 3,
         "countAceito": 0,
-        "descontoTotal": 773.0,
+        "descontoTotal": 773,
         "custoTotal": 3062.71,
         "valorPedidoTotal": 4569.58,
         "pctDescontoSobreCusto": 25.24,
@@ -16213,7 +16240,7 @@
       "casasbahia": {
         "count": 2,
         "countAceito": 1,
-        "descontoTotal": 550.0,
+        "descontoTotal": 550,
         "custoTotal": 2220.01,
         "valorPedidoTotal": 3240.61,
         "pctDescontoSobreCusto": 24.77,
@@ -16226,8 +16253,8 @@
       "shopee": {
         "count": 1,
         "countAceito": 0,
-        "descontoTotal": 185.0,
-        "custoTotal": 462.0,
+        "descontoTotal": 185,
+        "custoTotal": 462,
         "valorPedidoTotal": 877.27,
         "pctDescontoSobreCusto": 40.04,
         "pctDescontoSobreVenda": 21.09,
@@ -16237,7 +16264,7 @@
       "amazon": {
         "count": 5,
         "countAceito": 3,
-        "descontoTotal": 780.0,
+        "descontoTotal": 780,
         "custoTotal": 3111.09,
         "valorPedidoTotal": 4599.07,
         "pctDescontoSobreCusto": 25.07,
