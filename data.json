@@ -2550,13 +2550,17 @@
         "ts": "2026-07-17T19:04:17.334Z"
       },
       "amazon": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "282",
+        "metrics": {
+          "pedidosProblema": 1.66,
+          "cancelamentoEnvio": 0,
+          "rastreamento": null
+        },
         "tickets": 0,
         "sacForaPrazo": 9,
         "casosCriticos": 7,
         "solicitacaoDevolucao": 3,
-        "ts": "2026-07-17T12:40:56.717Z"
+        "ts": "2026-07-17T19:06:04.974Z"
       },
       "magalu": {
         "reputacao": "",
