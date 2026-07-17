@@ -2539,14 +2539,14 @@
         "tickets": 0,
         "metrics": {},
         "sacForaPrazo": 7,
-        "casosCriticos": 12,
+        "casosCriticos": 16,
         "solicitacaoDevolucao": 1
       },
       "amazon": {
         "tickets": 0,
         "metrics": {},
         "sacForaPrazo": 9,
-        "casosCriticos": 7,
+        "casosCriticos": 8,
         "solicitacaoDevolucao": 3
       },
       "magalu": {
@@ -2567,7 +2567,7 @@
         "tickets": 0,
         "metrics": {},
         "sacForaPrazo": 2,
-        "casosCriticos": 19,
+        "casosCriticos": 20,
         "solicitacaoDevolucao": 7
       }
     }
