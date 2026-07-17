@@ -2576,13 +2576,16 @@
         "ts": "2026-07-17T19:12:10.215Z"
       },
       "casasbahia": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "3,4",
+        "metrics": {
+          "reclamacao": 6.7,
+          "cancelados": 3.4
+        },
         "tickets": 0,
         "sacForaPrazo": 0,
         "casosCriticos": 27,
         "solicitacaoDevolucao": 3,
-        "ts": "2026-07-17T12:40:56.717Z"
+        "ts": "2026-07-17T19:13:20.006Z"
       },
       "shopee": {
         "reputacao": "",
