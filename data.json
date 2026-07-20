@@ -17301,7 +17301,7 @@
         "valorPedidoTotal": 3240.61,
         "pctDescontoSobreCusto": 24.77,
         "pctDescontoSobreVenda": 16.97,
-        "vendaTotalCanal": 1245491,
+        "vendaTotalCanal": 1245491.0,
         "pctDescontoSobreVendaCanal": 0.0442
       }
     },
@@ -17417,11 +17417,11 @@
       "mercadolivre": 2545905.05,
       "magalu": 516270.1,
       "shopee": 537525.22,
-      "casasbahia": 1245491,
+      "casasbahia": 1245491.0,
       "amazon": 667606.6,
       "outros": 77968.6
     }
   },
-  "vendasByCanalMesUpdatedAt": "2026-07-17T09:34:09.785202-03:00",
+  "vendasByCanalMesUpdatedAt": "2026-07-20T15:10:09.075718-03:00",
   "vendasByCanalMesSource": "KONDADO tinyerp_pedidos_detalhes CSV — auto-refresh diário"
 }
