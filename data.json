@@ -2601,6 +2601,43 @@
         "solicitacaoDevolucao": 7,
         "ts": "2026-07-17T19:19:18.158Z"
       }
+    },
+    "2026-07-20": {
+      "mercadolivre": {
+        "tickets": 0,
+        "metrics": {},
+        "sacForaPrazo": 7,
+        "casosCriticos": 12,
+        "solicitacaoDevolucao": 1
+      },
+      "amazon": {
+        "tickets": 0,
+        "metrics": {},
+        "sacForaPrazo": 9,
+        "casosCriticos": 7,
+        "solicitacaoDevolucao": 3
+      },
+      "magalu": {
+        "tickets": 0,
+        "metrics": {},
+        "sacForaPrazo": 0,
+        "casosCriticos": 5,
+        "solicitacaoDevolucao": 2
+      },
+      "casasbahia": {
+        "tickets": 0,
+        "metrics": {},
+        "sacForaPrazo": 0,
+        "casosCriticos": 27,
+        "solicitacaoDevolucao": 3
+      },
+      "shopee": {
+        "tickets": 0,
+        "metrics": {},
+        "sacForaPrazo": 2,
+        "casosCriticos": 19,
+        "solicitacaoDevolucao": 7
+      }
     }
   },
   "ticketsRaw": [
