@@ -6648,7 +6648,7 @@
       "ym": "2026-03",
       "lj": "Magalu",
       "pb": "RMA",
-      "sk": "TI673/ TI733-2/ TI287-2",
+      "sk": "TI673 / TI733-2/ TI287-2",
       "tr": "Magalu Entregas",
       "pr": "—"
     },
@@ -6898,7 +6898,7 @@
       "ym": "2026-02",
       "lj": "Magalu",
       "pb": "Atraso de Entrega",
-      "sk": "TI1299/ TI287-1/ TI733-1",
+      "sk": "TI1299 / TI287-1 / TI733-1",
       "tr": "Recolí",
       "pr": "—"
     },
@@ -7248,7 +7248,7 @@
       "ym": "2026-01",
       "lj": "Casas Bahia",
       "pb": "Cancelamento por Arrependimento Após o Envio",
-      "sk": "TI1619/TI287-2",
+      "sk": "TI1619 /TI287-2",
       "tr": "Jamef",
       "pr": "—"
     },
@@ -7478,7 +7478,7 @@
       "ym": "2025-12",
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
-      "sk": "TI1656/ TI1656-1",
+      "sk": "TI1656 / TI1656-1",
       "tr": "Correios",
       "pr": "—"
     },
@@ -7538,7 +7538,7 @@
       "ym": "2025-12",
       "lj": "Mercado Livre",
       "pb": "RMA",
-      "sk": "TI1426/ TI287-1",
+      "sk": "TI1426 / TI287-1",
       "tr": "Brasil Web",
       "pr": "—"
     },
@@ -7558,7 +7558,7 @@
       "ym": "2025-12",
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
-      "sk": "TI838/ TI287-1",
+      "sk": "TI838 / TI287-1",
       "tr": "Correios",
       "pr": "—"
     },
@@ -7918,7 +7918,7 @@
       "ym": "2025-10",
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
-      "sk": "TI673/ TI733-2/ TI287-2",
+      "sk": "TI673 / TI733-2/ TI287-2",
       "tr": "Correios",
       "pr": "—"
     },
@@ -8128,7 +8128,7 @@
       "ym": "2025-08",
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
-      "sk": "TI1146 / TI287-2",
+      "sk": "TI1146  / TI287-2",
       "tr": "Jamef",
       "pr": "—"
     },
@@ -8258,7 +8258,7 @@
       "ym": "2025-07",
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
-      "sk": "TI673/ TI287/ TI733",
+      "sk": "TI673 / TI287 / TI733",
       "tr": "Mercado Envios",
       "pr": "—"
     },
@@ -8288,7 +8288,7 @@
       "ym": "2025-07",
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
-      "sk": "TI673/ TI287/ TI733",
+      "sk": "TI673 / TI287 / TI733",
       "tr": "Correios",
       "pr": "—"
     },
@@ -8328,7 +8328,7 @@
       "ym": "2025-07",
       "lj": "Kabum",
       "pb": "Arrependimento",
-      "sk": "TI673/ TI287/ TI733",
+      "sk": "TI673 / TI287 / TI733",
       "tr": "Total Express",
       "pr": "—"
     },
@@ -8518,7 +8518,7 @@
       "ym": "2025-06",
       "lj": "Mercado Livre",
       "pb": "RMA",
-      "sk": "TI1078/ TI287-2",
+      "sk": "TI1078 / TI287-2",
       "tr": "Correios",
       "pr": "—"
     },
@@ -8728,7 +8728,7 @@
       "ym": "2025-04",
       "lj": "Mercado Livre",
       "pb": "Suspensão de Entrega",
-      "sk": "TI673/TI733-2/ TI287-2",
+      "sk": "TI673 /TI733-2 / TI287-2",
       "tr": "Correios",
       "pr": "—"
     },
@@ -8808,7 +8808,7 @@
       "ym": "2025-02",
       "lj": "Magalu",
       "pb": "Não Entregue Marketplace",
-      "sk": "TI1388/ TI287-1",
+      "sk": "TI1388 / TI287-1",
       "tr": "Correios",
       "pr": "—"
     },
@@ -8878,7 +8878,7 @@
       "ym": "2025-01",
       "lj": "Mercado Livre",
       "pb": "Insatisfação Compra",
-      "sk": "TI673/ TI287-2",
+      "sk": "TI673 / TI287-2",
       "tr": "",
       "pr": "—"
     },
@@ -8908,7 +8908,7 @@
       "ym": "2025-01",
       "lj": "Amazon",
       "pb": "Insatisfação Compra",
-      "sk": "TI1078/ TI287-2",
+      "sk": "TI1078 / TI287-2",
       "tr": "Correios",
       "pr": "Média"
     },
@@ -9298,7 +9298,7 @@
       "ym": "2024-10",
       "lj": "",
       "pb": "Danificado Transporte Marketplace",
-      "sk": "TI1078/ TI287",
+      "sk": "TI1078 / TI287",
       "tr": "",
       "pr": "—"
     },
@@ -9348,7 +9348,7 @@
       "ym": "2024-10",
       "lj": "",
       "pb": "Danificado Transporte Marketplace",
-      "sk": "TI1146/ TI287",
+      "sk": "TI1146 / TI287",
       "tr": "",
       "pr": "—"
     },
@@ -9648,7 +9648,7 @@
       "ym": "2024-08",
       "lj": "Magalu",
       "pb": "RMA",
-      "sk": "TI1078/ TI287",
+      "sk": "TI1078 / TI287",
       "tr": "Correios",
       "pr": "Baixa"
     },
@@ -9658,7 +9658,7 @@
       "ym": "2024-08",
       "lj": "Mercado Livre",
       "pb": "RMA",
-      "sk": "TI1121/ TI287",
+      "sk": "TI1121 / TI287",
       "tr": "Correios",
       "pr": "—"
     },
@@ -9708,7 +9708,7 @@
       "ym": "2024-07",
       "lj": "Mercado Livre",
       "pb": "RMA",
-      "sk": "TI1146/ TI287",
+      "sk": "TI1146 / TI287",
       "tr": "Correios",
       "pr": "—"
     },
@@ -9778,7 +9778,7 @@
       "ym": "2024-03",
       "lj": "Mercado Livre",
       "pb": "RMA",
-      "sk": "TI673; TI733",
+      "sk": "TI673 ; TI733",
       "tr": "Correios",
       "pr": "—"
     },
@@ -9788,7 +9788,7 @@
       "ym": "2024-03",
       "lj": "Magalu",
       "pb": "Endereço Incorreto",
-      "sk": "TI1193 TI287-3",
+      "sk": "TI1193  TI287-3",
       "tr": "Correios",
       "pr": "—"
     },
@@ -11533,7 +11533,7 @@
       "pr": "—"
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-20T17:44:43.609502-03:00",
+  "ticketsRawUpdatedAt": "2026-07-20T18:14:10.290291-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
