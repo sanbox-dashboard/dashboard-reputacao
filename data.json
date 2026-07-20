@@ -2611,11 +2611,11 @@
           "canceladas": 0.37,
           "enviosIncorretos": 0.07
         },
-        "tickets": 0,
+        "tickets": 8,
         "sacForaPrazo": 8,
         "casosCriticos": 14,
         "solicitacaoDevolucao": 2,
-        "ts": "2026-07-20T17:07:46.287691-03:00",
+        "ts": "2026-07-20T17:26:03.387575-03:00",
         "solicitacaoDevolucaoAmarelo": 2,
         "solicitacaoDevolucaoVermelho": 0
       },
@@ -2689,8 +2689,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "SS001",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916887",
@@ -2699,8 +2699,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1766",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916886",
@@ -2709,8 +2709,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1529",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916885",
@@ -2719,8 +2719,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1558",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916884",
@@ -2729,8 +2729,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1667",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916883",
@@ -2739,8 +2739,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1760",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916882",
@@ -2749,8 +2749,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1763",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916881",
@@ -2759,8 +2759,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1690",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916880",
@@ -2769,8 +2769,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1562",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916879",
@@ -2779,8 +2779,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1524",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916878",
@@ -2789,8 +2789,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1469",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916877",
@@ -2799,8 +2799,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1740",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916876",
@@ -2809,8 +2809,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1455",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916875",
@@ -2819,8 +2819,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1571",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916874",
@@ -2829,8 +2829,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1455",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916873",
@@ -2839,8 +2839,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1705",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916872",
@@ -2849,8 +2849,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1721",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916871",
@@ -2859,8 +2859,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1740",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916870",
@@ -2869,8 +2869,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1526",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916869",
@@ -2879,8 +2879,8 @@
       "lj": "Mercado Livre",
       "pb": "",
       "sk": "TI1455",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916868",
@@ -2889,8 +2889,8 @@
       "lj": "Mercado Livre",
       "pb": "",
       "sk": "TI1601",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916867",
@@ -2899,8 +2899,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI1565",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916866",
@@ -2909,8 +2909,8 @@
       "lj": "Mercado Livre",
       "pb": "Erro Integração",
       "sk": "TI1147",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99916865",
@@ -2919,8 +2919,8 @@
       "lj": "Shopee",
       "pb": "Comprou Errado",
       "sk": "TI1642",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916864",
@@ -2929,8 +2929,8 @@
       "lj": "",
       "pb": "RMA",
       "sk": "",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916862",
@@ -2939,8 +2939,8 @@
       "lj": "Shopee",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1690",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916861",
@@ -2949,8 +2949,8 @@
       "lj": "Casas Bahia",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1562",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916855",
@@ -2959,8 +2959,8 @@
       "lj": "Amazon",
       "pb": "Endereço Incorreto / Não localizado",
       "sk": "TI1529",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916854",
@@ -2969,8 +2969,8 @@
       "lj": "Casas Bahia",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1565",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916853",
@@ -2979,8 +2979,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1562",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916852",
@@ -2989,8 +2989,8 @@
       "lj": "Shopee",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1565",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916851",
@@ -2999,8 +2999,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1453",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916850",
@@ -3009,8 +3009,8 @@
       "lj": "Mercado Livre",
       "pb": "Recusa do cliente por Cancelamento",
       "sk": "TI1690",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916849",
@@ -3019,8 +3019,8 @@
       "lj": "Mercado Livre",
       "pb": "Endereço Incorreto / Não localizado",
       "sk": "TI1562",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916848",
@@ -3029,8 +3029,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1667",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916847",
@@ -3039,8 +3039,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1601",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916846",
@@ -3049,8 +3049,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1455",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916845",
@@ -3059,8 +3059,8 @@
       "lj": "Shopee",
       "pb": "Comprou Errado",
       "sk": "TI1529",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916844",
@@ -3069,8 +3069,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "SS001",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916843",
@@ -3079,8 +3079,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1768",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916842",
@@ -3089,8 +3089,8 @@
       "lj": "Mercado Livre",
       "pb": "Produto Incorreto",
       "sk": "TI1562",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916841",
@@ -3099,8 +3099,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1773-1",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916840",
@@ -3109,8 +3109,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "SS001",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916839",
@@ -3119,8 +3119,8 @@
       "lj": "",
       "pb": "RMA",
       "sk": "",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916838",
@@ -3129,8 +3129,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1526",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916837",
@@ -3139,8 +3139,8 @@
       "lj": "Shopee",
       "pb": "",
       "sk": "TI1667",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916836",
@@ -3149,8 +3149,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1667",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916835",
@@ -3159,8 +3159,8 @@
       "lj": "Magalu",
       "pb": "Atraso de Entrega",
       "sk": "TI1602",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916831",
@@ -3169,8 +3169,8 @@
       "lj": "Mercado Livre",
       "pb": "",
       "sk": "TI1090",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916830",
@@ -3179,8 +3179,8 @@
       "lj": "Amazon",
       "pb": "Endereço Incorreto / Não localizado",
       "sk": "TI1559",
-      "tr": "MMA",
-      "pr": "—"
+      "pr": "—",
+      "tr": "MMA"
     },
     {
       "n": "99916829",
@@ -3189,8 +3189,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1562",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916828",
@@ -3199,8 +3199,8 @@
       "lj": "Amazon",
       "pb": "",
       "sk": "SS003",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916827",
@@ -3209,8 +3209,8 @@
       "lj": "Casas Bahia",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1562",
-      "tr": "VVLog Envias Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias Full"
     },
     {
       "n": "99916826",
@@ -3219,8 +3219,8 @@
       "lj": "Magalu",
       "pb": "Atraso de Entrega",
       "sk": "TI1732",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916825",
@@ -3229,8 +3229,8 @@
       "lj": "Mercado Livre",
       "pb": "Item Faltante",
       "sk": "TI1633",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916824",
@@ -3239,8 +3239,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1562",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916823",
@@ -3249,8 +3249,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1565",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916822",
@@ -3259,8 +3259,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1715",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916821",
@@ -3269,8 +3269,8 @@
       "lj": "Amazon",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1454",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99916820",
@@ -3279,8 +3279,8 @@
       "lj": "Casas Bahia",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1524",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916819",
@@ -3289,8 +3289,8 @@
       "lj": "Casas Bahia",
       "pb": "",
       "sk": "TI1571",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916818",
@@ -3299,8 +3299,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1456",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916817",
@@ -3309,8 +3309,8 @@
       "lj": "Mercado Livre",
       "pb": "Comprou Errado",
       "sk": "TI1529",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916816",
@@ -3319,8 +3319,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1690",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916815",
@@ -3329,8 +3329,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1571",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916814",
@@ -3339,8 +3339,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1701",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916813",
@@ -3349,8 +3349,8 @@
       "lj": "Casas Bahia",
       "pb": "",
       "sk": "TI1562",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916812",
@@ -3359,8 +3359,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1667",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916811",
@@ -3369,8 +3369,8 @@
       "lj": "Shopee",
       "pb": "Insatisfação Compra",
       "sk": "TI1667",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916810",
@@ -3379,8 +3379,8 @@
       "lj": "Mercado Livre",
       "pb": "",
       "sk": "TI1763",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916809",
@@ -3389,8 +3389,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1524",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916808",
@@ -3399,8 +3399,8 @@
       "lj": "Magalu",
       "pb": "Arrependimento",
       "sk": "TI1562",
-      "tr": "MMA",
-      "pr": "—"
+      "pr": "—",
+      "tr": "MMA"
     },
     {
       "n": "99916807",
@@ -3409,8 +3409,8 @@
       "lj": "Mercado Livre",
       "pb": "Insatisfação Compra",
       "sk": "TI1529",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916806",
@@ -3419,8 +3419,8 @@
       "lj": "Mercado Livre",
       "pb": "",
       "sk": "TI1455",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916805",
@@ -3429,8 +3429,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1700",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916804",
@@ -3439,8 +3439,8 @@
       "lj": "Shopee",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1525",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916803",
@@ -3449,8 +3449,8 @@
       "lj": "Casas Bahia",
       "pb": "Insatisfação Compra",
       "sk": "TI1078",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916802",
@@ -3459,8 +3459,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1121",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916800",
@@ -3468,9 +3468,9 @@
       "ym": "2026-07",
       "lj": "Amazon",
       "pb": "RMA",
-      "sk": "193901.0",
-      "tr": "Total Express",
-      "pr": "—"
+      "sk": "193901",
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916799",
@@ -3479,8 +3479,8 @@
       "lj": "Shopee",
       "pb": "RMA",
       "sk": "SS001",
-      "tr": "MMA",
-      "pr": "—"
+      "pr": "—",
+      "tr": "MMA"
     },
     {
       "n": "99916797",
@@ -3489,8 +3489,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1514",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916796",
@@ -3499,8 +3499,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "SS001",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916795",
@@ -3509,8 +3509,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "SS001",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916794",
@@ -3519,8 +3519,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1700",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916792",
@@ -3529,8 +3529,8 @@
       "lj": "Casas Bahia",
       "pb": "Atraso de Entrega",
       "sk": "TI1529",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916789",
@@ -3539,8 +3539,8 @@
       "lj": "Shopee",
       "pb": "Atraso de Entrega",
       "sk": "TI1571",
-      "tr": "Tecmar",
-      "pr": "Baixa"
+      "pr": "Baixa",
+      "tr": "Tecmar"
     },
     {
       "n": "99916788",
@@ -3549,8 +3549,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1765",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916784",
@@ -3559,8 +3559,8 @@
       "lj": "Casas Bahia",
       "pb": "Atraso de Entrega",
       "sk": "TI1743",
-      "tr": "Alfa Transportes",
-      "pr": "Baixa"
+      "pr": "Baixa",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916783",
@@ -3569,8 +3569,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1559",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916782",
@@ -3579,8 +3579,8 @@
       "lj": "Shopee",
       "pb": "Atraso de Entrega",
       "sk": "TI1550",
-      "tr": "Trilog",
-      "pr": "Baixa"
+      "pr": "Baixa",
+      "tr": "Trilog"
     },
     {
       "n": "99916781",
@@ -3589,8 +3589,8 @@
       "lj": "Shopee",
       "pb": "Arrependimento",
       "sk": "TI1667",
-      "tr": "Tecmar",
-      "pr": "Baixa"
+      "pr": "Baixa",
+      "tr": "Tecmar"
     },
     {
       "n": "99916780",
@@ -3599,8 +3599,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1688",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916779",
@@ -3609,8 +3609,8 @@
       "lj": "Casas Bahia",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1078",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916777",
@@ -3619,8 +3619,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1571",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916776",
@@ -3629,8 +3629,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1571",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916775",
@@ -3639,8 +3639,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1581",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916773",
@@ -3649,8 +3649,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1514",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916770",
@@ -3659,8 +3659,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1525",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916769",
@@ -3669,8 +3669,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI673",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916766",
@@ -3679,8 +3679,8 @@
       "lj": "Mercado Livre",
       "pb": "Produto Incorreto",
       "sk": "TI1646",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916765",
@@ -3689,8 +3689,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1768",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916764",
@@ -3699,8 +3699,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1456",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916763",
@@ -3709,8 +3709,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "SS001",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916762",
@@ -3719,8 +3719,8 @@
       "lj": "Mercado Livre",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1686",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916759",
@@ -3729,8 +3729,8 @@
       "lj": "Shopee",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "SS001",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916758",
@@ -3739,8 +3739,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1687",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916757",
@@ -3749,8 +3749,8 @@
       "lj": "Casas Bahia",
       "pb": "Arrependimento",
       "sk": "TI1078",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916756",
@@ -3759,8 +3759,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1562",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916751",
@@ -3769,8 +3769,8 @@
       "lj": "Casas Bahia",
       "pb": "Dúvida",
       "sk": "TI1690",
-      "tr": "MMA",
-      "pr": "—"
+      "pr": "—",
+      "tr": "MMA"
     },
     {
       "n": "99916750",
@@ -3779,8 +3779,8 @@
       "lj": "Casas Bahia",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1565",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916748",
@@ -3789,8 +3789,8 @@
       "lj": "",
       "pb": "Extravio Transportadora própria",
       "sk": "",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916747",
@@ -3799,8 +3799,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1709",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916741",
@@ -3809,8 +3809,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "SS002",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916739",
@@ -3819,8 +3819,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1717",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916736",
@@ -3829,8 +3829,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1558",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916735",
@@ -3839,8 +3839,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI1550",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916734",
@@ -3849,8 +3849,8 @@
       "lj": "Shopee",
       "pb": "RMA",
       "sk": "SS002",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916732",
@@ -3859,8 +3859,8 @@
       "lj": "Shopee",
       "pb": "RMA",
       "sk": "SS002",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916731",
@@ -3869,8 +3869,8 @@
       "lj": "Magalu",
       "pb": "",
       "sk": "TI1514",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916730",
@@ -3879,8 +3879,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1529",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99916729",
@@ -3889,8 +3889,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1571",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916728",
@@ -3899,8 +3899,8 @@
       "lj": "Olist",
       "pb": "RMA",
       "sk": "TI673",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916727",
@@ -3909,8 +3909,8 @@
       "lj": "Shopee",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1571",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916726",
@@ -3919,8 +3919,8 @@
       "lj": "Shopee",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1571",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916725",
@@ -3929,8 +3929,8 @@
       "lj": "Magalu",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1527",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916724",
@@ -3939,8 +3939,8 @@
       "lj": "Mercado Livre",
       "pb": "Comprou Errado",
       "sk": "TI673",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916723",
@@ -3949,8 +3949,8 @@
       "lj": "Shopee",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1667",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916722",
@@ -3959,8 +3959,8 @@
       "lj": "Shopee",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1571",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916721",
@@ -3969,8 +3969,8 @@
       "lj": "Casas Bahia",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1562",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916720",
@@ -3979,8 +3979,8 @@
       "lj": "Amazon",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1524",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916719",
@@ -3989,8 +3989,8 @@
       "lj": "Shopee",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1524",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916718",
@@ -3999,8 +3999,8 @@
       "lj": "Magalu",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1524",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916717",
@@ -4009,8 +4009,8 @@
       "lj": "Casas Bahia",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1525",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916716",
@@ -4019,8 +4019,8 @@
       "lj": "Shopee",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1550",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916715",
@@ -4029,8 +4029,8 @@
       "lj": "Magalu",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1514",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916714",
@@ -4039,8 +4039,8 @@
       "lj": "Casas Bahia",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1690",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916713",
@@ -4049,8 +4049,8 @@
       "lj": "Casas Bahia",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1562",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916712",
@@ -4059,8 +4059,8 @@
       "lj": "Casas Bahia",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1524",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916711",
@@ -4069,8 +4069,8 @@
       "lj": "Casas Bahia",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1690",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916710",
@@ -4079,8 +4079,8 @@
       "lj": "Shopee",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1667",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916709",
@@ -4089,8 +4089,8 @@
       "lj": "Shopee",
       "pb": "RMA",
       "sk": "SS001",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916708",
@@ -4099,8 +4099,8 @@
       "lj": "Shopee",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1571",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916707",
@@ -4109,8 +4109,8 @@
       "lj": "Magalu",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1529",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916706",
@@ -4119,8 +4119,8 @@
       "lj": "Shopee",
       "pb": "Atraso de Entrega",
       "sk": "TI1571",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916702",
@@ -4129,8 +4129,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI673",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916701",
@@ -4139,8 +4139,8 @@
       "lj": "Shopee",
       "pb": "Insatisfação Compra",
       "sk": "SS002",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916700",
@@ -4149,8 +4149,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1690",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916699",
@@ -4159,8 +4159,8 @@
       "lj": "Magalu",
       "pb": "Endereço Incorreto / Não localizado",
       "sk": "TI1643",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916697",
@@ -4169,8 +4169,8 @@
       "lj": "Amazon",
       "pb": "Dúvida",
       "sk": "TI1641",
-      "tr": "Amazon Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Amazon Full"
     },
     {
       "n": "99916696",
@@ -4179,8 +4179,8 @@
       "lj": "Shopee",
       "pb": "RMA",
       "sk": "TI1460",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916695",
@@ -4189,8 +4189,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1739",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916693",
@@ -4199,8 +4199,8 @@
       "lj": "Casas Bahia",
       "pb": "Insatisfação Compra",
       "sk": "TI1529",
-      "tr": "MMA",
-      "pr": "—"
+      "pr": "—",
+      "tr": "MMA"
     },
     {
       "n": "99916691",
@@ -4209,8 +4209,8 @@
       "lj": "Shopee",
       "pb": "Atraso de Entrega",
       "sk": "TI1078",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99916690",
@@ -4219,8 +4219,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI1514",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916687",
@@ -4229,8 +4229,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1486",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916686",
@@ -4239,8 +4239,8 @@
       "lj": "Magalu",
       "pb": "Arrependimento",
       "sk": "TI1526",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916680",
@@ -4249,8 +4249,8 @@
       "lj": "",
       "pb": "RMA",
       "sk": "",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916679",
@@ -4259,8 +4259,8 @@
       "lj": "Casas Bahia",
       "pb": "",
       "sk": "TI1562",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916678",
@@ -4269,8 +4269,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1700",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916677",
@@ -4279,8 +4279,8 @@
       "lj": "Shopee",
       "pb": "RMA",
       "sk": "TI1571",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916676",
@@ -4289,8 +4289,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1633",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916675",
@@ -4299,8 +4299,8 @@
       "lj": "",
       "pb": "Extravio Transportadora própria",
       "sk": "",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916674",
@@ -4309,8 +4309,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1550",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916673",
@@ -4319,8 +4319,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1604",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916672",
@@ -4329,8 +4329,8 @@
       "lj": "Shopee",
       "pb": "Atraso de Entrega",
       "sk": "TI1571",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916671",
@@ -4339,8 +4339,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1525",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916670",
@@ -4349,8 +4349,8 @@
       "lj": "Magalu",
       "pb": "Insatisfação Compra",
       "sk": "TI1078",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916669",
@@ -4359,8 +4359,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "SS002",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916668",
@@ -4369,8 +4369,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "SS002",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916667",
@@ -4379,8 +4379,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "SS002",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916666",
@@ -4389,8 +4389,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "SS002",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916665",
@@ -4399,8 +4399,8 @@
       "lj": "Shopee",
       "pb": "Insatisfação Compra",
       "sk": "TI1078",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916664",
@@ -4409,8 +4409,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1643",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916663",
@@ -4419,8 +4419,8 @@
       "lj": "Casas Bahia",
       "pb": "Arrependimento",
       "sk": "TI1768",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916660",
@@ -4429,8 +4429,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "SS002",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916659",
@@ -4439,8 +4439,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1529",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916658",
@@ -4449,8 +4449,8 @@
       "lj": "Casas Bahia",
       "pb": "Arrependimento",
       "sk": "TI1562",
-      "tr": "MMA",
-      "pr": "—"
+      "pr": "—",
+      "tr": "MMA"
     },
     {
       "n": "99916657",
@@ -4459,8 +4459,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1529",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916655",
@@ -4469,8 +4469,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1562",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916654",
@@ -4479,8 +4479,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1562",
-      "tr": "MMA",
-      "pr": "—"
+      "pr": "—",
+      "tr": "MMA"
     },
     {
       "n": "99916653",
@@ -4489,8 +4489,8 @@
       "lj": "Casas Bahia",
       "pb": "Arrependimento",
       "sk": "TI1524",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916652",
@@ -4499,8 +4499,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1569",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916651",
@@ -4509,8 +4509,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1486",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916650",
@@ -4519,8 +4519,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI1524",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916649",
@@ -4529,8 +4529,8 @@
       "lj": "Magalu",
       "pb": "Endereço Incorreto / Não localizado",
       "sk": "TI1687",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916647",
@@ -4539,8 +4539,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "SS002",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916646",
@@ -4549,8 +4549,8 @@
       "lj": "Shopee",
       "pb": "RMA",
       "sk": "TI1524",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916642",
@@ -4559,8 +4559,8 @@
       "lj": "Casas Bahia",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1562",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916640",
@@ -4569,8 +4569,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1524",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99916634",
@@ -4579,8 +4579,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1568",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916631",
@@ -4589,8 +4589,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1524",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916629",
@@ -4599,8 +4599,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1633",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916628",
@@ -4609,8 +4609,8 @@
       "lj": "Mercado Livre",
       "pb": "Item Faltante",
       "sk": "TI1456",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916627",
@@ -4619,8 +4619,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1688",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916625",
@@ -4629,8 +4629,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1524",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916624",
@@ -4639,8 +4639,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "SS002",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916623",
@@ -4649,8 +4649,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "SS001",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916616",
@@ -4659,8 +4659,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1569",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916613",
@@ -4669,8 +4669,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1771",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916611",
@@ -4679,8 +4679,8 @@
       "lj": "Mercado Livre",
       "pb": "Comprou Errado",
       "sk": "TI1740",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916610",
@@ -4689,8 +4689,8 @@
       "lj": "Shopee",
       "pb": "RMA",
       "sk": "TI1527",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916604",
@@ -4699,8 +4699,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1690",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916603",
@@ -4709,8 +4709,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Envio",
       "sk": "TI1559",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99916596",
@@ -4719,8 +4719,8 @@
       "lj": "Mercado Livre",
       "pb": "Comprou Errado",
       "sk": "TI1723",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916594",
@@ -4729,8 +4729,8 @@
       "lj": "Shopee",
       "pb": "Atraso de Entrega",
       "sk": "TI1743",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916590",
@@ -4739,8 +4739,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1772",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916589",
@@ -4749,8 +4749,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1078",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916588",
@@ -4759,8 +4759,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1457",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916587",
@@ -4769,8 +4769,8 @@
       "lj": "Casas Bahia",
       "pb": "Arrependimento",
       "sk": "TI1562",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916585",
@@ -4778,9 +4778,9 @@
       "ym": "2026-06",
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
-      "sk": "189113.0",
-      "tr": "Total Express",
-      "pr": "—"
+      "sk": "189113",
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916584",
@@ -4789,8 +4789,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1690",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916581",
@@ -4799,8 +4799,8 @@
       "lj": "Shopee",
       "pb": "Insatisfação Compra",
       "sk": "SS002",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916580",
@@ -4809,8 +4809,8 @@
       "lj": "Casas Bahia",
       "pb": "Comprou Errado",
       "sk": "TI1524",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916577",
@@ -4819,8 +4819,8 @@
       "lj": "Shopee",
       "pb": "Arrependimento",
       "sk": "TI1608 / TI287-2",
-      "tr": "Total Express",
-      "pr": "Baixa"
+      "pr": "Baixa",
+      "tr": "Total Express"
     },
     {
       "n": "99916576",
@@ -4829,8 +4829,8 @@
       "lj": "Casas Bahia",
       "pb": "Atraso de Entrega",
       "sk": "TI516",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916573",
@@ -4839,8 +4839,8 @@
       "lj": "Amazon",
       "pb": "Cliente Desconhece a Compra",
       "sk": "TI1527",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99916568",
@@ -4849,8 +4849,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1571",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916566",
@@ -4859,8 +4859,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1638",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916565",
@@ -4869,8 +4869,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1603",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99916562",
@@ -4879,8 +4879,8 @@
       "lj": "",
       "pb": "Desconhece a Entrega",
       "sk": "",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916561",
@@ -4889,8 +4889,8 @@
       "lj": "Casas Bahia",
       "pb": "Atraso de Entrega",
       "sk": "TI1557",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916560",
@@ -4899,8 +4899,8 @@
       "lj": "Shopee",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1571",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916559",
@@ -4909,8 +4909,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1562",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916558",
@@ -4919,8 +4919,8 @@
       "lj": "Casas Bahia",
       "pb": "Endereço Incorreto / Não localizado",
       "sk": "TI1556",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916549",
@@ -4929,8 +4929,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1486",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916546",
@@ -4939,8 +4939,8 @@
       "lj": "Shopee",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1571",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916545",
@@ -4949,8 +4949,8 @@
       "lj": "Casas Bahia",
       "pb": "Atraso de Entrega",
       "sk": "TI1690",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916544",
@@ -4959,8 +4959,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1633",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99916543",
@@ -4969,8 +4969,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1486",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99916542",
@@ -4979,8 +4979,8 @@
       "lj": "Shopee",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1571",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916540",
@@ -4989,8 +4989,8 @@
       "lj": "Shopee",
       "pb": "RMA",
       "sk": "TI1526",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916535",
@@ -4999,8 +4999,8 @@
       "lj": "Shopee",
       "pb": "Cliente Reembolsado e com Produto",
       "sk": "TI1457",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916531",
@@ -5009,8 +5009,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1690",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916526",
@@ -5019,8 +5019,8 @@
       "lj": "Shopee",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1563",
-      "tr": "Shopee Xpress",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Shopee Xpress"
     },
     {
       "n": "99916525",
@@ -5029,8 +5029,8 @@
       "lj": "Shopee",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1563",
-      "tr": "Shopee Xpress",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Shopee Xpress"
     },
     {
       "n": "99916524",
@@ -5039,8 +5039,8 @@
       "lj": "Shopee",
       "pb": "Cliente Reembolsado e com Produto",
       "sk": "TI1571",
-      "tr": "Alfa Transportes",
-      "pr": "Baixa"
+      "pr": "Baixa",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916523",
@@ -5049,8 +5049,8 @@
       "lj": "Shopee",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1563",
-      "tr": "Shopee Xpress",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Shopee Xpress"
     },
     {
       "n": "99916522",
@@ -5059,8 +5059,8 @@
       "lj": "Shopee",
       "pb": "Cancelado pelo Marketplace",
       "sk": "Cooktop à Gás Mueller 5 bocas Tripla Chama Mesa de Vidro - Bivolt",
-      "tr": "Shopee Xpress",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Shopee Xpress"
     },
     {
       "n": "99916521",
@@ -5069,8 +5069,8 @@
       "lj": "Shopee",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1563",
-      "tr": "Shopee Xpress",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Shopee Xpress"
     },
     {
       "n": "99916520",
@@ -5079,8 +5079,8 @@
       "lj": "Magalu",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1772",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916517",
@@ -5089,8 +5089,8 @@
       "lj": "Magalu",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1514",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99916516",
@@ -5099,8 +5099,8 @@
       "lj": "Magalu",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1524",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916514",
@@ -5109,8 +5109,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI516",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99916513",
@@ -5119,8 +5119,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "SS002",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916509",
@@ -5129,8 +5129,8 @@
       "lj": "Amazon",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1486",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916508",
@@ -5139,8 +5139,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1581",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916505",
@@ -5149,8 +5149,8 @@
       "lj": "Casas Bahia",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1571",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916500",
@@ -5159,8 +5159,8 @@
       "lj": "Magalu",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1524",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916494",
@@ -5169,8 +5169,8 @@
       "lj": "Shopee",
       "pb": "RMA",
       "sk": "TI1571",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916492",
@@ -5179,8 +5179,8 @@
       "lj": "Shopee",
       "pb": "RMA",
       "sk": "TI1571",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916488",
@@ -5189,8 +5189,8 @@
       "lj": "Casas Bahia",
       "pb": "",
       "sk": "TI1454",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916483",
@@ -5199,8 +5199,8 @@
       "lj": "",
       "pb": "Danificado Transporte Próprio",
       "sk": "",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99916473",
@@ -5209,8 +5209,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1571",
-      "tr": "Trilog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Trilog"
     },
     {
       "n": "99916469",
@@ -5219,8 +5219,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1453",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916467",
@@ -5229,8 +5229,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1455",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916466",
@@ -5239,8 +5239,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1560",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916462",
@@ -5249,8 +5249,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1571",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916459",
@@ -5259,8 +5259,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1690",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916450",
@@ -5269,8 +5269,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "SS001",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916449",
@@ -5279,8 +5279,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1633",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916448",
@@ -5289,8 +5289,8 @@
       "lj": "Casas Bahia",
       "pb": "Arrependimento",
       "sk": "TI1560",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916447",
@@ -5299,8 +5299,8 @@
       "lj": "Shopee",
       "pb": "Erro Integração",
       "sk": "TI1526",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916446",
@@ -5309,8 +5309,8 @@
       "lj": "Mercado Livre",
       "pb": "Recusa do cliente por Cancelamento",
       "sk": "TI1514",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916445",
@@ -5319,8 +5319,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1526",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916442",
@@ -5329,8 +5329,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1631",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916437",
@@ -5339,8 +5339,8 @@
       "lj": "Shopee",
       "pb": "Arrependimento",
       "sk": "TI1078",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916436",
@@ -5349,8 +5349,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1603",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916434",
@@ -5359,8 +5359,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1656",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916432",
@@ -5369,8 +5369,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1656",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916428",
@@ -5379,8 +5379,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1550",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916419",
@@ -5389,8 +5389,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1332",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916418",
@@ -5399,8 +5399,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1607",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916417",
@@ -5409,8 +5409,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1527",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916413",
@@ -5419,8 +5419,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1529",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916411",
@@ -5429,8 +5429,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1486",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99916407",
@@ -5439,8 +5439,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1454",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99916406",
@@ -5449,8 +5449,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI1559",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916395",
@@ -5459,8 +5459,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1454",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99916392",
@@ -5469,8 +5469,8 @@
       "lj": "Shopee",
       "pb": "Atraso de Entrega",
       "sk": "TI1565",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916389",
@@ -5479,8 +5479,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1276",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99916387",
@@ -5489,8 +5489,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1607",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916380",
@@ -5499,8 +5499,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI1562",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916372",
@@ -5509,8 +5509,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1562",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916365",
@@ -5519,8 +5519,8 @@
       "lj": "Shopee",
       "pb": "Insatisfação Compra",
       "sk": "TI1332/TI287-1",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916362",
@@ -5529,8 +5529,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1690",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916359",
@@ -5539,8 +5539,8 @@
       "lj": "Mercado Livre",
       "pb": "Produto Incorreto",
       "sk": "TI1579",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916353",
@@ -5549,8 +5549,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1690",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99916352",
@@ -5559,8 +5559,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1526",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916346",
@@ -5569,8 +5569,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1526",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916341",
@@ -5579,8 +5579,8 @@
       "lj": "Shopee",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1633",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916336",
@@ -5589,8 +5589,8 @@
       "lj": "",
       "pb": "Suspensão de Entrega",
       "sk": "",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99916330",
@@ -5599,8 +5599,8 @@
       "lj": "Casas Bahia",
       "pb": "Atraso de Entrega",
       "sk": "TI1604",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99916327",
@@ -5609,8 +5609,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1568",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916321",
@@ -5619,8 +5619,8 @@
       "lj": "Casas Bahia",
       "pb": "Arrependimento",
       "sk": "TI1762",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916294",
@@ -5629,8 +5629,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1760",
-      "tr": "Tecmar",
-      "pr": "Baixa"
+      "pr": "Baixa",
+      "tr": "Tecmar"
     },
     {
       "n": "99916286",
@@ -5639,8 +5639,8 @@
       "lj": "Casas Bahia",
       "pb": "Atraso de Entrega",
       "sk": "TI1633",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916285",
@@ -5649,8 +5649,8 @@
       "lj": "Casas Bahia",
       "pb": "Devolvido por Decurso de Prazo",
       "sk": "TI1563",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916279",
@@ -5659,8 +5659,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1529",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916272",
@@ -5669,8 +5669,8 @@
       "lj": "Casas Bahia",
       "pb": "Dúvida",
       "sk": "ti1563",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916268",
@@ -5679,8 +5679,8 @@
       "lj": "Casas Bahia",
       "pb": "Devolvido por Decurso de Prazo",
       "sk": "TI1672",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916258",
@@ -5689,8 +5689,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1566",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916256",
@@ -5699,8 +5699,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1562",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916246",
@@ -5709,8 +5709,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1562",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916241",
@@ -5719,8 +5719,8 @@
       "lj": "Shopee",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1694",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99916239",
@@ -5729,8 +5729,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1689",
-      "tr": "Alfa Transportes",
-      "pr": "Baixa"
+      "pr": "Baixa",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916235",
@@ -5739,8 +5739,8 @@
       "lj": "Shopee",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1457",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916222",
@@ -5749,8 +5749,8 @@
       "lj": "Shopee",
       "pb": "Entregue pelo Marketplace e não Devolvido pelo Cliente",
       "sk": "TI1524",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916220",
@@ -5759,8 +5759,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1560",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916216",
@@ -5769,8 +5769,8 @@
       "lj": "Shopee",
       "pb": "Entregue pelo Marketplace e não Devolvido pelo Cliente",
       "sk": "TI1633",
-      "tr": "MMA",
-      "pr": "—"
+      "pr": "—",
+      "tr": "MMA"
     },
     {
       "n": "99916214",
@@ -5779,8 +5779,8 @@
       "lj": "Shopee",
       "pb": "Entregue pelo Marketplace e não Devolvido pelo Cliente",
       "sk": "TI1529",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916211",
@@ -5789,8 +5789,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "SS002",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916210",
@@ -5799,8 +5799,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1529",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916209",
@@ -5809,8 +5809,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1078",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916192",
@@ -5819,8 +5819,8 @@
       "lj": "Shopee",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1571",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916177",
@@ -5829,8 +5829,8 @@
       "lj": "Casas Bahia",
       "pb": "Extraviado Transporte Marketplace",
       "sk": "TI1514",
-      "tr": "VVLog Envias Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias Full"
     },
     {
       "n": "99916171",
@@ -5839,8 +5839,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1563",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99916165",
@@ -5849,8 +5849,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1529",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99916159",
@@ -5859,8 +5859,8 @@
       "lj": "Amazon",
       "pb": "Dúvida",
       "sk": "TI1639",
-      "tr": "Amazon Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Amazon Full"
     },
     {
       "n": "99916157",
@@ -5869,8 +5869,8 @@
       "lj": "Amazon",
       "pb": "Dúvida",
       "sk": "TI1574",
-      "tr": "Amazon Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Amazon Full"
     },
     {
       "n": "99916156",
@@ -5879,8 +5879,8 @@
       "lj": "Amazon",
       "pb": "Dúvida",
       "sk": "TI1237-1",
-      "tr": "Amazon Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Amazon Full"
     },
     {
       "n": "99916149",
@@ -5889,8 +5889,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1276",
-      "tr": "Recolí",
-      "pr": "Baixa"
+      "pr": "Baixa",
+      "tr": "Recolí"
     },
     {
       "n": "99916148",
@@ -5899,8 +5899,8 @@
       "lj": "Casas Bahia",
       "pb": "Atraso de Entrega",
       "sk": "TI1562",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99916139",
@@ -5909,8 +5909,8 @@
       "lj": "Shopee",
       "pb": "RMA",
       "sk": "TI1563",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916134",
@@ -5919,8 +5919,8 @@
       "lj": "Magalu",
       "pb": "Atraso de Entrega",
       "sk": "TI1332",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916131",
@@ -5929,8 +5929,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1514",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916121",
@@ -5939,8 +5939,8 @@
       "lj": "Casas Bahia",
       "pb": "Comprou Errado",
       "sk": "TI1524",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916101",
@@ -5949,8 +5949,8 @@
       "lj": "Magalu",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1580",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916100",
@@ -5959,8 +5959,8 @@
       "lj": "Shopee",
       "pb": "Cliente Desconhece a Compra",
       "sk": "SS002",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916099",
@@ -5969,8 +5969,8 @@
       "lj": "Casas Bahia",
       "pb": "Arrependimento",
       "sk": "TI1529",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916078",
@@ -5979,8 +5979,8 @@
       "lj": "Shopee",
       "pb": "Insatisfação Compra",
       "sk": "TI1671",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99916071",
@@ -5989,8 +5989,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1580",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99916053",
@@ -5999,8 +5999,8 @@
       "lj": "Shopee",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1514",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99916049",
@@ -6009,8 +6009,8 @@
       "lj": "Shopee",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1529",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916047",
@@ -6019,8 +6019,8 @@
       "lj": "Shopee",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1564",
-      "tr": "Shopee Xpress",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Shopee Xpress"
     },
     {
       "n": "99916043",
@@ -6029,8 +6029,8 @@
       "lj": "Shopee",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1677",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916042",
@@ -6039,8 +6039,8 @@
       "lj": "Shopee",
       "pb": "Cancelamento por Arrependimento Antes do Envio",
       "sk": "TI1677",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99916041",
@@ -6049,8 +6049,8 @@
       "lj": "Magalu",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI673/TI733-2/ TI287-2",
-      "tr": "Magalu Entregas",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Magalu Entregas"
     },
     {
       "n": "99916029",
@@ -6059,8 +6059,8 @@
       "lj": "Amazon",
       "pb": "Dúvida",
       "sk": "SS004",
-      "tr": "Amazon Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Amazon Full"
     },
     {
       "n": "99916028",
@@ -6069,8 +6069,8 @@
       "lj": "Amazon",
       "pb": "Dúvida",
       "sk": "617.4",
-      "tr": "Amazon Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Amazon Full"
     },
     {
       "n": "99916016",
@@ -6079,8 +6079,8 @@
       "lj": "Magalu",
       "pb": "Insatisfação Compra",
       "sk": "SS002",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916013",
@@ -6089,8 +6089,8 @@
       "lj": "Shopee",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1684",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99916012",
@@ -6099,8 +6099,8 @@
       "lj": "Shopee",
       "pb": "Arrependimento",
       "sk": "TI1691",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99915995",
@@ -6109,8 +6109,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1562",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99915992",
@@ -6119,8 +6119,8 @@
       "lj": "",
       "pb": "Danificado Transporte Próprio",
       "sk": "",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99915980",
@@ -6129,8 +6129,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1580",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99915973",
@@ -6139,8 +6139,8 @@
       "lj": "Amazon",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1562",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99915965",
@@ -6149,8 +6149,8 @@
       "lj": "Casas Bahia",
       "pb": "Extravio Transportadora própria",
       "sk": "TI1562",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99915958",
@@ -6159,8 +6159,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1670",
-      "tr": "Amazon Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Amazon Full"
     },
     {
       "n": "99915943",
@@ -6169,8 +6169,8 @@
       "lj": "Magalu",
       "pb": "Insatisfação Compra",
       "sk": "TI673/ TI733-2/ TI287-2",
-      "tr": "Magalu Entregas",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Magalu Entregas"
     },
     {
       "n": "99915940",
@@ -6179,8 +6179,8 @@
       "lj": "Magalu",
       "pb": "Insatisfação Compra",
       "sk": "TI673/ TI733-2/ TI287-2",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99915939",
@@ -6189,8 +6189,8 @@
       "lj": "Magalu",
       "pb": "Insatisfação Compra",
       "sk": "SS002",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99915938",
@@ -6199,8 +6199,8 @@
       "lj": "Magalu",
       "pb": "Insatisfação Compra",
       "sk": "TI673/TI733-2/TI287-2",
-      "tr": "Magalu Entregas",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Magalu Entregas"
     },
     {
       "n": "99915936",
@@ -6209,8 +6209,8 @@
       "lj": "Casas Bahia",
       "pb": "Desconhece a Entrega",
       "sk": "TI1563",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99915935",
@@ -6219,8 +6219,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1562",
-      "tr": "MMA",
-      "pr": "—"
+      "pr": "—",
+      "tr": "MMA"
     },
     {
       "n": "99915930",
@@ -6229,8 +6229,8 @@
       "lj": "Casas Bahia",
       "pb": "Entregue pelo Marketplace e não Devolvido pelo Cliente",
       "sk": "TI1336",
-      "tr": "VVLog Envias Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias Full"
     },
     {
       "n": "99915928",
@@ -6239,8 +6239,8 @@
       "lj": "Casas Bahia",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1563",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99915919",
@@ -6249,8 +6249,8 @@
       "lj": "Shopee",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1568",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99915915",
@@ -6259,8 +6259,8 @@
       "lj": "Amazon",
       "pb": "Item Faltante",
       "sk": "Tanquinho de Lavar Roupa Mueller Plus 4,5kg 40 Litros Branco - 127v",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99915906",
@@ -6269,8 +6269,8 @@
       "lj": "Casas Bahia",
       "pb": "Extravio Transportadora própria",
       "sk": "TI1562",
-      "tr": "Brasil Web",
-      "pr": "Alta"
+      "pr": "Alta",
+      "tr": "Brasil Web"
     },
     {
       "n": "99915865",
@@ -6279,8 +6279,8 @@
       "lj": "Amazon",
       "pb": "Entregue pelo Marketplace e não Devolvido pelo Cliente",
       "sk": "TI1563",
-      "tr": "Amazon Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Amazon Full"
     },
     {
       "n": "99915863",
@@ -6289,8 +6289,8 @@
       "lj": "Amazon",
       "pb": "Entregue pelo Marketplace e não Devolvido pelo Cliente",
       "sk": "SS004",
-      "tr": "Amazon Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Amazon Full"
     },
     {
       "n": "99915854",
@@ -6299,8 +6299,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1550",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99915849",
@@ -6309,8 +6309,8 @@
       "lj": "Casas Bahia",
       "pb": "Insatisfação Compra",
       "sk": "SS002",
-      "tr": "Alfa Transportes",
-      "pr": "Baixa"
+      "pr": "Baixa",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99915817",
@@ -6319,8 +6319,8 @@
       "lj": "Magalu",
       "pb": "Comprou Errado",
       "sk": "TI1712",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99915791",
@@ -6329,8 +6329,8 @@
       "lj": "Mercado Livre",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1571",
-      "tr": "Mercado Envios",
-      "pr": "Média"
+      "pr": "Média",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99915781",
@@ -6339,8 +6339,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1687",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99915775",
@@ -6349,8 +6349,8 @@
       "lj": "Casas Bahia",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1558",
-      "tr": "VVLog Envias Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias Full"
     },
     {
       "n": "99915769",
@@ -6359,8 +6359,8 @@
       "lj": "Casas Bahia",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI857",
-      "tr": "VVLog Envias Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias Full"
     },
     {
       "n": "99915751",
@@ -6369,8 +6369,8 @@
       "lj": "Casas Bahia",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1563",
-      "tr": "Total Express",
-      "pr": "Alta"
+      "pr": "Alta",
+      "tr": "Total Express"
     },
     {
       "n": "99915728",
@@ -6379,8 +6379,8 @@
       "lj": "Casas Bahia",
       "pb": "Endereço Incorreto / Não localizado",
       "sk": "TI1571",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99915707",
@@ -6389,8 +6389,8 @@
       "lj": "Magalu",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1563",
-      "tr": "Magalu Entregas",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Magalu Entregas"
     },
     {
       "n": "99915704",
@@ -6399,8 +6399,8 @@
       "lj": "Magalu",
       "pb": "Cancelamento por Arrependimento Antes do Envio",
       "sk": "TI1527",
-      "tr": "Magalu Entregas",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Magalu Entregas"
     },
     {
       "n": "99915693",
@@ -6409,8 +6409,8 @@
       "lj": "Magalu",
       "pb": "Cancelamento por Arrependimento Antes do Envio",
       "sk": "TI1566",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99915682",
@@ -6419,8 +6419,8 @@
       "lj": "Shopee",
       "pb": "Cancelamento por Arrependimento Antes do Envio",
       "sk": "TI1689",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99915674",
@@ -6429,8 +6429,8 @@
       "lj": "Magalu",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI673/ TI733-2/ TI287-2",
-      "tr": "Magalu Entregas",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Magalu Entregas"
     },
     {
       "n": "99915672",
@@ -6439,8 +6439,8 @@
       "lj": "Magalu",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1557",
-      "tr": "Magalu Entregas",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Magalu Entregas"
     },
     {
       "n": "99915591",
@@ -6449,8 +6449,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1580",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99915571",
@@ -6459,8 +6459,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1639",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99915560",
@@ -6469,8 +6469,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1633",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99915559",
@@ -6479,8 +6479,8 @@
       "lj": "Amazon",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1694",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99915498",
@@ -6489,8 +6489,8 @@
       "lj": "Shopee",
       "pb": "Cancelamento por Arrependimento Antes do Envio",
       "sk": "TI1633",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99915496",
@@ -6499,8 +6499,8 @@
       "lj": "Casas Bahia",
       "pb": "Desconhece a Entrega",
       "sk": "TI1423",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99915431",
@@ -6509,8 +6509,8 @@
       "lj": "Amazon",
       "pb": "Não Entregue Marketplace",
       "sk": "SS003",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99915317",
@@ -6519,8 +6519,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "SS001",
-      "tr": "Magalu Entregas",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Magalu Entregas"
     },
     {
       "n": "99915316",
@@ -6529,8 +6529,8 @@
       "lj": "Magalu",
       "pb": "Suspensão de Entrega",
       "sk": "TI1562",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99915315",
@@ -6539,8 +6539,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99915307",
@@ -6549,8 +6549,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99915299",
@@ -6559,8 +6559,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99915290",
@@ -6569,8 +6569,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99915268",
@@ -6579,8 +6579,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99915262",
@@ -6589,8 +6589,8 @@
       "lj": "Amazon",
       "pb": "Produto Incorreto",
       "sk": "TI1568",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99915246",
@@ -6599,8 +6599,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99915232",
@@ -6609,8 +6609,8 @@
       "lj": "Shopee",
       "pb": "RMA",
       "sk": "TI1694",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99915146",
@@ -6619,8 +6619,8 @@
       "lj": "Shopee",
       "pb": "Produto Incorreto",
       "sk": "TI1677",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99915139",
@@ -6629,8 +6629,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI673 / TI733-2/ TI287-2",
-      "tr": "Magalu Entregas",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Magalu Entregas"
     },
     {
       "n": "99915136",
@@ -6639,8 +6639,8 @@
       "lj": "Casas Bahia",
       "pb": "Atraso de Entrega",
       "sk": "TI1604",
-      "tr": "Brasil Web",
-      "pr": "Alta"
+      "pr": "Alta",
+      "tr": "Brasil Web"
     },
     {
       "n": "99915133",
@@ -6649,8 +6649,8 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1078",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99915130",
@@ -6659,8 +6659,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1454",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99915102",
@@ -6669,8 +6669,8 @@
       "lj": "Magalu",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1336",
-      "tr": "Magalu Entregas",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Magalu Entregas"
     },
     {
       "n": "99915082",
@@ -6679,8 +6679,8 @@
       "lj": "Amazon",
       "pb": "RMA",
       "sk": "TI1675",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99915076",
@@ -6689,8 +6689,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1454",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99915061",
@@ -6699,8 +6699,8 @@
       "lj": "Amazon",
       "pb": "Desconhece a Entrega",
       "sk": "TI1670",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99915039",
@@ -6709,8 +6709,8 @@
       "lj": "Amazon",
       "pb": "Não entregue pela Transportadora",
       "sk": "TI1514",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99915031",
@@ -6719,8 +6719,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1566",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99914998",
@@ -6729,8 +6729,8 @@
       "lj": "Amazon",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1642",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99914995",
@@ -6739,8 +6739,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1364",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99914993",
@@ -6749,8 +6749,8 @@
       "lj": "Casas Bahia",
       "pb": "Desconhece a Entrega",
       "sk": "TI1563",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99914955",
@@ -6759,8 +6759,8 @@
       "lj": "Shopee",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1560",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99914953",
@@ -6769,8 +6769,8 @@
       "lj": "Shopee",
       "pb": "Entregue pelo Marketplace e não Devolvido pelo Cliente",
       "sk": "TI1658",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99914952",
@@ -6779,8 +6779,8 @@
       "lj": "Shopee",
       "pb": "Desconhece a Entrega",
       "sk": "TI1524",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99914949",
@@ -6789,8 +6789,8 @@
       "lj": "Shopee",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1526",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99914948",
@@ -6799,8 +6799,8 @@
       "lj": "Shopee",
       "pb": "Erro Integração",
       "sk": "TI1568",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914944",
@@ -6809,8 +6809,8 @@
       "lj": "Shopee",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1529",
-      "tr": "MMA",
-      "pr": "—"
+      "pr": "—",
+      "tr": "MMA"
     },
     {
       "n": "99914934",
@@ -6819,8 +6819,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1677",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99914918",
@@ -6829,8 +6829,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1562",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99914909",
@@ -6839,8 +6839,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1571",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914897",
@@ -6849,8 +6849,8 @@
       "lj": "Shopee",
       "pb": "",
       "sk": "",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914895",
@@ -6859,8 +6859,8 @@
       "lj": "Shopee",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1525",
-      "tr": "TNT Fedex",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT Fedex"
     },
     {
       "n": "99914844",
@@ -6869,8 +6869,8 @@
       "lj": "Casas Bahia",
       "pb": "Comprou Errado",
       "sk": "TI1455",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99914780",
@@ -6879,8 +6879,8 @@
       "lj": "Magalu",
       "pb": "Atraso de Entrega",
       "sk": "TI1299 / TI287-1 / TI733-1",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99914760",
@@ -6889,8 +6889,8 @@
       "lj": "Magalu",
       "pb": "Suspensão de Entrega",
       "sk": "TI1569",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914754",
@@ -6899,8 +6899,8 @@
       "lj": "Shopee",
       "pb": "RMA",
       "sk": "TI1571",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914718",
@@ -6909,8 +6909,8 @@
       "lj": "Shopee",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1571",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914717",
@@ -6919,8 +6919,8 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1563",
-      "tr": "VVLog Envias Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias Full"
     },
     {
       "n": "99914714",
@@ -6929,8 +6929,8 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1514",
-      "tr": "VVLog Envias Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias Full"
     },
     {
       "n": "99914707",
@@ -6939,8 +6939,8 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1571",
-      "tr": "VVLog Envias Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias Full"
     },
     {
       "n": "99914703",
@@ -6949,8 +6949,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1514",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99914657",
@@ -6959,8 +6959,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1639",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99914653",
@@ -6969,8 +6969,8 @@
       "lj": "Casas Bahia",
       "pb": "Extravio Transportadora própria",
       "sk": "TI1663",
-      "tr": "TNT Fedex",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT Fedex"
     },
     {
       "n": "99914646",
@@ -6979,8 +6979,8 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1563",
-      "tr": "VVLog Envias",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias"
     },
     {
       "n": "99914639",
@@ -6989,8 +6989,8 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI673",
-      "tr": "VVLog Envias",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias"
     },
     {
       "n": "99914636",
@@ -6999,8 +6999,8 @@
       "lj": "Casas Bahia",
       "pb": "Atraso de Entrega",
       "sk": "TI1604",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914634",
@@ -7009,8 +7009,8 @@
       "lj": "Casas Bahia",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1544",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914633",
@@ -7019,8 +7019,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1527",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914631",
@@ -7029,8 +7029,8 @@
       "lj": "Casas Bahia",
       "pb": "Dúvida",
       "sk": "TI1078",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99914563",
@@ -7039,8 +7039,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1562",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99914551",
@@ -7049,8 +7049,8 @@
       "lj": "Amazon",
       "pb": "",
       "sk": "",
-      "tr": "Amazon Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Amazon Full"
     },
     {
       "n": "99914547",
@@ -7059,8 +7059,8 @@
       "lj": "Amazon",
       "pb": "",
       "sk": "",
-      "tr": "Amazon Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Amazon Full"
     },
     {
       "n": "99914525",
@@ -7069,8 +7069,8 @@
       "lj": "Magalu",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1457",
-      "tr": "Magalu Entregas",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Magalu Entregas"
     },
     {
       "n": "99914510",
@@ -7079,8 +7079,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1571",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914498",
@@ -7089,8 +7089,8 @@
       "lj": "Casas Bahia",
       "pb": "Suspensão de Entrega",
       "sk": "TI1563",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99914497",
@@ -7099,8 +7099,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI1514",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99914487",
@@ -7109,8 +7109,8 @@
       "lj": "Casas Bahia",
       "pb": "Dúvida",
       "sk": "TI1604",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914485",
@@ -7119,8 +7119,8 @@
       "lj": "Casas Bahia",
       "pb": "Dúvida",
       "sk": "TI1672",
-      "tr": "TNT Fedex",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT Fedex"
     },
     {
       "n": "99914484",
@@ -7129,8 +7129,8 @@
       "lj": "Casas Bahia",
       "pb": "Dúvida",
       "sk": "TI1579",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99914483",
@@ -7139,8 +7139,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99914469",
@@ -7149,8 +7149,8 @@
       "lj": "Casas Bahia",
       "pb": "Dúvida",
       "sk": "TI1454",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914461",
@@ -7159,8 +7159,8 @@
       "lj": "Magalu",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1457",
-      "tr": "Magalu Entregas",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Magalu Entregas"
     },
     {
       "n": "99914456",
@@ -7169,8 +7169,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1580",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99914430",
@@ -7179,8 +7179,8 @@
       "lj": "",
       "pb": "",
       "sk": "TI1566",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99914387",
@@ -7189,8 +7189,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI1662",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99914384",
@@ -7199,8 +7199,8 @@
       "lj": "Magalu",
       "pb": "Não Entregue Marketplace",
       "sk": "SS002",
-      "tr": "Magalu Entregas",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Magalu Entregas"
     },
     {
       "n": "99914344",
@@ -7209,8 +7209,8 @@
       "lj": "Shopee",
       "pb": "Atraso de Entrega",
       "sk": "TI1332",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99914322",
@@ -7219,8 +7219,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1469",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914307",
@@ -7229,8 +7229,8 @@
       "lj": "Casas Bahia",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1619 /TI287-2",
-      "tr": "Jamef",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Jamef"
     },
     {
       "n": "99914305",
@@ -7239,8 +7239,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1686",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99914299",
@@ -7249,8 +7249,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1527",
-      "tr": "Recolí",
-      "pr": "Alta"
+      "pr": "Alta",
+      "tr": "Recolí"
     },
     {
       "n": "99914294",
@@ -7259,8 +7259,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99914293",
@@ -7269,8 +7269,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99914284",
@@ -7279,8 +7279,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1562",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914275",
@@ -7289,8 +7289,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99914266",
@@ -7299,8 +7299,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99914265",
@@ -7309,8 +7309,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99914264",
@@ -7319,8 +7319,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99914229",
@@ -7329,8 +7329,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99914228",
@@ -7339,8 +7339,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99914212",
@@ -7349,8 +7349,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1571",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99914206",
@@ -7359,8 +7359,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1514",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99914168",
@@ -7369,8 +7369,8 @@
       "lj": "Amazon",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1456",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99914130",
@@ -7379,8 +7379,8 @@
       "lj": "Magalu",
       "pb": "Suspensão de Entrega",
       "sk": "TI1569",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99914113",
@@ -7389,8 +7389,8 @@
       "lj": "Magalu",
       "pb": "Dúvida",
       "sk": "TI1453",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914077",
@@ -7399,8 +7399,8 @@
       "lj": "Shopee",
       "pb": "Cancelamento por Arrependimento Antes do Envio",
       "sk": "TI1527",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914051",
@@ -7409,8 +7409,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1565",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99914038",
@@ -7419,8 +7419,8 @@
       "lj": "Casas Bahia",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1514",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99914028",
@@ -7429,8 +7429,8 @@
       "lj": "Casas Bahia",
       "pb": "Produto Incorreto",
       "sk": "TI1524",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99914022",
@@ -7439,8 +7439,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI1514",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99913958",
@@ -7449,8 +7449,8 @@
       "lj": "Amazon",
       "pb": "Entregue pelo Marketplace e não Devolvido pelo Cliente",
       "sk": "TI1670",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99913933",
@@ -7459,8 +7459,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1656 / TI1656-1",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99913915",
@@ -7469,8 +7469,8 @@
       "lj": "Shopee",
       "pb": "RMA",
       "sk": "TI1571",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99913866",
@@ -7479,8 +7479,8 @@
       "lj": "Shopee",
       "pb": "Danificado Transporte Marketplace",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99913845",
@@ -7489,8 +7489,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99913809",
@@ -7499,8 +7499,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1276",
-      "tr": "TNT",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT"
     },
     {
       "n": "99913808",
@@ -7509,8 +7509,8 @@
       "lj": "Magalu",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1661",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99913800",
@@ -7519,8 +7519,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1426 / TI287-1",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99913775",
@@ -7529,8 +7529,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1514",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99913746",
@@ -7539,8 +7539,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI838 / TI287-1",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99913731",
@@ -7549,8 +7549,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1571",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99913669",
@@ -7559,8 +7559,8 @@
       "lj": "Casas Bahia",
       "pb": "Atraso de Entrega Marketplace",
       "sk": "TI1471",
-      "tr": "VVLog Envias",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias"
     },
     {
       "n": "99913629",
@@ -7569,8 +7569,8 @@
       "lj": "Amazon",
       "pb": "Entregue pelo Marketplace e não Devolvido pelo Cliente",
       "sk": "TI1641",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99913624",
@@ -7579,8 +7579,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "SS002",
-      "tr": "Jadlog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Jadlog"
     },
     {
       "n": "99913597",
@@ -7589,8 +7589,8 @@
       "lj": "Casas Bahia",
       "pb": "Cancelamento por Arrependimento Após o Envio",
       "sk": "TI1426",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99913564",
@@ -7599,8 +7599,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1526",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99913553",
@@ -7609,8 +7609,8 @@
       "lj": "Amazon",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1462",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99913497",
@@ -7619,8 +7619,8 @@
       "lj": "Amazon",
       "pb": "Dúvida",
       "sk": "SS001",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99913458",
@@ -7629,8 +7629,8 @@
       "lj": "Amazon",
       "pb": "Não Entregue Marketplace",
       "sk": "SS001",
-      "tr": "Amazon DBA",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Amazon DBA"
     },
     {
       "n": "99913381",
@@ -7639,8 +7639,8 @@
       "lj": "Amazon",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1075",
-      "tr": "TNT",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT"
     },
     {
       "n": "99913366",
@@ -7649,8 +7649,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1563",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99913364",
@@ -7659,8 +7659,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1563",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99913313",
@@ -7669,8 +7669,8 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI673",
-      "tr": "VVLog Envias",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias"
     },
     {
       "n": "99913287",
@@ -7679,8 +7679,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99913275",
@@ -7689,8 +7689,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1616",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99913248",
@@ -7699,8 +7699,8 @@
       "lj": "Amazon",
       "pb": "Dúvida",
       "sk": "TI1564",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99913225",
@@ -7709,8 +7709,8 @@
       "lj": "Amazon",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1571",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99913224",
@@ -7719,8 +7719,8 @@
       "lj": "Amazon",
       "pb": "Cancelado pelo Marketplace",
       "sk": "TI1571",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99913222",
@@ -7729,8 +7729,8 @@
       "lj": "Amazon",
       "pb": "Dúvida",
       "sk": "TI1603",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99913215",
@@ -7739,8 +7739,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1600",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99913210",
@@ -7749,8 +7749,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1605",
-      "tr": "TNT",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT"
     },
     {
       "n": "99913169",
@@ -7759,8 +7759,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1078",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99913109",
@@ -7769,8 +7769,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1562",
-      "tr": "Tecmar",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Tecmar"
     },
     {
       "n": "99913108",
@@ -7779,8 +7779,8 @@
       "lj": "Casas Bahia",
       "pb": "Endereço Incorreto",
       "sk": "TI1673",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99913106",
@@ -7789,8 +7789,8 @@
       "lj": "Casas Bahia",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1633",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99913051",
@@ -7799,8 +7799,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1569",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99913043",
@@ -7809,8 +7809,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1515",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99913041",
@@ -7819,8 +7819,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99913019",
@@ -7829,8 +7829,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1454",
-      "tr": "Recolí",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Recolí"
     },
     {
       "n": "99913015",
@@ -7839,8 +7839,8 @@
       "lj": "Amazon",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1557",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99913009",
@@ -7849,8 +7849,8 @@
       "lj": "Shopee",
       "pb": "Cancelamento Antes do Envio",
       "sk": "TI1502",
-      "tr": "Shopee Xpress",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Shopee Xpress"
     },
     {
       "n": "99912980",
@@ -7859,8 +7859,8 @@
       "lj": "Casas Bahia",
       "pb": "Atraso de Entrega Marketplace",
       "sk": "TI1571",
-      "tr": "VVLog Envias Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias Full"
     },
     {
       "n": "99912963",
@@ -7869,8 +7869,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1456",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99912940",
@@ -7879,8 +7879,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1455",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99912917",
@@ -7889,8 +7889,8 @@
       "lj": "Casas Bahia",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1562",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99912874",
@@ -7899,8 +7899,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI673 / TI733-2/ TI287-2",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99912867",
@@ -7909,8 +7909,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1453",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99912835",
@@ -7919,8 +7919,8 @@
       "lj": "Amazon",
       "pb": "Dúvida",
       "sk": "SS001",
-      "tr": "Amazon DBA",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Amazon DBA"
     },
     {
       "n": "99912832",
@@ -7929,8 +7929,8 @@
       "lj": "Amazon",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1563",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99912811",
@@ -7939,8 +7939,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1558",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99912779",
@@ -7949,8 +7949,8 @@
       "lj": "Amazon",
       "pb": "Dúvida",
       "sk": "TI1514",
-      "tr": "MMA",
-      "pr": "—"
+      "pr": "—",
+      "tr": "MMA"
     },
     {
       "n": "99912763",
@@ -7959,8 +7959,8 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1499",
-      "tr": "VVLog Envias",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias"
     },
     {
       "n": "99912714",
@@ -7969,8 +7969,8 @@
       "lj": "Magalu",
       "pb": "Comprou Errado",
       "sk": "TI1565",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99912698",
@@ -7979,8 +7979,8 @@
       "lj": "Mercado Livre",
       "pb": "Erro Integração",
       "sk": "TI1563",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99912654",
@@ -7989,8 +7989,8 @@
       "lj": "",
       "pb": "Danificado Transporte Próprio",
       "sk": "TI1364",
-      "tr": "Alfa Transportes",
-      "pr": "Média"
+      "pr": "Média",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99912650",
@@ -7999,8 +7999,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99912579",
@@ -8009,8 +8009,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1520",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99912534",
@@ -8019,8 +8019,8 @@
       "lj": "Amazon",
       "pb": "Desconhece a Entrega",
       "sk": "TI1268",
-      "tr": "TNT",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT"
     },
     {
       "n": "99912470",
@@ -8029,8 +8029,8 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1524",
-      "tr": "VVLog Envias Full",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias Full"
     },
     {
       "n": "99912460",
@@ -8039,8 +8039,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1565",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99912409",
@@ -8049,8 +8049,8 @@
       "lj": "Magalu",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1571",
-      "tr": "Jamef",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Jamef"
     },
     {
       "n": "99912394",
@@ -8059,8 +8059,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1547-1",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99912389",
@@ -8069,8 +8069,8 @@
       "lj": "Casas Bahia",
       "pb": "Endereço Incorreto",
       "sk": "TI1146",
-      "tr": "TNT",
-      "pr": "Alta"
+      "pr": "Alta",
+      "tr": "TNT"
     },
     {
       "n": "99912258",
@@ -8079,8 +8079,8 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1078",
-      "tr": "VVLog Envias",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias"
     },
     {
       "n": "99912216",
@@ -8089,8 +8089,8 @@
       "lj": "Mercado Livre",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1562",
-      "tr": "Jamef",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Jamef"
     },
     {
       "n": "99912061",
@@ -8099,8 +8099,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1555",
-      "tr": "Amazon DBA",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Amazon DBA"
     },
     {
       "n": "99912039",
@@ -8109,8 +8109,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1146  / TI287-2",
-      "tr": "Jamef",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Jamef"
     },
     {
       "n": "99912013",
@@ -8119,8 +8119,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99911998",
@@ -8129,8 +8129,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99911997",
@@ -8139,8 +8139,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99911990",
@@ -8149,8 +8149,8 @@
       "lj": "Magalu",
       "pb": "Danificado Transporte Próprio",
       "sk": "nnnn",
-      "tr": "Alfa Transportes",
-      "pr": "Média"
+      "pr": "Média",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99911967",
@@ -8159,8 +8159,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99911966",
@@ -8169,8 +8169,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99911960",
@@ -8179,8 +8179,8 @@
       "lj": "Casas Bahia",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1568",
-      "tr": "Alfa Transportes",
-      "pr": "Média"
+      "pr": "Média",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99911947",
@@ -8189,8 +8189,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99911946",
@@ -8199,8 +8199,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99911903",
@@ -8209,8 +8209,8 @@
       "lj": "Casas Bahia",
       "pb": "Suspensão de Entrega",
       "sk": "TI1470-2",
-      "tr": "VVLog Envias",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias"
     },
     {
       "n": "99911831",
@@ -8219,8 +8219,8 @@
       "lj": "Casas Bahia",
       "pb": "Arrependimento",
       "sk": "TI421",
-      "tr": "VVLog Envias",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias"
     },
     {
       "n": "99911782",
@@ -8229,8 +8229,8 @@
       "lj": "Casas Bahia",
       "pb": "Suspensão de Entrega",
       "sk": "TI1322",
-      "tr": "VVLog Envias",
-      "pr": "—"
+      "pr": "—",
+      "tr": "VVLog Envias"
     },
     {
       "n": "99911715",
@@ -8239,8 +8239,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI673 / TI287 / TI733",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99911705",
@@ -8249,8 +8249,8 @@
       "lj": "Mercado Livre",
       "pb": "Suspensão de Entrega",
       "sk": "TI1454",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99911702",
@@ -8259,8 +8259,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI421",
-      "tr": "Mercado Envios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Mercado Envios"
     },
     {
       "n": "99911694",
@@ -8269,8 +8269,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI673 / TI287 / TI733",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911670",
@@ -8279,8 +8279,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1558",
-      "tr": "Jamef",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Jamef"
     },
     {
       "n": "99911636",
@@ -8289,8 +8289,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99911629",
@@ -8299,8 +8299,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1455",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99911598",
@@ -8309,8 +8309,8 @@
       "lj": "Kabum",
       "pb": "Arrependimento",
       "sk": "TI673 / TI287 / TI733",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99911570",
@@ -8319,8 +8319,8 @@
       "lj": "Casas Bahia",
       "pb": "Suspensão de Entrega",
       "sk": "TI1078",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911553",
@@ -8329,8 +8329,8 @@
       "lj": "WebContinental",
       "pb": "",
       "sk": "",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99911540",
@@ -8339,8 +8339,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "SS002",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911439",
@@ -8349,8 +8349,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1561",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911419",
@@ -8359,8 +8359,8 @@
       "lj": "Mercado Livre",
       "pb": "Suspensão de Entrega",
       "sk": "TI1562",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911407",
@@ -8369,8 +8369,8 @@
       "lj": "Amazon",
       "pb": "Suspensão de Entrega",
       "sk": "TI1552",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911386",
@@ -8379,8 +8379,8 @@
       "lj": "Casas Bahia",
       "pb": "Suspensão de Entrega",
       "sk": "TI673",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911385",
@@ -8389,8 +8389,8 @@
       "lj": "Casas Bahia",
       "pb": "Suspensão de Entrega",
       "sk": "TI1078",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911381",
@@ -8399,8 +8399,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1602",
-      "tr": "Jamef",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Jamef"
     },
     {
       "n": "99911353",
@@ -8409,8 +8409,8 @@
       "lj": "Casas Bahia",
       "pb": "Arrependimento",
       "sk": "TI1426",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911350",
@@ -8419,8 +8419,8 @@
       "lj": "Casas Bahia",
       "pb": "Arrependimento",
       "sk": "TI673",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911315",
@@ -8429,8 +8429,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1348-1",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911283",
@@ -8439,8 +8439,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1558",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911264",
@@ -8449,8 +8449,8 @@
       "lj": "Mercado Livre",
       "pb": "Suspensão de Entrega",
       "sk": "TI1514",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911245",
@@ -8459,8 +8459,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1558",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911218",
@@ -8469,8 +8469,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1560",
-      "tr": "Amazon DBA",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Amazon DBA"
     },
     {
       "n": "99911202",
@@ -8479,8 +8479,8 @@
       "lj": "Mercado Livre",
       "pb": "Atraso de Entrega",
       "sk": "TI1310-2",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99911184",
@@ -8489,8 +8489,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1321",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911177",
@@ -8499,8 +8499,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1078 / TI287-2",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911132",
@@ -8509,8 +8509,8 @@
       "lj": "Olist",
       "pb": "RMA",
       "sk": "TI1440",
-      "tr": "Loggi",
-      "pr": "Média"
+      "pr": "Média",
+      "tr": "Loggi"
     },
     {
       "n": "99911114",
@@ -8519,8 +8519,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1495",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99911064",
@@ -8529,8 +8529,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1580",
-      "tr": "TNT",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT"
     },
     {
       "n": "99911030",
@@ -8539,8 +8539,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1000",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99910997",
@@ -8549,8 +8549,8 @@
       "lj": "Mercado Livre",
       "pb": "Suspensão de Entrega",
       "sk": "TI1579",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99910995",
@@ -8559,8 +8559,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1423",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99910951",
@@ -8569,8 +8569,8 @@
       "lj": "Magalu",
       "pb": "Extraviado Transporte Marketplace",
       "sk": "TI1426",
-      "tr": "TNT Fedex",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT Fedex"
     },
     {
       "n": "99910940",
@@ -8579,8 +8579,8 @@
       "lj": "Casas Bahia",
       "pb": "Suspensão de Entrega",
       "sk": "TI1078",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99910904",
@@ -8589,8 +8589,8 @@
       "lj": "Mercado Livre",
       "pb": "Suspensão de Entrega",
       "sk": "TI1336",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99910851",
@@ -8599,8 +8599,8 @@
       "lj": "Mercado Livre",
       "pb": "Atraso de Envio",
       "sk": "TI1525",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99910808",
@@ -8609,8 +8609,8 @@
       "lj": "Mercado Livre",
       "pb": "Atraso de Entrega",
       "sk": "TI1551",
-      "tr": "TNT",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT"
     },
     {
       "n": "99910806",
@@ -8619,8 +8619,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1402",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99910805",
@@ -8629,8 +8629,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1215-2",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99910797",
@@ -8639,8 +8639,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1215-1",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99910776",
@@ -8649,8 +8649,8 @@
       "lj": "Casas Bahia",
       "pb": "Arrependimento",
       "sk": "TI1405",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99910742",
@@ -8659,8 +8659,8 @@
       "lj": "Casas Bahia",
       "pb": "Atraso de Entrega",
       "sk": "TI1414",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99910706",
@@ -8669,8 +8669,8 @@
       "lj": "Casas Bahia",
       "pb": "Arrependimento",
       "sk": "TI1540 / TI287-2",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99910628",
@@ -8679,8 +8679,8 @@
       "lj": "Mercado Livre",
       "pb": "Atraso de Entrega",
       "sk": "TI1532",
-      "tr": "TNT",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT"
     },
     {
       "n": "99910584",
@@ -8689,8 +8689,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1362",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99910550",
@@ -8699,8 +8699,8 @@
       "lj": "Mercado Livre",
       "pb": "Atraso de Envio",
       "sk": "TI1555",
-      "tr": "TNT",
-      "pr": "Média"
+      "pr": "Média",
+      "tr": "TNT"
     },
     {
       "n": "99910543",
@@ -8709,8 +8709,8 @@
       "lj": "Mercado Livre",
       "pb": "Suspensão de Entrega",
       "sk": "TI673 /TI733-2 / TI287-2",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99910533",
@@ -8719,8 +8719,8 @@
       "lj": "Mercado Livre",
       "pb": "Atraso de Entrega",
       "sk": "TI1364",
-      "tr": "Brasil Web",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Brasil Web"
     },
     {
       "n": "99910498",
@@ -8729,8 +8729,8 @@
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
       "sk": "TI1549",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99910388",
@@ -8739,8 +8739,8 @@
       "lj": "Casas Bahia",
       "pb": "RMA",
       "sk": "TI1394",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99910385",
@@ -8749,8 +8749,8 @@
       "lj": "Amazon",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1424-1",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99910088",
@@ -8759,8 +8759,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI1347-1",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99910082",
@@ -8769,8 +8769,8 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1239-2",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99910058",
@@ -8779,8 +8779,8 @@
       "lj": "Casas Bahia",
       "pb": "Atraso de Entrega",
       "sk": "TI1370",
-      "tr": "Alfa Transportes",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Alfa Transportes"
     },
     {
       "n": "99910047",
@@ -8789,8 +8789,8 @@
       "lj": "Magalu",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1388 / TI287-1",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99909977",
@@ -8799,8 +8799,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI1215-2",
-      "tr": "Direct",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Direct"
     },
     {
       "n": "99909967",
@@ -8809,8 +8809,8 @@
       "lj": "Amazon",
       "pb": "Arrependimento",
       "sk": "TI682",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99909874",
@@ -8819,8 +8819,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909868",
@@ -8829,8 +8829,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909863",
@@ -8839,8 +8839,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909862",
@@ -8849,8 +8849,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909852",
@@ -8859,8 +8859,8 @@
       "lj": "Mercado Livre",
       "pb": "Insatisfação Compra",
       "sk": "TI673 / TI287-2",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909767",
@@ -8869,8 +8869,8 @@
       "lj": "Shopee",
       "pb": "Dúvida",
       "sk": "",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99909685",
@@ -8879,8 +8879,8 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1239-2",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99909610",
@@ -8889,8 +8889,8 @@
       "lj": "Amazon",
       "pb": "Insatisfação Compra",
       "sk": "TI1078 / TI287-2",
-      "tr": "Correios",
-      "pr": "Média"
+      "pr": "Média",
+      "tr": "Correios"
     },
     {
       "n": "99909591",
@@ -8899,8 +8899,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI1237-1",
-      "tr": "Correios",
-      "pr": "Alta"
+      "pr": "Alta",
+      "tr": "Correios"
     },
     {
       "n": "99909571",
@@ -8909,8 +8909,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909552",
@@ -8919,8 +8919,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909551",
@@ -8929,8 +8929,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909550",
@@ -8939,8 +8939,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909540",
@@ -8949,8 +8949,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909539",
@@ -8959,8 +8959,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909523",
@@ -8969,8 +8969,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909522",
@@ -8979,8 +8979,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909509",
@@ -8989,8 +8989,8 @@
       "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI857",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99909508",
@@ -8999,8 +8999,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909507",
@@ -9009,8 +9009,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909360",
@@ -9019,8 +9019,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909341",
@@ -9029,8 +9029,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909338",
@@ -9039,8 +9039,8 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1075",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99909247",
@@ -9049,8 +9049,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909231",
@@ -9059,8 +9059,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909230",
@@ -9069,8 +9069,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909221",
@@ -9079,8 +9079,8 @@
       "lj": "Mercado Livre",
       "pb": "Atraso de Envio",
       "sk": "TI1239",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99909163",
@@ -9089,8 +9089,8 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1078",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99909140",
@@ -9099,8 +9099,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909124",
@@ -9109,8 +9109,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909092",
@@ -9119,8 +9119,8 @@
       "lj": "Mercado Livre",
       "pb": "Produto Incorreto",
       "sk": "TI1329-2",
-      "tr": "Jamef",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Jamef"
     },
     {
       "n": "99909075",
@@ -9129,8 +9129,8 @@
       "lj": "Casas Bahia",
       "pb": "Não Entregue Marketplace",
       "sk": "TI673 / TI287 TI733",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99909023",
@@ -9139,8 +9139,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908978",
@@ -9149,8 +9149,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908968",
@@ -9159,8 +9159,8 @@
       "lj": "Magalu",
       "pb": "Insatisfação Compra",
       "sk": "SS002",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99908932",
@@ -9169,8 +9169,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908902",
@@ -9179,8 +9179,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI1226-1",
-      "tr": "Jamef",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Jamef"
     },
     {
       "n": "99908825",
@@ -9189,8 +9189,8 @@
       "lj": "Amazon",
       "pb": "Insatisfação Compra",
       "sk": "TI1277-1",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99908824",
@@ -9199,8 +9199,8 @@
       "lj": "Mercado Livre",
       "pb": "Produto Incorreto",
       "sk": "TI925",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99908798",
@@ -9209,8 +9209,8 @@
       "lj": "",
       "pb": "Insatisfação Compra",
       "sk": "TI1227",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908797",
@@ -9219,8 +9219,8 @@
       "lj": "",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI682",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908794",
@@ -9229,8 +9229,8 @@
       "lj": "WebContinental",
       "pb": "Insatisfação Compra",
       "sk": "TI1078",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99908793",
@@ -9239,8 +9239,8 @@
       "lj": "WebContinental",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1078",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99908776",
@@ -9249,8 +9249,8 @@
       "lj": "",
       "pb": "Danificado Transporte Marketplace",
       "sk": "SS002",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908775",
@@ -9259,8 +9259,8 @@
       "lj": "",
       "pb": "Danificado Transporte Marketplace",
       "sk": "SS001",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908774",
@@ -9269,8 +9269,8 @@
       "lj": "",
       "pb": "Danificado Transporte Marketplace",
       "sk": "SS001",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908773",
@@ -9279,8 +9279,8 @@
       "lj": "",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1078 / TI287",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908772",
@@ -9289,8 +9289,8 @@
       "lj": "",
       "pb": "Insatisfação Compra",
       "sk": "TI675/ TI733/TI287-2",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908771",
@@ -9299,8 +9299,8 @@
       "lj": "",
       "pb": "Danificado Transporte Marketplace",
       "sk": "SS002",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908770",
@@ -9309,8 +9309,8 @@
       "lj": "",
       "pb": "Danificado Transporte Marketplace",
       "sk": "SS001",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908767",
@@ -9319,8 +9319,8 @@
       "lj": "",
       "pb": "Item Faltante",
       "sk": "TI1146",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908766",
@@ -9329,8 +9329,8 @@
       "lj": "",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI1146 / TI287",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908765",
@@ -9339,8 +9339,8 @@
       "lj": "",
       "pb": "Danificado Transporte Marketplace",
       "sk": "TI682",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908764",
@@ -9349,8 +9349,8 @@
       "lj": "",
       "pb": "Danificado Transporte Marketplace",
       "sk": "SS002",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908644",
@@ -9359,8 +9359,8 @@
       "lj": "Magalu",
       "pb": "Insatisfação Compra",
       "sk": "TI857",
-      "tr": "TNT",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT"
     },
     {
       "n": "99908634",
@@ -9369,8 +9369,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1333-1",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99908610",
@@ -9379,8 +9379,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908603",
@@ -9389,8 +9389,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908587",
@@ -9399,8 +9399,8 @@
       "lj": "Magalu",
       "pb": "Insatisfação Compra",
       "sk": "TI857 / TI287-1",
-      "tr": "TNT",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT"
     },
     {
       "n": "99908556",
@@ -9409,8 +9409,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI857",
-      "tr": "Jamef",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Jamef"
     },
     {
       "n": "99908507",
@@ -9419,8 +9419,8 @@
       "lj": "Mercado Livre",
       "pb": "Produto Incorreto",
       "sk": "TI1232",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99908489",
@@ -9429,8 +9429,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908469",
@@ -9439,8 +9439,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908468",
@@ -9449,8 +9449,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908452",
@@ -9459,8 +9459,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908451",
@@ -9469,8 +9469,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908450",
@@ -9479,8 +9479,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908449",
@@ -9489,8 +9489,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908448",
@@ -9499,8 +9499,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908440",
@@ -9509,8 +9509,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908421",
@@ -9519,8 +9519,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908420",
@@ -9529,8 +9529,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908325",
@@ -9539,8 +9539,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99908290",
@@ -9549,8 +9549,8 @@
       "lj": "Mercado Livre",
       "pb": "Insatisfação Compra",
       "sk": "SS001",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99908215",
@@ -9559,8 +9559,8 @@
       "lj": "Mercado Livre",
       "pb": "Insatisfação Compra",
       "sk": "TI1239-1",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99908051",
@@ -9569,8 +9569,8 @@
       "lj": "Mercado Livre",
       "pb": "Insatisfação Compra",
       "sk": "TI1279",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99907985",
@@ -9579,8 +9579,8 @@
       "lj": "Mercado Livre",
       "pb": "Insatisfação Compra",
       "sk": "TI1239-2",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99907984",
@@ -9589,8 +9589,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99907970",
@@ -9599,8 +9599,8 @@
       "lj": "Amazon",
       "pb": "Produto Incorreto",
       "sk": "TI997",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99907969",
@@ -9609,8 +9609,8 @@
       "lj": "Mercado Livre",
       "pb": "Insatisfação Compra",
       "sk": "TI997",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99907925",
@@ -9619,8 +9619,8 @@
       "lj": "Mercado Livre",
       "pb": "Insatisfação Compra",
       "sk": "TI1021",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99907864",
@@ -9629,8 +9629,8 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI1078 / TI287",
-      "tr": "Correios",
-      "pr": "Baixa"
+      "pr": "Baixa",
+      "tr": "Correios"
     },
     {
       "n": "99907794",
@@ -9639,8 +9639,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1121 / TI287",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99907769",
@@ -9649,8 +9649,8 @@
       "lj": "Mercado Livre",
       "pb": "Atraso de Entrega",
       "sk": "TI1185",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99907740",
@@ -9659,8 +9659,8 @@
       "lj": "",
       "pb": "Atraso de Entrega",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99907691",
@@ -9669,8 +9669,8 @@
       "lj": "Amazon",
       "pb": "Insatisfação Compra",
       "sk": "TI982",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99907687",
@@ -9679,8 +9679,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "SS001",
-      "tr": "Correios",
-      "pr": "Baixa"
+      "pr": "Baixa",
+      "tr": "Correios"
     },
     {
       "n": "99907384",
@@ -9689,8 +9689,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1146 / TI287",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99907146",
@@ -9699,8 +9699,8 @@
       "lj": "",
       "pb": "Atraso de Entrega",
       "sk": "",
-      "tr": "",
-      "pr": "Baixa"
+      "pr": "Baixa",
+      "tr": ""
     },
     {
       "n": "99906870",
@@ -9709,8 +9709,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1139",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99906679",
@@ -9719,8 +9719,8 @@
       "lj": "Magalu",
       "pb": "Não Entregue Marketplace",
       "sk": "TI1116",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99906672",
@@ -9729,8 +9729,8 @@
       "lj": "",
       "pb": "RMA",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99906572",
@@ -9739,8 +9739,8 @@
       "lj": "MadeiraMadeira",
       "pb": "Produto Incorreto",
       "sk": "TI1214-2",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99906503",
@@ -9749,8 +9749,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1227",
-      "tr": "TNT",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT"
     },
     {
       "n": "99906494",
@@ -9759,8 +9759,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI673 ; TI733",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99906452",
@@ -9769,8 +9769,8 @@
       "lj": "Magalu",
       "pb": "Endereço Incorreto",
       "sk": "TI1193  TI287-3",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99906386",
@@ -9779,8 +9779,8 @@
       "lj": "Magalu",
       "pb": "Endereço Incorreto",
       "sk": "TI334",
-      "tr": "TNT",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT"
     },
     {
       "n": "99906296",
@@ -9789,8 +9789,8 @@
       "lj": "",
       "pb": "RMA",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99906294",
@@ -9799,8 +9799,8 @@
       "lj": "",
       "pb": "Item Faltante",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99906255",
@@ -9809,8 +9809,8 @@
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
       "sk": "TI682",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99906204",
@@ -9819,8 +9819,8 @@
       "lj": "",
       "pb": "Comprou Errado",
       "sk": "TI494",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99905964",
@@ -9829,8 +9829,8 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI857",
-      "tr": "Jamef",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Jamef"
     },
     {
       "n": "99905439",
@@ -9839,8 +9839,8 @@
       "lj": "",
       "pb": "Atraso de Entrega",
       "sk": "TI693",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99905276",
@@ -9849,8 +9849,8 @@
       "lj": "Casas Bahia",
       "pb": "",
       "sk": "TI1006",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99905272",
@@ -9859,8 +9859,8 @@
       "lj": "Mercado Livre",
       "pb": "Insatisfação Compra",
       "sk": "TI1121",
-      "tr": "Jamef",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Jamef"
     },
     {
       "n": "99905179",
@@ -9869,8 +9869,8 @@
       "lj": "Mercado Livre",
       "pb": "Atraso de Entrega",
       "sk": "TI1045",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99904548",
@@ -9879,8 +9879,8 @@
       "lj": "",
       "pb": "",
       "sk": "TI824",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99903899",
@@ -9889,8 +9889,8 @@
       "lj": "",
       "pb": "Duvida",
       "sk": "TI695",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99903688",
@@ -9899,8 +9899,8 @@
       "lj": "Casas Bahia",
       "pb": "Produto Incorreto",
       "sk": "TI824",
-      "tr": "Via Varejo",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Via Varejo"
     },
     {
       "n": "99903667",
@@ -9909,8 +9909,8 @@
       "lj": "",
       "pb": "Atraso de Entrega",
       "sk": "TI824",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99903575",
@@ -9919,8 +9919,8 @@
       "lj": "",
       "pb": "Atraso de Entrega",
       "sk": "TI866",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99903566",
@@ -9929,8 +9929,8 @@
       "lj": "",
       "pb": "Atraso de Entrega",
       "sk": "TI430",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99902907",
@@ -9939,8 +9939,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99902536",
@@ -9949,8 +9949,8 @@
       "lj": "",
       "pb": "RMA",
       "sk": "TI516",
-      "tr": "Magalog",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Magalog"
     },
     {
       "n": "99902165",
@@ -9959,8 +9959,8 @@
       "lj": "Magalu",
       "pb": "Atraso de Entrega",
       "sk": "TI516",
-      "tr": "TNT",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT"
     },
     {
       "n": "99901910",
@@ -9969,8 +9969,8 @@
       "lj": "",
       "pb": "RMA",
       "sk": "TI825",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99901875",
@@ -9979,8 +9979,8 @@
       "lj": "Amazon",
       "pb": "",
       "sk": "TI877",
-      "tr": "TNT",
-      "pr": "—"
+      "pr": "—",
+      "tr": "TNT"
     },
     {
       "n": "99901774",
@@ -9989,8 +9989,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99901578",
@@ -9999,8 +9999,8 @@
       "lj": "",
       "pb": "Atraso de Entrega",
       "sk": "T682",
-      "tr": "Total Express",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Total Express"
     },
     {
       "n": "99901425",
@@ -10009,8 +10009,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99901397",
@@ -10019,8 +10019,8 @@
       "lj": "Mercado Livre",
       "pb": "Insatisfação Compra",
       "sk": "TI738",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99901137",
@@ -10029,8 +10029,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99901012",
@@ -10039,8 +10039,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99900984",
@@ -10049,8 +10049,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99900767",
@@ -10059,8 +10059,8 @@
       "lj": "",
       "pb": "RMA",
       "sk": "",
-      "tr": "Correios",
-      "pr": "—"
+      "pr": "—",
+      "tr": "Correios"
     },
     {
       "n": "99900653",
@@ -10069,8 +10069,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "Média"
+      "pr": "Média",
+      "tr": ""
     },
     {
       "n": "99900643",
@@ -10079,8 +10079,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "99900512",
@@ -10089,8 +10089,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3280",
@@ -10099,8 +10099,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3270",
@@ -10109,8 +10109,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3267",
@@ -10119,8 +10119,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3266",
@@ -10129,8 +10129,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3265",
@@ -10139,8 +10139,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3258",
@@ -10149,8 +10149,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3256",
@@ -10159,8 +10159,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3255",
@@ -10169,8 +10169,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3242",
@@ -10179,8 +10179,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3236",
@@ -10189,8 +10189,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3222",
@@ -10199,8 +10199,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3219",
@@ -10209,8 +10209,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3193",
@@ -10219,8 +10219,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3150",
@@ -10229,8 +10229,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3146",
@@ -10239,8 +10239,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3123",
@@ -10249,8 +10249,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3112",
@@ -10259,8 +10259,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3102",
@@ -10269,8 +10269,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3099",
@@ -10279,8 +10279,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3073",
@@ -10289,8 +10289,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3036",
@@ -10299,8 +10299,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2941",
@@ -10309,8 +10309,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2929",
@@ -10319,8 +10319,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2925",
@@ -10329,8 +10329,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2922",
@@ -10339,8 +10339,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2916",
@@ -10349,8 +10349,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2900",
@@ -10359,8 +10359,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2891",
@@ -10369,8 +10369,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2858",
@@ -10379,8 +10379,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2849",
@@ -10389,8 +10389,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2834",
@@ -10399,8 +10399,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2817",
@@ -10409,8 +10409,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2802",
@@ -10419,8 +10419,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2785",
@@ -10429,8 +10429,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2784",
@@ -10439,8 +10439,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2783",
@@ -10449,8 +10449,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2774",
@@ -10459,8 +10459,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2768",
@@ -10469,8 +10469,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2760",
@@ -10479,8 +10479,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2755",
@@ -10489,8 +10489,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2666",
@@ -10499,8 +10499,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2658",
@@ -10509,8 +10509,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2647",
@@ -10519,8 +10519,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2646",
@@ -10529,8 +10529,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2633",
@@ -10539,8 +10539,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2632",
@@ -10549,8 +10549,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2621",
@@ -10559,8 +10559,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2605",
@@ -10569,8 +10569,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2594",
@@ -10579,8 +10579,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2579",
@@ -10589,8 +10589,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2577",
@@ -10599,8 +10599,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2567",
@@ -10609,8 +10609,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2564",
@@ -10619,8 +10619,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2556",
@@ -10629,8 +10629,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2540",
@@ -10639,8 +10639,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2538",
@@ -10649,8 +10649,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2534",
@@ -10659,8 +10659,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2520",
@@ -10669,8 +10669,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2519",
@@ -10679,8 +10679,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2511",
@@ -10689,8 +10689,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2509",
@@ -10699,8 +10699,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2508",
@@ -10709,8 +10709,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2499",
@@ -10719,8 +10719,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2497",
@@ -10729,8 +10729,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2488",
@@ -10739,8 +10739,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2487",
@@ -10749,8 +10749,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2481",
@@ -10759,8 +10759,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2476",
@@ -10769,8 +10769,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2474",
@@ -10779,8 +10779,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2461",
@@ -10789,8 +10789,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2459",
@@ -10799,8 +10799,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2453",
@@ -10809,8 +10809,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2447",
@@ -10819,8 +10819,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2443",
@@ -10829,8 +10829,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2434",
@@ -10839,8 +10839,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2430",
@@ -10849,8 +10849,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2427",
@@ -10859,8 +10859,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2417",
@@ -10869,8 +10869,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2412",
@@ -10879,8 +10879,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2400",
@@ -10889,8 +10889,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2396",
@@ -10899,8 +10899,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2391",
@@ -10909,8 +10909,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2390",
@@ -10919,8 +10919,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2387",
@@ -10929,8 +10929,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2386",
@@ -10939,8 +10939,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2376",
@@ -10949,8 +10949,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2371",
@@ -10959,8 +10959,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2368",
@@ -10969,8 +10969,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2358",
@@ -10979,8 +10979,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2356",
@@ -10989,8 +10989,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2341",
@@ -10999,8 +10999,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2338",
@@ -11009,8 +11009,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2334",
@@ -11019,8 +11019,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2327",
@@ -11029,8 +11029,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2325",
@@ -11039,8 +11039,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2317",
@@ -11049,8 +11049,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2304",
@@ -11059,8 +11059,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2298",
@@ -11069,8 +11069,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2270",
@@ -11079,8 +11079,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2269",
@@ -11089,8 +11089,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2268",
@@ -11099,8 +11099,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2259",
@@ -11109,8 +11109,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2244",
@@ -11119,8 +11119,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2230",
@@ -11129,8 +11129,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2223",
@@ -11139,8 +11139,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2218",
@@ -11149,8 +11149,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2205",
@@ -11159,8 +11159,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2177",
@@ -11169,8 +11169,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2170",
@@ -11179,8 +11179,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2166",
@@ -11189,8 +11189,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2100",
@@ -11199,8 +11199,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2075",
@@ -11209,8 +11209,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2070",
@@ -11219,8 +11219,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2060",
@@ -11229,8 +11229,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2051",
@@ -11239,8 +11239,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2020",
@@ -11249,8 +11249,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2018",
@@ -11259,8 +11259,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2012",
@@ -11269,8 +11269,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2008",
@@ -11279,8 +11279,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1998",
@@ -11289,8 +11289,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1974",
@@ -11299,8 +11299,8 @@
       "lj": "Loja Sanbox",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1973",
@@ -11309,8 +11309,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1947",
@@ -11319,8 +11319,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1935",
@@ -11329,8 +11329,8 @@
       "lj": "B2W",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1933",
@@ -11339,8 +11339,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1928",
@@ -11349,8 +11349,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1863",
@@ -11359,8 +11359,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1858",
@@ -11369,8 +11369,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1838",
@@ -11379,8 +11379,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1814",
@@ -11389,8 +11389,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1810",
@@ -11399,8 +11399,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1796",
@@ -11409,8 +11409,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1790",
@@ -11419,8 +11419,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1651",
@@ -11429,8 +11429,8 @@
       "lj": "Mercado Livre",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1646",
@@ -11439,8 +11439,8 @@
       "lj": "B2W",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1626",
@@ -11449,8 +11449,8 @@
       "lj": "Loja Sanbox",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "81",
@@ -11459,8 +11459,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "5",
@@ -11469,8 +11469,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "4",
@@ -11479,8 +11479,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "3",
@@ -11489,8 +11489,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "2",
@@ -11499,8 +11499,8 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     },
     {
       "n": "1",
@@ -11509,11 +11509,11 @@
       "lj": "",
       "pb": "",
       "sk": "",
-      "tr": "",
-      "pr": "—"
+      "pr": "—",
+      "tr": ""
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-20T17:07:46.287691-03:00",
+  "ticketsRawUpdatedAt": "2026-07-20T17:26:03.387575-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
