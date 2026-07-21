@@ -3105,7 +3105,7 @@
       "d": "20/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1690",
       "tr": "Trilog",
       "pr": "—"
@@ -3935,7 +3935,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1527",
       "tr": "Trilog",
       "pr": "—"
@@ -3955,7 +3955,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1571",
       "tr": "Trilog",
       "pr": "—"
@@ -3965,7 +3965,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1562",
       "tr": "Trilog",
       "pr": "—"
@@ -3975,7 +3975,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Amazon",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1524",
       "tr": "Trilog",
       "pr": "—"
@@ -3985,7 +3985,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1524",
       "tr": "Trilog",
       "pr": "—"
@@ -3995,7 +3995,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1525",
       "tr": "Trilog",
       "pr": "—"
@@ -4005,7 +4005,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1550",
       "tr": "Trilog",
       "pr": "—"
@@ -4015,7 +4015,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1514",
       "tr": "Trilog",
       "pr": "—"
@@ -4025,7 +4025,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1562",
       "tr": "Trilog",
       "pr": "—"
@@ -4035,7 +4035,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1690",
       "tr": "Trilog",
       "pr": "—"
@@ -4045,7 +4045,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1667",
       "tr": "Trilog",
       "pr": "—"
@@ -4055,7 +4055,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1529",
       "tr": "Trilog",
       "pr": "—"
@@ -4455,7 +4455,7 @@
       "d": "01/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1562",
       "tr": "Alfa Transportes",
       "pr": "—"
@@ -4705,7 +4705,7 @@
       "d": "26/06/2026",
       "ym": "2026-06",
       "lj": "Amazon",
-      "pb": "Cliente Desconhece a Compra ",
+      "pb": "Cliente Desconhece a Compra",
       "sk": "TI1527",
       "tr": "Tecmar",
       "pr": "—"
@@ -5695,7 +5695,7 @@
       "d": "20/05/2026",
       "ym": "2026-05",
       "lj": "Shopee",
-      "pb": "Cliente Desconhece a Compra ",
+      "pb": "Cliente Desconhece a Compra",
       "sk": "SS002",
       "tr": "Total Express",
       "pr": "—"
@@ -6425,7 +6425,7 @@
       "d": "26/02/2026",
       "ym": "2026-02",
       "lj": "Amazon",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1514",
       "tr": "Brasil Web",
       "pr": "—"
@@ -11221,7 +11221,7 @@
       "pr": "—"
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-21T15:46:10.888454-03:00",
+  "ticketsRawUpdatedAt": "2026-07-21T16:44:25.487860-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
