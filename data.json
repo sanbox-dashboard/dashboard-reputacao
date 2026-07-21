@@ -2679,11 +2679,11 @@
           "canceladas": 0.5,
           "enviosIncorretos": 0.12
         },
-        "tickets": 0,
+        "tickets": 8,
         "sacForaPrazo": 8,
         "casosCriticos": 15,
         "solicitacaoDevolucao": 2,
-        "ts": "2026-07-21T17:43:48.417154-03:00",
+        "ts": "2026-07-21T18:44:43.203786-03:00",
         "solicitacaoDevolucaoAmarelo": 2,
         "solicitacaoDevolucaoVermelho": 0
       },
@@ -2750,6 +2750,26 @@
     }
   },
   "ticketsRaw": [
+    {
+      "n": "99916906",
+      "d": "21/07/2026",
+      "ym": "2026-07",
+      "lj": "Shopee",
+      "pb": "Danificado Transporte Próprio",
+      "sk": "TI1562",
+      "tr": "Trilog",
+      "pr": "—"
+    },
+    {
+      "n": "99916905",
+      "d": "21/07/2026",
+      "ym": "2026-07",
+      "lj": "Amazon",
+      "pb": "Atraso de Entrega",
+      "sk": "TI1690",
+      "tr": "Brasil Web",
+      "pr": "—"
+    },
     {
       "n": "99916904",
       "d": "21/07/2026",
@@ -5457,7 +5477,7 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "TI1529",
-      "tr": "Alfa Transportes",
+      "tr": "Brasil Web",
       "pr": "—"
     },
     {
@@ -11261,7 +11281,7 @@
       "pr": "—"
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-21T18:13:51.339160-03:00",
+  "ticketsRawUpdatedAt": "2026-07-21T18:44:43.203786-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
@@ -16932,9 +16952,111 @@
       "total": 555.47,
       "valor_real_fechado": 0.0,
       "aceito": false
+    },
+    {
+      "pedido": "2000013921668161",
+      "data": "08/07/2026",
+      "ym": "2026-07",
+      "canal": "mercadolivre",
+      "canalLabel": "Mercado Livre",
+      "sku": "TI1667",
+      "valor_pedido": 1099.9,
+      "custo": 613.76,
+      "problema": "Avaria",
+      "pct_desc": 30.0,
+      "desc_sug": 184.13,
+      "frete": 0.0,
+      "total": 184.13,
+      "valor_real_fechado": 219.98,
+      "aceito": false
+    },
+    {
+      "pedido": "2000016983901150",
+      "data": "17/06/2026",
+      "ym": "2026-06",
+      "canal": "mercadolivre",
+      "canalLabel": "Mercado Livre",
+      "sku": "TI1667",
+      "valor_pedido": 1099.9,
+      "custo": 613.76,
+      "problema": "Avaria",
+      "pct_desc": 30.0,
+      "desc_sug": 184.13,
+      "frete": 0.0,
+      "total": 184.13,
+      "valor_real_fechado": 197.98,
+      "aceito": false
+    },
+    {
+      "pedido": "2000013649692277",
+      "data": "22/06/2026",
+      "ym": "2026-06",
+      "canal": "mercadolivre",
+      "canalLabel": "Mercado Livre",
+      "sku": "TI1486",
+      "valor_pedido": 5279.9,
+      "custo": 3390.06,
+      "problema": "Avaria",
+      "pct_desc": 30.0,
+      "desc_sug": 1017.02,
+      "frete": 0.0,
+      "total": 1017.02,
+      "valor_real_fechado": 527.99,
+      "aceito": false
+    },
+    {
+      "pedido": "2000017237880538",
+      "data": "03/07/2026",
+      "ym": "2026-07",
+      "canal": "mercadolivre",
+      "canalLabel": "Mercado Livre",
+      "sku": "TI1601",
+      "valor_pedido": 4517.9,
+      "custo": 3200.63,
+      "problema": "Avaria",
+      "pct_desc": 30.0,
+      "desc_sug": 960.19,
+      "frete": 0.0,
+      "total": 960.19,
+      "valor_real_fechado": 768.04,
+      "aceito": false
+    },
+    {
+      "pedido": "2000013986884301",
+      "data": "12/07/2026",
+      "ym": "2026-07",
+      "canal": "mercadolivre",
+      "canalLabel": "Mercado Livre",
+      "sku": "TI857",
+      "valor_pedido": 1988.0,
+      "custo": 1850.01,
+      "problema": "Avaria",
+      "pct_desc": 30.0,
+      "desc_sug": 555.0,
+      "frete": 0.0,
+      "total": 555.0,
+      "valor_real_fechado": 397.6,
+      "aceito": false
+    },
+    {
+      "pedido": "2000017358586854",
+      "data": "10/07/2026",
+      "ym": "2026-07",
+      "canal": "mercadolivre",
+      "canalLabel": "Mercado Livre",
+      "sku": "TI1760",
+      "valor_pedido": 710.9,
+      "custo": 404.34,
+      "problema": "Avaria",
+      "pct_desc": 30.0,
+      "desc_sug": 121.3,
+      "frete": 0.0,
+      "total": 121.3,
+      "valor_real_fechado": 174.53,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-07-21T18:13:51.339160-03:00",
+  "descontosUpdatedAt": "2026-07-21T18:44:43.203786-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -17170,15 +17292,15 @@
     },
     "2026-06": {
       "mercadolivre": {
-        "count": 55,
+        "count": 57,
         "countAceito": 17,
-        "descontoTotal": 11735.79,
-        "custoTotal": 69343.62,
-        "valorPedidoTotal": 112361.45,
-        "pctDescontoSobreCusto": 16.92,
-        "pctDescontoSobreVenda": 10.44,
+        "descontoTotal": 12461.76,
+        "custoTotal": 73347.44,
+        "valorPedidoTotal": 118741.25,
+        "pctDescontoSobreCusto": 16.99,
+        "pctDescontoSobreVenda": 10.49,
         "vendaTotalCanal": 2545905.05,
-        "pctDescontoSobreVendaCanal": 0.461
+        "pctDescontoSobreVendaCanal": 0.4895
       },
       "amazon": {
         "count": 7,
@@ -17249,13 +17371,13 @@
         "pctDescontoSobreVendaCanal": 0
       },
       "mercadolivre": {
-        "count": 7,
+        "count": 11,
         "countAceito": 0,
-        "descontoTotal": 1698.44,
-        "custoTotal": 6578.67,
-        "valorPedidoTotal": 10273.4,
-        "pctDescontoSobreCusto": 25.82,
-        "pctDescontoSobreVenda": 16.53,
+        "descontoTotal": 3258.59,
+        "custoTotal": 12647.41,
+        "valorPedidoTotal": 18590.1,
+        "pctDescontoSobreCusto": 25.76,
+        "pctDescontoSobreVenda": 17.53,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       },
