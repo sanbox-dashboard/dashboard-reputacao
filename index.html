@@ -321,42 +321,38 @@
   body.tv-mode .date-pill{padding:6px 12px;font-size:13px}
   body.tv-mode #last-refresh{font-size:11px}
   /* Em telas menores que 1400px no modo TV, volta pra 2-3 colunas */
-  /* ===== MOBILE / SMARTPHONE (v40.4) ===== */
-  @media(max-width:768px){
-    body{padding:10px}
-    header{flex-direction:column;align-items:flex-start;gap:10px}
-    header h1{font-size:24px}
-    header > div:last-child{width:100%;justify-content:flex-start}
-    .tv-toggle{padding:8px 14px;font-size:13px}
-    #tv-btn{display:none}
-    .section-title{font-size:18px;flex-wrap:wrap}
-    /* Abas: uma linha só, com rolagem horizontal suave (corrige desalinhamento no celular) */
-    .main-tabs{overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:0;margin-bottom:16px}
-    .main-tabs::-webkit-scrollbar{display:none}
-    .main-tab{padding:10px 12px;font-size:13px;flex:0 0 auto;white-space:nowrap}
-    .grid{grid-template-columns:1fr;gap:12px}
-    .summary-bar{gap:8px}
-    .registro-cards{grid-template-columns:repeat(2,1fr);gap:6px}
-    .registro-filters{padding:12px;gap:8px}
-    .registro-filters select{min-width:0;width:100%}
-    .registro-filters .filter-group{flex:1 1 45%}
-    .registro-filters .filter-summary{margin-left:0;flex-basis:100%}
-    .tickets-kpis{grid-template-columns:repeat(2,1fr);gap:8px}
-    .upload-row{grid-template-columns:1fr}
-    /* Tabelas largas roláveis sem estourar a página */
-    .tickets-card,#history-container,#registro-container{overflow-x:auto}
-    #comissao-table{min-width:640px}
-    #comissao-history-table{min-width:520px}
-  }
-  @media(max-width:480px){
-    .registro-cards{grid-template-columns:1fr}
-    header h1{font-size:21px}
-  }
   @media(max-width:1400px){body.tv-mode .grid{grid-template-columns:repeat(3,1fr)}}
   @media(max-width:900px){body.tv-mode .grid{grid-template-columns:repeat(2,1fr)}}
+
+  /* BOTÃO FLUTUANTE PRA SAIR DO MODO TV — sempre visível no canto superior direito */
+  .tv-exit-fab{
+    display:none;
+    position:fixed;
+    top:12px;
+    right:12px;
+    z-index:9998;
+    background:#111827;
+    color:#fff;
+    border:none;
+    border-radius:24px;
+    padding:10px 16px;
+    font-size:14px;
+    font-weight:700;
+    box-shadow:0 4px 16px rgba(0,0,0,0.35);
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation;
+  }
+  body.tv-mode .tv-exit-fab{display:inline-flex;align-items:center;gap:6px}
+  .tv-exit-fab:active{transform:scale(0.96)}
+  @media(max-width:900px){
+    .tv-exit-fab{top:10px;right:10px;padding:12px 18px;font-size:15px}
+  }
 </style>
 </head>
 <body>
+<!-- Botão flutuante pra sair do Modo TV — visível em qualquer tela quando o TV mode está ativo -->
+<button class="tv-exit-fab" onclick="toggleTvMode()" aria-label="Sair do Modo TV">🔧 Sair TV</button>
 
 <header>
   <div>
@@ -578,13 +574,13 @@
               </tr>
               <tr style="background:#f5f7fb;border-bottom:1px solid var(--border)">
                 <td style="padding:10px 12px;font-weight:600">Reputação amarela</td>
-                <td style="padding:10px 12px;color:#92400e">− R$ 50 por canal · Mercado Livre − R$ 100</td>
+                <td style="padding:10px 12px;color:#92400e">− R$ 100 (pior canal)</td>
                 <td style="padding:10px 12px;color:#9ca3af">—</td>
                 <td style="padding:10px 12px;color:#92400e">− R$ 100 por canal</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border)">
                 <td style="padding:10px 12px;font-weight:600">Reputação vermelha</td>
-                <td style="padding:10px 12px;color:#991b1b;font-weight:600">− R$ 150 por canal · Mercado Livre − R$ 300</td>
+                <td style="padding:10px 12px;color:#991b1b;font-weight:600">− R$ 300 (pior canal)</td>
                 <td style="padding:10px 12px;color:#9ca3af">—</td>
                 <td style="padding:10px 12px;color:#991b1b;font-weight:600">− R$ 200 por canal</td>
               </tr>
@@ -601,6 +597,12 @@
                 <td style="padding:10px 12px;color:#9ca3af">—</td>
               </tr>
               <tr style="background:#f5f7fb;border-bottom:1px solid var(--border)">
+                <td style="padding:10px 12px;font-weight:600">Devolução 20-30 dias (amarelo)</td>
+                <td style="padding:10px 12px;color:#9ca3af">—</td>
+                <td style="padding:10px 12px;color:#92400e">− R$ 50 por canal</td>
+                <td style="padding:10px 12px;color:#9ca3af">—</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border)">
                 <td style="padding:10px 12px;font-weight:600">Devolução +30 dias (vermelho)</td>
                 <td style="padding:10px 12px;color:#9ca3af">—</td>
                 <td style="padding:10px 12px;color:#991b1b;font-weight:600">− R$ 100 por canal</td>
@@ -816,7 +818,7 @@ const channels = {
     color: '#FF9900',
     repLabel: 'Estado da Conta',
     metrics: {
-      pedidosProblema:   {label:'Pedidos com problema', metaType:'max', meta:1.0, alerta:0.9, unit:'%', ocrPattern:/pedidos com problemas?[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
+      pedidosProblema:   {label:'Pedidos com problema', metaType:'max', meta:1.0, alerta:0.7, unit:'%', ocrPattern:/pedidos com problemas?[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
       cancelamentoEnvio: {label:'Cancelamentos envio', metaType:'max', meta:3.0, alerta:2.0, unit:'%', ocrPattern:/cancelamentos? anteriores ao envio[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
       rastreamento:      {label:'Envio com rastreamento', metaType:'min', meta:95, alerta:97, unit:'%', ocrPattern:/rastreamento v[áa]lido[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i}
     }
@@ -861,8 +863,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '40';
-const APP_VERSION = '40.4';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '41';
+const APP_VERSION = '41.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -969,7 +971,8 @@ function renderTodayCards(){
     const todaySac = todayEntry.sacForaPrazo ?? data.sacForaPrazo;
     const todayCriticos = todayEntry.casosCriticos ?? data.casosCriticos;
     const todayDevolucao = todayEntry.solicitacaoDevolucao ?? data.solicitacaoDevolucao;
-    // Devolução: só conta acima de 30 dias (campo split se existir, senão o único)
+    // NOVO: split 20-30d (amarelo) e 30+d (vermelho) — usa novos campos, com fallback pro legacy
+    const todayDevAmarelo = todayEntry.solicitacaoDevolucaoAmarelo;
     const todayDevVermelho = todayEntry.solicitacaoDevolucaoVermelho;
     let worst = 'unknown';
     let metricsHtml = '';
@@ -1022,16 +1025,29 @@ function renderTodayCards(){
       </div>
       <span class="value">${criticos===null?'—':criticos}</span>
     </div>`;
-    // Métrica Solicitação de Devolução — REGRA NOVA: só conta acima de 30 dias
+    // Métrica Solicitação de Devolução — SPLIT 20-30d (amarelo) + 30+d (vermelho)
+    const devAmarelo = (todayDevAmarelo===undefined||todayDevAmarelo===null||todayDevAmarelo==='')?null:parseInt(todayDevAmarelo);
     const devVermelho = (todayDevVermelho===undefined||todayDevVermelho===null||todayDevVermelho==='')?null:parseInt(todayDevVermelho);
-    const devLegacy = (todayDevolucao===undefined||todayDevolucao===null||todayDevolucao==='')?null:parseInt(todayDevolucao);
-    const devTotal = devVermelho !== null ? devVermelho : devLegacy;
-    const devolucaoStatus = devTotal === null ? '' : (devTotal === 0 ? 'green' : 'red');
-    const devDisplayValue = devTotal === null ? '—' : String(devTotal);
+    // Total pra display (soma dos dois, ou o campo legacy se não tem split)
+    const devTotal = (devAmarelo !== null || devVermelho !== null)
+      ? ((devAmarelo||0) + (devVermelho||0))
+      : ((todayDevolucao===undefined||todayDevolucao===null||todayDevolucao==='')?null:parseInt(todayDevolucao));
+    // Status: vermelho se algum 30+d, amarelo se algum 20-30d sem 30+d, verde se zero
+    let devolucaoStatus = '';
+    if(devTotal === null) devolucaoStatus = '';
+    else if((devVermelho||0) > 0) devolucaoStatus = 'red';
+    else if((devAmarelo||0) > 0) devolucaoStatus = 'yellow';
+    else if(devTotal === 0) devolucaoStatus = 'green';
+    else devolucaoStatus = 'red'; // fallback legacy: qualquer count > 0
+    // Display: se tem split, mostra "3 (🟡2 🔴1)". Se não, só o total
+    const devDisplayValue = devTotal === null ? '—'
+      : (devAmarelo !== null || devVermelho !== null)
+        ? `${devTotal}<span style="font-size:11px;font-weight:400;color:var(--muted);margin-left:6px">🟡${devAmarelo||0} 🔴${devVermelho||0}</span>`
+        : String(devTotal);
     const devolucaoHtml = `<div class="tickets-row sac-row ${devolucaoStatus}">
       <div class="label-block">
         <span class="label">📦 Solicitação Devolução fora do prazo</span>
-        <span class="meta-info">Devoluções > 30 dias (Octadesk)</span>
+        <span class="meta-info">🟡 20-30 dias · 🔴 +30 dias (Octadesk)</span>
       </div>
       <span class="value">${devDisplayValue}</span>
     </div>`;
@@ -1105,7 +1121,7 @@ function renderMonthCards(){
       metricsHtml += `<li class="metric-row ${st}">
         <div class="label-block">
           <span class="label">${m.label}</span>
-          <span class="meta-info">Meta ${arrow}${fmtNumber(m.meta,m.unit)} · Alerta ${arrow}${fmtNumber(m.alerta,m.unit)} · ${vals.length} dia${vals.length===1?'':'s'}</span>
+          <span class="meta-info">Meta ${arrow}${fmtNumber(m.meta,m.unit)} · ${vals.length} dia${vals.length===1?'':'s'}</span>
         </div>
         <div class="value-block">
           <span class="value">${fmtNumber(avg,m.unit)}</span>
@@ -1779,7 +1795,7 @@ function renderRegistro(){
         const v = data.metrics?.[mKey];
         const st = getStatus(v, m);
         metricsHtml += `<div class="mini-metric ${st}">
-          <span class="mini-label" title="${m.label} — Meta ${m.metaType==='max'?'≤':'≥'}${fmtNumber(m.meta,m.unit)} · Alerta ${m.metaType==='max'?'≤':'≥'}${fmtNumber(m.alerta,m.unit)}">${m.label}</span>
+          <span class="mini-label" title="${m.label}">${m.label}</span>
           <span class="mini-value">${fmtNumber(v, m.unit)}</span>
         </div>`;
       });
@@ -1795,10 +1811,10 @@ function renderRegistro(){
       const criStatus = (cri===null||cri===undefined) ? '' : (cri===0?'green': cri<=3?'yellow':'red');
       const criHtml = (cri!==null && cri!==undefined) ?
         `<div class="mini-tickets ${criStatus}" style="margin-top:2px">🚨 ${cri} críticos +10d</div>` : '';
-      const dev = data.solicitacaoDevolucaoVermelho ?? data.solicitacaoDevolucao;
-      const devStatus = (dev===null||dev===undefined) ? '' : (dev===0?'green':'red');
+      const dev = data.solicitacaoDevolucao;
+      const devStatus = (dev===null||dev===undefined) ? '' : (dev===0?'green': dev<=3?'yellow':'red');
       const devHtml = (dev!==null && dev!==undefined) ?
-        `<div class="mini-tickets ${devStatus}" style="margin-top:2px">📦 ${dev} devol. +30d</div>` : '';
+        `<div class="mini-tickets ${devStatus}" style="margin-top:2px">📦 ${dev} devol. +20d</div>` : '';
       html += `<div class="mini-card" style="border-top:3px solid ${ch.color}">
         <div class="mini-card-name" style="border-bottom-color:${ch.color}"><span class="channel-tag" style="background:${ch.color};width:8px;height:8px"></span>${ch.name}</div>
         <div class="mini-card-rep"><small>${ch.repLabel}</small>${data.reputacao || '—'}</div>
@@ -2087,11 +2103,10 @@ async function ghGetFile(requireSha=false){
   for(let attempt = 1; attempt <= 3; attempt++){
     try{
       const url = `https://api.github.com/repos/${c.repo}/contents/data.json?ref=${branch}&_=${Date.now()}`;
-      // NÃO enviar 'Cache-Control'/'Pragma': o CORS da api.github.com não permite
-      // esses headers no preflight → o navegador aborta com "Failed to fetch"
-      // (era a causa do push nunca funcionar). ?_=Date.now() + cache:'no-store' já evitam cache.
       const headers = {
-        'Accept': 'application/vnd.github+json'
+        'Accept': 'application/vnd.github+json',
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache'
       };
       if(c.pat) headers['Authorization'] = 'Bearer '+c.pat;
       const res = await fetch(url, {cache: 'no-store', headers});
@@ -2101,17 +2116,8 @@ async function ghGetFile(requireSha=false){
       }
       if(!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
-      let b64 = (data.content || '').replace(/\s/g,'');
-      // Arquivos >1MB: a contents API devolve content vazio (encoding:"none").
-      // Nesse caso busca o blob direto (funciona até 100MB).
-      if(!b64 && data.git_url){
-        const blobRes = await fetch(data.git_url + '?_=' + Date.now(), {cache:'no-store', headers});
-        if(!blobRes.ok) throw new Error(`Blob HTTP ${blobRes.status}`);
-        b64 = ((await blobRes.json()).content || '').replace(/\s/g,'');
-      }
-      if(!b64) throw new Error('API devolveu conteúdo vazio');
       // Decode UTF-8 correto
-      const binary = atob(b64);
+      const binary = atob(data.content.replace(/\s/g,''));
       const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
       const decoded = new TextDecoder('utf-8').decode(bytes);
       return {content: JSON.parse(decoded), sha: data.sha};
@@ -2148,28 +2154,6 @@ async function ghPull(){
   }catch(e){ ghLog('Erro: '+e.message, 'err'); }
 }
 
-// Conserta mojibake acumulado (UTF-8 re-encodado como latin1 em versões antigas)
-// e impede que campos de texto curtos virem blobs gigantes de novo.
-function sanitizeReputacao(v){
-  if(typeof v !== 'string') return v;
-  let prev = null;
-  while(v !== prev && v.length > 40){
-    prev = v;
-    try{ const c = decodeURIComponent(escape(v)); if(c.length < v.length) v = c; else break; }catch(e){ break; }
-  }
-  return v.length > 300 ? v.slice(0, 200) : v;
-}
-function sanitizeState(st){
-  try{
-    if(st && st.entries) Object.values(st.entries).forEach(canais => {
-      if(canais && typeof canais === 'object') Object.values(canais).forEach(e => {
-        if(e && typeof e.reputacao === 'string') e.reputacao = sanitizeReputacao(e.reputacao);
-      });
-    });
-  }catch(e){ console.warn('sanitizeState:', e); }
-  return st;
-}
-
 async function ghPush(silent){
   const c = ghGetConfig();
   if(!c.repo || !c.pat){ if(!silent) ghLog('Configure o GitHub primeiro.', 'err'); return; }
@@ -2183,7 +2167,7 @@ async function ghPush(silent){
       // CRÍTICO: faz MERGE entre o estado local e o remoto antes de pushar.
       // Sem isso, o push sobrescreve campos que outros writers (scheduled task,
       // outros usuários) gravaram entre nosso último pull e este push.
-      const toPush = sanitizeState(cur.content ? mergeWithRemote(cur.content) : state);
+      const toPush = cur.content ? mergeWithRemote(cur.content) : state;
       // Atualiza estado local com merged pra render consistente
       state = toPush;
       _origSave();
@@ -2923,13 +2907,10 @@ function calcularComissao(ym, cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed){
       coletivo: 0,
     };
     if(p.tipo === 'atendente'){
-      // REGRA NOVA: corte POR CANAL — vermelho -R$150 (Mercado Livre -R$300),
-      // amarelo -R$50 (Mercado Livre -R$100). Cortes somam entre os canais da pessoa.
-      p.canais.forEach(c => {
-        const meli = c === 'mercadolivre';
-        if(cores[c] === 'red') linha.reputacao -= meli ? 300 : 150;
-        else if(cores[c] === 'yellow') linha.reputacao -= meli ? 100 : 50;
-      });
+      // R$300 reputação + tickets (regra nova: -R$200 por categoria em atraso, soma)
+      const piorRep = p.canais.map(c => cores[c]).reduce((a,b) => piorCor(a,b), 'green');
+      if(piorRep === 'yellow') linha.reputacao = -100;
+      else if(piorRep === 'red') linha.reputacao = -300;
       // REGRA NOVA: ticket fin em atraso -> -200, SAC em atraso -> -200 (somam até -400)
       const totalFin = p.canais.reduce((s, c) => s + ultimoDoMes(c, ym, 'tickets'), 0);
       const totalSac = p.canais.reduce((s, c) => s + ultimoDoMes(c, ym, 'sacForaPrazo'), 0);
@@ -2940,12 +2921,13 @@ function calcularComissao(ym, cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed){
       if(algumVermelho) linha.coletivo = -50;
     }
     else if(p.tipo === 'logistica'){
-      // REGRA NOVA: só devoluções acima de 30 dias contam = -R$100/canal.
-      // Usa o campo split (+30d) se existir; senão o campo único de devoluções fora do prazo
-      // (correção: antes o campo único era ignorado e a logística nunca tinha desconto).
+      // NOVA REGRA: devoluções 20-30d = amarelo (-R$50/canal), 30+d = vermelho (-R$100/canal)
+      // Vermelho tem precedência sobre amarelo no mesmo canal
       COMISSAO_CANAIS.forEach(c => {
-        const vermelho = ultimoDoMes(c, ym, 'solicitacaoDevolucaoVermelho') || ultimoDoMes(c, ym, 'solicitacaoDevolucao');
+        const vermelho = ultimoDoMes(c, ym, 'solicitacaoDevolucaoVermelho');
+        const amarelo = ultimoDoMes(c, ym, 'solicitacaoDevolucaoAmarelo');
         if(vermelho > 0) linha.logistica -= 100;
+        else if(amarelo > 0) linha.logistica -= 50;
       });
       if(algumVermelho) linha.coletivo = -50;
     }
