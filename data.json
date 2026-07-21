@@ -2672,13 +2672,18 @@
     },
     "2026-07-21": {
       "mercadolivre": {
-        "reputacao": "",
-        "metrics": {},
+        "reputacao": "MercadoLíder Platinum",
+        "metrics": {
+          "reclamacoes": 0.77,
+          "mediacoes": 0.15,
+          "canceladas": 0.5,
+          "enviosIncorretos": 0.12
+        },
         "tickets": 0,
         "sacForaPrazo": 8,
         "casosCriticos": 14,
         "solicitacaoDevolucao": 2,
-        "ts": "2026-07-21T13:07:01.575Z"
+        "ts": "2026-07-21T13:40:34.334Z"
       },
       "amazon": {
         "reputacao": "",
