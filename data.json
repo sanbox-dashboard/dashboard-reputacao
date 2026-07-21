@@ -2679,11 +2679,11 @@
           "canceladas": 0.5,
           "enviosIncorretos": 0.12
         },
-        "tickets": 8,
+        "tickets": 0,
         "sacForaPrazo": 8,
         "casosCriticos": 14,
         "solicitacaoDevolucao": 2,
-        "ts": "2026-07-21T11:13:36.178413-03:00",
+        "ts": "2026-07-21T12:16:12.927361-03:00",
         "solicitacaoDevolucaoAmarelo": 2,
         "solicitacaoDevolucaoVermelho": 0
       },
@@ -2750,6 +2750,16 @@
     }
   },
   "ticketsRaw": [
+    {
+      "n": "99916894",
+      "d": "21/07/2026",
+      "ym": "2026-07",
+      "lj": "Amazon",
+      "pb": "RMA",
+      "sk": "TI1514",
+      "tr": "Trilog",
+      "pr": "—"
+    },
     {
       "n": "99916893",
       "d": "21/07/2026",
@@ -11181,7 +11191,7 @@
       "pr": "—"
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-21T11:45:47.924425-03:00",
+  "ticketsRawUpdatedAt": "2026-07-21T12:16:12.927361-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
