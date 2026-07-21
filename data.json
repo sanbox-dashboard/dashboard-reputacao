@@ -2751,6 +2751,36 @@
   },
   "ticketsRaw": [
     {
+      "n": "99916899",
+      "d": "21/07/2026",
+      "ym": "2026-07",
+      "lj": "Mercado Livre",
+      "pb": "Danificado Transporte Marketplace",
+      "sk": "TI1454",
+      "tr": "Alfa Transportes",
+      "pr": "—"
+    },
+    {
+      "n": "99916898",
+      "d": "21/07/2026",
+      "ym": "2026-07",
+      "lj": "",
+      "pb": "Danificado Transporte Próprio",
+      "sk": "",
+      "tr": "Alfa Transportes",
+      "pr": "—"
+    },
+    {
+      "n": "99916897",
+      "d": "21/07/2026",
+      "ym": "2026-07",
+      "lj": "Casas Bahia",
+      "pb": "RMA",
+      "sk": "SS002",
+      "tr": "Total Express",
+      "pr": "—"
+    },
+    {
       "n": "99916896",
       "d": "21/07/2026",
       "ym": "2026-07",
@@ -3828,16 +3858,6 @@
       "pb": "RMA",
       "sk": "SS002",
       "tr": "Mercado Envios",
-      "pr": "—"
-    },
-    {
-      "n": "99916739",
-      "d": "08/07/2026",
-      "ym": "2026-07",
-      "lj": "Amazon",
-      "pb": "Arrependimento",
-      "sk": "TI1717",
-      "tr": "Alfa Transportes",
       "pr": "—"
     },
     {
@@ -11201,7 +11221,7 @@
       "pr": "—"
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-21T14:41:57.343073-03:00",
+  "ticketsRawUpdatedAt": "2026-07-21T15:46:10.888454-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
@@ -16854,7 +16874,7 @@
       "frete": 334.76,
       "total": 720.77,
       "valor_real_fechado": 500.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "51852762402",
@@ -16874,7 +16894,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-07-21T14:43:12.535725-03:00",
+  "descontosUpdatedAt": "2026-07-21T15:46:10.888454-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -17201,7 +17221,7 @@
       },
       "casasbahia": {
         "count": 2,
-        "countAceito": 0,
+        "countAceito": 1,
         "descontoTotal": 500.0,
         "custoTotal": 2437.27,
         "valorPedidoTotal": 3834.86,
