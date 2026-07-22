@@ -2751,8 +2751,8 @@
     "2026-07-22": {
       "mercadolivre": {
         "metrics": {},
-        "ts": "2026-07-22T10:14:48.817547-03:00",
-        "tickets": 0,
+        "ts": "2026-07-22T12:45:07.965008-03:00",
+        "tickets": 10,
         "sacForaPrazo": 8,
         "casosCriticos": 15,
         "solicitacaoDevolucaoAmarelo": 2,
@@ -2761,8 +2761,8 @@
       },
       "amazon": {
         "metrics": {},
-        "ts": "2026-07-22T10:14:48.817547-03:00",
-        "tickets": 0,
+        "ts": "2026-07-22T12:45:07.965008-03:00",
+        "tickets": 3,
         "sacForaPrazo": 8,
         "casosCriticos": 7,
         "solicitacaoDevolucaoAmarelo": 2,
@@ -2781,8 +2781,8 @@
       },
       "casasbahia": {
         "metrics": {},
-        "ts": "2026-07-22T10:14:48.817547-03:00",
-        "tickets": 0,
+        "ts": "2026-07-22T12:45:07.965008-03:00",
+        "tickets": 4,
         "sacForaPrazo": 0,
         "casosCriticos": 26,
         "solicitacaoDevolucaoAmarelo": 4,
@@ -2803,6 +2803,36 @@
   },
   "ticketsRaw": [
     {
+      "n": "99916914.0",
+      "d": "22/07/2026",
+      "ym": "2026-07",
+      "lj": "Casas Bahia",
+      "pb": "Atraso de Entrega",
+      "sk": "TI1568",
+      "tr": "Trilog",
+      "pr": "—"
+    },
+    {
+      "n": "99916913.0",
+      "d": "22/07/2026",
+      "ym": "2026-07",
+      "lj": "Magalu",
+      "pb": "Atraso de Entrega",
+      "sk": "TI1562",
+      "tr": "Trilog",
+      "pr": "—"
+    },
+    {
+      "n": "99916912.0",
+      "d": "22/07/2026",
+      "ym": "2026-07",
+      "lj": "Casas Bahia",
+      "pb": "Atraso de Entrega",
+      "sk": "TI1633",
+      "tr": "Trilog",
+      "pr": "—"
+    },
+    {
       "n": "99916911.0",
       "d": "22/07/2026",
       "ym": "2026-07",
@@ -2817,7 +2847,7 @@
       "d": "22/07/2026",
       "ym": "2026-07",
       "lj": "",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "",
       "tr": "Alfa Transportes",
       "pr": "—"
@@ -2877,7 +2907,7 @@
       "d": "21/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1426",
       "tr": "Alfa Transportes",
       "pr": "—"
@@ -3267,7 +3297,7 @@
       "d": "20/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1690",
       "tr": "Trilog",
       "pr": "—"
@@ -4087,7 +4117,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1527",
       "tr": "Trilog",
       "pr": "—"
@@ -4107,7 +4137,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1571",
       "tr": "Trilog",
       "pr": "—"
@@ -4117,7 +4147,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1562",
       "tr": "Trilog",
       "pr": "—"
@@ -4127,7 +4157,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Amazon",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1524",
       "tr": "Trilog",
       "pr": "—"
@@ -4137,7 +4167,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1524",
       "tr": "Trilog",
       "pr": "—"
@@ -4147,7 +4177,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1525",
       "tr": "Trilog",
       "pr": "—"
@@ -4157,7 +4187,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1550",
       "tr": "Trilog",
       "pr": "—"
@@ -4167,7 +4197,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1514",
       "tr": "Trilog",
       "pr": "—"
@@ -4177,7 +4207,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1562",
       "tr": "Trilog",
       "pr": "—"
@@ -4187,7 +4217,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1690",
       "tr": "Trilog",
       "pr": "—"
@@ -4197,7 +4227,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1667",
       "tr": "Trilog",
       "pr": "—"
@@ -4207,7 +4237,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1529",
       "tr": "Trilog",
       "pr": "—"
@@ -4597,7 +4627,7 @@
       "d": "01/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1562",
       "tr": "Alfa Transportes",
       "pr": "—"
@@ -4847,7 +4877,7 @@
       "d": "26/06/2026",
       "ym": "2026-06",
       "lj": "Amazon",
-      "pb": "Cliente Desconhece a Compra ",
+      "pb": "Cliente Desconhece a Compra",
       "sk": "TI1527",
       "tr": "Tecmar",
       "pr": "—"
@@ -5817,7 +5847,7 @@
       "d": "20/05/2026",
       "ym": "2026-05",
       "lj": "Shopee",
-      "pb": "Cliente Desconhece a Compra ",
+      "pb": "Cliente Desconhece a Compra",
       "sk": "SS002",
       "tr": "Total Express",
       "pr": "—"
@@ -6283,16 +6313,6 @@
       "pr": "—"
     },
     {
-      "n": "99915571.0",
-      "d": "08/04/2026",
-      "ym": "2026-04",
-      "lj": "Amazon",
-      "pb": "Atraso de Entrega",
-      "sk": "TI1639",
-      "tr": "Total Express",
-      "pr": "—"
-    },
-    {
       "n": "99915560.0",
       "d": "08/04/2026",
       "ym": "2026-04",
@@ -6527,7 +6547,7 @@
       "d": "26/02/2026",
       "ym": "2026-02",
       "lj": "Amazon",
-      "pb": "Não entregue pela Transportadora ",
+      "pb": "Não entregue pela Transportadora",
       "sk": "TI1514",
       "tr": "Brasil Web",
       "pr": "—"
@@ -7580,16 +7600,6 @@
       "pb": "Atraso de Entrega",
       "sk": "TI1562",
       "tr": "Tecmar",
-      "pr": "—"
-    },
-    {
-      "n": "99913108.0",
-      "d": "06/11/2025",
-      "ym": "2025-11",
-      "lj": "Casas Bahia",
-      "pb": "Endereço Incorreto",
-      "sk": "TI1673",
-      "tr": "Total Express",
       "pr": "—"
     },
     {
@@ -11321,1139 +11331,9 @@
       "sk": "",
       "tr": "",
       "pr": "—"
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
-    },
-    {
-      "n": "None",
-      "d": "",
-      "ym": "",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
-      "pr": ""
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-22T12:18:43.690930-03:00",
+  "ticketsRawUpdatedAt": "2026-07-22T12:45:07.965008-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
