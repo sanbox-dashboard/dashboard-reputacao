@@ -14183,7 +14183,7 @@
       "desconto_sugerido": 187.63,
       "frete": 154.03,
       "total": 341.66,
-      "valor_real_fechado": 4300.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -16920,8 +16920,8 @@
       "desconto_sugerido": 429.57,
       "frete": 0.0,
       "total": 429.57,
-      "valor_real_fechado": 0.0,
-      "aceito": false
+      "valor_real_fechado": 434.67,
+      "aceito": true
     },
     {
       "pedido": "2000013873909529",
@@ -17230,7 +17230,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-07-23T10:45:34.923663-03:00",
+  "descontosUpdatedAt": "2026-07-23T11:15:50.588050-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -17411,13 +17411,13 @@
       "casasbahia": {
         "count": 16,
         "countAceito": 5,
-        "descontoTotal": 7070.0,
+        "descontoTotal": 2770.0,
         "custoTotal": 17623.04,
         "valorPedidoTotal": 27450.01,
-        "pctDescontoSobreCusto": 40.12,
-        "pctDescontoSobreVenda": 25.76,
+        "pctDescontoSobreCusto": 15.72,
+        "pctDescontoSobreVenda": 10.09,
         "vendaTotalCanal": 1214519.32,
-        "pctDescontoSobreVendaCanal": 0.5821
+        "pctDescontoSobreVendaCanal": 0.2281
       },
       "mercadolivre": {
         "count": 57,
@@ -17467,14 +17467,14 @@
     "2026-06": {
       "mercadolivre": {
         "count": 57,
-        "countAceito": 17,
-        "descontoTotal": 12260.27,
+        "countAceito": 18,
+        "descontoTotal": 12694.94,
         "custoTotal": 73347.44,
         "valorPedidoTotal": 118741.25,
-        "pctDescontoSobreCusto": 16.72,
-        "pctDescontoSobreVenda": 10.33,
+        "pctDescontoSobreCusto": 17.31,
+        "pctDescontoSobreVenda": 10.69,
         "vendaTotalCanal": 2545905.05,
-        "pctDescontoSobreVendaCanal": 0.4816
+        "pctDescontoSobreVendaCanal": 0.4986
       },
       "amazon": {
         "count": 7,
