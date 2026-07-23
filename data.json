@@ -14413,7 +14413,7 @@
       "desconto_sugerido": 187.63,
       "frete": 154.03,
       "total": 341.66,
-      "valor_real_fechado": 4300.0,
+      "valor_real_fechado": 0.0,
       "aceito": false,
       "transportadora": "BRASIL WEB TRANSPORTES E LOGISTICA S A"
     },
@@ -17676,25 +17676,25 @@
       "transportadora": "Mercado Envios Places"
     },
     {
-      "pedido": "51877779901",
-      "data": "09/07/2026",
-      "ym": "2026-07",
-      "canal": "casasbahia",
-      "marketplace": "Casas Bahia Marketplace",
-      "sku": "TI1426",
-      "valor_pedido": 2583.92,
-      "custo": 1984.0,
+      "pedido": "2000016976746730",
+      "data": "16/06/2026",
+      "ym": "2026-06",
+      "canal": "mercadolivre",
+      "marketplace": "Mercado Livre",
+      "sku": "TI1456",
+      "valor_pedido": 4064.9,
+      "custo": 2834.61,
       "problema": "Avaria",
       "pct_desc": "30,00%",
-      "desconto_sugerido": 595.2,
-      "frete": 184.02,
-      "total": 779.22,
-      "valor_real_fechado": 200.0,
-      "aceito": true,
-      "transportadora": "TRILOG EXPRESS LTDA"
+      "desconto_sugerido": 850.38,
+      "frete": 0.0,
+      "total": 850.38,
+      "valor_real_fechado": 0.0,
+      "aceito": false,
+      "transportadora": ""
     }
   ],
-  "descontosUpdatedAt": "2026-07-23T14:45:21.164720-03:00",
+  "descontosUpdatedAt": "2026-07-23T16:15:57.867228-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -17875,13 +17875,13 @@
       "casasbahia": {
         "count": 16,
         "countAceito": 5,
-        "descontoTotal": 7070.0,
+        "descontoTotal": 2770.0,
         "custoTotal": 17623.04,
         "valorPedidoTotal": 27450.01,
-        "pctDescontoSobreCusto": 40.12,
-        "pctDescontoSobreVenda": 25.76,
+        "pctDescontoSobreCusto": 15.72,
+        "pctDescontoSobreVenda": 10.09,
         "vendaTotalCanal": 1214519.32,
-        "pctDescontoSobreVendaCanal": 0.5821
+        "pctDescontoSobreVendaCanal": 0.2281
       },
       "mercadolivre": {
         "count": 57,
@@ -17930,13 +17930,13 @@
     },
     "2026-06": {
       "mercadolivre": {
-        "count": 58,
+        "count": 59,
         "countAceito": 18,
         "descontoTotal": 12904.94,
-        "custoTotal": 73961.2,
-        "valorPedidoTotal": 119741.15,
-        "pctDescontoSobreCusto": 17.45,
-        "pctDescontoSobreVenda": 10.78,
+        "custoTotal": 76795.81,
+        "valorPedidoTotal": 123806.05,
+        "pctDescontoSobreCusto": 16.8,
+        "pctDescontoSobreVenda": 10.42,
         "vendaTotalCanal": 2545905.05,
         "pctDescontoSobreVendaCanal": 0.5069
       },
@@ -18020,13 +18020,13 @@
         "pctDescontoSobreVendaCanal": 0
       },
       "casasbahia": {
-        "count": 3,
-        "countAceito": 2,
-        "descontoTotal": 800.0,
-        "custoTotal": 4421.27,
-        "valorPedidoTotal": 6418.78,
-        "pctDescontoSobreCusto": 18.09,
-        "pctDescontoSobreVenda": 12.46,
+        "count": 2,
+        "countAceito": 1,
+        "descontoTotal": 600.0,
+        "custoTotal": 2437.27,
+        "valorPedidoTotal": 3834.86,
+        "pctDescontoSobreCusto": 24.62,
+        "pctDescontoSobreVenda": 15.65,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       }
