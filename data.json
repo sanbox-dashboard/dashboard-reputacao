@@ -14183,7 +14183,7 @@
       "desconto_sugerido": 187.63,
       "frete": 154.03,
       "total": 341.66,
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 4300.0,
       "aceito": false
     },
     {
@@ -14433,12 +14433,12 @@
       "sku": "TI1514",
       "valor_pedido": 1868.9,
       "custo": 1286.69,
-      "problema": "Insatisfação",
-      "pct_desconto": "20,00%",
-      "desconto_sugerido": 257.34,
+      "problema": "Avaria",
+      "pct_desconto": "30,00%",
+      "desconto_sugerido": 386.01,
       "frete": 0.0,
-      "total": 257.34,
-      "valor_real_fechado": 254.0,
+      "total": 386.01,
+      "valor_real_fechado": 386.01,
       "aceito": false
     },
     {
@@ -17230,7 +17230,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-07-23T11:15:50.588050-03:00",
+  "descontosUpdatedAt": "2026-07-23T11:45:57.205699-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -17341,13 +17341,13 @@
       "mercadolivre": {
         "count": 61,
         "countAceito": 30,
-        "descontoTotal": 20216.24,
+        "descontoTotal": 20348.25,
         "custoTotal": 67466.42,
         "valorPedidoTotal": 102445.53,
-        "pctDescontoSobreCusto": 29.96,
-        "pctDescontoSobreVenda": 19.73,
+        "pctDescontoSobreCusto": 30.16,
+        "pctDescontoSobreVenda": 19.86,
         "vendaTotalCanal": 2298102.15,
-        "pctDescontoSobreVendaCanal": 0.8797
+        "pctDescontoSobreVendaCanal": 0.8854
       },
       "amazon": {
         "count": 7,
@@ -17411,13 +17411,13 @@
       "casasbahia": {
         "count": 16,
         "countAceito": 5,
-        "descontoTotal": 2770.0,
+        "descontoTotal": 7070.0,
         "custoTotal": 17623.04,
         "valorPedidoTotal": 27450.01,
-        "pctDescontoSobreCusto": 15.72,
-        "pctDescontoSobreVenda": 10.09,
+        "pctDescontoSobreCusto": 40.12,
+        "pctDescontoSobreVenda": 25.76,
         "vendaTotalCanal": 1214519.32,
-        "pctDescontoSobreVendaCanal": 0.2281
+        "pctDescontoSobreVendaCanal": 0.5821
       },
       "mercadolivre": {
         "count": 57,
