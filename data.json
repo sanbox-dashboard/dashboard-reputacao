@@ -2855,6 +2855,26 @@
   },
   "ticketsRaw": [
     {
+      "n": "99916931",
+      "d": "23/07/2026",
+      "ym": "2026-07",
+      "lj": "Mercado Livre",
+      "pb": "",
+      "sk": "SS002",
+      "tr": "Correios",
+      "pr": "—"
+    },
+    {
+      "n": "99916930",
+      "d": "23/07/2026",
+      "ym": "2026-07",
+      "lj": "Amazon",
+      "pb": "Cliente Reembolsado e com Produto",
+      "sk": "",
+      "tr": "",
+      "pr": "—"
+    },
+    {
       "n": "99916929",
       "d": "23/07/2026",
       "ym": "2026-07",
@@ -11515,7 +11535,7 @@
       "pr": "—"
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-23T14:45:21.164720-03:00",
+  "ticketsRawUpdatedAt": "2026-07-23T15:47:17.771724-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
