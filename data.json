@@ -2907,6 +2907,16 @@
   },
   "ticketsRaw": [
     {
+      "n": "99916939",
+      "d": "24/07/2026",
+      "ym": "2026-07",
+      "lj": "Shopee",
+      "pb": "Não entregue pela Transportadora",
+      "sk": "TI1571",
+      "tr": "Alfa Transportes",
+      "pr": "—"
+    },
+    {
       "n": "99916938",
       "d": "24/07/2026",
       "ym": "2026-07",
@@ -3900,10 +3910,10 @@
       "n": "99916820",
       "d": "15/07/2026",
       "ym": "2026-07",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": "Casas Bahia",
+      "pb": "Cancelamento por Arrependimento Após o Envio",
+      "sk": "TI1524",
+      "tr": "Alfa Transportes",
       "pr": "—"
     },
     {
@@ -5330,10 +5340,10 @@
       "n": "99916540",
       "d": "24/06/2026",
       "ym": "2026-06",
-      "lj": "",
-      "pb": "",
-      "sk": "",
-      "tr": "",
+      "lj": "Shopee",
+      "pb": "RMA",
+      "sk": "TI1526",
+      "tr": "Alfa Transportes",
       "pr": "—"
     },
     {
@@ -8242,7 +8252,7 @@
       "ym": "2025-08",
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
-      "sk": "TI1146 / TI287-2",
+      "sk": "TI1146  / TI287-2",
       "tr": "Jamef",
       "pr": "—"
     },
@@ -9902,7 +9912,7 @@
       "ym": "2024-03",
       "lj": "Magalu",
       "pb": "Endereço Incorreto",
-      "sk": "TI1193 TI287-3",
+      "sk": "TI1193  TI287-3",
       "tr": "Correios",
       "pr": "—"
     },
@@ -11647,7 +11657,7 @@
       "pr": "—"
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-24T11:13:43.353692-03:00",
+  "ticketsRawUpdatedAt": "2026-07-24T11:46:35.220964-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
