@@ -2855,8 +2855,8 @@
     "2026-07-24": {
       "mercadolivre": {
         "metrics": {},
-        "ts": "2026-07-24T13:08:39.030251-03:00",
-        "tickets": 0,
+        "ts": "2026-07-24T15:15:11.996947-03:00",
+        "tickets": 8,
         "sacForaPrazo": 8,
         "casosCriticos": 16,
         "solicitacaoDevolucaoAmarelo": 1,
@@ -2951,7 +2951,7 @@
       "d": "24/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1571",
       "tr": "Alfa Transportes",
       "pr": "—"
@@ -2971,7 +2971,7 @@
       "d": "23/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1560",
       "tr": "Trilog",
       "pr": "—"
@@ -2981,7 +2981,7 @@
       "d": "23/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1690",
       "tr": "Trilog",
       "pr": "—"
@@ -2991,7 +2991,7 @@
       "d": "23/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "Caixa de Som Pulse X Boombox SP626 Bluetooth/Aux/Tws IPX6 - 220W",
       "tr": "Trilog",
       "pr": "—"
@@ -3001,7 +3001,7 @@
       "d": "23/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1690",
       "tr": "Trilog",
       "pr": "—"
@@ -3101,7 +3101,7 @@
       "d": "23/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1667",
       "tr": "Alfa Transportes",
       "pr": "—"
@@ -3141,7 +3141,7 @@
       "d": "22/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1529",
       "tr": "MMA",
       "pr": "—"
@@ -3231,7 +3231,7 @@
       "d": "22/07/2026",
       "ym": "2026-07",
       "lj": "",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "",
       "tr": "Alfa Transportes",
       "pr": "—"
@@ -3291,7 +3291,7 @@
       "d": "21/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1426",
       "tr": "Alfa Transportes",
       "pr": "—"
@@ -3671,7 +3671,7 @@
       "d": "20/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1690",
       "tr": "Trilog",
       "pr": "—"
@@ -4491,7 +4491,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1527",
       "tr": "Trilog",
       "pr": "—"
@@ -4511,7 +4511,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1571",
       "tr": "Trilog",
       "pr": "—"
@@ -4521,7 +4521,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1562",
       "tr": "Trilog",
       "pr": "—"
@@ -4531,7 +4531,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Amazon",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1524",
       "tr": "Trilog",
       "pr": "—"
@@ -4541,7 +4541,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1524",
       "tr": "Trilog",
       "pr": "—"
@@ -4551,7 +4551,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1525",
       "tr": "Trilog",
       "pr": "—"
@@ -4561,7 +4561,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1550",
       "tr": "Trilog",
       "pr": "—"
@@ -4571,7 +4571,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1514",
       "tr": "Trilog",
       "pr": "—"
@@ -4581,7 +4581,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1562",
       "tr": "Trilog",
       "pr": "—"
@@ -4591,7 +4591,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1690",
       "tr": "Trilog",
       "pr": "—"
@@ -4601,7 +4601,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1667",
       "tr": "Trilog",
       "pr": "—"
@@ -4611,7 +4611,7 @@
       "d": "07/07/2026",
       "ym": "2026-07",
       "lj": "Magalu",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1529",
       "tr": "Trilog",
       "pr": "—"
@@ -5001,7 +5001,7 @@
       "d": "01/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1562",
       "tr": "Alfa Transportes",
       "pr": "—"
@@ -5241,7 +5241,7 @@
       "d": "26/06/2026",
       "ym": "2026-06",
       "lj": "Amazon",
-      "pb": "Cliente Desconhece a Compra",
+      "pb": "Cliente Desconhece a Compra ",
       "sk": "TI1527",
       "tr": "Tecmar",
       "pr": "—"
@@ -6211,7 +6211,7 @@
       "d": "20/05/2026",
       "ym": "2026-05",
       "lj": "Shopee",
-      "pb": "Cliente Desconhece a Compra",
+      "pb": "Cliente Desconhece a Compra ",
       "sk": "SS002",
       "tr": "Total Express",
       "pr": "—"
@@ -6911,7 +6911,7 @@
       "d": "26/02/2026",
       "ym": "2026-02",
       "lj": "Amazon",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1514",
       "tr": "Brasil Web",
       "pr": "—"
@@ -11697,7 +11697,7 @@
       "pr": "—"
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-24T14:14:26.439597-03:00",
+  "ticketsRawUpdatedAt": "2026-07-24T15:15:11.996947-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
@@ -14408,7 +14408,7 @@
       "desconto_sugerido": 187.63,
       "frete": 154.03,
       "total": 341.66,
-      "valor_real_fechado": 4300.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -17587,11 +17587,28 @@
       "desconto_sugerido": 984.94,
       "frete": 0.0,
       "total": 984.94,
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 780.0,
+      "aceito": false
+    },
+    {
+      "pedido": "2000017295605854",
+      "data": "07/07/2026",
+      "ym": "2026-07",
+      "marketplace": "Mercado Livre",
+      "canal": "mercadolivre",
+      "sku": "TI1562",
+      "valor_pedido": 1709.9,
+      "custo": 1150.58,
+      "problema": "Avaria",
+      "pct_desc": "30,00%",
+      "desconto_sugerido": 345.17,
+      "frete": 0.0,
+      "total": 345.17,
+      "valor_real_fechado": 170.99,
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-07-24T14:39:32.335222-03:00",
+  "descontosUpdatedAt": "2026-07-24T15:15:11.996947-03:00",
   "descontosAggByMonth": {
     "2026-03": {
       "mercadolivre": {
@@ -17772,13 +17789,13 @@
       "casasbahia": {
         "count": 16,
         "countAceito": 5,
-        "descontoTotal": 7070.0,
+        "descontoTotal": 2770.0,
         "custoTotal": 17623.04,
         "valorPedidoTotal": 27450.01,
-        "pctDescontoSobreCusto": 40.12,
-        "pctDescontoSobreVenda": 25.76,
+        "pctDescontoSobreCusto": 15.72,
+        "pctDescontoSobreVenda": 10.09,
         "vendaTotalCanal": 1214519.32,
-        "pctDescontoSobreVendaCanal": 0.5821
+        "pctDescontoSobreVendaCanal": 0.2281
       },
       "mercadolivre": {
         "count": 57,
@@ -17906,13 +17923,13 @@
         "pctDescontoSobreVendaCanal": 0
       },
       "mercadolivre": {
-        "count": 16,
+        "count": 17,
         "countAceito": 0,
-        "descontoTotal": 4061.16,
-        "custoTotal": 20385.56,
-        "valorPedidoTotal": 30228.6,
-        "pctDescontoSobreCusto": 19.92,
-        "pctDescontoSobreVenda": 13.43,
+        "descontoTotal": 5012.15,
+        "custoTotal": 21536.14,
+        "valorPedidoTotal": 31938.5,
+        "pctDescontoSobreCusto": 23.27,
+        "pctDescontoSobreVenda": 15.69,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       },
