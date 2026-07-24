@@ -2907,6 +2907,46 @@
   },
   "ticketsRaw": [
     {
+      "n": "99916943",
+      "d": "24/07/2026",
+      "ym": "2026-07",
+      "lj": "Shopee",
+      "pb": "Recusa do cliente por Cancelamento",
+      "sk": "TI1526",
+      "tr": "Alfa Transportes",
+      "pr": "—"
+    },
+    {
+      "n": "99916942",
+      "d": "24/07/2026",
+      "ym": "2026-07",
+      "lj": "Amazon",
+      "pb": "Arrependimento",
+      "sk": "TI1571",
+      "tr": "Trilog",
+      "pr": "—"
+    },
+    {
+      "n": "99916941",
+      "d": "24/07/2026",
+      "ym": "2026-07",
+      "lj": "Casas Bahia",
+      "pb": "RMA",
+      "sk": "TI1426",
+      "tr": "Trilog",
+      "pr": "—"
+    },
+    {
+      "n": "99916940",
+      "d": "24/07/2026",
+      "ym": "2026-07",
+      "lj": "Amazon",
+      "pb": "Atraso de Entrega",
+      "sk": "TI1562",
+      "tr": "Trilog",
+      "pr": "—"
+    },
+    {
       "n": "99916939",
       "d": "24/07/2026",
       "ym": "2026-07",
@@ -4603,7 +4643,7 @@
       "lj": "Shopee",
       "pb": "Insatisfação Compra",
       "sk": "SS002",
-      "tr": "Total Express",
+      "tr": "Correios",
       "pr": "—"
     },
     {
@@ -4711,7 +4751,7 @@
       "d": "06/07/2026",
       "ym": "2026-07",
       "lj": "Casas Bahia",
-      "pb": "",
+      "pb": "RMA",
       "sk": "TI1562",
       "tr": "Trilog",
       "pr": "—"
@@ -11657,7 +11697,7 @@
       "pr": "—"
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-24T11:46:35.220964-03:00",
+  "ticketsRawUpdatedAt": "2026-07-24T14:14:26.439597-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
