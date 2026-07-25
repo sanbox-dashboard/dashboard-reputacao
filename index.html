@@ -391,7 +391,7 @@
   </div>
   <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
     <span id="last-refresh" style="font-size:11px;color:var(--muted);font-weight:500" title="Auto-refresh a cada 1h">↻ Sincronização ativa</span>
-    <button class="tv-toggle" onclick="forceRefresh()" id="refresh-btn" title="Buscar dados mais recentes do GitHub agora" style="background:#0ea5e9">🔄 Atualizar</button>
+    <button class="tv-toggle" onclick="forceRefresh()" id="refresh-btn" title="Buscar dados mais recentes da nuvem agora" style="background:#0ea5e9">🔄 Atualizar</button>
     <button class="tv-toggle" onclick="toggleTvMode()" id="tv-btn">📺 Modo TV</button>
     <div class="date-pill">
       <span class="dot"></span>
@@ -767,39 +767,17 @@
   </section>
 </div>
 
-<section id="github-section"
-  <h2 class="section-title">Sincronização com GitHub <span class="section-subtitle" id="gh-status">✓ Sincronização ativa</span></h2>
+<section id="github-section">
+  <h2 class="section-title">Sincronização em Nuvem <span class="section-subtitle" id="gh-status">✓ Tempo real ativo</span></h2>
   <div class="upload-section">
     <p style="font-size:14px;color:var(--muted);margin-bottom:12px">
-      ✅ <strong>Sincronização automática ativa</strong>. O dashboard já vem configurado com acesso compartilhado ao repositório <strong>sanbox-dashboard/dashboard-reputacao/data.json</strong>. Qualquer pessoa que abrir essa URL pode subir prints e os outros verão a atualização. <em>Não precisa configurar nada.</em>
+      ✅ <strong>Sincronização em tempo real via Firebase.</strong> Qualquer lançamento aparece automaticamente em todas as telas abertas, em segundos — sem precisar atualizar. <em>Não precisa configurar nada.</em>
     </p>
-    <details style="margin-bottom:12px">
-      <summary style="cursor:pointer;font-size:12px;color:var(--primary)">Configuração avançada (sobrescrever o PAT padrão)</summary>
-      <div style="margin-top:8px">
-    <div class="form-grid" style="grid-template-columns:1fr 1fr;gap:12px">
-      <div class="field">
-        <label>Repositório <span class="meta-hint">(formato org/repo)</span></label>
-        <input type="text" id="gh-repo" placeholder="sanbox-dashboard/dashboard-reputacao">
-      </div>
-      <div class="field">
-        <label>Branch</label>
-        <input type="text" id="gh-branch" placeholder="main" value="main">
-      </div>
-    </div>
-    <div class="field" style="margin-top:12px">
-      <label>Personal Access Token (PAT) <span class="meta-hint">(salvo apenas no seu navegador)</span></label>
-      <input type="password" id="gh-pat" placeholder="ghp_xxxxxxxxxxxx">
-    </div>
-    <div class="form-actions" style="justify-content:flex-start;margin-top:14px">
-      <button class="btn btn-primary" onclick="ghSaveConfig()">💾 Salvar configuração</button>
-    </div>
-      </div>
-    </details>
     <div class="form-actions" style="justify-content:flex-start;flex-wrap:wrap">
-      <button class="btn btn-secondary" onclick="ghPull()">⬇ Carregar versão mais recente do GitHub</button>
-      <button class="btn btn-secondary" onclick="ghPush()">⬆ Enviar agora ao GitHub</button>
-      <button id="force-push-btn" class="btn btn-secondary" onclick="forcePushAll()" title="Garante que TODOS os dados deste aparelho subiram pro GitHub. Útil se desconfia que algum save não foi.">⬆ Forçar push deste aparelho</button>
-      <button id="force-resync-btn" class="btn btn-danger" onclick="forceFullResync()" title="Limpa os dados locais deste aparelho e re-baixa tudo do GitHub. Útil quando este aparelho mostra dados diferentes dos outros.">🔁 Forçar sincronização total</button>
+      <button class="btn btn-secondary" onclick="ghPull()">⬇ Recarregar da nuvem</button>
+      <button class="btn btn-secondary" onclick="ghPush()">⬆ Enviar agora</button>
+      <button id="force-push-btn" class="btn btn-secondary" onclick="forcePushAll()" title="Garante que TODOS os dados deste aparelho subiram pra nuvem.">⬆ Forçar envio deste aparelho</button>
+      <button id="force-resync-btn" class="btn btn-danger" onclick="forceFullResync()" title="Limpa os dados locais deste aparelho e re-baixa tudo da nuvem.">🔁 Forçar sincronização total</button>
     </div>
     <div id="gh-log" style="margin-top:12px;font-size:12px;color:var(--muted);min-height:18px"></div>
     <div id="gh-sync-status" style="margin-top:8px;font-size:11px;color:var(--muted);font-family:monospace"></div>
@@ -807,7 +785,7 @@
 </section>
 
 <div class="footer">
-  Dados sincronizados automaticamente com GitHub · <span id="app-version-tag">v—</span> · Use os botões abaixo para backup local.
+  Dados sincronizados em tempo real (Firebase) · <span id="app-version-tag">v—</span> · Use os botões abaixo para backup local.
   <div style="margin-top:8px">
     <button class="btn btn-secondary" onclick="exportData()">Exportar JSON (backup local)</button>
     <button class="btn btn-secondary" onclick="importData()">Importar JSON</button>
@@ -819,6 +797,8 @@
 <input type="file" id="import-input" accept=".json" style="display:none">
 
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.4/dist/tesseract.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 <script>
 /* =========================================================================
    CONFIGURAÇÃO DOS CANAIS E MÉTRICAS
@@ -886,8 +866,8 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
-const SCHEMA_VERSION = '41';
-const APP_VERSION = '41.1';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const SCHEMA_VERSION = '42';
+const APP_VERSION = '42.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -2042,31 +2022,76 @@ function carryOverTickets(){
 /* =========================================================================
    SINCRONIZAÇÃO COM GITHUB
    ========================================================================= */
-// Configuração compartilhada — qualquer usuário com o link consegue ler E escrever
-// no data.json automaticamente, sem precisar configurar nada.
-// PAT é fine-grained, escopo limitado a Contents:read+write SOMENTE neste repo.
-// Token quebrado em partes pra evitar o secret scanning do GitHub.
-const _p1 = ['github','pat'].join('_') + '_';
-const _p2 = '11CCWQRPQ0' + 'pj5Tj6fBvtT1';
-const _p3 = '_dCwNy4bDAHEIlvTkhCs4XyCi4htZmVMZOlBoQU6aO9eE6CTDGAHDFlKl3DG';
-const GH_DEFAULT = {
-  repo: 'sanbox-dashboard/dashboard-reputacao',
-  branch: 'main',
-  pat: _p1 + _p2 + _p3
-};
-const GH_CONFIG_KEY = 'dashboard-reputacao-gh';
-function ghGetConfig(){
-  try{
-    const saved = JSON.parse(localStorage.getItem(GH_CONFIG_KEY)||'{}');
-    return {
-      repo: saved.repo || GH_DEFAULT.repo,
-      branch: saved.branch || GH_DEFAULT.branch,
-      pat: saved.pat || GH_DEFAULT.pat,
-      lastSync: saved.lastSync
-    };
-  }catch(e){ return {...GH_DEFAULT}; }
+// FIREBASE / FIRESTORE — sincronização em tempo real.
+// Sem tokens no HTML: a segurança é feita pelas regras do Firestore (coleção
+// "dashboard" liberada; todo o resto bloqueado). O projectId é público por design.
+const FS_PROJECT = 'sanbox-5ac59';
+const FS_COL = 'dashboard';
+firebase.initializeApp({projectId: FS_PROJECT});
+const fsDb = firebase.firestore();
+
+// Espelho local do estado na nuvem — mantido pelo listener em tempo real.
+let fsCloud = null;
+let fsWritten = {};          // cache p/ gravar só o que mudou (stringify estável)
+let _fsReadyResolve;
+const fsReadyPromise = new Promise(r => _fsReadyResolve = r);
+
+// stringify com chaves ordenadas — Firestore devolve mapas em ordem alfabética,
+// então comparação por JSON simples geraria regravações falsas.
+function stableStr(o){
+  if(o === null || typeof o !== 'object') return JSON.stringify(o);
+  if(Array.isArray(o)) return '[' + o.map(stableStr).join(',') + ']';
+  return '{' + Object.keys(o).sort().map(k => JSON.stringify(k)+':'+stableStr(o[k])).join(',') + '}';
 }
-function ghSetConfig(c){ localStorage.setItem(GH_CONFIG_KEY, JSON.stringify(c)); }
+
+// Monta o estado a partir dos docs: day_YYYY-MM-DD => entries; meta_<chave> => topo.
+fsDb.collection(FS_COL).onSnapshot(snap => {
+  const st = {entries:{}};
+  snap.forEach(doc => {
+    if(doc.id.startsWith('day_')){
+      st.entries[doc.id.slice(4)] = doc.data();
+      fsWritten[doc.id] = stableStr(doc.data());
+    } else if(doc.id.startsWith('meta_')){
+      st[doc.id.slice(5)] = doc.data().v;
+      fsWritten[doc.id] = stableStr(doc.data().v);
+    }
+  });
+  fsCloud = st;
+  _fsReadyResolve();
+  // Mudança vinda de OUTRA máquina → aplica na tela em segundos
+  if(!snap.metadata.hasPendingWrites && typeof silentPull === 'function'){
+    setTimeout(()=>{ try{ silentPull(); }catch(e){} }, 50);
+  }
+}, err => {
+  console.error('[Dashboard] Listener Firestore falhou:', err);
+  lastSyncError = err.message;
+});
+
+// Grava na nuvem apenas os documentos que mudaram. Retorna nº de gravações.
+async function fsSaveState(st){
+  const clean = JSON.parse(JSON.stringify(st)); // remove undefined
+  const pend = [];
+  Object.keys(clean.entries || {}).forEach(day => {
+    const j = stableStr(clean.entries[day]);
+    if(fsWritten['day_'+day] !== j) pend.push({id:'day_'+day, data: clean.entries[day], j});
+  });
+  Object.keys(clean).forEach(k => {
+    if(k === 'entries') return;
+    const j = stableStr(clean[k] ?? null);
+    if(fsWritten['meta_'+k] !== j) pend.push({id:'meta_'+k, data:{v: clean[k] ?? null}, j});
+  });
+  for(let i = 0; i < pend.length; i += 400){
+    const batch = fsDb.batch();
+    pend.slice(i, i+400).forEach(x => batch.set(fsDb.collection(FS_COL).doc(x.id), x.data));
+    await batch.commit();
+  }
+  pend.forEach(x => { fsWritten[x.id] = x.j; });
+  return pend.length;
+}
+
+// Stubs de compatibilidade com o código legado (config do GitHub não existe mais)
+function ghGetConfig(){ return {repo:'firebase:'+FS_PROJECT, branch:'-', pat:'firestore', lastSync: window._fsLastSync}; }
+function ghSetConfig(c){ window._fsLastSync = c && c.lastSync; }
 function ghLog(msg, type){
   const el = document.getElementById('gh-log');
   if(!el) return;
@@ -2078,98 +2103,27 @@ function ghStatus(msg){
   if(el) el.textContent = msg;
 }
 function ghLoadConfigUI(){
-  const c = ghGetConfig();
-  const repo = document.getElementById('gh-repo'); if(repo) repo.value = c.repo;
-  const br = document.getElementById('gh-branch'); if(br) br.value = c.branch;
-  const pat = document.getElementById('gh-pat'); if(pat) pat.value = c.pat;
-  if(c.repo && c.pat){
-    ghStatus('✓ Sincronização ativa · ' + (c.lastSync ? 'última sync ' + new Date(c.lastSync).toLocaleString('pt-BR') : 'pronto'));
-  }
+  ghStatus('✓ Tempo real ativo');
 }
-function ghSaveConfig(){
-  const c = {
-    repo: document.getElementById('gh-repo').value.trim(),
-    branch: document.getElementById('gh-branch').value.trim() || 'main',
-    pat: document.getElementById('gh-pat').value.trim(),
-    lastSync: ghGetConfig().lastSync
-  };
-  if(!c.repo || !c.pat){ ghLog('Preencha repositório e PAT.', 'err'); return; }
-  ghSetConfig(c);
-  ghLog('Configuração salva. Tente "Carregar do GitHub" para puxar a versão mais recente.', 'ok');
-  ghStatus('Configurado');
-}
+function ghSaveConfig(){ /* não usado — sync via Firebase */ }
 
-// Busca o data.json do GitHub.
-// requireSha=true (default false): força usar API autenticada (necessário pra pushes).
-//   Se a API falhar, NÃO usa fallback — propaga erro pra o caller saber.
-// requireSha=false: tenta API, mas se falhar usa raw URL (sem rate limit, sem sha).
+// Devolve o estado atual da nuvem (espelho mantido em tempo real pelo listener).
+// Aguarda a primeira sincronização — não custa leituras extras.
 async function ghGetFile(requireSha=false){
-  const c = ghGetConfig();
-  if(!c.repo) throw new Error('GitHub não configurado');
-  const branch = c.branch || 'main';
-  let lastErr = null;
-  // Tentativa 1-3: api.github.com com retry exponencial
-  for(let attempt = 1; attempt <= 3; attempt++){
-    try{
-      const url = `https://api.github.com/repos/${c.repo}/contents/data.json?ref=${branch}&_=${Date.now()}`;
-      // NÃO enviar 'Cache-Control'/'Pragma': o CORS da api.github.com não permite
-      // esses headers no preflight → o navegador aborta com "Failed to fetch"
-      // (era a causa do push nunca funcionar). ?_=Date.now() + cache:'no-store' já evitam cache.
-      const headers = {
-        'Accept': 'application/vnd.github+json'
-      };
-      if(c.pat) headers['Authorization'] = 'Bearer '+c.pat;
-      const res = await fetch(url, {cache: 'no-store', headers});
-      if(res.status===404) return {content:null, sha:null};
-      if(res.status === 403 || res.status === 429){
-        throw new Error(`Rate limit (HTTP ${res.status})`);
-      }
-      if(!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
-      let b64 = (data.content || '').replace(/\s/g,'');
-      // Arquivos >1MB: a contents API devolve content vazio (encoding:"none").
-      // Nesse caso busca o blob direto (funciona até 100MB).
-      if(!b64 && data.git_url){
-        const blobRes = await fetch(data.git_url + '?_=' + Date.now(), {cache:'no-store', headers});
-        if(!blobRes.ok) throw new Error(`Blob HTTP ${blobRes.status}`);
-        b64 = ((await blobRes.json()).content || '').replace(/\s/g,'');
-      }
-      if(!b64) throw new Error('API devolveu conteúdo vazio');
-      // Decode UTF-8 correto
-      const binary = atob(b64);
-      const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
-      const decoded = new TextDecoder('utf-8').decode(bytes);
-      return {content: JSON.parse(decoded), sha: data.sha};
-    }catch(e){
-      lastErr = e;
-      console.warn(`[Dashboard] api.github.com tentativa ${attempt}/3 falhou:`, e.message);
-      if(attempt < 3) await new Promise(r => setTimeout(r, attempt * 500));
-    }
-  }
-  // Se precisa de sha (pra push), NÃO usa fallback — propaga erro
-  if(requireSha) throw lastErr || new Error('API GitHub indisponível (não pode salvar agora)');
-  // Fallback só pra leitura: raw.githubusercontent.com (sem rate limit, mas sem sha)
-  try{
-    const rawUrl = `https://raw.githubusercontent.com/${c.repo}/${branch}/data.json?_=${Date.now()}`;
-    const res = await fetch(rawUrl, {cache: 'no-store'});
-    if(res.ok){
-      const text = await res.text();
-      console.log('[Dashboard] Fallback raw.githubusercontent.com OK');
-      return {content: JSON.parse(text), sha: null};
-    }
-  }catch(e){ console.warn('[Dashboard] Fallback raw falhou:', e.message); }
-  throw lastErr || new Error('Não foi possível buscar data.json');
+  await fsReadyPromise;
+  const temDados = fsCloud && (Object.keys(fsCloud.entries||{}).length || Object.keys(fsCloud).length > 1);
+  return {content: temDados ? JSON.parse(JSON.stringify(fsCloud)) : null, sha: 'firestore'};
 }
 
 async function ghPull(){
-  ghLog('Carregando do GitHub...', 'info');
+  ghLog('Carregando da nuvem...', 'info');
   try{
     const {content} = await ghGetFile();
-    if(!content){ ghLog('Arquivo data.json não existe ainda no repo.', 'info'); return; }
-    if(!confirm('Substituir os dados locais pela versão do GitHub?')) return;
+    if(!content){ ghLog('Nuvem ainda vazia.', 'info'); return; }
+    if(!confirm('Substituir os dados locais pela versão da nuvem?')) return;
     state = content; save();
     renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro(); renderTabs();
-    ghLog('✓ Dados carregados do GitHub.', 'ok');
+    ghLog('✓ Dados carregados da nuvem.', 'ok');
   }catch(e){ ghLog('Erro: '+e.message, 'err'); }
 }
 
@@ -2196,69 +2150,30 @@ function sanitizeState(st){
 }
 
 async function ghPush(silent){
-  const c = ghGetConfig();
-  if(!c.repo || !c.pat){ if(!silent) ghLog('Configure o GitHub primeiro.', 'err'); return; }
-  if(!silent) ghLog('Enviando ao GitHub...', 'info');
-  // Tenta até 3 vezes — útil se houve conflito de sha entre múltiplos PCs salvando juntos
-  for(let attempt = 1; attempt <= 3; attempt++){
-    try{
-      // Pega sha mais recente E o conteúdo atual — REQUER autenticação
-      const cur = await ghGetFile(true);
-      const sha = cur.sha;
-      // CRÍTICO: faz MERGE entre o estado local e o remoto antes de pushar.
-      // Sem isso, o push sobrescreve campos que outros writers (scheduled task,
-      // outros usuários) gravaram entre nosso último pull e este push.
-      const toPush = sanitizeState(cur.content ? mergeWithRemote(cur.content) : state);
-      // Atualiza estado local com merged pra render consistente
-      state = toPush;
-      _origSave();
-      // Encoda em base64 com UTF-8 correto
-      const jsonStr = JSON.stringify(toPush, null, 2);
-      const utf8Bytes = new TextEncoder().encode(jsonStr);
-      let binary = '';
-      utf8Bytes.forEach(b => binary += String.fromCharCode(b));
-      const contentB64 = btoa(binary);
-      const url = `https://api.github.com/repos/${c.repo}/contents/data.json`;
-      const body = {
-        message: `chore(data): sync ${todayKey()} ${new Date().toLocaleTimeString('pt-BR')}`,
-        content: contentB64,
-        branch: c.branch || 'main'
-      };
-      if(sha) body.sha = sha;
-      const res = await fetch(url, {
-        method: 'PUT',
-        headers: {'Authorization': 'Bearer '+c.pat, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json'},
-        body: JSON.stringify(body)
-      });
-      if(res.status === 409 || res.status === 422){
-        // Conflito de sha — outro PC salvou ao mesmo tempo. Re-tenta puxando sha nova.
-        console.warn(`[Dashboard] Conflito sha (HTTP ${res.status}) — tentativa ${attempt}/3, re-puxando sha`);
-        if(attempt < 3){ await new Promise(r => setTimeout(r, 300)); continue; }
-      }
-      if(!res.ok) throw new Error(`HTTP ${res.status}: ${(await res.text()).slice(0,200)}`);
-      c.lastSync = new Date().toISOString();
-      ghSetConfig(c);
-      lastPushOk = new Date();
-      lastPushError = null;
-      ghStatus('Configurado · última sync ' + new Date(c.lastSync).toLocaleString('pt-BR'));
-      if(!silent) ghLog('✓ Enviado ao GitHub.', 'ok');
-      updatePushAlertBanner();
-      return; // sucesso
-    }catch(e){
-      if(attempt < 3){
-        console.warn(`[Dashboard] Push tentativa ${attempt}/3 falhou:`, e.message);
-        await new Promise(r => setTimeout(r, attempt * 500));
-        continue;
-      }
-      // Última tentativa falhou — TOAST + BANNER VISÍVEL
-      lastPushError = {when: new Date(), msg: e.message};
-      const errMsg = '⚠ FALHOU ao salvar no GitHub: ' + e.message.slice(0,80);
-      if(!silent) ghLog(errMsg, 'err');
-      showToast(errMsg, 'err');
-      console.error('autoSync falhou após 3 tentativas:', e);
-      updatePushAlertBanner();
-      throw e;
-    }
+  if(!silent) ghLog('Enviando à nuvem...', 'info');
+  try{
+    await fsReadyPromise;
+    // MERGE com a nuvem antes de gravar — preserva o que outras máquinas escreveram
+    const base = fsCloud ? mergeWithRemote(JSON.parse(JSON.stringify(fsCloud))) : state;
+    const toPush = sanitizeState(base);
+    state = toPush;
+    _origSave();
+    const n = await fsSaveState(toPush);
+    window._fsLastSync = new Date().toISOString();
+    lastPushOk = new Date();
+    lastPushError = null;
+    ghStatus('✓ Tempo real ativo · última gravação ' + lastPushOk.toLocaleTimeString('pt-BR'));
+    if(!silent) ghLog('✓ Enviado à nuvem' + (n ? ` (${n} doc${n===1?'':'s'})` : ' (sem mudanças)'), 'ok');
+    updatePushAlertBanner();
+    return;
+  }catch(e){
+    lastPushError = {when: new Date(), msg: e.message};
+    const errMsg = '⚠ FALHOU ao salvar na nuvem: ' + e.message.slice(0,80);
+    if(!silent) ghLog(errMsg, 'err');
+    showToast(errMsg, 'err');
+    console.error('ghPush falhou:', e);
+    updatePushAlertBanner();
+    throw e;
   }
 }
 let lastPushError = null;
@@ -2272,7 +2187,7 @@ function updatePushAlertBanner(){
   }
   if(lastPushError){
     const min = Math.floor((Date.now() - lastPushError.when.getTime()) / 60000);
-    banner.innerHTML = `🚨 <strong>SYNC COM GITHUB FALHANDO</strong> · ${lastPushError.msg.slice(0,120)} · ${min}min atrás · <button onclick="window.forceFullResync && window.forceFullResync()" style="background:#ef4444;color:#fff;border:none;padding:4px 10px;border-radius:6px;cursor:pointer;font-weight:700;margin-left:8px">Tentar de novo</button> <button onclick="document.getElementById('push-alert-banner').style.display='none'" style="background:none;border:1px solid #991b1b;color:#991b1b;padding:4px 10px;border-radius:6px;cursor:pointer;margin-left:6px">Fechar</button>`;
+    banner.innerHTML = `🚨 <strong>SYNC COM A NUVEM FALHANDO</strong> · ${lastPushError.msg.slice(0,120)} · ${min}min atrás · <button onclick="window.forceFullResync && window.forceFullResync()" style="background:#ef4444;color:#fff;border:none;padding:4px 10px;border-radius:6px;cursor:pointer;font-weight:700;margin-left:8px">Tentar de novo</button> <button onclick="document.getElementById('push-alert-banner').style.display='none'" style="background:none;border:1px solid #991b1b;color:#991b1b;padding:4px 10px;border-radius:6px;cursor:pointer;margin-left:6px">Fechar</button>`;
     banner.style.display = 'block';
     document.body.style.paddingTop = '50px';
   } else {
@@ -2316,6 +2231,34 @@ async function forceRefresh(){
     if(btn){ btn.textContent = '⚠ Erro'; setTimeout(()=>{ btn.textContent='🔄 Atualizar'; btn.disabled=false; }, 2000); }
   }
 }
+
+// PONTE GitHub → nuvem: a tarefa agendada ainda grava tickets no data.json do
+// GitHub. A cada 10 min o dashboard puxa o raw (sem auth), faz merge e grava na
+// nuvem só o que mudou. Quando a tarefa for migrada pro Firestore, remova isso.
+const GH_RAW_DATA = 'https://raw.githubusercontent.com/sanbox-dashboard/dashboard-reputacao/main/data.json';
+let bridgeBusy = false;
+async function bridgeGitHub(){
+  if(bridgeBusy || pushInProgress) return;
+  bridgeBusy = true;
+  try{
+    const res = await fetch(GH_RAW_DATA + '?_=' + Date.now(), {cache:'no-store'});
+    if(res.ok){
+      const gh = await res.json();
+      if(gh && gh.entries){
+        await fsReadyPromise;
+        state = sanitizeState(mergeWithRemote(gh));
+        carryOverTickets();
+        _origSave();
+        renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro();
+        await ghPush(true); // grava só diferenças
+        console.log('[Dashboard] Ponte GitHub→nuvem OK');
+      }
+    }
+  }catch(e){ console.warn('[Dashboard] Ponte GitHub falhou:', e.message); }
+  finally{ bridgeBusy = false; }
+}
+setTimeout(bridgeGitHub, 6000);
+setInterval(bridgeGitHub, 10 * 60 * 1000);
 
 // Refresh COMPLETO da página a cada 20 minutos
 const RELOAD_INTERVAL_MS = 20 * 60 * 1000;
@@ -2454,7 +2397,7 @@ function detectLocalOnlyEntries(remote){
 // Botão "Forçar sincronização total" — wipe localStorage do estado E re-carrega do GitHub.
 // USE QUANDO: o aparelho mostra dados diferentes dos outros (e você sabe que GitHub tem o certo).
 async function forceFullResync(){
-  if(!confirm('Vai apagar os dados locais deste aparelho e re-baixar do GitHub. Use só se este aparelho está mostrando dados diferentes dos outros. Continuar?')) return;
+  if(!confirm('Vai apagar os dados locais deste aparelho e re-baixar da nuvem. Use só se este aparelho está mostrando dados diferentes dos outros. Continuar?')) return;
   const btn = document.getElementById('force-resync-btn');
   if(btn){ btn.textContent = '⏳ Re-sincronizando...'; btn.disabled = true; }
   const c = ghGetConfig();
@@ -2470,15 +2413,15 @@ async function forceFullResync(){
     log('Buscando data.json...');
     const {content, sha} = await ghGetFile(false);
     log(`Fetch retornou: content=${content ? 'OK ('+Object.keys(content).length+' keys)' : 'NULL'}, sha=${sha||'—'}`);
-    if(!content) throw new Error('GitHub retornou vazio (verifique se o repo tem data.json)');
+    if(!content) throw new Error('Nuvem retornou vazia');
     const days = Object.keys(content.entries||{}).length;
-    log(`GitHub tem ${days} dias em entries`);
+    log(`Nuvem tem ${days} dias em entries`);
     state = content;
     carryOverTickets();
     _origSave();
     // 3. Re-render tudo
     renderTodayCards(); renderMonthCards(); renderHistory(); renderRegistro(); renderTabs();
-    ghLog(`✓ Re-sincronizado: ${days} dias carregados do GitHub`, 'ok');
+    ghLog(`✓ Re-sincronizado: ${days} dias carregados da nuvem`, 'ok');
     if(btn){ btn.textContent = '✓ OK'; setTimeout(()=>{ btn.textContent='🔁 Forçar sincronização total'; btn.disabled=false; }, 2500); }
   }catch(e){
     console.error('Force resync failed:', e);
@@ -2495,7 +2438,7 @@ async function forceFullResync(){
 // Botão "Forçar push" — empurra TUDO que está no localStorage pro GitHub.
 // USE QUANDO: você sabe que tem dados nesse aparelho que talvez não tenham subido.
 async function forcePushAll(){
-  if(!confirm('Vai enviar TODOS os dados deste aparelho pro GitHub (com merge — não sobrescreve). Continuar?')) return;
+  if(!confirm('Vai enviar TODOS os dados deste aparelho pra nuvem (com merge — não sobrescreve). Continuar?')) return;
   const btn = document.getElementById('force-push-btn');
   if(btn){ btn.textContent = '⏳ Enviando...'; btn.disabled = true; }
   const c = ghGetConfig();
@@ -2505,10 +2448,10 @@ async function forcePushAll(){
     const days = Object.keys(state.entries||{}).length;
     console.log(`[forcePushAll] Estado local: ${(stateStr.length/1024).toFixed(1)}KB, ${days} dias`);
     console.log(`[forcePushAll] Config: repo=${c.repo}, PAT=${c.pat ? 'presente' : 'AUSENTE'}`);
-    if(!c.pat) throw new Error('PAT não configurado — abra "Configuração avançada"');
+    
     await ghPush(false);
     lastPushOk = new Date();
-    alert(`✓ Push OK!\n\nEnviado ${days} dias ao GitHub.\n\nSe outros aparelhos ainda não mostram os dados, peça pra eles clicarem em "🔁 Forçar sincronização total".`);
+    alert(`✓ Envio OK!\n\n${days} dias na nuvem.\n\nAs outras telas atualizam sozinhas em segundos.`);
     if(btn){ btn.textContent = '✓ OK'; setTimeout(()=>{ btn.textContent='⬆ Forçar push deste aparelho'; btn.disabled=false; }, 2500); }
   }catch(e){
     console.error('[forcePushAll] Falhou:', e);
@@ -3415,17 +3358,17 @@ renderTabs();
 // Mostra versão do app no footer
 const _vt = document.getElementById('app-version-tag'); if(_vt) _vt.textContent = 'v' + APP_VERSION;
 
-// Mostra loading state enquanto busca do GitHub — evita mostrar dados desatualizados
+// Mostra loading state enquanto busca da nuvem — evita mostrar dados desatualizados
 // do localStorage em máquinas que acabaram de receber a versão nova do HTML
 const _todayGrid = document.getElementById('today-grid');
-if(_todayGrid) _todayGrid.innerHTML = '<div class="empty-state" style="padding:48px;font-size:16px">🔄 Carregando dados do GitHub...</div>';
+if(_todayGrid) _todayGrid.innerHTML = '<div class="empty-state" style="padding:48px;font-size:16px">🔄 Carregando dados da nuvem...</div>';
 renderMonthCards();
 renderHistory();
 
 // Inicialização: pull do GitHub com retry/fallback. Se falhar, usa cache local.
 (async ()=>{
   const c = ghGetConfig();
-  if(!c.repo){ console.warn('[Dashboard] GitHub não configurado'); return; }
+  if(!c.repo){ console.warn('[Dashboard] Sync não configurado'); return; }
   try{
     const {content} = await ghGetFile(); // já tem retry 3x + fallback raw
     if(content){
@@ -3445,10 +3388,10 @@ renderHistory();
       // que ele detecta e empurra pro GitHub automaticamente.
       if(localOnly.length > 0 && c.pat){
         console.warn('[Dashboard] BOOT AUTO-RECOVERY: detectados', localOnly.length, 'entradas locais não-sincronizadas:', localOnly);
-        ghLog(`🔁 Recuperando ${localOnly.length} entradas não-sincronizadas...`, 'info');
+        ghLog(`🔁 Enviando ${localOnly.length} entradas à nuvem...`, 'info');
         ghPush(true).then(()=>{
           lastPushOk = new Date();
-          ghLog(`✓ Recuperadas ${localOnly.length} entradas pro GitHub`, 'ok');
+          ghLog(`✓ ${localOnly.length} entradas gravadas na nuvem`, 'ok');
           updateReloadIndicator();
         }).catch(e => {
           console.error('Boot auto-recovery falhou:', e);
@@ -3459,8 +3402,9 @@ renderHistory();
       console.log('[Dashboard] Sync inicial OK —', days, 'dias carregados, ', localOnly.length, 'local-only');
       ghLog(`✓ Sincronizado às ${lastSyncOk.toLocaleTimeString('pt-BR')} — ${days} dias`, 'ok');
     } else {
-      lastSyncError = 'data.json vazio no GitHub';
-      ghLog('⚠ data.json vazio no GitHub', 'err');
+      // Nuvem vazia (primeira vez): o auto-recovery abaixo e a ponte GitHub importam os dados.
+      lastSyncError = null;
+      ghLog('Nuvem vazia — importando dados…', 'info');
       updateReloadIndicator();
     }
   }catch(e){
