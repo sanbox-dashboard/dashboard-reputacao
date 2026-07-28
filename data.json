@@ -3001,13 +3001,13 @@
       },
       "casasbahia": {
         "metrics": {},
-        "ts": "2026-07-28T10:04:29.622720-03:00",
+        "ts": "2026-07-28T20:28:21.753287-03:00",
         "tickets": 0,
-        "sacForaPrazo": 0,
+        "sacForaPrazo": 1,
         "casosCriticos": 26,
         "solicitacaoDevolucaoAmarelo": 6,
-        "solicitacaoDevolucaoVermelho": 5,
-        "solicitacaoDevolucao": 11
+        "solicitacaoDevolucaoVermelho": 4,
+        "solicitacaoDevolucao": 10
       },
       "shopee": {
         "metrics": {},
@@ -3022,6 +3022,16 @@
     }
   },
   "ticketsRaw": [
+    {
+      "n": "99917024",
+      "d": "28/07/2026",
+      "ym": "2026-07",
+      "lj": "Mercado Livre",
+      "pb": "Danificado Transporte Marketplace",
+      "sk": "TI1390",
+      "tr": "Mercado Envios",
+      "pr": "—"
+    },
     {
       "n": "99917023",
       "d": "28/07/2026",
@@ -11913,7 +11923,7 @@
       "pr": "—"
     }
   ],
-  "ticketsRawUpdatedAt": "2026-07-28T18:14:19.745563-03:00",
+  "ticketsRawUpdatedAt": "2026-07-28T20:28:21.753287-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
@@ -14490,7 +14500,7 @@
       "desconto_sug": 187.63,
       "frete": 154.03,
       "total": 341.66,
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 4300.0,
       "aceito": false
     },
     {
@@ -17628,9 +17638,25 @@
       "total": 174.24,
       "valor_real_fechado": 298.78,
       "aceito": false
+    },
+    {
+      "pedido": "2000014133095001",
+      "data": "21/07/2026",
+      "ym": "2026-07",
+      "canal": "mercadolivre",
+      "sku": "TI1390",
+      "valor_pedido": 589.9,
+      "custo": 334.11,
+      "problema": "Avaria",
+      "pct_desc": 30.0,
+      "desconto_sug": 100.23,
+      "frete": 0.0,
+      "total": 100.23,
+      "valor_real_fechado": 117.98,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-07-28T18:14:19.745563-03:00",
+  "descontosUpdatedAt": "2026-07-28T20:28:21.753287-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -17811,13 +17837,13 @@
       "casasbahia": {
         "count": 16,
         "countAceito": 5,
-        "descontoTotal": 2770.0,
+        "descontoTotal": 7070.0,
         "custoTotal": 17623.04,
         "valorPedidoTotal": 27450.01,
-        "pctDescontoSobreCusto": 15.72,
-        "pctDescontoSobreVenda": 10.09,
+        "pctDescontoSobreCusto": 40.12,
+        "pctDescontoSobreVenda": 25.76,
         "vendaTotalCanal": 1214519.32,
-        "pctDescontoSobreVendaCanal": 0.2281
+        "pctDescontoSobreVendaCanal": 0.5821
       },
       "mercadolivre": {
         "count": 57,
@@ -17945,13 +17971,13 @@
         "pctDescontoSobreVendaCanal": 0
       },
       "mercadolivre": {
-        "count": 25,
+        "count": 26,
         "countAceito": 8,
-        "descontoTotal": 7359.12,
-        "custoTotal": 32279.14,
-        "valorPedidoTotal": 48694.9,
-        "pctDescontoSobreCusto": 22.8,
-        "pctDescontoSobreVenda": 15.11,
+        "descontoTotal": 7477.1,
+        "custoTotal": 32613.25,
+        "valorPedidoTotal": 49284.8,
+        "pctDescontoSobreCusto": 22.93,
+        "pctDescontoSobreVenda": 15.17,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       },
