@@ -454,7 +454,7 @@
     <div class="registro-filters">
       <div class="filter-group">
         <label for="filter-month">Mês</label>
-        <select id="filter-month" onchange="renderRegistro()"></select>
+        <select id="filter-month" onchange="renderRegistro(); renderMonthCards()"></select>
       </div>
       <div class="filter-group">
         <label for="filter-day">Dia</label>
@@ -509,7 +509,7 @@
   <section id="comissao-section">
     <h2 class="section-title">
       Comissão do Time
-      <span class="section-subtitle" id="comissao-subtitle">Cálculo baseado em reputação média do mês + indicadores operacionais</span>
+      <span class="section-subtitle" id="comissao-subtitle">Cálculo baseado na fotografia do último dia do mês (reputação + tickets no fechamento)</span>
     </h2>
     <div class="tickets-filters">
       <div class="filter-group">
@@ -536,7 +536,7 @@
     <div class="tickets-grid" style="grid-template-columns:1fr">
       <div class="tickets-card full">
         <h3>Cores consolidadas por canal (mês selecionado)</h3>
-        <div class="ch">Pior cor entre todas as métricas de reputação (média do mês). Verde = dentro do alerta · Amarelo = entre alerta e meta · Vermelho = pior que meta.</div>
+        <div class="ch">Fotografia do fechamento: pior cor entre as métricas no ÚLTIMO dia do mês selecionado. Verde = dentro do alerta · Amarelo = entre alerta e meta · Vermelho = pior que meta.</div>
         <div id="comissao-colors" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px"></div>
       </div>
       <div class="tickets-card full">
@@ -651,7 +651,7 @@
           <strong style="color:var(--text)">Cortes default dos tickets</strong> (configurável no topo da aba):<br>
           • Tickets financeiros: 1+ em atraso = perde R$ 200<br>
           • SAC fora do prazo (+30d): 1+ em atraso = perde R$ 200<br><br>
-          <strong style="color:var(--text)">Apuração:</strong> na virada do mês com base na média mensal das métricas. Durante o mês o dashboard mostra a previsão em tempo real.
+          <strong style="color:var(--text)">Apuração:</strong> na virada do mês com base na FOTOGRAFIA do último dia fechado — reputação do último dia + tickets em aberto no fechamento. Durante o mês o dashboard mostra a previsão em tempo real (último dia disponível).
         </div>
       </div>
     </div>
@@ -866,7 +866,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '42.1';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '43.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -1087,28 +1087,38 @@ function renderSummary(counts){
 /* =========================================================================
    CARDS DE MÉDIA MENSAL
    ========================================================================= */
+// Último dia do mês (ym) em que o canal tem dados manuais (reputação/métricas)
+function ultimoDiaComDados(canalKey, ym){
+  const dias = Object.keys(state.entries||{}).filter(d=>d.startsWith(ym)).sort().reverse();
+  for(const d of dias){
+    const e = state.entries[d] && state.entries[d][canalKey];
+    if(e && (e.reputacao || (e.metrics && Object.values(e.metrics).some(v=>v!==null&&v!==undefined&&v!=='')))) return d;
+  }
+  return null;
+}
+// Mês selecionado no filtro do Registro Diário (ou mês atual)
+function mesSelecionado(){
+  const sel = document.getElementById('filter-month');
+  return (sel && sel.value && sel.value !== 'all') ? sel.value : monthKey(todayKey());
+}
+
 function renderMonthCards(){
   const grid = document.getElementById('month-grid');
-  const monthK = monthKey(todayKey());
-  document.getElementById('month-subtitle').textContent = monthLabel(monthK);
+  const monthK = mesSelecionado();
+  document.getElementById('month-subtitle').textContent = monthLabel(monthK) + ' — médias + fotografia do fechamento';
 
-  // Coleta entradas do mês
   const monthEntries = Object.entries(state.entries).filter(([k])=> k.startsWith(monthK)).map(([k,v])=>v);
   let html = '';
   Object.entries(channels).forEach(([key, ch])=>{
-    let worst = 'unknown';
     let metricsHtml = '';
     Object.entries(ch.metrics).forEach(([mKey, m])=>{
       const vals = monthEntries.map(e=> e[key]?.metrics?.[mKey]).filter(v=> v!==undefined && v!==null && v!=='' && !isNaN(v)).map(parseFloat);
       const avg = vals.length ? (vals.reduce((a,b)=>a+b,0)/vals.length) : null;
       const st = getStatus(avg, m);
-      if(st==='red') worst='red';
-      else if(st==='yellow' && worst!=='red') worst='yellow';
-      else if(st==='green' && worst==='unknown') worst='green';
       const arrow = m.metaType==='max' ? '≤' : '≥';
       metricsHtml += `<li class="metric-row ${st}">
         <div class="label-block">
-          <span class="label">${m.label}</span>
+          <span class="label">${m.label} <span style="font-weight:400;color:var(--muted)">(média)</span></span>
           <span class="meta-info">Meta ${arrow}${fmtNumber(m.meta,m.unit)} · Alerta ${arrow}${fmtNumber(m.alerta,m.unit)} · ${vals.length} dia${vals.length===1?'':'s'}</span>
         </div>
         <div class="value-block">
@@ -1117,7 +1127,47 @@ function renderMonthCards(){
       </li>`;
     });
     const days = monthEntries.filter(e=> e[key]).length;
-    // Semáforo da média do mês — verde/amarelo/vermelho
+
+    // ===== FOTOGRAFIA DO FECHAMENTO: último dia do mês com dados =====
+    // É ela que define o semáforo do canal e a comissão do mês.
+    const lastD = ultimoDiaComDados(key, monthK);
+    let worst = 'unknown';
+    let fotoHtml = '';
+    if(lastD){
+      const e = state.entries[lastD][key];
+      let fotoRows = '';
+      Object.entries(ch.metrics).forEach(([mKey, m])=>{
+        const v = e.metrics?.[mKey];
+        const st = getStatus(v, m);
+        if(st==='red') worst='red';
+        else if(st==='yellow' && worst!=='red') worst='yellow';
+        else if(st==='green' && worst==='unknown') worst='green';
+        fotoRows += `<div class="mini-metric ${st}" style="margin-top:3px">
+          <span class="mini-label" title="${m.label}">${m.label}</span>
+          <span class="mini-value">${fmtNumber(v, m.unit)}</span>
+        </div>`;
+      });
+      // Tickets no fechamento (último valor registrado no mês) — base da comissão
+      const tk = {
+        tickets: ultimoDoMes(key, monthK, 'tickets'),
+        sac: ultimoDoMes(key, monthK, 'sacForaPrazo'),
+        crit: ultimoDoMes(key, monthK, 'casosCriticos'),
+        dev: (ultimoDoMes(key, monthK, 'solicitacaoDevolucaoVermelho') || ultimoDoMes(key, monthK, 'solicitacaoDevolucao'))
+      };
+      const stT = tk.tickets===0?'green':'red';
+      const stS = tk.sac===0?'green': tk.sac<=3?'yellow':'red';
+      const stC = tk.crit===0?'green':'red';
+      const stD = tk.dev===0?'green':'red';
+      fotoHtml = `<div style="margin-top:12px;padding-top:10px;border-top:2px dashed var(--border)">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-bottom:6px">📸 Fechamento ${ptDate(lastD)} · ${e.reputacao || '—'}</div>
+        ${fotoRows}
+        <div class="mini-tickets ${stT}" style="margin-top:6px">🎫 ${tk.tickets} ticket${tk.tickets===1?'':'s'} fin.</div>
+        <div class="mini-tickets ${stS}" style="margin-top:2px">⏱️ ${tk.sac} SAC +30d</div>
+        <div class="mini-tickets ${stC}" style="margin-top:2px">🚨 ${tk.crit} críticos +30d</div>
+        <div class="mini-tickets ${stD}" style="margin-top:2px">📦 ${tk.dev} devol. +30d</div>
+      </div>`;
+    }
+
     const semColors = {green:'var(--green)', yellow:'var(--yellow)', red:'var(--red)', unknown:'#9ca3af'};
     const semLabels = {green:'Verde', yellow:'Amarelo', red:'Vermelho', unknown:'Sem dados'};
     const semColor = semColors[worst];
@@ -1127,7 +1177,7 @@ function renderMonthCards(){
       <div class="card-header">
         <div class="card-name"><span class="channel-tag" style="background:${ch.color}"></span>${ch.name}</div>
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end">
-          <div style="display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:14px;background:${semBg};border:1.5px solid ${semColor};font-size:11px;font-weight:700;color:${semColor};text-transform:uppercase;letter-spacing:0.4px" title="Pior cor entre as métricas do mês">
+          <div style="display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:14px;background:${semBg};border:1.5px solid ${semColor};font-size:11px;font-weight:700;color:${semColor};text-transform:uppercase;letter-spacing:0.4px" title="Cor do fechamento — fotografia do último dia do mês (base da comissão)">
             <span style="width:9px;height:9px;border-radius:50%;background:${semColor}"></span>${semLabel}
           </div>
           <div class="rep-badge">
@@ -1137,6 +1187,7 @@ function renderMonthCards(){
         </div>
       </div>
       <ul class="metric-list">${metricsHtml}</ul>
+      ${fotoHtml}
     </div>`;
   });
   grid.innerHTML = html;
@@ -2816,25 +2867,21 @@ setTimeout(() => {
    ABA COMISSÃO — cálculo mensal de comissão baseado em reputação + tickets
    ========================================================================= */
 
-// Para cada canal, calcula a média mensal de cada métrica e retorna a PIOR cor.
-// Usa as faixas Meta/Alerta já definidas em `channels[canal].metrics[mKey]`.
+// REGRA NOVA: a cor do canal no mês é a FOTOGRAFIA do último dia com dados
+// (como o mês fechou), não a média. É essa cor que define a comissão.
 function corDoMesCanal(canalKey, ym){
   const ch = channels[canalKey];
   if(!ch) return 'unknown';
-  // Coleta entradas do mês com dados de reputação/métricas
-  const dias = Object.entries(state.entries || {})
-    .filter(([d]) => d.startsWith(ym))
-    .map(([_, channels]) => channels[canalKey])
-    .filter(e => e && (e.reputacao || (e.metrics && Object.values(e.metrics).some(v => v!==null && v!==undefined && v!==''))));
-  if(!dias.length) return 'unknown';
-  let pior = 'green';
+  const lastD = ultimoDiaComDados(canalKey, ym);
+  if(!lastD) return 'unknown';
+  const e = state.entries[lastD][canalKey];
+  let pior = 'unknown';
   Object.entries(ch.metrics).forEach(([mKey, m]) => {
-    const vals = dias.map(d => d.metrics?.[mKey]).filter(v => v!==null && v!==undefined && v!=='' && !isNaN(v)).map(parseFloat);
-    if(!vals.length) return;
-    const avg = vals.reduce((a,b)=>a+b, 0) / vals.length;
-    const st = getStatus(avg, m);
+    const st = getStatus(e.metrics?.[mKey], m);
+    if(st === 'unknown') return;
     if(st === 'red') pior = 'red';
     else if(st === 'yellow' && pior !== 'red') pior = 'yellow';
+    else if(pior === 'unknown') pior = 'green';
   });
   return pior;
 }
