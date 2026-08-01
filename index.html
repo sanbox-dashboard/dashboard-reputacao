@@ -866,7 +866,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '43.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '43.1';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -913,13 +913,14 @@ function monthLabel(key){
 function getStatus(value, metric){
   if(value===null||value===undefined||value===''||isNaN(value)) return 'unknown';
   const v = parseFloat(value);
+  // Régua: no LIMITE do alerta já é amarelo (ex.: Shopee boa avaliação — vermelho <95, amarelo 95 a 97, verde só >97)
   if(metric.metaType==='max'){
     if(v > metric.meta) return 'red';
-    if(v > metric.alerta) return 'yellow';
+    if(v >= metric.alerta) return 'yellow';
     return 'green';
   } else {
     if(v < metric.meta) return 'red';
-    if(v < metric.alerta) return 'yellow';
+    if(v <= metric.alerta) return 'yellow';
     return 'green';
   }
 }
