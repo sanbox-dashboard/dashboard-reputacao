@@ -376,8 +376,30 @@
     .registro-cards{grid-template-columns:1fr}
     header h1{font-size:21px}
   }
-  @media(max-width:1400px){body.tv-mode .grid{grid-template-columns:repeat(3,1fr)}}
-  @media(max-width:900px){body.tv-mode .grid{grid-template-columns:repeat(2,1fr)}}
+  /* MODO TV: SEMPRE 5 colunas (uma por canal). Em telas menores (TV 43" com zoom
+     do Windows ~1280px), compacta os cards pra caberem os 5 lado a lado. */
+  @media(max-width:1500px){
+    body.tv-mode{padding:10px 12px}
+    body.tv-mode .grid{grid-template-columns:repeat(5,1fr);gap:8px}
+    body.tv-mode .card{padding:10px;border-radius:10px}
+    body.tv-mode .card-name{font-size:14px}
+    body.tv-mode .rep-badge .reputation{font-size:13px}
+    body.tv-mode .metric-row{padding:6px 8px;border-left-width:4px;gap:5px}
+    body.tv-mode .metric-row .label{font-size:10px}
+    body.tv-mode .metric-row .meta-info{font-size:8px}
+    body.tv-mode .metric-row .value{font-size:19px}
+    body.tv-mode .tickets-row{padding:6px 8px;margin-top:5px}
+    body.tv-mode .tickets-row .label{font-size:9px}
+    body.tv-mode .tickets-row .meta-info{display:none}
+    body.tv-mode .tickets-row .value{font-size:18px}
+    body.tv-mode header h1{font-size:22px}
+    body.tv-mode .summary-item{padding:6px 10px;gap:8px}
+    body.tv-mode .summary-info .num{font-size:18px}
+    body.tv-mode .summary-info .lbl{font-size:10px}
+    body.tv-mode .summary-icon{width:30px;height:30px;font-size:14px;border-radius:8px}
+  }
+  /* Só em tela realmente estreita (celular em pé) o TV mode quebra em 2 colunas */
+  @media(max-width:700px){body.tv-mode .grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -866,7 +888,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '43.1';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '43.2';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
