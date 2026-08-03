@@ -3127,6 +3127,76 @@
   },
   "ticketsRaw": [
     {
+      "n": "99917095.0",
+      "d": "03/08/2026",
+      "ym": "2026-08",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1526",
+      "tr": "Mercado Envios",
+      "pr": "—"
+    },
+    {
+      "n": "99917094.0",
+      "d": "03/08/2026",
+      "ym": "2026-08",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1740",
+      "tr": "Mercado Envios",
+      "pr": "—"
+    },
+    {
+      "n": "99917093.0",
+      "d": "03/08/2026",
+      "ym": "2026-08",
+      "lj": "Amazon",
+      "pb": "Atraso de Entrega",
+      "sk": "TI1562",
+      "tr": "Trilog",
+      "pr": "—"
+    },
+    {
+      "n": "99917092.0",
+      "d": "03/08/2026",
+      "ym": "2026-08",
+      "lj": "Mercado Livre",
+      "pb": "Cancelamento por Arrependimento Antes do Envio",
+      "sk": "TI1524",
+      "tr": "Mercado Envios",
+      "pr": "—"
+    },
+    {
+      "n": "99917091.0",
+      "d": "03/08/2026",
+      "ym": "2026-08",
+      "lj": "Casas Bahia",
+      "pb": "Não entregue pela Transportadora",
+      "sk": "TI1690",
+      "tr": "Trilog",
+      "pr": "—"
+    },
+    {
+      "n": "99917090.0",
+      "d": "03/08/2026",
+      "ym": "2026-08",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1571",
+      "tr": "Mercado Envios",
+      "pr": "—"
+    },
+    {
+      "n": "99917089.0",
+      "d": "03/08/2026",
+      "ym": "2026-08",
+      "lj": "Mercado Livre",
+      "pb": "Danificado Transporte Marketplace",
+      "sk": "TI1569",
+      "tr": "Mercado Envios",
+      "pr": "—"
+    },
+    {
       "n": "99917088.0",
       "d": "03/08/2026",
       "ym": "2026-08",
@@ -11947,7 +12017,7 @@
       "pr": "—"
     }
   ],
-  "ticketsRawUpdatedAt": "2026-08-03T14:12:51.302596-03:00",
+  "ticketsRawUpdatedAt": "2026-08-03T14:44:46.066368-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "(sem transportadora)": 596,
@@ -12343,7 +12413,7 @@
       "pedido": "LU-1515170100821823",
       "data": "25/02/2026",
       "ym": "2026-02",
-      "canal": "Magazine Luiza",
+      "canal": "magalu",
       "sku": "TI1690",
       "valor_pedido": 1789.3,
       "custo": 1288.79,
@@ -12943,7 +13013,7 @@
       "pedido": "1527170105995870",
       "data": "10/04/2026",
       "ym": "2026-04",
-      "canal": "Magazine Luiza",
+      "canal": "magalu",
       "sku": "TI1571",
       "valor_pedido": 1177.34,
       "custo": 589.29,
@@ -13195,7 +13265,7 @@
       "pedido": "LU-1524670104882139",
       "data": "01/04/2026",
       "ym": "2026-04",
-      "canal": "Magazine Luiza",
+      "canal": "magalu",
       "sku": "TI1454",
       "valor_pedido": 6832.36,
       "custo": 4015.19,
@@ -13908,7 +13978,7 @@
       "valor_pedido": 1023.93,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 4300.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -14119,7 +14189,7 @@
       "pedido": "LU-1536070110026882",
       "data": "13/05/2026",
       "ym": "2026-05",
-      "canal": "Magazine Luiza",
+      "canal": "magalu",
       "sku": "TI1580",
       "valor_pedido": 1323.14,
       "custo": 851.24,
@@ -14443,7 +14513,7 @@
       "pedido": "LU-1540070111717108",
       "data": "27/05/2026",
       "ym": "2026-05",
-      "canal": "Magazine Luiza",
+      "canal": "magalu",
       "sku": "TI1562",
       "valor_pedido": 1690.86,
       "custo": 1150.58,
@@ -14947,7 +15017,7 @@
       "pedido": "LU-1543870113555834",
       "data": "10/06/2026",
       "ym": "2026-06",
-      "canal": "Magazine Luiza",
+      "canal": "magalu",
       "sku": "TI1571",
       "valor_pedido": 1069.98,
       "custo": 625.44,
@@ -14959,7 +15029,7 @@
       "pedido": "LU-1544970114014679",
       "data": "14/06/2026",
       "ym": "2026-06",
-      "canal": "Magazine Luiza",
+      "canal": "magalu",
       "sku": "TI1562",
       "valor_pedido": 1790.68,
       "custo": 1150.58,
@@ -15403,7 +15473,7 @@
       "pedido": "LU-1547470115053080",
       "data": "24/06/2026",
       "ym": "2026-06",
-      "canal": "Magazine Luiza",
+      "canal": "magalu",
       "sku": "TI1514",
       "valor_pedido": 1708.92,
       "custo": 1286.69,
@@ -16478,9 +16548,21 @@
       "problema": "Avaria",
       "valor_real_fechado": 365.98,
       "aceito": false
+    },
+    {
+      "pedido": "51856994201",
+      "data": "07/07/2026",
+      "ym": "2026-07",
+      "canal": "casasbahia",
+      "sku": "TI1562",
+      "valor_pedido": 1759.7,
+      "custo": 1150.58,
+      "problema": "Avaria",
+      "valor_real_fechado": 0.0,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-08-03T14:12:51.302596-03:00",
+  "descontosUpdatedAt": "2026-08-03T14:44:46.066368-03:00",
   "descontosAggByMonth": {
     "2026-03": {
       "mercadolivre": {
@@ -16540,7 +16622,7 @@
         "vendaTotalCanal": 2287276.06,
         "pctDescontoSobreVendaCanal": 0.0231
       },
-      "Magazine Luiza": {
+      "magalu": {
         "count": 1,
         "countAceito": 0,
         "descontoTotal": 363.7,
@@ -16548,8 +16630,8 @@
         "valorPedidoTotal": 1789.3,
         "pctDescontoSobreCusto": 28.22,
         "pctDescontoSobreVenda": 20.33,
-        "vendaTotalCanal": 0,
-        "pctDescontoSobreVendaCanal": 0
+        "vendaTotalCanal": 336691.45,
+        "pctDescontoSobreVendaCanal": 0.108
       },
       "amazon": {
         "count": 1,
@@ -16610,7 +16692,7 @@
         "vendaTotalCanal": 610451.38,
         "pctDescontoSobreVendaCanal": 0.249
       },
-      "Magazine Luiza": {
+      "magalu": {
         "count": 2,
         "countAceito": 0,
         "descontoTotal": 1452.0,
@@ -16618,8 +16700,8 @@
         "valorPedidoTotal": 8009.7,
         "pctDescontoSobreCusto": 31.53,
         "pctDescontoSobreVenda": 18.13,
-        "vendaTotalCanal": 0,
-        "pctDescontoSobreVendaCanal": 0
+        "vendaTotalCanal": 323217.38,
+        "pctDescontoSobreVendaCanal": 0.4492
       },
       "casasbahia": {
         "count": 12,
@@ -16661,13 +16743,13 @@
       "casasbahia": {
         "count": 17,
         "countAceito": 5,
-        "descontoTotal": 7320.0,
+        "descontoTotal": 3020.0,
         "custoTotal": 17648.3,
         "valorPedidoTotal": 28176.22,
-        "pctDescontoSobreCusto": 41.48,
-        "pctDescontoSobreVenda": 25.98,
+        "pctDescontoSobreCusto": 17.11,
+        "pctDescontoSobreVenda": 10.72,
         "vendaTotalCanal": 1214519.32,
-        "pctDescontoSobreVendaCanal": 0.6027
+        "pctDescontoSobreVendaCanal": 0.2487
       },
       "mercadolivre": {
         "count": 57,
@@ -16702,7 +16784,7 @@
         "vendaTotalCanal": 425786.12,
         "pctDescontoSobreVendaCanal": 0.0869
       },
-      "Magazine Luiza": {
+      "magalu": {
         "count": 2,
         "countAceito": 0,
         "descontoTotal": 850.0,
@@ -16710,8 +16792,8 @@
         "valorPedidoTotal": 3014.0,
         "pctDescontoSobreCusto": 42.46,
         "pctDescontoSobreVenda": 28.2,
-        "vendaTotalCanal": 0,
-        "pctDescontoSobreVendaCanal": 0
+        "vendaTotalCanal": 740647.46,
+        "pctDescontoSobreVendaCanal": 0.1148
       }
     },
     "2026-06": {
@@ -16748,7 +16830,7 @@
         "vendaTotalCanal": 537525.22,
         "pctDescontoSobreVendaCanal": 0.5696
       },
-      "Magazine Luiza": {
+      "magalu": {
         "count": 3,
         "countAceito": 0,
         "descontoTotal": 773.0,
@@ -16756,8 +16838,8 @@
         "valorPedidoTotal": 4569.58,
         "pctDescontoSobreCusto": 25.24,
         "pctDescontoSobreVenda": 16.92,
-        "vendaTotalCanal": 0,
-        "pctDescontoSobreVendaCanal": 0
+        "vendaTotalCanal": 516270.1,
+        "pctDescontoSobreVendaCanal": 0.1497
       },
       "casasbahia": {
         "count": 2,
@@ -16806,13 +16888,13 @@
         "pctDescontoSobreVendaCanal": 0
       },
       "casasbahia": {
-        "count": 4,
+        "count": 5,
         "countAceito": 1,
         "descontoTotal": 900.0,
-        "custoTotal": 5571.85,
-        "valorPedidoTotal": 8218.85,
-        "pctDescontoSobreCusto": 16.15,
-        "pctDescontoSobreVenda": 10.95,
+        "custoTotal": 6722.43,
+        "valorPedidoTotal": 9978.55,
+        "pctDescontoSobreCusto": 13.39,
+        "pctDescontoSobreVenda": 9.02,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       }
