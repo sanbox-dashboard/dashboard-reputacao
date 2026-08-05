@@ -14174,7 +14174,7 @@
       "valor_pedido": 1023.93,
       "custo": 625.44,
       "problema": "Avaria",
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 4300.0,
       "aceito": false
     },
     {
@@ -16770,18 +16770,6 @@
       "aceito": false
     },
     {
-      "pedido": "2000017401088590",
-      "data": "13/07/2026",
-      "ym": "2026-07",
-      "canal": "mercadolivre",
-      "sku": "TI1454",
-      "valor_pedido": 5910.9,
-      "custo": 4015.19,
-      "problema": "Vazio",
-      "valor_real_fechado": 120.0,
-      "aceito": false
-    },
-    {
       "pedido": "2000014225824983",
       "data": "27/07/2026",
       "ym": "2026-07",
@@ -16912,9 +16900,21 @@
       "problema": "Avaria",
       "valor_real_fechado": 0.0,
       "aceito": false
+    },
+    {
+      "pedido": "2000017326651404",
+      "data": "08/07/2026",
+      "ym": "2026-07",
+      "canal": "mercadolivre",
+      "sku": "TI1455",
+      "valor_pedido": 5632.9,
+      "custo": 3839.22,
+      "problema": "Avaria",
+      "valor_real_fechado": 0.0,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-08-05T10:42:38.815614-03:00",
+  "descontosUpdatedAt": "2026-08-05T11:13:21.168889-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -17095,13 +17095,13 @@
       "casasbahia": {
         "count": 17,
         "countAceito": 5,
-        "descontoTotal": 3020.0,
+        "descontoTotal": 7320.0,
         "custoTotal": 17648.3,
         "valorPedidoTotal": 28176.22,
-        "pctDescontoSobreCusto": 17.11,
-        "pctDescontoSobreVenda": 10.72,
+        "pctDescontoSobreCusto": 41.48,
+        "pctDescontoSobreVenda": 25.98,
         "vendaTotalCanal": 1214519.32,
-        "pctDescontoSobreVendaCanal": 0.2487
+        "pctDescontoSobreVendaCanal": 0.6027
       },
       "mercadolivre": {
         "count": 57,
@@ -17231,11 +17231,11 @@
       "mercadolivre": {
         "count": 51,
         "countAceito": 8,
-        "descontoTotal": 15631.72,
-        "custoTotal": 81076.07,
-        "valorPedidoTotal": 121430.4,
-        "pctDescontoSobreCusto": 19.28,
-        "pctDescontoSobreVenda": 12.87,
+        "descontoTotal": 15511.72,
+        "custoTotal": 80900.1,
+        "valorPedidoTotal": 121152.4,
+        "pctDescontoSobreCusto": 19.17,
+        "pctDescontoSobreVenda": 12.8,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       },
