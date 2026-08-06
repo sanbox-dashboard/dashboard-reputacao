@@ -228,6 +228,7 @@
   .tickets-empty{padding:48px;text-align:center;color:var(--muted);font-size:14px}
   body.tv-mode [data-tab-panel="tickets"]{display:none !important}
   body.tv-mode [data-tab-panel="comissao"]{display:none !important}
+  body.tv-mode [data-tab-panel="juridico"]{display:none !important}
   /* Comissão */
   .comissao-color-tag{padding:8px 14px;border-radius:10px;font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px;border:2px solid}
   .comissao-color-tag.green{background:var(--green-bg);border-color:var(--green);color:#047857}
@@ -429,6 +430,7 @@
   <button class="main-tab" data-tab="tickets" onclick="switchMainTab('tickets')">📋 Análise de Tickets SAC</button>
   <button class="main-tab" data-tab="comissao" onclick="switchMainTab('comissao')">💰 Comissão</button>
   <button class="main-tab" data-tab="descontos" onclick="switchMainTab('descontos')">💸 Descontos Devolução</button>
+  <button class="main-tab" data-tab="juridico" onclick="switchMainTab('juridico')">⚖️ Críticos & Jurídico</button>
 </nav>
 
 <div data-tab-panel="reputacao">
@@ -519,7 +521,7 @@
       <div class="tickets-card"><h3>Tipos de problema mais frequentes</h3><div class="ch">Coluna AJ · problema_do_produto</div><div class="cv tall"><canvas id="chProb"></canvas></div></div>
       <div class="tickets-card"><h3>SKUs com mais problemas</h3><div class="ch">Coluna AP · sem o conteúdo entre parênteses</div><div class="cv tall"><canvas id="chSku"></canvas></div></div>
       <div class="tickets-card"><h3>Tickets por Loja / Marketplace</h3><div class="ch">Coluna X</div><div class="cv"><canvas id="chLoja"></canvas></div></div>
-      <div class="tickets-card"><h3>Tickets por Transportadora</h3><div class="ch">Quantidade · % no topo = tickets do mês ÷ pedidos da transportadora no mês anterior</div><div class="cv tall"><canvas id="chTransp"></canvas></div></div>
+      <div class="tickets-card"><h3>Tickets por Transportadora</h3><div class="ch">Quantidade · % no topo = tickets do mês ÷ pedidos da transportadora no MESMO mês</div><div class="cv tall"><canvas id="chTransp"></canvas></div></div>
       <div class="tickets-card full"><h3>Top SKUs no filtro atual</h3><div class="ch">Quantidade, principal problema e produto associado</div>
         <table><thead><tr><th>SKU</th><th class="num">Qtd</th><th>Principal problema</th><th>Produto</th></tr></thead><tbody id="ticketsTbody"></tbody></table>
       </div>
@@ -789,6 +791,30 @@
   </section>
 </div>
 
+<div data-tab-panel="juridico" style="display:none">
+  <section>
+    <h2 class="section-title">
+      Casos Críticos & Jurídico
+      <span class="section-subtitle" id="juridico-subtitle">Contagem e valor total do pedido por marketplace (Octadesk)</span>
+    </h2>
+    <div class="registro-filters">
+      <div class="filter-group">
+        <label for="jMes">Mês (data do ticket)</label>
+        <select id="jMes" onchange="renderJuridico()"></select>
+      </div>
+      <div class="filter-group">
+        <label for="jStatus">Status</label>
+        <select id="jStatus" onchange="renderJuridico()">
+          <option value="abertos">Abertos (Novo / Em andamento / Pendente)</option>
+          <option value="todos">Todos</option>
+        </select>
+      </div>
+      <div class="filter-summary" id="jResumo"></div>
+    </div>
+    <div class="tickets-grid" id="juridico-cards" style="grid-template-columns:repeat(3,1fr)"></div>
+  </section>
+</div>
+
 <section id="github-section">
   <h2 class="section-title">Sincronização em Nuvem <span class="section-subtitle" id="gh-status">✓ Tempo real ativo</span></h2>
   <div class="upload-section">
@@ -888,7 +914,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '43.2';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '44.2';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -1981,6 +2007,7 @@ function switchMainTab(tab){
   if(tab === 'tickets') ticketsRender();
   if(tab === 'comissao') renderComissao();
   if(tab === 'descontos') renderDescontos();
+  if(tab === 'juridico') renderJuridico();
 }
 function getActiveTab(){
   return localStorage.getItem(MAIN_TAB_KEY) || 'reputacao';
@@ -2393,9 +2420,27 @@ function mergeWithRemote(remote){
     });
   });
   // Preserva outros campos top-level (ticketsRaw, ordersByCarrier, etc.) — pega de quem tem
+  // Campos de topo com timestamp: vence o lado com *UpdatedAt mais NOVO.
+  // (Correção v44.1: antes o remoto sempre vencia, e a ponte GitHub→nuvem
+  // nunca conseguia atualizar ticketsRaw/vendas/orders na nuvem.)
+  const TS_PAIRS = {
+    ticketsRaw:'ticketsRawUpdatedAt',
+    ordersByCarrier:'ordersByCarrierUpdatedAt', ordersByCarrierMeta:'ordersByCarrierUpdatedAt',
+    vendasByCanalMes:'vendasByCanalMesUpdatedAt', vendasByCanalMesSource:'vendasByCanalMesUpdatedAt',
+    descontosRaw:'descontosUpdatedAt', descontosAggByMonth:'descontosUpdatedAt'
+  };
   const allTopLevel = new Set([...Object.keys(remote), ...Object.keys(state)]);
   allTopLevel.forEach(k => {
     if(k === 'entries') return;
+    const tsK = TS_PAIRS[k];
+    if(tsK){
+      const rT = Date.parse(remote[tsK] || 0) || 0;
+      const lT = Date.parse(state[tsK] || 0) || 0;
+      if(lT > rT && state[k] !== undefined){ merged[k] = state[k]; merged[tsK] = state[tsK]; }
+      else if(remote[k] !== undefined){ merged[k] = remote[k]; merged[tsK] = remote[tsK]; }
+      else { merged[k] = state[k]; merged[tsK] = state[tsK]; }
+      return;
+    }
     if(!(k in merged)) merged[k] = remote[k] ?? state[k];
   });
   return merged;
@@ -2848,18 +2893,17 @@ function ticketsRender(){
   const l = tCount(rows, 'lj').slice(0, 10);
   tMkDonut('chLoja', l.map(x=>x[0]), l.map(x=>x[1]));
   const t = tCount(rows, 'tr').slice(0, 12);
-  // Calcula % por transportadora: tickets do mês ÷ pedidos da transportadora no mês anterior
+  // REGRA NOVA: % por transportadora = tickets do mês ÷ pedidos da transportadora no MESMO mês
   // Usa normalização de nomes pra casar "Mercado Envios" (tickets) com "Mercado Envios Places" (pedidos)
   const mesRefPct = mes && mes !== '__all' ? mes : todayKey().slice(0, 7);
-  const mesPrevPct = tPrevMonth(mesRefPct);
-  const ordersRaw = (state.ordersByCarrier || {})[mesPrevPct] || {};
+  const ordersRaw = (state.ordersByCarrier || {})[mesRefPct] || {};
   const ordersNorm = aggregateOrdersNormalized(ordersRaw);
   const pctLabels = t.map(([transp, ticketsCount]) => {
     const ordersN = ordersNorm[normalizeCarrier(transp)];
     if(!ordersN || ordersN <= 0) return '';
     return ((ticketsCount / ordersN) * 100).toFixed(2) + '%';
   });
-  tMkBarWithPct('chTransp', t.map(x=>x[0]), t.map(x=>x[1]), pctLabels, ticketsColors.purple, mesRefPct, mesPrevPct, ordersNorm);
+  tMkBarWithPct('chTransp', t.map(x=>x[0]), t.map(x=>x[1]), pctLabels, ticketsColors.purple, mesRefPct, mesRefPct, ordersNorm);
   // Tabela top SKUs
   const tb = document.getElementById('ticketsTbody');
   if(tb){
@@ -3340,7 +3384,7 @@ function renderDescontos(){
         labels: canaisOrdenados.map(c => CANAL_LABELS[c]||c),
         datasets:[{
           label:'Desconto R$',
-          data: canaisOrdenados.map(c => agg[c].descontoTotal),
+          data: canaisOrdenados.map(c => (agg[c] ? agg[c].descontoTotal : 0)),
           backgroundColor: canaisOrdenados.map(c => CANAL_COLORS[c]),
         }]
       },
@@ -3414,6 +3458,80 @@ function renderDescontos(){
   // Atualiza subtitle
   const upd = state.descontosUpdatedAt ? new Date(state.descontosUpdatedAt).toLocaleString('pt-BR') : '—';
   document.getElementById('descontos-subtitle').textContent = `Atualizado em ${upd} · ${raws.length} descontos no histórico`;
+}
+
+/* =========================================================================
+   ABA CRÍTICOS & JURÍDICO — contagem e valor de pedido por canal
+   ========================================================================= */
+const JURIDICO_GRUPOS = [
+  {gr:'Casos Críticos', icone:'🚨', cor:'var(--red)'},
+  {gr:'Jurídico', icone:'⚖️', cor:'#7c3aed'},
+  {gr:'Juridico Defesa', icone:'🛡️', cor:'#0ea5e9'}
+];
+function renderJuridico(){
+  const cont = document.getElementById('juridico-cards');
+  if(!cont) return;
+  const all = (Array.isArray(state.ticketsRaw) ? state.ticketsRaw : []).filter(t => t.gr);
+  if(!all.length){
+    cont.innerHTML = '<div class="empty-state" style="grid-column:1/-1;padding:40px">Aguardando a tarefa agendada enviar os novos campos (grupo/valor) — próxima atualização em até 30 min.</div>';
+    const r = document.getElementById('jResumo'); if(r) r.textContent = '';
+    return;
+  }
+  // filtro de mês
+  const jMes = document.getElementById('jMes');
+  const meses = Array.from(new Set(all.map(t=>t.ym))).sort().reverse();
+  if(jMes && !jMes.dataset.init){
+    jMes.innerHTML = '<option value="__all">Todos os meses</option>' + meses.map(m=>`<option value="${m}">${tMLabel(m)}</option>`).join('');
+    jMes.value = '__all';
+    jMes.dataset.init = '1';
+  }
+  const mes = jMes ? jMes.value : '__all';
+  const stSel = (document.getElementById('jStatus')||{}).value || 'abertos';
+  const ABERTOS = ['novo','em andamento','pendente'];
+  const rows = all.filter(t =>
+    (mes==='__all' || t.ym===mes) &&
+    (stSel==='todos' || ABERTOS.includes(String(t.st||'').toLowerCase()))
+  );
+  const resumo = document.getElementById('jResumo');
+  if(resumo) resumo.textContent = `${rows.length} tickets no filtro`;
+  const fmt = n => n.toLocaleString('pt-BR', {style:'currency', currency:'BRL', minimumFractionDigits:2, maximumFractionDigits:2});
+  cont.innerHTML = JURIDICO_GRUPOS.map(g => {
+    const ts = rows.filter(t => t.gr === g.gr);
+    const porCanal = {};
+    ts.forEach(t => {
+      const c = t.lj || 'Sem canal';
+      if(!porCanal[c]) porCanal[c] = {qtd:0, valor:0};
+      porCanal[c].qtd++;
+      porCanal[c].valor += parseFloat(t.vl) || 0;
+    });
+    const canais = Object.entries(porCanal).sort((a,b)=> b[1].valor - a[1].valor);
+    const totQtd = ts.length;
+    const totVal = canais.reduce((s,[_,v])=>s+v.valor,0);
+    const linhas = canais.map(([c,v])=>`<tr style="border-bottom:1px solid var(--border)">
+        <td style="padding:7px 10px">${c}</td>
+        <td class="num" style="text-align:right;padding:7px 10px;font-weight:600">${v.qtd}</td>
+        <td class="num" style="text-align:right;padding:7px 10px">${fmt(v.valor)}</td>
+      </tr>`).join('') || '<tr><td colspan="3" style="text-align:center;padding:14px;color:var(--muted)">Nenhum ticket</td></tr>';
+    return `<div class="tickets-card">
+      <h3 style="display:flex;align-items:center;gap:8px">${g.icone} ${g.gr}
+        <span style="margin-left:auto;font-size:13px;font-weight:700;color:${g.cor}">${totQtd} ticket${totQtd===1?'':'s'}</span>
+      </h3>
+      <div class="ch">Valor total dos pedidos: <strong style="color:${g.cor}">${fmt(totVal)}</strong></div>
+      <table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:8px">
+        <thead><tr style="background:#f4f6fb">
+          <th style="text-align:left;padding:7px 10px">Marketplace</th>
+          <th style="text-align:right;padding:7px 10px">Tickets</th>
+          <th style="text-align:right;padding:7px 10px">Valor pedidos</th>
+        </tr></thead>
+        <tbody>${linhas}</tbody>
+        <tfoot><tr style="background:#f4f6fb;font-weight:700">
+          <td style="padding:7px 10px">Total</td>
+          <td style="text-align:right;padding:7px 10px">${totQtd}</td>
+          <td style="text-align:right;padding:7px 10px">${fmt(totVal)}</td>
+        </tr></tfoot>
+      </table>
+    </div>`;
+  }).join('');
 }
 
 /* =========================================================================
