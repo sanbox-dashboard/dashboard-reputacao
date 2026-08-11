@@ -3657,7 +3657,7 @@
       "pr": "—",
       "gr": "Atendimento SAC",
       "st": "Novo",
-      "vl": 10156.0
+      "vl": 101506.0
     },
     {
       "n": "99917186.0",
@@ -3747,7 +3747,7 @@
       "tr": "Alfa Transportes",
       "pr": "—",
       "gr": "Solicitação de Devolução",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 110251.0
     },
     {
@@ -3799,7 +3799,7 @@
       "tr": "Alfa Transportes",
       "pr": "—",
       "gr": "Atendimento SAC",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 167818.0
     },
     {
@@ -3825,7 +3825,7 @@
       "tr": "Alfa Transportes",
       "pr": "—",
       "gr": "Solicitação de Devolução",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 0.0
     },
     {
@@ -4398,7 +4398,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 101509.0
+      "vl": 10159.0
     },
     {
       "n": "99917121.0",
@@ -4765,19 +4765,6 @@
       "vl": 0.0
     },
     {
-      "n": "99917084.0",
-      "d": "03/08/2026",
-      "ym": "2026-08",
-      "lj": "Mercado Livre",
-      "pb": "Não Entregue Marketplace",
-      "sk": "TI1666",
-      "tr": "Mercado Envios",
-      "pr": "—",
-      "gr": "Financeiro (Estorno)",
-      "st": "Novo",
-      "vl": 10459.0
-    },
-    {
       "n": "99917083.0",
       "d": "03/08/2026",
       "ym": "2026-08",
@@ -4979,10 +4966,10 @@
       "lj": "Mercado Livre",
       "pb": "RMA",
       "sk": "SS001",
-      "tr": "Mercado Envios",
+      "tr": "Correios",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
-      "st": "Pendente",
+      "gr": "Monitoramento Devolução",
+      "st": "Novo",
       "vl": 8999.0
     },
     {
@@ -5101,19 +5088,6 @@
       "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 1187.0
-    },
-    {
-      "n": "99917049.0",
-      "d": "30/07/2026",
-      "ym": "2026-07",
-      "lj": "Mercado Livre",
-      "pb": "Não Entregue Marketplace",
-      "sk": "TI1522",
-      "tr": "Mercado Envios",
-      "pr": "—",
-      "gr": "Financeiro (Estorno)",
-      "st": "Novo",
-      "vl": 7199.0
     },
     {
       "n": "99917043.0",
@@ -5425,7 +5399,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 169106.0
+      "vl": 16916.0
     },
     {
       "n": "99917016.0",
@@ -5582,19 +5556,6 @@
       "gr": "Solicitação de Devolução",
       "st": "Novo",
       "vl": 208483.0
-    },
-    {
-      "n": "99917002.0",
-      "d": "28/07/2026",
-      "ym": "2026-07",
-      "lj": "Mercado Livre",
-      "pb": "RMA",
-      "sk": "SS001",
-      "tr": "Mercado Envios",
-      "pr": "—",
-      "gr": "Financeiro (Estorno)",
-      "st": "Novo",
-      "vl": 7599.0
     },
     {
       "n": "99917001.0",
@@ -5818,19 +5779,6 @@
       "vl": 15034.0
     },
     {
-      "n": "99916962.0",
-      "d": "26/07/2026",
-      "ym": "2026-07",
-      "lj": "Mercado Livre",
-      "pb": "Danificado Transporte Marketplace",
-      "sk": "TI1456",
-      "tr": "Mercado Envios",
-      "pr": "—",
-      "gr": "Solicitação de Devolução",
-      "st": "Pendente",
-      "vl": 0.0
-    },
-    {
       "n": "99916961.0",
       "d": "26/07/2026",
       "ym": "2026-07",
@@ -5946,19 +5894,6 @@
       "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 10999.0
-    },
-    {
-      "n": "99916947.0",
-      "d": "25/07/2026",
-      "ym": "2026-07",
-      "lj": "Mercado Livre",
-      "pb": "Arrependimento",
-      "sk": "TI673",
-      "tr": "Mercado Envios",
-      "pr": "—",
-      "gr": "Atendimento SAC",
-      "st": "Pendente",
-      "vl": 2559.0
     },
     {
       "n": "99916946.0",
@@ -6348,7 +6283,7 @@
       "pr": "—",
       "gr": "Financeiro (Estorno)",
       "st": "Novo",
-      "vl": 179404.0
+      "vl": 17944.0
     },
     {
       "n": "99916904.0",
@@ -6440,19 +6375,6 @@
       "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 17602.0
-    },
-    {
-      "n": "99916894.0",
-      "d": "21/07/2026",
-      "ym": "2026-07",
-      "lj": "Amazon",
-      "pb": "RMA",
-      "sk": "TI1514",
-      "tr": "Trilog",
-      "pr": "—",
-      "gr": "Solicitação de Devolução",
-      "st": "Pendente",
-      "vl": 180932.0
     },
     {
       "n": "99916892.0",
@@ -8441,7 +8363,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 155709.0
+      "vl": 15579.0
     },
     {
       "n": "99916241.0",
@@ -15568,7 +15490,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-08-11T17:43:36.153702-03:00",
+  "ticketsRawUpdatedAt": "2026-08-11T20:43:16.078340-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1670,
