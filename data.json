@@ -3023,53 +3023,53 @@
     "2026-07-31": {
       "mercadolivre": {
         "metrics": {},
-        "ts": "2026-07-31T21:32:08.654618-03:00",
+        "ts": "2026-08-13T12:42:30.205468-03:00",
         "tickets": 2,
         "sacForaPrazo": 8,
         "casosCriticos": 17,
         "solicitacaoDevolucaoAmarelo": 0,
-        "solicitacaoDevolucaoVermelho": 1,
-        "solicitacaoDevolucao": 1
+        "solicitacaoDevolucaoVermelho": 0,
+        "solicitacaoDevolucao": 0
       },
       "amazon": {
         "metrics": {},
-        "ts": "2026-07-31T21:32:08.654618-03:00",
+        "ts": "2026-08-13T12:42:30.205468-03:00",
         "tickets": 0,
         "sacForaPrazo": 1,
         "casosCriticos": 10,
-        "solicitacaoDevolucaoAmarelo": 3,
+        "solicitacaoDevolucaoAmarelo": 0,
         "solicitacaoDevolucaoVermelho": 4,
-        "solicitacaoDevolucao": 7
+        "solicitacaoDevolucao": 4
       },
       "magalu": {
         "metrics": {},
-        "ts": "2026-07-31T21:32:08.654618-03:00",
+        "ts": "2026-08-13T12:42:30.205468-03:00",
         "tickets": 0,
         "sacForaPrazo": 0,
         "casosCriticos": 5,
-        "solicitacaoDevolucaoAmarelo": 1,
+        "solicitacaoDevolucaoAmarelo": 0,
         "solicitacaoDevolucaoVermelho": 1,
-        "solicitacaoDevolucao": 2
+        "solicitacaoDevolucao": 1
       },
       "casasbahia": {
         "metrics": {},
-        "ts": "2026-07-31T21:32:08.654618-03:00",
+        "ts": "2026-08-13T12:42:30.205468-03:00",
         "tickets": 0,
         "sacForaPrazo": 1,
         "casosCriticos": 26,
-        "solicitacaoDevolucaoAmarelo": 4,
-        "solicitacaoDevolucaoVermelho": 2,
-        "solicitacaoDevolucao": 6
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 0,
+        "solicitacaoDevolucao": 0
       },
       "shopee": {
         "metrics": {},
-        "ts": "2026-07-31T21:32:08.654618-03:00",
+        "ts": "2026-08-13T12:42:30.205468-03:00",
         "tickets": 0,
         "sacForaPrazo": 3,
         "casosCriticos": 21,
         "solicitacaoDevolucaoAmarelo": 0,
-        "solicitacaoDevolucaoVermelho": 3,
-        "solicitacaoDevolucao": 3
+        "solicitacaoDevolucaoVermelho": 0,
+        "solicitacaoDevolucao": 0
       }
     },
     "2026-08-03": {
