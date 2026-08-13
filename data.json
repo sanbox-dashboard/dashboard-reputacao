@@ -3487,9 +3487,74 @@
         "solicitacaoDevolucaoVermelho": 0,
         "solicitacaoDevolucao": 0
       }
+    },
+    "2026-08-13": {
+      "mercadolivre": {
+        "metrics": {},
+        "ts": "2026-08-13T10:10:52.051585-03:00",
+        "tickets": 3,
+        "sacForaPrazo": 11,
+        "casosCriticos": 19,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 0,
+        "solicitacaoDevolucao": 0
+      },
+      "amazon": {
+        "metrics": {},
+        "ts": "2026-08-13T10:10:52.051585-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 1,
+        "casosCriticos": 9,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 8,
+        "solicitacaoDevolucao": 8
+      },
+      "magalu": {
+        "metrics": {},
+        "ts": "2026-08-13T10:10:52.051585-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 0,
+        "casosCriticos": 5,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 1,
+        "solicitacaoDevolucao": 1
+      },
+      "casasbahia": {
+        "metrics": {},
+        "ts": "2026-08-13T10:10:52.051585-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 1,
+        "casosCriticos": 27,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 1,
+        "solicitacaoDevolucao": 1
+      },
+      "shopee": {
+        "metrics": {},
+        "ts": "2026-08-13T10:10:52.051585-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 2,
+        "casosCriticos": 22,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 1,
+        "solicitacaoDevolucao": 1
+      }
     }
   },
   "ticketsRaw": [
+    {
+      "n": "99917230.0",
+      "d": "13/08/2026",
+      "ym": "2026-08",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1686",
+      "tr": "",
+      "pr": "—",
+      "gr": "Financeiro (Estorno)",
+      "st": "Novo",
+      "vl": 0.0
+    },
     {
       "n": "99917229.0",
       "d": "12/08/2026",
@@ -3513,7 +3578,7 @@
       "tr": "Correios",
       "pr": "—",
       "gr": "Envio de Produto",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 113775.0
     },
     {
@@ -3656,7 +3721,7 @@
       "tr": "Correios",
       "pr": "—",
       "gr": "Envio de Produto",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 0.0
     },
     {
@@ -3943,7 +4008,7 @@
       "pr": "—",
       "gr": "Atendimento SAC",
       "st": "Novo",
-      "vl": 10156.0
+      "vl": 101506.0
     },
     {
       "n": "99917186.0",
@@ -4786,7 +4851,7 @@
       "sk": "TI1560",
       "tr": "Total Express",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 8762.0
     },
@@ -4929,7 +4994,7 @@
       "sk": "TI1633",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Atendimento SAC",
+      "gr": "Entrada Sanbox",
       "st": "Novo",
       "vl": 18259.0
     },
@@ -5020,7 +5085,7 @@
       "sk": "TI1601",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Chamados Marketplaces",
+      "gr": "Financeiro (Cancelamento indevido)",
       "st": "Novo",
       "vl": 0.0
     },
@@ -5566,7 +5631,7 @@
       "sk": "TI1705",
       "tr": "Total Express",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 210144.0
     },
@@ -5644,8 +5709,8 @@
       "sk": "TI1556",
       "tr": "Total Express",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
-      "st": "Pendente",
+      "gr": "Financeiro (Estorno)",
+      "st": "Novo",
       "vl": 58845.0
     },
     {
@@ -5659,7 +5724,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 169106.0
+      "vl": 16916.0
     },
     {
       "n": "99917016.0",
@@ -6374,7 +6439,7 @@
       "pr": "—",
       "gr": "Financeiro (Estorno)",
       "st": "Novo",
-      "vl": 10289.0
+      "vl": 102809.0
     },
     {
       "n": "99916916.0",
@@ -6387,7 +6452,7 @@
       "pr": "—",
       "gr": "Financeiro (Estorno)",
       "st": "Novo",
-      "vl": 188609.0
+      "vl": 18869.0
     },
     {
       "n": "99916915.0",
@@ -6400,7 +6465,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 18999.0
+      "vl": 189909.0
     },
     {
       "n": "99916913.0",
@@ -6465,7 +6530,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 121002.0
+      "vl": 12102.0
     },
     {
       "n": "99916907.0",
@@ -7360,7 +7425,7 @@
       "sk": "TI1514",
       "tr": "Alfa Transportes",
       "pr": "—",
-      "gr": "Financeiro (Estorno)",
+      "gr": "Solicitação de Devolução",
       "st": "Novo",
       "vl": 18306.0
     },
@@ -7451,7 +7516,7 @@
       "sk": "TI1514",
       "tr": "Trilog",
       "pr": "—",
-      "gr": "Financeiro (Estorno)",
+      "gr": "Solicitação de Devolução",
       "st": "Novo",
       "vl": 18306.0
     },
@@ -7519,19 +7584,6 @@
       "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 123988.0
-    },
-    {
-      "n": "99916690.0",
-      "d": "07/07/2026",
-      "ym": "2026-07",
-      "lj": "Magalu",
-      "pb": "RMA",
-      "sk": "TI1514",
-      "tr": "Brasil Web",
-      "pr": "—",
-      "gr": "Financeiro (Estorno)",
-      "st": "Novo",
-      "vl": 170892.0
     },
     {
       "n": "99916687.0",
@@ -10599,7 +10651,7 @@
       "pr": "—",
       "gr": "Casos Críticos",
       "st": "Novo",
-      "vl": 105309.0
+      "vl": 10539.0
     },
     {
       "n": "99913119.0",
@@ -11249,7 +11301,7 @@
       "pr": "—",
       "gr": "Em análise",
       "st": "Novo",
-      "vl": 15726.0
+      "vl": 157206.0
     },
     {
       "n": "99911694.0",
@@ -15477,7 +15529,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-08-12T19:43:48.172947-03:00",
+  "ticketsRawUpdatedAt": "2026-08-13T10:10:52.051585-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1670,
@@ -15923,7 +15975,7 @@
       "pedido": "LU-1515170100821823",
       "data": "25/02/2026",
       "ym": "2026-02",
-      "canal": "magalu",
+      "canal": "magazine luiza",
       "sku": "TI1690",
       "valor_pedido": 1789.3,
       "custo": 1288.79,
@@ -16723,7 +16775,7 @@
       "pedido": "1527170105995870",
       "data": "10/04/2026",
       "ym": "2026-04",
-      "canal": "magalu",
+      "canal": "magazine luiza",
       "sku": "TI1571",
       "valor_pedido": 1177.34,
       "custo": 589.29,
@@ -17059,7 +17111,7 @@
       "pedido": "LU-1524670104882139",
       "data": "01/04/2026",
       "ym": "2026-04",
-      "canal": "magalu",
+      "canal": "magazine luiza",
       "sku": "TI1454",
       "valor_pedido": 6832.36,
       "custo": 4015.19,
@@ -18291,7 +18343,7 @@
       "pedido": "LU-1536070110026882",
       "data": "13/05/2026",
       "ym": "2026-05",
-      "canal": "magalu",
+      "canal": "magazine luiza",
       "sku": "TI1580",
       "valor_pedido": 1323.14,
       "custo": 851.24,
@@ -18723,7 +18775,7 @@
       "pedido": "LU-1540070111717108",
       "data": "27/05/2026",
       "ym": "2026-05",
-      "canal": "magalu",
+      "canal": "magazine luiza",
       "sku": "TI1562",
       "valor_pedido": 1690.86,
       "custo": 1150.58,
@@ -19395,7 +19447,7 @@
       "pedido": "LU-1543870113555834",
       "data": "10/06/2026",
       "ym": "2026-06",
-      "canal": "magalu",
+      "canal": "magazine luiza",
       "sku": "TI1571",
       "valor_pedido": 1069.98,
       "custo": 625.44,
@@ -19411,7 +19463,7 @@
       "pedido": "LU-1544970114014679",
       "data": "14/06/2026",
       "ym": "2026-06",
-      "canal": "magalu",
+      "canal": "magazine luiza",
       "sku": "TI1562",
       "valor_pedido": 1790.68,
       "custo": 1150.58,
@@ -20003,7 +20055,7 @@
       "pedido": "LU-1547470115053080",
       "data": "24/06/2026",
       "ym": "2026-06",
-      "canal": "magalu",
+      "canal": "magazine luiza",
       "sku": "TI1514",
       "valor_pedido": 1708.92,
       "custo": 1286.69,
@@ -21934,9 +21986,25 @@
       "total": 599.71,
       "valor_real_fechado": 250.0,
       "aceito": false
+    },
+    {
+      "pedido": "51129313801",
+      "data": "04/05/2026",
+      "ym": "2026-05",
+      "canal": "casasbahia",
+      "sku": "TI1454",
+      "valor_pedido": 5699.98,
+      "custo": 4015.19,
+      "problema": "Avaria",
+      "pct_desc": "30,00%",
+      "desc_sug": 1204.56,
+      "frete": 552.07,
+      "total": 1756.63,
+      "valor_real_fechado": 0.0,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-08-12T19:43:48.172947-03:00",
+  "descontosUpdatedAt": "2026-08-13T10:10:52.051585-03:00",
   "descontosAggByMonth": {
     "2026-03": {
       "mercadolivre": {
@@ -21996,7 +22064,7 @@
         "vendaTotalCanal": 2287276.06,
         "pctDescontoSobreVendaCanal": 0.0231
       },
-      "magalu": {
+      "magazine luiza": {
         "count": 1,
         "countAceito": 0,
         "descontoTotal": 363.7,
@@ -22004,8 +22072,8 @@
         "valorPedidoTotal": 1789.3,
         "pctDescontoSobreCusto": 28.22,
         "pctDescontoSobreVenda": 20.33,
-        "vendaTotalCanal": 336691.45,
-        "pctDescontoSobreVendaCanal": 0.108
+        "vendaTotalCanal": 0,
+        "pctDescontoSobreVendaCanal": 0
       },
       "amazon": {
         "count": 1,
@@ -22066,7 +22134,7 @@
         "vendaTotalCanal": 610451.38,
         "pctDescontoSobreVendaCanal": 0.249
       },
-      "magalu": {
+      "magazine luiza": {
         "count": 2,
         "countAceito": 0,
         "descontoTotal": 1452.0,
@@ -22074,8 +22142,8 @@
         "valorPedidoTotal": 8009.7,
         "pctDescontoSobreCusto": 31.53,
         "pctDescontoSobreVenda": 18.13,
-        "vendaTotalCanal": 323217.38,
-        "pctDescontoSobreVendaCanal": 0.4492
+        "vendaTotalCanal": 0,
+        "pctDescontoSobreVendaCanal": 0
       },
       "casasbahia": {
         "count": 12,
@@ -22115,13 +22183,13 @@
     },
     "2026-05": {
       "casasbahia": {
-        "count": 17,
+        "count": 18,
         "countAceito": 5,
         "descontoTotal": 3020.0,
-        "custoTotal": 17648.3,
-        "valorPedidoTotal": 28176.22,
-        "pctDescontoSobreCusto": 17.11,
-        "pctDescontoSobreVenda": 10.72,
+        "custoTotal": 21663.49,
+        "valorPedidoTotal": 33876.2,
+        "pctDescontoSobreCusto": 13.94,
+        "pctDescontoSobreVenda": 8.91,
         "vendaTotalCanal": 1214519.32,
         "pctDescontoSobreVendaCanal": 0.2487
       },
@@ -22158,7 +22226,7 @@
         "vendaTotalCanal": 425786.12,
         "pctDescontoSobreVendaCanal": 0.0869
       },
-      "magalu": {
+      "magazine luiza": {
         "count": 2,
         "countAceito": 0,
         "descontoTotal": 850.0,
@@ -22166,8 +22234,8 @@
         "valorPedidoTotal": 3014.0,
         "pctDescontoSobreCusto": 42.46,
         "pctDescontoSobreVenda": 28.2,
-        "vendaTotalCanal": 740647.46,
-        "pctDescontoSobreVendaCanal": 0.1148
+        "vendaTotalCanal": 0,
+        "pctDescontoSobreVendaCanal": 0
       }
     },
     "2026-06": {
@@ -22204,7 +22272,7 @@
         "vendaTotalCanal": 537525.22,
         "pctDescontoSobreVendaCanal": 0.5696
       },
-      "magalu": {
+      "magazine luiza": {
         "count": 3,
         "countAceito": 0,
         "descontoTotal": 773.0,
@@ -22212,8 +22280,8 @@
         "valorPedidoTotal": 4569.58,
         "pctDescontoSobreCusto": 25.24,
         "pctDescontoSobreVenda": 16.92,
-        "vendaTotalCanal": 516270.1,
-        "pctDescontoSobreVendaCanal": 0.1497
+        "vendaTotalCanal": 0,
+        "pctDescontoSobreVendaCanal": 0
       },
       "casasbahia": {
         "count": 2,
