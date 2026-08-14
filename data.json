@@ -3543,8 +3543,8 @@
     "2026-08-14": {
       "mercadolivre": {
         "metrics": {},
-        "ts": "2026-08-14T12:12:59.681363-03:00",
-        "tickets": 10,
+        "ts": "2026-08-14T12:43:44.567889-03:00",
+        "tickets": 1,
         "sacForaPrazo": 5,
         "casosCriticos": 19,
         "solicitacaoDevolucaoAmarelo": 0,
@@ -3594,6 +3594,32 @@
     }
   },
   "ticketsRaw": [
+    {
+      "n": "99917254.0",
+      "d": "14/08/2026",
+      "ym": "2026-08",
+      "lj": "Octadesk",
+      "pb": "Danificado Transporte Marketplace",
+      "sk": "",
+      "tr": "Trilog",
+      "pr": "—",
+      "gr": "Débitos Transportadoras",
+      "st": "Novo",
+      "vl": 854.16
+    },
+    {
+      "n": "99917253.0",
+      "d": "14/08/2026",
+      "ym": "2026-08",
+      "lj": "Casas Bahia",
+      "pb": "Produto Incorreto",
+      "sk": "TI1090",
+      "tr": "Total Express",
+      "pr": "—",
+      "gr": "Envio de Produto",
+      "st": "Novo",
+      "vl": 767.88
+    },
     {
       "n": "99917252.0",
       "d": "14/08/2026",
@@ -4319,7 +4345,7 @@
       "tr": "Correios",
       "pr": "—",
       "gr": "Atendimento SAC",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 537.52
     },
     {
@@ -4526,7 +4552,7 @@
       "sk": "TI1568",
       "tr": "Trilog",
       "pr": "—",
-      "gr": "Atendimento SAC",
+      "gr": "Débitos Transportadoras",
       "st": "Novo",
       "vl": 1263.22
     },
@@ -7362,7 +7388,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
-      "vl": 1596.9
+      "vl": 1596.09
     },
     {
       "n": "99916603.0",
@@ -14983,7 +15009,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-08-14T12:12:59.681363-03:00",
+  "ticketsRawUpdatedAt": "2026-08-14T12:43:44.567889-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1670,
@@ -21455,7 +21481,7 @@
       "frete": 213.7,
       "total": 599.71,
       "valor_real_fechado": 250.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "51129313801",
@@ -21522,7 +21548,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-08-14T12:12:59.681363-03:00",
+  "descontosUpdatedAt": "2026-08-14T12:43:44.567889-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -21816,7 +21842,7 @@
     "2026-07": {
       "shopee": {
         "count": 2,
-        "countAceito": 0,
+        "countAceito": 1,
         "descontoTotal": 435.0,
         "custoTotal": 1748.69,
         "valorPedidoTotal": 2886.37,
