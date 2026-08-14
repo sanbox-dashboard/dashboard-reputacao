@@ -4097,7 +4097,7 @@
       "sk": "TI1760",
       "tr": "Trilog",
       "pr": "—",
-      "gr": "Atendimento SAC",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 717.95
     },
@@ -6034,8 +6034,8 @@
       "sk": "TI1526",
       "tr": "Trilog",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Pendente",
+      "gr": "Financeiro (Estorno)",
+      "st": "Novo",
       "vl": 775.66
     },
     {
@@ -6255,8 +6255,8 @@
       "sk": "TI1571",
       "tr": "Trilog",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "gr": "Financeiro (Estorno)",
+      "st": "Novo",
       "vl": 930.9
     },
     {
@@ -6411,8 +6411,8 @@
       "sk": "TI1562",
       "tr": "Trilog",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "gr": "Débitos Transportadoras",
+      "st": "Novo",
       "vl": 0.0
     },
     {
@@ -6567,8 +6567,8 @@
       "sk": "TI1760",
       "tr": "Trilog",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "gr": "Financeiro (Estorno)",
+      "st": "Novo",
       "vl": 634.24
     },
     {
@@ -7347,7 +7347,7 @@
       "sk": "TI1529",
       "tr": "Trilog",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 1542.92
     },
@@ -15009,7 +15009,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-08-14T13:50:45.531527-03:00",
+  "ticketsRawUpdatedAt": "2026-08-14T14:21:43.602871-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1670,
@@ -17560,7 +17560,7 @@
       "desc_sug": 187.63,
       "frete": 154.03,
       "total": 341.66,
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 4300.0,
       "aceito": false
     },
     {
@@ -21548,7 +21548,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-08-14T13:12:25.736769-03:00",
+  "descontosUpdatedAt": "2026-08-14T14:21:43.602871-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -21729,13 +21729,13 @@
       "casasbahia": {
         "count": 18,
         "countAceito": 5,
-        "descontoTotal": 3720.0,
+        "descontoTotal": 8020.0,
         "custoTotal": 21663.49,
         "valorPedidoTotal": 33876.2,
-        "pctDescontoSobreCusto": 17.17,
-        "pctDescontoSobreVenda": 10.98,
+        "pctDescontoSobreCusto": 37.02,
+        "pctDescontoSobreVenda": 23.67,
         "vendaTotalCanal": 1214519.32,
-        "pctDescontoSobreVendaCanal": 0.3063
+        "pctDescontoSobreVendaCanal": 0.6603
       },
       "mercadolivre": {
         "count": 57,
