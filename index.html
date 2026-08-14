@@ -533,7 +533,7 @@
   <section id="comissao-section">
     <h2 class="section-title">
       Comissão do Time
-      <span class="section-subtitle" id="comissao-subtitle">Cálculo baseado na fotografia do último dia do mês (reputação + tickets no fechamento)</span>
+      <span class="section-subtitle" id="comissao-subtitle">Cor do canal = pior entre médias do mês e fechamento · tickets = fotografia do último dia</span>
     </h2>
     <div class="tickets-filters">
       <div class="filter-group">
@@ -560,7 +560,7 @@
     <div class="tickets-grid" style="grid-template-columns:1fr">
       <div class="tickets-card full">
         <h3>Cores consolidadas por canal (mês selecionado)</h3>
-        <div class="ch">Fotografia do fechamento: pior cor entre as métricas no ÚLTIMO dia do mês selecionado. Verde = dentro do alerta · Amarelo = entre alerta e meta · Vermelho = pior que meta.</div>
+        <div class="ch">Pior cor entre as MÉDIAS do mês e a fotografia do último dia. Verde = dentro do alerta · Amarelo = entre alerta e meta · Vermelho = pior que meta.</div>
         <div id="comissao-colors" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px"></div>
       </div>
       <div class="tickets-card full">
@@ -665,7 +665,7 @@
           <strong style="color:var(--text)">Cortes default dos tickets</strong> (configurável no topo da aba):<br>
           • Tickets financeiros: 1+ em atraso = perde R$ 200<br>
           • SAC fora do prazo (+30d): 1+ em atraso = perde R$ 200<br><br>
-          <strong style="color:var(--text)">Apuração:</strong> na virada do mês com base na FOTOGRAFIA do último dia fechado — reputação do último dia + tickets em aberto no fechamento. Durante o mês o dashboard mostra a previsão em tempo real (último dia disponível).
+          <strong style="color:var(--text)">Apuração:</strong> na virada do mês. Cor de reputação = PIOR entre as médias do mês e a fotografia do último dia fechado (estouro no meio do mês conta, mesmo com recuperação). Tickets = em aberto no fechamento. Durante o mês o dashboard mostra a previsão em tempo real.
         </div>
       </div>
     </div>
@@ -904,7 +904,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '45.1';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '45.2';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -1170,7 +1170,7 @@ function renderMonthCards(){
     // ===== FOTOGRAFIA DO FECHAMENTO: último dia do mês com dados =====
     // É ela que define o semáforo do canal e a comissão do mês.
     const lastD = ultimoDiaComDados(key, monthK);
-    let worst = 'unknown';
+    const worst = corDoMesCanal(key, monthK); // pior entre médias e fechamento
     let fotoHtml = '';
     if(lastD){
       const e = state.entries[lastD][key];
@@ -1178,9 +1178,6 @@ function renderMonthCards(){
       Object.entries(ch.metrics).forEach(([mKey, m])=>{
         const v = e.metrics?.[mKey];
         const st = getStatus(v, m);
-        if(st==='red') worst='red';
-        else if(st==='yellow' && worst!=='red') worst='yellow';
-        else if(st==='green' && worst==='unknown') worst='green';
         fotoRows += `<div class="mini-metric ${st}" style="margin-top:3px">
           <span class="mini-label" title="${m.label}">${m.label}</span>
           <span class="mini-value">${fmtNumber(v, m.unit)}</span>
@@ -1216,7 +1213,7 @@ function renderMonthCards(){
       <div class="card-header">
         <div class="card-name"><span class="channel-tag" style="background:${ch.color}"></span>${ch.name}</div>
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end">
-          <div style="display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:14px;background:${semBg};border:1.5px solid ${semColor};font-size:11px;font-weight:700;color:${semColor};text-transform:uppercase;letter-spacing:0.4px" title="Cor do fechamento — fotografia do último dia do mês (base da comissão)">
+          <div style="display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:14px;background:${semBg};border:1.5px solid ${semColor};font-size:11px;font-weight:700;color:${semColor};text-transform:uppercase;letter-spacing:0.4px" title="Pior cor entre as MÉDIAS do mês e a fotografia do fechamento (base da comissão)">
             <span style="width:9px;height:9px;border-radius:50%;background:${semColor}"></span>${semLabel}
           </div>
           <div class="rep-badge">
@@ -2930,22 +2927,36 @@ setTimeout(() => {
    ABA COMISSÃO — cálculo mensal de comissão baseado em reputação + tickets
    ========================================================================= */
 
-// REGRA NOVA: a cor do canal no mês é a FOTOGRAFIA do último dia com dados
-// (como o mês fechou), não a média. É essa cor que define a comissão.
+// REGRA (v45.2): a cor do canal no mês é a PIOR entre (a) as médias do mês e
+// (b) a fotografia do último dia com dados. Estouros no meio do mês contam
+// mesmo com recuperação no fechamento. É essa cor que define a comissão.
 function corDoMesCanal(canalKey, ym){
   const ch = channels[canalKey];
   if(!ch) return 'unknown';
-  const lastD = ultimoDiaComDados(canalKey, ym);
-  if(!lastD) return 'unknown';
-  const e = state.entries[lastD][canalKey];
   let pior = 'unknown';
-  Object.entries(ch.metrics).forEach(([mKey, m]) => {
-    const st = getStatus(e.metrics?.[mKey], m);
-    if(st === 'unknown') return;
+  const bump = st => {
     if(st === 'red') pior = 'red';
     else if(st === 'yellow' && pior !== 'red') pior = 'yellow';
-    else if(pior === 'unknown') pior = 'green';
+    else if(st === 'green' && pior === 'unknown') pior = 'green';
+  };
+  // (a) médias do mês
+  const monthEntries = Object.entries(state.entries || {})
+    .filter(([d]) => d.startsWith(ym))
+    .map(([_, canais]) => canais[canalKey])
+    .filter(Boolean);
+  Object.entries(ch.metrics).forEach(([mKey, m]) => {
+    const vals = monthEntries.map(e => e.metrics?.[mKey]).filter(v => v !== null && v !== undefined && v !== '' && !isNaN(v)).map(parseFloat);
+    if(vals.length) bump(getStatus(vals.reduce((a,b)=>a+b,0)/vals.length, m));
   });
+  // (b) fotografia do último dia
+  const lastD = ultimoDiaComDados(canalKey, ym);
+  if(lastD){
+    const e = state.entries[lastD][canalKey];
+    Object.entries(ch.metrics).forEach(([mKey, m]) => {
+      const st = getStatus(e.metrics?.[mKey], m);
+      if(st !== 'unknown') bump(st);
+    });
+  }
   return pior;
 }
 
