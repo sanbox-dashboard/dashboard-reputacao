@@ -3543,8 +3543,8 @@
     "2026-08-14": {
       "mercadolivre": {
         "metrics": {},
-        "ts": "2026-08-14T10:10:07.455829-03:00",
-        "tickets": 1,
+        "ts": "2026-08-14T12:12:59.681363-03:00",
+        "tickets": 10,
         "sacForaPrazo": 5,
         "casosCriticos": 19,
         "solicitacaoDevolucaoAmarelo": 0,
@@ -3595,6 +3595,32 @@
   },
   "ticketsRaw": [
     {
+      "n": "99917252.0",
+      "d": "14/08/2026",
+      "ym": "2026-08",
+      "lj": "Shopee",
+      "pb": "Produto Incorreto",
+      "sk": "TI1078",
+      "tr": "Alfa Transportes",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 1074.92
+    },
+    {
+      "n": "99917251.0",
+      "d": "14/08/2026",
+      "ym": "2026-08",
+      "lj": "Amazon",
+      "pb": "Arrependimento",
+      "sk": "TI1690",
+      "tr": "Trilog",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 1748.99
+    },
+    {
       "n": "99917250.0",
       "d": "14/08/2026",
       "ym": "2026-08",
@@ -3603,7 +3629,7 @@
       "sk": "SS001",
       "tr": "Total Express",
       "pr": "—",
-      "gr": "Atendimento SAC",
+      "gr": "Entrada Sanbox",
       "st": "Novo",
       "vl": 1059.13
     },
@@ -4215,7 +4241,7 @@
       "tr": "Alfa Transportes",
       "pr": "—",
       "gr": "Solicitação de Devolução",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 1015.65
     },
     {
@@ -4280,8 +4306,8 @@
       "tr": "Total Express",
       "pr": "—",
       "gr": "Atendimento SAC",
-      "st": "Novo",
-      "vl": 1015.06
+      "st": "Pendente",
+      "vl": 1015.6
     },
     {
       "n": "99917186.0",
@@ -4890,7 +4916,7 @@
       "sk": "TI1562",
       "tr": "MMA",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 1854.95
     },
@@ -5956,8 +5982,8 @@
       "sk": "TI1569",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "gr": "Financeiro (Estorno)",
+      "st": "Novo",
       "vl": 1493.9
     },
     {
@@ -6335,7 +6361,7 @@
       "pr": "—",
       "gr": "Financeiro (Estorno)",
       "st": "Novo",
-      "vl": 1886.9
+      "vl": 1886.09
     },
     {
       "n": "99916915.0",
@@ -6400,7 +6426,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 1549.9
+      "vl": 1549.09
     },
     {
       "n": "99916906.0",
@@ -6814,8 +6840,8 @@
       "sk": "TI1562",
       "tr": "MMA",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Pendente",
+      "gr": "Financeiro (Estorno)",
+      "st": "Novo",
       "vl": 2009.83
     },
     {
@@ -7388,7 +7414,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 1565.01
+      "vl": 1565.1
     },
     {
       "n": "99916568.0",
@@ -14957,7 +14983,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-08-14T10:42:46.458416-03:00",
+  "ticketsRawUpdatedAt": "2026-08-14T12:12:59.681363-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1670,
@@ -15176,7 +15202,7 @@
       "aceito": false
     },
     {
-      "pedido": "50125893901.0",
+      "pedido": "50125893901",
       "data": "05/02/2026",
       "ym": "2026-02",
       "canal": "casasbahia",
@@ -15320,7 +15346,7 @@
       "aceito": true
     },
     {
-      "pedido": "50535091001.0",
+      "pedido": "50535091001",
       "data": "11/03/2026",
       "ym": "2026-03",
       "canal": "casasbahia",
@@ -15496,7 +15522,7 @@
       "aceito": true
     },
     {
-      "pedido": "2000015716053690.0",
+      "pedido": "2000015716053690",
       "data": "26/03/2026",
       "ym": "2026-03",
       "canal": "mercadolivre",
@@ -15512,7 +15538,7 @@
       "aceito": false
     },
     {
-      "pedido": "50033046502.0",
+      "pedido": "50033046502",
       "data": "27/01/2026",
       "ym": "2026-01",
       "canal": "casasbahia",
@@ -15560,7 +15586,7 @@
       "aceito": true
     },
     {
-      "pedido": "50571746801.0",
+      "pedido": "50571746801",
       "data": "14/03/2026",
       "ym": "2026-03",
       "canal": "casasbahia",
@@ -15624,7 +15650,7 @@
       "aceito": true
     },
     {
-      "pedido": "2000015753484210.0",
+      "pedido": "2000015753484210",
       "data": "29/03/2026",
       "ym": "2026-03",
       "canal": "mercadolivre",
@@ -15784,7 +15810,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000015462954240.0",
+      "pedido": "2000015462954240",
       "data": "09/03/2026",
       "ym": "2026-03",
       "canal": "mercadolivre",
@@ -15816,7 +15842,7 @@
       "aceito": false
     },
     {
-      "pedido": "50650658501.0",
+      "pedido": "50650658501",
       "data": "21/03/2026",
       "ym": "2026-03",
       "canal": "casasbahia",
@@ -15864,7 +15890,7 @@
       "aceito": true
     },
     {
-      "pedido": "48957926701.0",
+      "pedido": "48957926701",
       "data": "17/11/2025",
       "ym": "2025-11",
       "canal": "casasbahia",
@@ -15912,7 +15938,7 @@
       "aceito": true
     },
     {
-      "pedido": "50596559501.0",
+      "pedido": "50596559501",
       "data": "16/03/2026",
       "ym": "2026-03",
       "canal": "casasbahia",
@@ -15992,7 +16018,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000015759614450.0",
+      "pedido": "2000015759614450",
       "data": "30/03/2026",
       "ym": "2026-03",
       "canal": "mercadolivre",
@@ -16035,7 +16061,7 @@
       "pct_desc": "50,00%",
       "desc_sug": 155.34,
       "frete": 44.05,
-      "total": 199.38,
+      "total": 199.39,
       "valor_real_fechado": 217.94,
       "aceito": true
     },
@@ -16152,7 +16178,7 @@
       "aceito": true
     },
     {
-      "pedido": "2000015921113460.0",
+      "pedido": "2000015921113460",
       "data": "10/04/2026",
       "ym": "2026-04",
       "canal": "mercadolivre",
@@ -16168,7 +16194,7 @@
       "aceito": false
     },
     {
-      "pedido": "50734590801.0",
+      "pedido": "50734590801",
       "data": "30/03/2026",
       "ym": "2026-03",
       "canal": "casasbahia",
@@ -16216,7 +16242,7 @@
       "aceito": true
     },
     {
-      "pedido": "1527170105995870.0",
+      "pedido": "1527170105995870",
       "data": "10/04/2026",
       "ym": "2026-04",
       "canal": "magalu",
@@ -16232,7 +16258,7 @@
       "aceito": false
     },
     {
-      "pedido": "50882804301.0",
+      "pedido": "50882804301",
       "data": "12/04/2026",
       "ym": "2026-04",
       "canal": "casasbahia",
@@ -16280,7 +16306,7 @@
       "aceito": false
     },
     {
-      "pedido": "50761649101.0",
+      "pedido": "50761649101",
       "data": "02/04/2026",
       "ym": "2026-04",
       "canal": "casasbahia",
@@ -16296,7 +16322,7 @@
       "aceito": true
     },
     {
-      "pedido": "50843643401.0",
+      "pedido": "50843643401",
       "data": "09/04/2026",
       "ym": "2026-04",
       "canal": "casasbahia",
@@ -16312,7 +16338,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000015924053950.0",
+      "pedido": "2000015924053950",
       "data": "10/04/2026",
       "ym": "2026-04",
       "canal": "mercadolivre",
@@ -16328,7 +16354,7 @@
       "aceito": true
     },
     {
-      "pedido": "2000015894624940.0",
+      "pedido": "2000015894624940",
       "data": "08/04/2026",
       "ym": "2026-04",
       "canal": "mercadolivre",
@@ -16344,7 +16370,7 @@
       "aceito": true
     },
     {
-      "pedido": "2000015745944120.0",
+      "pedido": "2000015745944120",
       "data": "28/03/2026",
       "ym": "2026-03",
       "canal": "mercadolivre",
@@ -16360,7 +16386,7 @@
       "aceito": true
     },
     {
-      "pedido": "2000015909080680.0",
+      "pedido": "2000015909080680",
       "data": "09/04/2026",
       "ym": "2026-04",
       "canal": "mercadolivre",
@@ -16632,7 +16658,7 @@
       "aceito": false
     },
     {
-      "pedido": "50906740201.0",
+      "pedido": "50906740201",
       "data": "14/04/2026",
       "ym": "2026-04",
       "canal": "casasbahia",
@@ -16696,7 +16722,7 @@
       "aceito": false
     },
     {
-      "pedido": "50947937701.0",
+      "pedido": "50947937701",
       "data": "18/04/2026",
       "ym": "2026-04",
       "canal": "casasbahia",
@@ -16728,7 +16754,7 @@
       "aceito": false
     },
     {
-      "pedido": "50818482801.0",
+      "pedido": "50818482801",
       "data": "07/04/2026",
       "ym": "2026-04",
       "canal": "casasbahia",
@@ -16744,7 +16770,7 @@
       "aceito": true
     },
     {
-      "pedido": "50835792001.0",
+      "pedido": "50835792001",
       "data": "09/04/2026",
       "ym": "2026-04",
       "canal": "casasbahia",
@@ -16824,7 +16850,7 @@
       "aceito": false
     },
     {
-      "pedido": "50954128301.0",
+      "pedido": "50954128301",
       "data": "18/04/2026",
       "ym": "2026-04",
       "canal": "casasbahia",
@@ -16840,7 +16866,7 @@
       "aceito": false
     },
     {
-      "pedido": "50945174101.0",
+      "pedido": "50945174101",
       "data": "18/04/2026",
       "ym": "2026-04",
       "canal": "casasbahia",
@@ -16872,7 +16898,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000015784377850.0",
+      "pedido": "2000015784377850",
       "data": "31/03/2026",
       "ym": "2026-03",
       "canal": "mercadolivre",
@@ -17000,7 +17026,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000015915411310.0",
+      "pedido": "2000015915411310",
       "data": "09/04/2026",
       "ym": "2026-04",
       "canal": "mercadolivre",
@@ -17064,7 +17090,7 @@
       "aceito": false
     },
     {
-      "pedido": "50896211901.0",
+      "pedido": "50896211901",
       "data": "13/04/2026",
       "ym": "2026-04",
       "canal": "casasbahia",
@@ -17096,7 +17122,7 @@
       "aceito": true
     },
     {
-      "pedido": "50831329801.0",
+      "pedido": "50831329801",
       "data": "08/04/2026",
       "ym": "2026-04",
       "canal": "casasbahia",
@@ -17144,7 +17170,7 @@
       "aceito": true
     },
     {
-      "pedido": "50979877001.0",
+      "pedido": "50979877001",
       "data": "21/04/2026",
       "ym": "2026-04",
       "canal": "casasbahia",
@@ -17368,7 +17394,7 @@
       "aceito": false
     },
     {
-      "pedido": "51116270801.0",
+      "pedido": "51116270801",
       "data": "03/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -17400,7 +17426,7 @@
       "aceito": true
     },
     {
-      "pedido": "51132694301.0",
+      "pedido": "51132694301",
       "data": "04/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -17496,7 +17522,7 @@
       "aceito": false
     },
     {
-      "pedido": "51094071801.0",
+      "pedido": "51094071801",
       "data": "01/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -17560,7 +17586,7 @@
       "aceito": false
     },
     {
-      "pedido": "51241328801.0",
+      "pedido": "51241328801",
       "data": "11/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -17608,7 +17634,7 @@
       "aceito": true
     },
     {
-      "pedido": "51151564302.0",
+      "pedido": "51151564302",
       "data": "05/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -17768,7 +17794,7 @@
       "aceito": false
     },
     {
-      "pedido": "51266235202.0",
+      "pedido": "51266235202",
       "data": "12/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -17800,7 +17826,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000016423987780.0",
+      "pedido": "2000016423987780",
       "data": "13/05/2026",
       "ym": "2026-05",
       "canal": "mercadolivre",
@@ -17832,7 +17858,7 @@
       "aceito": true
     },
     {
-      "pedido": "2000016058210840.0",
+      "pedido": "2000016058210840",
       "data": "19/04/2026",
       "ym": "2026-04",
       "canal": "mercadolivre",
@@ -17848,7 +17874,7 @@
       "aceito": false
     },
     {
-      "pedido": "51350418701.0",
+      "pedido": "51350418701",
       "data": "19/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -17864,7 +17890,7 @@
       "aceito": false
     },
     {
-      "pedido": "51252463101.0",
+      "pedido": "51252463101",
       "data": "11/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -17960,7 +17986,7 @@
       "aceito": false
     },
     {
-      "pedido": "51182533701.0",
+      "pedido": "51182533701",
       "data": "07/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -17976,7 +18002,7 @@
       "aceito": true
     },
     {
-      "pedido": "51175664801.0",
+      "pedido": "51175664801",
       "data": "07/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -18040,7 +18066,7 @@
       "aceito": true
     },
     {
-      "pedido": "2000016515548690.0",
+      "pedido": "2000016515548690",
       "data": "19/05/2026",
       "ym": "2026-05",
       "canal": "mercadolivre",
@@ -18072,7 +18098,7 @@
       "aceito": false
     },
     {
-      "pedido": "51252463101.0",
+      "pedido": "51252463101",
       "data": "11/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -18136,7 +18162,7 @@
       "aceito": true
     },
     {
-      "pedido": "51315906601.0",
+      "pedido": "51315906601",
       "data": "16/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -18280,7 +18306,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000016498962920.0",
+      "pedido": "2000016498962920",
       "data": "18/05/2026",
       "ym": "2026-05",
       "canal": "mercadolivre",
@@ -18392,7 +18418,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000016644069180.0",
+      "pedido": "2000016644069180",
       "data": "27/05/2026",
       "ym": "2026-05",
       "canal": "mercadolivre",
@@ -18440,7 +18466,7 @@
       "aceito": false
     },
     {
-      "pedido": "51395661801.0",
+      "pedido": "51395661801",
       "data": "24/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -18467,7 +18493,7 @@
       "pct_desc": "30,00%",
       "desc_sug": 172.97,
       "frete": 70.67,
-      "total": 243.63,
+      "total": 243.64,
       "valor_real_fechado": 240.0,
       "aceito": false
     },
@@ -18552,7 +18578,7 @@
       "aceito": true
     },
     {
-      "pedido": "2000015703724700.0",
+      "pedido": "2000015703724700",
       "data": "25/03/2026",
       "ym": "2026-03",
       "canal": "mercadolivre",
@@ -18632,7 +18658,7 @@
       "aceito": true
     },
     {
-      "pedido": "51133474101.0",
+      "pedido": "51133474101",
       "data": "04/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -18760,7 +18786,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000016644069180.0",
+      "pedido": "2000016644069180",
       "data": "27/05/2026",
       "ym": "2026-05",
       "canal": "mercadolivre",
@@ -18840,7 +18866,7 @@
       "aceito": true
     },
     {
-      "pedido": "51129313801.0",
+      "pedido": "51129313801",
       "data": "04/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -18961,9 +18987,9 @@
       "custo": 404.85,
       "problema": "Avaria",
       "pct_desc": "30,00%",
-      "desc_sug": 121.45,
+      "desc_sug": 121.46,
       "frete": 0.0,
-      "total": 121.45,
+      "total": 121.46,
       "valor_real_fechado": 139.98,
       "aceito": false
     },
@@ -19080,7 +19106,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000016689680270.0",
+      "pedido": "2000016689680270",
       "data": "30/05/2026",
       "ym": "2026-05",
       "canal": "mercadolivre",
@@ -19096,7 +19122,7 @@
       "aceito": false
     },
     {
-      "pedido": "51630896601.0",
+      "pedido": "51630896601",
       "data": "14/06/2026",
       "ym": "2026-06",
       "canal": "casasbahia",
@@ -19281,9 +19307,9 @@
       "custo": 501.15,
       "problema": "Avaria",
       "pct_desc": "30,00%",
-      "desc_sug": 150.34,
+      "desc_sug": 150.35,
       "frete": 0.0,
-      "total": 150.34,
+      "total": 150.35,
       "valor_real_fechado": 150.0,
       "aceito": false
     },
@@ -19352,7 +19378,7 @@
       "aceito": true
     },
     {
-      "pedido": "2000017102949030.0",
+      "pedido": "2000017102949030",
       "data": "25/06/2026",
       "ym": "2026-06",
       "canal": "mercadolivre",
@@ -19528,7 +19554,7 @@
       "aceito": false
     },
     {
-      "pedido": "51663002301.0",
+      "pedido": "51663002301",
       "data": "17/06/2026",
       "ym": "2026-06",
       "canal": "casasbahia",
@@ -19697,9 +19723,9 @@
       "custo": 1094.25,
       "problema": "Avaria",
       "pct_desc": "30,00%",
-      "desc_sug": 328.27,
+      "desc_sug": 328.28,
       "frete": 213.86,
-      "total": 542.13,
+      "total": 542.14,
       "valor_real_fechado": 350.0,
       "aceito": true
     },
@@ -19848,7 +19874,7 @@
       "aceito": false
     },
     {
-      "pedido": "51233463801.0",
+      "pedido": "51233463801",
       "data": "10/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -19880,7 +19906,7 @@
       "aceito": true
     },
     {
-      "pedido": "2000017001177210.0",
+      "pedido": "2000017001177210",
       "data": "18/06/2026",
       "ym": "2026-06",
       "canal": "mercadolivre",
@@ -19921,9 +19947,9 @@
       "custo": 501.15,
       "problema": "Avaria",
       "pct_desc": "30,00%",
-      "desc_sug": 150.34,
+      "desc_sug": 150.35,
       "frete": 0.0,
-      "total": 150.34,
+      "total": 150.35,
       "valor_real_fechado": 220.0,
       "aceito": false
     },
@@ -20232,7 +20258,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000017389314480.0",
+      "pedido": "2000017389314480",
       "data": "13/07/2026",
       "ym": "2026-07",
       "canal": "mercadolivre",
@@ -20248,7 +20274,7 @@
       "aceito": true
     },
     {
-      "pedido": "51927297401.0",
+      "pedido": "51927297401",
       "data": "15/07/2026",
       "ym": "2026-07",
       "canal": "casasbahia",
@@ -20264,7 +20290,7 @@
       "aceito": true
     },
     {
-      "pedido": "51852762402.0",
+      "pedido": "51852762402",
       "data": "07/07/2026",
       "ym": "2026-07",
       "canal": "casasbahia",
@@ -20296,7 +20322,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000016983901150.0",
+      "pedido": "2000016983901150",
       "data": "17/06/2026",
       "ym": "2026-06",
       "canal": "mercadolivre",
@@ -20408,7 +20434,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000016976746730.0",
+      "pedido": "2000016976746730",
       "data": "16/06/2026",
       "ym": "2026-06",
       "canal": "mercadolivre",
@@ -20449,9 +20475,9 @@
       "custo": 1094.25,
       "problema": "Avaria",
       "pct_desc": "30,00%",
-      "desc_sug": 328.27,
+      "desc_sug": 328.28,
       "frete": 0.0,
-      "total": 328.27,
+      "total": 328.28,
       "valor_real_fechado": 182.59,
       "aceito": false
     },
@@ -20472,7 +20498,7 @@
       "aceito": false
     },
     {
-      "pedido": "51815299501.0",
+      "pedido": "51815299501",
       "data": "03/07/2026",
       "ym": "2026-07",
       "canal": "casasbahia",
@@ -20520,7 +20546,7 @@
       "aceito": true
     },
     {
-      "pedido": "2000017443135320.0",
+      "pedido": "2000017443135320",
       "data": "16/07/2026",
       "ym": "2026-07",
       "canal": "mercadolivre",
@@ -20664,7 +20690,7 @@
       "aceito": false
     },
     {
-      "pedido": "51149033701.0",
+      "pedido": "51149033701",
       "data": "05/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -20680,7 +20706,7 @@
       "aceito": false
     },
     {
-      "pedido": "51897859501.0",
+      "pedido": "51897859501",
       "data": "11/07/2026",
       "ym": "2026-07",
       "canal": "casasbahia",
@@ -20696,7 +20722,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000017445259040.0",
+      "pedido": "2000017445259040",
       "data": "16/07/2026",
       "ym": "2026-07",
       "canal": "mercadolivre",
@@ -20792,7 +20818,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000017525495460.0",
+      "pedido": "2000017525495460",
       "data": "21/07/2026",
       "ym": "2026-07",
       "canal": "mercadolivre",
@@ -20936,7 +20962,7 @@
       "aceito": false
     },
     {
-      "pedido": "52042529401.0",
+      "pedido": "52042529401",
       "data": "26/07/2026",
       "ym": "2026-07",
       "canal": "casasbahia",
@@ -21032,7 +21058,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000017519580640.0",
+      "pedido": "2000017519580640",
       "data": "21/07/2026",
       "ym": "2026-07",
       "canal": "mercadolivre",
@@ -21096,7 +21122,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000017107953710.0",
+      "pedido": "2000017107953710",
       "data": "25/06/2026",
       "ym": "2026-06",
       "canal": "mercadolivre",
@@ -21112,7 +21138,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000017545927010.0",
+      "pedido": "2000017545927010",
       "data": "22/07/2026",
       "ym": "2026-07",
       "canal": "mercadolivre",
@@ -21176,7 +21202,7 @@
       "aceito": false
     },
     {
-      "pedido": "52102236801.0",
+      "pedido": "52102236801",
       "data": "02/08/2026",
       "ym": "2026-08",
       "canal": "casasbahia",
@@ -21256,7 +21282,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000017630105910.0",
+      "pedido": "2000017630105910",
       "data": "28/07/2026",
       "ym": "2026-07",
       "canal": "mercadolivre",
@@ -21336,7 +21362,7 @@
       "aceito": false
     },
     {
-      "pedido": "51964466102.0",
+      "pedido": "51964466102",
       "data": "18/07/2026",
       "ym": "2026-07",
       "canal": "casasbahia",
@@ -21432,7 +21458,7 @@
       "aceito": false
     },
     {
-      "pedido": "51129313801.0",
+      "pedido": "51129313801",
       "data": "04/05/2026",
       "ym": "2026-05",
       "canal": "casasbahia",
@@ -21448,7 +21474,7 @@
       "aceito": false
     },
     {
-      "pedido": "2000017746681630.0",
+      "pedido": "2000017746681630",
       "data": "04/08/2026",
       "ym": "2026-08",
       "canal": "mercadolivre",
@@ -21496,7 +21522,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-08-14T11:13:58.901765-03:00",
+  "descontosUpdatedAt": "2026-08-14T12:12:59.681363-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
