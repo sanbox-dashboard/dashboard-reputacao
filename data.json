@@ -3657,8 +3657,8 @@
       },
       "amazon": {
         "metrics": {},
-        "ts": "2026-08-17T12:24:07.421116-03:00",
-        "tickets": 4,
+        "ts": "2026-08-17T12:43:32.626376-03:00",
+        "tickets": 3,
         "sacForaPrazo": 1,
         "casosCriticos": 9,
         "solicitacaoDevolucaoAmarelo": 0,
