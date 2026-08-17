@@ -20185,6 +20185,22 @@
       "aceito": false
     },
     {
+      "pedido": "702-6097872-6938631",
+      "data": "06/07/2026",
+      "ym": "2026-07",
+      "canal": "amazon",
+      "sku": "TI1643",
+      "valor_pedido": 626.39,
+      "custo": 396.74,
+      "problema": "Avaria",
+      "pct_desc": "30,00%",
+      "desc_sug": 119.02,
+      "frete": 137.17,
+      "total": 256.19,
+      "valor_real_fechado": 0.0,
+      "aceito": false
+    },
+    {
       "pedido": "2000013895851647",
       "data": "07/07/2026",
       "ym": "2026-07",
@@ -20246,22 +20262,6 @@
       "frete": 288.8,
       "total": 472.93,
       "valor_real_fechado": 400.0,
-      "aceito": false
-    },
-    {
-      "pedido": "702-6097872-6938631",
-      "data": "06/07/2026",
-      "ym": "2026-07",
-      "canal": "amazon",
-      "sku": "TI1643",
-      "valor_pedido": 626.39,
-      "custo": 396.74,
-      "problema": "Avaria",
-      "pct_desc": "30,00%",
-      "desc_sug": 119.02,
-      "frete": 137.17,
-      "total": 256.19,
-      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -21702,7 +21702,7 @@
       "frete": 213.7,
       "total": 599.71,
       "valor_real_fechado": 250.0,
-      "aceito": true
+      "aceito": false
     },
     {
       "pedido": "51129313801",
@@ -21881,7 +21881,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-08-17T13:20:26.113534-03:00",
+  "descontosUpdatedAt": "2026-08-17T13:44:29.246648-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -22175,7 +22175,7 @@
     "2026-07": {
       "shopee": {
         "count": 2,
-        "countAceito": 1,
+        "countAceito": 0,
         "descontoTotal": 435.0,
         "custoTotal": 1748.69,
         "valorPedidoTotal": 2886.37,
