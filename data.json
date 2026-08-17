@@ -3591,9 +3591,74 @@
         "solicitacaoDevolucaoVermelho": 1,
         "solicitacaoDevolucao": 1
       }
+    },
+    "2026-08-16": {
+      "mercadolivre": {
+        "metrics": {},
+        "ts": "2026-08-16T21:13:55.569707-03:00",
+        "tickets": 1,
+        "sacForaPrazo": 5,
+        "casosCriticos": 18,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 3,
+        "solicitacaoDevolucao": 3
+      },
+      "amazon": {
+        "metrics": {},
+        "ts": "2026-08-16T21:13:55.569707-03:00",
+        "tickets": 3,
+        "sacForaPrazo": 1,
+        "casosCriticos": 9,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 6,
+        "solicitacaoDevolucao": 6
+      },
+      "magalu": {
+        "metrics": {},
+        "ts": "2026-08-16T21:13:55.569707-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 0,
+        "casosCriticos": 4,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 1,
+        "solicitacaoDevolucao": 1
+      },
+      "casasbahia": {
+        "metrics": {},
+        "ts": "2026-08-16T21:13:55.569707-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 1,
+        "casosCriticos": 27,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 1,
+        "solicitacaoDevolucao": 1
+      },
+      "shopee": {
+        "metrics": {},
+        "ts": "2026-08-16T21:13:55.569707-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 3,
+        "casosCriticos": 22,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 3,
+        "solicitacaoDevolucao": 3
+      }
     }
   },
   "ticketsRaw": [
+    {
+      "n": "99917255.0",
+      "d": "14/08/2026",
+      "ym": "2026-08",
+      "lj": "Shopee",
+      "pb": "RMA",
+      "sk": "TI1646",
+      "tr": "Correios",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 665.64
+    },
     {
       "n": "99917254.0",
       "d": "14/08/2026",
@@ -3604,7 +3669,7 @@
       "tr": "Trilog",
       "pr": "—",
       "gr": "Débitos Transportadoras",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 854.16
     },
     {
@@ -3825,7 +3890,7 @@
       "tr": "Mercado Envios",
       "pr": "—",
       "gr": "Monitoramento Devolução",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 0.0
     },
     {
@@ -4333,7 +4398,7 @@
       "pr": "—",
       "gr": "Atendimento SAC",
       "st": "Pendente",
-      "vl": 1015.6
+      "vl": 1015.06
     },
     {
       "n": "99917186.0",
@@ -4462,7 +4527,7 @@
       "tr": "Alfa Transportes",
       "pr": "—",
       "gr": "Solicitação de Devolução",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 1794.9
     },
     {
@@ -5176,8 +5241,8 @@
       "sk": "TI1456",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "gr": "Chamados Marketplaces",
+      "st": "Novo",
       "vl": 0.0
     },
     {
@@ -5294,7 +5359,7 @@
       "tr": "Mercado Envios",
       "pr": "—",
       "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "st": "Pendente",
       "vl": 0.0
     },
     {
@@ -5737,7 +5802,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 1691.06
+      "vl": 1691.6
     },
     {
       "n": "99917016.0",
@@ -6387,7 +6452,7 @@
       "pr": "—",
       "gr": "Financeiro (Estorno)",
       "st": "Novo",
-      "vl": 1886.09
+      "vl": 1886.9
     },
     {
       "n": "99916915.0",
@@ -6400,7 +6465,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 1899.9
+      "vl": 1899.09
     },
     {
       "n": "99916913.0",
@@ -6412,7 +6477,7 @@
       "tr": "Trilog",
       "pr": "—",
       "gr": "Débitos Transportadoras",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 0.0
     },
     {
@@ -6452,7 +6517,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 1549.09
+      "vl": 1549.9
     },
     {
       "n": "99916906.0",
@@ -6555,7 +6620,7 @@
       "tr": "Mercado Envios",
       "pr": "—",
       "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "st": "Pendente",
       "vl": 999.9
     },
     {
@@ -7375,7 +7440,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1787.9
+      "vl": 1787.09
     },
     {
       "n": "99916611.0",
@@ -7388,7 +7453,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
-      "vl": 1596.09
+      "vl": 1596.9
     },
     {
       "n": "99916603.0",
@@ -7400,7 +7465,7 @@
       "tr": "Tecmar",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 944.9
     },
     {
@@ -7452,7 +7517,7 @@
       "tr": "Mercado Envios",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 1012.9
     },
     {
@@ -7543,7 +7608,7 @@
       "tr": "Brasil Web",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 890.6
     },
     {
@@ -7608,7 +7673,7 @@
       "tr": "Mercado Envios",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 1324.9
     },
     {
@@ -7699,7 +7764,7 @@
       "tr": "Mercado Envios",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 1012.9
     },
     {
@@ -7960,7 +8025,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Novo",
-      "vl": 1695.9
+      "vl": 1695.09
     },
     {
       "n": "99916268.0",
@@ -7973,7 +8038,7 @@
       "pr": "—",
       "gr": "Entrada Sanbox",
       "st": "Novo",
-      "vl": 1399.02
+      "vl": 1399.2
     },
     {
       "n": "99916246.0",
@@ -8063,7 +8128,7 @@
       "tr": "Alfa Transportes",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 1695.9
     },
     {
@@ -8076,7 +8141,7 @@
       "tr": "VVLog Envias Full",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 2028.46
     },
     {
@@ -8206,7 +8271,7 @@
       "tr": "Tecmar",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 2261.46
     },
     {
@@ -8219,7 +8284,7 @@
       "tr": "Brasil Web",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 1736.74
     },
     {
@@ -8245,7 +8310,7 @@
       "tr": "Brasil Web",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 1801.46
     },
     {
@@ -8258,7 +8323,7 @@
       "tr": "Brasil Web",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 1801.46
     },
     {
@@ -8284,7 +8349,7 @@
       "tr": "Correios",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 828.31
     },
     {
@@ -8297,7 +8362,7 @@
       "tr": "Correios",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 1391.94
     },
     {
@@ -8362,7 +8427,7 @@
       "tr": "Correios",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 373.07
     },
     {
@@ -8401,7 +8466,7 @@
       "tr": "VVLog Envias Full",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 596.92
     },
     {
@@ -8414,7 +8479,7 @@
       "tr": "Total Express",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 609.9
     },
     {
@@ -8479,7 +8544,7 @@
       "tr": "Mercado Envios",
       "pr": "Média",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 991.9
     },
     {
@@ -8531,7 +8596,7 @@
       "tr": "Total Express",
       "pr": "Alta",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 621.33
     },
     {
@@ -8556,7 +8621,7 @@
       "sk": "TI1566",
       "tr": "Alfa Transportes",
       "pr": "—",
-      "gr": "Casos Críticos",
+      "gr": "Débitos Transportadoras",
       "st": "Novo",
       "vl": 1727.32
     },
@@ -8570,7 +8635,7 @@
       "tr": "Brasil Web",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 3774.79
     },
     {
@@ -8765,7 +8830,7 @@
       "tr": "Brasil Web",
       "pr": "Alta",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 1160.93
     },
     {
@@ -8790,7 +8855,7 @@
       "sk": "TI1454",
       "tr": "Recolí",
       "pr": "—",
-      "gr": "Casos Críticos",
+      "gr": "Débitos Transportadoras",
       "st": "Novo",
       "vl": 0.0
     },
@@ -9012,7 +9077,7 @@
       "tr": "Alfa Transportes",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Pendente",
+      "st": "Em andamento",
       "vl": 3035.72
     },
     {
@@ -9194,7 +9259,7 @@
       "tr": "Alfa Transportes",
       "pr": "—",
       "gr": "Casos Críticos",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 1192.66
     },
     {
@@ -10157,7 +10222,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1661.8
+      "vl": 1661.08
     },
     {
       "n": "99913106.0",
@@ -10534,7 +10599,7 @@
       "pr": "Alta",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1858.6
+      "vl": 1858.06
     },
     {
       "n": "99912258.0",
@@ -15009,7 +15074,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-08-14T15:43:48.484137-03:00",
+  "ticketsRawUpdatedAt": "2026-08-16T21:13:55.569707-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1670,
@@ -17560,7 +17625,7 @@
       "desc_sug": 187.63,
       "frete": 154.03,
       "total": 341.66,
-      "valor_real_fechado": 4300.0,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -21546,9 +21611,57 @@
       "total": 193.0,
       "valor_real_fechado": 196.59,
       "aceito": false
+    },
+    {
+      "pedido": "51938818201",
+      "data": "16/07/2026",
+      "ym": "2026-07",
+      "canal": "casasbahia",
+      "sku": "TI1689",
+      "valor_pedido": 4306.86,
+      "custo": 2812.84,
+      "problema": "Insatisfação",
+      "pct_desc": "20,00%",
+      "desc_sug": 562.57,
+      "frete": 246.96,
+      "total": 809.53,
+      "valor_real_fechado": 0.0,
+      "aceito": false
+    },
+    {
+      "pedido": "2608114FRPPMJV",
+      "data": "11/08/2026",
+      "ym": "2026-08",
+      "canal": "shopee",
+      "sku": "TI1758",
+      "valor_pedido": 4344.98,
+      "custo": 2200.0,
+      "problema": "Avaria",
+      "pct_desc": "30,00%",
+      "desc_sug": 660.0,
+      "frete": 220.98,
+      "total": 880.98,
+      "valor_real_fechado": 0.0,
+      "aceito": false
+    },
+    {
+      "pedido": "2000014394929229",
+      "data": "06/08/2026",
+      "ym": "2026-08",
+      "canal": "mercadolivre",
+      "sku": "TI1694",
+      "valor_pedido": 999.9,
+      "custo": 622.53,
+      "problema": "Avaria",
+      "pct_desc": "20,00%",
+      "desc_sug": 124.51,
+      "frete": 0.0,
+      "total": 124.51,
+      "valor_real_fechado": 0.0,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-08-14T14:21:43.602871-03:00",
+  "descontosUpdatedAt": "2026-08-16T21:13:55.569707-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -21729,13 +21842,13 @@
       "casasbahia": {
         "count": 18,
         "countAceito": 5,
-        "descontoTotal": 8020.0,
+        "descontoTotal": 3720.0,
         "custoTotal": 21663.49,
         "valorPedidoTotal": 33876.2,
-        "pctDescontoSobreCusto": 37.02,
-        "pctDescontoSobreVenda": 23.67,
+        "pctDescontoSobreCusto": 17.17,
+        "pctDescontoSobreVenda": 10.98,
         "vendaTotalCanal": 1214519.32,
-        "pctDescontoSobreVendaCanal": 0.6603
+        "pctDescontoSobreVendaCanal": 0.3063
       },
       "mercadolivre": {
         "count": 57,
@@ -21874,13 +21987,13 @@
         "pctDescontoSobreVendaCanal": 0.3906
       },
       "casasbahia": {
-        "count": 6,
+        "count": 7,
         "countAceito": 1,
         "descontoTotal": 1590.0,
-        "custoTotal": 7347.87,
-        "valorPedidoTotal": 11145.62,
-        "pctDescontoSobreCusto": 21.64,
-        "pctDescontoSobreVenda": 14.27,
+        "custoTotal": 10160.71,
+        "valorPedidoTotal": 15452.48,
+        "pctDescontoSobreCusto": 15.65,
+        "pctDescontoSobreVenda": 10.29,
         "vendaTotalCanal": 1525650.08,
         "pctDescontoSobreVendaCanal": 0.1042
       }
@@ -21898,15 +22011,26 @@
         "pctDescontoSobreVendaCanal": 0.0
       },
       "mercadolivre": {
-        "count": 11,
+        "count": 12,
         "countAceito": 0,
         "descontoTotal": 3148.55,
-        "custoTotal": 14335.57,
-        "valorPedidoTotal": 22220.9,
-        "pctDescontoSobreCusto": 21.96,
-        "pctDescontoSobreVenda": 14.17,
+        "custoTotal": 14958.1,
+        "valorPedidoTotal": 23220.8,
+        "pctDescontoSobreCusto": 21.05,
+        "pctDescontoSobreVenda": 13.56,
         "vendaTotalCanal": 599946.24,
         "pctDescontoSobreVendaCanal": 0.5248
+      },
+      "shopee": {
+        "count": 1,
+        "countAceito": 0,
+        "descontoTotal": 0.0,
+        "custoTotal": 2200.0,
+        "valorPedidoTotal": 4344.98,
+        "pctDescontoSobreCusto": 0.0,
+        "pctDescontoSobreVenda": 0.0,
+        "vendaTotalCanal": 142097.87,
+        "pctDescontoSobreVendaCanal": 0.0
       }
     }
   },
