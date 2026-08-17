@@ -21702,7 +21702,7 @@
       "frete": 213.7,
       "total": 599.71,
       "valor_real_fechado": 250.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "51129313801",
@@ -21881,7 +21881,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-08-17T12:24:07.421116-03:00",
+  "descontosUpdatedAt": "2026-08-17T13:20:26.113534-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -22175,7 +22175,7 @@
     "2026-07": {
       "shopee": {
         "count": 2,
-        "countAceito": 0,
+        "countAceito": 1,
         "descontoTotal": 435.0,
         "custoTotal": 1748.69,
         "valorPedidoTotal": 2886.37,
