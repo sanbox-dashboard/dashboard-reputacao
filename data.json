@@ -21853,9 +21853,25 @@
       "total": 186.76,
       "valor_real_fechado": 110.89,
       "aceito": false
+    },
+    {
+      "pedido": "2000014488327397",
+      "data": "11/08/2026",
+      "ym": "2026-08",
+      "canal": "mercadolivre",
+      "sku": "TI1581",
+      "valor_pedido": 1319.9,
+      "custo": 862.72,
+      "problema": "Avaria",
+      "pct_desc": "10,00%",
+      "desc_sug": 86.27,
+      "frete": 0.0,
+      "total": 86.27,
+      "valor_real_fechado": 131.99,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-08-17T14:15:27.650494-03:00",
+  "descontosUpdatedAt": "2026-08-17T16:13:28.201680-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -22205,15 +22221,15 @@
         "pctDescontoSobreVendaCanal": 0.0
       },
       "mercadolivre": {
-        "count": 15,
+        "count": 16,
         "countAceito": 0,
-        "descontoTotal": 3417.62,
-        "custoTotal": 19455.69,
-        "valorPedidoTotal": 30400.5,
-        "pctDescontoSobreCusto": 17.57,
-        "pctDescontoSobreVenda": 11.24,
+        "descontoTotal": 3549.61,
+        "custoTotal": 20318.41,
+        "valorPedidoTotal": 31720.4,
+        "pctDescontoSobreCusto": 17.47,
+        "pctDescontoSobreVenda": 11.19,
         "vendaTotalCanal": 599946.24,
-        "pctDescontoSobreVendaCanal": 0.5697
+        "pctDescontoSobreVendaCanal": 0.5917
       },
       "shopee": {
         "count": 1,
