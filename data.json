@@ -12399,7 +12399,7 @@
       "n": "99904548.0",
       "d": "28/08/2023",
       "ym": "2023-08",
-      "lj": "",
+      "lj": "Kabum",
       "pb": "",
       "sk": "TI824",
       "tr": "",
@@ -14528,7 +14528,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-08-20T18:12:23.099163-03:00",
+  "ticketsRawUpdatedAt": "2026-08-20T19:58:22.973632-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1670,
@@ -17063,7 +17063,7 @@
       "desc_sug": 187.63,
       "frete": 154.03,
       "total": 341.66,
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 4300.0,
       "aceito": false
     },
     {
@@ -21211,7 +21211,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-08-20T18:12:23.099163-03:00",
+  "descontosUpdatedAt": "2026-08-20T19:58:22.973632-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -21379,13 +21379,13 @@
       "casasbahia": {
         "count": 18,
         "countAceito": 5,
-        "descontoTotal": 3720.0,
+        "descontoTotal": 8020.0,
         "custoTotal": 21781.61,
         "valorPedidoTotal": 33876.2,
-        "pctDescontoSobreCusto": 17.08,
-        "pctDescontoSobreVenda": 10.98,
+        "pctDescontoSobreCusto": 36.82,
+        "pctDescontoSobreVenda": 23.67,
         "vendaTotalCanal": 1214519.32,
-        "pctDescontoSobreVendaCanal": 0.3063
+        "pctDescontoSobreVendaCanal": 0.6603
       },
       "mercadolivre": {
         "count": 57,
