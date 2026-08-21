@@ -3855,6 +3855,19 @@
   },
   "ticketsRaw": [
     {
+      "n": "99917320.0",
+      "d": "21/08/2026",
+      "ym": "2026-08",
+      "lj": "Mercado Livre",
+      "pb": "Arrependimento",
+      "sk": "SS001",
+      "tr": "Mercado Envios",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 799.9
+    },
+    {
       "n": "99917319.0",
       "d": "21/08/2026",
       "ym": "2026-08",
@@ -14593,7 +14606,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-08-21T10:12:55.265605-03:00",
+  "ticketsRawUpdatedAt": "2026-08-21T10:42:51.547961-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1670,
