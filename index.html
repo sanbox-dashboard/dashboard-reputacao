@@ -904,7 +904,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '45.2';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '45.4';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -2093,9 +2093,13 @@ function carryOverTickets(){
         const prev = state.entries[d]?.[channelKey];
         if(prev && prev[field] !== undefined && prev[field] !== null){
           if(!state.entries[today][channelKey]){
-            state.entries[today][channelKey] = {[field]: prev[field], metrics:{}};
+            // IMPORTANTE (v45.3): o valor carregado herda o ts ANTIGO do dia de origem.
+            // Assim, quando a tarefa agendada gravar o valor real de hoje (ts novo),
+            // ela SEMPRE vence no merge — o carryover nunca ressuscita número velho.
+            state.entries[today][channelKey] = {[field]: prev[field], metrics:{}, ts: prev.ts};
           } else {
             state.entries[today][channelKey][field] = prev[field];
+            // não atualiza o ts — mantém o mais antigo pra perder de dados frescos
           }
           changed++;
           break;
@@ -2365,7 +2369,7 @@ function mergeChannelEntry(local, remote){
   // Reputação: prefere lado com valor preenchido. Empate de preenchimento → newer ts.
   const lHasRep = !!local.reputacao;
   const rHasRep = !!remote.reputacao;
-  if(lHasRep && rHasRep) result.reputacao = lTs >= rTs ? local.reputacao : remote.reputacao;
+  if(lHasRep && rHasRep) result.reputacao = lTs > rTs ? local.reputacao : remote.reputacao;
   else if(lHasRep) result.reputacao = local.reputacao;
   else if(rHasRep) result.reputacao = remote.reputacao;
   else result.reputacao = '';
@@ -2378,7 +2382,7 @@ function mergeChannelEntry(local, remote){
     const lv = lMet[k], rv = rMet[k];
     const lHas = lv !== null && lv !== undefined && lv !== '';
     const rHas = rv !== null && rv !== undefined && rv !== '';
-    if(lHas && rHas) result.metrics[k] = lTs >= rTs ? lv : rv;
+    if(lHas && rHas) result.metrics[k] = lTs > rTs ? lv : rv;
     else if(lHas) result.metrics[k] = lv;
     else if(rHas) result.metrics[k] = rv;
     else result.metrics[k] = null;
@@ -2391,7 +2395,7 @@ function mergeChannelEntry(local, remote){
   autoFields.forEach(f => {
     const lHas = local[f] !== undefined && local[f] !== null;
     const rHas = remote[f] !== undefined && remote[f] !== null;
-    if(lHas && rHas) result[f] = lTs >= rTs ? local[f] : remote[f];
+    if(lHas && rHas) result[f] = lTs > rTs ? local[f] : remote[f];
     else if(rHas) result[f] = remote[f];
     else if(lHas) result[f] = local[f];
   });
