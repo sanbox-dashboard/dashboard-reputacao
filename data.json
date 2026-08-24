@@ -3865,13 +3865,13 @@
       },
       "amazon": {
         "metrics": {},
-        "ts": "2026-08-24T09:27:11.464197-03:00",
+        "ts": "2026-08-24T10:43:55.079610-03:00",
         "tickets": 0,
         "sacForaPrazo": 1,
         "casosCriticos": 9,
         "solicitacaoDevolucaoAmarelo": 0,
-        "solicitacaoDevolucaoVermelho": 7,
-        "solicitacaoDevolucao": 7
+        "solicitacaoDevolucaoVermelho": 6,
+        "solicitacaoDevolucao": 6
       },
       "magalu": {
         "metrics": {},
@@ -3906,6 +3906,19 @@
     }
   },
   "ticketsRaw": [
+    {
+      "n": "99917331",
+      "d": "24/08/2026",
+      "ym": "2026-08",
+      "lj": "Casas Bahia",
+      "pb": "Atraso de Entrega",
+      "sk": "TI1690",
+      "tr": "Trilog",
+      "pr": "—",
+      "gr": "Atendimento SAC",
+      "st": "Novo",
+      "vl": 0.0
+    },
     {
       "n": "99917330",
       "d": "24/08/2026",
@@ -4253,8 +4266,8 @@
       "sk": "TI1571",
       "tr": "Alfa Transportes",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "gr": "Débitos Transportadoras",
+      "st": "Novo",
       "vl": 1098.72
     },
     {
@@ -4359,7 +4372,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Novo",
-      "vl": 1109.5
+      "vl": 1109.05
     },
     {
       "n": "99917288",
@@ -4513,7 +4526,7 @@
       "sk": "TI673",
       "tr": "Amazon Full",
       "pr": "—",
-      "gr": "Atendimento SAC",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 329.9
     },
@@ -5178,7 +5191,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1015.6
+      "vl": 1015.06
     },
     {
       "n": "99917186",
@@ -6062,7 +6075,7 @@
       "pr": "—",
       "gr": "Financeiro (Cancelamento indevido)",
       "st": "Novo",
-      "vl": 1637.09
+      "vl": 1637.9
     },
     {
       "n": "99917034",
@@ -6491,7 +6504,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1899.9
+      "vl": 1899.09
     },
     {
       "n": "99916913",
@@ -6723,8 +6736,8 @@
       "sk": "TI1715",
       "tr": "Alfa Transportes",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
-      "st": "Pendente",
+      "gr": "Monitoramento Devolução",
+      "st": "Novo",
       "vl": 1043.27
     },
     {
@@ -7154,7 +7167,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 1899.9
+      "vl": 1899.09
     },
     {
       "n": "99916576",
@@ -7167,7 +7180,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1565.01
+      "vl": 1565.1
     },
     {
       "n": "99916568",
@@ -7596,7 +7609,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 1695.9
+      "vl": 1695.09
     },
     {
       "n": "99916268",
@@ -7609,7 +7622,7 @@
       "pr": "—",
       "gr": "Entrada Sanbox",
       "st": "Novo",
-      "vl": 1399.02
+      "vl": 1399.2
     },
     {
       "n": "99916246",
@@ -9234,7 +9247,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1655.9
+      "vl": 1655.09
     },
     {
       "n": "99914113",
@@ -10352,7 +10365,7 @@
       "pr": "—",
       "gr": "Em análise",
       "st": "Novo",
-      "vl": 1572.6
+      "vl": 1572.06
     },
     {
       "n": "99911694",
@@ -14580,7 +14593,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-08-24T10:13:08.061364-03:00",
+  "ticketsRawUpdatedAt": "2026-08-24T10:43:55.079610-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1670,
