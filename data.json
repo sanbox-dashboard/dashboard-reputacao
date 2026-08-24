@@ -12451,7 +12451,7 @@
       "n": "99904548",
       "d": "28/08/2023",
       "ym": "2023-08",
-      "lj": "",
+      "lj": "Kabum",
       "pb": "",
       "sk": "TI824",
       "tr": "",
@@ -14580,7 +14580,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-08-24T09:27:11.464197-03:00",
+  "ticketsRawUpdatedAt": "2026-08-24T09:49:00.589320-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1670,
@@ -17172,7 +17172,7 @@
       "ym": "2026-04",
       "canal": "magalu",
       "canal_raw": "Magazine Luiza",
-      "sku": "    TI1571",
+      "sku": "TI1571",
       "valor_pedido": 1177.34,
       "custo": 589.29,
       "problema": "Avaria",
@@ -21723,7 +21723,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-08-24T09:27:11.464197-03:00",
+  "descontosUpdatedAt": "2026-08-24T09:49:00.589320-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
