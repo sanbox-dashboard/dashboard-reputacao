@@ -905,7 +905,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '46.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '46.1';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -1673,9 +1673,21 @@ function parseOcr(channelKey, text){
   // "Nivel de Serviço (O Agilidade no Atendimento (D) Cancelamento (O Meta: Acima as 95.0% Meta: Acima ce 90.0% Meta: Abaixo de 2.0% 93,5% +0,3% 94,9% +0,1% 5,1% +1,2%"
   // Estratégia: depois de remover Metas e deltas, capturar os 3 valores em sequência
   if(channelKey === 'magalu'){
-    // === REPUTAÇÃO (v46) === — PRIORIDADE: círculo "Sua Reputação" ("X,X De 1 a 5")
-    const circulo = norm.match(/(\d[,.]\d)\s*De\s*1\s*a\s*5/i);
-    if(circulo){ result.reputacao = circulo[1].replace('.', ','); }
+    // === REPUTAÇÃO (v46.1) === — círculo "Sua Reputação": primeiro X,X (1-5) logo
+    // após o texto "Sua reputação", votando entre TODOS os passes do OCR.
+    const circCands = [];
+    for(const m of norm.matchAll(/sua\s*reputa[çc][ãa]o[\s\S]{0,300}?(?<!\d)(\d)[,.](\d)(?!\d)/gi)){
+      const v = parseFloat(m[1] + '.' + m[2]);
+      if(v >= 1 && v <= 5) circCands.push(m[1] + ',' + m[2]);
+    }
+    for(const m of norm.matchAll(/(\d)[,.](\d)\s*De\s*1\s*a\s*5/gi)){
+      const v = parseFloat(m[1] + '.' + m[2]);
+      if(v >= 1 && v <= 5) circCands.push(m[1] + ',' + m[2]);
+    }
+    if(circCands.length){
+      const fq = {}; circCands.forEach(v => fq[v] = (fq[v]||0) + 1);
+      result.reputacao = Object.entries(fq).sort((a,b) => b[1]-a[1])[0][0];
+    }
     // Fallback antigo — X,X em range 1-5 (do gauge "3,4")
     // FILTRO IMPORTANTE: ignora valores SEGUIDOS POR letras minúsculas (placeholder garbage tipo "1.8 me's orcisar")
     const repCandidates = [];
@@ -1746,43 +1758,49 @@ function parseOcr(channelKey, text){
 
     // === TAXA DE RESPOSTA === — regex FLEXÍVEL pra todas as variantes do OCR
     // Pode aparecer como: "Taxa de Resposta", "Taxade Resposta", "Texade Resposta", "TaxadeResposta"
-    const tRespArea = norm.match(/T[ae]x[ae]?\s*d?e?\s*Resposta[\s\S]{0,300}/i)
-                   || norm.match(/Resposta[\s\S]{0,200}/i); // último fallback
-    if(tRespArea){
-      // Pega TODOS os valores X.XX% no range 50-100%
-      const pcts = [...tRespArea[0].matchAll(/(?<!\d)(\d{1,3}[,.]\d{1,2})\s*%/g)]
-        .map(m => parseFloat(m[1].replace(',','.')))
-        .filter(v => v >= 50 && v <= 100);
-      if(pcts.length) result.metrics.taxaResposta = pcts[0];
+    // v46.1: vota entre TODOS os passes (o 1º costuma ler "8.34%" perdendo o 9)
+    const trCands = [];
+    for(const m of norm.matchAll(/Resposta[\s\S]{0,60}?(\d{1,3}[,.]\d{1,2})\s*%/gi)){
+      const v = parseFloat(m[1].replace(',','.'));
+      if(v >= 50 && v <= 100) trCands.push(v.toFixed(2));
+    }
+    if(trCands.length){
+      const fq = {}; trCands.forEach(v => fq[v] = (fq[v]||0) + 1);
+      result.metrics.taxaResposta = parseFloat(Object.entries(fq).sort((a,b) => b[1]-a[1])[0][0]);
     }
 
-    // === AVALIAÇÃO DA LOJA / NOTA (v46) === — exige 2 casas decimais (ex: 4.87/5)
-    // pra NÃO capturar a meta "≥4.5/5"; fallback: 1 casa, excluindo exatamente 4,5.
-    const avalArea = norm.match(/avalia[çc][ãa]o\s+da\s+loja[\s\S]{0,140}/i);
-    if(avalArea){
-      const duas = [...avalArea[0].matchAll(/(?<!\d)(\d[.,]\d{2})(?!\d)/g)]
-        .map(m => parseFloat(m[1].replace(',','.')))
-        .filter(v => v >= 1 && v <= 5);
-      const uma = [...avalArea[0].matchAll(/(?<!\d)(\d[.,]\d)(?!\d)/g)]
-        .map(m => parseFloat(m[1].replace(',','.')))
-        .filter(v => v >= 1 && v <= 5 && v !== 4.5);
-      const v = duas.length ? duas[0] : (uma.length ? uma[0] : null);
-      if(v !== null){
-        result.metrics.notaLoja = v;
-        result.reputacao = String(v).replace('.', ',');
+    // === AVALIAÇÃO DA LOJA / NOTA (v46.1) === — vota entre os passes do OCR.
+    // Aceita "4.87/5", "487/5" e o colado "4875"; ignora a meta "≥4.5/5" (v=4,5).
+    const notaCands = [];
+    for(const am of norm.matchAll(/avalia\S{0,4}\s+d\S{1,2}\s+lo\S*[\s\S]{0,80}/gi)){
+      const area = am[0];
+      const m2 = area.match(/(\d)[.,](\d{2})\s*\/\s*5/)
+              || area.match(/(?<!\d)(\d)(\d{2})\s*\/\s*5/)
+              || area.match(/(?<!\d)(\d)(\d{2})5(?!\d)/)
+              || area.match(/(?<!\d)(\d)[.,](\d{2})(?!\d)/);
+      if(m2){
+        const v = parseFloat(m2[1] + '.' + m2[2]);
+        if(v >= 1 && v <= 5 && v !== 4.5) notaCands.push(v.toFixed(2));
       }
     }
-    // === TAXA DE NÃO CUMPRIMENTO (v46) === — valor com decimal (a meta "<8%" é inteira)
-    const ncArea = norm.match(/n[ãa]o\s+cumprimento[\s\S]{0,150}/i);
-    if(ncArea){
-      const pcts = [...ncArea[0].matchAll(/(?<!\d)(\d{1,2}[.,]\d{1,2})\s*%/g)]
-        .map(m => parseFloat(m[1].replace(',','.')))
-        .filter(v => v >= 0 && v <= 100);
-      if(pcts.length) result.metrics.taxaNaoCumprimento = pcts[0];
-      else {
-        const ints = [...ncArea[0].matchAll(/(?<!\d)(\d{1,2})\s*%/g)].map(m=>parseInt(m[1])).filter(v=>v>=0&&v<=100&&v!==8);
-        if(ints.length) result.metrics.taxaNaoCumprimento = ints[0];
-      }
+    if(notaCands.length){
+      const fq = {}; notaCands.forEach(v => fq[v] = (fq[v]||0) + 1);
+      const best = parseFloat(Object.entries(fq).sort((a,b) => b[1]-a[1])[0][0]);
+      result.metrics.notaLoja = best;
+      result.reputacao = String(best).replace('.', ',');
+    }
+    // === TAXA DE NÃO CUMPRIMENTO (v46.1) === — vota entre os passes; janela curta
+    // (80 chars) pra não vazar pro "0.00%" da linha de baixo; "441%" vira 4,41
+    // (OCR costuma perder o ponto); exclui a meta 8%.
+    const ncCands = [];
+    for(const m of norm.matchAll(/n[ãa&]o\s*cu\w*mento[\s\S]{0,80}?(\d{1,3}(?:[.,]\d{1,2})?)\s*%/gi)){
+      let v = parseFloat(m[1].replace(',','.'));
+      if(v >= 100) v = v / 100;
+      if(v > 0 && v < 100 && v !== 8 && v !== 5) ncCands.push(v.toFixed(2));
+    }
+    if(ncCands.length){
+      const fq = {}; ncCands.forEach(v => fq[v] = (fq[v]||0) + 1);
+      result.metrics.taxaNaoCumprimento = parseFloat(Object.entries(fq).sort((a,b) => b[1]-a[1])[0][0]);
     }
     // === AVALIAÇÕES RUINS NÃO RESPONDIDAS === — inteiro pequeno
     const ruins = norm.match(/n[ãa]o\s+respond?id[ao]s[\s\S]{0,60}?(\d+)/i);
