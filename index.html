@@ -848,6 +848,7 @@ const channels = {
     name: 'Mercado Livre',
     color: '#FFE600',
     repLabel: 'Classificação',
+    noRep: true, // v46: Mercado Livre não tem mais "reputação geral" no dash
     metrics: {
       reclamacoes: {label:'Reclamações', metaType:'max', meta:1.0, alerta:0.80, unit:'%', ocrPattern:/reclama[çc][õo]es?[\s\S]{0,150}?(\d+(?:[,.]\d+)?)\s*%/i},
       mediacoes:   {label:'Mediações',   metaType:'max', meta:0.5, alerta:0.30, unit:'%', ocrPattern:/media[çc][õo]es?[\s\S]{0,150}?(\d+(?:[,.]\d+)?)\s*%/i},
@@ -888,8 +889,8 @@ const channels = {
     color: '#EE4D2D',
     repLabel: 'Nota da Loja',
     metrics: {
+      taxaNaoCumprimento:  {label:'Taxa de Não Cumprimento', metaType:'max', meta:8.0, alerta:8.0, unit:'%', ocrPattern:/n[ãa]o\s+cumprimento[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
       taxaResposta:        {label:'Taxa de Resposta', metaType:'min', meta:90, alerta:95, unit:'%', ocrPattern:/taxa de resposta[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
-      boaAvaliacao:        {label:'Boa taxa de avaliação', metaType:'min', meta:95, alerta:97, unit:'%', ocrPattern:/boa taxa[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
       notaLoja:            {label:'Nota da Loja', metaType:'min', meta:4.0, alerta:4.5, unit:'', ocrPattern:/nota da loja[\s\S]{0,200}?(\d+[,.]\d+)/i}
     }
   }
@@ -904,7 +905,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '45.4';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '46.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -1094,10 +1095,10 @@ function renderTodayCards(){
     html += `<div class="card ${isStale?'stale':''}" style="border-top:6px solid ${ch.color}">
       <div class="card-header">
         <div class="card-name"><span class="channel-tag" style="background:${ch.color}"></span>${ch.name}</div>
-        <div class="rep-badge" title="${ch.repLabel}">
+        ${ch.noRep ? '' : `<div class="rep-badge" title="${ch.repLabel}">
           <span class="rep-label">${ch.repLabel}</span>
           <span class="reputation">${reputacao}</span>
-        </div>
+        </div>`}
       </div>
       ${staleBadge}
       <ul class="metric-list">${metricsHtml}</ul>
@@ -1195,7 +1196,7 @@ function renderMonthCards(){
       const stC = tk.crit===0?'green':'red';
       const stD = tk.dev===0?'green':'red';
       fotoHtml = `<div style="margin-top:12px;padding-top:10px;border-top:2px dashed var(--border)">
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-bottom:6px">📸 Fechamento ${ptDate(lastD)} · ${e.reputacao || '—'}</div>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-bottom:6px">📸 Fechamento ${ptDate(lastD)}${ch.noRep ? '' : ' · ' + (e.reputacao || '—')}</div>
         ${fotoRows}
         <div class="mini-tickets ${stT}" style="margin-top:6px">🎫 ${tk.tickets} ticket${tk.tickets===1?'':'s'} fin.</div>
         <div class="mini-tickets ${stS}" style="margin-top:2px">⏱️ ${tk.sac} SAC +30d</div>
@@ -1257,7 +1258,7 @@ function renderChannelPanel(key, ch){
     const arrow = m.metaType==='max'?'máx':'mín';
     fieldsHtml += `<div class="field">
       <label>${m.label} <span class="meta-hint">(${arrow} ${fmtNumber(m.meta,m.unit)} · alerta ${fmtNumber(m.alerta,m.unit)})</span></label>
-      <input type="number" step="0.01" data-channel="${key}" data-metric="${mKey}" value="${v}" placeholder="0,00">
+      <input type="number" step="0.01" data-channel="${key}" data-metric="${mKey}" value="${v}" placeholder="—" readonly tabindex="-1" title="Preenchido automaticamente pelo OCR do print — edição manual desativada" style="background:#f4f6fb;cursor:not-allowed">
     </div>`;
   });
   return `<div class="tab-panel" id="panel-${key}" data-channel="${key}">
@@ -1280,10 +1281,10 @@ function renderChannelPanel(key, ch){
       <div>
         <p style="margin-bottom:8px;font-size:13px;color:var(--muted)"><strong>2.</strong> Confirme/edite os valores e salve</p>
         <div class="form-grid">
-          <div class="field">
+          ${ch.noRep ? '' : `<div class="field">
             <label>Reputação Geral <span class="meta-hint">(${ch.repLabel})</span></label>
-            <input type="text" data-channel="${key}" data-rep="1" value="${data.reputacao||''}" placeholder="ex: 2,4 ou Platinum">
-          </div>
+            <input type="text" data-channel="${key}" data-rep="1" value="${data.reputacao||''}" placeholder="—" readonly tabindex="-1" title="Preenchido automaticamente pelo OCR do print — edição manual desativada" style="background:#f4f6fb;cursor:not-allowed">
+          </div>`}
           ${fieldsHtml}
           <div class="form-actions">
             <button class="btn btn-secondary" onclick="clearChannelToday('${key}')">Limpar</button>
@@ -1466,6 +1467,29 @@ async function handleImage(key, file){
     extracted.textContent = text;
     extracted.classList.add('show');
 
+    // === DATA DO PRINT (v46) === — procura DD/MM/AAAA no texto (relógio da barra de
+    // tarefas fica no rodapé do print → usa a ÚLTIMA ocorrência). Sem data válida, BLOQUEIA.
+    const dataMatches = [...text.matchAll(/(\d{2})\/(\d{2})\/(\d{4})/g)];
+    let printDay = null;
+    if(dataMatches.length){
+      const m = dataMatches[dataMatches.length - 1];
+      const dd = parseInt(m[1]), mm = parseInt(m[2]), yy = parseInt(m[3]);
+      const dt = new Date(yy, mm - 1, dd);
+      const hojeDt = new Date(); hojeDt.setHours(23,59,59,999);
+      const min = new Date(); min.setDate(min.getDate() - 60);
+      if(dt.getDate() === dd && dt.getMonth() === mm - 1 && dt <= hojeDt && dt >= min){
+        printDay = `${yy}-${String(mm).padStart(2,'0')}-${String(dd).padStart(2,'0')}`;
+      }
+    }
+    window._ocrPrintDay = window._ocrPrintDay || {};
+    window._ocrPrintDay[key] = printDay;
+    if(!printDay){
+      status.innerHTML = '🚫 <strong>Data não encontrada no print.</strong> A imagem precisa mostrar a data (barra de tarefas do Windows). Upload bloqueado — tire o print com a data visível.';
+      progress.style.display = 'none';
+      document.querySelectorAll(`#panel-${key} input[data-metric], #panel-${key} input[data-rep]`).forEach(i=>{ i.value=''; });
+      return;
+    }
+
     const found = parseOcr(key, text);
     let foundCount = 0;
     Object.entries(found.metrics || {}).forEach(([mKey, value])=>{
@@ -1476,7 +1500,7 @@ async function handleImage(key, file){
       const repInp = document.querySelector(`#panel-${key} input[data-rep]`);
       if(repInp) repInp.value = found.reputacao;
     }
-    status.innerHTML = `✓ OCR concluído. <strong>${foundCount}</strong> de ${Object.keys(channels[key].metrics).length} métricas detectadas. Confira e edite se necessário.`;
+    status.innerHTML = `✓ OCR concluído. <strong>${foundCount}</strong> de ${Object.keys(channels[key].metrics).length} métricas detectadas · 🗓 Print de <strong>${ptDate(printDay)}</strong> — será salvo nesse dia.`;
     progress.style.display = 'none';
   }catch(e){
     status.textContent = '⚠ Erro no OCR: ' + e.message + '. Preencha manualmente.';
@@ -1493,8 +1517,6 @@ function parseOcr(channelKey, text){
   // Layout: labels todos juntos no topo, depois TODOS valores juntos: "0,63% 0,21% 0,16% 0,28%"
   // Estratégia: extrair 4 valores em sequência dentro de "Variáveis sobre suas vendas"
   if(channelKey === 'mercadolivre'){
-    const repMatch = norm.match(/Mercado\s*L[íi]der\s+(Platinum|Gold|Silver|Bronze|Standard)/i);
-    if(repMatch){ result.reputacao = 'MercadoLíder ' + repMatch[1]; }
 
     // Procura na região após "Variáveis sobre suas vendas"
     const regionMatch = norm.match(/Vari[áa]veis\s+sobre\s+suas\s+vendas[\s\S]{0,2000}?(?:Seu\s+desempenho|===\s*PASSE|$)/i);
@@ -1576,7 +1598,15 @@ function parseOcr(channelKey, text){
 
   // ===== Casas Bahia =====
   if(channelKey === 'casasbahia'){
-    // === REPUTAÇÃO === — multi-estratégia com voting PONDERADO
+    // === REPUTAÇÃO (v46) === — PRIORIDADE: nota com decimal perto de "Top Lojista"
+    // ou do delta "vs./igual ao mês anterior" (ex.: "1.6 igual ao mês anterior")
+    const cbNota = norm.match(/top\s+lojista[\s\S]{0,120}?(\d[.,]\d)(?!\d)/i)
+                || norm.match(/(\d[.,]\d)(?!\d)[\s\S]{0,40}?(?:igual\s+ao\s+m[êe]s|vs\.?\s*m[êe]s\s+anterior)/i);
+    if(cbNota){
+      const v = parseFloat(cbNota[1].replace(',','.'));
+      if(v >= 1 && v <= 5) result.reputacao = cbNota[1].replace('.', ',');
+    }
+    // Fallback antigo — multi-estratégia com voting PONDERADO
     // O OCR do CB é instável: "↑ 4" pode virar "Y 4", "v 4", "1" (eixo Y do gráfico), etc.
     // Estratégia A (peso 3): dígito imediatamente após Y/v/↑ — MUITO PROVÁVEL rating
     //                       EXCETO se for "Y 1" + "vs" (provavelmente eixo Y bottom)
@@ -1603,7 +1633,7 @@ function parseOcr(channelKey, text){
       add(v, 1);
     });
 
-    if(Object.keys(freqCB).length){
+    if(!result.reputacao && Object.keys(freqCB).length){
       const best = Object.entries(freqCB).sort((a,b) => b[1]-a[1])[0][0];
       result.reputacao = best;
     }
@@ -1643,7 +1673,10 @@ function parseOcr(channelKey, text){
   // "Nivel de Serviço (O Agilidade no Atendimento (D) Cancelamento (O Meta: Acima as 95.0% Meta: Acima ce 90.0% Meta: Abaixo de 2.0% 93,5% +0,3% 94,9% +0,1% 5,1% +1,2%"
   // Estratégia: depois de remover Metas e deltas, capturar os 3 valores em sequência
   if(channelKey === 'magalu'){
-    // === REPUTAÇÃO === — X,X em range 1-5 (do gauge "3,4")
+    // === REPUTAÇÃO (v46) === — PRIORIDADE: círculo "Sua Reputação" ("X,X De 1 a 5")
+    const circulo = norm.match(/(\d[,.]\d)\s*De\s*1\s*a\s*5/i);
+    if(circulo){ result.reputacao = circulo[1].replace('.', ','); }
+    // Fallback antigo — X,X em range 1-5 (do gauge "3,4")
     // FILTRO IMPORTANTE: ignora valores SEGUIDOS POR letras minúsculas (placeholder garbage tipo "1.8 me's orcisar")
     const repCandidates = [];
     const allMatches = [...norm.matchAll(/(?<!\d)(\d)[,.](\d)(?!\d)([\s\S]{0,20})/g)];
@@ -1655,7 +1688,7 @@ function parseOcr(channelKey, text){
       if(/^\s*[a-zà-ÿ]{2,}/i.test(seguinte) && /^\s*[a-z]{2,}/.test(seguinte)) continue;
       repCandidates.push(m[1] + ',' + m[2]);
     }
-    if(repCandidates.length){
+    if(!result.reputacao && repCandidates.length){
       const freq = {};
       repCandidates.forEach(v => freq[v] = (freq[v]||0) + 1);
       const best = Object.entries(freq).sort((a,b) => b[1]-a[1])[0][0];
@@ -1723,22 +1756,33 @@ function parseOcr(channelKey, text){
       if(pcts.length) result.metrics.taxaResposta = pcts[0];
     }
 
-    // === AVALIAÇÃO DA LOJA / NOTA === — 1-5 com decimal (ex: 4,86 ou 4.86/5)
-    const aval = norm.match(/avalia[çc][ãa]o\s+da\s+loja[\s\S]{0,80}?(\d[,.]\d{1,2})/i);
-    if(aval){
-      const v = parseFloat(aval[1].replace(',','.'));
-      if(v >= 1 && v <= 5){
+    // === AVALIAÇÃO DA LOJA / NOTA (v46) === — exige 2 casas decimais (ex: 4.87/5)
+    // pra NÃO capturar a meta "≥4.5/5"; fallback: 1 casa, excluindo exatamente 4,5.
+    const avalArea = norm.match(/avalia[çc][ãa]o\s+da\s+loja[\s\S]{0,140}/i);
+    if(avalArea){
+      const duas = [...avalArea[0].matchAll(/(?<!\d)(\d[.,]\d{2})(?!\d)/g)]
+        .map(m => parseFloat(m[1].replace(',','.')))
+        .filter(v => v >= 1 && v <= 5);
+      const uma = [...avalArea[0].matchAll(/(?<!\d)(\d[.,]\d)(?!\d)/g)]
+        .map(m => parseFloat(m[1].replace(',','.')))
+        .filter(v => v >= 1 && v <= 5 && v !== 4.5);
+      const v = duas.length ? duas[0] : (uma.length ? uma[0] : null);
+      if(v !== null){
         result.metrics.notaLoja = v;
-        if(!result.reputacao) result.reputacao = aval[1].replace('.', ',');
+        result.reputacao = String(v).replace('.', ',');
       }
     }
-    // === BOA TAXA DE AVALIAÇÃO === — não aparece sempre no print Shopee novo
-    const boaArea = norm.match(/boa\s+taxa[\s\S]{0,150}/i);
-    if(boaArea){
-      const pcts = [...boaArea[0].matchAll(/(?<!\d)(\d{1,3}[,.]\d{1,2})\s*%/g)]
+    // === TAXA DE NÃO CUMPRIMENTO (v46) === — valor com decimal (a meta "<8%" é inteira)
+    const ncArea = norm.match(/n[ãa]o\s+cumprimento[\s\S]{0,150}/i);
+    if(ncArea){
+      const pcts = [...ncArea[0].matchAll(/(?<!\d)(\d{1,2}[.,]\d{1,2})\s*%/g)]
         .map(m => parseFloat(m[1].replace(',','.')))
-        .filter(v => v >= 50 && v <= 100);
-      if(pcts.length) result.metrics.boaAvaliacao = pcts[0];
+        .filter(v => v >= 0 && v <= 100);
+      if(pcts.length) result.metrics.taxaNaoCumprimento = pcts[0];
+      else {
+        const ints = [...ncArea[0].matchAll(/(?<!\d)(\d{1,2})\s*%/g)].map(m=>parseInt(m[1])).filter(v=>v>=0&&v<=100&&v!==8);
+        if(ints.length) result.metrics.taxaNaoCumprimento = ints[0];
+      }
     }
     // === AVALIAÇÕES RUINS NÃO RESPONDIDAS === — inteiro pequeno
     const ruins = norm.match(/n[ãa]o\s+respond?id[ao]s[\s\S]{0,60}?(\d+)/i);
@@ -1766,24 +1810,30 @@ function parseOcr(channelKey, text){
    SALVAR / LIMPAR
    ========================================================================= */
 function saveChannel(key){
-  const today = todayKey();
-  if(!state.entries[today]) state.entries[today] = {};
+  // v46: SÓ salva com print cuja data foi reconhecida — e salva NO DIA DO PRINT.
+  const day = (window._ocrPrintDay || {})[key];
+  if(!day){
+    showToast('🚫 Suba um print com a data visível (barra de tarefas) antes de salvar.', 'err');
+    return;
+  }
+  if(!state.entries[day]) state.entries[day] = {};
   const metricsObj = {};
   document.querySelectorAll(`#panel-${key} input[data-metric]`).forEach(inp=>{
     const v = inp.value.toString().replace(',', '.').trim();
     metricsObj[inp.dataset.metric] = v==='' ? null : parseFloat(v);
   });
   const repInput = document.querySelector(`#panel-${key} input[data-rep]`);
-  // Preserva tickets/sacForaPrazo/casosCriticos/solicitacaoDevolucao existentes
-  // (esses campos vêm das tarefas agendadas, não devem ser sobrescritos pelo save manual)
-  const existing = state.entries[today][key] || {};
-  state.entries[today][key] = {
-    reputacao: repInput?.value?.trim() || '',
+  // Preserva os campos automáticos DO DIA DO PRINT (tickets etc. vêm da tarefa agendada)
+  const existing = state.entries[day][key] || {};
+  state.entries[day][key] = {
+    reputacao: channels[key].noRep ? '' : (repInput?.value?.trim() || ''),
     metrics: metricsObj,
     tickets: existing.tickets ?? null,
     sacForaPrazo: existing.sacForaPrazo ?? null,
     casosCriticos: existing.casosCriticos ?? null,
     solicitacaoDevolucao: existing.solicitacaoDevolucao ?? null,
+    solicitacaoDevolucaoVermelho: existing.solicitacaoDevolucaoVermelho ?? null,
+    solicitacaoDevolucaoAmarelo: existing.solicitacaoDevolucaoAmarelo ?? null,
     ts: new Date().toISOString()
   };
   save();
@@ -1791,7 +1841,7 @@ function saveChannel(key){
   renderMonthCards();
   renderHistory();
   renderRegistro();
-  showToast(`✓ Dados de ${channels[key].name} salvos para ${ptDate(today)}`, 'success');
+  showToast(`✓ Dados de ${channels[key].name} salvos para ${ptDate(day)} (data do print)`, 'success');
 }
 
 function clearChannelToday(key){
@@ -1892,7 +1942,7 @@ function renderRegistro(){
         `<div class="mini-tickets ${devStatus}" style="margin-top:2px">📦 ${dev} devol. +30d</div>` : '';
       html += `<div class="mini-card" style="border-top:3px solid ${ch.color}">
         <div class="mini-card-name" style="border-bottom-color:${ch.color}"><span class="channel-tag" style="background:${ch.color};width:8px;height:8px"></span>${ch.name}</div>
-        <div class="mini-card-rep"><small>${ch.repLabel}</small>${data.reputacao || '—'}</div>
+        ${ch.noRep ? '' : `<div class="mini-card-rep"><small>${ch.repLabel}</small>${data.reputacao || '—'}</div>`}
         ${metricsHtml}
         ${ticketsHtml}
         ${sacHtml}
