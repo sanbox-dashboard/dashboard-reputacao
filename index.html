@@ -905,7 +905,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '46.1';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '46.2';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -1258,7 +1258,7 @@ function renderChannelPanel(key, ch){
     const arrow = m.metaType==='max'?'máx':'mín';
     fieldsHtml += `<div class="field">
       <label>${m.label} <span class="meta-hint">(${arrow} ${fmtNumber(m.meta,m.unit)} · alerta ${fmtNumber(m.alerta,m.unit)})</span></label>
-      <input type="number" step="0.01" data-channel="${key}" data-metric="${mKey}" value="${v}" placeholder="—" readonly tabindex="-1" title="Preenchido automaticamente pelo OCR do print — edição manual desativada" style="background:#f4f6fb;cursor:not-allowed">
+      <input type="number" step="0.01" data-channel="${key}" data-metric="${mKey}" value="${v}" placeholder="0,00">
     </div>`;
   });
   return `<div class="tab-panel" id="panel-${key}" data-channel="${key}">
@@ -1283,7 +1283,7 @@ function renderChannelPanel(key, ch){
         <div class="form-grid">
           ${ch.noRep ? '' : `<div class="field">
             <label>Reputação Geral <span class="meta-hint">(${ch.repLabel})</span></label>
-            <input type="text" data-channel="${key}" data-rep="1" value="${data.reputacao||''}" placeholder="—" readonly tabindex="-1" title="Preenchido automaticamente pelo OCR do print — edição manual desativada" style="background:#f4f6fb;cursor:not-allowed">
+            <input type="text" data-channel="${key}" data-rep="1" value="${data.reputacao||''}" placeholder="ex: 2,4 ou Platinum">
           </div>`}
           ${fieldsHtml}
           <div class="form-actions">
