@@ -905,7 +905,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '46.2';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '46.3';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -1483,13 +1483,6 @@ async function handleImage(key, file){
     }
     window._ocrPrintDay = window._ocrPrintDay || {};
     window._ocrPrintDay[key] = printDay;
-    if(!printDay){
-      status.innerHTML = '🚫 <strong>Data não encontrada no print.</strong> A imagem precisa mostrar a data (barra de tarefas do Windows). Upload bloqueado — tire o print com a data visível.';
-      progress.style.display = 'none';
-      document.querySelectorAll(`#panel-${key} input[data-metric], #panel-${key} input[data-rep]`).forEach(i=>{ i.value=''; });
-      return;
-    }
-
     const found = parseOcr(key, text);
     let foundCount = 0;
     Object.entries(found.metrics || {}).forEach(([mKey, value])=>{
@@ -1500,7 +1493,8 @@ async function handleImage(key, file){
       const repInp = document.querySelector(`#panel-${key} input[data-rep]`);
       if(repInp) repInp.value = found.reputacao;
     }
-    status.innerHTML = `✓ OCR concluído. <strong>${foundCount}</strong> de ${Object.keys(channels[key].metrics).length} métricas detectadas · 🗓 Print de <strong>${ptDate(printDay)}</strong> — será salvo nesse dia.`;
+    status.innerHTML = `✓ OCR concluído. <strong>${foundCount}</strong> de ${Object.keys(channels[key].metrics).length} métricas detectadas · ` +
+      (printDay ? `🗓 Print de <strong>${ptDate(printDay)}</strong> — será salvo nesse dia.` : `⚠ Data não detectada no print — será salvo como <strong>hoje</strong>.`);
     progress.style.display = 'none';
   }catch(e){
     status.textContent = '⚠ Erro no OCR: ' + e.message + '. Preencha manualmente.';
@@ -1828,12 +1822,8 @@ function parseOcr(channelKey, text){
    SALVAR / LIMPAR
    ========================================================================= */
 function saveChannel(key){
-  // v46: SÓ salva com print cuja data foi reconhecida — e salva NO DIA DO PRINT.
-  const day = (window._ocrPrintDay || {})[key];
-  if(!day){
-    showToast('🚫 Suba um print com a data visível (barra de tarefas) antes de salvar.', 'err');
-    return;
-  }
+  // v46.3: com print datado salva no dia do print; sem print (ou sem data), salva em HOJE.
+  const day = (window._ocrPrintDay || {})[key] || todayKey();
   if(!state.entries[day]) state.entries[day] = {};
   const metricsObj = {};
   document.querySelectorAll(`#panel-${key} input[data-metric]`).forEach(inp=>{
@@ -1859,7 +1849,7 @@ function saveChannel(key){
   renderMonthCards();
   renderHistory();
   renderRegistro();
-  showToast(`✓ Dados de ${channels[key].name} salvos para ${ptDate(day)} (data do print)`, 'success');
+  showToast(`✓ Dados de ${channels[key].name} salvos para ${ptDate(day)}`, 'success');
 }
 
 function clearChannelToday(key){
