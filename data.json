@@ -4059,6 +4059,58 @@
         "solicitacaoDevolucaoVermelho": 1,
         "solicitacaoDevolucao": 1
       }
+    },
+    "2026-08-28": {
+      "mercadolivre": {
+        "metrics": {},
+        "ts": "2026-08-28T10:15:10.294018-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 1,
+        "casosCriticos": 21,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 0,
+        "solicitacaoDevolucao": 0
+      },
+      "amazon": {
+        "metrics": {},
+        "ts": "2026-08-28T10:15:10.294018-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 0,
+        "casosCriticos": 13,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 3,
+        "solicitacaoDevolucao": 3
+      },
+      "magalu": {
+        "metrics": {},
+        "ts": "2026-08-28T10:15:10.294018-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 0,
+        "casosCriticos": 4,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 1,
+        "solicitacaoDevolucao": 1
+      },
+      "casasbahia": {
+        "metrics": {},
+        "ts": "2026-08-28T10:15:10.294018-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 1,
+        "casosCriticos": 28,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 0,
+        "solicitacaoDevolucao": 0
+      },
+      "shopee": {
+        "metrics": {},
+        "ts": "2026-08-28T10:15:10.294018-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 3,
+        "casosCriticos": 22,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 1,
+        "solicitacaoDevolucao": 1
+      }
     }
   },
   "ticketsRaw": [
@@ -10854,7 +10906,7 @@
       "ym": "2025-08",
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
-      "sk": "TI1146  / TI287-2",
+      "sk": "TI1146 / TI287-2",
       "tr": "Jamef",
       "pr": "—",
       "gr": "Jurídico",
@@ -13012,7 +13064,7 @@
       "ym": "2024-03",
       "lj": "Magalu",
       "pb": "Endereço Incorreto",
-      "sk": "TI1193  TI287-3",
+      "sk": "TI1193 TI287-3",
       "tr": "Correios",
       "pr": "—",
       "gr": "Jurídico",
@@ -15282,7 +15334,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-08-27T19:51:42.321747-03:00",
+  "ticketsRawUpdatedAt": "2026-08-28T10:15:10.294018-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1670,
@@ -19935,11 +19987,11 @@
       "valor_pedido": 1153.9,
       "custo": 484.56,
       "problema": "Avaria",
-      "pct_desc": 30.0,
-      "desc_sug": 145.37,
+      "pct_desc": 100.0,
+      "desc_sug": 484.56,
       "frete": 0.0,
-      "total": 145.37,
-      "valor_real_fechado": 145.0,
+      "total": 484.56,
+      "valor_real_fechado": 0.0,
       "aceito": false
     },
     {
@@ -22439,7 +22491,7 @@
       "frete": 0.0,
       "total": 1222.28,
       "valor_real_fechado": 900.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "702-0205832-9211421",
@@ -22731,7 +22783,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-08-27T16:44:02.726969-03:00",
+  "descontosUpdatedAt": "2026-08-28T10:15:10.294018-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -22969,13 +23021,13 @@
       "mercadolivre": {
         "count": 60,
         "countAceito": 16,
-        "descontoTotal": 13324.94,
+        "descontoTotal": 13179.94,
         "custoTotal": 79962.18,
         "valorPedidoTotal": 127844.95,
-        "pctDescontoSobreCusto": 16.66,
-        "pctDescontoSobreVenda": 10.42,
+        "pctDescontoSobreCusto": 16.48,
+        "pctDescontoSobreVenda": 10.31,
         "vendaTotalCanal": 2545905.05,
-        "pctDescontoSobreVendaCanal": 0.5234
+        "pctDescontoSobreVendaCanal": 0.5177
       },
       "amazon": {
         "count": 8,
@@ -23093,7 +23145,7 @@
       },
       "mercadolivre": {
         "count": 28,
-        "countAceito": 6,
+        "countAceito": 7,
         "descontoTotal": 5956.62,
         "custoTotal": 31430.74,
         "valorPedidoTotal": 51705.2,
