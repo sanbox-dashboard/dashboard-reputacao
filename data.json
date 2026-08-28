@@ -15401,7 +15401,7 @@
       "GATEWAY": 1
     }
   },
-  "ordersByCarrierUpdatedAt": "2026-08-27T10:13:04.178124-03:00",
+  "ordersByCarrierUpdatedAt": "2026-08-28T10:11:16.785956-03:00",
   "ordersByCarrierMeta": {
     "source": "KONDADO CSV — auto-refresh diário (merge por mês)",
     "monthsAvailable": [
@@ -23222,6 +23222,6 @@
       "outros": 73091.7
     }
   },
-  "vendasByCanalMesUpdatedAt": "2026-08-27T10:13:04.178124-03:00",
+  "vendasByCanalMesUpdatedAt": "2026-08-28T10:11:16.785956-03:00",
   "vendasByCanalMesSource": "KONDADO tinyerp_pedidos_detalhes CSV — auto-refresh diário (merge por mês)"
 }
