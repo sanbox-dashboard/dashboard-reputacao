@@ -4167,6 +4167,32 @@
   },
   "ticketsRaw": [
     {
+      "n": "99917450.0",
+      "d": "31/08/2026",
+      "ym": "2026-08",
+      "lj": "mercadolivre",
+      "pb": "RMA",
+      "sk": "TI1690",
+      "tr": "Mercado Envios",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 1794.9
+    },
+    {
+      "n": "99917449.0",
+      "d": "31/08/2026",
+      "ym": "2026-08",
+      "lj": "shopee",
+      "pb": "RMA",
+      "sk": "TI1571",
+      "tr": "Trilog",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 1045.3
+    },
+    {
       "n": "99917448.0",
       "d": "31/08/2026",
       "ym": "2026-08",
@@ -4853,7 +4879,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1142.08
+      "vl": 1142.8
     },
     {
       "n": "99917385.0",
@@ -4875,9 +4901,9 @@
       "lj": "mercadolivre",
       "pb": "Arrependimento",
       "sk": "TI1799-1",
-      "tr": "Mercado Envios",
+      "tr": "Correios",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1186.9
     },
@@ -4994,7 +5020,7 @@
       "sk": "TI1708",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Chamados Marketplaces",
       "st": "Novo",
       "vl": 1765.9
     },
@@ -5087,7 +5113,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Novo",
-      "vl": 1032.04
+      "vl": 1032.4
     },
     {
       "n": "99917367.0",
@@ -5347,7 +5373,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1614.09
+      "vl": 1614.9
     },
     {
       "n": "99917343.0",
@@ -5451,7 +5477,7 @@
       "pr": "—",
       "gr": "Atendimento SAC",
       "st": "Novo",
-      "vl": 1788.9
+      "vl": 1788.09
     },
     {
       "n": "99917332.0",
@@ -5514,7 +5540,7 @@
       "sk": "TI1716",
       "tr": "Alfa Transportes",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 2292.82
     },
@@ -5775,7 +5801,7 @@
       "tr": "Alfa Transportes",
       "pr": "—",
       "gr": "Solicitação de Devolução",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 0.0
     },
     {
@@ -6387,7 +6413,7 @@
       "pr": "—",
       "gr": "Financeiro (Estorno)",
       "st": "Novo",
-      "vl": 1015.6
+      "vl": 1015.06
     },
     {
       "n": "99917185.0",
@@ -6905,8 +6931,8 @@
       "sk": "TI1569",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Pendente",
+      "gr": "Chamados Marketplaces",
+      "st": "Novo",
       "vl": 1373.9
     },
     {
@@ -7011,7 +7037,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 1789.9
+      "vl": 1789.09
     },
     {
       "n": "99917053.0",
@@ -7037,20 +7063,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1502.03
-    },
-    {
-      "n": "99917034.0",
-      "d": "29/07/2026",
-      "ym": "2026-07",
-      "lj": "mercadolivre",
-      "pb": "",
-      "sk": "TI1454",
-      "tr": "Mercado Envios",
-      "pr": "—",
-      "gr": "Envio de Produto",
-      "st": "Pendente",
-      "vl": 0.0
+      "vl": 1502.3
     },
     {
       "n": "99917028.0",
@@ -7076,7 +7089,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 1691.06
+      "vl": 1691.6
     },
     {
       "n": "99917016.0",
@@ -7414,7 +7427,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1899.9
+      "vl": 1899.09
     },
     {
       "n": "99916913.0",
@@ -7895,7 +7908,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
-      "vl": 1556.9
+      "vl": 1556.09
     },
     {
       "n": "99916655.0",
@@ -7908,7 +7921,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1787.09
+      "vl": 1787.9
     },
     {
       "n": "99916603.0",
@@ -7934,7 +7947,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Novo",
-      "vl": 1899.9
+      "vl": 1899.09
     },
     {
       "n": "99916576.0",
@@ -7947,7 +7960,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
-      "vl": 1565.01
+      "vl": 1565.1
     },
     {
       "n": "99916568.0",
@@ -8376,7 +8389,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Novo",
-      "vl": 1695.9
+      "vl": 1695.09
     },
     {
       "n": "99916268.0",
@@ -8389,7 +8402,7 @@
       "pr": "—",
       "gr": "Entrada Sanbox",
       "st": "Novo",
-      "vl": 1399.02
+      "vl": 1399.2
     },
     {
       "n": "99916246.0",
@@ -9949,7 +9962,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Pendente",
-      "vl": 1000.09
+      "vl": 1000.9
     },
     {
       "n": "99914206.0",
@@ -10443,7 +10456,7 @@
       "pr": "—",
       "gr": "Financeiro Standby",
       "st": "Novo",
-      "vl": 1525.09
+      "vl": 1525.9
     },
     {
       "n": "99913169.0",
@@ -10872,7 +10885,7 @@
       "pr": "Alta",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1858.6
+      "vl": 1858.06
     },
     {
       "n": "99912258.0",
@@ -15347,7 +15360,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-08-31T10:12:01.922450-03:00",
+  "ticketsRawUpdatedAt": "2026-08-31T11:12:27.226918-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
@@ -22633,9 +22646,25 @@
       "total": 187.63,
       "valor_real_fechado": 0.0,
       "aceito": false
+    },
+    {
+      "pedido": "701-0152416-2909812",
+      "data": "07/08/2026",
+      "ym": "2026-08",
+      "canal": "amazon",
+      "sku": "TI1608",
+      "valor_pedido": 2164.5,
+      "custo": 1434.1,
+      "problema": "Avaria",
+      "pct_desc": 30.0,
+      "desconto_sug": 430.23,
+      "frete": 174.6,
+      "total": 604.83,
+      "valor_real_fechado": 300.0,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-08-31T10:12:01.922450-03:00",
+  "descontosUpdatedAt": "2026-08-31T11:12:27.226918-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -23018,15 +23047,15 @@
         "pctDescontoSobreVendaCanal": 0.0
       },
       "amazon": {
-        "count": 3,
+        "count": 4,
         "countAceito": 1,
-        "descontoTotal": 680.0,
-        "custoTotal": 3058.07,
-        "valorPedidoTotal": 4246.31,
-        "pctDescontoSobreCusto": 22.24,
-        "pctDescontoSobreVenda": 16.01,
+        "descontoTotal": 980.0,
+        "custoTotal": 4492.17,
+        "valorPedidoTotal": 6410.81,
+        "pctDescontoSobreCusto": 21.82,
+        "pctDescontoSobreVenda": 15.29,
         "vendaTotalCanal": 1505595.17,
-        "pctDescontoSobreVendaCanal": 0.0452
+        "pctDescontoSobreVendaCanal": 0.0651
       }
     }
   },
