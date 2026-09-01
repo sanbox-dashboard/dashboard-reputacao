@@ -905,7 +905,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '46.3';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '47.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -1186,11 +1186,14 @@ function renderMonthCards(){
       });
       // Tickets no fechamento (último valor registrado no mês) — base da comissão
       const tk = {
-        tickets: ultimoDoMes(key, monthK, 'tickets'),
-        sac: ultimoDoMes(key, monthK, 'sacForaPrazo'),
-        crit: ultimoDoMes(key, monthK, 'casosCriticos'),
-        dev: (ultimoDoMes(key, monthK, 'solicitacaoDevolucaoVermelho') || ultimoDoMes(key, monthK, 'solicitacaoDevolucao'))
+        tickets: ticketsDoFechamento(key, monthK, 'tickets'),
+        sac: ticketsDoFechamento(key, monthK, 'sacForaPrazo'),
+        crit: ticketsDoFechamento(key, monthK, 'casosCriticos'),
+        dev: (ticketsDoFechamento(key, monthK, 'solicitacaoDevolucaoVermelho') || ticketsDoFechamento(key, monthK, 'solicitacaoDevolucao'))
       };
+      const tkLabel = mesFechado(monthK)
+        ? '<div style="font-size:9px;font-weight:700;color:#047857;margin-top:6px">🔒 TICKETS NA VIRADA DO MÊS (FECHADO)</div>'
+        : '<div style="font-size:9px;font-weight:700;color:var(--muted);margin-top:6px">⏳ TICKETS — PRÉVIA (fecha dia 01 às 11h)</div>';
       const stT = tk.tickets===0?'green':'red';
       const stS = tk.sac===0?'green': tk.sac<=3?'yellow':'red';
       const stC = tk.crit===0?'green':'red';
@@ -1198,7 +1201,8 @@ function renderMonthCards(){
       fotoHtml = `<div style="margin-top:12px;padding-top:10px;border-top:2px dashed var(--border)">
         <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-bottom:6px">📸 Fechamento ${ptDate(lastD)}${ch.noRep ? '' : ' · ' + (e.reputacao || '—')}</div>
         ${fotoRows}
-        <div class="mini-tickets ${stT}" style="margin-top:6px">🎫 ${tk.tickets} ticket${tk.tickets===1?'':'s'} fin.</div>
+        ${tkLabel}
+        <div class="mini-tickets ${stT}" style="margin-top:2px">🎫 ${tk.tickets} ticket${tk.tickets===1?'':'s'} fin.</div>
         <div class="mini-tickets ${stS}" style="margin-top:2px">⏱️ ${tk.sac} SAC +30d</div>
         <div class="mini-tickets ${stC}" style="margin-top:2px">🚨 ${tk.crit} críticos +30d</div>
         <div class="mini-tickets ${stD}" style="margin-top:2px">📦 ${tk.dev} devol. +30d</div>
@@ -3035,6 +3039,21 @@ function ultimoDoMes(canalKey, ym, field){
   return parseInt(dias[0][1][canalKey][field]) || 0;
 }
 
+// TICKETS DO FECHAMENTO (v47): a comissão usa os tickets que SOBRARAM na virada
+// do mês — snapshot gravado pela tarefa no dia 01 do mês seguinte (~11h) em
+// state.fechamentoTickets[ym]. Enquanto o snapshot não existe (mês em aberto),
+// mostra PRÉVIA com o último valor disponível do mês.
+function ticketsDoFechamento(canalKey, ym, field){
+  const snap = state.fechamentoTickets && state.fechamentoTickets[ym];
+  if(snap && snap[canalKey] && snap[canalKey][field] !== undefined && snap[canalKey][field] !== null){
+    return parseInt(snap[canalKey][field]) || 0;
+  }
+  return ultimoDoMes(canalKey, ym, field);
+}
+function mesFechado(ym){
+  return !!(state.fechamentoTickets && state.fechamentoTickets[ym]);
+}
+
 // Mapeia número de tickets pra cor usando cortes definidos pelo usuário
 function corPorCorte(n, cutAmrl, cutRed){
   if(n === 0) return 'green';
@@ -3082,8 +3101,8 @@ function calcularComissao(ym, cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed){
         else if(cores[c] === 'yellow') linha.reputacao -= meli ? 100 : 50;
       });
       // REGRA NOVA: ticket fin em atraso -> -200, SAC em atraso -> -200 (somam até -400)
-      const totalFin = p.canais.reduce((s, c) => s + ultimoDoMes(c, ym, 'tickets'), 0);
-      const totalSac = p.canais.reduce((s, c) => s + ultimoDoMes(c, ym, 'sacForaPrazo'), 0);
+      const totalFin = p.canais.reduce((s, c) => s + ticketsDoFechamento(c, ym, 'tickets'), 0);
+      const totalSac = p.canais.reduce((s, c) => s + ticketsDoFechamento(c, ym, 'sacForaPrazo'), 0);
       linha.ticketsFin = totalFin;   // pra exibir contagem na tabela
       linha.ticketsSac = totalSac;
       if(totalFin > 0) linha.tickets -= 200;
@@ -3092,14 +3111,14 @@ function calcularComissao(ym, cutFinAmrl, cutFinRed, cutSacAmrl, cutSacRed){
       // Desconto ÚNICO de R$100 se QUALQUER canal dele tiver devolução acima do prazo
       // (mesmo com atraso em 2 canais, desconta uma vez só).
       const temDevAtraso = p.canais.some(c =>
-        (ultimoDoMes(c, ym, 'solicitacaoDevolucaoVermelho') || ultimoDoMes(c, ym, 'solicitacaoDevolucao')) > 0);
+        (ticketsDoFechamento(c, ym, 'solicitacaoDevolucaoVermelho') || ticketsDoFechamento(c, ym, 'solicitacaoDevolucao')) > 0);
       if(temDevAtraso) linha.logistica -= 100;
       if(algumVermelho) linha.coletivo = -50;
     }
     else if(p.tipo === 'coordenador'){
       // -R$80 por canal com casosCriticos >= 1
       COMISSAO_CANAIS.forEach(c => {
-        const crit = ultimoDoMes(c, ym, 'casosCriticos');
+        const crit = ticketsDoFechamento(c, ym, 'casosCriticos');
         if(crit >= 1) linha.criticos -= 80;
       });
       // -R$200 por canal vermelho, -R$100 por canal amarelo
