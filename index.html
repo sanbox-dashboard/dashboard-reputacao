@@ -905,7 +905,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '47.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '47.1';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -1192,8 +1192,8 @@ function renderMonthCards(){
         dev: (ticketsDoFechamento(key, monthK, 'solicitacaoDevolucaoVermelho') || ticketsDoFechamento(key, monthK, 'solicitacaoDevolucao'))
       };
       const tkLabel = mesFechado(monthK)
-        ? '<div style="font-size:9px;font-weight:700;color:#047857;margin-top:6px">🔒 TICKETS NA VIRADA DO MÊS (FECHADO)</div>'
-        : '<div style="font-size:9px;font-weight:700;color:var(--muted);margin-top:6px">⏳ TICKETS — PRÉVIA (fecha dia 01 às 11h)</div>';
+        ? '<div style="font-size:9px;font-weight:700;color:#047857;margin-top:6px">🔒 TICKETS DO ÚLTIMO DIA DO MÊS (FECHADO)</div>'
+        : '<div style="font-size:9px;font-weight:700;color:var(--muted);margin-top:6px">⏳ TICKETS — PRÉVIA DO DIA (fecha com o último dia do mês)</div>';
       const stT = tk.tickets===0?'green':'red';
       const stS = tk.sac===0?'green': tk.sac<=3?'yellow':'red';
       const stC = tk.crit===0?'green':'red';
@@ -3039,19 +3039,15 @@ function ultimoDoMes(canalKey, ym, field){
   return parseInt(dias[0][1][canalKey][field]) || 0;
 }
 
-// TICKETS DO FECHAMENTO (v47): a comissão usa os tickets que SOBRARAM na virada
-// do mês — snapshot gravado pela tarefa no dia 01 do mês seguinte (~11h) em
-// state.fechamentoTickets[ym]. Enquanto o snapshot não existe (mês em aberto),
-// mostra PRÉVIA com o último valor disponível do mês.
+// TICKETS DO FECHAMENTO (v47.1 — regra final do Davi): a comissão usa a ÚLTIMA
+// leitura registrada dentro do próprio mês (o valor do fim do último dia).
+// Tickets resolvidos antes do fim do mês escapam do desconto. Durante o mês,
+// isso funciona como prévia viva do dia.
 function ticketsDoFechamento(canalKey, ym, field){
-  const snap = state.fechamentoTickets && state.fechamentoTickets[ym];
-  if(snap && snap[canalKey] && snap[canalKey][field] !== undefined && snap[canalKey][field] !== null){
-    return parseInt(snap[canalKey][field]) || 0;
-  }
   return ultimoDoMes(canalKey, ym, field);
 }
 function mesFechado(ym){
-  return !!(state.fechamentoTickets && state.fechamentoTickets[ym]);
+  return ym < monthKey(todayKey()); // mês encerrado = anterior ao atual
 }
 
 // Mapeia número de tickets pra cor usando cortes definidos pelo usuário
