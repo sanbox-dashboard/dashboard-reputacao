@@ -905,7 +905,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '47.1';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '47.2';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -1471,18 +1471,24 @@ async function handleImage(key, file){
     extracted.textContent = text;
     extracted.classList.add('show');
 
-    // === DATA DO PRINT (v46) === — procura DD/MM/AAAA no texto (relógio da barra de
-    // tarefas fica no rodapé do print → usa a ÚLTIMA ocorrência). Sem data válida, BLOQUEIA.
-    const dataMatches = [...text.matchAll(/(\d{2})\/(\d{2})\/(\d{4})/g)];
+    // === DATA DO PRINT (v47.2) === — coleta TODAS as datas DD/MM/AAAA válidas do
+    // texto e usa a MAIS RECENTE (≤ hoje). A data da barra de tarefas é sempre a mais
+    // nova do print; datas de conteúdo ("Período de apuração 31/07 à 30/08") são
+    // passadas e perdem. Sem data válida, salva como hoje.
     let printDay = null;
-    if(dataMatches.length){
-      const m = dataMatches[dataMatches.length - 1];
-      const dd = parseInt(m[1]), mm = parseInt(m[2]), yy = parseInt(m[3]);
-      const dt = new Date(yy, mm - 1, dd);
+    {
       const hojeDt = new Date(); hojeDt.setHours(23,59,59,999);
       const min = new Date(); min.setDate(min.getDate() - 60);
-      if(dt.getDate() === dd && dt.getMonth() === mm - 1 && dt <= hojeDt && dt >= min){
-        printDay = `${yy}-${String(mm).padStart(2,'0')}-${String(dd).padStart(2,'0')}`;
+      let best = null;
+      for(const m of text.matchAll(/(\d{2})\/(\d{2})\/(\d{4})/g)){
+        const dd = parseInt(m[1]), mm = parseInt(m[2]), yy = parseInt(m[3]);
+        const dt = new Date(yy, mm - 1, dd);
+        if(dt.getDate() !== dd || dt.getMonth() !== mm - 1) continue; // data inválida (ex: 51/07)
+        if(dt > hojeDt || dt < min) continue;
+        if(!best || dt > best) best = dt;
+      }
+      if(best){
+        printDay = `${best.getFullYear()}-${String(best.getMonth()+1).padStart(2,'0')}-${String(best.getDate()).padStart(2,'0')}`;
       }
     }
     window._ocrPrintDay = window._ocrPrintDay || {};
