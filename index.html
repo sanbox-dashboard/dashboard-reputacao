@@ -905,7 +905,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '47.2';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '47.3';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
@@ -1471,28 +1471,35 @@ async function handleImage(key, file){
     extracted.textContent = text;
     extracted.classList.add('show');
 
-    // === DATA DO PRINT (v47.2) === — coleta TODAS as datas DD/MM/AAAA válidas do
-    // texto e usa a MAIS RECENTE (≤ hoje). A data da barra de tarefas é sempre a mais
-    // nova do print; datas de conteúdo ("Período de apuração 31/07 à 30/08") são
-    // passadas e perdem. Sem data válida, salva como hoje.
-    let printDay = null;
+    // === DATA DO PRINT (v47.3 — DEFINITIVO) ===
+    // Fonte PRIMÁRIA: a data do ARQUIVO do print (momento da captura, gravado pelo
+    // Windows) — o reloginho da barra de tarefas sai ilegível no OCR com frequência,
+    // e datas de conteúdo ("Período de apuração") enganavam. O OCR agora só confirma.
+    const fmtDia = dt => `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}-${String(dt.getDate()).padStart(2,'0')}`;
+    const hojeDt = new Date(); hojeDt.setHours(23,59,59,999);
+    const minDt = new Date(); minDt.setDate(minDt.getDate() - 60);
+    let fileDay = null;
+    if(file && file.lastModified){
+      const fd = new Date(file.lastModified);
+      if(fd <= hojeDt && fd >= minDt) fileDay = fmtDia(fd);
+    }
+    let ocrDay = null;
     {
-      const hojeDt = new Date(); hojeDt.setHours(23,59,59,999);
-      const min = new Date(); min.setDate(min.getDate() - 60);
       let best = null;
       for(const m of text.matchAll(/(\d{2})\/(\d{2})\/(\d{4})/g)){
         const dd = parseInt(m[1]), mm = parseInt(m[2]), yy = parseInt(m[3]);
         const dt = new Date(yy, mm - 1, dd);
-        if(dt.getDate() !== dd || dt.getMonth() !== mm - 1) continue; // data inválida (ex: 51/07)
-        if(dt > hojeDt || dt < min) continue;
+        if(dt.getDate() !== dd || dt.getMonth() !== mm - 1) continue;
+        if(dt > hojeDt || dt < minDt) continue;
         if(!best || dt > best) best = dt;
       }
-      if(best){
-        printDay = `${best.getFullYear()}-${String(best.getMonth()+1).padStart(2,'0')}-${String(best.getDate()).padStart(2,'0')}`;
-      }
+      if(best) ocrDay = fmtDia(best);
     }
+    const printDay = fileDay || ocrDay || null;
     window._ocrPrintDay = window._ocrPrintDay || {};
     window._ocrPrintDay[key] = printDay;
+    window._ocrDayFonte = window._ocrDayFonte || {};
+    window._ocrDayFonte[key] = fileDay ? (ocrDay === fileDay ? 'arquivo, confirmada no print' : 'arquivo') : (ocrDay ? 'lida no print' : null);
     const found = parseOcr(key, text);
     let foundCount = 0;
     Object.entries(found.metrics || {}).forEach(([mKey, value])=>{
@@ -1504,7 +1511,7 @@ async function handleImage(key, file){
       if(repInp) repInp.value = found.reputacao;
     }
     status.innerHTML = `✓ OCR concluído. <strong>${foundCount}</strong> de ${Object.keys(channels[key].metrics).length} métricas detectadas · ` +
-      (printDay ? `🗓 Print de <strong>${ptDate(printDay)}</strong> — será salvo nesse dia.` : `⚠ Data não detectada no print — será salvo como <strong>hoje</strong>.`);
+      (printDay ? `🗓 Print de <strong>${ptDate(printDay)}</strong> (data do ${window._ocrDayFonte[key]}) — será salvo nesse dia.` : `⚠ Data não identificada — será salvo como <strong>hoje</strong>.`);
     progress.style.display = 'none';
   }catch(e){
     status.textContent = '⚠ Erro no OCR: ' + e.message + '. Preencha manualmente.';
@@ -1685,6 +1692,12 @@ function parseOcr(channelKey, text){
       if(v >= 1 && v <= 5) circCands.push(m[1] + ',' + m[2]);
     }
     for(const m of norm.matchAll(/(\d)[,.](\d)\s*De\s*1\s*a\s*5/gi)){
+      const v = parseFloat(m[1] + '.' + m[2]);
+      if(v >= 1 && v <= 5) circCands.push(m[1] + ',' + m[2]);
+    }
+    // OCR às vezes perde a vírgula do círculo: "3,6" vira "36" — aceita o par
+    // colado quando vem logo antes da linha do gauge ("36 ————")
+    for(const m of norm.matchAll(/(?<!\d)([1-5])[,.]?(\d)(?!\d)\s*[—–-]{3,}/g)){
       const v = parseFloat(m[1] + '.' + m[2]);
       if(v >= 1 && v <= 5) circCands.push(m[1] + ',' + m[2]);
     }
