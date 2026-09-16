@@ -4479,6 +4479,19 @@
   },
   "ticketsRaw": [
     {
+      "n": "99917671.0",
+      "d": "16/09/2026",
+      "ym": "2026-09",
+      "lj": "Casas Bahia/Via Varejo",
+      "pb": "",
+      "sk": "",
+      "tr": "",
+      "pr": "—",
+      "gr": "Reembolso Parcial (Financeiro)",
+      "st": "Novo",
+      "vl": 1076.83
+    },
+    {
       "n": "99917670.0",
       "d": "16/09/2026",
       "ym": "2026-09",
@@ -5113,7 +5126,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Novo",
-      "vl": 1759.9
+      "vl": 1759.09
     },
     {
       "n": "99917612.0",
@@ -5647,19 +5660,6 @@
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
       "vl": 1282.92
-    },
-    {
-      "n": "99917557.0",
-      "d": "08/09/2026",
-      "ym": "2026-09",
-      "lj": "Magalu",
-      "pb": "Arrependimento",
-      "sk": "TI1485",
-      "tr": "Alfa Transportes",
-      "pr": "—",
-      "gr": "Solicitação de Devolução",
-      "st": "Novo",
-      "vl": 1563.62
     },
     {
       "n": "99917556.0",
@@ -15438,7 +15438,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-09-16T12:41:28.320925-03:00",
+  "ticketsRawUpdatedAt": "2026-09-16T13:14:40.255824-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
