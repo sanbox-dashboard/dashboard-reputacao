@@ -5371,7 +5371,7 @@
       "sk": "TI1571",
       "tr": "Brasil Web",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1271.87
     },
@@ -5397,7 +5397,7 @@
       "sk": "TI1562",
       "tr": "Trilog",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1877.98
     },
@@ -15776,7 +15776,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-09-17T12:42:53.692329-03:00",
+  "ticketsRawUpdatedAt": "2026-09-17T13:12:07.771672-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
