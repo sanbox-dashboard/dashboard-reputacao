@@ -7890,7 +7890,7 @@
       "ym": "2026-08",
       "lj": "mercadolivre",
       "pb": "Danificado Transporte Marketplace",
-      "sk": "196003.0",
+      "sk": "196003",
       "tr": "Mercado Envios",
       "pr": "—",
       "gr": "Financeiro (Cancelamento indevido)",
@@ -8319,7 +8319,7 @@
       "ym": "2026-07",
       "lj": "amazon",
       "pb": "RMA",
-      "sk": "193901.0",
+      "sk": "193901",
       "tr": "Correios",
       "pr": "—",
       "gr": "Financeiro (Estorno)",
@@ -15789,7 +15789,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-09-17T14:12:30.615932-03:00",
+  "ticketsRawUpdatedAt": "2026-09-17T14:44:56.334777-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
@@ -23860,7 +23860,7 @@
       "valor_pedido": 3219.9,
       "custo": 2361.85,
       "problema": "Insatisfação",
-      "pct_desc": 10.0,
+      "pct_desc": 20.0,
       "desc_sug": 472.37,
       "frete": 0.0,
       "total": 472.37,
@@ -24106,7 +24106,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-09-17T14:12:30.615932-03:00",
+  "descontosUpdatedAt": "2026-09-17T14:44:56.334777-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
