@@ -4583,6 +4583,19 @@
   },
   "ticketsRaw": [
     {
+      "n": "99917715",
+      "d": "18/09/2026",
+      "ym": "2026-09",
+      "lj": "casasbahia",
+      "pb": "RMA",
+      "sk": "TI1560",
+      "tr": "Alfa Transportes",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 883.24
+    },
+    {
       "n": "99917714",
       "d": "18/09/2026",
       "ym": "2026-09",
@@ -5137,7 +5150,7 @@
       "sk": "TI1526",
       "tr": "Alfa Transportes",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Atendimento SAC",
       "st": "Novo",
       "vl": 774.0
     },
@@ -5241,7 +5254,7 @@
       "sk": "TI1690",
       "tr": "Trilog",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Atendimento SAC",
       "st": "Novo",
       "vl": 1665.11
     },
@@ -5763,7 +5776,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Novo",
-      "vl": 1759.9
+      "vl": 1759.09
     },
     {
       "n": "99917612",
@@ -6177,7 +6190,7 @@
       "sk": "TI1690",
       "tr": "Trilog",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Atendimento SAC",
       "st": "Novo",
       "vl": 1748.99
     },
@@ -6346,7 +6359,7 @@
       "sk": "TI1078",
       "tr": "Total Express",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Atendimento SAC",
       "st": "Novo",
       "vl": 1139.32
     },
@@ -7061,7 +7074,7 @@
       "sk": "TI1609",
       "tr": "Trilog",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Atendimento SAC",
       "st": "Novo",
       "vl": 907.15
     },
@@ -7297,7 +7310,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
-      "vl": 1649.09
+      "vl": 1649.9
     },
     {
       "n": "99917383",
@@ -7336,7 +7349,7 @@
       "pr": "—",
       "gr": "Atendimento SAC",
       "st": "Pendente",
-      "vl": 1009.8
+      "vl": 1009.08
     },
     {
       "n": "99917368",
@@ -7349,7 +7362,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1032.04
+      "vl": 1032.4
     },
     {
       "n": "99917366",
@@ -7661,7 +7674,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1109.05
+      "vl": 1109.5
     },
     {
       "n": "99917285",
@@ -8142,7 +8155,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
-      "vl": 1549.09
+      "vl": 1549.9
     },
     {
       "n": "99917067",
@@ -8181,7 +8194,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1502.3
+      "vl": 1502.03
     },
     {
       "n": "99917017",
@@ -8194,7 +8207,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 1691.06
+      "vl": 1691.6
     },
     {
       "n": "99917016",
@@ -9039,7 +9052,7 @@
       "pr": "—",
       "gr": "Casos Críticos",
       "st": "Novo",
-      "vl": 1549.9
+      "vl": 1549.09
     },
     {
       "n": "99916353",
@@ -9091,7 +9104,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1695.9
+      "vl": 1695.09
     },
     {
       "n": "99916268",
@@ -10638,7 +10651,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Pendente",
-      "vl": 1000.09
+      "vl": 1000.9
     },
     {
       "n": "99914206",
@@ -10677,7 +10690,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1655.9
+      "vl": 1655.09
     },
     {
       "n": "99914113",
@@ -10912,19 +10925,6 @@
       "gr": "Casos Críticos",
       "st": "Novo",
       "vl": 955.35
-    },
-    {
-      "n": "99913597",
-      "d": "07/12/2025",
-      "ym": "2025-12",
-      "lj": "casasbahia",
-      "pb": "Cancelamento por Arrependimento Após o Envio",
-      "sk": "TI1426 1 unidade",
-      "tr": "Brasil Web",
-      "pr": "—",
-      "gr": "Débitos Transportadoras",
-      "st": "Pendente",
-      "vl": 2969.28
     },
     {
       "n": "99913564",
@@ -13610,7 +13610,7 @@
       "ym": "2024-05",
       "lj": "mercadolivre",
       "pb": "RMA",
-      "sk": "TI1139  1 unidade",
+      "sk": "TI1139  1 unidade ",
       "tr": "Correios",
       "pr": "—",
       "gr": "Jurídico",
@@ -13751,7 +13751,7 @@
       "n": "99906204",
       "d": "26/02/2024",
       "ym": "2024-02",
-      "lj": "mercadolivre",
+      "lj": "",
       "pb": "Comprou Errado",
       "sk": "TI494",
       "tr": "Correios",
@@ -13777,7 +13777,7 @@
       "n": "99905439",
       "d": "28/11/2023",
       "ym": "2023-11",
-      "lj": "amazon",
+      "lj": "",
       "pb": "Atraso de Entrega",
       "sk": "TI693  1 unidade",
       "tr": "Correios",
@@ -13842,7 +13842,7 @@
       "n": "99903899",
       "d": "20/06/2023",
       "ym": "2023-06",
-      "lj": "casasbahia",
+      "lj": "",
       "pb": "Duvida",
       "sk": "TI695",
       "tr": "",
@@ -13868,7 +13868,7 @@
       "n": "99903667",
       "d": "22/05/2023",
       "ym": "2023-05",
-      "lj": "amazon",
+      "lj": "",
       "pb": "Atraso de Entrega",
       "sk": "TI824",
       "tr": "",
@@ -13881,7 +13881,7 @@
       "n": "99903575",
       "d": "09/05/2023",
       "ym": "2023-05",
-      "lj": "amazon",
+      "lj": "",
       "pb": "Atraso de Entrega",
       "sk": "TI8661 Unidade",
       "tr": "",
@@ -13894,7 +13894,7 @@
       "n": "99903566",
       "d": "09/05/2023",
       "ym": "2023-05",
-      "lj": "amazon",
+      "lj": "",
       "pb": "Atraso de Entrega",
       "sk": "TI430",
       "tr": "",
@@ -13920,7 +13920,7 @@
       "n": "99902536",
       "d": "19/01/2023",
       "ym": "2023-01",
-      "lj": "magalu",
+      "lj": "",
       "pb": "RMA",
       "sk": "TI516",
       "tr": "Magalog",
@@ -13946,7 +13946,7 @@
       "n": "99901910",
       "d": "18/11/2022",
       "ym": "2022-11",
-      "lj": "casasbahia",
+      "lj": "",
       "pb": "RMA",
       "sk": "TI825",
       "tr": "Total Express",
@@ -13985,7 +13985,7 @@
       "n": "99901578",
       "d": "29/09/2022",
       "ym": "2022-09",
-      "lj": "amazon",
+      "lj": "",
       "pb": "Atraso de Entrega",
       "sk": "T6821 unidade",
       "tr": "Total Express",
@@ -14063,7 +14063,7 @@
       "n": "99900767",
       "d": "21/06/2022",
       "ym": "2022-06",
-      "lj": "magalu",
+      "lj": "",
       "pb": "RMA",
       "sk": "",
       "tr": "Correios",
@@ -15958,7 +15958,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-09-18T10:12:56.227283-03:00",
+  "ticketsRawUpdatedAt": "2026-09-18T11:13:27.754402-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
