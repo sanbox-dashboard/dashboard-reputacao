@@ -24199,7 +24199,7 @@
       "valor_pedido": 1445.22,
       "custo": 890.88,
       "problema": "Avaria",
-      "pct_desc": 0,
+      "pct_desc": 0.0,
       "desc_sug": 0.0,
       "frete": 185.31,
       "total": 185.31,
@@ -25190,7 +25190,7 @@
       "frete": 0.0,
       "total": 415.57,
       "valor_real_fechado": 415.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "2000018408287996",
@@ -25737,7 +25737,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-10-14T10:40:34.489222-03:00",
+  "descontosUpdatedAt": "2026-10-14T12:39:00.969801-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -26145,7 +26145,7 @@
     "2026-09": {
       "mercadolivre": {
         "count": 66,
-        "countAceito": 22,
+        "countAceito": 23,
         "descontoTotal": 15888.05,
         "custoTotal": 71758.81,
         "valorPedidoTotal": 119764.76,
