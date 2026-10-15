@@ -114,11 +114,13 @@ def main():
     for num, (d, pedido, cat, skus) in tickets.items():
         for sku, q in skus:
             k = (pedido, cat, sku)
-            ded[k] = max(ded.get(k, 0), q)
-    prob = {}
-    for (pedido, cat, sku), q in ded.items():
-        p = prob.setdefault(sku, [0, 0, 0])
-        p[['rma', 'insat', 'dano'].index(cat)] += q
+            q0, d0 = ded.get(k, (0, d))
+            ded[k] = (max(q0, q), min(d0, d))   # data do problema = 1º ticket
+    prob, prob_mes = {}, {}
+    for (pedido, cat, sku), (q, d) in ded.items():
+        i = ['rma', 'insat', 'dano'].index(cat)
+        prob.setdefault(sku, [0, 0, 0])[i] += q
+        prob_mes.setdefault(d[:7], {}).setdefault(sku, [0, 0, 0])[i] += q
     sem_sku = sum(1 for v in tickets.values() if not v[3])
 
     # ---- Vendas KONDADO itens (B=SKU, C=descrição, E=qtd, J=situação, L=data) ----
@@ -199,6 +201,7 @@ def main():
         'vendasMes': dict(sorted(vendas_mes.items())),
         'mesesCongelados': sorted(congelados),
         'problemas': dict(sorted(prob.items())),
+        'problemasMes': {m: dict(sorted(v.items())) for m, v in sorted(prob_mes.items())},  # pela data do ticket
         'nomes': dict(sorted(nomes_inc.items())),
         'marcas': dict(sorted((k, v) for k, v in marcas.items() if v)),
         'estoque': dict(sorted(estoque.items())),
