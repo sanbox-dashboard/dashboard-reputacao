@@ -5124,7 +5124,7 @@
       "sk": "TI1845",
       "tr": "Atual",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 3468.34
     },
@@ -5514,7 +5514,7 @@
       "sk": "TI1602",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 1556.9
     },
@@ -5680,7 +5680,7 @@
       "ym": "2026-10",
       "lj": "Casas Bahia/Via Varejo",
       "pb": "Arrependimento",
-      "sk": "SS006 / TI287-3 / TI733-2",
+      "sk": "SS006/ TI287-3/ TI733-2",
       "tr": "Total Express",
       "pr": "—",
       "gr": "Monitoramento Devolução",
@@ -5826,7 +5826,7 @@
       "sk": "TI1580",
       "tr": "Brasil Web",
       "pr": "—",
-      "gr": "Atendimento SAC",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1253.61
     },
@@ -5917,7 +5917,7 @@
       "sk": "SS004",
       "tr": "Correios",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 475.03
     },
@@ -6060,7 +6060,7 @@
       "sk": "TI1556",
       "tr": "Total Express",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 537.75
     },
@@ -6694,7 +6694,7 @@
       "ym": "2026-09",
       "lj": "Casas Bahia/Via Varejo",
       "pb": "Item Faltante",
-      "sk": "TI1556 / TI1690",
+      "sk": "TI1556/ TI1690",
       "tr": "Trilog",
       "pr": "—",
       "gr": "Monitoramento Devolução",
@@ -7461,7 +7461,7 @@
       "ym": "2026-09",
       "lj": "Casas Bahia/Via Varejo",
       "pb": "RMA",
-      "sk": "TI1758 /TI287",
+      "sk": "TI1758/TI287",
       "tr": "Rio Express",
       "pr": "—",
       "gr": "Monitoramento Devolução",
@@ -7568,8 +7568,8 @@
       "sk": "TI1571",
       "tr": "Rio Express",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "gr": "Financeiro (Estorno)",
+      "st": "Novo",
       "vl": 989.9
     },
     {
@@ -8258,7 +8258,7 @@
       "tr": "Trilog",
       "pr": "—",
       "gr": "Reivindicação de AaZ",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 899.9
     },
     {
@@ -8427,7 +8427,7 @@
       "tr": "Trilog",
       "pr": "—",
       "gr": "Débitos Transportadoras",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 1751.13
     },
     {
@@ -9155,7 +9155,7 @@
       "tr": "Trilog",
       "pr": "—",
       "gr": "Atendimento SAC",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 1507.17
     },
     {
@@ -11777,7 +11777,7 @@
       "ym": "2025-08",
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
-      "sk": "TI1146 / TI287-2",
+      "sk": "TI1146/ TI287-2",
       "tr": "Jamef",
       "pr": "—",
       "gr": "Jurídico",
@@ -12479,7 +12479,7 @@
       "ym": "2025-05",
       "lj": "Via Varejo",
       "pb": "Arrependimento",
-      "sk": "TI1540 / TI287-2",
+      "sk": "TI1540/ TI287-2",
       "tr": "Correios",
       "pr": "—",
       "gr": "Em análise",
@@ -13077,7 +13077,7 @@
       "ym": "2024-11",
       "lj": "Via Varejo",
       "pb": "Não Entregue Marketplace",
-      "sk": "TI673 / TI287 TI733",
+      "sk": "TI673/ TI287 TI733",
       "tr": "",
       "pr": "—",
       "gr": "Jurídico",
@@ -13428,7 +13428,7 @@
       "ym": "2024-10",
       "lj": "Magalu",
       "pb": "Insatisfação Compra",
-      "sk": "TI857 / TI287-1",
+      "sk": "TI857/ TI287-1",
       "tr": "TNT",
       "pr": "—",
       "gr": "Jurídico",
@@ -16179,7 +16179,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-10-15T15:09:03.505840-03:00",
+  "ticketsRawUpdatedAt": "2026-10-15T15:39:26.220186-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
