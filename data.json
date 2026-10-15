@@ -4697,10 +4697,10 @@
       },
       "amazon": {
         "metrics": {},
-        "ts": "2026-10-15T14:09:37.599728-03:00",
+        "ts": "2026-10-15T18:08:18.615623-03:00",
         "tickets": 0,
         "sacForaPrazo": 0,
-        "casosCriticos": 1,
+        "casosCriticos": 0,
         "solicitacaoDevolucaoAmarelo": 0,
         "solicitacaoDevolucaoVermelho": 2,
         "solicitacaoDevolucao": 2
@@ -4738,6 +4738,19 @@
     }
   },
   "ticketsRaw": [
+    {
+      "n": "99918101",
+      "d": "15/10/2026",
+      "ym": "2026-10",
+      "lj": "Shopee",
+      "pb": "Desconhece a Entrega",
+      "sk": "TI1565",
+      "tr": "Total Express",
+      "pr": "—",
+      "gr": "Atendimento SAC",
+      "st": "Novo",
+      "vl": 541.35
+    },
     {
       "n": "99918100",
       "d": "15/10/2026",
@@ -6114,7 +6127,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1749.09
+      "vl": 1749.9
     },
     {
       "n": "99917972",
@@ -6140,7 +6153,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Novo",
-      "vl": 1748.9
+      "vl": 1748.09
     },
     {
       "n": "99917969",
@@ -6608,7 +6621,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1066.4
+      "vl": 1066.04
     },
     {
       "n": "99917901",
@@ -7414,7 +7427,7 @@
       "pr": "—",
       "gr": "Chamados Marketplaces",
       "st": "Novo",
-      "vl": 1392.09
+      "vl": 1392.9
     },
     {
       "n": "99917763",
@@ -8506,7 +8519,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1032.04
+      "vl": 1032.4
     },
     {
       "n": "99917366",
@@ -8883,7 +8896,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1502.3
+      "vl": 1502.03
     },
     {
       "n": "99917017",
@@ -8896,7 +8909,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1691.06
+      "vl": 1691.6
     },
     {
       "n": "99917016",
@@ -8935,7 +8948,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Em andamento",
-      "vl": 1549.09
+      "vl": 1549.9
     },
     {
       "n": "99917004",
@@ -9206,8 +9219,8 @@
       "sk": "TI1559",
       "tr": "Tecmar",
       "pr": "—",
-      "gr": "Casos Críticos",
-      "st": "Pendente",
+      "gr": "Jurídico",
+      "st": "Novo",
       "vl": 944.9
     },
     {
@@ -9507,7 +9520,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1695.9
+      "vl": 1695.09
     },
     {
       "n": "99916268",
@@ -10391,7 +10404,7 @@
       "pr": "—",
       "gr": "Financeiro Standby",
       "st": "Novo",
-      "vl": 1803.03
+      "vl": 1803.3
     },
     {
       "n": "99914760",
@@ -11340,7 +11353,7 @@
       "pr": "—",
       "gr": "Financeiro Standby",
       "st": "Novo",
-      "vl": 1525.9
+      "vl": 1525.09
     },
     {
       "n": "99913169",
@@ -11353,7 +11366,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1053.09
+      "vl": 1053.9
     },
     {
       "n": "99913119",
@@ -11379,7 +11392,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Em andamento",
-      "vl": 1661.8
+      "vl": 1661.08
     },
     {
       "n": "99913106",
@@ -11743,7 +11756,7 @@
       "pr": "Alta",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1858.6
+      "vl": 1858.06
     },
     {
       "n": "99912258",
@@ -16192,7 +16205,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-10-15T17:09:25.934310-03:00",
+  "ticketsRawUpdatedAt": "2026-10-15T18:08:18.615623-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
