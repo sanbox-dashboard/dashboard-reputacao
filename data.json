@@ -25984,7 +25984,7 @@
       "frete": 40.58,
       "total": 151.81,
       "valor_real_fechado": 150.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "2000015051234879",
@@ -26018,10 +26018,27 @@
       "frete": 0.0,
       "total": 343.15,
       "valor_real_fechado": 300.0,
+      "aceito": true
+    },
+    {
+      "pedido": "2000018838353618",
+      "data": "06/10/2026",
+      "ym": "2026-10",
+      "canal": "mercadolivre",
+      "canal_raw": "Mercado Livre",
+      "sku": "TI1607",
+      "valor_pedido": 2045.72,
+      "custo": 1307.34,
+      "problema": "Avaria",
+      "pct_desc": 30.0,
+      "desc_sug": 392.2,
+      "frete": 285.82,
+      "total": 678.02,
+      "valor_real_fechado": 0.0,
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-10-15T11:39:45.220401-03:00",
+  "descontosUpdatedAt": "2026-10-15T12:39:05.688755-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -26485,13 +26502,13 @@
     },
     "2026-10": {
       "mercadolivre": {
-        "count": 8,
+        "count": 9,
         "countAceito": 2,
         "descontoTotal": 1391.16,
-        "custoTotal": 7900.69,
-        "valorPedidoTotal": 11720.3,
-        "pctDescontoSobreCusto": 17.61,
-        "pctDescontoSobreVenda": 11.87,
+        "custoTotal": 9208.03,
+        "valorPedidoTotal": 13766.02,
+        "pctDescontoSobreCusto": 15.11,
+        "pctDescontoSobreVenda": 10.11,
         "vendaTotalCanal": 1524337.2,
         "pctDescontoSobreVendaCanal": 0.0913
       },
@@ -26508,7 +26525,7 @@
       },
       "amazon": {
         "count": 2,
-        "countAceito": 0,
+        "countAceito": 2,
         "descontoTotal": 450.0,
         "custoTotal": 1514.61,
         "valorPedidoTotal": 1930.28,
