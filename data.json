@@ -25957,11 +25957,45 @@
       "desc_sug": 111.23,
       "frete": 40.58,
       "total": 151.81,
+      "valor_real_fechado": 150.0,
+      "aceito": false
+    },
+    {
+      "pedido": "2000015051234879",
+      "data": "15/09/2026",
+      "ym": "2026-09",
+      "canal": "mercadolivre",
+      "canal_raw": "Mercado Livre",
+      "sku": "TI1455",
+      "valor_pedido": 5579.9,
+      "custo": 3839.22,
+      "problema": "Avaria",
+      "pct_desc": 25.0,
+      "desc_sug": 959.81,
+      "frete": 0.0,
+      "total": 959.81,
       "valor_real_fechado": 0.0,
+      "aceito": false
+    },
+    {
+      "pedido": "701-0453274-7161020",
+      "data": "09/10/2026",
+      "ym": "2026-10",
+      "canal": "amazon",
+      "canal_raw": "Amazon",
+      "sku": "TI1562",
+      "valor_pedido": 1463.85,
+      "custo": 1143.84,
+      "problema": "Avaria",
+      "pct_desc": 30.0,
+      "desc_sug": 343.15,
+      "frete": 0.0,
+      "total": 343.15,
+      "valor_real_fechado": 300.0,
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-10-15T09:38:39.263797-03:00",
+  "descontosUpdatedAt": "2026-10-15T11:39:45.220401-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -26368,13 +26402,13 @@
     },
     "2026-09": {
       "mercadolivre": {
-        "count": 67,
+        "count": 68,
         "countAceito": 23,
         "descontoTotal": 15888.05,
-        "custoTotal": 75598.03,
-        "valorPedidoTotal": 125344.66,
-        "pctDescontoSobreCusto": 21.02,
-        "pctDescontoSobreVenda": 12.68,
+        "custoTotal": 79437.25,
+        "valorPedidoTotal": 130924.56,
+        "pctDescontoSobreCusto": 20.0,
+        "pctDescontoSobreVenda": 12.14,
         "vendaTotalCanal": 3350165.18,
         "pctDescontoSobreVendaCanal": 0.4742
       },
@@ -26447,15 +26481,15 @@
         "pctDescontoSobreVendaCanal": 0.0439
       },
       "amazon": {
-        "count": 1,
+        "count": 2,
         "countAceito": 0,
-        "descontoTotal": 0.0,
-        "custoTotal": 370.77,
-        "valorPedidoTotal": 466.43,
-        "pctDescontoSobreCusto": 0.0,
-        "pctDescontoSobreVenda": 0.0,
+        "descontoTotal": 450.0,
+        "custoTotal": 1514.61,
+        "valorPedidoTotal": 1930.28,
+        "pctDescontoSobreCusto": 29.71,
+        "pctDescontoSobreVenda": 23.31,
         "vendaTotalCanal": 766824.12,
-        "pctDescontoSobreVendaCanal": 0.0
+        "pctDescontoSobreVendaCanal": 0.0587
       }
     }
   },
