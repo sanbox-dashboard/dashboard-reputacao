@@ -5051,19 +5051,6 @@
       "vl": 0.0
     },
     {
-      "n": "99918085",
-      "d": "14/10/2026",
-      "ym": "2026-10",
-      "lj": "Mercado Livre",
-      "pb": "RMA",
-      "sk": "TI1562",
-      "tr": "Mercado Envios",
-      "pr": "—",
-      "gr": "Financeiro (Cancelamento indevido)",
-      "st": "Novo",
-      "vl": 1843.9
-    },
-    {
       "n": "99918083",
       "d": "14/10/2026",
       "ym": "2026-10",
@@ -6153,7 +6140,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Novo",
-      "vl": 1748.9
+      "vl": 1748.09
     },
     {
       "n": "99917968",
@@ -6728,6 +6715,19 @@
       "vl": 534.52
     },
     {
+      "n": "99917868",
+      "d": "29/09/2026",
+      "ym": "2026-09",
+      "lj": "Casas Bahia/Via Varejo",
+      "pb": "Danificado Transporte Próprio",
+      "sk": "TI1724",
+      "tr": "Rio Express",
+      "pr": "—",
+      "gr": "Débitos Transportadoras",
+      "st": "Novo",
+      "vl": 1691.11
+    },
+    {
       "n": "99917865",
       "d": "29/09/2026",
       "ym": "2026-09",
@@ -6921,19 +6921,6 @@
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
       "vl": 938.57
-    },
-    {
-      "n": "99917820",
-      "d": "25/09/2026",
-      "ym": "2026-09",
-      "lj": "Mercado Livre",
-      "pb": "RMA",
-      "sk": "TI1581",
-      "tr": "Mercado Envios",
-      "pr": "—",
-      "gr": "Financeiro (Cancelamento indevido)",
-      "st": "Novo",
-      "vl": 1319.9
     },
     {
       "n": "99917819",
@@ -7297,7 +7284,7 @@
       "pr": "—",
       "gr": "Chamados Marketplaces",
       "st": "Em andamento",
-      "vl": 1392.09
+      "vl": 1392.9
     },
     {
       "n": "99917763",
@@ -8171,32 +8158,6 @@
       "vl": 1696.51
     },
     {
-      "n": "99917418",
-      "d": "27/08/2026",
-      "ym": "2026-08",
-      "lj": "Mercado Livre",
-      "pb": "Não Entregue Marketplace",
-      "sk": "TI1529",
-      "tr": "Mercado Envios",
-      "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Pendente",
-      "vl": 1585.9
-    },
-    {
-      "n": "99917416",
-      "d": "27/08/2026",
-      "ym": "2026-08",
-      "lj": "Mercado Livre",
-      "pb": "Não Entregue Marketplace",
-      "sk": "ML-Parachoque",
-      "tr": "Mercado Envios",
-      "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Pendente",
-      "vl": 450.0
-    },
-    {
       "n": "99917410",
       "d": "27/08/2026",
       "ym": "2026-08",
@@ -8259,7 +8220,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1032.4
+      "vl": 1032.04
     },
     {
       "n": "99917366",
@@ -9273,7 +9234,7 @@
       "pr": "—",
       "gr": "Financeiro (Cancelamento indevido)",
       "st": "Novo",
-      "vl": 1399.02
+      "vl": 1399.2
     },
     {
       "n": "99916241",
@@ -9312,7 +9273,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1695.9
+      "vl": 1695.09
     },
     {
       "n": "99916177",
@@ -10703,7 +10664,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Em andamento",
-      "vl": 1655.09
+      "vl": 1655.9
     },
     {
       "n": "99914113",
@@ -11132,7 +11093,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Em andamento",
-      "vl": 1661.08
+      "vl": 1661.8
     },
     {
       "n": "99913106",
@@ -11158,7 +11119,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1334.09
+      "vl": 1334.9
     },
     {
       "n": "99913041",
@@ -11486,19 +11447,6 @@
       "vl": 101.84
     },
     {
-      "n": "99912389",
-      "d": "10/09/2025",
-      "ym": "2025-09",
-      "lj": "Casas Bahia/Via Varejo",
-      "pb": "Endereço Incorreto",
-      "sk": "TI1146 1 unidade",
-      "tr": "TNT",
-      "pr": "Alta",
-      "gr": "Débitos Transportadoras",
-      "st": "Pendente",
-      "vl": 1858.06
-    },
-    {
       "n": "99912258",
       "d": "28/08/2025",
       "ym": "2025-08",
@@ -11522,7 +11470,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Em andamento",
-      "vl": 1665.09
+      "vl": 1665.9
     },
     {
       "n": "99912061",
@@ -11743,7 +11691,7 @@
       "pr": "—",
       "gr": "Em análise",
       "st": "Novo",
-      "vl": 1572.06
+      "vl": 1572.6
     },
     {
       "n": "99911694",
@@ -15945,7 +15893,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-10-16T12:38:31.125263-03:00",
+  "ticketsRawUpdatedAt": "2026-10-16T13:08:48.128998-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
