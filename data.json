@@ -6101,7 +6101,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1749.9
+      "vl": 1749.09
     },
     {
       "n": "99917972",
@@ -6296,7 +6296,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1104.09
+      "vl": 1104.9
     },
     {
       "n": "99917949",
@@ -6543,7 +6543,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1066.04
+      "vl": 1066.4
     },
     {
       "n": "99917901",
@@ -7271,7 +7271,7 @@
       "pr": "—",
       "gr": "Chamados Marketplaces",
       "st": "Em andamento",
-      "vl": 1392.9
+      "vl": 1392.09
     },
     {
       "n": "99917763",
@@ -7399,8 +7399,8 @@
       "sk": "TI1514",
       "tr": "Trilog",
       "pr": "—",
-      "gr": "Débitos Transportadoras",
-      "st": "Pendente",
+      "gr": "Monitoramento Devolução",
+      "st": "Novo",
       "vl": 1799.87
     },
     {
@@ -8064,7 +8064,7 @@
       "pr": "—",
       "gr": "Atendimento SAC",
       "st": "Pendente",
-      "vl": 1578.1
+      "vl": 1578.01
     },
     {
       "n": "99917510",
@@ -8091,19 +8091,6 @@
       "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 622.27
-    },
-    {
-      "n": "99917502",
-      "d": "03/09/2026",
-      "ym": "2026-09",
-      "lj": "Shopee",
-      "pb": "RMA",
-      "sk": "TI1700",
-      "tr": "Trilog",
-      "pr": "—",
-      "gr": "Financeiro (Estorno)",
-      "st": "Novo",
-      "vl": 653.15
     },
     {
       "n": "99917500",
@@ -8925,6 +8912,19 @@
       "vl": 1899.9
     },
     {
+      "n": "99916568",
+      "d": "26/06/2026",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "RMA",
+      "sk": "TI1571",
+      "tr": "Mercado Envios",
+      "pr": "—",
+      "gr": "Jurídico",
+      "st": "Novo",
+      "vl": 1012.9
+    },
+    {
       "n": "99916565",
       "d": "26/06/2026",
       "ym": "2026-06",
@@ -9247,7 +9247,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1695.9
+      "vl": 1695.09
     },
     {
       "n": "99916177",
@@ -9273,7 +9273,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1695.09
+      "vl": 1695.9
     },
     {
       "n": "99916139",
@@ -10105,7 +10105,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1042.6
+      "vl": 1042.06
     },
     {
       "n": "99914718",
@@ -13017,7 +13017,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Em andamento",
-      "vl": 1671.1
+      "vl": 1671.01
     },
     {
       "n": "99908766",
@@ -15867,7 +15867,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-10-16T14:39:05.216357-03:00",
+  "ticketsRawUpdatedAt": "2026-10-16T15:09:13.209513-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
