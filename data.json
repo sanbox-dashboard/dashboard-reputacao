@@ -13610,7 +13610,7 @@
       "ym": "2024-05",
       "lj": "Mercado Livre",
       "pb": "RMA",
-      "sk": "TI1139  1 unidade ",
+      "sk": "TI1139  1 unidade",
       "tr": "Correios",
       "pr": "—",
       "gr": "Jurídico",
@@ -15958,7 +15958,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-10-16T09:18:23.367986-03:00",
+  "ticketsRawUpdatedAt": "2026-10-16T09:39:20.130761-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
@@ -25724,9 +25724,26 @@
       "total": 678.02,
       "valor_real_fechado": 670.0,
       "aceito": false
+    },
+    {
+      "pedido": "2000018915350324",
+      "data": "10/10/2026",
+      "ym": "2026-10",
+      "canal": "mercadolivre",
+      "canal_raw": "Mercado Livre",
+      "sku": "TI1603",
+      "valor_pedido": 1929.9,
+      "custo": 1234.1,
+      "problema": "Avaria",
+      "pct_desc": 30.0,
+      "desc_sug": 370.23,
+      "frete": 0.0,
+      "total": 370.23,
+      "valor_real_fechado": 0.0,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-10-16T09:18:23.367986-03:00",
+  "descontosUpdatedAt": "2026-10-16T09:39:20.130761-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -26190,13 +26207,13 @@
     },
     "2026-10": {
       "mercadolivre": {
-        "count": 9,
+        "count": 10,
         "countAceito": 2,
         "descontoTotal": 2061.16,
-        "custoTotal": 9208.03,
-        "valorPedidoTotal": 13766.02,
-        "pctDescontoSobreCusto": 22.38,
-        "pctDescontoSobreVenda": 14.97,
+        "custoTotal": 10442.13,
+        "valorPedidoTotal": 15695.92,
+        "pctDescontoSobreCusto": 19.74,
+        "pctDescontoSobreVenda": 13.13,
         "vendaTotalCanal": 1524337.2,
         "pctDescontoSobreVendaCanal": 0.1352
       },
