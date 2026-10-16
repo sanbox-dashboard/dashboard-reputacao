@@ -25676,9 +25676,26 @@
       "total": 370.23,
       "valor_real_fechado": 0.0,
       "aceito": false
+    },
+    {
+      "pedido": "2000018806131966",
+      "data": "05/10/2026",
+      "ym": "2026-10",
+      "canal": "mercadolivre",
+      "canal_raw": "Mercado Livre",
+      "sku": "TI1090",
+      "valor_pedido": 819.9,
+      "custo": 485.0,
+      "problema": "Insatisfação",
+      "pct_desc": 20.0,
+      "desc_sug": 97.0,
+      "frete": 0.0,
+      "total": 97.0,
+      "valor_real_fechado": 100.0,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-10-16T10:09:19.875548-03:00",
+  "descontosUpdatedAt": "2026-10-16T13:38:59.135059-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -26142,15 +26159,15 @@
     },
     "2026-10": {
       "mercadolivre": {
-        "count": 10,
+        "count": 11,
         "countAceito": 2,
-        "descontoTotal": 2061.16,
-        "custoTotal": 10442.13,
-        "valorPedidoTotal": 15695.92,
-        "pctDescontoSobreCusto": 19.74,
-        "pctDescontoSobreVenda": 13.13,
+        "descontoTotal": 2161.16,
+        "custoTotal": 10927.13,
+        "valorPedidoTotal": 16515.82,
+        "pctDescontoSobreCusto": 19.78,
+        "pctDescontoSobreVenda": 13.09,
         "vendaTotalCanal": 1524337.2,
-        "pctDescontoSobreVendaCanal": 0.1352
+        "pctDescontoSobreVendaCanal": 0.1418
       },
       "shopee": {
         "count": 1,
