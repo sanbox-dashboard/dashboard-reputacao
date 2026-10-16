@@ -7828,7 +7828,7 @@
       "sk": "TI1078",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Financeiro (Cancelamento indevido)",
       "st": "Pendente",
       "vl": 1054.9
     },
@@ -15880,7 +15880,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-10-16T16:08:49.186129-03:00",
+  "ticketsRawUpdatedAt": "2026-10-16T17:09:06.040309-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
