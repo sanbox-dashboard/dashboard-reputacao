@@ -4791,6 +4791,19 @@
   },
   "ticketsRaw": [
     {
+      "n": "99918108",
+      "d": "16/10/2026",
+      "ym": "2026-10",
+      "lj": "Shopee",
+      "pb": "Suspeita de Fraude",
+      "sk": "TI1562",
+      "tr": "Trilog",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 1880.03
+    },
+    {
       "n": "99918107",
       "d": "16/10/2026",
       "ym": "2026-10",
@@ -7284,7 +7297,7 @@
       "pr": "—",
       "gr": "Chamados Marketplaces",
       "st": "Em andamento",
-      "vl": 1392.9
+      "vl": 1392.09
     },
     {
       "n": "99917763",
@@ -7581,8 +7594,8 @@
       "sk": "TI1563",
       "tr": "Rio Express",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
-      "st": "Pendente",
+      "gr": "Monitoramento Devolução",
+      "st": "Novo",
       "vl": 566.22
     },
     {
@@ -8246,7 +8259,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1032.04
+      "vl": 1032.4
     },
     {
       "n": "99917366",
@@ -9260,7 +9273,7 @@
       "pr": "—",
       "gr": "Financeiro (Cancelamento indevido)",
       "st": "Novo",
-      "vl": 1399.2
+      "vl": 1399.02
     },
     {
       "n": "99916241",
@@ -9299,7 +9312,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1695.09
+      "vl": 1695.9
     },
     {
       "n": "99916177",
@@ -10690,7 +10703,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Em andamento",
-      "vl": 1655.9
+      "vl": 1655.09
     },
     {
       "n": "99914113",
@@ -11119,7 +11132,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Em andamento",
-      "vl": 1661.8
+      "vl": 1661.08
     },
     {
       "n": "99913106",
@@ -11145,7 +11158,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1334.9
+      "vl": 1334.09
     },
     {
       "n": "99913041",
@@ -11509,7 +11522,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Em andamento",
-      "vl": 1665.9
+      "vl": 1665.09
     },
     {
       "n": "99912061",
@@ -15932,7 +15945,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-10-16T11:08:52.668473-03:00",
+  "ticketsRawUpdatedAt": "2026-10-16T12:38:31.125263-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
