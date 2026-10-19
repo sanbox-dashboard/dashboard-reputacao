@@ -4843,6 +4843,32 @@
   },
   "ticketsRaw": [
     {
+      "n": "99918123",
+      "d": "19/10/2026",
+      "ym": "2026-10",
+      "lj": "Amazon",
+      "pb": "Não entregue pela Transportadora ",
+      "sk": "TI1801",
+      "tr": "Total Express",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 302.36
+    },
+    {
+      "n": "99918122",
+      "d": "19/10/2026",
+      "ym": "2026-10",
+      "lj": "Loja Sanbox",
+      "pb": "Não entregue pela Transportadora ",
+      "sk": "SS001OUT",
+      "tr": "Total Express",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 693.8
+    },
+    {
       "n": "99918121",
       "d": "19/10/2026",
       "ym": "2026-10",
@@ -5948,19 +5974,6 @@
       "vl": 0.0
     },
     {
-      "n": "99918014",
-      "d": "08/10/2026",
-      "ym": "2026-10",
-      "lj": "Mercado Livre",
-      "pb": "Recusa do cliente por Cancelamento",
-      "sk": "TI1740",
-      "tr": "Mercado Envios",
-      "pr": "—",
-      "gr": "Financeiro (Estorno)",
-      "st": "Novo",
-      "vl": 1729.9
-    },
-    {
       "n": "99918012",
       "d": "08/10/2026",
       "ym": "2026-10",
@@ -6712,7 +6725,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
-      "vl": 1821.09
+      "vl": 1821.9
     },
     {
       "n": "99917896",
@@ -6880,7 +6893,7 @@
       "tr": "Mercado Envios",
       "pr": "—",
       "gr": "Financeiro (Cancelamento indevido)",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 1429.9
     },
     {
@@ -7350,19 +7363,6 @@
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
       "vl": 843.9
-    },
-    {
-      "n": "99917774",
-      "d": "22/09/2026",
-      "ym": "2026-09",
-      "lj": "Magalu",
-      "pb": "Erro Integração",
-      "sk": "TI287-2",
-      "tr": "Total Express",
-      "pr": "—",
-      "gr": "Financeiro (Estorno)",
-      "st": "Novo",
-      "vl": 1366.63
     },
     {
       "n": "99917768",
@@ -15945,7 +15945,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-10-19T12:07:58.563931-03:00",
+  "ticketsRawUpdatedAt": "2026-10-19T13:08:47.502554-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
