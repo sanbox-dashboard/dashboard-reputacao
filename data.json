@@ -24027,7 +24027,7 @@
       "frete": 88.16,
       "total": 417.75,
       "valor_real_fechado": 0.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "2000018141402738",
@@ -25710,7 +25710,7 @@
       "frete": 285.82,
       "total": 678.02,
       "valor_real_fechado": 670.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "2000018915350324",
@@ -25781,7 +25781,7 @@
       "aceito": true
     }
   ],
-  "descontosUpdatedAt": "2026-10-19T11:08:22.251262-03:00",
+  "descontosUpdatedAt": "2026-10-19T14:38:26.555795-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -26200,7 +26200,7 @@
       },
       "shopee": {
         "count": 6,
-        "countAceito": 5,
+        "countAceito": 6,
         "descontoTotal": 1630.0,
         "custoTotal": 5724.41,
         "valorPedidoTotal": 8638.89,
@@ -26246,7 +26246,7 @@
     "2026-10": {
       "mercadolivre": {
         "count": 12,
-        "countAceito": 3,
+        "countAceito": 4,
         "descontoTotal": 4061.16,
         "custoTotal": 15001.38,
         "valorPedidoTotal": 22986.87,
