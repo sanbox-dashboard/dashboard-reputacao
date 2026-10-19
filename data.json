@@ -4791,10 +4791,10 @@
     "2026-10-19": {
       "mercadolivre": {
         "metrics": {},
-        "ts": "2026-10-19T15:08:45.938842-03:00",
+        "ts": "2026-10-19T16:09:35.439064-03:00",
         "tickets": 0,
         "sacForaPrazo": 0,
-        "casosCriticos": 0,
+        "casosCriticos": 1,
         "solicitacaoDevolucaoAmarelo": 0,
         "solicitacaoDevolucaoVermelho": 3,
         "solicitacaoDevolucao": 3
@@ -5384,8 +5384,8 @@
       "sk": "TI1768",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "gr": "Entrada Sanbox",
+      "st": "Novo",
       "vl": 3868.37
     },
     {
@@ -5943,7 +5943,7 @@
       "sk": "TI1688",
       "tr": "Alfa Transportes",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 0.0
     },
@@ -6011,19 +6011,6 @@
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
       "vl": 329.9
-    },
-    {
-      "n": "99918009",
-      "d": "07/10/2026",
-      "ym": "2026-10",
-      "lj": "Mercado Livre",
-      "pb": "RMA",
-      "sk": "TI1816",
-      "tr": "Mercado Envios",
-      "pr": "—",
-      "gr": "Financeiro (Cancelamento indevido)",
-      "st": "Novo",
-      "vl": 0.0
     },
     {
       "n": "99918008",
@@ -6152,7 +6139,7 @@
       "tr": "Alfa Transportes",
       "pr": "—",
       "gr": "Monitoramento Devolução",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 1098.72
     },
     {
@@ -6268,7 +6255,7 @@
       "sk": "TI1571",
       "tr": "Rio Express",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1112.48
     },
@@ -6334,7 +6321,7 @@
       "tr": "Mercado Envios",
       "pr": "—",
       "gr": "Monitoramento Devolução",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 0.0
     },
     {
@@ -6385,7 +6372,7 @@
       "sk": "TI1486",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Entrada Sanbox",
       "st": "Novo",
       "vl": 0.0
     },
@@ -6581,7 +6568,7 @@
       "tr": "Mercado Envios",
       "pr": "—",
       "gr": "Monitoramento Devolução",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 1489.9
     },
     {
@@ -6892,7 +6879,7 @@
       "sk": "TI1568",
       "tr": "Brasil Web",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Entrada Sanbox",
       "st": "Novo",
       "vl": 1577.82
     },
@@ -7348,7 +7335,7 @@
       "tr": "Mercado Envios",
       "pr": "—",
       "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "st": "Pendente",
       "vl": 1429.9
     },
     {
@@ -7584,6 +7571,19 @@
       "gr": "Casos Críticos",
       "st": "Novo",
       "vl": 654.32
+    },
+    {
+      "n": "99917705",
+      "d": "17/09/2026",
+      "ym": "2026-09",
+      "lj": "Magalu",
+      "pb": "Danificado Transporte Próprio",
+      "sk": "TI1562",
+      "tr": "Alfa Transportes",
+      "pr": "—",
+      "gr": "Débitos Transportadoras",
+      "st": "Pendente",
+      "vl": 1993.64
     },
     {
       "n": "99917702",
@@ -8301,6 +8301,19 @@
       "vl": 619.75
     },
     {
+      "n": "99917358",
+      "d": "25/08/2026",
+      "ym": "2026-08",
+      "lj": "Mercado Livre",
+      "pb": "Danificado Transporte Marketplace",
+      "sk": "TI1455",
+      "tr": "Mercado Envios",
+      "pr": "—",
+      "gr": "Casos Críticos",
+      "st": "Novo",
+      "vl": 0.0
+    },
+    {
       "n": "99917339",
       "d": "24/08/2026",
       "ym": "2026-08",
@@ -8649,7 +8662,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1691.6
+      "vl": 1691.06
     },
     {
       "n": "99917016",
@@ -8662,7 +8675,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1424.09
+      "vl": 1424.9
     },
     {
       "n": "99917015",
@@ -8728,19 +8741,6 @@
       "gr": "Chamados Marketplaces",
       "st": "Em andamento",
       "vl": 0.0
-    },
-    {
-      "n": "99916946",
-      "d": "24/07/2026",
-      "ym": "2026-07",
-      "lj": null,
-      "pb": "Extravio Transportadora própria",
-      "sk": "",
-      "tr": "Trilog",
-      "pr": "—",
-      "gr": "Débitos Transportadoras",
-      "st": "Pendente",
-      "vl": 1547.83
     },
     {
       "n": "99916946",
@@ -15932,7 +15932,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-10-19T15:08:45.938842-03:00",
+  "ticketsRawUpdatedAt": "2026-10-19T16:09:35.439064-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
