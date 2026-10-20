@@ -4895,6 +4895,19 @@
   },
   "ticketsRaw": [
     {
+      "n": "99918149",
+      "d": "20/10/2026",
+      "ym": "2026-10",
+      "lj": "Mercado Livre",
+      "pb": "Arrependimento",
+      "sk": "TI1705",
+      "tr": "Alfa Transportes",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 0.0
+    },
+    {
       "n": "99918148",
       "d": "20/10/2026",
       "ym": "2026-10",
@@ -6570,19 +6583,6 @@
       "gr": "Solicitação de Devolução",
       "st": "Novo",
       "vl": 1614.63
-    },
-    {
-      "n": "99917961",
-      "d": "06/10/2026",
-      "ym": "2026-10",
-      "lj": "Mercado Livre",
-      "pb": "Cancelamento por Arrependimento Após o Envio",
-      "sk": "TI1486",
-      "tr": "Mercado Envios",
-      "pr": "—",
-      "gr": "Financeiro (Estorno)",
-      "st": "Novo",
-      "vl": 0.0
     },
     {
       "n": "99917959",
@@ -15958,7 +15958,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-10-20T17:09:15.842421-03:00",
+  "ticketsRawUpdatedAt": "2026-10-20T18:39:30.917032-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
