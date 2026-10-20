@@ -4895,6 +4895,19 @@
   },
   "ticketsRaw": [
     {
+      "n": "99918148",
+      "d": "20/10/2026",
+      "ym": "2026-10",
+      "lj": "Mercado Livre",
+      "pb": "Atraso de Entrega",
+      "sk": "TI1876",
+      "tr": "Trilog",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 1153.95
+    },
+    {
       "n": "99918147",
       "d": "20/10/2026",
       "ym": "2026-10",
@@ -5098,7 +5111,7 @@
       "sk": "TI1739",
       "tr": "Total Express",
       "pr": "—",
-      "gr": "Atendimento SAC",
+      "gr": "Financeiro (Cancelamento indevido)",
       "st": "Novo",
       "vl": 779.97
     },
@@ -5146,7 +5159,7 @@
       "d": "19/10/2026",
       "ym": "2026-10",
       "lj": "Amazon",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1801",
       "tr": "Total Express",
       "pr": "—",
@@ -5159,7 +5172,7 @@
       "d": "19/10/2026",
       "ym": "2026-10",
       "lj": "Loja Sanbox",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "SS001OUT",
       "tr": "Total Express",
       "pr": "—",
@@ -5432,7 +5445,7 @@
       "d": "15/10/2026",
       "ym": "2026-10",
       "lj": "Mercado Livre",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1529",
       "tr": "Alfa Transportes",
       "pr": "—",
@@ -5471,7 +5484,7 @@
       "d": "15/10/2026",
       "ym": "2026-10",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1563",
       "tr": "Total Express",
       "pr": "—",
@@ -5956,7 +5969,7 @@
       "sk": "TI1529",
       "tr": "Brasil Web",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1445.2
     },
@@ -6121,7 +6134,7 @@
       "d": "09/10/2026",
       "ym": "2026-10",
       "lj": "Amazon",
-      "pb": "Prazo de Retirada Expirado",
+      "pb": "Prazo de Retirada Expirado ",
       "sk": "SS004",
       "tr": "Total Express",
       "pr": "—",
@@ -6407,7 +6420,7 @@
       "d": "07/10/2026",
       "ym": "2026-10",
       "lj": "Shopee",
-      "pb": "Cliente Desconhece a Compra",
+      "pb": "Cliente Desconhece a Compra ",
       "sk": "TI1571",
       "tr": "Alfa Transportes",
       "pr": "—",
@@ -6567,7 +6580,7 @@
       "sk": "TI1486",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Entrada Sanbox",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 0.0
     },
@@ -6628,7 +6641,7 @@
       "d": "05/10/2026",
       "ym": "2026-10",
       "lj": "Casas Bahia/Via Varejo",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1690",
       "tr": "Trilog",
       "pr": "—",
@@ -6711,7 +6724,7 @@
       "tr": "MMA",
       "pr": "—",
       "gr": "Débitos Transportadoras",
-      "st": "Pendente",
+      "st": "Em andamento",
       "vl": 0.0
     },
     {
@@ -6810,7 +6823,7 @@
       "d": "01/10/2026",
       "ym": "2026-10",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1565",
       "tr": "Total Express",
       "pr": "—",
@@ -6849,7 +6862,7 @@
       "d": "01/10/2026",
       "ym": "2026-10",
       "lj": "Amazon",
-      "pb": "Prazo de Retirada Expirado",
+      "pb": "Prazo de Retirada Expirado ",
       "sk": "TI1078",
       "tr": "Total Express",
       "pr": "—",
@@ -6862,7 +6875,7 @@
       "d": "01/10/2026",
       "ym": "2026-10",
       "lj": "Casas Bahia/Via Varejo",
-      "pb": "Prazo de Retirada Expirado",
+      "pb": "Prazo de Retirada Expirado ",
       "sk": "TI1078",
       "tr": "Total Express",
       "pr": "—",
@@ -7230,8 +7243,8 @@
       "sk": "TI1562",
       "tr": "Alfa Transportes",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "gr": "Financeiro (Estorno)",
+      "st": "Novo",
       "vl": 1902.22
     },
     {
@@ -7284,7 +7297,7 @@
       "pr": "—",
       "gr": "Chamados Marketplaces",
       "st": "Em andamento",
-      "vl": 1072.9
+      "vl": 1072.09
     },
     {
       "n": "99917803",
@@ -7297,7 +7310,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1823.05
+      "vl": 1823.5
     },
     {
       "n": "99917796",
@@ -7438,7 +7451,7 @@
       "sk": "TI1766",
       "tr": "Total Express",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 1164.99
     },
@@ -7490,8 +7503,8 @@
       "sk": "TI1842-1",
       "tr": "Alfa Transportes",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "gr": "Financeiro (Estorno)",
+      "st": "Novo",
       "vl": 843.9
     },
     {
@@ -7505,7 +7518,7 @@
       "pr": "—",
       "gr": "Chamados Marketplaces",
       "st": "Em andamento",
-      "vl": 1392.9
+      "vl": 1392.09
     },
     {
       "n": "99917759",
@@ -7880,7 +7893,7 @@
       "sk": "TI1609",
       "tr": "Rio Express",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Jurídico",
       "st": "Novo",
       "vl": 1037.65
     },
@@ -7958,8 +7971,8 @@
       "sk": "TI1667",
       "tr": "Alfa Transportes",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "gr": "Financeiro (Estorno)",
+      "st": "Novo",
       "vl": 1134.81
     },
     {
@@ -8207,7 +8220,7 @@
       "pr": "—",
       "gr": "Atendimento SAC",
       "st": "Pendente",
-      "vl": 1578.1
+      "vl": 1578.01
     },
     {
       "n": "99917510",
@@ -8318,7 +8331,7 @@
       "d": "25/08/2026",
       "ym": "2026-08",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1378",
       "tr": "Total Express",
       "pr": "—",
@@ -8604,7 +8617,7 @@
       "d": "05/08/2026",
       "ym": "2026-08",
       "lj": "Shopee",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1276/TI287-1",
       "tr": "Alfa Transportes",
       "pr": "—",
@@ -8682,7 +8695,7 @@
       "d": "28/07/2026",
       "ym": "2026-07",
       "lj": "Amazon",
-      "pb": "Cliente Desconhece a Compra",
+      "pb": "Cliente Desconhece a Compra ",
       "sk": "TI516",
       "tr": "Total Express",
       "pr": "—",
@@ -9189,7 +9202,7 @@
       "d": "15/06/2026",
       "ym": "2026-06",
       "lj": "Mercado Livre",
-      "pb": "Não entregue pela Transportadora",
+      "pb": "Não entregue pela Transportadora ",
       "sk": "TI1486",
       "tr": "Rio Express",
       "pr": "—",
@@ -9263,6 +9276,19 @@
       "vl": 1961.38
     },
     {
+      "n": "99916284",
+      "d": "03/06/2026",
+      "ym": "2026-06",
+      "lj": "Mercado Livre",
+      "pb": "Extraviado Transporte Marketplace",
+      "sk": "TI1656",
+      "tr": "Recolí",
+      "pr": "—",
+      "gr": "Jurídico",
+      "st": "Novo",
+      "vl": 0.0
+    },
+    {
       "n": "99916279",
       "d": "03/06/2026",
       "ym": "2026-06",
@@ -9286,7 +9312,7 @@
       "pr": "—",
       "gr": "Financeiro (Cancelamento indevido)",
       "st": "Novo",
-      "vl": 1399.2
+      "vl": 1399.02
     },
     {
       "n": "99916241",
@@ -9384,7 +9410,7 @@
       "d": "20/05/2026",
       "ym": "2026-05",
       "lj": "Shopee",
-      "pb": "Cliente Desconhece a Compra",
+      "pb": "Cliente Desconhece a Compra ",
       "sk": "SS002",
       "tr": "Total Express",
       "pr": "—",
@@ -10157,7 +10183,7 @@
       "pr": "—",
       "gr": "Financeiro Standby",
       "st": "Novo",
-      "vl": 1803.3
+      "vl": 1803.03
     },
     {
       "n": "99914760",
@@ -10469,7 +10495,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1049.08
+      "vl": 1049.8
     },
     {
       "n": "99914456",
@@ -11119,7 +11145,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1053.9
+      "vl": 1053.09
     },
     {
       "n": "99913119",
@@ -11145,7 +11171,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Em andamento",
-      "vl": 1661.08
+      "vl": 1661.8
     },
     {
       "n": "99913106",
@@ -13082,7 +13108,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Em andamento",
-      "vl": 1671.1
+      "vl": 1671.01
     },
     {
       "n": "99908766",
@@ -15932,7 +15958,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-10-20T16:38:48.059762-03:00",
+  "ticketsRawUpdatedAt": "2026-10-20T17:09:15.842421-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
