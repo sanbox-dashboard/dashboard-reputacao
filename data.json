@@ -4999,6 +4999,19 @@
   },
   "ticketsRaw": [
     {
+      "n": "99918214",
+      "d": "26/10/2026",
+      "ym": "2026-10",
+      "lj": "Magalu",
+      "pb": "RMA",
+      "sk": "TI1524",
+      "tr": "Alfa Transportes",
+      "pr": "—",
+      "gr": "Monitoramento Devolução",
+      "st": "Novo",
+      "vl": 971.41
+    },
+    {
       "n": "99918213",
       "d": "26/10/2026",
       "ym": "2026-10",
@@ -5009,7 +5022,7 @@
       "pr": "—",
       "gr": "Envio de Produto",
       "st": "Novo",
-      "vl": 1859.9
+      "vl": 1859.09
     },
     {
       "n": "99918212",
@@ -5762,7 +5775,7 @@
       "tr": "Trilog",
       "pr": "—",
       "gr": "Débitos Transportadoras",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 1284.33
     },
     {
@@ -8102,7 +8115,7 @@
       "tr": "Rio Express",
       "pr": "—",
       "gr": "Débitos Transportadoras",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 1297.78
     },
     {
@@ -8441,7 +8454,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1032.04
+      "vl": 1032.4
     },
     {
       "n": "99917358",
@@ -9351,7 +9364,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1695.9
+      "vl": 1695.09
     },
     {
       "n": "99916268",
@@ -13610,7 +13623,7 @@
       "ym": "2024-05",
       "lj": "Mercado Livre",
       "pb": "RMA",
-      "sk": "TI1139  1 unidade ",
+      "sk": "TI1139  1 unidade",
       "tr": "Correios",
       "pr": "—",
       "gr": "Jurídico",
@@ -15958,7 +15971,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-10-26T13:38:39.145549-03:00",
+  "ticketsRawUpdatedAt": "2026-10-26T14:09:39.477938-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
