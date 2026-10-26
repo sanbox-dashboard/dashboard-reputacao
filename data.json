@@ -23926,7 +23926,7 @@
       "valor_pedido": 1445.22,
       "custo": 890.88,
       "problema": "Avaria",
-      "pct_desc": 0,
+      "pct_desc": 0.0,
       "desc_sug": 0.0,
       "frete": 185.31,
       "total": 185.31,
@@ -25779,7 +25779,7 @@
       "valor_pedido": 1136.33,
       "custo": 644.23,
       "problema": "Avaria",
-      "pct_desc": 0,
+      "pct_desc": 0.0,
       "desc_sug": 0.0,
       "frete": 241.79,
       "total": 241.79,
@@ -25819,9 +25819,26 @@
       "total": 1778.45,
       "valor_real_fechado": 550.0,
       "aceito": false
+    },
+    {
+      "pedido": "2000015242055465",
+      "data": "28/09/2026",
+      "ym": "2026-09",
+      "canal": "mercadolivre",
+      "canal_raw": "Mercado Livre",
+      "sku": "TI1667",
+      "valor_pedido": 1013.9,
+      "custo": 613.76,
+      "problema": "Avaria",
+      "pct_desc": 30.0,
+      "desc_sug": 184.13,
+      "frete": 0.0,
+      "total": 184.13,
+      "valor_real_fechado": 180.0,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-10-26T09:22:44.632891-03:00",
+  "descontosUpdatedAt": "2026-10-26T09:39:09.971062-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -26228,15 +26245,15 @@
     },
     "2026-09": {
       "mercadolivre": {
-        "count": 69,
+        "count": 70,
         "countAceito": 23,
-        "descontoTotal": 16288.05,
-        "custoTotal": 80035.18,
-        "valorPedidoTotal": 132302.58,
-        "pctDescontoSobreCusto": 20.35,
-        "pctDescontoSobreVenda": 12.31,
+        "descontoTotal": 16468.05,
+        "custoTotal": 80648.94,
+        "valorPedidoTotal": 133316.48,
+        "pctDescontoSobreCusto": 20.42,
+        "pctDescontoSobreVenda": 12.35,
         "vendaTotalCanal": 3350165.18,
-        "pctDescontoSobreVendaCanal": 0.4862
+        "pctDescontoSobreVendaCanal": 0.4916
       },
       "shopee": {
         "count": 6,
