@@ -5254,7 +5254,7 @@
       "sk": "TI1667",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1019.9
     },
@@ -5306,7 +5306,7 @@
       "sk": "TI1704",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1109.9
     },
@@ -5475,7 +5475,7 @@
       "sk": "TI1514",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1859.9
     },
@@ -5826,7 +5826,7 @@
       "sk": "TI1529",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1383.0
     },
@@ -7087,7 +7087,7 @@
       "sk": "TI516",
       "tr": "Total Express",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1394.98
     },
@@ -7165,7 +7165,7 @@
       "sk": "TI1527",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Pendente",
       "vl": 973.9
     },
@@ -16010,7 +16010,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-10-26T12:08:57.698391-03:00",
+  "ticketsRawUpdatedAt": "2026-10-26T12:39:13.751253-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
