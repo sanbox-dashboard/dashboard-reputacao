@@ -26373,11 +26373,11 @@
       "desc_sug": 145.5,
       "frete": 0.0,
       "total": 145.5,
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 145.0,
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-10-27T17:10:29.594831-03:00",
+  "descontosUpdatedAt": "2026-10-27T18:10:14.910171-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -26843,13 +26843,13 @@
       "mercadolivre": {
         "count": 22,
         "countAceito": 10,
-        "descontoTotal": 5130.16,
+        "descontoTotal": 5275.16,
         "custoTotal": 24160.28,
         "valorPedidoTotal": 37401.4,
-        "pctDescontoSobreCusto": 21.23,
-        "pctDescontoSobreVenda": 13.72,
+        "pctDescontoSobreCusto": 21.83,
+        "pctDescontoSobreVenda": 14.1,
         "vendaTotalCanal": 1524337.2,
-        "pctDescontoSobreVendaCanal": 0.3366
+        "pctDescontoSobreVendaCanal": 0.3461
       },
       "shopee": {
         "count": 3,
