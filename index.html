@@ -973,7 +973,7 @@ const channels = {
     noRep: true, // v46: Mercado Livre não tem mais "reputação geral" no dash
     metrics: {
       reclamacoes: {label:'Reclamações', metaType:'max', meta:1.4, alerta:1.0, unit:'%', ocrPattern:/reclama[çc][õo]es?[\s\S]{0,150}?(\d+(?:[,.]\d+)?)\s*%/i},
-      mediacoes:   {label:'Mediações',   metaType:'max', meta:0.5, alerta:0.30, unit:'%', ocrPattern:/media[çc][õo]es?[\s\S]{0,150}?(\d+(?:[,.]\d+)?)\s*%/i},
+      mediacoes:   {label:'Mediações',   metaType:'max', meta:0.5, alerta:0.45, unit:'%', ocrPattern:/media[çc][õo]es?[\s\S]{0,150}?(\d+(?:[,.]\d+)?)\s*%/i},
       canceladas:  {label:'Vendas Canceladas', metaType:'max', meta:1.5, alerta:1.0, unit:'%', ocrPattern:/cancelad[ao]s?[\s\S]{0,150}?(\d+(?:[,.]\d+)?)\s*%/i},
       enviosIncorretos: {label:'Envios incorretos', metaType:'max', meta:6.0, alerta:4.0, unit:'%', ocrPattern:/env[ií]os? incorretos?[\s\S]{0,150}?(\d+(?:[,.]\d+)?)\s*%/i}
     }
@@ -1027,7 +1027,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '48.0';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '48.1';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
