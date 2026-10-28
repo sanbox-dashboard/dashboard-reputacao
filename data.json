@@ -14000,7 +14000,7 @@
       "ym": "2024-05",
       "lj": "Mercado Livre",
       "pb": "RMA",
-      "sk": "TI1139  1 unidade ",
+      "sk": "TI1139  1 unidade",
       "tr": "Correios",
       "pr": "—",
       "gr": "Jurídico",
@@ -16348,7 +16348,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-10-28T15:08:19.950744-03:00",
+  "ticketsRawUpdatedAt": "2026-10-28T15:38:07.925716-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
@@ -24459,7 +24459,7 @@
       "valor_pedido": 1445.22,
       "custo": 890.88,
       "problema": "Avaria",
-      "pct_desc": 0,
+      "pct_desc": 0.0,
       "desc_sug": 0.0,
       "frete": 185.31,
       "total": 185.31,
@@ -26295,7 +26295,7 @@
       "valor_pedido": 1136.33,
       "custo": 644.23,
       "problema": "Avaria",
-      "pct_desc": 0,
+      "pct_desc": 0.0,
       "desc_sug": 0.0,
       "frete": 241.79,
       "total": 241.79,
@@ -26537,11 +26537,11 @@
       "desc_sug": 862.59,
       "frete": 0.0,
       "total": 862.59,
-      "valor_real_fechado": 0.0,
-      "aceito": false
+      "valor_real_fechado": 850.0,
+      "aceito": true
     }
   ],
-  "descontosUpdatedAt": "2026-10-28T15:08:19.950744-03:00",
+  "descontosUpdatedAt": "2026-10-28T15:38:07.925716-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -27006,14 +27006,14 @@
     "2026-10": {
       "mercadolivre": {
         "count": 24,
-        "countAceito": 10,
-        "descontoTotal": 5358.16,
+        "countAceito": 11,
+        "descontoTotal": 6208.16,
         "custoTotal": 27503.0,
         "valorPedidoTotal": 42291.2,
-        "pctDescontoSobreCusto": 19.48,
-        "pctDescontoSobreVenda": 12.67,
+        "pctDescontoSobreCusto": 22.57,
+        "pctDescontoSobreVenda": 14.68,
         "vendaTotalCanal": 1524337.2,
-        "pctDescontoSobreVendaCanal": 0.3515
+        "pctDescontoSobreVendaCanal": 0.4073
       },
       "shopee": {
         "count": 3,
