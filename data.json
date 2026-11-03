@@ -6359,7 +6359,7 @@
       "sk": "TI1580",
       "tr": "Brasil Web",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1156.1
     },
@@ -7074,7 +7074,7 @@
       "sk": "TI1705",
       "tr": "Alfa Transportes",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 0.0
     },
@@ -16647,7 +16647,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-03T13:38:12.152982-03:00",
+  "ticketsRawUpdatedAt": "2026-11-03T14:08:38.181416-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
