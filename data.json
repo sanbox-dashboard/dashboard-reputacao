@@ -5363,6 +5363,19 @@
   },
   "ticketsRaw": [
     {
+      "n": "99918337",
+      "d": "04/11/2026",
+      "ym": "2026-11",
+      "lj": null,
+      "pb": "Extravio Transportadora própria",
+      "sk": "",
+      "tr": "Total Express",
+      "pr": "—",
+      "gr": "Débitos Transportadoras",
+      "st": "Novo",
+      "vl": 636.43
+    },
+    {
       "n": "99918336",
       "d": "04/11/2026",
       "ym": "2026-11",
@@ -5789,7 +5802,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Novo",
-      "vl": 1378.02
+      "vl": 1378.2
     },
     {
       "n": "99918294",
@@ -5915,10 +5928,10 @@
       "lj": "Magalu",
       "pb": "Suspensão de Entrega",
       "sk": "TI1526",
-      "tr": "Brasil Web",
+      "tr": "Alfa Transportes",
       "pr": "—",
       "gr": "Envio de Produto",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 888.59
     },
     {
@@ -6268,7 +6281,7 @@
       "sk": "TI1633",
       "tr": "Brasil Web",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1716.53
     },
@@ -6465,7 +6478,7 @@
       "pr": "—",
       "gr": "Entrada Sanbox",
       "st": "Novo",
-      "vl": 1039.09
+      "vl": 1039.9
     },
     {
       "n": "99918223",
@@ -6710,7 +6723,7 @@
       "sk": "TI1552",
       "tr": "Brasil Web",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 612.1
     },
@@ -6920,7 +6933,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1828.8
+      "vl": 1828.08
     },
     {
       "n": "99918175",
@@ -6933,7 +6946,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1345.03
+      "vl": 1345.3
     },
     {
       "n": "99918174",
@@ -7373,7 +7386,7 @@
       "sk": "TI1773-1",
       "tr": "Brasil Web",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 1759.0
     },
@@ -7427,7 +7440,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1880.3
+      "vl": 1880.03
     },
     {
       "n": "99918107",
@@ -7737,7 +7750,7 @@
       "sk": "TI1524",
       "tr": "Brasil Web",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 933.18
     },
@@ -9091,7 +9104,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1032.04
+      "vl": 1032.4
     },
     {
       "n": "99917358",
@@ -9234,7 +9247,7 @@
       "pr": "—",
       "gr": "Chamados Marketplaces",
       "st": "Em andamento",
-      "vl": 1895.9
+      "vl": 1895.09
     },
     {
       "n": "99917177",
@@ -9247,7 +9260,7 @@
       "pr": "—",
       "gr": "Financeiro Standby",
       "st": "Novo",
-      "vl": 1794.09
+      "vl": 1794.9
     },
     {
       "n": "99917168",
@@ -9416,7 +9429,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1424.09
+      "vl": 1424.9
     },
     {
       "n": "99917015",
@@ -9923,7 +9936,7 @@
       "pr": "—",
       "gr": "Financeiro (Cancelamento indevido)",
       "st": "Novo",
-      "vl": 1399.2
+      "vl": 1399.02
     },
     {
       "n": "99916241",
@@ -11080,7 +11093,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1049.08
+      "vl": 1049.8
     },
     {
       "n": "99914456",
@@ -12315,7 +12328,7 @@
       "pr": "—",
       "gr": "Em análise",
       "st": "Novo",
-      "vl": 1572.6
+      "vl": 1572.06
     },
     {
       "n": "99911694",
@@ -16504,7 +16517,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-04T13:38:31.018019-03:00",
+  "ticketsRawUpdatedAt": "2026-11-04T14:08:24.648103-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
@@ -26814,9 +26827,26 @@
       "total": 184.13,
       "valor_real_fechado": 180.0,
       "aceito": false
+    },
+    {
+      "pedido": "2000015701534469",
+      "data": "25/10/2026",
+      "ym": "2026-10",
+      "canal": "mercadolivre",
+      "canal_raw": "Mercado Livre",
+      "sku": "TI1602",
+      "valor_pedido": 1372.9,
+      "custo": 890.88,
+      "problema": "Avaria",
+      "pct_desc": 30,
+      "desc_sug": 267.26,
+      "frete": 0.0,
+      "total": 267.26,
+      "valor_real_fechado": 137.29,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-11-04T11:38:26.901098-03:00",
+  "descontosUpdatedAt": "2026-11-04T14:08:24.648103-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -27280,15 +27310,15 @@
     },
     "2026-10": {
       "mercadolivre": {
-        "count": 29,
+        "count": 30,
         "countAceito": 13,
-        "descontoTotal": 7134.4,
-        "custoTotal": 31570.81,
-        "valorPedidoTotal": 48573.7,
-        "pctDescontoSobreCusto": 22.6,
-        "pctDescontoSobreVenda": 14.69,
+        "descontoTotal": 7271.69,
+        "custoTotal": 32461.69,
+        "valorPedidoTotal": 49946.6,
+        "pctDescontoSobreCusto": 22.4,
+        "pctDescontoSobreVenda": 14.56,
         "vendaTotalCanal": 1524337.2,
-        "pctDescontoSobreVendaCanal": 0.468
+        "pctDescontoSobreVendaCanal": 0.477
       },
       "shopee": {
         "count": 4,
