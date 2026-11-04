@@ -24624,23 +24624,6 @@
       "aceito": false
     },
     {
-      "pedido": "2000018228814824",
-      "data": "01/09/2026",
-      "ym": "2026-09",
-      "canal": "mercadolivre",
-      "canal_raw": "Mercado Livre",
-      "sku": "TI1524",
-      "valor_pedido": 927.9,
-      "custo": 578.83,
-      "problema": "Insatisfação",
-      "pct_desc": 20,
-      "desc_sug": 115.77,
-      "frete": 0.0,
-      "total": 115.77,
-      "valor_real_fechado": 158.58,
-      "aceito": true
-    },
-    {
       "pedido": "2000018260087132",
       "data": "03/09/2026",
       "ym": "2026-09",
@@ -24706,6 +24689,23 @@
       "frete": 0.0,
       "total": 1222.28,
       "valor_real_fechado": 1356.78,
+      "aceito": true
+    },
+    {
+      "pedido": "2000018228814824",
+      "data": "01/09/2026",
+      "ym": "2026-09",
+      "canal": "mercadolivre",
+      "canal_raw": "Mercado Livre",
+      "sku": "TI1524",
+      "valor_pedido": 927.9,
+      "custo": 578.83,
+      "problema": "Insatisfação",
+      "pct_desc": 20,
+      "desc_sug": 115.77,
+      "frete": 0.0,
+      "total": 115.77,
+      "valor_real_fechado": 158.58,
       "aceito": true
     },
     {
@@ -24859,23 +24859,6 @@
       "frete": 88.16,
       "total": 417.75,
       "valor_real_fechado": 0.0,
-      "aceito": true
-    },
-    {
-      "pedido": "260908F6EUH3N0",
-      "data": "07/09/2026",
-      "ym": "2026-09",
-      "canal": "shopee",
-      "canal_raw": "Shopee",
-      "sku": "TI516",
-      "valor_pedido": 1488.06,
-      "custo": 1098.63,
-      "problema": "Avaria",
-      "pct_desc": 30,
-      "desc_sug": 329.59,
-      "frete": 88.16,
-      "total": 417.75,
-      "valor_real_fechado": 380.0,
       "aceito": true
     },
     {
@@ -25117,20 +25100,20 @@
       "aceito": true
     },
     {
-      "pedido": "702-5405309-8349060",
-      "data": "09/09/2026",
+      "pedido": "260908F6EUH3N0",
+      "data": "07/09/2026",
       "ym": "2026-09",
-      "canal": "amazon",
-      "canal_raw": "Amazon",
-      "sku": "TI1454",
-      "valor_pedido": 5518.61,
-      "custo": 4074.25,
+      "canal": "shopee",
+      "canal_raw": "Shopee",
+      "sku": "TI516",
+      "valor_pedido": 1488.06,
+      "custo": 1098.63,
       "problema": "Avaria",
       "pct_desc": 30,
-      "desc_sug": 1222.28,
-      "frete": 496.06,
-      "total": 1718.34,
-      "valor_real_fechado": 500.0,
+      "desc_sug": 329.59,
+      "frete": 88.16,
+      "total": 417.75,
+      "valor_real_fechado": 380.0,
       "aceito": true
     },
     {
@@ -25234,6 +25217,23 @@
       "total": 187.63,
       "valor_real_fechado": 147.02,
       "aceito": false
+    },
+    {
+      "pedido": "702-5405309-8349060",
+      "data": "09/09/2026",
+      "ym": "2026-09",
+      "canal": "amazon",
+      "canal_raw": "Amazon",
+      "sku": "TI1454",
+      "valor_pedido": 5518.61,
+      "custo": 4074.25,
+      "problema": "Avaria",
+      "pct_desc": 30,
+      "desc_sug": 1222.28,
+      "frete": 496.06,
+      "total": 1718.34,
+      "valor_real_fechado": 500.0,
+      "aceito": true
     },
     {
       "pedido": "2000018390530338",
@@ -26069,23 +26069,6 @@
       "aceito": false
     },
     {
-      "pedido": "2000015422545883",
-      "data": "08/10/2026",
-      "ym": "2026-10",
-      "canal": "mercadolivre",
-      "canal_raw": "Mercado Livre",
-      "sku": "TI1852",
-      "valor_pedido": 845.9,
-      "custo": 495.75,
-      "problema": "Avaria",
-      "pct_desc": 30,
-      "desc_sug": 148.73,
-      "frete": 0.0,
-      "total": 148.73,
-      "valor_real_fechado": 0.0,
-      "aceito": false
-    },
-    {
       "pedido": "2000018828285204",
       "data": "06/10/2026",
       "ym": "2026-10",
@@ -26237,6 +26220,23 @@
       "total": 233.02,
       "valor_real_fechado": 220.0,
       "aceito": true
+    },
+    {
+      "pedido": "2000015422545883",
+      "data": "08/10/2026",
+      "ym": "2026-10",
+      "canal": "mercadolivre",
+      "canal_raw": "Mercado Livre",
+      "sku": "TI1852",
+      "valor_pedido": 845.9,
+      "custo": 495.75,
+      "problema": "Avaria",
+      "pct_desc": 30,
+      "desc_sug": 148.73,
+      "frete": 0.0,
+      "total": 148.73,
+      "valor_real_fechado": 0.0,
+      "aceito": false
     },
     {
       "pedido": "702-1727681-3396267",
@@ -26460,23 +26460,6 @@
       "aceito": true
     },
     {
-      "pedido": "702-2221841-8545803",
-      "data": "13/10/2026",
-      "ym": "2026-10",
-      "canal": "amazon",
-      "canal_raw": "Amazon",
-      "sku": "TI1581",
-      "valor_pedido": 1183.9,
-      "custo": 841.71,
-      "problema": "Avaria",
-      "pct_desc": 30,
-      "desc_sug": 252.51,
-      "frete": 0.0,
-      "total": 252.51,
-      "valor_real_fechado": 250.0,
-      "aceito": true
-    },
-    {
       "pedido": "2000018939046816",
       "data": "12/10/2026",
       "ym": "2026-10",
@@ -26525,6 +26508,23 @@
       "frete": 241.79,
       "total": 241.79,
       "valor_real_fechado": 200.0,
+      "aceito": true
+    },
+    {
+      "pedido": "702-2221841-8545803",
+      "data": "13/10/2026",
+      "ym": "2026-10",
+      "canal": "amazon",
+      "canal_raw": "Amazon",
+      "sku": "TI1581",
+      "valor_pedido": 1183.9,
+      "custo": 841.71,
+      "problema": "Avaria",
+      "pct_desc": 30,
+      "desc_sug": 252.51,
+      "frete": 0.0,
+      "total": 252.51,
+      "valor_real_fechado": 250.0,
       "aceito": true
     },
     {
@@ -26885,7 +26885,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-11-04T15:09:38.330685-03:00",
+  "descontosUpdatedAt": "2026-11-04T15:55:10.717133-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
