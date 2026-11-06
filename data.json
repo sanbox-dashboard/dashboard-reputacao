@@ -5411,6 +5411,58 @@
         "solicitacaoDevolucaoVermelho": 0,
         "solicitacaoDevolucao": 0
       }
+    },
+    "2026-11-06": {
+      "mercadolivre": {
+        "metrics": {},
+        "ts": "2026-11-06T07:31:21.944103-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 0,
+        "casosCriticos": 0,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 2,
+        "solicitacaoDevolucao": 2
+      },
+      "amazon": {
+        "metrics": {},
+        "ts": "2026-11-06T07:31:21.944103-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 0,
+        "casosCriticos": 0,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 2,
+        "solicitacaoDevolucao": 2
+      },
+      "magalu": {
+        "metrics": {},
+        "ts": "2026-11-06T07:31:21.944103-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 0,
+        "casosCriticos": 1,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 0,
+        "solicitacaoDevolucao": 0
+      },
+      "casasbahia": {
+        "metrics": {},
+        "ts": "2026-11-06T07:31:21.944103-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 0,
+        "casosCriticos": 0,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 0,
+        "solicitacaoDevolucao": 0
+      },
+      "shopee": {
+        "metrics": {},
+        "ts": "2026-11-06T07:31:21.944103-03:00",
+        "tickets": 0,
+        "sacForaPrazo": 1,
+        "casosCriticos": 0,
+        "solicitacaoDevolucaoAmarelo": 0,
+        "solicitacaoDevolucaoVermelho": 0,
+        "solicitacaoDevolucao": 0
+      }
     }
   },
   "ticketsRaw": [
