@@ -27016,9 +27016,25 @@
       "total": 195.64,
       "valor_real_fechado": 195.0,
       "aceito": true
+    },
+    {
+      "pedido": "2000019207071594",
+      "data": "27/10/2026",
+      "ym": "2026-10",
+      "canal": "mercadolivre",
+      "sku": "TI1562",
+      "valor_pedido": 1789.9,
+      "custo": 1143.84,
+      "problema": "Avaria",
+      "desconto_pct": "30,00%",
+      "desconto_sug": 343.15,
+      "frete": 0.0,
+      "total": 343.15,
+      "valor_real_fechado": 0.0,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-11-09T09:22:33.087633-03:00",
+  "descontosUpdatedAt": "2026-11-09T09:39:07.464174-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -27482,13 +27498,13 @@
     },
     "2026-10": {
       "mercadolivre": {
-        "count": 36,
+        "count": 37,
         "countAceito": 15,
         "descontoTotal": 8688.86,
-        "custoTotal": 40010.91,
-        "valorPedidoTotal": 61468.45,
-        "pctDescontoSobreCusto": 21.72,
-        "pctDescontoSobreVenda": 14.14,
+        "custoTotal": 41154.75,
+        "valorPedidoTotal": 63258.35,
+        "pctDescontoSobreCusto": 21.11,
+        "pctDescontoSobreVenda": 13.74,
         "vendaTotalCanal": 1524337.2,
         "pctDescontoSobreVendaCanal": 0.57
       },
