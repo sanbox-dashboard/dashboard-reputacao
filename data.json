@@ -6619,8 +6619,8 @@
       "sk": "TI1638",
       "tr": null,
       "pr": "—",
-      "gr": "Financeiro (Estorno)",
-      "st": "Novo",
+      "gr": "Financeiro Standby",
+      "st": "Em andamento",
       "vl": 0.0
     },
     {
@@ -8104,19 +8104,6 @@
       "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1153.95
-    },
-    {
-      "n": "99918147.0",
-      "d": "20/10/2026",
-      "ym": "2026-10",
-      "lj": "Mercado Livre",
-      "pb": "Arrependimento",
-      "sk": "TI1567",
-      "tr": "Mercado Envios",
-      "pr": "—",
-      "gr": "Chamados Marketplaces",
-      "st": "Em andamento",
-      "vl": 1101.9
     },
     {
       "n": "99918145.0",
@@ -10079,7 +10066,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1424.9
+      "vl": 1424.09
     },
     {
       "n": "99917015.0",
@@ -10573,7 +10560,7 @@
       "pr": "—",
       "gr": "Financeiro (Cancelamento indevido)",
       "st": "Novo",
-      "vl": 1399.02
+      "vl": 1399.2
     },
     {
       "n": "99916241.0",
@@ -11717,7 +11704,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1049.8
+      "vl": 1049.08
     },
     {
       "n": "99914456.0",
@@ -12024,7 +12011,7 @@
       "ym": "2025-12",
       "lj": "Mercado Livre",
       "pb": "Não Entregue Marketplace",
-      "sk": "TI1656 / TI1656-1",
+      "sk": "TI1656/ TI1656-1",
       "tr": "Correios",
       "pr": "—",
       "gr": "Jurídico",
@@ -12102,7 +12089,7 @@
       "ym": "2025-12",
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
-      "sk": "TI838 / TI287-1",
+      "sk": "TI838/ TI287-1",
       "tr": "Correios",
       "pr": "—",
       "gr": "Jurídico",
@@ -12315,7 +12302,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1053.09
+      "vl": 1053.9
     },
     {
       "n": "99913119.0",
@@ -12479,7 +12466,7 @@
       "ym": "2025-10",
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
-      "sk": "TI673 / TI733-2/ TI287-2",
+      "sk": "TI673/ TI733-2/ TI287-2",
       "tr": "Correios",
       "pr": "—",
       "gr": "Jurídico",
@@ -12713,7 +12700,7 @@
       "ym": "2025-08",
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
-      "sk": "TI1146  / TI287-2",
+      "sk": "TI1146 / TI287-2",
       "tr": "Jamef",
       "pr": "—",
       "gr": "Jurídico",
@@ -12882,7 +12869,7 @@
       "ym": "2025-07",
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
-      "sk": "TI673 / TI287 / TI733",
+      "sk": "TI673/ TI287/ TI733",
       "tr": "Mercado Envios",
       "pr": "—",
       "gr": "Em análise",
@@ -12913,7 +12900,7 @@
       "pr": "—",
       "gr": "Em análise",
       "st": "Novo",
-      "vl": 1572.06
+      "vl": 1572.6
     },
     {
       "n": "99911694.0",
@@ -12921,7 +12908,7 @@
       "ym": "2025-07",
       "lj": "Mercado Livre",
       "pb": "Arrependimento",
-      "sk": "TI673 / TI287 / TI733",
+      "sk": "TI673/ TI287/ TI733",
       "tr": "Correios",
       "pr": "—",
       "gr": "Financeiro Standby",
@@ -12960,7 +12947,7 @@
       "ym": "2025-07",
       "lj": "Kabum",
       "pb": "Arrependimento",
-      "sk": "TI673 / TI287 / TI733",
+      "sk": "TI673/ TI287/ TI733",
       "tr": "Total Express",
       "pr": "—",
       "gr": "Financeiro Standby",
@@ -13207,7 +13194,7 @@
       "ym": "2025-06",
       "lj": "Mercado Livre",
       "pb": "RMA",
-      "sk": "TI1078 / TI287-2",
+      "sk": "TI1078/ TI287-2",
       "tr": "Correios",
       "pr": "—",
       "gr": "Jurídico",
@@ -13441,7 +13428,7 @@
       "ym": "2025-04",
       "lj": "Mercado Livre",
       "pb": "Suspensão de Entrega",
-      "sk": "TI673 /TI733-2 / TI287-2",
+      "sk": "TI673/TI733-2/ TI287-2",
       "tr": "Correios",
       "pr": "—",
       "gr": "Em análise",
@@ -13545,7 +13532,7 @@
       "ym": "2025-02",
       "lj": "Magalu",
       "pb": "Não Entregue Marketplace",
-      "sk": "TI1388 / TI287-1",
+      "sk": "TI1388/ TI287-1",
       "tr": "Correios",
       "pr": "—",
       "gr": "Financeiro Standby",
@@ -13636,7 +13623,7 @@
       "ym": "2025-01",
       "lj": "Mercado Livre",
       "pb": "Insatisfação Compra",
-      "sk": "TI673 / TI287-2",
+      "sk": "TI673/ TI287-2",
       "tr": null,
       "pr": "—",
       "gr": "Financeiro Standby",
@@ -13675,7 +13662,7 @@
       "ym": "2025-01",
       "lj": "Amazon",
       "pb": "Insatisfação Compra",
-      "sk": "TI1078 / TI287-2",
+      "sk": "TI1078/ TI287-2",
       "tr": "Correios",
       "pr": "Média",
       "gr": "Financeiro Standby",
@@ -14182,7 +14169,7 @@
       "ym": "2024-10",
       "lj": "Octadesk",
       "pb": "Danificado Transporte Marketplace",
-      "sk": "TI1078 / TI287",
+      "sk": "TI1078/ TI287",
       "tr": null,
       "pr": "—",
       "gr": "Jurídico",
@@ -14247,7 +14234,7 @@
       "ym": "2024-10",
       "lj": "Octadesk",
       "pb": "Danificado Transporte Marketplace",
-      "sk": "TI1146 / TI287",
+      "sk": "TI1146/ TI287",
       "tr": null,
       "pr": "—",
       "gr": "Jurídico",
@@ -14637,7 +14624,7 @@
       "ym": "2024-08",
       "lj": "Magalu",
       "pb": "RMA",
-      "sk": "TI1078 / TI287",
+      "sk": "TI1078/ TI287",
       "tr": "Correios",
       "pr": "Baixa",
       "gr": "Atendimento ao cliente",
@@ -14650,7 +14637,7 @@
       "ym": "2024-08",
       "lj": "Mercado Livre",
       "pb": "RMA",
-      "sk": "TI1121 / TI287",
+      "sk": "TI1121/ TI287",
       "tr": "Correios",
       "pr": "—",
       "gr": "Jurídico",
@@ -14715,7 +14702,7 @@
       "ym": "2024-07",
       "lj": "Mercado Livre",
       "pb": "RMA",
-      "sk": "TI1146 / TI287",
+      "sk": "TI1146/ TI287",
       "tr": "Correios",
       "pr": "—",
       "gr": "Jurídico",
@@ -14806,7 +14793,7 @@
       "ym": "2024-03",
       "lj": "Mercado Livre",
       "pb": "RMA",
-      "sk": "TI673 ; TI733",
+      "sk": "TI673; TI733",
       "tr": "Correios",
       "pr": "—",
       "gr": "Jurídico",
@@ -14819,7 +14806,7 @@
       "ym": "2024-03",
       "lj": "Magalu",
       "pb": "Endereço Incorreto",
-      "sk": "TI1193  TI287-3",
+      "sk": "TI1193 TI287-3",
       "tr": "Correios",
       "pr": "—",
       "gr": "Jurídico",
@@ -17089,7 +17076,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-11T18:09:18.020050-03:00",
+  "ticketsRawUpdatedAt": "2026-11-11T18:39:16.695830-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
@@ -27687,7 +27674,7 @@
       "frete": 0.0,
       "total": 370.23,
       "valor_real_fechado": 0.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "702-6178885-4469067",
@@ -27707,7 +27694,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-11-11T17:08:49.687394-03:00",
+  "descontosUpdatedAt": "2026-11-11T18:39:16.695830-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -28172,7 +28159,7 @@
     "2026-10": {
       "mercadolivre": {
         "count": 40,
-        "countAceito": 19,
+        "countAceito": 20,
         "descontoTotal": 9140.87,
         "custoTotal": 44117.18,
         "valorPedidoTotal": 67734.05,
