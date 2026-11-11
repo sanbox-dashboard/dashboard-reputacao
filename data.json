@@ -5623,6 +5623,32 @@
   },
   "ticketsRaw": [
     {
+      "n": "99918429.0",
+      "d": "11/11/2026",
+      "ym": "2026-11",
+      "lj": null,
+      "pb": null,
+      "sk": "TI1816",
+      "tr": null,
+      "pr": "—",
+      "gr": "Jurídico",
+      "st": "Novo",
+      "vl": 5911.78
+    },
+    {
+      "n": "99918428.0",
+      "d": "11/11/2026",
+      "ym": "2026-11",
+      "lj": "Mercado Livre",
+      "pb": "Atraso de Entrega",
+      "sk": "TI1571",
+      "tr": "Tecmar",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 1312.23
+    },
+    {
       "n": "99918427.0",
       "d": "11/11/2026",
       "ym": "2026-11",
@@ -5891,7 +5917,7 @@
       "sk": "TI1568",
       "tr": "Trilog",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1250.11
     },
@@ -6125,7 +6151,7 @@
       "sk": "TI1604",
       "tr": "Trilog",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1066.0
     },
@@ -6203,7 +6229,7 @@
       "sk": "TI1602",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1499.9
     },
@@ -6359,7 +6385,7 @@
       "sk": "TI1522",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Pendente",
       "vl": 710.9
     },
@@ -8337,7 +8363,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1880.3
+      "vl": 1880.03
     },
     {
       "n": "99918107.0",
@@ -8857,7 +8883,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 1749.09
+      "vl": 1749.9
     },
     {
       "n": "99917906.0",
@@ -10053,7 +10079,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1424.09
+      "vl": 1424.9
     },
     {
       "n": "99917015.0",
@@ -10534,7 +10560,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1695.09
+      "vl": 1695.9
     },
     {
       "n": "99916268.0",
@@ -10547,7 +10573,7 @@
       "pr": "—",
       "gr": "Financeiro (Cancelamento indevido)",
       "st": "Novo",
-      "vl": 1399.2
+      "vl": 1399.02
     },
     {
       "n": "99916241.0",
@@ -11392,7 +11418,7 @@
       "pr": "—",
       "gr": "Financeiro Standby",
       "st": "Novo",
-      "vl": 1803.3
+      "vl": 1803.03
     },
     {
       "n": "99914760.0",
@@ -11691,7 +11717,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1049.08
+      "vl": 1049.8
     },
     {
       "n": "99914456.0",
@@ -12289,7 +12315,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1053.9
+      "vl": 1053.09
     },
     {
       "n": "99913119.0",
@@ -12315,7 +12341,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Em andamento",
-      "vl": 1661.08
+      "vl": 1661.8
     },
     {
       "n": "99913106.0",
@@ -12887,7 +12913,7 @@
       "pr": "—",
       "gr": "Em análise",
       "st": "Novo",
-      "vl": 1572.6
+      "vl": 1572.06
     },
     {
       "n": "99911694.0",
@@ -14856,7 +14882,7 @@
       "n": "99906204.0",
       "d": "26/02/2024",
       "ym": "2024-02",
-      "lj": null,
+      "lj": "Mercado Livre",
       "pb": "Comprou Errado",
       "sk": "TI494",
       "tr": "Correios",
@@ -14882,7 +14908,7 @@
       "n": "99905439.0",
       "d": "28/11/2023",
       "ym": "2023-11",
-      "lj": null,
+      "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI693  1 unidade",
       "tr": "Correios",
@@ -14934,7 +14960,7 @@
       "n": "99904548.0",
       "d": "28/08/2023",
       "ym": "2023-08",
-      "lj": null,
+      "lj": "Kabum",
       "pb": null,
       "sk": "TI824  1 unidade",
       "tr": null,
@@ -14947,7 +14973,7 @@
       "n": "99903899.0",
       "d": "20/06/2023",
       "ym": "2023-06",
-      "lj": null,
+      "lj": "Via Varejo",
       "pb": "Duvida",
       "sk": "TI695",
       "tr": null,
@@ -14973,7 +14999,7 @@
       "n": "99903667.0",
       "d": "22/05/2023",
       "ym": "2023-05",
-      "lj": null,
+      "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI824",
       "tr": null,
@@ -14986,7 +15012,7 @@
       "n": "99903575.0",
       "d": "09/05/2023",
       "ym": "2023-05",
-      "lj": null,
+      "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI8661 Unidade",
       "tr": null,
@@ -14999,7 +15025,7 @@
       "n": "99903566.0",
       "d": "09/05/2023",
       "ym": "2023-05",
-      "lj": null,
+      "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI430",
       "tr": null,
@@ -15025,7 +15051,7 @@
       "n": "99902536.0",
       "d": "19/01/2023",
       "ym": "2023-01",
-      "lj": null,
+      "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI516",
       "tr": "Magalog",
@@ -15051,7 +15077,7 @@
       "n": "99901910.0",
       "d": "18/11/2022",
       "ym": "2022-11",
-      "lj": null,
+      "lj": "Via Varejo",
       "pb": "RMA",
       "sk": "TI825",
       "tr": "Total Express",
@@ -15090,7 +15116,7 @@
       "n": "99901578.0",
       "d": "29/09/2022",
       "ym": "2022-09",
-      "lj": null,
+      "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "T6821 unidade",
       "tr": "Total Express",
@@ -15168,7 +15194,7 @@
       "n": "99900767.0",
       "d": "21/06/2022",
       "ym": "2022-06",
-      "lj": null,
+      "lj": "Magalu",
       "pb": "RMA",
       "sk": "",
       "tr": "Correios",
@@ -17063,7 +17089,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-11T14:38:57.737872-03:00",
+  "ticketsRawUpdatedAt": "2026-11-11T15:09:20.280804-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
