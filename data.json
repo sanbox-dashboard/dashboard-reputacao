@@ -5623,6 +5623,32 @@
   },
   "ticketsRaw": [
     {
+      "n": "99918427.0",
+      "d": "11/11/2026",
+      "ym": "2026-11",
+      "lj": "Shopee",
+      "pb": "Endereço Incorreto / Não localizado",
+      "sk": "TI1565",
+      "tr": "Total Express",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 532.13
+    },
+    {
+      "n": "99918426.0",
+      "d": "11/11/2026",
+      "ym": "2026-11",
+      "lj": "Amazon",
+      "pb": "Dúvida",
+      "sk": "TI1562",
+      "tr": "Rio Express",
+      "pr": "—",
+      "gr": "Atendimento SAC",
+      "st": "Novo",
+      "vl": 1699.9
+    },
+    {
       "n": "99918425.0",
       "d": "11/11/2026",
       "ym": "2026-11",
@@ -6920,7 +6946,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
-      "vl": 1759.09
+      "vl": 1759.9
     },
     {
       "n": "99918297.0",
@@ -7622,7 +7648,7 @@
       "pr": "—",
       "gr": "Envio de Produto",
       "st": "Pendente",
-      "vl": 1859.9
+      "vl": 1859.09
     },
     {
       "n": "99918212.0",
@@ -7804,7 +7830,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
-      "vl": 1019.09
+      "vl": 1019.9
     },
     {
       "n": "99918186.0",
@@ -8324,7 +8350,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1880.3
+      "vl": 1880.03
     },
     {
       "n": "99918107.0",
@@ -10027,7 +10053,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1691.6
+      "vl": 1691.06
     },
     {
       "n": "99917016.0",
@@ -11379,7 +11405,7 @@
       "pr": "—",
       "gr": "Financeiro Standby",
       "st": "Novo",
-      "vl": 1803.3
+      "vl": 1803.03
     },
     {
       "n": "99914760.0",
@@ -12276,7 +12302,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1053.9
+      "vl": 1053.09
     },
     {
       "n": "99913119.0",
@@ -12302,7 +12328,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Em andamento",
-      "vl": 1661.08
+      "vl": 1661.8
     },
     {
       "n": "99913106.0",
@@ -14843,7 +14869,7 @@
       "n": "99906204.0",
       "d": "26/02/2024",
       "ym": "2024-02",
-      "lj": null,
+      "lj": "Mercado Livre",
       "pb": "Comprou Errado",
       "sk": "TI494",
       "tr": "Correios",
@@ -14869,7 +14895,7 @@
       "n": "99905439.0",
       "d": "28/11/2023",
       "ym": "2023-11",
-      "lj": null,
+      "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI693  1 unidade",
       "tr": "Correios",
@@ -14921,7 +14947,7 @@
       "n": "99904548.0",
       "d": "28/08/2023",
       "ym": "2023-08",
-      "lj": null,
+      "lj": "Kabum",
       "pb": null,
       "sk": "TI824  1 unidade",
       "tr": null,
@@ -14934,7 +14960,7 @@
       "n": "99903899.0",
       "d": "20/06/2023",
       "ym": "2023-06",
-      "lj": null,
+      "lj": "Via Varejo",
       "pb": "Duvida",
       "sk": "TI695",
       "tr": null,
@@ -14960,7 +14986,7 @@
       "n": "99903667.0",
       "d": "22/05/2023",
       "ym": "2023-05",
-      "lj": null,
+      "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI824",
       "tr": null,
@@ -14973,7 +14999,7 @@
       "n": "99903575.0",
       "d": "09/05/2023",
       "ym": "2023-05",
-      "lj": null,
+      "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI8661 Unidade",
       "tr": null,
@@ -14986,7 +15012,7 @@
       "n": "99903566.0",
       "d": "09/05/2023",
       "ym": "2023-05",
-      "lj": null,
+      "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "TI430",
       "tr": null,
@@ -15012,7 +15038,7 @@
       "n": "99902536.0",
       "d": "19/01/2023",
       "ym": "2023-01",
-      "lj": null,
+      "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI516",
       "tr": "Magalog",
@@ -15038,7 +15064,7 @@
       "n": "99901910.0",
       "d": "18/11/2022",
       "ym": "2022-11",
-      "lj": null,
+      "lj": "Via Varejo",
       "pb": "RMA",
       "sk": "TI825",
       "tr": "Total Express",
@@ -15077,7 +15103,7 @@
       "n": "99901578.0",
       "d": "29/09/2022",
       "ym": "2022-09",
-      "lj": null,
+      "lj": "Amazon",
       "pb": "Atraso de Entrega",
       "sk": "T6821 unidade",
       "tr": "Total Express",
@@ -15155,7 +15181,7 @@
       "n": "99900767.0",
       "d": "21/06/2022",
       "ym": "2022-06",
-      "lj": null,
+      "lj": "Magalu",
       "pb": "RMA",
       "sk": "",
       "tr": "Correios",
@@ -17050,7 +17076,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-11T12:38:36.807688-03:00",
+  "ticketsRawUpdatedAt": "2026-11-11T13:09:44.361421-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
