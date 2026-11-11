@@ -5969,7 +5969,7 @@
       "sk": "TI1121",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1795.9
     },
@@ -9302,6 +9302,19 @@
       "vl": 1799.87
     },
     {
+      "n": "99917719.0",
+      "d": "18/09/2026",
+      "ym": "2026-09",
+      "lj": "Amazon",
+      "pb": null,
+      "sk": "TI1562",
+      "tr": "Trilog",
+      "pr": "—",
+      "gr": "Envio de Produto",
+      "st": "Novo",
+      "vl": 1649.88
+    },
+    {
       "n": "99917715.0",
       "d": "18/09/2026",
       "ym": "2026-09",
@@ -9767,7 +9780,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1032.04
+      "vl": 1032.4
     },
     {
       "n": "99917358.0",
@@ -10066,7 +10079,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1691.06
+      "vl": 1691.6
     },
     {
       "n": "99917016.0",
@@ -10560,7 +10573,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1695.9
+      "vl": 1695.09
     },
     {
       "n": "99916268.0",
@@ -11418,7 +11431,7 @@
       "pr": "—",
       "gr": "Financeiro Standby",
       "st": "Novo",
-      "vl": 1803.03
+      "vl": 1803.3
     },
     {
       "n": "99914760.0",
@@ -12302,7 +12315,7 @@
       "pr": "—",
       "gr": "Financeiro Standby",
       "st": "Novo",
-      "vl": 1525.9
+      "vl": 1525.09
     },
     {
       "n": "99913169.0",
@@ -12315,7 +12328,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1053.09
+      "vl": 1053.9
     },
     {
       "n": "99913119.0",
@@ -12341,7 +12354,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Em andamento",
-      "vl": 1661.8
+      "vl": 1661.08
     },
     {
       "n": "99913106.0",
@@ -14741,7 +14754,7 @@
       "ym": "2024-05",
       "lj": "Mercado Livre",
       "pb": "RMA",
-      "sk": "TI1139  1 unidade ",
+      "sk": "TI1139  1 unidade",
       "tr": "Correios",
       "pr": "—",
       "gr": "Jurídico",
@@ -17089,7 +17102,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-11T15:09:20.280804-03:00",
+  "ticketsRawUpdatedAt": "2026-11-11T16:09:22.273684-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
@@ -27036,7 +27049,7 @@
       "valor_pedido": 1136.33,
       "custo": 644.23,
       "problema": "Avaria",
-      "pct_desc": 0.0,
+      "pct_desc": 0,
       "desc_sug": 0.0,
       "frete": 241.79,
       "total": 241.79,
@@ -27687,10 +27700,27 @@
       "frete": 0.0,
       "total": 370.23,
       "valor_real_fechado": 0.0,
+      "aceito": true
+    },
+    {
+      "pedido": "702-6178885-4469067",
+      "data": "06/11/2026",
+      "ym": "2026-11",
+      "canal": "amazon",
+      "canal_raw": "Amazon",
+      "sku": "TI1571",
+      "valor_pedido": 774.0,
+      "custo": 625.44,
+      "problema": "Avaria",
+      "pct_desc": 30.0,
+      "desc_sug": 187.63,
+      "frete": 0.0,
+      "total": 187.63,
+      "valor_real_fechado": 180.0,
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-11-11T14:09:00.999864-03:00",
+  "descontosUpdatedAt": "2026-11-11T16:09:22.273684-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -28155,7 +28185,7 @@
     "2026-10": {
       "mercadolivre": {
         "count": 40,
-        "countAceito": 19,
+        "countAceito": 20,
         "descontoTotal": 9140.87,
         "custoTotal": 44117.18,
         "valorPedidoTotal": 67734.05,
@@ -28211,13 +28241,13 @@
     },
     "2026-11": {
       "amazon": {
-        "count": 1,
+        "count": 2,
         "countAceito": 0,
-        "descontoTotal": 0.0,
-        "custoTotal": 613.76,
-        "valorPedidoTotal": 803.59,
-        "pctDescontoSobreCusto": 0.0,
-        "pctDescontoSobreVenda": 0.0,
+        "descontoTotal": 180.0,
+        "custoTotal": 1239.2,
+        "valorPedidoTotal": 1577.59,
+        "pctDescontoSobreCusto": 14.53,
+        "pctDescontoSobreVenda": 11.41,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       },
