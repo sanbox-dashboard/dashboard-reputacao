@@ -14869,7 +14869,7 @@
       "n": "99906204.0",
       "d": "26/02/2024",
       "ym": "2024-02",
-      "lj": "Mercado Livre",
+      "lj": null,
       "pb": "Comprou Errado",
       "sk": "TI494",
       "tr": "Correios",
@@ -14895,7 +14895,7 @@
       "n": "99905439.0",
       "d": "28/11/2023",
       "ym": "2023-11",
-      "lj": "Amazon",
+      "lj": null,
       "pb": "Atraso de Entrega",
       "sk": "TI693  1 unidade",
       "tr": "Correios",
@@ -14947,7 +14947,7 @@
       "n": "99904548.0",
       "d": "28/08/2023",
       "ym": "2023-08",
-      "lj": "Kabum",
+      "lj": null,
       "pb": null,
       "sk": "TI824  1 unidade",
       "tr": null,
@@ -14960,7 +14960,7 @@
       "n": "99903899.0",
       "d": "20/06/2023",
       "ym": "2023-06",
-      "lj": "Via Varejo",
+      "lj": null,
       "pb": "Duvida",
       "sk": "TI695",
       "tr": null,
@@ -14986,7 +14986,7 @@
       "n": "99903667.0",
       "d": "22/05/2023",
       "ym": "2023-05",
-      "lj": "Amazon",
+      "lj": null,
       "pb": "Atraso de Entrega",
       "sk": "TI824",
       "tr": null,
@@ -14999,7 +14999,7 @@
       "n": "99903575.0",
       "d": "09/05/2023",
       "ym": "2023-05",
-      "lj": "Amazon",
+      "lj": null,
       "pb": "Atraso de Entrega",
       "sk": "TI8661 Unidade",
       "tr": null,
@@ -15012,7 +15012,7 @@
       "n": "99903566.0",
       "d": "09/05/2023",
       "ym": "2023-05",
-      "lj": "Amazon",
+      "lj": null,
       "pb": "Atraso de Entrega",
       "sk": "TI430",
       "tr": null,
@@ -15038,7 +15038,7 @@
       "n": "99902536.0",
       "d": "19/01/2023",
       "ym": "2023-01",
-      "lj": "Magalu",
+      "lj": null,
       "pb": "RMA",
       "sk": "TI516",
       "tr": "Magalog",
@@ -15064,7 +15064,7 @@
       "n": "99901910.0",
       "d": "18/11/2022",
       "ym": "2022-11",
-      "lj": "Via Varejo",
+      "lj": null,
       "pb": "RMA",
       "sk": "TI825",
       "tr": "Total Express",
@@ -15103,7 +15103,7 @@
       "n": "99901578.0",
       "d": "29/09/2022",
       "ym": "2022-09",
-      "lj": "Amazon",
+      "lj": null,
       "pb": "Atraso de Entrega",
       "sk": "T6821 unidade",
       "tr": "Total Express",
@@ -15181,7 +15181,7 @@
       "n": "99900767.0",
       "d": "21/06/2022",
       "ym": "2022-06",
-      "lj": "Magalu",
+      "lj": null,
       "pb": "RMA",
       "sk": "",
       "tr": "Correios",
@@ -17076,7 +17076,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-11T13:09:44.361421-03:00",
+  "ticketsRawUpdatedAt": "2026-11-11T13:38:48.569895-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
@@ -27023,7 +27023,7 @@
       "valor_pedido": 1136.33,
       "custo": 644.23,
       "problema": "Avaria",
-      "pct_desc": 0,
+      "pct_desc": 0.0,
       "desc_sug": 0.0,
       "frete": 241.79,
       "total": 241.79,
@@ -27674,10 +27674,10 @@
       "frete": 0.0,
       "total": 370.23,
       "valor_real_fechado": 0.0,
-      "aceito": false
+      "aceito": true
     }
   ],
-  "descontosUpdatedAt": "2026-11-11T12:38:36.807688-03:00",
+  "descontosUpdatedAt": "2026-11-11T13:38:48.569895-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -28142,7 +28142,7 @@
     "2026-10": {
       "mercadolivre": {
         "count": 40,
-        "countAceito": 19,
+        "countAceito": 20,
         "descontoTotal": 9140.87,
         "custoTotal": 44117.18,
         "valorPedidoTotal": 67734.05,
