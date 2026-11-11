@@ -7742,19 +7742,6 @@
       "vl": 573.7
     },
     {
-      "n": "99918205.0",
-      "d": "26/10/2026",
-      "ym": "2026-10",
-      "lj": "Mercado Livre",
-      "pb": "Item Faltante",
-      "sk": "TI1456",
-      "tr": "Correios",
-      "pr": "—",
-      "gr": "Financeiro (Cancelamento indevido)",
-      "st": "Pendente",
-      "vl": 0.0
-    },
-    {
       "n": "99918201.0",
       "d": "26/10/2026",
       "ym": "2026-10",
@@ -7804,7 +7791,7 @@
       "pr": "—",
       "gr": "Financeiro (Estorno)",
       "st": "Novo",
-      "vl": 1479.08
+      "vl": 1479.8
     },
     {
       "n": "99918190.0",
@@ -8350,7 +8337,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1880.03
+      "vl": 1880.3
     },
     {
       "n": "99918107.0",
@@ -8870,7 +8857,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 1749.9
+      "vl": 1749.09
     },
     {
       "n": "99917906.0",
@@ -10066,7 +10053,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1424.9
+      "vl": 1424.09
     },
     {
       "n": "99917015.0",
@@ -10547,7 +10534,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1695.9
+      "vl": 1695.09
     },
     {
       "n": "99916268.0",
@@ -10560,7 +10547,7 @@
       "pr": "—",
       "gr": "Financeiro (Cancelamento indevido)",
       "st": "Novo",
-      "vl": 1399.02
+      "vl": 1399.2
     },
     {
       "n": "99916241.0",
@@ -11405,7 +11392,7 @@
       "pr": "—",
       "gr": "Financeiro Standby",
       "st": "Novo",
-      "vl": 1803.03
+      "vl": 1803.3
     },
     {
       "n": "99914760.0",
@@ -11704,7 +11691,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1049.8
+      "vl": 1049.08
     },
     {
       "n": "99914456.0",
@@ -12302,7 +12289,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1053.09
+      "vl": 1053.9
     },
     {
       "n": "99913119.0",
@@ -12328,7 +12315,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Em andamento",
-      "vl": 1661.8
+      "vl": 1661.08
     },
     {
       "n": "99913106.0",
@@ -12900,7 +12887,7 @@
       "pr": "—",
       "gr": "Em análise",
       "st": "Novo",
-      "vl": 1572.06
+      "vl": 1572.6
     },
     {
       "n": "99911694.0",
@@ -17076,7 +17063,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-11T13:38:48.569895-03:00",
+  "ticketsRawUpdatedAt": "2026-11-11T14:09:00.999864-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
@@ -27674,10 +27661,10 @@
       "frete": 0.0,
       "total": 370.23,
       "valor_real_fechado": 0.0,
-      "aceito": true
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-11-11T13:38:48.569895-03:00",
+  "descontosUpdatedAt": "2026-11-11T14:09:00.999864-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -28142,7 +28129,7 @@
     "2026-10": {
       "mercadolivre": {
         "count": 40,
-        "countAceito": 20,
+        "countAceito": 19,
         "descontoTotal": 9140.87,
         "custoTotal": 44117.18,
         "valorPedidoTotal": 67734.05,
