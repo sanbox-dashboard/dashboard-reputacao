@@ -27751,10 +27751,10 @@
       "frete": 0.0,
       "total": 201.17,
       "valor_real_fechado": 0.0,
-      "aceito": false
+      "aceito": true
     }
   ],
-  "descontosUpdatedAt": "2026-11-12T12:08:17.450347-03:00",
+  "descontosUpdatedAt": "2026-11-12T14:39:14.197098-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -28276,7 +28276,7 @@
     "2026-11": {
       "amazon": {
         "count": 4,
-        "countAceito": 0,
+        "countAceito": 1,
         "descontoTotal": 480.0,
         "custoTotal": 3143.88,
         "valorPedidoTotal": 3972.81,
