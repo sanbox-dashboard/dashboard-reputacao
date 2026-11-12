@@ -6554,7 +6554,7 @@
       "sk": "TI1580",
       "tr": "Alfa Transportes",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1332.2
     },
@@ -7529,7 +7529,7 @@
       "sk": "TI1667",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Entrada Sanbox",
+      "gr": "Chamados Marketplaces",
       "st": "Novo",
       "vl": 1044.9
     },
@@ -17115,7 +17115,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-12T16:10:29.545199-03:00",
+  "ticketsRawUpdatedAt": "2026-11-12T17:08:41.142291-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
