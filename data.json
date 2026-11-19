@@ -5903,9 +5903,9 @@
       },
       "magalu": {
         "metrics": {},
-        "ts": "2026-11-19T09:49:42.184504-03:00",
+        "ts": "2026-11-19T11:09:28.562622-03:00",
         "tickets": 0,
-        "sacForaPrazo": 1,
+        "sacForaPrazo": 0,
         "casosCriticos": 1,
         "solicitacaoDevolucaoAmarelo": 0,
         "solicitacaoDevolucaoVermelho": 0,
@@ -6347,7 +6347,7 @@
       "tr": "Tecmar",
       "pr": "—",
       "gr": "Atendimento SAC",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 2094.66
     },
     {
@@ -10285,7 +10285,7 @@
       "sk": "TI1514",
       "tr": "Alfa Transportes",
       "pr": "—",
-      "gr": "Atendimento SAC",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 2116.54
     },
@@ -18012,7 +18012,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-19T10:39:32.312662-03:00",
+  "ticketsRawUpdatedAt": "2026-11-19T11:09:28.562622-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
