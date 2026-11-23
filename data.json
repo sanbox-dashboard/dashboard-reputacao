@@ -6039,6 +6039,45 @@
   },
   "ticketsRaw": [
     {
+      "n": "99918544.0",
+      "d": "23/11/2026",
+      "ym": "2026-11",
+      "lj": "Amazon",
+      "pb": "Endereço Incorreto / Não localizado",
+      "sk": "TI1690",
+      "tr": "Rio Express",
+      "pr": "—",
+      "gr": "Atendimento SAC",
+      "st": "Novo",
+      "vl": 1518.92
+    },
+    {
+      "n": "99918543.0",
+      "d": "23/11/2026",
+      "ym": "2026-11",
+      "lj": "Amazon",
+      "pb": "RMA",
+      "sk": "TI1454",
+      "tr": "Alfa Transportes",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 0.0
+    },
+    {
+      "n": "99918542.0",
+      "d": "23/11/2026",
+      "ym": "2026-11",
+      "lj": "Amazon",
+      "pb": "Arrependimento",
+      "sk": "TI1603",
+      "tr": "Brasil Web",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 1555.4
+    },
+    {
       "n": "99918541.0",
       "d": "23/11/2026",
       "ym": "2026-11",
@@ -6476,7 +6515,7 @@
       "sk": "TI1348-2",
       "tr": "Shopee Xpress",
       "pr": "—",
-      "gr": "Atendimento SAC",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 94.91
     },
@@ -6503,7 +6542,7 @@
       "tr": "Mercado Envios",
       "pr": "—",
       "gr": "Solicitação de Devolução",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 6215.51
     },
     {
@@ -6660,7 +6699,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Novo",
-      "vl": 1209.09
+      "vl": 1209.9
     },
     {
       "n": "99918491.0",
@@ -6750,7 +6789,7 @@
       "tr": "Mercado Envios",
       "pr": "—",
       "gr": "Solicitação de Devolução",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 1035.9
     },
     {
@@ -6762,7 +6801,7 @@
       "sk": "TI1758",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 0.0
     },
@@ -8227,11 +8266,11 @@
       "d": "03/11/2026",
       "ym": "2026-11",
       "lj": "Mercado Livre",
-      "pb": "",
+      "pb": "Item Faltante",
       "sk": "TI1667",
       "tr": "Correios",
       "pr": "—",
-      "gr": "Envio de Produto",
+      "gr": "Financeiro (Cancelamento indevido)",
       "st": "Pendente",
       "vl": 1019.9
     },
@@ -12263,7 +12302,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1789.09
+      "vl": 1789.9
     },
     {
       "n": "99914897.0",
@@ -13160,7 +13199,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1759.09
+      "vl": 1759.9
     },
     {
       "n": "99913215.0",
@@ -13186,7 +13225,7 @@
       "pr": "—",
       "gr": "Financeiro Standby",
       "st": "Novo",
-      "vl": 1525.9
+      "vl": 1525.09
     },
     {
       "n": "99913169.0",
@@ -17973,7 +18012,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-23T10:38:42.221422-03:00",
+  "ticketsRawUpdatedAt": "2026-11-23T11:08:01.912237-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
@@ -29063,8 +29102,8 @@
       "desc_sug": 343.15,
       "frete": 0.0,
       "total": 343.15,
-      "valor_real_fechado": 0.0,
-      "aceito": false
+      "valor_real_fechado": 300.0,
+      "aceito": true
     },
     {
       "pedido": "2611137P8P60C7",
@@ -29082,9 +29121,43 @@
       "total": 485.11,
       "valor_real_fechado": 480.0,
       "aceito": false
+    },
+    {
+      "pedido": "701-4434964-1654608",
+      "data": "06/11/2026",
+      "ym": "2026-11",
+      "canal": "amazon",
+      "canal_raw": "Amazon",
+      "sku": "TI1805",
+      "valor_pedido": 4971.31,
+      "custo": 3657.29,
+      "problema": "Avaria",
+      "pct_desc": 30,
+      "desc_sug": 1097.19,
+      "frete": 422.31,
+      "total": 1519.5,
+      "valor_real_fechado": 500.0,
+      "aceito": false
+    },
+    {
+      "pedido": "702-1984114-6522660",
+      "data": "12/11/2026",
+      "ym": "2026-11",
+      "canal": "amazon",
+      "canal_raw": "Amazon",
+      "sku": "TI1844",
+      "valor_pedido": 2008.09,
+      "custo": 1642.39,
+      "problema": "Avaria",
+      "pct_desc": 30,
+      "desc_sug": 492.72,
+      "frete": 0.0,
+      "total": 492.72,
+      "valor_real_fechado": 300.0,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-11-23T10:38:42.221422-03:00",
+  "descontosUpdatedAt": "2026-11-23T11:08:01.912237-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -29525,14 +29598,14 @@
       },
       "amazon": {
         "count": 14,
-        "countAceito": 6,
-        "descontoTotal": 2080.0,
+        "countAceito": 7,
+        "descontoTotal": 2380.0,
         "custoTotal": 22497.35,
         "valorPedidoTotal": 32159.17,
-        "pctDescontoSobreCusto": 9.25,
-        "pctDescontoSobreVenda": 6.47,
+        "pctDescontoSobreCusto": 10.58,
+        "pctDescontoSobreVenda": 7.4,
         "vendaTotalCanal": 1244316.05,
-        "pctDescontoSobreVendaCanal": 0.1672
+        "pctDescontoSobreVendaCanal": 0.1913
       },
       "casasbahia": {
         "count": 2,
@@ -29605,13 +29678,13 @@
     },
     "2026-11": {
       "amazon": {
-        "count": 11,
+        "count": 13,
         "countAceito": 5,
-        "descontoTotal": 1560.0,
-        "custoTotal": 14241.37,
-        "valorPedidoTotal": 17874.62,
-        "pctDescontoSobreCusto": 10.95,
-        "pctDescontoSobreVenda": 8.73,
+        "descontoTotal": 2360.0,
+        "custoTotal": 19541.05,
+        "valorPedidoTotal": 24854.02,
+        "pctDescontoSobreCusto": 12.08,
+        "pctDescontoSobreVenda": 9.5,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       },
