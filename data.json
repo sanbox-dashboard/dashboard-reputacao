@@ -6039,6 +6039,110 @@
   },
   "ticketsRaw": [
     {
+      "n": "99918562.0",
+      "d": "23/11/2026",
+      "ym": "2026-11",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1718",
+      "tr": "Mercado Envios",
+      "pr": "—",
+      "gr": "Entrada Sanbox",
+      "st": "Novo",
+      "vl": 0.0
+    },
+    {
+      "n": "99918561.0",
+      "d": "23/11/2026",
+      "ym": "2026-11",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1851",
+      "tr": "Mercado Envios",
+      "pr": "—",
+      "gr": "Monitoramento Devolução",
+      "st": "Novo",
+      "vl": 835.9
+    },
+    {
+      "n": "99918560.0",
+      "d": "23/11/2026",
+      "ym": "2026-11",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1759",
+      "tr": "Mercado Envios",
+      "pr": "—",
+      "gr": "Monitoramento Devolução",
+      "st": "Novo",
+      "vl": 0.0
+    },
+    {
+      "n": "99918559.0",
+      "d": "23/11/2026",
+      "ym": "2026-11",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1686",
+      "tr": "Mercado Envios",
+      "pr": "—",
+      "gr": "Monitoramento Devolução",
+      "st": "Novo",
+      "vl": 1739.9
+    },
+    {
+      "n": "99918558.0",
+      "d": "23/11/2026",
+      "ym": "2026-11",
+      "lj": "Casas Bahia/Via Varejo",
+      "pb": "Desconhece a Entrega",
+      "sk": "TI1332",
+      "tr": "Total Express",
+      "pr": "—",
+      "gr": "Atendimento SAC",
+      "st": "Novo",
+      "vl": 1527.83
+    },
+    {
+      "n": "99918557.0",
+      "d": "23/11/2026",
+      "ym": "2026-11",
+      "lj": "Mercado Livre",
+      "pb": "Recusa do cliente por Cancelamento",
+      "sk": "TI1633",
+      "tr": "Mercado Envios",
+      "pr": "—",
+      "gr": "Monitoramento Devolução",
+      "st": "Novo",
+      "vl": 1669.9
+    },
+    {
+      "n": "99918556.0",
+      "d": "23/11/2026",
+      "ym": "2026-11",
+      "lj": "Casas Bahia/Via Varejo",
+      "pb": "Arrependimento",
+      "sk": "TI1861",
+      "tr": "Brasil Web",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 1614.93
+    },
+    {
+      "n": "99918555.0",
+      "d": "23/11/2026",
+      "ym": "2026-11",
+      "lj": "Mercado Livre",
+      "pb": "Não Entregue Marketplace",
+      "sk": "TI1526",
+      "tr": "Mercado Envios",
+      "pr": "—",
+      "gr": "Entrada Sanbox",
+      "st": "Novo",
+      "vl": 0.0
+    },
+    {
       "n": "99918554.0",
       "d": "23/11/2026",
       "ym": "2026-11",
@@ -6372,7 +6476,7 @@
       "sk": "TI1773-1",
       "tr": "Brasil Web",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1738.9
     },
@@ -6581,7 +6685,7 @@
       "tr": "Rio Express",
       "pr": "—",
       "gr": "Solicitação de Devolução",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 1555.4
     },
     {
@@ -6788,8 +6892,8 @@
       "sk": "TI1690",
       "tr": "Brasil Web",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
-      "st": "Pendente",
+      "gr": "Monitoramento Devolução",
+      "st": "Novo",
       "vl": 1518.92
     },
     {
@@ -6868,7 +6972,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Novo",
-      "vl": 1028.08
+      "vl": 1028.8
     },
     {
       "n": "99918488.0",
@@ -8987,7 +9091,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
-      "vl": 1385.09
+      "vl": 1385.9
     },
     {
       "n": "99918208.0",
@@ -9325,7 +9429,7 @@
       "pr": "—",
       "gr": "Entrada Sanbox",
       "st": "Novo",
-      "vl": 1314.9
+      "vl": 1314.09
     },
     {
       "n": "99918136.0",
@@ -9455,7 +9559,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1880.3
+      "vl": 1880.03
     },
     {
       "n": "99918107.0",
@@ -10677,7 +10781,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1032.04
+      "vl": 1032.4
     },
     {
       "n": "99917358.0",
@@ -10976,7 +11080,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1691.06
+      "vl": 1691.6
     },
     {
       "n": "99917016.0",
@@ -11379,7 +11483,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1012.9
+      "vl": 1012.09
     },
     {
       "n": "99916437.0",
@@ -11483,7 +11587,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1695.09
+      "vl": 1695.9
     },
     {
       "n": "99916268.0",
@@ -11496,7 +11600,7 @@
       "pr": "—",
       "gr": "Financeiro (Cancelamento indevido)",
       "st": "Novo",
-      "vl": 1399.2
+      "vl": 1399.02
     },
     {
       "n": "99916241.0",
@@ -12523,7 +12627,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1789.9
+      "vl": 1789.09
     },
     {
       "n": "99914551.0",
@@ -12640,7 +12744,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1049.08
+      "vl": 1049.8
     },
     {
       "n": "99914456.0",
@@ -12835,7 +12939,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Pendente",
-      "vl": 1000.09
+      "vl": 1000.9
     },
     {
       "n": "99914206.0",
@@ -13784,7 +13888,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1527.9
+      "vl": 1527.09
     },
     {
       "n": "99911782.0",
@@ -13836,7 +13940,7 @@
       "pr": "—",
       "gr": "Em análise",
       "st": "Novo",
-      "vl": 1572.6
+      "vl": 1572.06
     },
     {
       "n": "99911694.0",
@@ -18012,7 +18116,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-23T15:08:06.387402-03:00",
+  "ticketsRawUpdatedAt": "2026-11-23T16:13:49.579568-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
@@ -29170,7 +29274,7 @@
       "desc_sug": 1222.28,
       "frete": 0.0,
       "total": 1222.28,
-      "valor_real_fechado": 1000.0,
+      "valor_real_fechado": 1200.0,
       "aceito": false
     },
     {
@@ -29206,9 +29310,43 @@
       "total": 386.01,
       "valor_real_fechado": 250.0,
       "aceito": false
+    },
+    {
+      "pedido": "2000019472469506",
+      "data": "11/11/2026",
+      "ym": "2026-11",
+      "canal": "mercadolivre",
+      "canal_raw": "Mercado Livre",
+      "sku": "TI1708",
+      "valor_pedido": 1749.9,
+      "custo": 1160.54,
+      "problema": "Avaria",
+      "pct_desc": 30,
+      "desc_sug": 348.16,
+      "frete": 0.0,
+      "total": 348.16,
+      "valor_real_fechado": 0.0,
+      "aceito": false
+    },
+    {
+      "pedido": "701-2188353-7590628",
+      "data": "18/11/2026",
+      "ym": "2026-11",
+      "canal": "amazon",
+      "canal_raw": "Amazon",
+      "sku": "TI1690",
+      "valor_pedido": 1518.92,
+      "custo": 1288.79,
+      "problema": "Avaria",
+      "pct_desc": 30,
+      "desc_sug": 386.64,
+      "frete": 0.0,
+      "total": 386.64,
+      "valor_real_fechado": 300.0,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-11-23T15:08:06.387402-03:00",
+  "descontosUpdatedAt": "2026-11-23T16:13:49.579568-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -29729,24 +29867,24 @@
     },
     "2026-11": {
       "amazon": {
-        "count": 16,
+        "count": 17,
         "countAceito": 5,
-        "descontoTotal": 3910.0,
-        "custoTotal": 26333.89,
-        "valorPedidoTotal": 33391.8,
-        "pctDescontoSobreCusto": 14.85,
-        "pctDescontoSobreVenda": 11.71,
+        "descontoTotal": 4410.0,
+        "custoTotal": 27622.68,
+        "valorPedidoTotal": 34910.72,
+        "pctDescontoSobreCusto": 15.97,
+        "pctDescontoSobreVenda": 12.63,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       },
       "mercadolivre": {
-        "count": 12,
+        "count": 13,
         "countAceito": 6,
         "descontoTotal": 831.33,
-        "custoTotal": 22159.05,
-        "valorPedidoTotal": 32130.31,
-        "pctDescontoSobreCusto": 3.75,
-        "pctDescontoSobreVenda": 2.59,
+        "custoTotal": 23319.59,
+        "valorPedidoTotal": 33880.21,
+        "pctDescontoSobreCusto": 3.56,
+        "pctDescontoSobreVenda": 2.45,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       },
