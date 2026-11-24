@@ -6091,6 +6091,84 @@
   },
   "ticketsRaw": [
     {
+      "n": "99918584.0",
+      "d": "24/11/2026",
+      "ym": "2026-11",
+      "lj": "Shopee",
+      "pb": "Comprou Errado",
+      "sk": "TI1707",
+      "tr": "Correios",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 1205.27
+    },
+    {
+      "n": "99918583.0",
+      "d": "24/11/2026",
+      "ym": "2026-11",
+      "lj": "Amazon",
+      "pb": "Cancelamento por Arrependimento Antes do Envio",
+      "sk": "TI1514",
+      "tr": "Alfa Transportes",
+      "pr": "—",
+      "gr": "Atendimento SAC",
+      "st": "Novo",
+      "vl": 1669.85
+    },
+    {
+      "n": "99918582.0",
+      "d": "24/11/2026",
+      "ym": "2026-11",
+      "lj": "Magalu",
+      "pb": "Arrependimento",
+      "sk": "TI1738",
+      "tr": "Total Express",
+      "pr": "—",
+      "gr": "Solicitação de Devolução",
+      "st": "Novo",
+      "vl": 464.56
+    },
+    {
+      "n": "99918581.0",
+      "d": "24/11/2026",
+      "ym": "2026-11",
+      "lj": "Amazon",
+      "pb": "Cancelamento por Arrependimento Antes do Envio",
+      "sk": "TI1870",
+      "tr": "Rio Express",
+      "pr": "—",
+      "gr": "Atendimento SAC",
+      "st": "Novo",
+      "vl": 549.9
+    },
+    {
+      "n": "99918580.0",
+      "d": "24/11/2026",
+      "ym": "2026-11",
+      "lj": "Amazon",
+      "pb": "Cancelamento por Arrependimento Antes do Envio",
+      "sk": "TI1603",
+      "tr": "Brasil Web",
+      "pr": "—",
+      "gr": "Atendimento SAC",
+      "st": "Novo",
+      "vl": 1555.4
+    },
+    {
+      "n": "99918579.0",
+      "d": "24/11/2026",
+      "ym": "2026-11",
+      "lj": "Amazon",
+      "pb": "Cancelamento por Arrependimento Antes do Envio",
+      "sk": "TI1667",
+      "tr": "Alfa Transportes",
+      "pr": "—",
+      "gr": "Atendimento SAC",
+      "st": "Novo",
+      "vl": 803.59
+    },
+    {
       "n": "99918578.0",
       "d": "24/11/2026",
       "ym": "2026-11",
@@ -6515,7 +6593,7 @@
       "sk": "TI1685",
       "tr": "Correios",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 950.55
     },
@@ -7180,7 +7258,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
-      "vl": 1149.09
+      "vl": 1149.9
     },
     {
       "n": "99918492.0",
@@ -7232,7 +7310,7 @@
       "pr": "—",
       "gr": "Solicitação de Devolução",
       "st": "Novo",
-      "vl": 1028.8
+      "vl": 1028.08
     },
     {
       "n": "99918488.0",
@@ -9037,8 +9115,8 @@
       "sk": "TI1580",
       "tr": "Tecmar",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
-      "st": "Pendente",
+      "gr": "Monitoramento Devolução",
+      "st": "Novo",
       "vl": 1254.84
     },
     {
@@ -9481,7 +9559,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
-      "vl": 1612.2
+      "vl": 1612.02
     },
     {
       "n": "99918170.0",
@@ -9559,7 +9637,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
-      "vl": 1315.09
+      "vl": 1315.9
     },
     {
       "n": "99918155.0",
@@ -9806,7 +9884,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1880.03
+      "vl": 1880.3
     },
     {
       "n": "99918107.0",
@@ -9857,7 +9935,7 @@
       "tr": "Total Express",
       "pr": "—",
       "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "st": "Pendente",
       "vl": 949.73
     },
     {
@@ -10236,19 +10314,6 @@
       "gr": "Débitos Transportadoras",
       "st": "Novo",
       "vl": 1036.83
-    },
-    {
-      "n": "99917896.0",
-      "d": "01/10/2026",
-      "ym": "2026-10",
-      "lj": "Casas Bahia/Via Varejo",
-      "pb": "Atraso de Entrega",
-      "sk": "TI1609",
-      "tr": "Alfa Transportes",
-      "pr": "—",
-      "gr": "Débitos Transportadoras",
-      "st": "Pendente",
-      "vl": 1018.17
     },
     {
       "n": "99917893.0",
@@ -11314,7 +11379,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1691.06
+      "vl": 1691.6
     },
     {
       "n": "99917016.0",
@@ -11717,7 +11782,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1012.9
+      "vl": 1012.09
     },
     {
       "n": "99916437.0",
@@ -11782,7 +11847,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1549.09
+      "vl": 1549.9
     },
     {
       "n": "99916336.0",
@@ -11834,7 +11899,7 @@
       "pr": "—",
       "gr": "Financeiro (Cancelamento indevido)",
       "st": "Novo",
-      "vl": 1399.2
+      "vl": 1399.02
     },
     {
       "n": "99916241.0",
@@ -12640,7 +12705,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1789.9
+      "vl": 1789.09
     },
     {
       "n": "99914897.0",
@@ -12848,7 +12913,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1013.08
+      "vl": 1013.8
     },
     {
       "n": "99914563.0",
@@ -12900,7 +12965,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1167.9
+      "vl": 1167.09
     },
     {
       "n": "99914498.0",
@@ -13602,7 +13667,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Em andamento",
-      "vl": 1661.8
+      "vl": 1661.08
     },
     {
       "n": "99913106.0",
@@ -14122,7 +14187,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1527.09
+      "vl": 1527.9
     },
     {
       "n": "99911782.0",
@@ -15500,7 +15565,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Em andamento",
-      "vl": 1671.01
+      "vl": 1671.1
     },
     {
       "n": "99908766.0",
@@ -18350,7 +18415,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-24T11:38:36.705941-03:00",
+  "ticketsRawUpdatedAt": "2026-11-24T12:09:07.914466-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
