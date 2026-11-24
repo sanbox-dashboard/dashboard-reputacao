@@ -6216,7 +6216,7 @@
       "sk": "TI1603",
       "tr": "Brasil Web",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Envio de Produto",
       "st": "Novo",
       "vl": 1555.4
     },
@@ -6476,7 +6476,7 @@
       "sk": "TI1526",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Entrada Sanbox",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 0.0
     },
@@ -6671,7 +6671,7 @@
       "sk": "TI1523",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 569.9
     },
@@ -7178,7 +7178,7 @@
       "sk": "SS002",
       "tr": "Correios",
       "pr": "—",
-      "gr": "Solicitação de Devolução",
+      "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 1119.82
     },
@@ -7714,19 +7714,6 @@
       "gr": "Monitoramento Devolução",
       "st": "Novo",
       "vl": 599.9
-    },
-    {
-      "n": "99918443.0",
-      "d": "13/11/2026",
-      "ym": "2026-11",
-      "lj": "Mercado Livre",
-      "pb": "RMA",
-      "sk": "TI1455",
-      "tr": "Mercado Envios",
-      "pr": "—",
-      "gr": "Financeiro (Cancelamento indevido)",
-      "st": "Em andamento",
-      "vl": 0.0
     },
     {
       "n": "99918442.0",
@@ -8450,10 +8437,10 @@
       "lj": "Magalu",
       "pb": "RMA",
       "sk": "TI1758",
-      "tr": "MMA",
+      "tr": "Alfa Transportes",
       "pr": "—",
       "gr": "Monitoramento Devolução",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 3572.28
     },
     {
@@ -9311,7 +9298,7 @@
       "tr": "Rio Express",
       "pr": "—",
       "gr": "Monitoramento Devolução",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 1303.52
     },
     {
@@ -9364,7 +9351,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
-      "vl": 1385.9
+      "vl": 1385.09
     },
     {
       "n": "99918208.0",
@@ -9404,19 +9391,6 @@
       "gr": "Solicitação de Devolução",
       "st": "Pendente",
       "vl": 1759.0
-    },
-    {
-      "n": "99918198.0",
-      "d": "26/10/2026",
-      "ym": "2026-10",
-      "lj": "Shopee",
-      "pb": "Desconhece a Entrega",
-      "sk": "TI1565",
-      "tr": "Rio Express",
-      "pr": "—",
-      "gr": "Financeiro (Cancelamento indevido)",
-      "st": "Em andamento",
-      "vl": 508.89
     },
     {
       "n": "99918190.0",
@@ -9507,7 +9481,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Em andamento",
-      "vl": 1612.02
+      "vl": 1612.2
     },
     {
       "n": "99918170.0",
@@ -9727,7 +9701,7 @@
       "tr": "Alfa Transportes",
       "pr": "—",
       "gr": "Monitoramento Devolução",
-      "st": "Em andamento",
+      "st": "Pendente",
       "vl": 2154.58
     },
     {
@@ -9819,7 +9793,7 @@
       "pr": "—",
       "gr": "Monitoramento Devolução",
       "st": "Novo",
-      "vl": 1880.03
+      "vl": 1880.3
     },
     {
       "n": "99918107.0",
@@ -11314,7 +11288,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1691.06
+      "vl": 1691.6
     },
     {
       "n": "99917016.0",
@@ -11431,7 +11405,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1140.9
+      "vl": 1140.09
     },
     {
       "n": "99916809.0",
@@ -11664,7 +11638,7 @@
       "tr": "Tecmar",
       "pr": "—",
       "gr": "Débitos Transportadoras",
-      "st": "Em andamento",
+      "st": "Pendente",
       "vl": 2003.25
     },
     {
@@ -11899,7 +11873,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1695.09
+      "vl": 1695.9
     },
     {
       "n": "99916139.0",
@@ -12965,7 +12939,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1049.08
+      "vl": 1049.8
     },
     {
       "n": "99914456.0",
@@ -12991,7 +12965,7 @@
       "pr": "—",
       "gr": "Juridico Defesa",
       "st": "Novo",
-      "vl": 1644.9
+      "vl": 1644.09
     },
     {
       "n": "99914387.0",
@@ -13030,7 +13004,7 @@
       "pr": "—",
       "gr": "Débitos Transportadoras",
       "st": "Pendente",
-      "vl": 1848.09
+      "vl": 1848.9
     },
     {
       "n": "99914299.0",
@@ -13160,7 +13134,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Pendente",
-      "vl": 1000.09
+      "vl": 1000.9
     },
     {
       "n": "99914206.0",
@@ -13198,7 +13172,7 @@
       "tr": "Tecmar",
       "pr": "—",
       "gr": "Débitos Transportadoras",
-      "st": "Em andamento",
+      "st": "Pendente",
       "vl": 1655.09
     },
     {
@@ -13588,8 +13562,8 @@
       "tr": "Tecmar",
       "pr": "—",
       "gr": "Débitos Transportadoras",
-      "st": "Em andamento",
-      "vl": 1661.08
+      "st": "Pendente",
+      "vl": 1661.8
     },
     {
       "n": "99913106.0",
@@ -13615,7 +13589,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Novo",
-      "vl": 1334.9
+      "vl": 1334.09
     },
     {
       "n": "99913041.0",
@@ -14161,7 +14135,7 @@
       "pr": "—",
       "gr": "Em análise",
       "st": "Novo",
-      "vl": 1572.6
+      "vl": 1572.06
     },
     {
       "n": "99911694.0",
@@ -15487,7 +15461,7 @@
       "pr": "—",
       "gr": "Jurídico",
       "st": "Em andamento",
-      "vl": 1671.01
+      "vl": 1671.1
     },
     {
       "n": "99908766.0",
@@ -18337,7 +18311,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-24T14:10:16.944149-03:00",
+  "ticketsRawUpdatedAt": "2026-11-24T15:10:00.166486-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
