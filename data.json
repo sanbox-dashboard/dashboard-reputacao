@@ -29944,11 +29944,11 @@
       "desc_sug": 370.23,
       "frete": 0.0,
       "total": 370.23,
-      "valor_real_fechado": 0.0,
+      "valor_real_fechado": 300.0,
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-11-25T17:08:13.002752-03:00",
+  "descontosUpdatedAt": "2026-11-25T17:38:42.193687-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -30471,11 +30471,11 @@
       "amazon": {
         "count": 26,
         "countAceito": 10,
-        "descontoTotal": 6530.0,
+        "descontoTotal": 6830.0,
         "custoTotal": 40316.24,
         "valorPedidoTotal": 50564.8,
-        "pctDescontoSobreCusto": 16.2,
-        "pctDescontoSobreVenda": 12.91,
+        "pctDescontoSobreCusto": 16.94,
+        "pctDescontoSobreVenda": 13.51,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       },
