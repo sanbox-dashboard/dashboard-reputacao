@@ -29976,7 +29976,7 @@
       "frete": 0.0,
       "total": 348.16,
       "valor_real_fechado": 0.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "701-2188353-7590628",
@@ -30146,7 +30146,7 @@
       "frete": 0.0,
       "total": 184.13,
       "valor_real_fechado": 0.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "2000019622573318",
@@ -30163,7 +30163,7 @@
       "frete": 0.0,
       "total": 267.26,
       "valor_real_fechado": 0.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "2000019622961988",
@@ -30302,7 +30302,7 @@
       "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-11-26T15:38:20.798241-03:00",
+  "descontosUpdatedAt": "2026-11-26T18:38:49.994174-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -30835,7 +30835,7 @@
       },
       "mercadolivre": {
         "count": 19,
-        "countAceito": 8,
+        "countAceito": 11,
         "descontoTotal": 1421.33,
         "custoTotal": 28086.47,
         "valorPedidoTotal": 41410.93,
