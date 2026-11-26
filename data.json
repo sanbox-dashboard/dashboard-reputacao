@@ -6173,10 +6173,10 @@
       },
       "casasbahia": {
         "metrics": {},
-        "ts": "2026-11-26T14:08:13.165918-03:00",
+        "ts": "2026-11-26T14:38:35.170741-03:00",
         "tickets": 0,
         "sacForaPrazo": 1,
-        "casosCriticos": 0,
+        "casosCriticos": 1,
         "solicitacaoDevolucaoAmarelo": 0,
         "solicitacaoDevolucaoVermelho": 0,
         "solicitacaoDevolucao": 0
