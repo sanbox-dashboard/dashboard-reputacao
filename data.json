@@ -7906,7 +7906,7 @@
       "sk": "TI1886",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Monitoramento Devolução",
+      "gr": "Financeiro (Estorno)",
       "st": "Novo",
       "vl": 868.7
     },
@@ -8336,7 +8336,7 @@
       "tr": "Trilog",
       "pr": "—",
       "gr": "Monitoramento Devolução",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 0.0
     },
     {
@@ -8908,7 +8908,7 @@
       "tr": "Trilog",
       "pr": "—",
       "gr": "Monitoramento Devolução",
-      "st": "Novo",
+      "st": "Pendente",
       "vl": 1981.78
     },
     {
@@ -9259,7 +9259,7 @@
       "tr": "Trilog",
       "pr": "—",
       "gr": "Monitoramento Devolução",
-      "st": "Novo",
+      "st": "Em andamento",
       "vl": 1799.9
     },
     {
@@ -9440,7 +9440,7 @@
       "sk": "TI1332",
       "tr": "Total Express",
       "pr": "—",
-      "gr": "Atendimento SAC",
+      "gr": "Débitos Transportadoras",
       "st": "Novo",
       "vl": 1527.83
     },
@@ -9544,7 +9544,7 @@
       "sk": "TI1759",
       "tr": "Mercado Envios",
       "pr": "—",
-      "gr": "Entrada Sanbox",
+      "gr": "Chamados Marketplaces",
       "st": "Novo",
       "vl": 0.0
     },
@@ -18675,7 +18675,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-26T15:38:20.798241-03:00",
+  "ticketsRawUpdatedAt": "2026-11-26T16:08:29.102719-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
