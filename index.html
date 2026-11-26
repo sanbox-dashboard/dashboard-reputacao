@@ -983,7 +983,7 @@ const channels = {
     color: '#FF9900',
     repLabel: 'Estado da Conta',
     metrics: {
-      pedidosProblema:   {label:'Pedidos com problema', metaType:'max', meta:1.0, alerta:0.8, unit:'%', ocrPattern:/pedidos com problemas?[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
+      pedidosProblema:   {label:'Pedidos com problema', metaType:'max', meta:1.0, alerta:0.9, unit:'%', ocrPattern:/pedidos com problemas?[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i},
       cancelamentoEnvio: {label:'Cancelamentos envio', metaType:'max', meta:3.0, alerta:2.0, unit:'%', ocrPattern:/cancelamentos? anteriores ao envio[\s\S]{0,200}?(\d+(?:[,.]\d+)?)\s*%/i}
     }
   },
@@ -1027,7 +1027,7 @@ const ACTIVE_TAB_KEY = 'dashboard-reputacao-tab';
 // Versão do schema — apenas marcação, NÃO apaga mais dados locais (pra não perder
 // nada que ainda não foi sincronizado). O "GitHub é canônico" agora vem da init logic.
 const SCHEMA_VERSION = '42';
-const APP_VERSION = '48.1';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
+const APP_VERSION = '48.2';  // mostra no rodapé pra você confirmar que a máquina está rodando a versão certa
 const SCHEMA_KEY = 'dashboard-reputacao-schema';
 try{ localStorage.setItem(SCHEMA_KEY, SCHEMA_VERSION); }catch(e){}
 console.log('%c[Dashboard Reputação] v' + APP_VERSION + ' carregado às ' + new Date().toLocaleTimeString('pt-BR'), 'color:#3b82f6;font-weight:bold;font-size:14px');
