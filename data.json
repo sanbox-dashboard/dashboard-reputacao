@@ -30403,7 +30403,7 @@
       "frete": 281.62,
       "total": 548.88,
       "valor_real_fechado": 280.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "2000019517817300",
@@ -30420,7 +30420,7 @@
       "frete": 276.89,
       "total": 461.02,
       "valor_real_fechado": 310.0,
-      "aceito": false
+      "aceito": true
     },
     {
       "pedido": "702-3433570-7442617",
@@ -30676,9 +30676,26 @@
       "total": 184.13,
       "valor_real_fechado": 0.0,
       "aceito": false
+    },
+    {
+      "pedido": "702-4119527-3001046",
+      "data": "13/11/2026",
+      "ym": "2026-11",
+      "canal": "amazon",
+      "canal_raw": "Amazon",
+      "sku": "TI1571",
+      "valor_pedido": 774.0,
+      "custo": 625.44,
+      "problema": "Avaria",
+      "pct_desc": 30,
+      "desc_sug": 187.63,
+      "frete": 0.0,
+      "total": 187.63,
+      "valor_real_fechado": 200.0,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-11-27T15:07:27.670784-03:00",
+  "descontosUpdatedAt": "2026-11-27T15:53:05.191359-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -31199,19 +31216,19 @@
     },
     "2026-11": {
       "amazon": {
-        "count": 29,
+        "count": 30,
         "countAceito": 12,
-        "descontoTotal": 7510.0,
-        "custoTotal": 43641.0,
-        "valorPedidoTotal": 54751.66,
-        "pctDescontoSobreCusto": 17.21,
-        "pctDescontoSobreVenda": 13.72,
+        "descontoTotal": 7710.0,
+        "custoTotal": 44266.44,
+        "valorPedidoTotal": 55525.66,
+        "pctDescontoSobreCusto": 17.42,
+        "pctDescontoSobreVenda": 13.89,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       },
       "mercadolivre": {
         "count": 20,
-        "countAceito": 8,
+        "countAceito": 10,
         "descontoTotal": 1421.33,
         "custoTotal": 28700.23,
         "valorPedidoTotal": 42293.83,
