@@ -30171,7 +30171,7 @@
       "frete": 0.0,
       "total": 348.16,
       "valor_real_fechado": 0.0,
-      "aceito": true
+      "aceito": false
     },
     {
       "pedido": "701-2188353-7590628",
@@ -30341,7 +30341,7 @@
       "frete": 0.0,
       "total": 184.13,
       "valor_real_fechado": 0.0,
-      "aceito": true
+      "aceito": false
     },
     {
       "pedido": "2000019622573318",
@@ -30358,7 +30358,7 @@
       "frete": 0.0,
       "total": 267.26,
       "valor_real_fechado": 0.0,
-      "aceito": true
+      "aceito": false
     },
     {
       "pedido": "2000019622961988",
@@ -30495,9 +30495,43 @@
       "total": 440.0,
       "valor_real_fechado": 400.0,
       "aceito": false
+    },
+    {
+      "pedido": "701-3865171-2796202",
+      "data": "19/11/2026",
+      "ym": "2026-11",
+      "canal": "amazon",
+      "canal_raw": "Amazon",
+      "sku": "TI1558",
+      "valor_pedido": 809.07,
+      "custo": 604.07,
+      "problema": "Avaria",
+      "pct_desc": 30.0,
+      "desc_sug": 181.22,
+      "frete": 0.0,
+      "total": 181.22,
+      "valor_real_fechado": 0.0,
+      "aceito": false
+    },
+    {
+      "pedido": "2000019744530344",
+      "data": "24/11/2026",
+      "ym": "2026-11",
+      "canal": "mercadolivre",
+      "canal_raw": "Mercado Livre",
+      "sku": "TI1645",
+      "valor_pedido": 549.9,
+      "custo": 402.24,
+      "problema": "Avaria",
+      "pct_desc": 30.0,
+      "desc_sug": 120.67,
+      "frete": 0.0,
+      "total": 120.67,
+      "valor_real_fechado": 100.08,
+      "aceito": false
     }
   ],
-  "descontosUpdatedAt": "2026-11-26T18:38:49.994174-03:00",
+  "descontosUpdatedAt": "2026-11-27T10:38:49.902982-03:00",
   "descontosAggByMonth": {
     "2026-02": {
       "magalu": {
@@ -31018,24 +31052,24 @@
     },
     "2026-11": {
       "amazon": {
-        "count": 27,
+        "count": 28,
         "countAceito": 11,
         "descontoTotal": 7030.0,
-        "custoTotal": 41748.14,
-        "valorPedidoTotal": 52303.7,
-        "pctDescontoSobreCusto": 16.84,
-        "pctDescontoSobreVenda": 13.44,
+        "custoTotal": 42352.21,
+        "valorPedidoTotal": 53112.77,
+        "pctDescontoSobreCusto": 16.6,
+        "pctDescontoSobreVenda": 13.24,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       },
       "mercadolivre": {
-        "count": 19,
-        "countAceito": 11,
-        "descontoTotal": 1421.33,
-        "custoTotal": 28086.47,
-        "valorPedidoTotal": 41410.93,
-        "pctDescontoSobreCusto": 5.06,
-        "pctDescontoSobreVenda": 3.43,
+        "count": 20,
+        "countAceito": 8,
+        "descontoTotal": 1521.41,
+        "custoTotal": 28488.71,
+        "valorPedidoTotal": 41960.83,
+        "pctDescontoSobreCusto": 5.34,
+        "pctDescontoSobreVenda": 3.63,
         "vendaTotalCanal": 0,
         "pctDescontoSobreVendaCanal": 0
       },
