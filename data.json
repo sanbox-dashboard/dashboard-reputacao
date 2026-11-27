@@ -7022,8 +7022,8 @@
       "sk": "TI1690",
       "tr": "Alfa Transportes",
       "pr": "—",
-      "gr": "Atendimento SAC",
-      "st": "Pendente",
+      "gr": "Monitoramento Devolução",
+      "st": "Novo",
       "vl": 1565.9
     },
     {
@@ -19091,7 +19091,7 @@
       "vl": 0.0
     }
   ],
-  "ticketsRawUpdatedAt": "2026-11-27T16:38:12.132082-03:00",
+  "ticketsRawUpdatedAt": "2026-11-27T17:08:13.353141-03:00",
   "ordersByCarrier": {
     "2026-06": {
       "M": 1899,
